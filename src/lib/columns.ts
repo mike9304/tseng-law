@@ -292,8 +292,8 @@ export function resolveColumnSeoTitle(rawSeoTitle: unknown, fallbackTitle: strin
   return fallbackTitle;
 }
 
-function slugFromFilename(filename: string): string {
-  return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+export function slugFromFilename(filename: string): string {
+  return filename.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
 function fixImagePaths(content: string): string {

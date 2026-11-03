@@ -137,7 +137,7 @@ const guidanceTranslatedColumnCount = [...GUIDANCE_LOCALES_4].reduce((total, loc
 const optionalColumnSlugs = new Map(GUIDANCE_LOCALES_4.map((locale) => {
   const dir = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
   const files = existsSync(dir) ? readdirSync(dir).filter((file) => file.endsWith('.md')) : [];
-  return [locale, new Set(files.map((file) => file.replace(/\.md$/, '').replace(/^\d{3}-/, '')))];
+  return [locale, new Set(files.map((file) => file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '')))];
 }));
 
 function presentOptionalColumnLocales(slug: string) {
@@ -215,7 +215,7 @@ describe('sitemap column lastModified', () => {
 
     for (const [locale, files] of Object.entries(NATIVE_LOCALE_COLUMN_FILES)) {
       for (const file of files) {
-        const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+        const slug = file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
         // English-only columns have no Korean twin; they must not be mistaken
         // for builder drafts and dropped as English-noindex.
         expect(urls.has(`https://tseng-law.com/${locale}/columns/${slug}`), `${locale}/${slug}`).toBe(true);

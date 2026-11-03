@@ -28,7 +28,7 @@ for (const part of ['a', 'b']) {
     const q = norm(quoteRaw); if (q.length < 6 || SKIP.test(q)) continue;
     total++;
     const inPack = file.includes('guidance');
-    const hay = inPack ? packText : (cols[(file.match(/\/(\d{3})-/) || [])[1] ?? ''] ?? allCols);
+    const hay = inPack ? packText : (cols[(file.match(/\/(\d{3,4})-/) || [])[1] ?? ''] ?? allCols);
     if (hay.includes(q) || allCols.includes(q) || packText.includes(q)) left.push(`${part}#${no} ${sev} ${file.trim().slice(0, 28)} :: ${q.slice(0, 90)}`);
   }
 }

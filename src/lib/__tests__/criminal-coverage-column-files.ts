@@ -140,7 +140,7 @@ export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_
     ...CRIMINAL_COLUMN_SLUGS_20261027[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261028[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261029[locale],
-    ...CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
-    ...RECLASSIFIED_CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
+    ...CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3,4}-/, '').replace(/\.md$/, '')),
+    ...RECLASSIFIED_CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3,4}-/, '').replace(/\.md$/, '')),
   ].sort();
 }

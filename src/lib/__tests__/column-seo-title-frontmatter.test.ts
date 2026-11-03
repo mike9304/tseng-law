@@ -127,7 +127,7 @@ describe('English column corpus seoTitle', () => {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
       const parsed = matter(raw);
       const title = String(parsed.data.title ?? '').trim();
-      const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+      const slug = file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
       const post = postsBySlug.get(slug);
 
       expect(post?.title, file).toBe(title);

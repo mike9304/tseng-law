@@ -40,7 +40,7 @@ const DATE_DISPLAY: Record<NativeColumnLocale, string> = {
 const cases = (Object.keys(NATIVE_LOCALE_COLUMN_FILES) as NativeColumnLocale[]).flatMap((locale) =>
   NATIVE_LOCALE_COLUMN_FILES[locale].map((file) => {
     const num = file.slice(0, 3);
-    const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+    const slug = file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
     return { locale, file, num, slug };
   }),
 );

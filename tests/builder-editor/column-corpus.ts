@@ -5,7 +5,7 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
 
 /** Same strip as `src/lib/columns.ts` `slugFromFilename`. */
 export function slugFromColumnFilename(filename: string): string {
-  return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+  return filename.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
 function repoRoot(): string {

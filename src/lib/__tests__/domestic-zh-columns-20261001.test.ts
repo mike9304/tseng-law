@@ -22,7 +22,7 @@ const EXPECTED_TOPIC: Record<string, string> = {
 const cases = DOMESTIC_ZH_COLUMN_FILES_20261001['zh-hant'].map((file) => ({
   file,
   num: file.slice(0, 3),
-  slug: file.replace(/\.md$/, '').replace(/^\d{3}-/, ''),
+  slug: file.replace(/\.md$/, '').replace(/^\d{3,4}-/, ''),
 }));
 
 const PHONE_PATTERNS = [/\b0\d{1,2}-\d{3,4}-\d{3,4}\b/, /\(0\d{1,2}\)\s*\d{3,4}/, /(電話|專線|傳真)[:：]/, /\+886/, /tel:/i];

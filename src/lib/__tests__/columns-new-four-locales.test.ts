@@ -159,7 +159,7 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     const viPosts = getAllColumnPosts('vi');
     expect(viPosts).toHaveLength(viFiles.length);
     expect(viPosts.map((post) => post.slug).sort()).toEqual(
-      viFiles.map((name) => name.replace(/\.md$/, '').replace(/^\d{3}-/, '')).sort(),
+      viFiles.map((name) => name.replace(/\.md$/, '').replace(/^\d{3,4}-/, '')).sort(),
     );
     // WO-O22 D: vi now has a file for every Korean slug, so "did not leak the
     // Korean corpus" can no longer be a count comparison. Assert the stronger

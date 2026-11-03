@@ -75,7 +75,7 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
 
 /** Mirrors `slugFromFilename` in src/lib/columns.ts (`NNN-<slug>.md`). */
 function slugFromFilename(filename: string): string {
-  return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+  return filename.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
 function hasColumnFile(locale: PublicLocale8, slug: string): boolean {

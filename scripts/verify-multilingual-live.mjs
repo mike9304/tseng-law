@@ -93,7 +93,7 @@ export function columnContentDirRelative(locale) {
 
 /** Same strip as src/lib/columns.ts `slugFromFilename`. */
 export function slugFromColumnFilename(filename) {
-  return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+  return filename.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
 /** On-disk translated slugs for a locale. Missing dirs are an empty corpus. */

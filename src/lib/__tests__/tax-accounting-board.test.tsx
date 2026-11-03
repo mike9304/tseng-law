@@ -69,7 +69,7 @@ describe.each([...siteLocales])('%s tax & accounting board on the real corpus', 
 
   it('lists exactly the registered board columns of this locale', () => {
     const expected = TAX_ACCOUNTING_COLUMN_FILES[locale]
-      .map((file) => file.replace(/^\d{3}-/, '').replace(/\.md$/, ''))
+      .map((file) => file.replace(/^\d{3,4}-/, '').replace(/\.md$/, ''))
       .sort();
     expect(lists.board.map((p) => p.slug).sort()).toEqual(expected);
     for (const column of lists.board) expect(column.tags).toContain(TAX_ACCOUNTING_TAG);

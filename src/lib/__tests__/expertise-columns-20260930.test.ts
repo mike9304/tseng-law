@@ -48,7 +48,7 @@ const cases = LOCALES.flatMap((locale) =>
     locale,
     file,
     num: file.slice(0, 3),
-    slug: file.replace(/\.md$/, '').replace(/^\d{3}-/, ''),
+    slug: file.replace(/\.md$/, '').replace(/^\d{3,4}-/, ''),
   })),
 );
 

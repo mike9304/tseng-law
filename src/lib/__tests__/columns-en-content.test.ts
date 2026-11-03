@@ -97,7 +97,7 @@ describe('English full column corpus', () => {
 
   it('EN body is not dramatically shorter than KO for each slug', () => {
     for (const file of koFilesInEn) {
-      const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+      const slug = file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
       const ko = koPostsBySlug.get(slug);
       const en = enPostsBySlug.get(slug);
       expect(ko).toBeTruthy();

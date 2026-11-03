@@ -33,7 +33,7 @@ export const NATIVE_LOCALE_COLUMN_FILES = {
 export type NativeColumnLocale = keyof typeof NATIVE_LOCALE_COLUMN_FILES;
 
 function slugOf(file: string): string {
-  return file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+  return file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
 export const NATIVE_LOCALE_COLUMN_SLUGS: ReadonlySet<string> = new Set(

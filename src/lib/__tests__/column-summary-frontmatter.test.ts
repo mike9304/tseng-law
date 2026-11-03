@@ -140,7 +140,7 @@ describe('English column corpus summaries', () => {
       expect(summary, file).not.toContain('...');
       expect(summary, file).not.toContain('…');
 
-      const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+      const slug = file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
       const post = postsBySlug.get(slug);
       expect(post?.summary, file).toBe(summary);
     }

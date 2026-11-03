@@ -399,9 +399,16 @@ function parseColumnPostsFromDir(
 ): ColumnPost[] {
   const toSlug = parseOptions.slugFromFile ?? slugFromFilename;
   const toNumber = parseOptions.numberFromFile ?? defaultColumnNumber;
+  // Number prefixes sort numerically so 4-digit columns (1000+) follow 3-digit ones;
+  // files without a number prefix keep the previous name order.
   const files = fs.readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
-    .sort((a, b) => a.localeCompare(b, 'en'));
+    .sort((a, b) => {
+      const na = Number(/^\d+(?=-)/.exec(a)?.[0] ?? Number.NaN);
+      const nb = Number(/^\d+(?=-)/.exec(b)?.[0] ?? Number.NaN);
+      if (Number.isFinite(na) && Number.isFinite(nb) && na !== nb) return na - nb;
+      return a.localeCompare(b, 'en');
+    });
   const sourceOrder = new Map(files.map((file, index) => [toSlug(file), index]));
   const postsWithArchiveDate = files.map((file) => {
     const raw = fs.readFileSync(path.join(dir, file), 'utf-8');

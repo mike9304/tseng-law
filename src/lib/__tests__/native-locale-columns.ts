@@ -780,6 +780,10 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '1042-taiwan-postal-parcel-courier-lost-damaged-compensation-limits.md',
     '1044-taiwan-prize-draw-winner-not-paid-tax-withholding.md',
     '1045-taiwan-online-game-account-suspension-virtual-item-fraud.md',
+    '1003-taiwan-high-skilled-naturalization-citizenship.md',
+    '1004-taiwan-japanese-students-work-permit-graduation.md',
+    '1064-taiwan-guide-assistance-dogs-public-access-refusal.md',
+    '1065-taiwan-minor-travel-one-parent-relatives-group-consent-documents.md'
   ],
   'zh-hant': [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -830,6 +834,11 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '1042-taiwan-postal-parcel-courier-lost-damaged-compensation-limits.md',
     '1044-taiwan-prize-draw-winner-not-paid-tax-withholding.md',
     '1045-taiwan-online-game-account-suspension-virtual-item-fraud.md',
+    '1004-taiwan-japanese-students-work-permit-graduation.md',
+    '1061-taiwan-food-delivery-platform-restaurant-contract.md',
+    '1064-taiwan-guide-assistance-dogs-public-access-refusal.md',
+    '1065-taiwan-minor-travel-one-parent-relatives-group-consent-documents.md',
+    '1066-taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents.md'
   ],
   ja: [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -880,6 +889,10 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '1042-taiwan-postal-parcel-courier-lost-damaged-compensation-limits.md',
     '1044-taiwan-prize-draw-winner-not-paid-tax-withholding.md',
     '1045-taiwan-online-game-account-suspension-virtual-item-fraud.md',
+    '1003-taiwan-high-skilled-naturalization-citizenship.md',
+    '1004-taiwan-japanese-students-work-permit-graduation.md',
+    '1064-taiwan-guide-assistance-dogs-public-access-refusal.md',
+    '1065-taiwan-minor-travel-one-parent-relatives-group-consent-documents.md'
   ],
   en: [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -930,6 +943,11 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '1042-taiwan-postal-parcel-courier-lost-damaged-compensation-limits.md',
     '1044-taiwan-prize-draw-winner-not-paid-tax-withholding.md',
     '1045-taiwan-online-game-account-suspension-virtual-item-fraud.md',
+    '1003-taiwan-high-skilled-naturalization-citizenship.md',
+    '1062-taiwan-online-subscription-auto-renewal-digital-content.md',
+    '1064-taiwan-guide-assistance-dogs-public-access-refusal.md',
+    '1065-taiwan-minor-travel-one-parent-relatives-group-consent-documents.md',
+    '1066-taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents.md'
   ],
 } as const;
 

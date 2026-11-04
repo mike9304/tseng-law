@@ -3693,6 +3693,62 @@
     {
       "locale": "en",
       "slug": "taiwan-online-game-account-suspension-virtual-item-fraud"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-high-skilled-naturalization-citizenship"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-japanese-students-work-permit-graduation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-guide-assistance-dogs-public-access-refusal"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-minor-travel-one-parent-relatives-group-consent-documents"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-japanese-students-work-permit-graduation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-food-delivery-platform-restaurant-contract"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-guide-assistance-dogs-public-access-refusal"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-minor-travel-one-parent-relatives-group-consent-documents"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-high-skilled-naturalization-citizenship"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-online-subscription-auto-renewal-digital-content"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-guide-assistance-dogs-public-access-refusal"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-minor-travel-one-parent-relatives-group-consent-documents"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents"
     }
   ]
 }

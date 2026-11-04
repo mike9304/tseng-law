@@ -1,7 +1,7 @@
 ---
 title: "外商在台子公司、分公司結束營業的稅務申報：營業稅15日、決算45日、清算30日"
 seoTitle: "外商子公司解散清算：決算、清算申報與稅籍註銷"
-summary: "外商在台子公司解散，應自事實發生之日起15日內註銷稅籍並申報當期營業稅，自主管機關核准文書發文日次日起45日內辦理當期決算申報，清算完結之日起30日內辦理清算申報。清算人分配賸餘財產前，應先繳清稅捐。"
+summary: "外商在台子公司解散，應自事實發生之日起15日內申請註銷稅籍並申報當期營業稅，自主管機關核准文書發文日次日起45日內辦理當期決算申報，清算完結之日起30日內辦理清算申報。清算人分配賸餘財產前，應先繳清稅捐。"
 published: "2026-10-06"
 lastmod: "2026-10-06"
 date_display: "2026年10月6日"
@@ -11,6 +11,8 @@ categories:
 topic: "tax"
 tags: ["tax-accounting"]
 featured_image: "../images/343-closing-taiwan-subsidiary-branch-liquidation-tax-filings/featured-01.webp"
+featured_image_alt: "無人的房間裡放著素面紙箱與捲起的地毯"
+featured_image_caption: "虛構情境"
 faq:
   - q: "決算申報的45日從哪一天起算？"
     a: "財政部稅務入口網說明，「主管機關核准之日」指主管機關核准文書的發文日，申報時限自核准日的次日起算。決算申報要在申報前自行繳納稅款，所得稅法已刪除延長申報期限的規定，不得申請延長。"
@@ -19,7 +21,6 @@ faq:
   - q: "分配給外國母公司的賸餘財產，哪一部分要課稅？"
     a: "財政部65年函釋認為，股東取得的賸餘財產中屬於股本的部分不在課稅之列，以賸餘財產減除應納清算所得稅額及股本，計算全體股東應稅清算所得額。84年函釋就公司解散後把轉投資股票分配給股東的情形，認為超過原出資額部分依所得稅法第88條股利扣繳規定辦理。兩則函釋都沒有寫出外國法人股東適用的扣繳率。"
 audience: ["zh-hant"]
-author: "legal-ai-assistant"
 ---
 
 # 外商在台子公司、分公司結束營業的稅務申報：營業稅15日、決算45日、清算30日
@@ -46,7 +47,7 @@ author: "legal-ai-assistant"
 
 公司組織的清算期間依公司法（第75條第3項）。清算人依[公司法第87條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=87)第3項應在6個月內完結清算，不能完結時得申敘理由向法院聲請展期；股份有限公司經[第334條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=334)、有限公司經[第113條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=113)第2項準用。財政部[問答](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/oQ1r8Bv)說明，清算人未於就任之日起6個月內清算完結，又未報經法院核准展期者，以6個月期間屆滿之日起算30日。清算拖著，期限照走。
 
-逾期未申報，國稅局依查得資料核定所得額及應納稅額，未繳納者移送法務部行政執行署所屬分署執行（第75條第5項、[問答](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/rgEW7eB)）。已申報但有漏報、短報，處所漏稅額2倍以下罰鍰；沒有申報，照補徵稅額處3倍以下罰鍰（[第110條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=110)）。
+逾期未申報，國稅局依查得資料核定所得額及應納稅額，未繳納者移送法務部行政執行署所屬分署執行（第75條第5項、[問答](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/rgEW7eB)）。已申報但有漏報、短報，處所漏稅額2倍以下罰鍰；未依規定申報，經稽徵機關調查發現有應稅所得者，照補徵稅額處3倍以下罰鍰（[第110條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=110)）。
 
 ## 賸餘財產匯給外國母公司之前
 
@@ -54,7 +55,7 @@ author: "legal-ai-assistant"
 
 母公司拿到的錢怎麼課稅？財政部65年[台財稅第30533號函](https://law-out.mof.gov.tw/LawContent.aspx?id=GL004853)認為，股東取得的賸餘財產中屬於股本的部分不在課稅之列；其餘以「賸餘財產－應納清算所得稅額－股本」算出全體股東應稅清算所得額，再按分派比例歸屬各股東。84年[台財稅第841627652號函](https://law-out.mof.gov.tw/LawContent.aspx?id=GL005082)則就公司解散後把轉投資股票按比例移轉給股東的情形，指出超過原出資額部分依所得稅法第88條公司分派股利的扣繳規定辦理。
 
-分配給總機構在境外的營利事業的股利，屬[所得稅法第88條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=88)第1項第1款扣繳範圍。對方在台沒有固定營業場所時，扣繳義務人應於代扣稅款之日起10日內繳清，並開具扣繳憑單申報核驗（[第92條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=92)第2項）。兩則函釋都沒有寫明外國法人股東的扣繳率；一般股利的扣繳率與日、韓協定上限，請見[子公司分配股利給外國母公司](/zh-hant/columns/taiwan-dividend-withholding-foreign-parent-tax-agreement-rates)，實際分配前宜先與所轄國稅局確認。
+分配給總機構在境外的營利事業的股利，屬[所得稅法第88條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=88)第1項第1款扣繳範圍。對方在台沒有固定營業場所時，扣繳義務人應於代扣稅款之日起10日內繳清，並開具扣繳憑單申報核驗（[第92條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=92)第2項）。這10日內如遇連續3日以上國定假日，繳納、申報核驗及發給憑單的期間延長5日。兩則函釋都沒有寫明外國法人股東的扣繳率；一般股利的扣繳率與日、韓協定上限，請見[子公司分配股利給外國母公司](/zh-hant/columns/taiwan-dividend-withholding-foreign-parent-tax-agreement-rates)，實際分配前宜先與所轄國稅局確認。
 
 ## 分公司：申請廢止分公司登記
 

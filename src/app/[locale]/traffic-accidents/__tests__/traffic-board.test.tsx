@@ -101,7 +101,7 @@ describe('TrafficBoard SSR', () => {
     ]) {
       expect(html).toContain(`href="/zh-hant/columns/${slug}"`);
     }
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(70);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(72);
     expect(html).toMatch(/<time datetime="2026-10-02">/i);
     expect(html).toContain('約7分鐘閱讀');
     expect(html).not.toContain('法律AI助理');
@@ -131,7 +131,7 @@ describe('TrafficBoard SSR', () => {
     expect(empty).toContain('value="不存在的關鍵字"');
 
     const unknown = await render('zh-hant', { subject: 'nonsense', page: '3' });
-    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(70);
+    expect(unknown.match(/data-traffic-board-row/g)).toHaveLength(72);
   });
 
   it('escapes the search value', async () => {
@@ -142,7 +142,7 @@ describe('TrafficBoard SSR', () => {
 
   it('marks playable diagrams and reviewed generated scenes as videos', async () => {
     const html = await render('ja');
-    expect(html.match(/data-traffic-board-row/g)).toHaveLength(12);
+    expect(html.match(/data-traffic-board-row/g)).toHaveLength(13);
     // The police-document article has no independently reviewed scene.
     expect(html.match(/data-traffic-board-video/g)).toHaveLength(10);
     const filtered = await render('ja', { video: '1' });

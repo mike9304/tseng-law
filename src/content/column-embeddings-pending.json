@@ -3749,6 +3749,66 @@
     {
       "locale": "en",
       "slug": "taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-telemedicine-foreign-residents-prescription-nhi"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-overseas-fraud-foreign-judgment-reprosecution"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-chip-bill-export-control-china"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-missing-tourist-tour-insurance"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-telemedicine-foreign-residents-prescription-nhi"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-chip-bill-export-control-china"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-hong-kong-parole-residence-dependent"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-missing-tourist-tour-insurance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-telemedicine-foreign-residents-prescription-nhi"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-drug-driving-vehicle-owner-passenger-confiscation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-overseas-fraud-foreign-judgment-reprosecution"
+    },
+    {
+      "locale": "en",
+      "slug": "school-bullying-investigation"
+    },
+    {
+      "locale": "ko",
+      "slug": "tenant-fire-gross-negligence"
+    },
+    {
+      "locale": "ko",
+      "slug": "landlocked-parcel-right-of-way"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "home-childcare-registration"
     }
   ]
 }

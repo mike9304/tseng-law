@@ -142,6 +142,7 @@ const CRIMINAL_COLUMN_SLUGS_20261103 = {
 
 export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_FILES_20261008): string[] {
   return [
+    ...(locale === 'en' || locale === 'zh-hant' ? ['taiwan-overseas-fraud-foreign-judgment-reprosecution'] : []),
     ...ORIGINAL_CRIMINAL_SLUGS,
     ...CRIMINAL_COLUMN_SLUGS_20261014[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261022[locale],

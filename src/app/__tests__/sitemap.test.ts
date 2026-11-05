@@ -46,6 +46,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   TRAFFIC_SCENE_COLUMN_FILES_20261021,
   TRAFFIC_SCENE_COLUMN_FILES_20261031,
   TRAFFIC_JUDGMENT_COLUMN_FILES_20261103,
+  BACKLOG_COLUMN_FILES_20261105,
   EXPERT_COLUMN_FILES_20261103,
   TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
@@ -400,6 +401,9 @@ describe('sitemap column lastModified', () => {
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103).flat().length
+          + Object.entries(BACKLOG_COLUMN_FILES_20261105)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
@@ -472,6 +476,9 @@ describe('sitemap column lastModified', () => {
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103).flat().length
+          + Object.entries(BACKLOG_COLUMN_FILES_20261105)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,

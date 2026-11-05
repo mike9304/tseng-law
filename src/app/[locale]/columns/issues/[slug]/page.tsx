@@ -194,7 +194,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.featuredImage} alt={locale === 'vi' || isFolioIssueLocale(locale) ? post.featuredImageAlt || post.title : post.title} aria-describedby={(locale === 'vi' || isFolioIssueLocale(locale)) && post.featuredImageCaption ? 'issue-image-caption' : undefined} className="blog-hero-img" />
+          <img src={post.featuredImage} alt={post.featuredImageAlt || post.title} aria-describedby={post.featuredImageCaption ? 'issue-image-caption' : undefined} className="blog-hero-img" />
           <div className="blog-hero-overlay" />
         </div>
         <div className="container blog-hero-inner">
@@ -207,7 +207,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
           </div>
         </div>
       </section>
-      {(locale === 'vi' || isFolioIssueLocale(locale)) && post.featuredImageCaption ? (
+      {post.featuredImageCaption ? (
         <div className="container">
           <p id="issue-image-caption" className={styles.imageCaption} data-column-image-caption>{post.featuredImageCaption}</p>
         </div>

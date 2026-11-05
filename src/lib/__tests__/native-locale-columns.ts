@@ -729,6 +729,41 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Reviewed backlog published on 2026-11-05; translations can have later dates than their originals. */
+export const BACKLOG_COLUMN_FILES_20261105: Readonly<Record<string, readonly string[]>> = {
+  "en": [
+    "1063-taiwan-telemedicine-foreign-residents-prescription-nhi.md",
+    "998-taiwan-overseas-fraud-foreign-judgment-reprosecution.md",
+    "1069-school-bullying-investigation.md"
+  ],
+  "ja": [
+    "1001-taiwan-chip-bill-export-control-china.md",
+    "1005-taiwan-missing-tourist-tour-insurance.md",
+    "1063-taiwan-telemedicine-foreign-residents-prescription-nhi.md",
+    "1068-e-cigarette-heated-tobacco.md"
+  ],
+  "ko": [
+    "1001-taiwan-chip-bill-export-control-china.md",
+    "1005-taiwan-missing-tourist-tour-insurance.md",
+    "1063-taiwan-telemedicine-foreign-residents-prescription-nhi.md",
+    "1067-tenant-fire-gross-negligence.md",
+    "1072-landlocked-parcel-right-of-way.md"
+  ],
+  "vi": [
+    "1066-taiwan-foreign-household-helper-caregiver-hiring-employer-duties-dependents.md",
+    "1071-rental-sublet-management-license.md"
+  ],
+  "zh-hant": [
+    "1001-taiwan-chip-bill-export-control-china.md",
+    "1002-taiwan-hong-kong-parole-residence-dependent.md",
+    "1005-taiwan-missing-tourist-tour-insurance.md",
+    "1063-taiwan-telemedicine-foreign-residents-prescription-nhi.md",
+    "997-taiwan-drug-driving-vehicle-owner-passenger-confiscation.md",
+    "998-taiwan-overseas-fraud-foreign-judgment-reprosecution.md",
+    "1070-home-childcare-registration.md"
+  ]
+};
+
 /** Expert columns (ko/zh-hant/ja/en) published 2026-11-03 (cols-a). */
 export const EXPERT_COLUMN_FILES_20261103 = {
   ko: [
@@ -1829,9 +1864,10 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-30, in filename order. */
+/** Registered locale-specific batches through 2026-11-05, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
+    ...(BACKLOG_COLUMN_FILES_20261105[locale] ?? []),
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1892,7 +1928,7 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-11-03, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-11-05, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
@@ -2000,12 +2036,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261103].sort(byFileNumber).map(slugOf).concat([...day20261031].sort().map(slugOf), [...day20261030].sort().map(slugOf), [...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
+  const latestHead = [...(BACKLOG_COLUMN_FILES_20261105[locale] ?? [])].sort(byFileNumber).map(slugOf).concat([...day20261103].sort(byFileNumber).map(slugOf).concat([...day20261031].sort().map(slugOf), [...day20261030].sort().map(slugOf), [...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head));
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if (BACKLOG_COLUMN_FILES_20261105[locale]?.map(slugOf).includes(slug)) return '2026-11-05';
   if ([...Object.values(COUNTRY_COLUMN_FILES_20261030), ...Object.values(taxAccountingFilesPublishedOn('2026-10-30')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf).includes(slug)) return '2026-10-30';
   if (Object.values(COUNTRY_COLUMN_FILES_20261029).flat().map(slugOf).includes(slug)) return '2026-10-29';
   if (Object.values(COUNTRY_COLUMN_FILES_20261028).flat().map(slugOf).includes(slug)) return '2026-10-28';
@@ -2081,6 +2118,7 @@ export function allNativeFiles(locale: string): string[] {
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
+    ...Object.values(BACKLOG_COLUMN_FILES_20261105),
     ...Object.values(EXPERTISE_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),

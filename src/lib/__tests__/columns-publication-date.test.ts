@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
 import {
+  BACKLOG_COLUMN_FILES_20261105,
   NATIVE_LOCALE_COLUMN_FILES,
   archiveLeadPublicationDate,
   archiveLeadSlugsFor,
@@ -833,6 +834,7 @@ const REDATED_20260928: Record<string, readonly string[]> = {
 };
 
 function verifiedPublicationDate(locale: string, prefix: string): string {
+  if (BACKLOG_COLUMN_FILES_20261105[locale]?.some((file) => file.startsWith(`${prefix}-`))) return '2026-11-05';
   if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().some((file) => file.startsWith(`${prefix}-`))) {
     return '2026-10-08';
   }

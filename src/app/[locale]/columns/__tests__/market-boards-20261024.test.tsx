@@ -1,11 +1,13 @@
 import type { ReactElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
+const navigation = vi.hoisted(() => ({ params: new URLSearchParams() }));
 
 vi.mock('next/navigation', () => ({
   usePathname: () => '/de/columns',
   useRouter: () => ({ replace: vi.fn(), push: vi.fn() }),
-  useSearchParams: () => new URLSearchParams(),
+  useSearchParams: () => navigation.params,
   notFound: () => {
     throw new Error('NOT_FOUND');
   },
@@ -49,6 +51,7 @@ async function articleProps(locale: string, slug: string): Promise<ColumnDetailV
 const links = (html: string, locale: string, slug: string) => html.includes(`/${locale}/columns/${slug}"`);
 
 describe('market boards render only their columns (2026-10-24)', () => {
+  beforeEach(() => { navigation.params = new URLSearchParams(); });
   it.each(MARKET_BOARD_LOCALES)('%s board: no hidden or Korean-title links, opens with every own column', async (locale) => {
     const html = await boardHtml(locale);
     const hidden = hiddenSlugs(locale);
@@ -60,11 +63,17 @@ describe('market boards render only their columns (2026-10-24)', () => {
     expect(section?.[1]).toContain(String(opening));
   }, SLOW);
 
-  it('vi stays outside the market boards: every shared column, no Korean-title list', async () => {
+  it('vi stays outside the market boards and shared columns remain searchable beyond the preview', async () => {
     expect(MARKET_BOARD_LOCALES).not.toContain('vi' as never);
+    const posts = getAllColumnPosts('vi');
     const html = await boardHtml('vi');
-    expect(links(html, 'vi', 'taiwan-gym-injury-lawsuit')).toBe(true);
+    expect(html).toContain(`data-columns-visible-count="${posts.length}"`);
     expect(html).not.toMatch(/href="\/ko\/columns\/[^"]+"/);
+    const shared = posts.find((post) => post.slug === 'taiwan-gym-injury-lawsuit')!;
+    navigation.params = new URLSearchParams({ q: shared.title });
+    const searched = await boardHtml('vi');
+    expect(links(searched, 'vi', 'taiwan-gym-injury-lawsuit')).toBe(true);
+    expect(searched).not.toMatch(/href="\/ko\/columns\/[^"]+"/);
   }, SLOW);
 
   it.each(MARKET_BOARD_LOCALES)('%s articles: a hidden column still opens; links stay on the board', async (locale) => {

@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/ISSUE-20261106-05-taiwan-sinopac-unauthorized-bank-transfer-consumer-complaint/featured-01.webp"
 featured_image_alt: "A dark smartphone beside a blank cream envelope and a closed navy folder on a wooden desk"
-featured_image_caption: "AI-generated editorial illustration of a fictional desk, not a photograph of the incident or any customer’s account."
+featured_image_caption: "Editorial illustration of a fictional desk, not a photograph of the incident or any customer’s account."
 social_image: "../images/ISSUE-20261106-05-taiwan-sinopac-unauthorized-bank-transfer-consumer-complaint/featured-01.jpg"
 faq:
   - q: "Can a foreign resident use Taiwan’s financial-consumer complaint process?"
@@ -50,7 +50,7 @@ Under [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380226&
 
 An online banking agreement also has a statutory boundary: [Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380226&flno=6) prevents advance contractual limits or exclusions of the provider’s liability under this Act and invalidates the offending stipulation. Contract wording is not conclusive. The agreement and the disputed transaction still need to be assessed together to establish the basis of a particular claim.
 
-Account records give the complaint its substance. The transaction entry identifies the debit, while messages and the bank’s explanation show what each side says happened. Where money has been recredited, a claim can distinguish the refunded principal from any specific amount still disputed. The reported SinoPac reimbursement is relevant background. The account-specific comparison remains the debit, the repayment and the bank’s written response.
+Account records give the complaint its substance. The transaction entry identifies the debit, while messages and the bank’s explanation show what each side says happened. Where money has been recredited, a claim can distinguish the refunded principal from any specific amount still disputed. The reported SinoPac reimbursement is relevant background. The bank’s written response can then be compared with the debit and any repayment recorded in the customer’s account.
 
 ## Sources
 

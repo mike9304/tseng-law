@@ -1,0 +1,466 @@
+{
+  "review": {
+    "date": "2026-11-06",
+    "reviewedBy": "root",
+    "status": "EDITORIAL_APPROVED_LOCAL_QA_PENDING",
+    "scope": "User stopped all new authoring. Existing completed IT6 HI6 DE2 plus eight previously drafted KO/EN/JA/ZH-HANT source corrections only. No videos/new generation.",
+    "counts": {
+      "new": 14,
+      "repairs": 8
+    },
+    "rootReading": "Root read full IT6/HI6 and all eight repaired bodies/FAQs; German604/609 root-authored and full root-final review receipts retained. Root visually inspected all six actual hero images. Root re-read the changed paragraphs after applying edits.",
+    "legalSources": "Official article4/13,436-28 fetched in this turn; fund9, traffic85/9/procedure15,436-9 and stalking implementation15,CPC162/516/521 directly fetched and read. Independent current official source reviews cover remaining claims; citations preserved.",
+    "styleSelfCheck": {
+      "openingDeletion": "Scene/details and early operative rules carry information; empty IT604 filler and HI604/609 editorial memos removed. First two paragraphs and recent-three comparisons present in independent review evidence.",
+      "sentenceVariety": "All final files have actual CLI FAIL0 evidence; IT604 and ZH251 intermediate failures retained with final corrected passes. HI604/635 है ending WARN accepted: full sentences vary in length, subjects and structure; no metric-driven deletion of duties. Core250 hypothetical WARN accepted against recent three entries.",
+      "paragraphRhythm": "No repeated 3-paragraph claim/caveat template; uncited concrete scenes/evidence paragraphs present. Optional direct questions absent in several procedure summaries because FAQ carries reader questions.",
+      "ending": "Ends on topic facts/records, preserving required official sources and general-information wording.",
+      "register": "KO/JA titles and seoTitle brought into respectful questions; body register and fictional labels preserved; no decorative bold/public author claims.",
+      "facts": "Dates, thresholds, exceptions, official URLs and internal destinations retained; newly clarified statutory conditions do not broaden eligibility."
+    },
+    "rows": [
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns-it/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "bdcfc3c42b3eb60f2d20757929aa58ad0d28d12f947229292e78d4514245d041",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns-it/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "18712ff5717bd9209c457217a13f835f048e59a8e6430d2561e3df0140aa9473",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "relativePath": "src/content/columns-it/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "sha256": "756ada2248875efb16a2e341f891790d0ebfea6bca3a5ae57818c7c155ca82b8",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+        "relativePath": "src/content/columns-it/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+        "sha256": "3b6a23c31c94457a38120726d29698bf1e157067bdbec67ba4e04f8ccb272193",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "relativePath": "src/content/columns-it/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "sha256": "e571e261042e4068a35b7f45a038cad006742bcdb5457890e97dbad9c3fb5584",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/635-taiwan-traffic-ticket-other-driver-notice.md",
+        "relativePath": "src/content/columns-it/635-taiwan-traffic-ticket-other-driver-notice.md",
+        "sha256": "e47817e3ecf6c992d282a45ac17974745c8d8a1d72f2b568af179709e1aab9fc",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns-hi/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "485f546fc354a2e5d8713063f17fc7f6b02e6b0be0d6799526d145e03bfd0228",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns-hi/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "cd61c84e6a0e3b6427ffa4cf23736b0528386fe8f5a2141a46470bf4dc6b5fad",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "relativePath": "src/content/columns-hi/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "sha256": "a3b148415ba3a149ce35417a1d8eba85ff902f2dfe49994a23c7fd681f93553a",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+        "relativePath": "src/content/columns-hi/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+        "sha256": "23ed4eebc993b83b1d91f9f415ad18ceea581359aa9bf559ad0269f9e5acef00",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "relativePath": "src/content/columns-hi/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "sha256": "3f821c1e0bec65977b65ea5b2ef6bdeee98725bad7645d89cb04d4de65e9e4e0",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/635-taiwan-traffic-ticket-other-driver-notice.md",
+        "relativePath": "src/content/columns-hi/635-taiwan-traffic-ticket-other-driver-notice.md",
+        "sha256": "c0c59021b81424afe24cdc4cc69ee04aaf916309cda7c53a876012967b030edc",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/de/manuscripts/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "relativePath": "src/content/columns-de/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "sha256": "ecb22613270facc57e14863d66a3c9dde05e838f474e4be45d754317a1adbdf8",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/de/manuscripts/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "relativePath": "src/content/columns-de/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "sha256": "445853477f55455f897d5847c874d8ab812e3231cc94ede6075c59626a950eb7",
+        "kind": "new"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "d18e124a5ba13366baf75707d08b31e5349fd47ec7ca40b192e87b74a707c378",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "69cf8522b7a1ce15912886bca2b68f7a891689ce2ced2e741ed12089efca7e4e",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns-en/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "48cd547c042297163037a5c739bf38171732d3139fbd7d14054ffad59e8a86ec",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns-en/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "1d479aec833ab3cb54e350b4b926939a9817fa9f9e84b804c8ed1685a93a02d5",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "bfeeef2cbbd33130f4a713304414d99db47eaddf3cc7d355f389cd25924dfec1",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "459f5adc2bc5da7f8eedc00bcd2afdc689a5575b984f497e5da0134bb7f5918e",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "relativePath": "src/content/columns-zh/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "sha256": "9042898c8ace90fa019818313e919a3c055da84dd90ab0600e4541de84a9ea13",
+        "kind": "repair"
+      },
+      {
+        "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "relativePath": "src/content/columns-zh/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "sha256": "4bf1b7881a00dbd1b95a6e851eafd13d1267d9c4e6e305ca11fbc03014ce6d53",
+        "kind": "repair"
+      }
+    ],
+    "evidence": [
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/root-final/root-narrow-edits.json",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/root-final/source-repairs-root-closures.json",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/source-repairs/review.json",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/it/REVIEW.md",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/hi/review.json",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/de/604-root-final.json",
+      "/Users/son7/tseng-all-language-columns-20261025/batch13/reviews-20261106/de/609-root-final.json"
+    ]
+  },
+  "newDraftEdits": {
+    "at": "2026-11-06T12:10:35.272611+09:00",
+    "note": "10 minimal replacements across 7 manuscripts; first execution stopped on exact-match assertion after eight Hindi edits; recovered from immutable before backups and completed remaining two Italian edits.",
+    "files": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "beforeSha256": "f8bbc9bd6f73b188bf58bff63b68e33368cabc7089751b5fbcfdcf90b1e88a94",
+        "afterSha256": "485f546fc354a2e5d8713063f17fc7f6b02e6b0be0d6799526d145e03bfd0228",
+        "reasons": [
+          "Hindi gender agreement",
+          "Art4 objection scope includes actor and victim, issuance and non-issuance"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -20,3 +20,3 @@\n\n   - q: \"चेतावनी के बाद फिर संपर्क करे तो संरक्षण आदेश कैसे माँगा जाता है?\"\n-    a: \"व्यवहार कानून की स्टॉकिंग की शर्तें पूरा करे और चेतावनी संबंधित व्यक्ति को तामील होकर प्रभावी होने से दो साल के भीतर दोबारा हो, तो पीड़ित अदालत में आवेदन कर सकता है। अभियोजक या पुलिस ठोस जोखिम देखकर अपने अधिकार से आवेदन कर सकते हैं; उनके रास्ते में पहले चेतावनी की सीमा नहीं है। आदेश स्वतः नहीं मिलता: अदालत स्टॉकिंग और संरक्षण की जरूरत जाँचती है।\"\n+    a: \"व्यवहार कानून की स्टॉकिंग की शर्तें पूरी करे और चेतावनी संबंधित व्यक्ति को तामील होकर प्रभावी होने से दो साल के भीतर दोबारा हो, तो पीड़ित अदालत में आवेदन कर सकता है। अभियोजक या पुलिस ठोस जोखिम देखकर अपने अधिकार से आवेदन कर सकते हैं; उनके रास्ते में पहले चेतावनी की सीमा नहीं है। आदेश स्वतः नहीं मिलता: अदालत स्टॉकिंग और संरक्षण की जरूरत जाँचती है।\"\n   - q: \"आपराधिक शिकायत के छह महीने कब से गिने जाते हैं?\"\n@@ -45,3 +45,3 @@\n\n \n-चेतावनी पाने वाला या उसे जारी न करने की सूचना पाने वाला पीड़ित, अपनी सूचना मिलने से दस दिन के भीतर लिखित आपत्ति दे सकता है। धारा 4 में रास्ता मूल पुलिस संस्था के माध्यम से ऊपरी संस्था तक है। मूल संस्था आपत्ति सही पाए तो तुरंत सुधार करेगी; सही न माने तो पाँच दिन में लिखित कारण के साथ आगे भेजेगी। ऊपरी संस्था सही पाए तो सुधार और अन्यथा निर्णय बनाए रखती है; उसी धारा में उसके निर्णय को फिर चुनौती न देने का प्रावधान है।\n+पुलिस की लिखित चेतावनी जारी करने या न करने के निर्णय से असहमत संबंधित व्यक्ति या पीड़ित, लिखित चेतावनी अथवा उसे जारी न करने की सूचना मिलने से दस दिन के भीतर लिखित आपत्ति दे सकता है। धारा 4 में रास्ता मूल पुलिस संस्था के माध्यम से ऊपरी संस्था तक है। मूल संस्था आपत्ति सही पाए तो तुरंत सुधार करेगी; सही न माने तो पाँच दिन में लिखित कारण के साथ आगे भेजेगी। ऊपरी संस्था सही पाए तो सुधार और अन्यथा निर्णय बनाए रखती है; उसी धारा में उसके निर्णय को फिर चुनौती न देने का प्रावधान है।\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "beforeSha256": "f3d267964dc4e9b30b7f259a25ce58c48d0f1647c6ceb7c1609709b59d4c3707",
+        "afterSha256": "cd61c84e6a0e3b6427ffa4cf23736b0528386fe8f5a2141a46470bf4dc6b5fad",
+        "reasons": [
+          "Art436-9 jurisdiction agreement precision",
+          "Art436-28 causal inability, not only direct obstruction"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -51,3 +51,3 @@\n\n \n-मुख्य नियम प्रतिवादी के अधिवास वाली अदालत है; [धाराएँ 1 और 2](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001) निवास संबंधी अपवाद तथा संस्था के प्रधान कार्यालय या मुख्य व्यवसाय-स्थान के नियम भी रखती हैं। अनुबंध में तय पालन-स्थान धारा 12 के तहत आधार हो सकता है। छोटे दावों में एक पक्ष की कंपनी या व्यापारी की मानक शर्त में लिखे पालन-स्थान या प्रथम अदालत के समझौते पर धारा 436-9 की रोक देखनी होगी; दोनों पक्ष कंपनी या व्यापारी हों तो उसका अपवाद है।\n+मुख्य नियम प्रतिवादी के अधिवास वाली अदालत है; [धाराएँ 1 और 2](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001) निवास संबंधी अपवाद तथा संस्था के प्रधान कार्यालय या मुख्य व्यवसाय-स्थान के नियम भी रखती हैं। अनुबंध में तय पालन-स्थान धारा 12 के तहत आधार हो सकता है। छोटे दावों में एक पक्ष की कंपनी या व्यापारी की मानक शर्त में लिखे पालन-स्थान या प्रथम स्तर के न्यायालय के क्षेत्राधिकार संबंधी समझौते पर धारा 436-9 की रोक देखनी होगी; दोनों पक्ष कंपनी या व्यापारी हों तो उसका अपवाद है।\n \n@@ -65,3 +65,3 @@\n\n \n-फैसले की अपील केवल कानून के उल्लंघन पर हो सकती है। [धाराएँ 436-24 और 436-25](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001) के अनुसार उल्लंघित प्रावधान, उसका आशय और रिकॉर्ड में उल्लंघन दिखाने वाले खास तथ्य बताने होंगे। पहली अदालत ने कानून का उल्लंघन करके सामग्री रखने से रोका हो तो नए तर्क या साक्ष्य के निषेध का अपवाद है। यह धारा 436-28 की सीमा है। दूसरे स्तर के निर्णय पर धारा 436-30 आगे सामान्य अपील या आदेश की अपील नहीं देती; इससे पुनर्विचार जैसी हर दूसरी व्यवस्था का अभाव नहीं निकलता।\n+फैसले की अपील केवल कानून के उल्लंघन पर हो सकती है। [धाराएँ 436-24 और 436-25](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001) के अनुसार उल्लंघित प्रावधान, उसका आशय और रिकॉर्ड में उल्लंघन दिखाने वाले खास तथ्य बताने होंगे। प्रथम अदालत के कानून-उल्लंघन के कारण पक्ष पहले नए तर्क या साक्ष्य प्रस्तुत नहीं कर पाया हो तो इस निषेध का अपवाद है। यह धारा 436-28 की सीमा है। दूसरे स्तर के निर्णय पर धारा 436-30 आगे सामान्य अपील या आदेश की अपील नहीं देती; इससे पुनर्विचार जैसी हर दूसरी व्यवस्था का अभाव नहीं निकलता।\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "beforeSha256": "e293d1c89fec0930643258b2929809cb1fc5f8dd8e19a7d98d3fed7a5eeae9ae",
+        "afterSha256": "a3b148415ba3a149ce35417a1d8eba85ff902f2dfe49994a23c7fd681f93553a",
+        "reasons": [
+          "Replace editorial memo with notice rule",
+          "Remove unsupported editorial rebuttal; effective date and exceptions unchanged"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -56,3 +56,3 @@\n\n \n-इन आधारों पर समाप्ति के लिए संबंधित प्रमाण जोड़कर मकान मालिक को 30 दिन पहले लिखित सूचना देनी होगी। किरायेदार की मृत्यु पर उत्तराधिकारी भी समाप्ति कर सकते हैं; धारा 11 में उनके लिए वही सूचना और प्रमाण का नियम है। एक महीना और 30 दिन यहाँ अलग शब्द हैं। उन्हें बदलकर नहीं लिखना चाहिए।\n+इन आधारों पर समाप्ति के लिए संबंधित प्रमाण जोड़कर मकान मालिक को 30 दिन पहले लिखित सूचना देनी होगी। किरायेदार की मृत्यु पर उत्तराधिकारी भी समाप्ति कर सकते हैं; धारा 11 में उनके लिए वही सूचना और प्रमाण का नियम है। सूचना कितने दिन पहले देनी है, यह समाप्ति के आधार पर निर्भर करता है: बिंदु 14 में एक महीना और धारा 11 में 30 दिन।\n \n@@ -62,3 +62,3 @@\n\n \n-इस बिंदु का उद्धृत संशोधन 18 अप्रैल 2025 को प्रभावी हुआ था। उससे सुरक्षा संबंधी अधिकार या आपात अपवाद पहली बार बना हो, ऐसा नहीं कहा जा रहा है। [प्रभावी पाठ](https://www.ey.gov.tw/File/43BC094940995CFC?A=C) को आधार बनाया गया है; प्रस्तावित बदलावों को लागू नियम नहीं माना गया है।\n+इस बिंदु का उद्धृत संशोधन 18 अप्रैल 2025 को प्रभावी हुआ था। [प्रभावी पाठ](https://www.ey.gov.tw/File/43BC094940995CFC?A=C) को आधार बनाया गया है; प्रस्तावित बदलावों को लागू नियम नहीं माना गया है।\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+        "beforeSha256": "99c021dbcb47ec134f075d18276abdf748582a32e57b1b594954c172906c60eb",
+        "afterSha256": "23ed4eebc993b83b1d91f9f415ad18ceea581359aa9bf559ad0269f9e5acef00",
+        "reasons": [
+          "Fund regulation9 verification does not require on-site inspection"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -67,3 +67,3 @@\n\n \n-वेतन-पर्चियाँ, बैंक रिकॉर्ड, काम की अवधि और भुगतान की पात्रता के कागज़ अलग मदों के हिसाब से रखे जाएँ। [आवेदन संबंधी FAQ](https://www.bli.gov.tw/0015125.html) और आधिकारिक मार्गदर्शन बकाये से पहले कम से कम तीन महीने की मजदूरी सामग्री भी माँगते हैं। मौके की जाँच के बाद भी रकम या सेवा-अवधि तय न हो सके तो ब्यूरो बीमा में दर्ज मजदूरी और अवधि को मान सकता है; यह असाधारण प्रमाण-व्यवस्था सामान्य औसत वेतन का सूत्र नहीं बदलती।\n+वेतन-पर्चियाँ, बैंक रिकॉर्ड, काम की अवधि और भुगतान की पात्रता के कागज़ अलग मदों के हिसाब से रखे जाएँ। [आवेदन संबंधी FAQ](https://www.bli.gov.tw/0015125.html) और आधिकारिक मार्गदर्शन बकाये से पहले कम से कम तीन महीने की मजदूरी सामग्री भी माँगते हैं। जाँच के बाद भी रकम या सेवा-अवधि तय न हो सके तो ब्यूरो बीमा में दर्ज मजदूरी और अवधि को मान सकता है; यह असाधारण प्रमाण-व्यवस्था सामान्य औसत वेतन का सूत्र नहीं बदलती।\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/hi/manuscripts/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "beforeSha256": "56830b6a8d1b7707e4c166255a193f4890f081dc53ad99ae0d5aeece44e097c5",
+        "afterSha256": "3f821c1e0bec65977b65ea5b2ef6bdeee98725bad7645d89cb04d4de65e9e4e0",
+        "reasons": [
+          "Replace editorial memo with Civil180 recipient-only exception"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -52,3 +52,3 @@\n\n \n-चौथे खंड का अपवाद छूटना नहीं चाहिए। केवल भुगतान को अवैध कहकर वापसी से इनकार करने पर यह प्रश्न अनुत्तरित रह जाता है कि अवैध कारण किसकी ओर था। इन श्रेणियों का लागू होना व्यवस्था और वास्तविक तथ्यों से जाँचा जाएगा; गलत संख्या टाइप होने से अकेले इसका उत्तर नहीं मिलता।\n+चौथे खंड में यह भी देखना होगा कि अवैध कारण केवल प्राप्तकर्ता की ओर था या नहीं। केवल भुगतान को अवैध कहकर वापसी से इनकार करने पर यह प्रश्न अनुत्तरित रह जाता है कि अवैध कारण किसकी ओर था। इन श्रेणियों का लागू होना व्यवस्था और वास्तविक तथ्यों से जाँचा जाएगा; गलत संख्या टाइप होने से अकेले इसका उत्तर नहीं मिलता।\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+        "beforeSha256": "9d7566f4aaadf326e81e6e9836473ba8a40967693cda1598fda21acc8a108039",
+        "afterSha256": "756ada2248875efb16a2e341f891790d0ebfea6bca3a5ae57818c7c155ca82b8",
+        "reasons": [
+          "Remove empty filler"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -43,3 +43,3 @@\n\n \n-Le parti possono cercare un accordo sulla data di uscita e sulle somme da regolare. Mettere per iscritto data finale, canoni, penale concordata e restituzione del deposito evita di lasciare il conto affidato a conversazioni frammentarie. È un accorgimento pratico.\n+È possibile concordare la cessazione. L’accordo scritto dovrebbe indicare la data finale, i canoni, l’eventuale penale concordata e la restituzione del deposito.\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/it/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+        "beforeSha256": "8a6c59c15a9ec5e4e491bd336252260a1706ff4ca6100086a9b5ac07dd087062",
+        "afterSha256": "e571e261042e4068a35b7f45a038cad006742bcdb5457890e97dbad9c3fb5584",
+        "reasons": [
+          "Replace editorial memo with Civil180 recipient-only exception"
+        ],
+        "meaningPreserved": true,
+        "diff": "--- \n\n+++ \n\n@@ -56,3 +56,3 @@\n\n \n-Nella terza ipotesi conta ciò che sapeva chi pagava. Scoprire l’errore dopo il bonifico non dimostra una conoscenza precedente. Nella quarta, omettere l’eccezione riguardante il solo destinatario cambierebbe la regola.\n+Nella terza ipotesi conta ciò che sapeva chi pagava. Scoprire l’errore dopo il bonifico non dimostra una conoscenza precedente. Nella quarta, conta se la causa illecita riguarda soltanto il destinatario.\n "
+      }
+    ],
+    "finalFollowups": "IT604 replaced practical-advice paragraph with two direct sentences preserving final date/rent/penalty/deposit; ZH251 split base-period sentence from calculation exception. Failed intermediate variety receipts retained; final checks PASS."
+  },
+  "sourceRepairEdits": {
+    "at": "2026-11-06T12:13:04.005433+09:00",
+    "reviewedBy": "root",
+    "findings": [
+      {
+        "id": "M1-ko",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "검사와 경찰은 직권으로 신청할 수 있고, 이때는 서면 경고가 먼저 있어야 한다는 제한을 받지 않습니다",
+        "proposal": "검사와 경찰은 직권으로 신청할 수 있습니다. 이때는 사안의 구체적인 위험 상황을 고려해야 하며, 서면 경고가 먼저 있어야 한다는 제한을 받지 않습니다 (기존 제15조 인라인 링크와 구두점 유지)",
+        "reason": "시행세칙 제15조의 직권 신청 예외를 설명하면서 같은 조문의 구체적 위험 상황 고려 의무를 누락했다. factpack F11의 보존 조건이다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M1-en",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "Prosecutors and the police may apply on their own authority, and when they do, no earlier written warning is required",
+        "proposal": "Prosecutors and the police may apply on their own authority. They must consider the concrete danger in the individual case, and no earlier written warning is required (기존 제15조 인라인 링크와 구두점 유지)",
+        "reason": "시행세칙 제15조의 직권 신청 예외를 설명하면서 같은 조문의 구체적 위험 상황 고려 의무를 누락했다. factpack F11의 보존 조건이다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M1-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "検察官と警察機関は職権で申し立てることができ、その場合は書面告誡が先に出ていることを要しません",
+        "proposal": "検察官と警察機関は職権で申し立てることができます。その際は個々の事案における具体的な危険を考慮しなければならず、書面告誡が先に出ていることを要しません (기존 제15조 인라인 링크와 구두점 유지)",
+        "reason": "시행세칙 제15조의 직권 신청 예외를 설명하면서 같은 조문의 구체적 위험 상황 고려 의무를 누락했다. factpack F11의 보존 조건이다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M1-zh-hant",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "檢察官或警察機關得依職權聲請，不受書面告誡先行的限制",
+        "proposal": "檢察官或警察機關得依職權聲請，應考量個案的具體危險情境，不受書面告誡先行的限制 (기존 제15조 인라인 링크와 구두점 유지)",
+        "reason": "시행세칙 제15조의 직권 신청 예외를 설명하면서 같은 조문의 구체적 위험 상황 고려 의무를 누락했다. factpack F11의 보존 조건이다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M2-250-ko",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "대만에서 스토킹 피해를 신고하면: 경찰의 서면 경고, 법원 보호령, 6개월의 고소 기간",
+        "proposal": {
+          "title_and_h1": "대만에서 스토킹을 신고하면 어떤 보호를 받을 수 있나요?",
+          "seoTitle": "대만 스토킹 피해, 경고·보호령·고소는 어떻게 진행하나요?"
+        },
+        "reason": "2026-11-03 제목·description 말투 규칙의 독자에게 말하는 존대 문장/질문형 요구에 맞지 않는 명사 나열형 제목이다. title·H1·seoTitle을 함께 맞춘다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M2-251-ko",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "대만에서 못 받은 돈이 10만 대만달러 이하일 때, 소액절차의 비용과 진행",
+        "proposal": {
+          "title_and_h1": "대만에서 못 받은 돈이 10만 대만달러 이하라면 소송은 어떻게 진행하나요?",
+          "seoTitle": "대만 소액소송, 비용은 얼마이고 항소는 언제 가능한가요?"
+        },
+        "reason": "2026-11-03 제목·description 말투 규칙의 독자에게 말하는 존대 문장/질문형 요구에 맞지 않는 명사 나열형 제목이다. title·H1·seoTitle을 함께 맞춘다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M2-250-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "台湾でつきまといに遭ったとき：警察の書面告誡、裁判所の保護令、6か月の告訴期間",
+        "proposal": {
+          "title_and_h1": "台湾でつきまといに遭ったら、どのような保護を受けられますか？",
+          "seoTitle": "台湾でつきまといを受けたら、警告・保護令・告訴はどう進みますか？"
+        },
+        "reason": "2026-11-03 제목·description 말투 규칙의 독자에게 말하는 존대 문장/질문형 요구에 맞지 않는 명사 나열형 제목이다. title·H1·seoTitle을 함께 맞춘다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M2-251-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "台湾で10万元以下の未払い金を訴えるとき：少額手続の費用、調停、控訴の制限",
+        "proposal": {
+          "title_and_h1": "台湾で10万元以下の未払い金を請求するとき、少額手続はどう進みますか？",
+          "seoTitle": "台湾の少額手続では、費用と控訴はどうなりますか？"
+        },
+        "reason": "2026-11-03 제목·description 말투 규칙의 독자에게 말하는 존대 문장/질문형 요구에 맞지 않는 명사 나열형 제목이다. title·H1·seoTitle을 함께 맞춘다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M3-ko",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "채무자가 송달 후 20일 안에 이의하지 않으면 지급명령은 집행명의가 되고",
+        "proposal": {
+          "replace_anchor": "채무자가 법정 기간 안에 적법한 이의를 제기하지 않으면 지급명령은 집행명의가 되고",
+          "add_after_sentence": "이의의 기본기간은 송달 후 20일이며, 실제 기한은 법정 기간 계산과 제162조의 이동기간 및 현지 소송대리인 예외를 함께 적용합니다.",
+          "link_instruction": "제162조 기존 출처를 인라인으로 연결; 20일이 20영업일이라는 표현 금지"
+        },
+        "reason": "앞의 항소 단락에는 기본 20일 및 제162조 예외를 복원했지만, 지급명령에서는 20일 경과만으로 집행명의가 된다고 단정한다. 제521조는 실제 법정 기간 내 적법한 이의 여부를 기준으로 하며 제162조는 법정 기간에 적용된다. factpack P3-18도 같은 계산 조건을 요구한다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M3-en",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "If the debtor does not object within 20 days of service, the order becomes a basis for enforcement",
+        "proposal": {
+          "replace_anchor": "If the debtor does not file a valid objection within the statutory period, the order becomes a basis for enforcement",
+          "add_after_sentence": "The basic objection period is 20 days from service; its end date also depends on the statutory calculation rules and Article 162’s travel allowance and local-agent exception.",
+          "link_instruction": "제162조 기존 출처를 인라인으로 연결; 20일이 20영업일이라는 표현 금지"
+        },
+        "reason": "앞의 항소 단락에는 기본 20일 및 제162조 예외를 복원했지만, 지급명령에서는 20일 경과만으로 집행명의가 된다고 단정한다. 제521조는 실제 법정 기간 내 적법한 이의 여부를 기준으로 하며 제162조는 법정 기간에 적용된다. factpack P3-18도 같은 계산 조건을 요구한다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M3-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "債務者が送達後20日以内に異議を出さなければ支払命令は執行名義になり",
+        "proposal": {
+          "replace_anchor": "債務者が法定期間内に適法な異議を出さなければ支払命令は執行名義になり",
+          "add_after_sentence": "異議の基本期間は送達後20日ですが、実際の期限は法定の期間計算と第162条の在途期間、裁判所所在地に住む訴訟代理人の例外も踏まえて算定します。",
+          "link_instruction": "제162조 기존 출처를 인라인으로 연결; 20일이 20영업일이라는 표현 금지"
+        },
+        "reason": "앞의 항소 단락에는 기본 20일 및 제162조 예외를 복원했지만, 지급명령에서는 20일 경과만으로 집행명의가 된다고 단정한다. 제521조는 실제 법정 기간 내 적법한 이의 여부를 기준으로 하며 제162조는 법정 기간에 적용된다. factpack P3-18도 같은 계산 조건을 요구한다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "M3-zh-hant",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "債務人在送達後20日內沒有提出異議，支付命令就得為執行名義",
+        "proposal": {
+          "replace_anchor": "債務人未在法定期間內合法提出異議，支付命令就得為執行名義",
+          "add_after_sentence": "異議的基本期間是送達後20日，實際到期日仍須依期間計算規則，並適用第162條的在途期間及法院所在地訴訟代理人例外。",
+          "link_instruction": "제162조 기존 출처를 인라인으로 연결; 20일이 20영업일이라는 표현 금지"
+        },
+        "reason": "앞의 항소 단락에는 기본 20일 및 제162조 예외를 복원했지만, 지급명령에서는 20일 경과만으로 집행명의가 된다고 단정한다. 제521조는 실제 법정 기간 내 적법한 이의 여부를 기준으로 하며 제162조는 법정 기간에 적용된다. factpack P3-18도 같은 계산 조건을 요구한다.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "N1-ko",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "처벌을 원하면 고소 의사를 조서에 따로 남겨야 합니다",
+        "proposal": "처벌을 원하면 고소 의사를 밝혀야 합니다. 고소는 서면이나 말로 할 수 있고, 말로 하면 조서가 작성됩니다.",
+        "reason": "FAQ의 조서 필수 표현은 서면 고소도 가능하다는 본문과 함께 읽으면 해소되지만, FAQ만 읽는 독자에게 구술만 가능한 것처럼 들릴 수 있다. 최소 명료화 권장.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "N1-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "処罰を求めるときは、その意思を調書に残してもらう必要があります",
+        "proposal": "処罰を求めるときは、告訴する意思を示します。告訴は書面でも口頭でもでき、口頭の場合は調書が作られます。",
+        "reason": "FAQ의 조서 필수 표현은 서면 고소도 가능하다는 본문과 함께 읽으면 해소되지만, FAQ만 읽는 독자에게 구술만 가능한 것처럼 들릴 수 있다. 최소 명료화 권장.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "N1-zh-hant",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "before": "要追究刑事責任，應在筆錄上表明提出告訴",
+        "proposal": "要追究刑事責任，應表明提出告訴；可以書面或言詞提出，言詞告訴應製作筆錄",
+        "reason": "FAQ의 조서 필수 표현은 서면 고소도 가능하다는 본문과 함께 읽으면 해소되지만, FAQ만 읽는 독자에게 구술만 가능한 것처럼 들릴 수 있다. 최소 명료화 권장.",
+        "meaningPreserved": true
+      },
+      {
+        "id": "root-mediation-heading-columns-ja",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "## 提訴すると、まず調停が開かれます",
+        "after": "## 提訴すると、原則としてまず調停が開かれます",
+        "reason": "Heading reflects preserved mediation exceptions in the body",
+        "meaningPreserved": true
+      },
+      {
+        "id": "root-mediation-heading-columns-zh",
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "before": "## 起訴之後先調解",
+        "after": "## 起訴之後原則上先調解",
+        "reason": "Heading reflects preserved mediation exceptions in the body",
+        "meaningPreserved": true
+      }
+    ],
+    "files": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "beforeSha256": "adbfe52dc91abf087e782dd4f9635acc01cc17129a7e32b4c7bd4ac42cc438a0",
+        "afterSha256": "d18e124a5ba13366baf75707d08b31e5349fd47ec7ca40b192e87b74a707c378",
+        "diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n ---\n-title: \"대만에서 스토킹 피해를 신고하면: 경찰의 서면 경고, 법원 보호령, 6개월의 고소 기간\"\n-seoTitle: \"대만 스토킹방지법: 서면 경고·보호령·형사 고소 절차\"\n+title: \"대만에서 스토킹을 신고하면 어떤 보호를 받을 수 있나요?\"\n+seoTitle: \"대만 스토킹 피해, 경고·보호령·고소는 어떻게 진행하나요?\"\n summary: \"대만 스토킹방지법은 특정인 의사에 반해 성·성별 관련 행위를 반복하거나 지속하여, 두려움이 일상생활이나 사회활동에 영향을 줄 정도인 경우를 다룹니다. 조사 후 범죄 혐의가 있으면 경찰은 서면 경고를 발부해야 합니다. 경고가 송달되어 효력이 생긴 날부터 2년 안에 다시 스토킹행위를 하면 피해자가 보호령을 신청할 수 있습니다. 기본죄의 고소 기간은 고소권자가 범인을 안 때부터 6개월입니다.\"\n@@ -18,3 +18,3 @@\n\n   - q: \"형사 고소는 언제까지 해야 하나요?\"\n-    a: \"흉기 없이 저지른 기본 스토킹죄(제18조 제1항)는 고소가 있어야 처벌 절차가 진행됩니다. 형사소송법 제237조에 따라 고소할 수 있는 사람이 범인을 안 때부터 6개월 안에 고소해야 합니다. 서면 경고는 고소 없이도 발부되는 별개의 조치이므로(시행세칙 제10조), 처벌을 원하면 고소 의사를 조서에 따로 남겨야 합니다.\"\n+    a: \"흉기 없이 저지른 기본 스토킹죄(제18조 제1항)는 고소가 있어야 처벌 절차가 진행됩니다. 형사소송법 제237조에 따라 고소할 수 있는 사람이 범인을 안 때부터 6개월 안에 고소해야 합니다. 서면 경고는 고소 없이도 발부되는 별개의 조치이므로(시행세칙 제10조), 처벌을 원하면 고소 의사를 밝혀야 합니다. 고소는 서면이나 말로 할 수 있고, 말로 하면 조서가 작성됩니다.\"\n audience: [\"ko\"]\n@@ -23,3 +23,3 @@\n\n \n-# 대만에서 스토킹 피해를 신고하면: 경찰의 서면 경고, 법원 보호령, 6개월의 고소 기간\n+# 대만에서 스토킹을 신고하면 어떤 보호를 받을 수 있나요?\n \n@@ -51,3 +51,3 @@\n\n \n-서면 경고가 행위자에게 송달되어 효력이 생긴 날부터 2년 안에 행위자가 다시 스토킹행위를 하면 피해자는 법원에 보호령(保護令)을 신청할 수 있습니다([제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5) 제1항, [시행세칙 제14조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)). 피해자가 미성년자이거나 장애가 있거나 사정상 대리인을 선임하기 어려우면 배우자, 법정대리인, 3촌 이내의 혈족이나 인척이 대신 신청할 수 있습니다. 검사와 경찰은 직권으로 신청할 수 있고, 이때는 서면 경고가 먼저 있어야 한다는 제한을 받지 않습니다([시행세칙 제15조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)). 신청, 취소, 변경, 연장, 항고에는 재판비가 없습니다(제5조 제3항).\n+서면 경고가 행위자에게 송달되어 효력이 생긴 날부터 2년 안에 행위자가 다시 스토킹행위를 하면 피해자는 법원에 보호령(保護令)을 신청할 수 있습니다([제5조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5) 제1항, [시행세칙 제14조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)). 피해자가 미성년자이거나 장애가 있거나 사정상 대리인을 선임하기 어려우면 배우자, 법정대리인, 3촌 이내의 혈족이나 인척이 대신 신청할 수 있습니다. 검사와 경찰은 직권으로 신청할 수 있습니다. 이때는 사안의 구체적인 위험 상황을 고려해야 하며, 서면 경고가 먼저 있어야 한다는 제한을 받지 않습니다([시행세칙 제15조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)). 신청, 취소, 변경, 연장, 항고에는 재판비가 없습니다(제5조 제3항).\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "beforeSha256": "dc65e7c5527107d1c6a5f68d2cc5c73f16f27f65e91e7844ddba04b1af6612c5",
+        "afterSha256": "48cd547c042297163037a5c739bf38171732d3139fbd7d14054ffad59e8a86ec",
+        "diff": "--- \n\n+++ \n\n@@ -33,3 +33,3 @@\n\n \n-Eight kinds of conduct appear in the paragraph. Two concern presence: watching, following or tracking a person's whereabouts, and approaching their home, school, workplace or regular places by staking out, waiting or tailing. Three concern contact: warnings, threats, mockery, insults and discriminatory, hateful or belittling words or gestures; harassment by phone, electronic communication or the internet; and demands for dates or contact, or other pursuit. \n+Eight kinds of conduct appear in the paragraph. Two concern presence: watching, following or tracking a person's whereabouts, and approaching their home, school, workplace or regular places by staking out, waiting or tailing. Three concern contact: warnings, threats, mockery, insults and discriminatory, hateful or belittling words or gestures; harassment by phone, electronic communication or the internet; and demands for dates or contact, or other pursuit.\n \n@@ -55,3 +55,3 @@\n\n \n-For a protection order, the victim may apply when the actor stalks again within two years after the written warning ([Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5), paragraph 1). The two years run from the day the warning was served on the actor and took effect ([Enforcement Rules, Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)). Where the victim is a minor, a person with a disability, or someone who has difficulty appointing an agent, a spouse, legal representative, or relative by blood or marriage within the third degree may apply on the victim's behalf. Prosecutors and the police may apply on their own authority, and when they do, no earlier written warning is required ([Enforcement Rules, Article 15](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)). No court fee is charged for applying, or for revoking, changing, extending or appealing an order (Article 5, paragraph 3).\n+For a protection order, the victim may apply when the actor stalks again within two years after the written warning ([Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5), paragraph 1). The two years run from the day the warning was served on the actor and took effect ([Enforcement Rules, Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)). Where the victim is a minor, a person with a disability, or someone who has difficulty appointing an agent, a spouse, legal representative, or relative by blood or marriage within the third degree may apply on the victim's behalf. Prosecutors and the police may apply on their own authority. They must consider the concrete danger in the individual case, and no earlier written warning is required ([Enforcement Rules, Article 15](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)). No court fee is charged for applying, or for revoking, changing, extending or appealing an order (Article 5, paragraph 3).\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "beforeSha256": "3d2814a23f05ecc8b09701b99615475620dd5d145602e9a3460a05fb09f0d58b",
+        "afterSha256": "bfeeef2cbbd33130f4a713304414d99db47eaddf3cc7d355f389cd25924dfec1",
+        "diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n ---\n-title: \"台湾でつきまといに遭ったとき：警察の書面告誡、裁判所の保護令、6か月の告訴期間\"\n-seoTitle: \"台湾のストーカー対策：跟蹤騷擾防制法の書面告誡・保護令・告訴\"\n+title: \"台湾でつきまといに遭ったら、どのような保護を受けられますか？\"\n+seoTitle: \"台湾でつきまといを受けたら、警告・保護令・告訴はどう進みますか？\"\n summary: \"台湾の跟蹤騷擾防制法は、特定人の意思に反する性・性別関連の行為を反復または継続し、恐怖により日常生活や社会活動に影響を及ぼすに足りる場合を対象にします。調査後に犯罪の疑いがあれば、警察は書面告誡を出す義務があります。送達により効力を生じてから2年以内に再び同法の行為があれば、被害者は保護令を申し立てられます。基本の罪の告訴期間は、告訴権者が犯人を知った時から6か月です。\"\n@@ -18,3 +18,3 @@\n\n   - q: \"告訴はいつまでにすればよいですか？\"\n-    a: \"凶器などを携帯していない基本の罪（第18条第1項）は親告罪です。刑事訴訟法第237条により、告訴できる人が犯人を知った時から6か月以内に告訴しなければなりません。書面告誡は告訴がなくても出される別の措置なので（施行細則第10条）、処罰を求めるときは、その意思を調書に残してもらう必要があります。\"\n+    a: \"凶器などを携帯していない基本の罪（第18条第1項）は親告罪です。刑事訴訟法第237条により、告訴できる人が犯人を知った時から6か月以内に告訴しなければなりません。書面告誡は告訴がなくても出される別の措置なので（施行細則第10条）、処罰を求めるときは、告訴する意思を示します。告訴は書面でも口頭でもでき、口頭の場合は調書が作られます。\"\n audience: [\"ja\"]\n@@ -23,3 +23,3 @@\n\n \n-# 台湾でつきまといに遭ったとき：警察の書面告誡、裁判所の保護令、6か月の告訴期間\n+# 台湾でつきまといに遭ったら、どのような保護を受けられますか？\n \n@@ -55,3 +55,3 @@\n\n \n-書面告誡が行為者に送達されて効力を生じた日から2年以内に、行為者が再びつきまとい・嫌がらせ行為をしたとき、被害者は裁判所に保護令を申し立てられます（[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5)第1項、[施行細則第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)）。被害者が未成年者や障害のある人である場合、または事情があって代理人を選任しにくい場合は、代わりに申し立てることができます。申立人になれるのは、配偶者、法定代理人、三親等内の血族・姻族です。検察官と警察機関は職権で申し立てることができ、その場合は書面告誡が先に出ていることを要しません（[施行細則第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)）。申立て、取消し、変更、延長、抗告のいずれにも裁判費はかかりません（第5条第3項）。\n+書面告誡が行為者に送達されて効力を生じた日から2年以内に、行為者が再びつきまとい・嫌がらせ行為をしたとき、被害者は裁判所に保護令を申し立てられます（[第5条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5)第1項、[施行細則第14条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)）。被害者が未成年者や障害のある人である場合、または事情があって代理人を選任しにくい場合は、代わりに申し立てることができます。申立人になれるのは、配偶者、法定代理人、三親等内の血族・姻族です。検察官と警察機関は職権で申し立てることができます。その際は個々の事案における具体的な危険を考慮しなければならず、書面告誡が先に出ていることを要しません（[施行細則第15条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)）。申立て、取消し、変更、延長、抗告のいずれにも裁判費はかかりません（第5条第3項）。\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+        "beforeSha256": "0133f96308ea6827b36f591b033c43b223355376f5e22bfad083602c049f36b1",
+        "afterSha256": "9042898c8ace90fa019818313e919a3c055da84dd90ab0600e4541de84a9ea13",
+        "diff": "--- \n\n+++ \n\n@@ -18,3 +18,3 @@\n\n   - q: \"報案之後，還要另外提告嗎？\"\n-    a: \"第18條第1項的罪須告訴乃論，依刑事訴訟法第237條，告訴應自得為告訴之人知悉犯人之時起六個月內提出。書面告誡的核發不以被害人提出告訴為限（施行細則第10條），兩者是不同的事；要追究刑事責任，應在筆錄上表明提出告訴。\"\n+    a: \"第18條第1項的罪須告訴乃論，依刑事訴訟法第237條，告訴應自得為告訴之人知悉犯人之時起六個月內提出。書面告誡的核發不以被害人提出告訴為限（施行細則第10條），兩者是不同的事；要追究刑事責任，應表明提出告訴；可以書面或言詞提出，言詞告訴應製作筆錄。\"\n audience: [\"zh-hant\"]\n@@ -51,3 +51,3 @@\n\n \n-書面告誡送達行為人生效之日起二年內，行為人再為跟蹤騷擾行為，被害人得向法院聲請保護令（[第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5)第1項、[施行細則第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)）。被害人是未成年人、身心障礙者或因故難以委任代理人時，配偶、法定代理人、三親等內的血親或姻親得代為聲請。檢察官或警察機關得依職權聲請，不受書面告誡先行的限制（[施行細則第15條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)）。聲請、撤銷、變更、延長及抗告都免徵裁判費（第5條第3項）。\n+書面告誡送達行為人生效之日起二年內，行為人再為跟蹤騷擾行為，被害人得向法院聲請保護令（[第5條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080211&flno=5)第1項、[施行細則第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=14)）。被害人是未成年人、身心障礙者或因故難以委任代理人時，配偶、法定代理人、三親等內的血親或姻親得代為聲請。檢察官或警察機關得依職權聲請，應考量個案的具體危險情境，不受書面告誡先行的限制（[施行細則第15條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080213&flno=15)）。聲請、撤銷、變更、延長及抗告都免徵裁判費（第5條第3項）。\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "beforeSha256": "377376b145c5d951e813f81c3ef904866ef843e3251feb6cdbb58773a90ac3b7",
+        "afterSha256": "69cf8522b7a1ce15912886bca2b68f7a891689ce2ced2e741ed12089efca7e4e",
+        "diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n ---\n-title: \"대만에서 못 받은 돈이 10만 대만달러 이하일 때, 소액절차의 비용과 진행\"\n-seoTitle: \"대만 소액소송(小額程序) 재판비, 조정, 항소 제한\"\n+title: \"대만에서 못 받은 돈이 10만 대만달러 이하라면 소송은 어떻게 진행하나요?\"\n+seoTitle: \"대만 소액소송, 비용은 얼마이고 항소는 언제 가능한가요?\"\n summary: \"대만 민사소송법은 10만 대만달러 이하의 금전 청구를 소액절차로 처리합니다. 2026년 10월 현재 1심 재판비는 1,500 대만달러이고 변론은 한 번의 기일로 끝내는 것이 원칙입니다. 원칙적으로 법원 조정을 먼저 거치고, 항소는 법령 위반을 이유로 할 때만 할 수 있습니다. 대만에 주소가 없는 원고는 피고의 신청으로 소송비용 담보를 명령받을 수 있습니다.\"\n@@ -23,3 +23,3 @@\n\n \n-# 대만에서 못 받은 돈이 10만 대만달러 이하일 때, 소액절차의 비용과 진행\n+# 대만에서 못 받은 돈이 10만 대만달러 이하라면 소송은 어떻게 진행하나요?\n \n@@ -85,3 +85,3 @@\n\n \n-상대방이 채무를 다투지 않을 것으로 보이면 지급명령(支付命令)을 먼저 검토할 수 있습니다. 일정한 금액의 금전 청구는 [제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)의 신청 대상입니다. 신청비는 500대만달러입니다([제77조의19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)). 채무자가 송달 후 20일 안에 이의하지 않으면 지급명령은 집행명의가 되고([제516조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516), [제521조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)), 이의하면 그 신청을 소 제기나 조정 신청으로 봅니다([제519조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)). 외국 송달이나 공시송달이 필요하면 이 절차를 쓸 수 없습니다([제509조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)).\n+상대방이 채무를 다투지 않을 것으로 보이면 지급명령(支付命令)을 먼저 검토할 수 있습니다. 일정한 금액의 금전 청구는 [제508조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)의 신청 대상입니다. 신청비는 500대만달러입니다([제77조의19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)). 이의의 기본기간은 송달 후 20일이며, 실제 기한은 법정 기간 계산과 [제162조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=162)의 이동기간 및 현지 소송대리인 예외를 함께 적용합니다. 채무자가 법정 기간 안에 적법한 이의를 제기하지 않으면 지급명령은 집행명의가 되고([제516조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516), [제521조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)), 이의하면 그 신청을 소 제기나 조정 신청으로 봅니다([제519조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)). 외국 송달이나 공시송달이 필요하면 이 절차를 쓸 수 없습니다([제509조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)).\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "beforeSha256": "c578ffc4743d7ecea5e54743ddd0d54119ada40388d0e96592e3df6b0d578ac0",
+        "afterSha256": "459f5adc2bc5da7f8eedc00bcd2afdc689a5575b984f497e5da0134bb7f5918e",
+        "diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n ---\n-title: \"台湾で10万元以下の未払い金を訴えるとき：少額手続の費用、調停、控訴の制限\"\n-seoTitle: \"台湾の少額手続（小額程序）：裁判費1,500元と控訴の制限\"\n+title: \"台湾で10万元以下の未払い金を請求するとき、少額手続はどう進みますか？\"\n+seoTitle: \"台湾の少額手続では、費用と控訴はどうなりますか？\"\n summary: \"台湾の民事訴訟法は、10万台湾元以下の金銭などの支払請求に少額手続（小額程序）を適用します。2026年10月時点の第一審の裁判費は1,500元で、口頭弁論は1回で終わるのが原則です。提訴すると原則としてまず裁判所の調停が行われ、控訴は判決の法令違反を理由とする場合に限られます。台湾に住所のない原告は、被告の申立てにより訴訟費用の担保を命じられることがあります。\"\n@@ -23,3 +23,3 @@\n\n \n-# 台湾で10万元以下の未払い金を訴えるとき：少額手続の費用、調停、控訴の制限\n+# 台湾で10万元以下の未払い金を請求するとき、少額手続はどう進みますか？\n \n@@ -55,3 +55,3 @@\n\n \n-## 提訴すると、まず調停が開かれます\n+## 提訴すると、原則としてまず調停が開かれます\n \n@@ -87,3 +87,3 @@\n\n \n-相手が債務そのものを争わない見込みなら、支払命令（支付命令）を先に検討できます。一定額の金銭の支払請求であれば申し立てることができ（[第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)）、申立ての裁判費は500元です（[第77条の19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)）。債務者が送達後20日以内に異議を出さなければ支払命令は執行名義になり（[第516条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516)、[第521条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)）、異議が出れば、その申立ては訴えの提起または調停の申立てとみなされます（[第519条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)）。支払命令を外国で送達しなければならない場合や公示送達による場合には、この手続は使えません（[第509条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)）。\n+相手が債務そのものを争わない見込みなら、支払命令（支付命令）を先に検討できます。一定額の金銭の支払請求であれば申し立てることができ（[第508条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)）、申立ての裁判費は500元です（[第77条の19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)）。異議の基本期間は送達後20日ですが、実際の期限は法定の期間計算と[第162条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=162)の在途期間、裁判所所在地に住む訴訟代理人の例外も踏まえて算定します。 債務者が法定期間内に適法な異議を出さなければ支払命令は執行名義になり（[第516条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516)、[第521条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)）、異議が出れば、その申立ては訴えの提起または調停の申立てとみなされます（[第519条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)）。支払命令を外国で送達しなければならない場合や公示送達による場合には、この手続は使えません（[第509条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509)）。\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-en/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "beforeSha256": "54a761c93fcfa553e33455ecf6c9914412a05c6639885c93d483bc7be7f6283d",
+        "afterSha256": "1d479aec833ab3cb54e350b4b926939a9817fa9f9e84b804c8ed1685a93a02d5",
+        "diff": "--- \n\n+++ \n\n@@ -89,3 +89,3 @@\n\n \n-Where the debtor is unlikely to contest the debt, a payment order (支付命令) is worth considering before a lawsuit. [Article 508](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508) permits an application for a fixed money claim. The fee is NT$500 ([Article 77-19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)). If the debtor does not object within 20 days of service, the order becomes a basis for enforcement ([Article 516](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516) and [Article 521](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)); if the debtor objects, the application is treated as the filing of an action or a mediation application ([Article 519](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)). [Article 509](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509) bars this procedure where service must take place abroad or by public notice.\n+Where the debtor is unlikely to contest the debt, a payment order (支付命令) is worth considering before a lawsuit. [Article 508](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508) permits an application for a fixed money claim. The fee is NT$500 ([Article 77-19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)). The basic objection period is 20 days from service; its end date also depends on the statutory calculation rules and [Article 162](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=162)’s travel allowance and local-agent exception. If the debtor does not file a valid objection within the statutory period, the order becomes a basis for enforcement ([Article 516](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516) and [Article 521](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)); if the debtor objects, the application is treated as the filing of an action or a mediation application ([Article 519](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)). [Article 509](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509) bars this procedure where service must take place abroad or by public notice.\n "
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch13/source-repairs/250-251/src/content/columns-zh/251-taiwan-small-claims-simplified-civil-procedure.md",
+        "beforeSha256": "02ef264081dd21f2f9beecf7ad1caaabf41a3a74d612ffbd928c42063aba39b1",
+        "afterSha256": "4bf1b7881a00dbd1b95a6e851eafd13d1267d9c4e6e305ca11fbc03014ce6d53",
+        "diff": "--- \n\n+++ \n\n@@ -55,3 +55,3 @@\n\n \n-## 起訴之後先調解\n+## 起訴之後原則上先調解\n \n@@ -85,3 +85,3 @@\n\n \n-如果對方對債務本身不會爭執，可以先考慮聲請支付命令（[第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)）：聲請費500元（[第77條之19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)）。債務人在送達後20日內沒有提出異議，支付命令就得為執行名義（[第516條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516)、[第521條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)）。細節見[支付命令與假扣押](/zh-hant/columns/taiwan-payment-order-provisional-attachment)；押金爭議見[外國人租屋押金怎麼拿回來](/zh-hant/columns/taiwan-rental-deposit-foreign-tenant)。\n+如果對方對債務本身不會爭執，可以先考慮聲請支付命令（[第508條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508)）：聲請費500元（[第77條之19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=77-19)）。異議的基本期間是送達後20日。實際到期日仍須依期間計算規則，並適用[第162條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=162)的在途期間及法院所在地訴訟代理人例外。 債務人未在法定期間內合法提出異議，支付命令就得為執行名義（[第516條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516)、[第521條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)）。細節見[支付命令與假扣押](/zh-hant/columns/taiwan-payment-order-provisional-attachment)；押金爭議見[外國人租屋押金怎麼拿回來](/zh-hant/columns/taiwan-rental-deposit-foreign-tenant)。\n "
+      }
+    ],
+    "finalFollowups": "IT604 replaced practical-advice paragraph with two direct sentences preserving final date/rent/penalty/deposit; ZH251 split base-period sentence from calculation exception. Failed intermediate variety receipts retained; final checks PASS. Removed one pre-existing trailing space in EN250; no content change."
+  }
+}

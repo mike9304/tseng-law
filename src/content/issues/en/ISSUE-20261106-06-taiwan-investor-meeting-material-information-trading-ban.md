@@ -11,7 +11,7 @@ categories:
 topic: "company"
 featured_image: "../images/ISSUE-20261106-06-taiwan-investor-meeting-material-information-trading-ban/featured-01.webp"
 featured_image_alt: "An empty meeting room with a blank screen, four chairs, two closed green folders and two water glasses"
-featured_image_caption: "AI-generated editorial illustration of a fictional meeting room, not a photograph of an actual investor meeting."
+featured_image_caption: "Editorial illustration of a fictional meeting room, not a photograph of an actual investor meeting."
 social_image: "../images/ISSUE-20261106-06-taiwan-investor-meeting-material-information-trading-ban/featured-01.jpg"
 faq:
   - q: "Does attending a Taiwan company meeting automatically prevent an investor from trading?"

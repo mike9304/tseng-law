@@ -4,6 +4,8 @@ Date: 2026-11-06 (Asia/Seoul). Branch: `air/issues-20261106`. Baseline HEAD: `e2
 
 Eight distinct original issue articles, two each for Korea, Japan, English-speaking readers and Vietnam. This record concerns local preparation. Separate AI locale and final-source reviews passed at the hashes below. They do not constitute the operator’s required Claude Code review, human/native-speaker or lawyer review, publication or deployment approval. No staging, commit, push or canonical-checkout edit was performed.
 
+The table and batch evidence below preserve the initial snapshot. The KO01 round-1 repair record at the end supersedes its original manuscript hash and review status; earlier external source/review records were not rewritten by this bounded repair.
+
 ## Frozen manuscripts
 
 | Piece | File | Narrative length | SHA-256 |
@@ -140,3 +142,31 @@ Authors independently reconstructed the pre-repair hashes by reversing only requ
 - No full build, browser/device QA, public readback, deployment, or Claude Code shipping verdict is claimed.
 
 External evidence directory: `/Users/son7/tseng-air-1011/lanes/issues/20261106/work`. Reports: `review-ko.md`, `review-ja.md`, `review-en.md`, `review-vi.md`, `final-ko-ja.md`, `final-en-vi.md`; author/research records, `image-generation.json`, `verification.json`, `variety.txt` and `tests-final.log`. The lane-level `SOURCES.md` lists each source and the exact proposition it supports.
+
+## KO01 round-1 repair — 2026-11-06
+
+Scope: the supplied MAJOR finding at manuscript line 43. Repair baseline HEAD: `c4756789796896715ba3115ba55fac8e094a61f6`. Only the KO01 manuscript and this audit record were edited by the repairer. The paired images and batch test file were retained unchanged. No staging, commit, push or deployment was performed by the repairer; the shared worktree HEAD advanced independently during verification.
+
+Original manuscript SHA-256: `737bdd523ee05d7a364c4787f980b6be5dadba6165c4b4a08b0cec6b9b738ab5`.
+Repaired manuscript SHA-256: `7504bb07b343ae7fe38078e5d071d555e28801bae8795445047ef2ffeedae25f`. Narrative length: 1,065 characters, using the convention above.
+
+Original sentence, with link markup omitted:
+
+> 민법상 지연책임을 묻는다면 제230조의 귀책사유와 제231조의 지연으로 생긴 손해라는 요건을 따져야 합니다.
+
+Replacement, with link markup omitted:
+
+> 여객운송의 지연책임에는 민법 제654조의 별도 규정이 있고, 철도 지연에는 철로법 제46조가 우선 적용됩니다. 회사에 귀책사유가 없다는 이유만으로 배상책임이 모두 사라지는 것은 아닙니다. 추가 항공권 비용은 민법 제231조 제1항에 따라 지연 때문에 생긴 손해인지 따져야 합니다.
+
+This is a substantive legal-scope correction. The original sentence improperly presented the general Article 230 attribution requirement without the passenger-carriage regime. [Civil Code Article 654](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=654) separately addresses passenger delay, and [Railway Act Article 46](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0030001&flno=46) supplies the railway-specific rules, including necessary additional expenses for force-majeure delay and claims above the compensation schedule under other laws. [Article 231(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231) supports the delay-loss inquiry; the existing [Article 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216) explanation and the denial of automatic airfare reimbursement remain verbatim. Article 654 is linked both inline and in the reference list; both Article 230 citations were removed. No rebuttal was warranted.
+
+The repairer personally reopened the MOJ provisions and all three cited law histories. MOJ displayed a 2026-10-30 consolidation cutoff; the Civil Code's pending Articles 166-1 and 1223 do not affect these provisions. The [Railway Transportation Regulations Article 21](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0030004) was verified in the official full text after a single-article tool error. The [THSRC current-version landing page](https://www.thsrc.com.tw/ArticleContent/7de57796-db08-4d94-b183-bd62618859db) still identifies the 2026-03-30 contract; its Articles 8 and 28 support the preserved arrival-time, refund-rate and ticket-category statements. The [November 5 UDN report](https://udn.com/news/story/7266/9858728), including its 11:20 restoration update, was opened and independently read through direct HTTPS. No news claim or refund threshold was changed.
+
+Verification and review:
+
+- Exact replacement comparison against the repair baseline passed: only manuscript lines 43 and 53 changed. Frontmatter, FAQ, the Article 216 explanation, the opening, the evidence paragraph, and every source other than the requested Article 230-to-654 substitution were preserved.
+- The variety checker required explicit `--lang ko`; the initial language-autodetection error was not counted as a pass. The successful run measured 24 sentences, CV 0.453, short sentences 16.7%, and zero FAIL. The 96% 합니다체-ending advisory was manually considered; sentence lengths and structures vary without changing the register.
+- Section 5 self-check completed: short sentences remain, paragraph starts and citation placement vary, the opening gives dated news and distinguishes estimated average delay from individual arrival delay, and the ending stays with itinerary and expense evidence. The three Korean comparator files listed above were reread for their openings, headings and endings; no new stock introduction or consultation ending was introduced. Their live publication order was not rechecked.
+- Cache-free programmatic Vitest: `issue-board-20261106.test.ts` passed 17/17. The additional `no-ai-labels-20261024.test.ts` passed 2/4 and failed 2/4 on existing EN05/EN06 and VI07/VI08 image captions. Each reported caption is identical to the repair baseline; none is in KO01 or this repair's editable scope. Combined result: 19 passed, 2 failed. The KO01 markup, metadata and caption checks passed. The global guard is not claimed green.
+- A separate `tseng-editor-final` agent, which did not author the repair, returned PASS for the amended paragraph, source pairing and affected conclusions at the repaired hash above. It independently checked the MOJ provisions/history and Korean wording. This is a bounded AI readback, not a new Claude Code, human or lawyer review or a whole-batch approval.
+- Both media hashes and the existing batch-test hash match the repair baseline. Scoped `git diff --check` passed. No build, browser/device QA or publication was performed; the repaired manuscript is returned for the requested review process.

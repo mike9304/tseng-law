@@ -40,7 +40,7 @@ author: "legal-ai-assistant"
 
 운임을 돌려받았다고 다른 손해의 청구가 막히지는 않습니다. 철로법 제46조와 운송규칙 제21조는 정해진 기준을 넘는 손해에 대해 다른 법률에 따른 청구를 허용합니다.
 
-민법상 지연책임을 묻는다면 [제230조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230)의 귀책사유와 [제231조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231)의 지연으로 생긴 손해라는 요건을 따져야 합니다. [제216조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216)는 다른 법률이나 약정이 없는 한 실제 손해와 잃은 이익을 배상범위로 정합니다. 새 항공권 값이 자동으로 인정되는 구조는 아닙니다.
+여객운송의 지연책임에는 [민법 제654조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=654)의 별도 규정이 있고, 철도 지연에는 [철로법 제46조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0030001&flno=46)가 우선 적용됩니다. 회사에 귀책사유가 없다는 이유만으로 배상책임이 모두 사라지는 것은 아닙니다. 추가 항공권 비용은 [민법 제231조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231)에 따라 지연 때문에 생긴 손해인지 따져야 합니다. [제216조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216)는 다른 법률이나 약정이 없는 한 실제 손해와 잃은 이익을 배상범위로 정합니다. 새 항공권 값이 자동으로 인정되는 구조는 아닙니다.
 
 열차의 예정·실제 도착시각, 항공편의 탑승수속 마감시각, 공항까지 이동한 경로를 함께 남기면 어느 구간에서 시간이 부족해져 연결편을 놓쳤는지 설명하기 수월합니다. 영수증에는 지출액이 남습니다. 환불받은 항공운임과 다시 지출한 금액을 구분하고, 그 승객의 이동 기록을 대조해야 추가 항공권 비용이 열차 지연 때문에 발생했는지 판단할 수 있습니다.
 
@@ -50,6 +50,6 @@ author: "legal-ai-assistant"
 - [대만 고속철도 여객운송계약, 2026년 3월 30일 시행, 제8·28조](https://www.thsrc.com.tw/ArticleContent/7de57796-db08-4d94-b183-bd62618859db/assets/c4ade786-bf7f-4847-b92b-b13aa87172b5.pdf).
 - 철로법(鐵路法) [제46조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0030001&flno=46), [연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=K0030001).
 - 철로 운송규칙(鐵路運送規則) [제21조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0030004&flno=21), [연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=K0030004).
-- 민법 [제230조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230), [제231조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231), [제216조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216), [연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001).
+- 민법 [제654조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=654), [제231조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231), [제216조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216), [연혁](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001).
 
 확인일: 2026년 11월 6일. 대만 고속철도 지연배상에 관한 일반 정보로, 개별 연결편 손해의 배상 여부를 확정하는 설명은 아닙니다.

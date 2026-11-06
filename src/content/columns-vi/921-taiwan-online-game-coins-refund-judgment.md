@@ -1,5 +1,5 @@
 ---
-title: "Tài khoản còn xu nhưng tòa không chấp nhận hoàn 243.548 Đài tệ"
+title: "Còn xu trong tài khoản có đủ căn cứ đòi hoàn 243.548 Đài tệ không?"
 seoTitle: "Xu trong trò chơi và quyền yêu cầu hoàn tiền tại Đài Loan"
 summary: "Người chơi yêu cầu hoàn tiền cho số xu còn lại, nhưng tòa xác định chúng là vật dùng để đối kháng trong trò chơi, khác với điểm trả phí chưa sử dụng. Quy định hiện hành vẫn cho phép chấm dứt hợp đồng và hoàn phần điểm trả phí hoặc phí trò chơi chưa dùng; cần xác định số dư hình thành thế nào."
 published: "2026-10-26"

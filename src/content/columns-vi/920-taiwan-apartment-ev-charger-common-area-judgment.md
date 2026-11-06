@@ -1,5 +1,5 @@
 ---
-title: "Dây sạc đi qua tường và trần chung: vụ buộc tháo bộ sạc ở Cao Hùng"
+title: "Lắp bộ sạc xe điện ở Đài Loan: đường dây qua phần chung cần ai đồng ý?"
 seoTitle: "Lắp bộ sạc xe điện tại Đài Loan: quyền sử dụng phần chung"
 summary: "Bộ sạc phục vụ một chỗ đỗ xe nhưng đường dây đi qua tường, trần và tủ điện dùng chung. Tòa giữ yêu cầu tháo dỡ, khôi phục hiện trạng vì chưa có sự đồng ý cần thiết. Hồ sơ lắp đặt phải thể hiện toàn bộ đường dây và căn cứ cho phép thi công từng phần."
 published: "2026-10-26"

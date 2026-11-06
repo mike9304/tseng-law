@@ -1,5 +1,5 @@
 ---
-title: "Công bố kỷ luật trước khi họp: vì sao tòa hủy quyết định miễn chức?"
+title: "Điều tra bắt nạt nơi làm việc: công bố kỷ luật trước khi nghe giải trình?"
 seoTitle: "Điều tra bắt nạt nơi làm việc tại Đài Loan và quyền giải trình"
 summary: "Kết quả đã được công bố trước cuộc họp, người bị xem xét không có cơ hội trình bày phù hợp, còn báo cáo điều tra mâu thuẫn với căn cứ kỷ luật. Vụ miễn chức công chức cho thấy những điểm cần kiểm tra trong hồ sơ; doanh nghiệp tư nhân phải áp dụng hệ thống pháp luật riêng của mình."
 published: "2026-10-26"

@@ -1,7 +1,7 @@
 ---
 title: "Coins Remained, but the Paid Points Were Gone: A Taiwan Game Refund Claim"
 seoTitle: "Taiwan Game Refunds: Coins and Paid Points"
-summary: "A Taiwan court refused a refund for game coins used as chips. Current terms protect unused paid points or game fees under termination and refund rules."
+summary: "Unused paid points and in-game chips can have different refund treatment in Taiwan. The game's terms and the remaining balance matter."
 published: "2026-10-26"
 lastmod: "2026-10-26"
 date_display: "October 26, 2026"

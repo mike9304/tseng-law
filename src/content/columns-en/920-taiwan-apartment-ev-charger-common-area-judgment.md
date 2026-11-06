@@ -1,7 +1,7 @@
 ---
-title: "The Wiring Left the Parking Bay: Why a Taiwan Court Ordered an EV Charger Removed"
+title: "EV Charger Wiring Beyond Your Parking Bay: Consent for Common Areas in Taiwan"
 seoTitle: "Taiwan EV Chargers: Shared Areas and Consent"
-summary: "A Taiwan court ordered an EV charger removed from common areas. The wiring route, owners' resolution and building bylaws determined the consent required."
+summary: "Installing an EV charger in a Taiwan parking bay may also require consent for common walls, ceilings and panels along the wiring route."
 published: "2026-10-26"
 lastmod: "2026-10-26"
 date_display: "October 26, 2026"

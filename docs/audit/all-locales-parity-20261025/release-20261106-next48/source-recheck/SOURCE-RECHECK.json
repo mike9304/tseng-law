@@ -1,0 +1,121 @@
+{
+  "checkedAtUTC": "2026-11-06T01:09:26.332863+00:00",
+  "repository": "/Users/son7/Projects/tseng-law-locales-release-20261106",
+  "head": "c17574577cc55d3d37225825883efef38c6464e4",
+  "scope": "Six Korean source articles; principal case holdings and date-specific assertions. Not a new independent review of all 48 translations. No manuscript edits.",
+  "newLegalMustCount": 0,
+  "articleChecks": [
+    {
+      "id": 915,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a20d203aebed0ed16b5841a5664b11137ae535838a7f39ef0dfeb73d303eea31",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/915-variety.log",
+      "result": "NO_NEW_LEGAL_MUST",
+      "findings": "정부조달법85-1 조건과 중재법40(1)(2)를 현행 공식 페이지에서 재대조. 공식 대법원 PDF의 106台上723 원문으로 2017-07-12 상고기각, NT$44,417,150, 금전→공기연장→금전청구 전환 및 후자의 조정 권고 부재를 재확인. 2026-09-30 ITA 자료의 2026말/2027 예정 조달이라는 한정도 일치.",
+      "citedURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text",
+      "additionalOfficialJudgmentURL": "https://tps.judicial.gov.tw/tw/dl-11902-f6476c60d35248038849b028a1235632.html"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "9fd83e8be14853c57548e36ac3564bee6fcaa240793e1afc28ccc87013192a10",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/916-variety.log",
+      "result": "NO_NEW_LEGAL_MUST_WITH_ACCESS_LIMITATIONS",
+      "findings": "대법원 공식 설명의 검색 도구가 제공한 본문으로 2018-08-16, 오염 인지·지배·감자와 해외송금, 246명 파기환송/262명 상고기각을 재대조. 현행 회사법154의 누적 조건과 USTR 조건부 투자금융 설명도 일치. JIRS 직접 HTTP는 실패했으므로 현재 직접응답 정상이라는 결론은 내리지 않음.",
+      "citedURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text"
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d4e153494f79ed91ecf6d0694f4b1092c0c4de21fe0a63aac3d0272d7fddf66e",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/918-variety.log",
+      "result": "NO_NEW_LEGAL_MUST",
+      "findings": "소비자보호처 공식 판결집 인쇄면173–187로 2022-02-09 상고불가, 대출 안내와 인도 구분, 2019-11-05 대출 지급/11-28 인도, 해당 계약4개월 확인. 현행 표준약관14·15의 6개월 통지와 협력 의무, 2025-08-25 점검자료, 중앙은행2026-09-18 시행 표제를 재대조.",
+      "citedURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text"
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "a84d532fdd6b1ca9053ddf27d6998b541b1531d5e2561752ff7b37f9d6c5eb68",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/919-variety.log",
+      "result": "NO_NEW_LEGAL_MUST",
+      "findings": "법원2026-09-03 공식 설명에서 처분/복심 취소, 심의 전 발표, 적법한 진술 기회 미부여, 보고서 모순, 상소 가능 확인. 법제처22-2와 연혁은 2026-07-01 시행 및 신고 접수 시 조사·보호, 희망 시 조율/불성립 후 조사계속을 뒷받침. OSHA 후속자료도 일치.",
+      "citedURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text"
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "d85c3ad0f2444930a817ab8bd6601971f9bdf19e851a46de92ea151290cbada2",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/920-variety.log",
+      "result": "NO_NEW_LEGAL_MUST_WITH_ACCESS_LIMITATIONS",
+      "findings": "판결 직접 HTTP는 bot-defense 거절문(HTTP200)이므로 성공으로 처리하지 않음. 공식 판결 URL의 검색 캐시 본문은 공용 벽/천장/전기함, 규약15, 관리조례11·6(1)(5), 사전동의 부재의 핵심 판단을 뒷받침. 현행6·11은 직접재조회 일치. 가오슝공고2026-05-29·접수종료09-30·충전선로 지원은 직접재조회 확인.",
+      "citedURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b4021c53bd4c657b0598faf6f17840c693e33db497764782b9edcb000a8e7e48",
+      "cliExit": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/921-variety.log",
+      "result": "NO_NEW_LEGAL_MUST",
+      "findings": "공식 판결집 인쇄면140–153에서 2021-09-13 항소기각·상소불가, NT$243,548 금화청구, 미사용포인트 부재, 해당 게임 대결용 칩 판단을 재확인. 표준약관4·18의 7일 서면해제/언제든 해지/필요비용 공제 후30일 또는 쌍방합의, 금지6의 사업자자료만 기준 금지를 확인. 2025통계2위·건수감소 및2026-05-07 발표도 일치.",
+      "citedURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "evidenceMethod": "web.run official pages/PDFs and official-domain search text"
+    }
+  ],
+  "separateEditorialFinding": {
+    "id": "VOICE-20261103-KO916",
+    "severity": "FIX",
+    "original": "공장 오염을 알고도 자산을 옮겼다면: 대만 모회사 책임 판결",
+    "reason": "2026-11-03 added rule expressly prohibits Korean title ending with headline noun 판결. Prior approval predates new rule.",
+    "suggestion": "공장 오염을 알고 자산을 옮긴 모회사도 책임을 질까요?",
+    "meaningPreserved": "Yes: conditional liability question, no universal shareholder liability or finality claim. Root must decide/edit and rebind SHA.",
+    "source": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md"
+  },
+  "limitations": [
+    "JIRS direct fetch timed out/no route; current official indexed text used for916.",
+    "FJUD HTTP200 contained bot-defense rejection, not judgment text; official indexed text used for920.",
+    "No postjudgment appeal history added; existing explicit limits preserved.",
+    "This bounded source recheck does not recertify all 48 translations or expand publication scope."
+  ],
+  "variety": "Six actual CLI runs exit0; logs retained; no manuscript mutation."
+}

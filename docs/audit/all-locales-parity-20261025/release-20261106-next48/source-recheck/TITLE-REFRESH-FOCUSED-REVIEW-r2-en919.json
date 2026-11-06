@@ -1,0 +1,20 @@
+{
+  "checkedAtUTC": "2026-11-06T01:11:05.116089+00:00",
+  "status": "PASS",
+  "scope": "EN919 seoTitle shortening only, compared with prior focused-reviewed r1 bytes. Prior review retained.",
+  "path": "src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+  "priorReviewedSHA256": "b4cda7f2d0b282bc1a2d6a62414970293f7f5c5eae7e2943d9a035071ce5196f",
+  "currentReviewedSHA256": "fce9a2b50e36c96e9e29fe3c7822b0e1db179410fd7f2994b47abb11ceb6d4e1",
+  "field": "seoTitle",
+  "before": "Taiwan Bullying Investigations: Was the Outcome Decided Too Soon?",
+  "after": "Was a Taiwan Bullying Dismissal Decided Too Soon?",
+  "characters": 49,
+  "onlyOneFieldChanged": true,
+  "bodyFAQDatesSourcesOtherMetadataExact": true,
+  "mustCount": 0,
+  "meaningPreserved": true,
+  "reason": "Question retains Taiwan, bullying, dismissal and premature decision issue. It makes no claim that alleged bullying was disproved, reinstatement final, or all dismissal decisions unlawful. Natural reader question satisfies current title rule; 49 characters.",
+  "cliExit": 0,
+  "previousReview": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/source-recheck/TITLE-REFRESH-FOCUSED-REVIEW.json",
+  "otherNineRows": "Unchanged; previous reviewed SHA bindings remain valid."
+}

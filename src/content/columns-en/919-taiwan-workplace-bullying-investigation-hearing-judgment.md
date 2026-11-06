@@ -1,7 +1,7 @@
 ---
 title: "Punishment Announced Before Deliberation: A Taiwan Workplace-Bullying Case"
-seoTitle: "Taiwan Bullying Case: Dismissal Set Aside"
-summary: "A Taiwan court set aside a civil servant's dismissal over procedural defects. Private employers must protect complainants and conduct fair investigations."
+seoTitle: "Was a Taiwan Bullying Dismissal Decided Too Soon?"
+summary: "A premature dismissal announcement can expose flaws in a Taiwan bullying investigation. Private employers have separate protection and investigation duties."
 published: "2026-10-26"
 lastmod: "2026-10-26"
 date_display: "October 26, 2026"

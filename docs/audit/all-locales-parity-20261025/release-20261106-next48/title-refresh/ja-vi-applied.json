@@ -1,0 +1,188 @@
+{
+  "rows": [
+    {
+      "relativePath": "src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "13efd9ab6446b6d2e2db121d8299bc18897a384e2d07f94aec13a3544c44c1a2",
+      "afterSHA256": "0535862ec5e4e02709a3bad12d3378bea60e5b21d95d9b3f8c03a633373dfc9e",
+      "changes": [
+        {
+          "field": "title",
+          "before": "工期延長から金銭請求へ：台湾の公共工事で仲裁判断が取り消された理由",
+          "after": "台湾の公共工事で、調停後に金銭請求へ変えて仲裁できますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "공기 연장에서 금전 청구로 바뀐 구체적 신청을 다룹니다. 모든 금액 변경이 중재를 막는다고 단정하지 않고, 독립 중재합의 가능성과 법정 요건은 본문·FAQ 그대로 보존합니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の公共工事仲裁：調停後に請求を変えたとき",
+          "after": "台湾の公共工事で、調停後の金銭請求は仲裁できますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "공기 연장에서 금전 청구로 바뀐 구체적 신청을 다룹니다. 모든 금액 변경이 중재를 막는다고 단정하지 않고, 독립 중재합의 가능성과 법정 요건은 본문·FAQ 그대로 보존합니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "c077912948b6592b44500addbf7fcd38f0ae34d44ad2863060dd68b859b45600",
+      "afterSHA256": "0cca89c2bcb215a9b253fb25ba0900305cd6342294ecac586d13bc7c9bfb8e13",
+      "changes": [
+        {
+          "field": "title",
+          "before": "買収前の汚染調査を、親会社はどう扱ったか：台湾の工場訴訟",
+          "after": "台湾の工場汚染訴訟では、親会社が知った後の行動も問われました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "오염을 안 뒤 지배기업이 한 행동이라는 사건의 근거를 유지합니다. 지분 보유만으로 책임이 성립한다고 확대하지 않으며 246명·262명의 상이한 소송 결과는 요약·본문·FAQ에 그대로 남습니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の工場汚染と親会社責任：調査・支配・資産移転",
+          "after": "台湾の工場汚染で親会社の責任はどこまで及びますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "오염을 안 뒤 지배기업이 한 행동이라는 사건의 근거를 유지합니다. 지분 보유만으로 책임이 성립한다고 확대하지 않으며 246명·262명의 상이한 소송 결과는 요약·본문·FAQ에 그대로 남습니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "9f2f0978ab07ce60f142b5c63975e912e00d6b0dfed011d37f8780a473f1720c",
+      "afterSHA256": "b596444e0629db8ee8498458bc2dd04c334b9063df3d835245adf1357ac520c6",
+      "changes": [
+        {
+          "field": "seoTitle",
+          "before": "台湾の未完成住宅売買：融資の連絡と引渡通知",
+          "after": "台湾の住宅ローンの連絡は、引渡通知になりますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "융자 연락과 유효한 인도 통지 사이의 질문을 유지합니다. 모든 융자 편지를 무효라고 단정하지 않으며 4개월 계약/현행6개월·기산점·지급 의무는 그대로입니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "b147871da802c73016c8d3755cea847e3a6bf8025112095a478ee31fbe707dc5",
+      "afterSHA256": "987a33fa5e98727a91af2b5d007f2396c13afd7ec678dbd191937ce2f32a6a7c",
+      "changes": [
+        {
+          "field": "title",
+          "before": "審議前に処分を発表していた：台湾の職場いじめ免職事件で問われた調査",
+          "after": "台湾の職場いじめ免職事件では、処分発表の順序も問題になりました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の職場いじめ調査：免職取消しと意見を述べる機会",
+          "after": "台湾の職場いじめ調査で、処分前に本人の説明を聞いていますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "1fd560d78ea86dfe8e8b3d6df81244b26b6c268b957e81f31ac1022c52e2e973",
+      "afterSHA256": "1dd5af0c56f2b04afefa43514d8f811fb606b5ec8a88ff31f2aabc450d84333c",
+      "changes": [
+        {
+          "field": "title",
+          "before": "駐車枠を越えた充電器の配線：台湾で撤去を命じられた共用部分の工事",
+          "after": "台湾で充電器の配線が共用部分を通ると、どの同意が必要ですか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾のマンション充電器：共用部分と同意の範囲",
+          "after": "台湾のマンションで充電器を設置するとき、誰の同意が必要ですか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "636a66ce80dbf91c30551622bf2d3ceba3855b5a4a78177cf45534f36979e898",
+      "afterSHA256": "22a6e1549cdb0057b783280507d56c4fa12b7edf98f8c13bd5874ae7916d9d14",
+      "changes": [
+        {
+          "field": "title",
+          "before": "ゲーム内コインは残っていたのに：台湾で24万3,548元の返金請求が退けられた事件",
+          "after": "台湾のゲームで24万3,548元の返金を求めたとき、コインの用途が問われました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾のゲーム返金：未使用ポイントと対戦用コイン",
+          "after": "台湾のゲームを解約すると、残ったコインも返金されますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "4b5a8e725145be3dddcf2382ab5a1dc8b616a4e0cbd9222df6af3ceec51f3a33",
+      "afterSHA256": "318b4cbb3929cfde0cc736e474b937efc7ae760883821457f03b45939e62370c",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Công bố kỷ luật trước khi họp: vì sao tòa hủy quyết định miễn chức?",
+          "after": "Điều tra bắt nạt nơi làm việc: công bố kỷ luật trước khi nghe giải trình?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "03b1711af67e46c143acb33931e519628af66e1c9fa227cbf85e7454e46ac27d",
+      "afterSHA256": "99e0441dcdf2298041659ba3b2f3773ef173b9c34b39d792810dbbca267fbe1d",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Dây sạc đi qua tường và trần chung: vụ buộc tháo bộ sạc ở Cao Hùng",
+          "after": "Lắp bộ sạc xe điện ở Đài Loan: đường dây qua phần chung cần ai đồng ý?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    },
+    {
+      "relativePath": "src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "b15f72b116be28b165d7922ddc5bb3ea0682b122c889bd1ba50482391e8b93e5",
+      "afterSHA256": "4f940b97458e7664e1b9f0b0a793f775a65a4aa8eb5bbeb6695bf3eecfeca903",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Tài khoản còn xu nhưng tòa không chấp nhận hoàn 243.548 Đài tệ",
+          "after": "Còn xu trong tài khoản có đủ căn cứ đòi hoàn 243.548 Đài tệ không?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        }
+      ],
+      "rootReview": "Accepted: questions and polite statements retain original dispute, amount and limits; body/FAQ/dates unchanged."
+    }
+  ]
+}

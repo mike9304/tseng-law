@@ -1,0 +1,416 @@
+{
+  "count": 48,
+  "failed": 0,
+  "rows": [
+    {
+      "locale": "es",
+      "id": 915,
+      "sha256": "b5541c10e9436f80250d564c6785f18bdc5665257fa6fc1fb970f4c48a37fc63",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-915.log"
+    },
+    {
+      "locale": "es",
+      "id": 916,
+      "sha256": "02a197c3f66f338291ba97332378fa148a6bf9ee00b3fc39f36ffbe8a8db9d36",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-916.log"
+    },
+    {
+      "locale": "es",
+      "id": 918,
+      "sha256": "a97fe9083f96ba90fd554da37214872ebb7c813c8c7302cfab5099f04ce59734",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-918.log"
+    },
+    {
+      "locale": "es",
+      "id": 919,
+      "sha256": "1f7e11d7e89cd055792e71cecf9ecc865fca7fda68819659bb9fbe74296d1dbe",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-919.log"
+    },
+    {
+      "locale": "es",
+      "id": 920,
+      "sha256": "d6a190905068c5889ceb9d0022b7f380ab0c4deac91c7311bc7a0a8b7e8b649e",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-920.log"
+    },
+    {
+      "locale": "es",
+      "id": 921,
+      "sha256": "fab578d76c0b2a30bd87d623ff0c6ea7efdefe78a2d9aada7204e44f3f0d3416",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/es-921.log"
+    },
+    {
+      "locale": "fr",
+      "id": 915,
+      "sha256": "0fff59d9dd6730c186d00581f6ffa2c6cc3d3b24c2730f57ccbf97ec5c069a0d",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-915.log"
+    },
+    {
+      "locale": "fr",
+      "id": 916,
+      "sha256": "d73e0eda5a166c923c262e24135a44087009327260fd1e2c1cec07672bd8bf86",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-916.log"
+    },
+    {
+      "locale": "fr",
+      "id": 918,
+      "sha256": "e79c6ed57707b91b4d447c1968ef9f27ccbcfad8f56d9e5f20d59b2a7c6c26e4",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-918.log"
+    },
+    {
+      "locale": "fr",
+      "id": 919,
+      "sha256": "ac918524db87f8cd5f1ce8928d7f53547cd8e5fe70dc904175cdb21180a74c15",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-919.log"
+    },
+    {
+      "locale": "fr",
+      "id": 920,
+      "sha256": "603b00348f4af44ea55160a62bd13db442d9bc4d2bbed53de08d5ec7e11362cc",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-920.log"
+    },
+    {
+      "locale": "fr",
+      "id": 921,
+      "sha256": "5cad35537d1cb1f4f384d1067726bf9f2512d731738391f73aec7315732ea506",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/fr-921.log"
+    },
+    {
+      "locale": "ja",
+      "id": 915,
+      "sha256": "0535862ec5e4e02709a3bad12d3378bea60e5b21d95d9b3f8c03a633373dfc9e",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-915.log"
+    },
+    {
+      "locale": "ja",
+      "id": 916,
+      "sha256": "0cca89c2bcb215a9b253fb25ba0900305cd6342294ecac586d13bc7c9bfb8e13",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-916.log"
+    },
+    {
+      "locale": "ja",
+      "id": 918,
+      "sha256": "b596444e0629db8ee8498458bc2dd04c334b9063df3d835245adf1357ac520c6",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-918.log"
+    },
+    {
+      "locale": "ja",
+      "id": 919,
+      "sha256": "987a33fa5e98727a91af2b5d007f2396c13afd7ec678dbd191937ce2f32a6a7c",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-919.log"
+    },
+    {
+      "locale": "ja",
+      "id": 920,
+      "sha256": "1dd5af0c56f2b04afefa43514d8f811fb606b5ec8a88ff31f2aabc450d84333c",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-920.log"
+    },
+    {
+      "locale": "ja",
+      "id": 921,
+      "sha256": "22a6e1549cdb0057b783280507d56c4fa12b7edf98f8c13bd5874ae7916d9d14",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ja-921.log"
+    },
+    {
+      "locale": "ko",
+      "id": 915,
+      "sha256": "9ff162b358d02e597fef1815bff74eb6cf60da8b6ab56bd0b5426e5695475810",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-915.log"
+    },
+    {
+      "locale": "ko",
+      "id": 916,
+      "sha256": "388b2bd0b85dfe7df1c11914f661123c059d9d4b96c74cdbc934d207c3ffbb9c",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-916.log"
+    },
+    {
+      "locale": "ko",
+      "id": 918,
+      "sha256": "26bcec95bdb2d5025f48b3d53335fcd6148feb567de24af8b7768dcb9f470c91",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-918.log"
+    },
+    {
+      "locale": "ko",
+      "id": 919,
+      "sha256": "3827f72452b1ad132e54dd9196beb348e329cfa892663889c26c6ff1c429b9ef",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-919.log"
+    },
+    {
+      "locale": "ko",
+      "id": 920,
+      "sha256": "365fdc32d1c86bd59262ee37cc9654f807fdce748e4b9aef8f82a9501c39b3ff",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-920.log"
+    },
+    {
+      "locale": "ko",
+      "id": 921,
+      "sha256": "b0ab7a8c39cecccbca4c477d5e7ac3613858d9f56a0acbe8da54ec72054f2423",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/ko-921.log"
+    },
+    {
+      "locale": "th",
+      "id": 915,
+      "sha256": "375766353c722ce738f6ceb8eb0773409a4c506ae4d04465f07b6333eced0530",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-915-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/915.sentences.json"
+      ],
+      "sentenceMapSHA256": "1af75f75ae184b4d57f581f89c641fe7bbd7ce1981fb4edffcf422133a962a40",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "th",
+      "id": 916,
+      "sha256": "2ba6a22462cb407c21dd4bce0714ceb5d61e5ddd83215888f7d64a2f0bb49ab1",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-916-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/916.sentences-v2.json"
+      ],
+      "sentenceMapSHA256": "91f6928c99718e71ea9132db0f8816696d8afd2c05c08c4d45037ddc35bdcfd8",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "th",
+      "id": 918,
+      "sha256": "9ce226b0edb9f1b8538e1ca068480ddc63b0b6e7c672b875be13286a88a27589",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-918-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/918.sentences.json"
+      ],
+      "sentenceMapSHA256": "3139fe637549a0a63d0a89a5e9ebdf8aa9a1ce6a4aed0c7dd0e4e66805b57c10",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "th",
+      "id": 919,
+      "sha256": "2881b7c1a768b877f40e4f253157338a0b8f7cc809d70708a3c10ab1ff0e2dc3",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-919-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/919.sentences.json"
+      ],
+      "sentenceMapSHA256": "d66a584b3b03d0a9f176511a86f4843de9c4bcb6495e84bc6e242bd2efeaf4bf",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "th",
+      "id": 920,
+      "sha256": "e9a57329dc27262ad2588f6774bd6542df06d4b5d54521afd256ef14bdc2702e",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-920-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/920.sentences.json"
+      ],
+      "sentenceMapSHA256": "e35b2448236818c0be3845adb08d2d3d80db7704010c414e13be1ec1769c48aa",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "th",
+      "id": 921,
+      "sha256": "d08a3ed535dc5d9f82c6b91c47d2da6e3166c33293aad75dbfad6cacd67af4e1",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/th-921-node24.log",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-th/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "th",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/boundary-review/921.sentences.json"
+      ],
+      "sentenceMapSHA256": "20b351deec628967f17437c11e3f1576ff6ec3ad7daf0f8b3b99379dc7ca050a",
+      "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node"
+    },
+    {
+      "locale": "vi",
+      "id": 915,
+      "sha256": "337e6fc8076e4dab22736696e6098268b673b5dae3bca735a95e2aff35d2cd21",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-915.log"
+    },
+    {
+      "locale": "vi",
+      "id": 916,
+      "sha256": "18be959442c20b248ca3936a586d5fd0997e9bf8c269e8230e89bc24ac2a7639",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-916.log"
+    },
+    {
+      "locale": "vi",
+      "id": 918,
+      "sha256": "46c9e175671597bd1ee6627c7368ab9fc6a5dc45b5dc5804e2b919adf3174df9",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-918.log"
+    },
+    {
+      "locale": "vi",
+      "id": 919,
+      "sha256": "318b4cbb3929cfde0cc736e474b937efc7ae760883821457f03b45939e62370c",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-919.log"
+    },
+    {
+      "locale": "vi",
+      "id": 920,
+      "sha256": "99e0441dcdf2298041659ba3b2f3773ef173b9c34b39d792810dbbca267fbe1d",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-920.log"
+    },
+    {
+      "locale": "vi",
+      "id": 921,
+      "sha256": "4f940b97458e7664e1b9f0b0a793f775a65a4aa8eb5bbeb6695bf3eecfeca903",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/vi-921.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 915,
+      "sha256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-915.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 916,
+      "sha256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-916.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 918,
+      "sha256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-918.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 919,
+      "sha256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-919.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 920,
+      "sha256": "591afd7469257350955038604e33b622c6d5c9347d6e4b020d18c7b2b128f2c4",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-920.log"
+    },
+    {
+      "locale": "zh-hans",
+      "id": 921,
+      "sha256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hans-921.log"
+    },
+    {
+      "locale": "en",
+      "id": 918,
+      "sha256": "c8f25c18281cd41a11825f6272c53cffb37db0094641c307751dac146d2f5686",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/en-918.log"
+    },
+    {
+      "locale": "en",
+      "id": 919,
+      "sha256": "fce9a2b50e36c96e9e29fe3c7822b0e1db179410fd7f2994b47abb11ceb6d4e1",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/en-919.log"
+    },
+    {
+      "locale": "en",
+      "id": 920,
+      "sha256": "d71c10d8129c8f9fdd8736c026b1960312d17dc0aa30c0ffb0cd9a440eafa048",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/en-920.log"
+    },
+    {
+      "locale": "en",
+      "id": 921,
+      "sha256": "63077363c32c507497f760b05fd4ebf63cf72e745ae2b5907d05d57a4d837dbb",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/en-921.log"
+    },
+    {
+      "locale": "zh-hant",
+      "id": 915,
+      "sha256": "5b8c3ee86c657a66eab962f352e65a75d2fd2d22c08b6b2ad9c4b925fcc391c6",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hant-915.log"
+    },
+    {
+      "locale": "zh-hant",
+      "id": 916,
+      "sha256": "fb39cf124c5fdc3027a6068e9fef7c9e394de8c7da83e88a9ac97e20e17ae6c6",
+      "exitCode": 0,
+      "log": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/variety48/zh-hant-916.log"
+    }
+  ],
+  "priorRun": "summary-r2.json",
+  "note": "Thai uses existing reviewed SHA-bound sentence maps and working Node24 ICU. Both earlier invocation failures are preserved."
+}

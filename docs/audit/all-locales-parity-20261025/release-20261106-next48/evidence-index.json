@@ -1,0 +1,37 @@
+{
+  "atUTC": "2026-11-06T01:13:33.867322+00:00",
+  "files": [
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/title-refresh/root-edits.json",
+      "sha256": "b8315fd56e032dfc2fc98442401ba47101f5b40425fb12270b90f3f12fe497f3"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/title-refresh/ja-vi-proposals.json",
+      "sha256": "64105d1f2ad1cc24ae16274b3036c3808afccbd71ecebf05c80711f61853f202"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/title-refresh/ja-vi-applied.json",
+      "sha256": "cbc1a6c18cd5b34dd840f7fb17ca8d8cfd86c218d8082f64ad850b149563cc1a"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/source-recheck/SOURCE-RECHECK.json",
+      "sha256": "470eeec020e87888f366d4df97b188701ca49caffd72d14fa554a67380304949"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/source-recheck/TITLE-REFRESH-FOCUSED-REVIEW.json",
+      "sha256": "c4d7df1883e53f2fc041a78de99d26ab7aba922c785a6c26f4167460660ef194"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/source-recheck/TITLE-REFRESH-FOCUSED-REVIEW-r2-en919.json",
+      "sha256": "795fda01cc5663bf06ea0e47771c64a83af09c69b4e03f9e95d910ea2a7b38ad"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/intake/scope48-current-manifest.json",
+      "sha256": "ec82cc0737fed14ab5a612cbbb94fc698dfb5af4ba3b53d1f2e7c5cb383f11f9"
+    },
+    {
+      "path": "docs/audit/all-locales-parity-20261025/release-20261106-next48/integration/variety48/summary-r3.json",
+      "sha256": "02ff10adb835b2307ef3bf7ba7b3de3fea0bcd4022ae382d1605508f5f16a9da"
+    }
+  ]
+}

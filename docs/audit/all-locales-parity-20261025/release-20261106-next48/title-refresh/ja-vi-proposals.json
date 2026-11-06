@@ -1,0 +1,517 @@
+{
+  "atUTC": "2026-11-06T01:10:28.655358+00:00",
+  "reviewer": "Codex title-refresh subagent, not native-human or attorney review",
+  "scope": "JA6+VI6 title/seoTitle only; proposals not applied",
+  "repository": "/Users/son7/Projects/tseng-law-locales-release-20261106",
+  "reviewedFiles": 12,
+  "changedFilesProposed": 9,
+  "changedFieldsProposed": 14,
+  "rulePrecedence": "User 2026-10-15 abolishes mandatory Fable gates; current editorial source controls author/media disclosure. This review does not remove any author or AI fields.",
+  "rows": [
+    {
+      "locale": "ja",
+      "id": 915,
+      "RRelativePath": "src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "originalSHA256": "13efd9ab6446b6d2e2db121d8299bc18897a384e2d07f94aec13a3544c44c1a2",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "工期延長から金銭請求へ：台湾の公共工事で仲裁判断が取り消された理由",
+          "after": "台湾の公共工事で、調停後に金銭請求へ変えて仲裁できますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "공기 연장에서 금전 청구로 바뀐 구체적 신청을 다룹니다. 모든 금액 변경이 중재를 막는다고 단정하지 않고, 독립 중재합의 가능성과 법정 요건은 본문·FAQ 그대로 보존합니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の公共工事仲裁：調停後に請求を変えたとき",
+          "after": "台湾の公共工事で、調停後の金銭請求は仲裁できますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "공기 연장에서 금전 청구로 바뀐 구체적 신청을 다룹니다. 모든 금액 변경이 중재를 막는다고 단정하지 않고, 독립 중재합의 가능성과 법정 요건은 본문·FAQ 그대로 보존합니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md [ja] sentences=42 mean=39.3 cv=0.473 short=0.167 run3=0.0 opener_rep=0.067 cite_end=0.0 cite_para=0.133 contrast=1 caveat=0 q=0\n  WARN 93% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "ja",
+      "id": 916,
+      "RRelativePath": "src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "originalSHA256": "c077912948b6592b44500addbf7fcd38f0ae34d44ad2863060dd68b859b45600",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "買収前の汚染調査を、親会社はどう扱ったか：台湾の工場訴訟",
+          "after": "台湾の工場汚染訴訟では、親会社が知った後の行動も問われました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "오염을 안 뒤 지배기업이 한 행동이라는 사건의 근거를 유지합니다. 지분 보유만으로 책임이 성립한다고 확대하지 않으며 246명·262명의 상이한 소송 결과는 요약·본문·FAQ에 그대로 남습니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の工場汚染と親会社責任：調査・支配・資産移転",
+          "after": "台湾の工場汚染で親会社の責任はどこまで及びますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "오염을 안 뒤 지배기업이 한 행동이라는 사건의 근거를 유지합니다. 지분 보유만으로 책임이 성립한다고 확대하지 않으며 246명·262명의 상이한 소송 결과는 요약·본문·FAQ에 그대로 남습니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md [ja] sentences=38 mean=44.8 cv=0.47 short=0.132 run3=0.056 opener_rep=0.071 cite_end=0.0 cite_para=0.071 contrast=2 caveat=0 q=0\n  WARN 90% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "ja",
+      "id": 918,
+      "RRelativePath": "src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "originalSHA256": "9f2f0978ab07ce60f142b5c63975e912e00d6b0dfed011d37f8780a473f1720c",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "seoTitle",
+          "before": "台湾の未完成住宅売買：融資の連絡と引渡通知",
+          "after": "台湾の住宅ローンの連絡は、引渡通知になりますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "융자 연락과 유효한 인도 통지 사이의 질문을 유지합니다. 모든 융자 편지를 무효라고 단정하지 않으며 4개월 계약/현행6개월·기산점·지급 의무는 그대로입니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md [ja] sentences=39 mean=40.3 cv=0.455 short=0.179 run3=0.054 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=1 q=0\n  WARN 92% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "ja",
+      "id": 919,
+      "RRelativePath": "src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "originalSHA256": "b147871da802c73016c8d3755cea847e3a6bf8025112095a478ee31fbe707dc5",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "審議前に処分を発表していた：台湾の職場いじめ免職事件で問われた調査",
+          "after": "台湾の職場いじめ免職事件では、処分発表の順序も問題になりました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾の職場いじめ調査：免職取消しと意見を述べる機会",
+          "after": "台湾の職場いじめ調査で、処分前に本人の説明を聞いていますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [ja] sentences=34 mean=42.6 cv=0.491 short=0.147 run3=0.062 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=0\n  WARN 88% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "ja",
+      "id": 920,
+      "RRelativePath": "src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "originalSHA256": "1fd560d78ea86dfe8e8b3d6df81244b26b6c268b957e81f31ac1022c52e2e973",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "駐車枠を越えた充電器の配線：台湾で撤去を命じられた共用部分の工事",
+          "after": "台湾で充電器の配線が共用部分を通ると、どの同意が必要ですか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾のマンション充電器：共用部分と同意の範囲",
+          "after": "台湾のマンションで充電器を設置するとき、誰の同意が必要ですか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md [ja] sentences=36 mean=41.6 cv=0.541 short=0.167 run3=0.059 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=1 q=0\n  WARN 92% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "ja",
+      "id": 921,
+      "RRelativePath": "src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md",
+      "originalSHA256": "636a66ce80dbf91c30551622bf2d3ceba3855b5a4a78177cf45534f36979e898",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "ゲーム内コインは残っていたのに：台湾で24万3,548元の返金請求が退けられた事件",
+          "after": "台湾のゲームで24万3,548元の返金を求めたとき、コインの用途が問われました",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        },
+        {
+          "field": "seoTitle",
+          "before": "台湾のゲーム返金：未使用ポイントと対戦用コイン",
+          "after": "台湾のゲームを解約すると、残ったコインも返金されますか",
+          "reason": "11/03 추가규칙: 일본어 제목/SEO제목을 보도형·명사형에서 자연스러운 질문 또는 です・ます 문장으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "ja"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md [ja] sentences=38 mean=39.6 cv=0.537 short=0.158 run3=0.056 opener_rep=0.077 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  WARN 87% of sentences end in 'desu-masu' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 915,
+      "RRelativePath": "src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "originalSHA256": "337e6fc8076e4dab22736696e6098268b673b5dae3bca735a95e2aff35d2cd21",
+      "status": "KEEP",
+      "changes": [],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md [vi] sentences=42 mean=22.7 cv=0.45 short=0.143 run3=0.025 opener_rep=0.067 cite_end=0.0 cite_para=0.133 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 916,
+      "RRelativePath": "src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "originalSHA256": "18be959442c20b248ca3936a586d5fd0997e9bf8c269e8230e89bc24ac2a7639",
+      "status": "KEEP",
+      "changes": [],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md [vi] sentences=45 mean=24.6 cv=0.473 short=0.089 run3=0.023 opener_rep=0.0 cite_end=0.0 cite_para=0.111 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 918,
+      "RRelativePath": "src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "originalSHA256": "46c9e175671597bd1ee6627c7368ab9fc6a5dc45b5dc5804e2b919adf3174df9",
+      "status": "KEEP",
+      "changes": [],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md [vi] sentences=38 mean=23 cv=0.462 short=0.132 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 919,
+      "RRelativePath": "src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "originalSHA256": "4b5a8e725145be3dddcf2382ab5a1dc8b616a4e0cbd9222df6af3ceec51f3a33",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Công bố kỷ luật trước khi họp: vì sao tòa hủy quyết định miễn chức?",
+          "after": "Điều tra bắt nạt nơi làm việc: công bố kỷ luật trước khi nghe giải trình?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "처분 발표와 실제 심의·소명 기회의 순서를 유지합니다. JA title은 공무원 면직 사건이라는 범위를 명시하고, 민간기업은 별도 법체계라는 본문·요약을 보존합니다. 괴롭힘이 없었다거나 복직이 확정됐다고 하지 않습니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [vi] sentences=40 mean=24.7 cv=0.487 short=0.1 run3=0.105 opener_rep=0.133 cite_end=0.0 cite_para=0.133 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 920,
+      "RRelativePath": "src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "originalSHA256": "03b1711af67e46c143acb33931e519628af66e1c9fa227cbf85e7454e46ac27d",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Dây sạc đi qua tường và trần chung: vụ buộc tháo bộ sạc ở Cao Hùng",
+          "after": "Lắp bộ sạc xe điện ở Đài Loan: đường dây qua phần chung cần ai đồng ý?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "주차면을 벗어나 공용부분을 이용하는 배선과 필요한 동의가 쟁점입니다. 모든 충전기 설치에 동일한 결의가 필요하다고 결론짓지 않는 질문입니다. 법률·관리규약별 결정 주체와 전기 안전검사는 본문 그대로입니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md [vi] sentences=36 mean=25.5 cv=0.453 short=0.139 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.357 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "vi",
+      "id": 921,
+      "RRelativePath": "src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+      "originalSHA256": "b15f72b116be28b165d7922ddc5bb3ea0682b122c889bd1ba50482391e8b93e5",
+      "status": "PROPOSE_TITLE_ONLY",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Tài khoản còn xu nhưng tòa không chấp nhận hoàn 243.548 Đài tệ",
+          "after": "Còn xu trong tài khoản có đủ căn cứ đòi hoàn 243.548 Đài tệ không?",
+          "reason": "11/03 추가규칙: 법원의 처분 결과를 전하는 헤드라인을 독자의 실제 상황·판단 근거에 관한 질문으로 변경.",
+          "meaningPreserved": true,
+          "preservationDetails": "잔여 코인과 환불 대상 미사용 유료 포인트를 구별하는 쟁점을 유지합니다. 원 제목의 청구액 243548 현지통화 표기도 보존합니다. 모든 게임 코인을 환불 대상에서 배제하지 않으며 7일/30일 조건과 2021사건·2023현행구별은 그대로입니다."
+        }
+      ],
+      "unchangedFields": [
+        "summary",
+        "body",
+        "faq",
+        "dates",
+        "sources",
+        "author",
+        "image"
+      ],
+      "bodyRead": true,
+      "selfCheckSection5": "본문/FAQ/출처/숫자/등록/오프닝·마무리 미변경. 제목만 독립 대조; 본문의 기존 §5 검수는 유지. 새 제목은 굵은 강조·지어낸 1인칭·명령형 템플릿 없음.",
+      "varietyActualOriginal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "vi"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md [vi] sentences=45 mean=23 cv=0.468 short=0.089 run3=0.116 opener_rep=0.125 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

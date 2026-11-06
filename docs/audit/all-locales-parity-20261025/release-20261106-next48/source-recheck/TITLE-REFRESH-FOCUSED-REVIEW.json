@@ -1,0 +1,179 @@
+{
+  "checkedAtUTC": "2026-11-06T01:10:15.631276+00:00",
+  "status": "PASS",
+  "scope": "Focused independent review of 10 metadata-only edits; semantic preservation against source recheck and exact comparison with prior accepted version.",
+  "mustCount": 0,
+  "priorKO916TitleFinding": "CLOSED at 388b2bd0b85dfe7df1c11914f661123c059d9d4b96c74cdbc934d207c3ffbb9c",
+  "rows": [
+    {
+      "path": "src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "locale": "ko",
+      "id": "915",
+      "reviewedSHA256": "9ff162b358d02e597fef1815bff74eb6cf60da8b6ab56bd0b5426e5695475810",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "locale": "ko",
+      "id": "916",
+      "reviewedSHA256": "388b2bd0b85dfe7df1c11914f661123c059d9d4b96c74cdbc934d207c3ffbb9c",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "locale": "ko",
+      "id": "918",
+      "reviewedSHA256": "26bcec95bdb2d5025f48b3d53335fcd6148feb567de24af8b7768dcb9f470c91",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "locale": "ko",
+      "id": "919",
+      "reviewedSHA256": "3827f72452b1ad132e54dd9196beb348e329cfa892663889c26c6ff1c429b9ef",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "locale": "ko",
+      "id": "920",
+      "reviewedSHA256": "365fdc32d1c86bd59262ee37cc9654f807fdce748e4b9aef8f82a9501c39b3ff",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "locale": "ko",
+      "id": "921",
+      "reviewedSHA256": "b0ab7a8c39cecccbca4c477d5e7ac3613858d9f56a0acbe8da54ec72054f2423",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "seoTitle"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "locale": "en",
+      "id": "919",
+      "reviewedSHA256": "b4cda7f2d0b282bc1a2d6a62414970293f7f5c5eae7e2943d9a035071ce5196f",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "seoTitle",
+        "summary"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "locale": "en",
+      "id": "920",
+      "reviewedSHA256": "d71c10d8129c8f9fdd8736c026b1960312d17dc0aa30c0ffb0cd9a440eafa048",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title",
+        "summary"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "locale": "en",
+      "id": "921",
+      "reviewedSHA256": "63077363c32c507497f760b05fd4ebf63cf72e745ae2b5907d05d57a4d837dbb",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "summary"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    },
+    {
+      "path": "src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "locale": "zh-hant",
+      "id": "915",
+      "reviewedSHA256": "5b8c3ee86c657a66eab962f352e65a75d2fd2d22c08b6b2ad9c4b925fcc391c6",
+      "onlyDeclaredFieldsChanged": true,
+      "bodyFAQDatesAndOtherFieldsExact": true,
+      "cliExit": 0,
+      "fieldsReviewed": [
+        "title"
+      ],
+      "meaningPreserved": true,
+      "currentTitleRule": "PASS",
+      "mustFindings": []
+    }
+  ],
+  "reasoning": [
+    "KO915 and ZH915 ask about later monetary arbitration without creating an automatic entitlement; body retains the particular mediation and agreement conditions.",
+    "KO916 uses conditional possibility in title and preserves knowledge of pollution in SEO wording; it does not impose liability merely for shareholding.",
+    "KO918 qualifies the statement with 대출 안내만으로, retaining the distinction between loan notice and actual handover.",
+    "KO/EN919 frame the timing/hearing issue and expressly keep private-employer duties separate; they do not state bullying was disproved or reinstatement final.",
+    "KO/EN920 keep possible need for consent and the common-area route, without universal removal or meeting requirements.",
+    "KO/EN921 distinguish unused paid points and game chips without universal no-refund rule or new deadline.",
+    "KO titles mix questions and declarative 합니다체; no 판결-ending headline remains in edited fields. English and Traditional Chinese changes remove court-news headline framing."
+  ],
+  "limitations": [
+    "No article-body translation re-review beyond existing closures.",
+    "Source-access limits in SOURCE-RECHECK.json remain; metadata changes do not affect them."
+  ]
+}

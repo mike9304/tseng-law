@@ -15,7 +15,7 @@ featured_image_caption: "Căn phòng hư cấu dùng để minh họa, không ph
 social_image: "../images/ISSUE-20261106-08-taiwan-dengue-student-health-investigation-school-housing/featured-01.jpg"
 faq:
   - q: "Người mới bị nghi mắc bệnh có phải hợp tác điều tra dịch tễ không?"
-    a: "Có. Điều 43 áp dụng với người mắc bệnh, người nghi mắc bệnh và những người liên quan. Họ không được từ chối, né tránh hoặc cản trở việc xét nghiệm, chẩn đoán, điều tra và xử lý thuộc điều luật."
+    a: "Có. Điều 43 áp dụng với người mắc bệnh, người nghi mắc bệnh và những người liên quan. Họ không được từ chối, né tránh hoặc cản trở các hoạt động xét nghiệm, chẩn đoán, điều tra và xử lý quy định tại điều này."
   - q: "Mắc sốt xuất huyết có đương nhiên bị cách ly bắt buộc không?"
     a: "Sốt xuất huyết thuộc nhóm 2 theo luật Đài Loan. Điều 44 cho phép cơ quan có thẩm quyền áp dụng cách ly điều trị tại cơ sở được chỉ định khi cần thiết; điều luật không bắt buộc mọi trường hợp nhóm 2 đều phải cách ly."
   - q: "Trường hoặc chủ nhà có được từ chối người bệnh chỉ vì mắc bệnh không?"
@@ -50,7 +50,7 @@ Nếu thực hiện cách ly điều trị bắt buộc, cơ quan phải lập t
 
 Sự bảo vệ này đi cùng nghĩa vụ hợp tác phòng dịch. Người bệnh vẫn phải tuân thủ biện pháp có căn cứ pháp luật; trường học hay chủ nhà cũng không thể tự coi mọi cách loại trừ người bệnh là biện pháp phòng dịch được phép.
 
-Với một yêu cầu ngừng học hoặc rời nơi ở, quyết định phòng dịch và lý do ghi trong thông báo của trường, chủ nhà là tài liệu để đối chiếu với Điều 12. Bản tin về ca bệnh không thay thế những văn bản đó.
+Khi có yêu cầu ngừng học hoặc rời nơi ở, có thể đối chiếu quyết định phòng dịch và thông báo nêu lý do của trường hoặc chủ nhà với Điều 12. Bản tin về ca bệnh không thay thế những văn bản đó.
 
 ## Nguồn tham khảo
 

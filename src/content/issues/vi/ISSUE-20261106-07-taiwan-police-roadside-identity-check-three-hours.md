@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261106-07-taiwan-police-roadside-identity-check-three-hours/featured-01.webp"
 featured_image_alt: "Xe máy đỗ bên vỉa hè vắng, mũ bảo hiểm trơn đặt trên yên xe"
-featured_image_caption: "Ảnh minh họa được tạo bằng AI, không ghi lại người hoặc địa điểm trong bản tin."
+featured_image_caption: "Ảnh minh họa hư cấu, không ghi lại người hoặc địa điểm trong bản tin."
 social_image: "../images/ISSUE-20261106-07-taiwan-police-roadside-identity-check-three-hours/featured-01.jpg"
 faq:
   - q: "Ba giờ được tính từ khi đến đồn cảnh sát?"
@@ -26,13 +26,13 @@ author: "legal-ai-assistant"
 
 # Cảnh sát kiểm tra danh tính ở Đài Loan: ba giờ tính từ lúc nào?
 
-Ba lao động Việt Nam được cảnh sát Cao Hùng chuyển cho Sở Di dân sau một lần dừng ô tô, theo [Liên hợp báo ngày 5 tháng 11 năm 2026](https://udn.com/news/story/7320/9858796). Bản tin dẫn thông tin cảnh sát: xe bất ngờ tăng tốc khi gặp xe tuần tra, một người chạy khỏi xe sau khi bị chặn. Cảnh sát xác định cả ba thuộc diện lao động mất liên lạc.
+Theo [Liên hợp báo ngày 5 tháng 11 năm 2026](https://udn.com/news/story/7320/9858796), cảnh sát Cao Hùng đã bàn giao ba lao động Việt Nam cho Sở Di dân sau khi dừng chiếc ô tô chở họ. Bản tin dẫn thông tin cảnh sát: xe bất ngờ tăng tốc khi gặp xe tuần tra, một người chạy khỏi xe sau khi bị chặn. Cảnh sát xác định cả ba thuộc diện lao động mất liên lạc.
 
 Người đi cùng xe cũng có thể bị hỏi giấy tờ. Vậy lúc nào việc kiểm tra danh tính có thể chuyển từ bên đường về đồn?
 
 ## Căn cứ dừng xe và lý do kiểm tra
 
-[Điều 8 Luật Thực thi quyền hạn cảnh sát của Đài Loan (警察職權行使法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080145&flno=8) cho phép dừng phương tiện đã gây nguy hại, hoặc có nguy cơ gây nguy hại theo đánh giá khách quan, hợp lý. Cảnh sát có thể yêu cầu người lái và hành khách xuất trình giấy tờ liên quan hoặc xác minh danh tính. Quốc tịch không phải căn cứ được nêu tại điều này.
+[Điều 8 Luật Thực thi quyền hạn cảnh sát của Đài Loan (警察職權行使法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080145&flno=8) cho phép dừng phương tiện đã gây nguy hại, hoặc có nguy cơ gây nguy hại theo đánh giá khách quan, hợp lý. Cảnh sát có thể xác minh danh tính của người lái xe hoặc hành khách, hoặc yêu cầu họ xuất trình giấy tờ liên quan. Quốc tịch không phải căn cứ được nêu tại điều này.
 
 Với việc xác minh tại nơi công cộng hoặc nơi cảnh sát vào hợp pháp, [Điều 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080145&flno=6) liệt kê các trường hợp cụ thể. Chẳng hạn, có nghi ngờ hợp lý về việc phạm tội hoặc nguy cơ phạm tội; hay có căn cứ thực tế cho thấy cần xác minh để ngăn nguy hại cụ thể đến tính mạng, thân thể.
 

@@ -1,0 +1,217 @@
+{
+  "status": "pending focused review",
+  "rows": [
+    {
+      "locale": "ko",
+      "id": "915",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "relativePath": "src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "a20d203aebed0ed16b5841a5664b11137ae535838a7f39ef0dfeb73d303eea31",
+      "afterSHA256": "9ff162b358d02e597fef1815bff74eb6cf60da8b6ab56bd0b5426e5695475810",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"공기 연장을 조정한 뒤 금전 보상을 중재에 청구했다면\"",
+          "after": "공기 연장 조정 뒤 금전 보상을 중재로 청구할 수 있을까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "seoTitle",
+          "before": "\"대만 공공공사 중재: 조정에서 다룬 청구의 범위\"",
+          "after": "대만 공공공사 조정 뒤 금전 보상을 중재로 청구할 수 있을까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "id": "916",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "relativePath": "src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "9fd83e8be14853c57548e36ac3564bee6fcaa240793e1afc28ccc87013192a10",
+      "afterSHA256": "23f32eb822fbbb51864494543ab4ec72a6617c9654360e150f783c0555027f42",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"공장 오염을 알고도 자산을 옮겼다면: 대만 모회사 책임 판결\"",
+          "after": "대만 공장 오염을 안 뒤 자산을 옮겼다면 모회사 책임도 문제 될 수 있습니다",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "seoTitle",
+          "before": "\"대만 공장 인수와 모회사 책임: 오염 인지·지배·자산 이전\"",
+          "after": "대만 공장 오염을 안 뒤의 자산 이전은 모회사 책임에도 영향을 줄 수 있습니다",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "id": "918",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "relativePath": "src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "d4e153494f79ed91ecf6d0694f4b1092c0c4de21fe0a63aac3d0272d7fddf66e",
+      "afterSHA256": "26bcec95bdb2d5025f48b3d53335fcd6148feb567de24af8b7768dcb9f470c91",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "seoTitle",
+          "before": "\"대만 분양주택 인도 지연: 대출 안내와 인도 통지의 차이\"",
+          "after": "대만 분양주택의 대출 안내만으로 인도가 끝나지는 않습니다",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "id": "919",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "relativePath": "src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "a84d532fdd6b1ca9053ddf27d6998b541b1531d5e2561752ff7b37f9d6c5eb68",
+      "afterSHA256": "3827f72452b1ad132e54dd9196beb348e329cfa892663889c26c6ff1c429b9ef",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"징계를 발표한 뒤 심의한 직장 괴롭힘 면직 사건\"",
+          "after": "직장 괴롭힘 징계를 발표한 뒤 심의했다면 면직은 유효할까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "seoTitle",
+          "before": "\"대만 직장 괴롭힘 조사와 면직 취소: 진술 기회와 증거의 모순\"",
+          "after": "대만 직장 괴롭힘 면직 절차에서 진술 기회는 보장됐을까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "id": "920",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "relativePath": "src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "d85c3ad0f2444930a817ab8bd6601971f9bdf19e851a46de92ea151290cbada2",
+      "afterSHA256": "365fdc32d1c86bd59262ee37cc9654f807fdce748e4b9aef8f82a9501c39b3ff",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"내 주차면의 충전기에서 공용 전기함까지, 법원이 살핀 설치 경로\"",
+          "after": "주차면 밖으로 이어지는 충전기 배선에는 별도의 동의가 필요할 수 있습니다",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "seoTitle",
+          "before": "\"대만 아파트 전기차 충전기 철거 판결과 공용부분 동의\"",
+          "after": "대만 아파트 충전기 배선이 공용 벽과 천장을 지나도 될까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "id": "921",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "relativePath": "src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "b4021c53bd4c657b0598faf6f17840c693e33db497764782b9edcb000a8e7e48",
+      "afterSHA256": "b0ab7a8c39cecccbca4c477d5e7ac3613858d9f56a0acbe8da54ec72054f2423",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"게임 금화는 남았는데 유료 포인트는 없었던 환불 사건\"",
+          "after": "게임 금화는 남았는데 유료 포인트는 없다면 환불받을 수 있을까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "seoTitle",
+          "before": "\"대만 온라인게임 환불 판결: 금화와 미사용 유료 포인트\"",
+          "after": "대만 게임 환불에서 남은 금화와 유료 포인트는 어떻게 다룰까요?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "919",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "relativePath": "src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "aa8d6d97f375da967d5dbe4683d508c8bf4de13d572957abc68e1c5b3e1bccb6",
+      "afterSHA256": "fce9a2b50e36c96e9e29fe3c7822b0e1db179410fd7f2994b47abb11ceb6d4e1",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "seoTitle",
+          "before": "\"Taiwan Bullying Case: Dismissal Set Aside\"",
+          "after": "Was a Taiwan Bullying Dismissal Decided Too Soon?",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "summary",
+          "before": "\"A Taiwan court set aside a civil servant's dismissal over procedural defects. Private employers must protect complainants and conduct fair investigations.\"",
+          "after": "A premature dismissal announcement can expose flaws in a Taiwan bullying investigation. Private employers have separate protection and investigation duties.",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "920",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "relativePath": "src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "e4a6f40dc3623ad4d24ada3f2536347f85ab17c4e393334324e217dc1526366a",
+      "afterSHA256": "d71c10d8129c8f9fdd8736c026b1960312d17dc0aa30c0ffb0cd9a440eafa048",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"The Wiring Left the Parking Bay: Why a Taiwan Court Ordered an EV Charger Removed\"",
+          "after": "EV Charger Wiring Beyond Your Parking Bay: Consent for Common Areas in Taiwan",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        },
+        {
+          "field": "summary",
+          "before": "\"A Taiwan court ordered an EV charger removed from common areas. The wiring route, owners' resolution and building bylaws determined the consent required.\"",
+          "after": "Installing an EV charger in a Taiwan parking bay may also require consent for common walls, ceilings and panels along the wiring route.",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "921",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "relativePath": "src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "b886fb4c396e5ca0a19b5b49b3542be22fa84d507f5c870b4f577f2faf83ca0e",
+      "afterSHA256": "63077363c32c507497f760b05fd4ebf63cf72e745ae2b5907d05d57a4d837dbb",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "summary",
+          "before": "\"A Taiwan court refused a refund for game coins used as chips. Current terms protect unused paid points or game fees under termination and refund rules.\"",
+          "after": "Unused paid points and in-game chips can have different refund treatment in Taiwan. The game's terms and the remaining balance matter.",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    },
+    {
+      "locale": "zh-hant",
+      "id": "915",
+      "path": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "relativePath": "src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "857136fa9d201fec1625c75d3df4ae95715f3aa6a4ff517109176875be55b37d",
+      "afterSHA256": "5b8c3ee86c657a66eab962f352e65a75d2fd2d22c08b6b2ad9c4b925fcc391c6",
+      "bodyUnchanged": true,
+      "fields": [
+        {
+          "field": "title",
+          "before": "\"調解談展延工期，仲裁卻請求金錢：醫院工程的仲裁判斷遭撤銷\"",
+          "after": "公共工程調解談的是展延工期，後來能改向仲裁請求金錢嗎？",
+          "reason": "Apply November3 reader-oriented title/description rule while preserving the case-specific scope and all body conditions."
+        }
+      ]
+    }
+  ]
+}

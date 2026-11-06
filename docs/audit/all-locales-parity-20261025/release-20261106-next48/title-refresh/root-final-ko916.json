@@ -1,0 +1,29 @@
+{
+  "atUTC": "2026-11-06T01:17:33.409798+00:00",
+  "reviewer": "root",
+  "decision": "ACCEPT_WITH_ROOT_WORDING",
+  "manuscript": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+  "beforeSHA256": "388b2bd0b85dfe7df1c11914f661123c059d9d4b96c74cdbc934d207c3ffbb9c",
+  "afterSHA256": "23f32eb822fbbb51864494543ab4ec72a6617c9654360e150f783c0555027f42",
+  "fields": {
+    "title": "대만 공장 오염을 안 뒤 자산을 옮겼다면 모회사 책임도 문제 될 수 있습니다",
+    "seoTitle": "대만 공장 오염을 안 뒤의 자산 이전은 모회사 책임에도 영향을 줄 수 있습니다"
+  },
+  "composerResponse": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/composer-20261106/ko-title-review-composer-response.txt",
+    "sha256": "1d780e9a08c50be488371cbc261349da6af200beae58793707bbe13359cea0e5"
+  },
+  "reason": "Explicit knowledge of pollution and conditional responsibility restore the case-specific qualifications. Root rewrote both titles and verified against unchanged body/FAQ and current Company Act154 official text. This is not a finding that awareness or asset transfer alone establishes every statutory element.",
+  "monotonyDecision": "No further edit: displayed titles have three questions out of six; SEO titles are separate and do not form a repeated body paragraph pattern. Keep distinct disputes and mixed sentence forms.",
+  "bodyFAQDatesSourcesUnchanged": true,
+  "variety": {
+    "exitCode": 0,
+    "stdout": "/Users/son7/Projects/tseng-law-locales-release-20261106/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md [ko] sentences=43 mean=36.4 cv=0.458 short=0.163 run3=0.073 opener_rep=0.0 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=1\n  WARN 95% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": ""
+  },
+  "rootDirectSources": [
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+    "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+  ]
+}

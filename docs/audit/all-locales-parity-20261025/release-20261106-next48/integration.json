@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-11-06T01:06:01.520004+00:00",
+  "publicBase": "e2b0a8ec8340634fceb1625aa2c4d137e9d3d977",
+  "contentCommit": "6851175de",
+  "cssCommit": "8f04942b37c97bff9737c600785944a863c4be78",
+  "contentCount": 48,
+  "contentUnchangedFromReviewedSelection": true,
+  "tests": {
+    "first": {
+      "passed": 147,
+      "failed": 6,
+      "reason": "Historical October26 batch was incorrectly assumed to remain newest after newer main articles."
+    },
+    "corrected": {
+      "passed": 153,
+      "failed": 0
+    }
+  },
+  "logs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/related-tests.log",
+      "sha256": "b604070209b291968b18a1e03f5086d12514ff07544cc270f486bb9330f0abf1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261106-next48/integration/related-tests-r2.log",
+      "sha256": "dd0d322a6ecd9a8db78db90c41cd1633a86f9cc0bf32da209dc5c8057972d94f"
+    }
+  ],
+  "changes": [
+    "Preserve November5 backlog and 4-digit column IDs in publication-date fixtures.",
+    "Update independently pinned category baseline by six legal columns: 216 to 222.",
+    "Check October26 cases within their publication cohort; retain exact dates, audience, topics, FAQ counts, 49 routes, 50 hreflang links and archive ordering.",
+    "Preserve latest main articles ahead of October26 cohort."
+  ],
+  "deploymentStatus": "Not yet pushed; fresh build, package and browser checks pending."
+}

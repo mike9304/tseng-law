@@ -48,15 +48,15 @@ const CASES = [
 ] as const;
 
 describe('reviewed case translations published October26', () => {
-  it.each(NEWEST_CASE_LOCALES)('%s has all six complete, own-audience cases in its newest publication batch', (locale) => {
+  it.each(NEWEST_CASE_LOCALES)('%s has all six complete, own-audience cases in its October26 publication batch', (locale) => {
     const posts = getAllColumnPosts(locale);
     const visible = filterMarketBoardColumns(locale, posts);
     const slugs = CASES.map(({ slug }) => slug);
     // Existing October26 ARC files lead the same-day batch by their lower column numbers.
     const expectedLead = SAME_DAY_ARC_LOCALES.includes(locale) ? [...ARC_SLUGS, ...slugs] : slugs;
-    expect(posts.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
-    expect(visible.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
-    expect(archiveLeadSlugsFor(locale).slice(0, expectedLead.length)).toEqual(expectedLead);
+    expect(posts.filter(post => post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(visible.filter(post => post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(archiveLeadSlugsFor(locale).filter(slug => archiveLeadPublicationDate(slug, locale) <= '2026-10-26').slice(0, expectedLead.length)).toEqual(expectedLead);
     expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
     if (SAME_DAY_ARC_LOCALES.includes(locale) || PRIOR_DAY_ARC_LOCALES.includes(locale) || ORIGINAL_DAY_ARC_LOCALES.includes(locale)) {
       const expectedArcDate = ORIGINAL_DAY_ARC_LOCALES.includes(locale) ? '2026-10-24'
@@ -82,7 +82,8 @@ describe('reviewed case translations published October26', () => {
     const translated = CASES.filter(item => item.source !== locale);
     const originals = CASES.filter(item => item.source === locale);
     const expectedCases = [...translated, ...originals].map(({ slug }) => slug);
-    expect(posts.slice(0, 6).map(post => post.publicationDate)).toEqual(Array(6).fill('2026-10-28'));
+    expect(posts.slice(0, 6)).toHaveLength(6);
+    expect(posts.slice(0, 6).every(post => post.publicationDate > '2026-10-26')).toBe(true);
     expect(visible.slice(0, 6).map(({ slug }) => slug)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
     expect(archiveLeadSlugsFor(locale).slice(0, 6)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
     for (const ordered of [posts.map(({ slug }) => slug), visible.map(({ slug }) => slug), archiveLeadSlugsFor(locale)]) {

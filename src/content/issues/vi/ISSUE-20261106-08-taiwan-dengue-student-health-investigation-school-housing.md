@@ -11,7 +11,7 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261106-08-taiwan-dengue-student-health-investigation-school-housing/featured-01.webp"
 featured_image_alt: "Bàn học trong phòng vắng với cuốn sổ đóng, ly nước và cửa sổ có lưới chắn côn trùng"
-featured_image_caption: "Ảnh minh họa được tạo bằng AI, không phải phòng ở của sinh viên được nhắc trong bản tin."
+featured_image_caption: "Căn phòng hư cấu dùng để minh họa, không phải phòng ở của sinh viên được nhắc trong bản tin."
 social_image: "../images/ISSUE-20261106-08-taiwan-dengue-student-health-investigation-school-housing/featured-01.jpg"
 faq:
   - q: "Người mới bị nghi mắc bệnh có phải hợp tác điều tra dịch tễ không?"
@@ -36,7 +36,7 @@ Thông báo kêu gọi trường học và nơi thực tập hỗ trợ theo dõ
 
 Người mắc bệnh, người nghi mắc bệnh và người liên quan không được từ chối, né tránh hay cản trở những hoạt động đó. Nghĩa vụ không chờ kết quả xác nhận. Với sinh viên, lịch đi lại và những nơi đã sinh hoạt có thể là thông tin phục vụ việc xác định phạm vi điều tra.
 
-## Khi nào cơ quan y tế được cách ly?
+## Khi nào cơ quan y tế được áp dụng cách ly điều trị?
 
 Sốt xuất huyết nằm trong nhóm 2 tại [Điều 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0050001&flno=3). Đây là phân loại của luật Đài Loan.
 

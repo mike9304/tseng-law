@@ -46,7 +46,7 @@ export const viSiteCopy = {
     description: 'Quý vị có thể gửi một bản tóm tắt về vụ việc, mối liên hệ với Đài Loan và thời hạn đang cần giải quyết. Phạm vi công việc và chi phí được xác nhận riêng trước khi bắt đầu.',
     emailLabel: 'Email liên hệ',
     disclosureLabel: 'Ngôn ngữ tư vấn và cách gửi yêu cầu',
-    formAction: 'Biểu mẫu liên hệ',
+    formAction: 'Liên hệ qua email',
     privacyAction: 'Cách xử lý thông tin cá nhân',
     preparationTitle: 'Nội dung trao đổi ban đầu',
     receiptTitle: 'Sau khi gửi yêu cầu',

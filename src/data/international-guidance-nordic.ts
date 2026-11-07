@@ -68,7 +68,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       ' hur du formulerar en sammanfattning som en advokat granskar.',
     columnsViewAllLabel: 'Se alla artiklar',
     columnsReadMoreLabel: 'Läs vidare',
-    columnsReviewLabel: 'Granskad av advokat Wei Tseng',
+    columnsReviewLabel: 'Taiwans rätt',
     columnsOriginalLanguageBadge: 'Originalspråk',
     columnsOriginalLanguageNote:
       'Följande artiklar finns ännu inte på svenska. Listan ligger kvar på originalspråket och öppnar den aktuella språksidan; innehållet översätts inte automatiskt.',
@@ -89,7 +89,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Vad vi gör',
           paragraphs: [
-            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag, för talan i domstol och lotsar klienter från utlandet genom de steg som krävs i Taiwan.',
+            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag, för talan i domstol och vägleder klienter från utlandet genom de steg som krävs i Taiwan.',
             'Hela innehållet här är allmänt. Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten. Den här vägledningen ersätter inte ett samtal med en advokat om dina handlingar.',
           ],
         },
@@ -556,7 +556,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       ' hvordan du skriver et resumé, som en advokat gennemgår.',
     columnsViewAllLabel: 'Se alle artikler',
     columnsReadMoreLabel: 'Læs videre',
-    columnsReviewLabel: 'Gennemgået af advokat Wei Tseng',
+    columnsReviewLabel: 'Taiwans ret',
     columnsOriginalLanguageBadge: 'Originalsprog',
     columnsOriginalLanguageNote:
       'Følgende artikler findes endnu ikke på dansk. Listen bliver på originalsproget og åbner den pågældende sprogside; indholdet oversættes ikke automatisk.',
@@ -1044,7 +1044,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       ' hvordan du skriver et sammendrag som en advokat kan vurdere.',
     columnsViewAllLabel: 'Se alle artikler',
     columnsReadMoreLabel: 'Les videre',
-    columnsReviewLabel: 'Vurdert av advokat Wei Tseng',
+    columnsReviewLabel: 'Taiwans rett',
     columnsOriginalLanguageBadge: 'Originalspråk',
     columnsOriginalLanguageNote:
       'Artiklene nedenfor finnes ennå ikke på norsk. Listen står på originalspråket og åpner den aktuelle språksiden; innholdet oversettes ikke automatisk.',
@@ -1532,7 +1532,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       ' selittää, miten laaditte yhteenvedon, jonka asianajaja tarkistaa.',
     columnsViewAllLabel: 'Katso kaikki artikkelit',
     columnsReadMoreLabel: 'Lue lisää',
-    columnsReviewLabel: 'Tarkistanut asianajaja Wei Tseng',
+    columnsReviewLabel: 'Taiwanin oikeus',
     columnsOriginalLanguageBadge: 'Alkuperäiskieli',
     columnsOriginalLanguageNote:
       'Seuraavia artikkeleita ei ole vielä suomeksi. Luettelo pysyy alkuperäiskielellä ja avaa kyseisen kielisivun; sisältöä ei käännetä automaattisesti.',

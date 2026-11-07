@@ -47,7 +47,7 @@ function getConfig(locale: SiteLocale): MessengerConfig {
         'Visa and residency questions',
         'Consultation format and scheduling (in person in Taipei or by video)',
       ],
-      featuresTitle: 'What You Can Ask by Email',
+      featuresTitle: 'Topics you can send by email',
     };
   }
 

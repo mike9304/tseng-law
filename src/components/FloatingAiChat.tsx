@@ -353,7 +353,7 @@ const COPY: Record<
     title: 'AI 상담사',
     subtitle: '호정국제법률사무소',
     greeting:
-      '안녕하세요. 호정국제법률사무소 AI 상담사입니다. 대만 법률 관련 어떤 도움이 필요하신가요? 회사설립, 교통사고, 노동, 이혼·상속, 형사 등 어떤 주제든 편하게 질문해 주세요.',
+      '호정국제법률사무소 AI 상담입니다. 대만 법률(회사설립, 교통사고, 노동, 가사, 형사 등) 관련 질문을 남겨 주세요.',
     placeholder: '질문을 입력해 주세요...',
     showForm: '상담 접수하기',
     formTitle: '상담 접수',
@@ -364,7 +364,7 @@ const COPY: Record<
     submit: '접수하기',
     submitting: '접수 중...',
     success: (id) =>
-      `접수가 완료되었습니다. 변호사가 검토 후 빠르게 회신드리겠습니다. 접수번호: ${id}`,
+      `접수가 완료되었습니다. 변호사가 검토한 뒤 회신드립니다. 접수번호: ${id}`,
     error: '일시적 오류가 발생했습니다. 직접 이메일로 문의해 주세요.',
     closeLabel: '닫기',
     contactsTitle: '직접 연락',
@@ -376,7 +376,7 @@ const COPY: Record<
     feedbackHelpful: '도움이 됐어요',
     feedbackUnhelpful: '도움이 안 됐어요',
     feedbackPending: '전송 중...',
-    feedbackThanks: '피드백 감사합니다. 더 나은 응답에 반영하겠습니다.',
+    feedbackThanks: '피드백 감사합니다.',
     feedbackError: '피드백 전송 실패. 잠시 후 다시 시도해 주세요.',
     sourcesTitle: '참고 칼럼',
     sourceLastVerified: (date) => `최근 갱신: ${date}`,
@@ -391,7 +391,7 @@ const COPY: Record<
     title: 'AI 諮詢',
     subtitle: '昊鼎國際法律事務所',
     greeting:
-      '您好，我是昊鼎國際法律事務所的 AI 諮詢助理。請問有什麼法律問題？公司設立、車禍、勞資、離婚、繼承、刑事等問題，都可以直接詢問。',
+      '您好，這裡是昊鼎國際法律事務所的 AI 諮詢。公司設立、車禍、勞資、離婚、繼承、刑事等台灣法律問題，可直接提問。',
     placeholder: '請輸入您的問題...',
     showForm: '預約正式諮詢',
     formTitle: '預約諮詢',
@@ -413,7 +413,7 @@ const COPY: Record<
     feedbackHelpful: '有幫助',
     feedbackUnhelpful: '沒有幫助',
     feedbackPending: '傳送中...',
-    feedbackThanks: '感謝您的回饋，我們會持續改善。',
+    feedbackThanks: '感謝您的回饋。',
     feedbackError: '回饋送出失敗，請稍後再試。',
     sourcesTitle: '參考專欄',
     sourceLastVerified: (date) => `最近更新：${date}`,
@@ -428,7 +428,7 @@ const COPY: Record<
     title: 'AI Consult',
     subtitle: 'Hovering International Law',
     greeting:
-      'Hello. I am the AI consultation assistant at Hovering International Law Office. How can I help with your Taiwan legal matter? Feel free to ask about company setup, traffic accidents, labor, divorce, inheritance, criminal cases, or any other topic.',
+      'AI consultation at Hovering International Law Office. Ask about Taiwan law—company setup, traffic accidents, labor, divorce, inheritance, criminal matters, and related topics.',
     placeholder: 'Type your question...',
     showForm: 'Request consultation',
     formTitle: 'Consultation Request',
@@ -452,7 +452,7 @@ const COPY: Record<
     feedbackHelpful: 'This was helpful',
     feedbackUnhelpful: 'Not helpful',
     feedbackPending: 'Sending...',
-    feedbackThanks: 'Thank you for the feedback. It will help us improve.',
+    feedbackThanks: 'Thank you for the feedback.',
     feedbackError: 'Could not send feedback. Please try again later.',
     sourcesTitle: 'Sources',
     sourceLastVerified: (date) => `Last verified: ${date}`,
@@ -1254,10 +1254,10 @@ export default function FloatingAiChat({
               <strong>{copy.showForm}</strong>
               <span>
                 {locale === 'ko'
-                  ? '변호사가 직접 검토 후 회신드립니다'
+                  ? '변호사가 검토한 뒤 회신드립니다'
                   : locale === 'zh-hant'
-                    ? '律師將親自審閱後回覆'
-                    : 'An attorney will personally review and respond'}
+                    ? '律師審閱後回覆'
+                    : 'An attorney will review and respond'}
               </span>
             </div>
             <span aria-hidden className="floating-ai-chat-cta-arrow">→</span>

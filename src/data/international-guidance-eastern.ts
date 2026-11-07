@@ -71,7 +71,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
     columnsViewAllLabel: 'Zobrazit všechny články',
     columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
+    columnsReviewLabel: 'Právo Tchaj-wanu',
     columnsOriginalLanguageBadge: 'Původní jazyk',
     columnsOriginalLanguageNote:
       'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
@@ -313,7 +313,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Když zde nenajdete odpověď',
           paragraphs: [
             'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
           ],
@@ -563,7 +563,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' oldal elmagyarázza, hogyan készítsen olyan összefoglalót, amelyet egy ügyvéd megvizsgál.',
     columnsViewAllLabel: 'Az összes cikk megtekintése',
     columnsReadMoreLabel: 'Tovább olvasom',
-    columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvédnő',
+    columnsReviewLabel: 'Tajvani jog',
     columnsOriginalLanguageBadge: 'Eredeti nyelv',
     columnsOriginalLanguageNote:
       'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalmat automatikusan nem fordítjuk le.',
@@ -735,7 +735,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'A költségeket a munka megkezdése előtt erősítjük meg',
           paragraphs: [
             'Ha a munka terjedelme világos, a költségek összegét és számítási módját a munka megkezdése előtt megbeszéljük és megerősítjük Önnel. Ha a terjedelem közben változik, azt újból meg kell erősíteni.',
-            'Ez az oldal nem árajánlat, és nem keletkeztet fizetési kötelezettséget.',
+            'Ez az oldal nem árajánlat, és nem keletkeztet fizetési kötelezettséget. Az űrlapon keresztül történő megkeresés elküldése szintén díjmentes.',
           ],
         },
         {
@@ -1055,7 +1055,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' explică cum să alcătuiți un rezumat pe care un avocat îl va examina.',
     columnsViewAllLabel: 'Vedeți toate articolele',
     columnsReadMoreLabel: 'Citiți mai departe',
-    columnsReviewLabel: 'Verificat de avocata Wei Tseng',
+    columnsReviewLabel: 'Dreptul taiwanez',
     columnsOriginalLanguageBadge: 'Limba originală',
     columnsOriginalLanguageNote:
       'Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina în limba respectivă; conținutul nu este tradus automat.',
@@ -1548,7 +1548,7 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' пояснює, як скласти виклад, який розгляне адвокат.',
     columnsViewAllLabel: 'Переглянути всі статті',
     columnsReadMoreLabel: 'Читати далі',
-    columnsReviewLabel: 'Перевірила адвокатка Wei Tseng',
+    columnsReviewLabel: 'Право Тайваню',
     columnsOriginalLanguageBadge: 'Мова оригіналу',
     columnsOriginalLanguageNote:
       'Наступні статті ще не доступні українською. Перелік залишається мовою оригіналу та відкриває відповідну мовну сторінку; зміст не перекладається автоматично.',
@@ -2045,7 +2045,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' εξηγεί πώς να συντάξετε μια περίληψη την οποία θα εξετάσει δικηγόρος.',
     columnsViewAllLabel: 'Προβολή όλων των άρθρων',
     columnsReadMoreLabel: 'Συνέχεια ανάγνωσης',
-    columnsReviewLabel: 'Ελέγχθηκε από τη δικηγόρο Wei Tseng',
+    columnsReviewLabel: 'Δίκαιο Ταϊβάν',
     columnsOriginalLanguageBadge: 'Γλώσσα πρωτοτύπου',
     columnsOriginalLanguageNote:
       'Τα ακόλουθα άρθρα δεν είναι ακόμη διαθέσιμα στα ελληνικά. Ο κατάλογος παραμένει στη γλώσσα του πρωτοτύπου και ο σύνδεσμος οδηγεί στη σελίδα της αντίστοιχης γλώσσας· το περιεχόμενο δεν μεταφράζεται αυτόματα.',
@@ -2546,7 +2546,7 @@ export const hebrewGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' מסביר כיצד לנסח תקציר שעורכת דין או עורך דין יבדקו.',
     columnsViewAllLabel: 'הצגת כל המאמרים',
     columnsReadMoreLabel: 'המשך קריאה',
-    columnsReviewLabel: 'נבדק בידי עורכת הדין Wei Tseng',
+    columnsReviewLabel: 'דין טאיוואן',
     columnsOriginalLanguageBadge: 'שפת המקור',
     columnsOriginalLanguageNote:
       'המאמרים הבאים אינם זמינים עדיין בעברית. הרשימה נשארת בשפת המקור ופותחת את עמוד השפה המתאים; התוכן אינו מתורגם אוטומטית.',

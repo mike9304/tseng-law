@@ -192,19 +192,19 @@ describe('Japanese investment service-detail route', () => {
     for (const label of [
       '← サービス一覧へ',
       '主なポイント',
-      'この分野の担当弁護士',
-      '関連コラム — 詳しく見る',
+      '担当弁護士',
+      '関連コラム',
       '記事を読む →',
       '法律相談',
       `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
       'お問い合わせ',
-      'このページは',
-      'が内容を確認し、関連コラムと相談窓口をご案内しています。',
       'ホーム',
       '取扱業務',
     ]) {
       expect(html).toContain(label);
     }
+
+    expect(html).not.toContain('が内容を確認し、関連コラムと相談窓口をご案内しています。');
 
     expect(html).toContain(attorney!.name);
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');

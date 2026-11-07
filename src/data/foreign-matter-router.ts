@@ -20,7 +20,7 @@ type RouterCopy = {
 
 const routerCopy: Record<SiteLocale, RouterCopy> = {
   en: {
-    eyebrow: 'FIND YOUR NEXT STEP',
+    eyebrow: 'Taiwan legal matters',
     title: 'What is your Taiwan matter about?',
     intro: 'Start with the closest topic. Each link explains the related service; an inquiry lets us assess whether we can assist with your specific matter.',
     matters: [

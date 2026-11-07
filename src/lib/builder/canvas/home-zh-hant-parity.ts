@@ -415,13 +415,16 @@ export async function hasLegacyJulyZhHantHomeDualTree(
 ): Promise<boolean> {
   if (!isHome(document, locale, isHomePage)) return false;
   const desktop = restoreKnownDesktopProjection(document, getAiIntakeDiscovery('zh-hant'));
-  const stockDocument = desktop && rewriteKnownStockLanguageCopy(desktop, 'before');
+  // When copy no longer matches the historical STOCK_LANGUAGE_TEXT before group, still fingerprint the
+  // saved tree (2026-11-07 approved zh-hant home, source a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa).
+  const stockDocument = desktop && (rewriteKnownStockLanguageCopy(desktop, 'before') ?? desktop);
   if (!stockDocument) return false;
   const value = comparable({ locale: stockDocument.locale, stageWidth: stockDocument.stageWidth,
     stageHeight: stockDocument.stageHeight, nodes: nodesForJulyFingerprint(stockDocument.nodes) });
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(value)));
   const fingerprint = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
-  return fingerprint === '8f75a13335144f4c9a7ac8dc0dbb1e93173eee5bc075318bde75406d86437a3f';
+  return fingerprint === '8f75a13335144f4c9a7ac8dc0dbb1e93173eee5bc075318bde75406d86437a3f'
+    || fingerprint === '378679a2d1c5346e2b40e6c4e221db552cd1b659d219f7e378f0db6020bb3836';
 }
 
 const OVERLAY_OWNED_DESKTOP_LANDMARKS: Record<string, string> = {

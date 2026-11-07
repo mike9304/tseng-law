@@ -67,7 +67,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
       '说明如何撰写摘要，以便律师审阅。',
     columnsViewAllLabel: '查看全部文章',
     columnsReadMoreLabel: '继续阅读',
-    columnsReviewLabel: '由律师曾雋崴审阅',
+    columnsReviewLabel: '台湾法律',
     columnsOriginalLanguageBadge: '原文语言',
     columnsOriginalLanguageNote:
       '下列文章尚无简体中文版本。列表仍以原文语言显示，点开后进入相应语言的页面；内容不会被自动翻译。',
@@ -114,9 +114,9 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: '建议从何处开始',
+          heading: '从哪里看起',
           paragraphs: [
-            '请先阅读业务领域页面，判断您的事项是否属于本所范围，再阅读范围与费用以及联系，了解工作范围如何确定、以及费用如何在开始工作前确认。',
+            '可先读业务领域页面，判断您的事项是否在范围内，再读范围与费用和联系，了解工作范围如何确定、费用如何在开始工作前确认。',
             '发送信息时，您可以用自己的语言撰写摘要。原文会按您写下的内容保存，不会被自动翻译。已发送的信息是等待审阅的请求：这还不是咨询，也还不是已确认的预约。',
           ],
         },
@@ -243,9 +243,9 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: '咨询可以是有偿服务',
+          heading: '咨询可能收费',
           paragraphs: [
-            '与律师的咨询可以是有偿服务。本页没有把第一次谈话说成免费，任何表述都不应作此理解。',
+            '与律师的咨询可能收费。本页未写明第一次谈话免费，也不宜理解为免费。',
             '若咨询有偿，金额与付款方式会在咨询进行前告知。',
           ],
         },
@@ -294,8 +294,8 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: '本页不承诺的事项',
           paragraphs: [
-            '我们不承诺回复时限，不通过本页确认预约，不指定特定律师，也不提供口译。书面翻译是另外的安排：您写下的原文不会被自动翻译。',
-            '若您发送请求，内容会被保存并等待审阅。若一段时间没有回复，您可以再次写信至联系页所列的电子邮件地址。',
+            '我们不承诺回复时限，不通过本页确认预约，不指定特定律师，也不提供口译。书面翻译另行安排；您写下的原文不会自动翻译。',
+            '发送请求后，内容会保存等候处理。若长时间未收到回复，可再次致函联系页所列电子邮箱。',
           ],
         },
       ],
@@ -555,7 +555,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       'menerangkan bagaimana anda merumuskan ringkasan untuk disemak oleh peguam.',
     columnsViewAllLabel: 'Lihat semua rencana',
     columnsReadMoreLabel: 'Baca seterusnya',
-    columnsReviewLabel: 'Disemak oleh peguam Wei Tseng',
+    columnsReviewLabel: 'Undang-undang Taiwan',
     columnsOriginalLanguageBadge: 'Bahasa asal',
     columnsOriginalLanguageNote:
       'Rencana berikut belum tersedia dalam bahasa Melayu. Senarai kekal dalam bahasa asal dan membuka halaman bahasa berkenaan; kandungannya tidak diterjemah secara automatik.',
@@ -602,9 +602,9 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Di mana anda sepatutnya bermula',
+          heading: 'Langkah pertama',
           paragraphs: [
-            'Baca halaman Bidang kerja untuk menilai sama ada hal anda termasuk dalam skop kami, kemudian Skop dan kos serta Hubungi, untuk mengetahui bagaimana skop ditetapkan dan kos disahkan sebelum kerja bermula.',
+            'Baca halaman Bidang kerja untuk menilai sama ada hal anda dalam skop kami, kemudian Skop dan kos serta Hubungi, supaya jelas bagaimana skop ditetapkan dan kos disahkan sebelum kerja bermula.',
             'Apabila menghantar mesej, anda boleh menulis ringkasan dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya, dan tidak diterjemah secara automatik. Mesej yang dihantar ialah permintaan yang menunggu semakan: itu belum perundingan dan belum janji temu yang disahkan.',
           ],
         },
@@ -1043,7 +1043,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
       ' बताता है कि आप ऐसा सार कैसे लिखें जिसे कोई अधिवक्ता जाँचे।',
     columnsViewAllLabel: 'सभी लेख देखें',
     columnsReadMoreLabel: 'आगे पढ़ें',
-    columnsReviewLabel: 'अधिवक्ता Wei Tseng द्वारा जाँचा गया',
+    columnsReviewLabel: 'ताइवान कानून',
     columnsOriginalLanguageBadge: 'मूल भाषा',
     columnsOriginalLanguageNote:
       'निम्नलिखित लेख अभी हिंदी में उपलब्ध नहीं हैं। सूची मूल भाषा में रहती है और संबंधित भाषा पृष्ठ खोलती है; सामग्री का स्वचालित अनुवाद नहीं होता।',
@@ -1090,9 +1090,9 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'आपको कहाँ से आरंभ करना चाहिए',
+          heading: 'पहले क्या पढ़ें',
           paragraphs: [
-            'यह देखने के लिए कि आपका मामला हमारे दायरे में आता है या नहीं, पृष्ठ “सेवाएँ” पढ़ें; फिर “लागत” और “संपर्क” पढ़ें ताकि पता चले कि दायरा कैसे तय होता है और कार्य आरंभ होने से पहले लागत कैसे पुष्ट होती है।',
+            'पहले पृष्ठ “सेवाएँ” से यह देखें कि आपका मामला दायरे में है या नहीं; फिर “लागत” और “संपर्क” पढ़ें ताकि दायरा और कार्य आरंभ से पहले लागत की पुष्टि समझ में आए।',
             'संदेश भेजते समय आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ उसी रूप में रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता। भेजा गया संदेश जाँच की प्रतीक्षा करने वाला अनुरोध है: यह अभी परामर्श नहीं है और पुष्ट नियुक्ति भी नहीं है।',
           ],
         },

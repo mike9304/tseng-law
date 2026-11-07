@@ -130,7 +130,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       '사건 개요는 편하신 언어로 작성하셔도 됩니다. 작성하신 원문은 그대로 보관되며, 자동으로 번역하지 않습니다.',
     heading: '상담 문의 보내기',
     intro:
-      '사건 개요를 간단히 적어 주세요. 담당 변호사가 내용을 검토한 뒤 진행 방법을 안내드립니다.',
+      '사건 개요를 간단히 적어 주세요. 변호사가 내용을 확인한 뒤 다음 절차를 안내합니다.',
     submitLabel: '문의 보내기',
     submittingLabel: '보내는 중…',
     successMessage:
@@ -268,11 +268,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       '案件の概要は、お使いになりやすい言語でご記入いただけます。ご記入いただいた原文はそのまま保存し、自動翻訳は行いません。',
     heading: 'ご相談を送る',
     intro:
-      '案件の概要を簡単にお知らせください。弁護士が内容を確認したうえで、進め方をご案内します。',
+      '案件の概要を簡単にお書きください。弁護士が内容を確認し、進め方をご案内します。',
     submitLabel: '相談を送信',
     submittingLabel: '送信中…',
     successMessage:
-      'お問い合わせを受け付け、確認をお待ちいただいている状態です。ご相談が完了した、またはご予約が確定したことを意味するものではありません。',
+      'お問い合わせを受け付けました。内容の確認が済んでいない段階です。ご相談の完了やご予約の確定を意味するものではありません。',
     savedNotificationPendingMessage:
       'お問い合わせは保存されました。ただし、事務所への通知は完了が確認できていません。ご記入いただいた内容が失われたわけではありません。返信がない場合は、お問い合わせページのメールアドレスからもご連絡いただけます。',
     receiptIdLabel: '受付番号',
@@ -307,16 +307,16 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   vi: {
     guidanceNotice:
-      'Thông tin trên website mang tính tham khảo, không thay thế ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
+      'Trang này viết bằng tiếng Việt để cung cấp thông tin chung, không phải ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
     consultationNotice:
-      'Luật sư tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+      'Tư vấn thực tế chỉ diễn ra bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     methodConfirmationNotice:
       'Nếu quý vị không thể trao đổi bằng ngôn ngữ nào trong bốn ngôn ngữ trên, quý vị có thể chọn “Cần xác nhận cách liên hệ”. Văn phòng trao đổi qua email để xác nhận phương thức khả thi, nếu có; không bảo đảm hỗ trợ bằng ngôn ngữ khác hay thời gian phản hồi.',
     preparationNotice:
-      'Quý vị có thể viết yêu cầu bằng tiếng Việt hoặc ngôn ngữ của mình. Nội dung được giữ nguyên, không dịch tự động.',
+      'Quý vị có thể viết tóm tắt vụ việc bằng tiếng Việt hoặc ngôn ngữ quen dùng. Nội dung giữ nguyên như quý vị gửi, không dịch tự động.',
     heading: 'Gửi yêu cầu tư vấn',
     intro:
-      'Một bản tóm tắt về vụ việc và điều quý vị cần hỗ trợ là cơ sở để luật sư xem xét yêu cầu.',
+      'Hãy tóm tắt vụ việc ngắn gọn. Luật sư xem nội dung trước khi trao đổi bước tiếp theo.',
     submitLabel: 'Gửi yêu cầu',
     submittingLabel: 'Đang gửi…',
     successMessage:
@@ -326,7 +326,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     receiptIdLabel: 'Mã tiếp nhận',
     failureMessage:
       'Chưa gửi được yêu cầu. Quý vị có thể thử lại hoặc liên hệ qua email trên trang này.',
-    originalLanguageLabel: 'Ngôn ngữ của nội dung yêu cầu',
+    originalLanguageLabel: 'Ngôn ngữ quý vị dùng để viết',
     originalLanguagePlaceholder:
       'Ví dụ: tiếng Việt',
     preferredConsultationLanguageLabel: 'Ngôn ngữ mong muốn khi tư vấn',
@@ -352,7 +352,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Tiếng Nhật (日本語)',
       ko: 'Tiếng Hàn (한국어)',
       'needs-method-confirmation':
-        'Cần xác nhận cách liên hệ',
+        'Quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ trên — cần xác nhận cách liên hệ',
     },
   },
   id: {

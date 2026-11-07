@@ -58,7 +58,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' paaiškina, kaip parengti santrauką, kurią įvertins advokatė arba advokatas.',
     columnsViewAllLabel: 'Žiūrėti visus straipsnius',
     columnsReadMoreLabel: 'Skaityti toliau',
-    columnsReviewLabel: 'Įvertino advokatė Wei Tseng',
+    columnsReviewLabel: 'Taivano teisė',
     columnsOriginalLanguageBadge: 'Originalo kalba',
     columnsOriginalLanguageNote:
       'Toliau nurodyti straipsniai lietuvių kalba dar nepateikiami. Sąrašas lieka originalo kalba ir atveria atitinkamą kalbos puslapį; turinys automatiškai neverčiamas.',
@@ -320,7 +320,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ar galima konsultacija lietuvių kalba?',
           answer:
-            'Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertimo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.',
+            'Ne. Konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis; vertimo žodžiu nežadame. Jūsų tekstas išsaugomas toks, koks yra, ir automatiškai neverčiamas.',
         },
         {
           question: 'Ką daryti, jei nemoku nė vienos iš keturių kalbų?',
@@ -545,7 +545,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' izskaidro, kā sagatavot kopsavilkumu, ko izvērtēs advokāte vai advokāts.',
     columnsViewAllLabel: 'Skatīt visus rakstus',
     columnsReadMoreLabel: 'Lasīt tālāk',
-    columnsReviewLabel: 'Pārbaudījusi advokāte Wei Tseng',
+    columnsReviewLabel: 'Taivānas tiesības',
     columnsOriginalLanguageBadge: 'Sākotnējā valoda',
     columnsOriginalLanguageNote:
       'Turpmākie raksti latviešu valodā vēl nav pieejami. Saraksts paliek sākotnējā valodā un atver attiecīgo valodas lapu; saturs netiek tulkots automātiski.',
@@ -567,13 +567,13 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ko mēs darām',
           paragraphs: [
             'Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.',
-            'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un no brīža, kurā lietu vērtē. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.',
+            'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un no brīža, kurā lietu vērtē. Šī informācija neaizstāj sarunu ar advokātu par Jūsu dokumentiem.',
           ],
         },
         {
           heading: 'Lapas valoda un konsultācijas valoda nav viens un tas pats',
           paragraphs: [
-            'Šī lapa ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Tas, ka lasāt informāciju latviešu valodā, nenozīmē, ka saruna ar advokāti vai advokātu notiks latviski.',
+            'Šī lapa ir rakstīta latviešu valodā, bet konsultācija notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Lasīt latviski nenozīmē, ka advokāte vai advokāts runās latviski.',
             'Ar šīs lapas starpniecību mēs nesolām ne tulku, ne atbildes termiņu, ne tikšanos. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
           ],
         },
@@ -686,7 +686,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kad sazināties ar mums',
           paragraphs: [
             'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var strādāt kopā ar grāmatvedības daļu vienā procedūrā.',
-            'Katras lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.',
+            'Katras lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāapspriež ar advokātu kādā no četrām konsultācijas valodām.',
           ],
         },
       ],
@@ -723,7 +723,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Konsultācija var būt pret samaksu',
           paragraphs: [
-            'Konsultācija ar advokāti vai advokātu var būt maksas pakalpojums. Šī lapa nesaka, ka pirmā konsultācija ir bez maksas, un nevienu tās daļu nedrīkst tā saprast.',
+            'Konsultācija ar advokātu var būt maksas pakalpojums. Šī lapa nesaka, ka pirmā konsultācija ir bez maksas, un nevienu tās daļu nedrīkst tā saprast.',
             'Ja konsultācija ir pret samaksu, apmēru un maksāšanas veidu paziņo, pirms tā notiek.',
           ],
         },
@@ -747,7 +747,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Trīs lietas, kas jātur nošķirtas',
           paragraphs: [
-            'Lapas valoda, konsultācijas valoda ar advokāti vai advokātu un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
+            'Lapas valoda, konsultācijas valoda un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
           ],
           items: [
             'Lapas valoda: šī informācija ir rakstīta latviešu valodā.',
@@ -807,7 +807,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Vai konsultācija ir iespējama latviešu valodā?',
           answer:
-            'Nē. Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā. Mēs nesolām arī tulku. Rakstisks tulkojums ir kas cits: sākotnējais teksts, ko uzrakstāt, tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski.',
+            'Nē. Konsultācija notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā; tulku nesolām. Sākotnējais teksts tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski.',
         },
         {
           question: 'Ko darīt, ja nevaru lietot nevienu no četrām valodām?',
@@ -968,7 +968,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Cik tālu raksts var kalpot orientācijai',
           paragraphs: [
             'Raksti ir vispārīga informācija publicēšanas brīdī. Noteikumi un to piemērošana var mainīties, un raksts neietver visus Jūsu lietas apstākļus.',
-            'Tāpēc nerīkojieties īstā lietā, balstoties tikai uz rakstu. Izmantojiet to pārskatam un savus dokumentus pārrunājiet atsevišķi ar advokāti vai advokātu; šī lapa nav konsultācijas solis.',
+            'Tāpēc nerīkojieties īstā lietā, balstoties tikai uz rakstu. Izmantojiet to pārskatam un savus dokumentus apspriediet atsevišķi ar advokātu; šī lapa nav konsultācijas solis.',
           ],
         },
       ],
@@ -1033,7 +1033,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       ', kuidas koostada kokkuvõte, mille advokaat läbi vaatab.',
     columnsViewAllLabel: 'Vaadake kõiki artikleid',
     columnsReadMoreLabel: 'Lugege edasi',
-    columnsReviewLabel: 'Läbi vaadanud advokaat Wei Tseng',
+    columnsReviewLabel: 'Taiwani õigus',
     columnsOriginalLanguageBadge: 'Algkeel',
     columnsOriginalLanguageNote:
       'Järgmisi artikleid ei ole veel eesti keeles. Loend on algkeeles ja avab vastava keele lehe; sisu ei tõlgita automaatselt.',
@@ -1522,7 +1522,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       'explica com redactar un resum que una advocada o un advocat revisarà.',
     columnsViewAllLabel: 'Veure tots els articles',
     columnsReadMoreLabel: 'Continuar llegint',
-    columnsReviewLabel: 'Revisat per l’advocada Wei Tseng',
+    columnsReviewLabel: 'Dret de Taiwan',
     columnsOriginalLanguageBadge: 'Idioma original',
     columnsOriginalLanguageNote:
       'Els articles següents encara no estan en català. Aquesta llista roman en l’idioma original i obre aquella pàgina; el contingut no es tradueix de forma automàtica.',
@@ -1784,7 +1784,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Puc consultar en català?',
           answer:
-            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem cap intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica.',
+            'No. La consulta amb una advocada o un advocat és només en anglès, xinès (中文), japonès i coreà; no oferim intèrpret. El text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica.',
         },
         {
           question: 'Què passa si no puc fer servir cap d’aquests quatre idiomes?',
@@ -2010,7 +2010,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       ' hvernig þú setur saman samantekt sem lögmaður metur.',
     columnsViewAllLabel: 'Sjá allar greinar',
     columnsReadMoreLabel: 'Lesa áfram',
-    columnsReviewLabel: 'Yfirfarið af lögmanninum Wei Tseng',
+    columnsReviewLabel: 'Réttur Taívan',
     columnsOriginalLanguageBadge: 'Frummál',
     columnsOriginalLanguageNote:
       'Eftirfarandi greinar eru enn ekki tiltækar á íslensku. Listinn stendur á frummálinu og opnar viðkomandi tungumálssíðu; efnið er ekki þýtt sjálfkrafa.',

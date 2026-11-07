@@ -27,14 +27,14 @@ export const CRIMINAL_SERVICE_POINTS: Record<SiteLocale, string[]> = {
     "For offenses requiring a complaint, the period is six months after the person entitled to complain learns who the offender is. This is not a universal deadline for every criminal case (Code of Criminal Procedure, Article 237).",
     "For a complaint-dependent offense, withdrawal is possible before argument closes at first instance, and the person withdrawing cannot complain again. Read withdrawal language together with settlement payment terms (Article 238).",
     "A complainant seeking reconsideration of non-prosecution has ten days after receipt to submit reasons through the original prosecutor. Eligibility, exceptions and service-based calculation must be checked (Article 256).",
-    "A seized item no longer needing retention must be returned by court ruling or prosecutor’s order without waiting for the case to end. Temporary return and review of a disposition have separate requirements (Articles 142 and 416)."
+    "A seized item no longer needing retention must be returned by court ruling or prosecutor’s order without waiting for the case to end. Temporary return and challenging a disposition have separate requirements and deadlines (Articles 142 and 416)."
   ],
   "ja": [
     "取調べや通訳の準備では、証人・被疑者などの手続上の立場と、通知を出した機関を確認します。",
     "告訴を必要とする罪の告訴期間は、告訴権者が犯人を知った時から6か月です。すべての刑事事件に共通する期限ではありません（刑事訴訟法第237条）。",
     "告訴を必要とする罪では、第一審弁論終結前まで告訴を取り消せますが、取り消した人は再び告訴できません。示談金の支払条件と取消しの文言を合わせて確認します（第238条）。",
     "不起訴処分に不服がある告訴人は、処分書の受領後10日以内に原検察官を経由して再議を申し立てます。資格、例外、送達に関わる期間計算も確認します（第256条）。",
-    "留置の必要がない押収物は、事件終結前でも裁判所の決定または検察官の命令で還付する必要があります。一時的な還付と不服申立てには別の要件があります（第142・416条）。"
+    "留置の必要がない押収物は、事件終結前でも裁判所の決定または検察官の命令で還付する必要があります。一時的な還付と不服申立てには、要件と期限が別途あります（第142・416条）。"
   ]
 };
 

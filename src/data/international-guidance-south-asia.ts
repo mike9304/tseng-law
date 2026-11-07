@@ -59,7 +59,7 @@ export const bengaliGuidanceContent: GuidanceLocaleContent = {
       ' ব্যাখ্যা করে আইনজীবী যাচাই করবেন এমন সারসংক্ষেপ কীভাবে লিখবেন।',
     columnsViewAllLabel: 'সব প্রবন্ধ দেখুন',
     columnsReadMoreLabel: 'আরও পড়ুন',
-    columnsReviewLabel: 'আইনজীবী Wei Tseng কর্তৃক পরীক্ষিত',
+    columnsReviewLabel: 'তাইওয়ানের আইন',
     columnsOriginalLanguageBadge: 'মূল ভাষা',
     columnsOriginalLanguageNote:
       'নিচের প্রবন্ধগুলো এখনও বাংলায় নেই। তালিকা মূল ভাষায় থাকে এবং সংশ্লিষ্ট ভাষার পাতা খোলে; বিষয়বস্তুর স্বয়ংক্রিয় অনুবাদ হয় না।',
@@ -547,7 +547,7 @@ export const urduGuidanceContent: GuidanceLocaleContent = {
       ' بتاتا ہے کہ آپ ایسا خلاصہ کیسے لکھیں جسے کوئی وکیل جانچے۔',
     columnsViewAllLabel: 'سب مضامین دیکھیں',
     columnsReadMoreLabel: 'آگے پڑھیں',
-    columnsReviewLabel: 'وکیلہ Wei Tseng نے جانچا',
+    columnsReviewLabel: 'تائیوان کا قانون',
     columnsOriginalLanguageBadge: 'اصل زبان',
     columnsOriginalLanguageNote:
       'مندرجہ ذیل مضامین ابھی اردو میں دستیاب نہیں ہیں۔ فہرست اصل زبان میں رہتی ہے اور متعلقہ زبان کا صفحہ کھولتی ہے؛ مواد کا خودکار ترجمہ نہیں ہوتا۔',
@@ -1036,7 +1036,7 @@ export const persianGuidanceContent: GuidanceLocaleContent = {
       ' توضیح می‌دهد که خلاصه را چگونه بنویسید تا وکیل آن را بررسی کند.',
     columnsViewAllLabel: 'دیدن همهٔ نوشتارها',
     columnsReadMoreLabel: 'ادامهٔ مطلب',
-    columnsReviewLabel: 'بازبینی‌شده به‌دست وکیل Wei Tseng',
+    columnsReviewLabel: 'حقوق تایوان',
     columnsOriginalLanguageBadge: 'زبان اصلی',
     columnsOriginalLanguageNote:
       'نوشتارهای زیر هنوز به فارسی موجود نیستند. فهرست به زبان اصلی می‌ماند و صفحهٔ همان زبان را باز می‌کند؛ محتوا ترجمهٔ ماشینی نمی‌شود.',
@@ -1530,7 +1530,7 @@ export const tamilGuidanceContent: GuidanceLocaleContent = {
       ' பக்கம், ஒரு வழக்கறிஞர் பரிசீலிக்கக்கூடிய சுருக்கத்தை எப்படி எழுதுவது என்பதை விளக்குகிறது.',
     columnsViewAllLabel: 'அனைத்துக் கட்டுரைகளையும் காண்க',
     columnsReadMoreLabel: 'மேலும் படிக்க',
-    columnsReviewLabel: 'வழக்கறிஞர் Wei Tseng அவர்களால் சரிபார்க்கப்பட்டது',
+    columnsReviewLabel: 'தைவான் சட்டம்',
     columnsOriginalLanguageBadge: 'மூல மொழி',
     columnsOriginalLanguageNote:
       'பின்வரும் கட்டுரைகள் இன்னும் தமிழில் இல்லை. பட்டியல் மூல மொழியிலேயே இருக்கும்; அந்த மொழிப் பக்கத்தைத் திறக்கும். உள்ளடக்கம் தானியங்கியாக மொழிபெயர்க்கப்படாது.',

@@ -5,12 +5,43 @@ import { useEffect, useRef, useState } from 'react';
 import type { DecorativeVideoControlLabels } from './decorative-video-controls';
 import type { DecorativeVideoControlIcons } from './DecorativeAutoplayVideo';
 
+const PLAYBACK_TOOL_LABELS = {
+  ko: {
+    restart: '처음부터 재생',
+    loop: '반복 재생',
+    timeline: '재생 위치',
+    seconds: '초',
+  },
+  'zh-hant': {
+    restart: '從頭播放',
+    loop: '重複播放',
+    timeline: '影片時間',
+    seconds: '秒',
+  },
+  en: {
+    restart: 'Play from start',
+    loop: 'Loop playback',
+    timeline: 'Timeline',
+    seconds: 's',
+  },
+  ja: {
+    restart: '最初から再生',
+    loop: 'ループ再生',
+    timeline: '再生位置',
+    seconds: '秒',
+  },
+} as const;
+
+type PlaybackToolLocale = keyof typeof PLAYBACK_TOOL_LABELS;
+
 type Props = {
   mp4Src: string; webmSrc: string; mobileMp4Src: string; mobileWebmSrc: string;
   poster: string; mobilePoster: string; mobileMediaQuery: string;
   width: number; height: number; alt: string; posterAlt?: string; sizes: string;
   controlLabels: DecorativeVideoControlLabels;
   playbackTools?: boolean;
+  /** Labels for restart, loop, and seek when `playbackTools` is set. Defaults to zh-hant (RightTurnObservation). */
+  playbackToolLocale?: PlaybackToolLocale;
   describedBy?: string;
   /** Optional glyphs for the control (zh-hant: the monoline set). Without them the control shows Ⅱ ▶ as before. */
   controlIcons?: DecorativeVideoControlIcons;
@@ -76,6 +107,7 @@ export default function TrafficManualVideo(props: Props) {
     }
   };
   const label = playing ? props.controlLabels.pause : props.controlLabels.play;
+  const toolLabels = PLAYBACK_TOOL_LABELS[props.playbackToolLocale ?? 'zh-hant'];
   const restart = () => {
     if (!requested) { toggle(); return; }
     if (video.current) { video.current.currentTime = 0; void video.current.play().catch(() => setPlaying(false)); }
@@ -114,12 +146,12 @@ export default function TrafficManualVideo(props: Props) {
         <span>{label}</span>
       </button>
       {props.playbackTools ? <>
-        <button type="button" onClick={restart}>從頭播放</button>
-        <label><input type="checkbox" checked={looping} onChange={event => setLooping(event.target.checked)} /> 重複播放</label>
-        <label className="traffic-manual-tools__seek">影片時間
-          <input type="range" aria-label="影片時間" min={0} max={duration || 1} step={0.1} value={time} disabled={!requested || !duration}
+        <button type="button" onClick={restart}>{toolLabels.restart}</button>
+        <label><input type="checkbox" checked={looping} onChange={event => setLooping(event.target.checked)} aria-label={toolLabels.loop} /> {toolLabels.loop}</label>
+        <label className="traffic-manual-tools__seek">{toolLabels.timeline}
+          <input type="range" aria-label={toolLabels.timeline} min={0} max={duration || 1} step={0.1} value={time} disabled={!requested || !duration}
             onChange={event => { const next=Number(event.target.value); if(video.current) video.current.currentTime=next; setTime(next); }} />
-          <output>{Math.floor(time)} / {Math.round(duration)} 秒</output>
+          <output>{Math.floor(time)} / {Math.round(duration)} {toolLabels.seconds}</output>
         </label>
       </> : null}
       </div>

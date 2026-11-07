@@ -660,15 +660,15 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'Bài viết',
         title: 'Bài viết về pháp luật Đài Loan',
         description:
-          'Bài viết tiếng Việt về lao động, cư trú, gia đình, kinh doanh và tố tụng tại Đài Loan, dành cho người đang sinh sống, học tập và làm việc tại đây.',
+          'Bài viết về các chủ đề pháp luật Đài Loan thường gặp. Nội dung là thông tin chung tại thời điểm đăng, không thay thế ý kiến pháp lý cho vụ việc của quý vị.',
         intro:
-          'Các bài viết tiếng Việt giải thích những vấn đề pháp lý thường gặp trong công việc, gia đình và kinh doanh tại Đài Loan. Quý vị có thể tìm theo chủ đề hoặc từ khóa.',
+          'Quý vị có thể tham khảo bài viết về pháp luật Đài Loan bằng tiếng Hàn, tiếng Trung, tiếng Anh hoặc tiếng Nhật qua các danh mục dưới đây.',
         sections: [
           {
             heading: 'Bốn danh mục theo ngôn ngữ',
             paragraphs: [
               'Mục này gồm bốn liên kết: danh mục bài viết tiếng Hàn, danh mục tiếng Trung, danh mục tiếng Anh và danh mục tiếng Nhật. Mỗi liên kết ghi rõ ngôn ngữ của danh mục đó, để quý vị biết trước mình sẽ mở nội dung bằng ngôn ngữ nào.',
-              'Bốn danh mục đó là danh mục theo ngôn ngữ gốc, không phải danh sách bản dịch. Những bài đã có bằng tiếng Việt được liệt kê riêng ngay trên trang này.',
+              'Bốn danh mục đó là danh mục theo ngôn ngữ gốc, không phải danh sách bản dịch.',
             ],
           },
           {
@@ -747,7 +747,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         'menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.',
       columnsViewAllLabel: 'Lihat semua artikel',
       columnsReadMoreLabel: 'Baca selengkapnya',
-      columnsReviewLabel: 'Ditinjau oleh Advokat Wei Tseng',
+      columnsReviewLabel: 'Hukum Taiwan',
       columnsOriginalLanguageBadge: 'Bahasa asli',
       columnsOriginalLanguageNote:
         'Artikel di bawah ini belum tersedia dalam bahasa Indonesia. Daftar ini tetap dalam bahasa aslinya dan terbuka pada halaman berbahasa tersebut; isinya tidak diterjemahkan secara otomatis.',
@@ -1241,7 +1241,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ' อธิบายวิธีเขียนสรุปเรื่องเพื่อให้ทนายความพิจารณา',
       columnsViewAllLabel: 'ดูบทความทั้งหมด',
       columnsReadMoreLabel: 'อ่านต่อ',
-      columnsReviewLabel: 'ตรวจสอบโดยทนายความ Wei Tseng',
+      columnsReviewLabel: 'กฎหมายไต้หวัน',
       columnsOriginalLanguageBadge: 'ภาษาต้นฉบับ',
       columnsOriginalLanguageNote:
         'บทความด้านล่างยังไม่มีฉบับภาษาไทย รายการนี้คงไว้ตามภาษาต้นฉบับและจะเปิดหน้าในภาษานั้น เนื้อหาไม่ได้ผ่านการแปลอัตโนมัติ',
@@ -1711,7 +1711,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         viewAllLabel: 'Tingnan ang lahat',
       },
       pricing: {
-        description: 'Ipinapaliwanag ng pahinang ito ang saklaw ng gawain at kung paano itanong ang bayarin.',
+        description: 'Saklaw ng gawain at paraan ng pagtatanong tungkol sa bayarin.',
         viewAllLabel: 'Tingnan ang lahat',
       },
       faq: {
@@ -1735,7 +1735,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         'kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
-      columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',
+      columnsReviewLabel: 'Batas ng Taiwan',
       columnsOriginalLanguageBadge: 'Orihinal na wika',
       columnsOriginalLanguageNote:
         'Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinasalin.',
@@ -2229,7 +2229,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ' تشرح كيفية كتابة الملخّص ليطّلع عليه المحامي.',
       columnsViewAllLabel: 'عرض جميع المقالات',
       columnsReadMoreLabel: 'اقرأ المزيد',
-      columnsReviewLabel: 'بمراجعة المحامية Wei Tseng',
+      columnsReviewLabel: 'القانون التايواني',
       columnsOriginalLanguageBadge: 'اللغة الأصلية',
       columnsOriginalLanguageNote:
         'بعض المقالات متاحة بالعربية، وما لا نسخة عربية له يبقى بلغته الأصلية. والمقالات أدناه معروضة بلغتها الأصلية وتفتح الصفحة بتلك اللغة؛ ولا يُترجَم المحتوى ترجمة آلية.',

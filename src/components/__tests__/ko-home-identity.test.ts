@@ -32,19 +32,22 @@ describe('ko home copy provenance', () => {
     const contact = read('src/lib/consultation/public-contact.ts');
     const pricing = read('src/components/PricingCards.tsx');
     const legal = read('src/data/legal-pages.ts');
-    const site = read('src/data/site-content.ts');
 
     expect(contact).toContain('사건 또는 업무의 개요와 연락처');
     expect(inquiry).toContain('사건 또는 업무의 개요와 연락처');
     expect(contact).toContain('담당 변호사의 별도 안내 후');
     expect(inquiry).toContain('담당 변호사의 별도 안내 후');
 
-    for (const fragment of ['사건 내용을 확인한 후 견적을 안내드립니다', '사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다']) {
-      expect(pricing).toContain(fragment);
-      expect(review).toContain(fragment);
+    const pricingHomePairs: [string, string][] = [
+      ['사건 내용을 확인한 후 견적을 안내드립니다', '내용을 확인한 뒤 견적 범위를 알려 드립니다'],
+      ['사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다', '사건의 특성·복합성·긴급도에 따라 달라질 수 있습니다'],
+    ];
+    for (const [sourcePhrase, homePhrase] of pricingHomePairs) {
+      expect(pricing).toContain(sourcePhrase);
+      expect(review).toContain(homePhrase);
     }
     expect(pricing).toMatch(/price: 'NT\$ 3,000',\s*unit: '\/ 1시간'/);
-    expect(review).toContain('NT$ 3,000 / 1시간');
+    expect(review).toContain('NT$ 3,000/1시간');
 
     expect(pricing).toContain('정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다');
     expect(quote).toBe('정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.');
@@ -52,7 +55,9 @@ describe('ko home copy provenance', () => {
     expect(legal).toContain('정식 자문 또는 수임은 별도의 검토와 동의 절차가 완료된 경우에만 성립합니다.');
     expect(retainer).toContain('정식 자문 또는 수임은 별도의 검토와 동의 절차가 완료된 경우에만 성립합니다.');
     // Languages are for consultation and communication (hero subtitle), never a promise about how a matter is run.
-    expect(site).toContain('한국어·중국어·일본어·영어로 소통하며');
+    expect(siteContent.ko.hero.subtitle).toBe(
+      '한국어·중국어·일본어·영어로 대만 투자·소송·자문 문의에 답합니다.',
+    );
     expect(retainer).toContain('한국어·중국어·일본어·영어로 소통합니다');
     expect(retainer).not.toMatch(/로 진행합니다/);
   });
@@ -67,12 +72,22 @@ describe('ko home first screen and situations', () => {
 
   test('each situation names only matters the ko service descriptions name', () => {
     const services = siteContent.ko.services.items.map((item) => item.description).join('\n');
+    const formationPairs: [string, string][] = [
+      ['법인 형태 선택', '법인 형태(자회사·지사·연락사무소)를 정한 뒤'],
+      ['회사명 예비심사·예약', '회사명 예비심사·예약'],
+      ['필요 시 외국인 투자 승인', '필요한 경우 외국인 투자 승인을 신청합니다'],
+      ['업종별 허가', '실제 사업에 따른 인허가'],
+      ['상표 선등록 확인', '상표 선등록 확인'],
+    ];
+    for (const [homePhrase, sourcePhrase] of formationPairs) {
+      expect(KO_SITUATIONS[0].text).toContain(homePhrase);
+      expect(services).toContain(sourcePhrase);
+    }
     const terms = [
-      ['법인 형태 선택', '투자심의위원회 승인', '업종별 인허가', '상표 선등록 확인'],
       ['계약 분쟁', '손해배상', '소비자 피해', '수사 대응'],
       ['이혼', '재산분할', '친권', '상속'],
     ];
-    KO_SITUATIONS.forEach((situation, index) => {
+    KO_SITUATIONS.slice(1).forEach((situation, index) => {
       for (const term of terms[index]) {
         expect(situation.text).toContain(term);
         expect(services).toContain(term);
@@ -80,7 +95,7 @@ describe('ko home first screen and situations', () => {
     });
     // Pinned verbatim: a word added to a situation must come through review here, next to its source terms above.
     expect(KO_SITUATIONS.map((situation) => situation.text)).toEqual([
-      '법인 형태 선택부터 투자심의위원회 승인, 업종별 인허가, 상표 선등록 확인까지.',
+      '법인 형태 선택부터 회사명 예비심사·예약, 필요 시 외국인 투자 승인, 업종별 허가와 상표 선등록 확인까지.',
       '계약 분쟁과 손해배상, 소비자 피해, 형사 절차의 수사 대응.',
       '이혼과 재산분할, 친권, 상속.',
     ]);

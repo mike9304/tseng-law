@@ -101,7 +101,7 @@ describe('Japanese team content', () => {
     expect(japanese.description).toContain('曾雋崴弁護士が率いるチーム');
     expect(paralegal?.role).toBe('パラリーガル');
     expect(japanese.story[1]).toBe(
-      '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
+      '台湾での投資・会社設立、紛争に関する法律実務を担当します。会計・税務の確認が必要な案件では、提携会計士と連携します。',
     );
     // WO-X1 (J04): the lead card states existing overseas-company advisory
     // facts instead of the gym case (still published on the profile page).
@@ -142,7 +142,7 @@ describe('Japanese team content', () => {
       education: ['東海大學法律學系學士'],
     });
     expect(teamContent.en.story[1]).toBe(
-      'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.',
+      'We advise on Taiwan investment, company formation, and disputes. Where accounting or tax review is needed, we work with external accountants.',
     );
   });
 });

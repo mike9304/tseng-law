@@ -24,14 +24,14 @@ const HEADING: Record<string, string> = {
   en: 'Related reading',
   ja: 'あわせて読みたい記事',
   'zh-hant': '延伸閱讀',
-  'zh-hans': '为您推荐',
-  vi: 'Gợi ý cho bạn',
-  id: 'Rekomendasi untuk Anda',
-  th: 'แนะนำสำหรับคุณ',
-  fil: 'Inirerekomenda para sa iyo',
-  de: 'Empfehlungen für Sie',
-  es: 'Recomendado para usted',
-  fr: 'Recommandé pour vous',
+  'zh-hans': '延伸阅读',
+  vi: 'Bài đọc liên quan',
+  id: 'Bacaan terkait',
+  th: 'บทความที่เกี่ยวข้อง',
+  fil: 'Kaugnay na babasahin',
+  de: 'Weiterführende Artikel',
+  es: 'Lecturas relacionadas',
+  fr: 'Lectures connexes',
 };
 
 /**

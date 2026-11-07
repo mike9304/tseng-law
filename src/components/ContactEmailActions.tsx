@@ -17,7 +17,7 @@ import styles from './ContactEditorial.module.css';
 
 const INITIAL_INQUIRY_PREP: Record<SiteLocale, string> = {
   ko: '초기 문의에는 사건 개요와 연락처만 보내 주세요. 민감정보는 제외해 주세요.',
-  en: 'For an initial inquiry, send a brief overview of the issue, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Please exclude sensitive information.',
+  en: 'For a first inquiry, send a brief case summary, any Taiwan connection, deadlines, and how to reach you. Time zone and how you found us are optional. Do not include sensitive information.',
   ja: '初回のお問い合わせでは、案件の概要と連絡先のみをお送りください。機微情報は記載しないでください。',
   'zh-hant': '初次詢問請只提供案件概要與聯絡方式，請勿附上敏感資訊。',
 };

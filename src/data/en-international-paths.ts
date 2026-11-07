@@ -1,10 +1,10 @@
 /** EN-INTERNATIONAL-v1 path labels. Local unpublished candidate; not a live-traffic claim. */
 
 export const EN_HOME_HERO_TITLE =
-  'Taiwan Legal Support for International Businesses and Individuals';
+  'Taiwan law for international businesses and individuals';
 
 export const EN_HOME_HERO_LEAD =
-  'Explore legal assistance for entering the Taiwan market, resolving business disputes, and handling civil claims. Choose the topic that fits your situation, or contact the firm for an initial discussion.';
+  'Company formation, business disputes, and civil claims in Taiwan. Pick the path that fits your situation, or email the firm for an initial discussion.';
 
 export const EN_COMPANY_SETUP_PATH = '/en/taiwan-company-setup-lawyer';
 export const EN_COMPANY_GUIDE_PATH = '/en/guides/taiwan-company-setup';
@@ -16,9 +16,9 @@ export const EN_CRIMINAL_PATH = '/en/services/criminal';
 export const EN_FAMILY_PATH = '/en/services/family';
 
 export const EN_PATH_LABELS = {
-  companySetup: 'Set Up a Company in Taiwan',
-  dispute: 'Resolve a Dispute in Taiwan',
-  companyGuide: 'Read the Company Setup Guide',
+  companySetup: 'Taiwan company formation',
+  dispute: 'Discuss a Taiwan dispute',
+  companyGuide: 'Company setup guide',
 } as const;
 
 export const EN_DEBT_RECOVERY_SLUG = 'taiwan-debt-recovery-lawyer';

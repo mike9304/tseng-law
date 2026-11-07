@@ -51,7 +51,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     faq: {
       label: 'FAQ',
       title: '자주 묻는 질문',
-      description: '상담 절차 관련 FAQ를 안내합니다.'
+      description: '법인 설립, 노동, 상담 절차 등 자주 받는 질문과 답변입니다.'
     },
     contact: {
       label: 'CONTACT',
@@ -187,7 +187,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     services: {
       label: 'SERVICES',
       title: '取扱業務',
-      description: '日系企業をはじめとする海外企業・在台日本人向けに、台湾投資・会社設立、民事訴訟、家事事件、労働問題、刑事事件、知的財産・金融紛争まで、台湾法務の主要分野を日本語で体系的にご案内します。'
+      description: '台湾での投資・会社設立、民事・家事・労働・刑事、知的財産・金融紛争など、主要な台湾法務を日本語で案内します。'
     },
     lawyers: {
       label: 'OUR TEAM',
@@ -197,7 +197,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     insights: {
       label: 'INSIGHTS',
       title: 'コラム',
-      description: '台湾進出を検討する日系企業や在台日本人向けに、会社設立、訴訟、労務、家事事件など台湾法務に関する実務コラムをカテゴリ別にまとめてご覧いただけます。'
+      description: '会社設立、訴訟、労務、家事など台湾法務のコラムをテーマ別に掲載しています。'
     },
     videos: {
       label: 'VIDEOS',
@@ -207,7 +207,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     faq: {
       label: 'FAQ',
       title: 'よくある質問',
-      description: '台湾での会社設立、労働問題、交通事故、離婚・親権、刑事事件、相談の流れや費用など、日本語でよくいただくご質問への回答をまとめてご案内しています。'
+      description: '会社設立、労働、交通事故、離婚・親権、刑事、相談の流れなど、よくある質問への回答です。'
     },
     contact: {
       label: 'CONTACT',

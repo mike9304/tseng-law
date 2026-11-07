@@ -130,7 +130,7 @@ describe('Japanese criminal service-detail route', () => {
     for (const label of [
       '← サービス一覧へ',
       '主なポイント',
-      'この分野の担当弁護士',
+      '担当弁護士',
       '法律相談',
       `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
       'お問い合わせ',

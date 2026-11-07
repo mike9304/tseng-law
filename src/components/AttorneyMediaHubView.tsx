@@ -14,12 +14,12 @@ const mediaHubLabels = {
     label: 'PUBLIC PROFILE',
     title: '증준외 변호사 프로필과 공개 채널',
     description:
-      '공식 프로필, 외부 소개, YouTube, 블로그와 주요 법률 주제를 한곳에 정리했습니다.',
+      '증준외 변호사의 공식 프로필, 외부 소개, YouTube, 블로그와 주요 법률 주제 링크입니다.',
     stats: {
       languages: '상담 언어',
       services: '핵심 업무분야',
       columns: '공개 칼럼',
-      channels: '검증 가능한 채널',
+      channels: '공식·외부 채널',
     },
     channels: '공식 프로필 및 채널',
     topics: '주요 설명 주제',
@@ -33,7 +33,7 @@ const mediaHubLabels = {
     description:
       '彙整曾雋崴律師的官方簡介、外部介紹、YouTube、部落格及主要法律主題。',
     stats: {
-      languages: '服務語言',
+      languages: '諮詢語言',
       services: '核心服務領域',
       columns: '公開專欄',
       channels: '可查證頻道',
@@ -48,12 +48,12 @@ const mediaHubLabels = {
     label: 'PUBLIC PROFILE',
     title: 'Attorney Wei Tseng profile, channels, and focus topics',
     description:
-      'This page brings together Attorney Wei Tseng’s official profiles, external references, public channels, and core Taiwan-law topics.',
+      'Attorney Wei Tseng’s official profiles, external references, public channels, and core Taiwan-law topics.',
     stats: {
       languages: 'Working Languages',
       services: 'Core Practice Areas',
       columns: 'Published Columns',
-      channels: 'Verified Channels',
+      channels: 'Official and External Channels',
     },
     channels: 'Official Profiles and Channels',
     topics: 'Focus Topics',

@@ -16,7 +16,7 @@ interface CarouselPost {
 }
 
 const copy = {
-  ko: { label: '최신 칼럼', title: '호정칼럼', desc: '대만 법률 실무 정보를 칼럼으로 만나보세요.', viewAll: '모든 칼럼 보기' },
+  ko: { label: '최신 칼럼', title: '호정칼럼', desc: '대만 법률 실무를 다룬 칼럼입니다.', viewAll: '모든 칼럼 보기' },
   'zh-hant': { label: '最新專欄', title: '昊鼎專欄', desc: '透過專欄了解台灣法律實務資訊。', viewAll: '查看所有專欄' },
   en: { label: 'LATEST COLUMNS', title: 'Hovering Columns', desc: 'Read practical legal insights on Taiwan matters.', viewAll: 'View all columns' }
 } as const;

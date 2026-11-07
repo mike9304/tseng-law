@@ -58,7 +58,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' vysvetľuje, ako zostaviť zhrnutie, ktoré advokátka alebo advokát posúdi.',
     columnsViewAllLabel: 'Zobraziť všetky príspevky',
     columnsReadMoreLabel: 'Čítať ďalej',
-    columnsReviewLabel: 'Posúdila advokátka Wei Tseng',
+    columnsReviewLabel: 'Taiwanské právo',
     columnsOriginalLanguageBadge: 'Pôvodný jazyk',
     columnsOriginalLanguageNote:
       'Nasledujúce príspevky zatiaľ nie sú k dispozícii v slovenčine. Zoznam ostáva v pôvodnom jazyku a otvorí príslušnú jazykovú stránku; obsah sa automaticky neprekladá.',
@@ -546,7 +546,7 @@ export const bulgarianGuidanceContent: GuidanceLocaleContent = {
       ' обяснява как да съставите кратко изложение, което адвокатка или адвокат ще прегледа.',
     columnsViewAllLabel: 'Вижте всички статии',
     columnsReadMoreLabel: 'Прочетете още',
-    columnsReviewLabel: 'Проверено от адвокатка Wei Tseng (曾雋崴)',
+    columnsReviewLabel: 'Тайванско право',
     columnsOriginalLanguageBadge: 'Език на оригинала',
     columnsOriginalLanguageNote:
       'Следните статии още не са подготвени на български. Списъкът остава на езика на оригинала и отваря съответната езикова страница; съдържанието не се превежда автоматично.',
@@ -1033,7 +1033,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' objašnjava kako sastaviti sažetak koji odvjetnica ili odvjetnik pregledava.',
     columnsViewAllLabel: 'Prikaži sve članke',
     columnsReadMoreLabel: 'Čitajte dalje',
-    columnsReviewLabel: 'Pregledala odvjetnica Wei Tseng',
+    columnsReviewLabel: 'Tajvansko pravo',
     columnsOriginalLanguageBadge: 'Izvorni jezik',
     columnsOriginalLanguageNote:
       'Sljedeći članci još nisu dostupni na hrvatskom. Popis ostaje na izvornom jeziku i otvara odgovarajuću jezičnu stranicu; sadržaj se ne prevodi automatski.',
@@ -1520,7 +1520,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' objašnjava kako sastaviti sažetak koji advokatkinja ili advokat pregleda.',
     columnsViewAllLabel: 'Pogledajte sve članke',
     columnsReadMoreLabel: 'Čitajte dalje',
-    columnsReviewLabel: 'Pregledala advokatkinja Wei Tseng',
+    columnsReviewLabel: 'Tajvansko pravo',
     columnsOriginalLanguageBadge: 'Izvorni jezik',
     columnsOriginalLanguageNote:
       'Sledeći članci još nisu dostupni na srpskom. Spisak ostaje na izvornom jeziku i otvara odgovarajuću jezičku stranicu; sadržaj se automatski ne prevodi.',
@@ -2007,7 +2007,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' pojasnjuje, kako sestaviti povzetek, ki ga bo ocenila odvetnica ali odvetnik.',
     columnsViewAllLabel: 'Oglejte si vse članke',
     columnsReadMoreLabel: 'Preberite več',
-    columnsReviewLabel: 'Pregledala odvetnica Wei Tseng',
+    columnsReviewLabel: 'Tajvansko pravo',
     columnsOriginalLanguageBadge: 'Izvirni jezik',
     columnsOriginalLanguageNote:
       'Naslednji članki še niso na voljo v slovenščini. Seznam ostane v izvirnem jeziku in odpre ustrezno jezikovno stran; vsebina se ne prevaja samodejno.',

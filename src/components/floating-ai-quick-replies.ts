@@ -21,7 +21,7 @@ const KO_REPLIES: QuickReply[] = [
       '대만 회사설립은 일반적으로 아래 10단계로 진행됩니다.\n\n' +
       '1. 회사명 검색·신청 (중국어 명칭, 경제부 상사사 등기처)\n' +
       '2. 위임장 인증·공증\n' +
-      '3. 경제부 투자심의위원회(投資審議司)에 외국인 투자 신청\n' +
+      '3. 해당 시 경제부 투자심의위원회(投資審議司)에 외국인 투자 승인 신청\n' +
       '4. 회사 예비계좌 개설\n' +
       '5. 자본금 송금 (해외직접투자신고 필요)\n' +
       '6. 자본금 감사 (회계사)\n' +
@@ -36,14 +36,14 @@ const KO_REPLIES: QuickReply[] = [
     label: '🚗 교통사고 대응',
     question: '대만에서 교통사고가 났는데 어떻게 해야 하나요?',
     answer:
-      '대만 교통사고 발생 시 가장 중요한 5가지를 순서대로 안내드립니다.\n\n' +
+      '대만에서 교통사고가 났을 때 우선할 일은 다음과 같습니다.\n\n' +
       '1. 안전 확보·부상 확인 — 2차 사고 방지가 최우선입니다.\n' +
       '2. 경찰 신고 (110) — 현장 정리 및 사고 조서 작성. 분쟁 가능성이 있다면 반드시 신고해 주세요.\n' +
       '3. 증거 보전 — 차량 위치, 파손 사진·영상, 상대방 신분·차량등록증, 목격자 연락처, 블랙박스를 모두 확보합니다.\n' +
       '4. 의료기록 — 통증이 미미해도 24시간 내에 진료를 받아 진료 기록을 남겨야 합니다.\n' +
       '5. 보험 통지 — 가해/피해 양측 모두 즉시 보험사에 통지합니다.\n\n' +
       '대만에서 과실치상죄(過失致傷)는 6개월 내에 형사 고소를 해야 하며, 민사 손해배상 청구는 사고일로부터 2년이 시효입니다.\n\n' +
-      '사고가 방금 발생한 상황이라면 상담 접수하기 버튼으로 사건 요약과 연락처를 남겨 주세요. 변호사가 우선 검토해 드립니다.',
+      '사고 직후라면 상담 접수하기 버튼으로 사건 요약과 연락처를 남겨 주세요.',
   },
   {
     label: '⚖️ 노동·해고',
@@ -116,7 +116,7 @@ const ZH_REPLIES: QuickReply[] = [
       '台灣公司設立通常包含以下 10 個步驟：\n\n' +
       '1. 公司名稱預查\n' +
       '2. 委任書認證\n' +
-      '3. 向經濟部投資審議司申請外國人投資\n' +
+      '3. 依法須核准時，向經濟部投資審議司申請外國人投資\n' +
       '4. 開立籌備處帳戶\n' +
       '5. 匯入資本額\n' +
       '6. 會計師查核資本額\n' +
@@ -160,7 +160,7 @@ const EN_REPLIES: QuickReply[] = [
       'Setting up a company in Taiwan typically follows these 10 steps:\n\n' +
       '1. Company name search and reservation\n' +
       '2. Power of attorney authentication\n' +
-      '3. Foreign investment approval (Investment Review Office)\n' +
+      '3. Foreign investment approval, if required (Investment Review Office)\n' +
       '4. Preparatory bank account\n' +
       '5. Capital remittance\n' +
       '6. Capital verification by CPA\n' +
@@ -272,8 +272,8 @@ const FOLLOW_UP_MAP_KO: Record<FollowUpKey, FollowUpSuggestion[]> = {
     { label: '이메일 상담', message: '변호사에게 이메일 상담을 신청하려면 어떤 내용을 적어야 하나요?' },
   ],
   unknown: [
-    { label: '질문 예시', message: '어떤 유형의 질문에 AI가 먼저 답해 줄 수 있나요?' },
-    { label: '사람 상담 연결', message: '지금 바로 변호사와 직접 상담하려면 어떻게 해야 하나요?' },
+    { label: '주제 예시', message: '어떤 법률 주제부터 질문하면 좋을까요?' },
+    { label: '이메일 상담', message: '변호사에게 이메일 상담을 신청하려면 무엇을 적으면 되나요?' },
   ],
 };
 
@@ -324,8 +324,8 @@ const FOLLOW_UP_MAP_ZH: Record<FollowUpKey, FollowUpSuggestion[]> = {
     { label: 'Email 諮詢', message: '寄信申請律師諮詢時，應該提供哪些資料？' },
   ],
   unknown: [
-    { label: '可以問什麼', message: 'AI 可以先回答哪些類型的問題？' },
-    { label: '直接諮詢律師', message: '想現在就直接與律師討論，該怎麼做？' },
+    { label: '主題範例', message: '可以先從哪些法律主題問起？' },
+    { label: 'Email 諮詢', message: '要用 Email 申請律師諮詢，應提供哪些資料？' },
   ],
 };
 
@@ -376,8 +376,8 @@ const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
     { label: 'Email consultation', message: 'What information should I include when requesting a consultation by email?' },
   ],
   unknown: [
-    { label: 'Example questions', message: 'What kinds of questions can the AI answer first?' },
-    { label: 'Speak to a lawyer', message: 'How can I speak to a lawyer directly right now?' },
+    { label: 'Topic examples', message: 'Which legal topics can I start with here?' },
+    { label: 'Email consultation', message: 'How do I request a lawyer consultation by email?' },
   ],
 };
 

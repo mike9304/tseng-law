@@ -1,0 +1,317 @@
+{
+  "generatedAt": "2026-11-07T12:28:08.761980+00:00",
+  "worker": "composer-2.5-builder-public-copy-apply",
+  "dataRoot": "/Users/son7/tseng-site-copy-audit-20261107/build-data",
+  "repoNativeSync": {
+    "file": "src/data/faq-content.ts",
+    "locale": "zh-hant",
+    "itemCount": 13
+  },
+  "officialSourceLedger": [
+    "reviews/source-precedence-inventory.json",
+    "reviews/zh-home-faq-independent.md",
+    "reviews/published-legal-copy-independent.md",
+    "reviews/source-precedence.md"
+  ],
+  "inventorySha256": "2e3bbfe6b9cdcfe6f00f3871a4b6aa3c1a283e8a7e5b0d6a6362d7daea3d137b",
+  "appliedPatchCount": 21,
+  "appliedPatches": [
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/102/content/text",
+      "nodeId": "home-faq-item-0-answer",
+      "route": "/zh-hant",
+      "oldValue": "一般流程為：①投資許可申請 → ②公司名稱預查 → ③資本額匯入及審計報告 → ④公司登記 → ⑤營業登記 → ⑥銀行開戶。依產業、資本規模及股東組成，流程可能有所不同，事前規劃非常重要。",
+      "newValue": "一般先辦理公司名稱及所營事業預查；涉及僑外投資時，再依適用規定申請投資核准。接著開立公司籌備處帳戶、匯入資本，辦理適用的投資額審定及會計師資本額查核，再辦理公司登記，並配合完成稅籍及正式帳戶相關手續。特許行業另有許可要求，實際程序須依股東身分與營業項目確認。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/105/content/text",
+      "nodeId": "home-faq-item-1-answer",
+      "route": "/zh-hant",
+      "oldValue": "子公司（有限公司）是獨立的台灣法人，可自主經營；分公司則為母公司的延伸，須設置營運資金但由母公司直接負責。稅務處理、業務範圍及未來規劃各有不同，建議透過諮詢決定最適方案。",
+      "newValue": "在台子公司是另行設立的法人，常見形式包括有限公司與股份有限公司；外國公司的在台分公司則是其分支機構，不是另一個法人，責任由外國本公司承擔。選擇時可比較責任範圍、稅務、資金安排與日後營運計畫。外國公司設立在台分公司，另須撥付專用營運資金。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/108/content/text",
+      "nodeId": "home-faq-item-2-answer",
+      "route": "/zh-hant",
+      "oldValue": "若不再經營，可透過解散清算程序將剩餘資產匯回本國。投資許可撤銷、稅務清算、銀行帳戶結清等有既定順序，建議由專業人士協助辦理。",
+      "newValue": "投入公司的資金不能在設立後任意取回。退出投資可依情況採股權轉讓、減資或解散清算等方式；若公司不再經營，通常須經清算，清償債務並處理稅務後，才能分配剩餘財產。外國投資人還須依適用規定辦理投資及款項匯出手續，所需文件會因退出方式而不同。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/113/content/text",
+      "nodeId": "home-faq-item-4-question-text",
+      "route": "/zh-hant",
+      "oldValue": "在台灣資遣員工一定要付資遣費嗎？",
+      "newValue": "在台灣終止勞動契約，一定要給付資遣費嗎？",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/114/content/text",
+      "nodeId": "home-faq-item-4-answer",
+      "route": "/zh-hant",
+      "oldValue": "依勞動基準法，資遣時原則上需支付資遣費。但即使是自願離職，若雇主有可歸責事由（如欠薪、違約等），勞工仍可請求資遣費，因此需事先進行法律檢視。",
+      "newValue": "不一定。雇主因歇業、業務緊縮等法定事由資遣員工時，原則上要給付；勞工因欠薪等事由依《勞動基準法》第14條合法終止契約，也可請求資遣費。一般自願離職，或雇主依第12條合法解僱，則不會當然產生資遣費。金額與給付期限仍須依終止事由、年資及適用的新舊制確認。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/117/content/text",
+      "nodeId": "home-faq-item-5-answer",
+      "route": "/zh-hant",
+      "oldValue": "台灣法院會綜合考量①教育訓練費用的合理性、②約定期間的適當性、③違約金的比例性來判斷效力。並非當然有效，約定書應在符合法律要件下設計。",
+      "newValue": "要先看是否符合《勞動基準法》第15條之1：雇主須為勞工提供專業技術培訓並負擔費用，或為最低服務年限約定提供合理補償。即使符合其中一項，約定仍須在合理範圍內，並考量培訓期間及成本、人力替補可能性、補償內容等因素。若契約因不可歸責於勞工的原因而提前終止，勞工不負違反最低服務年限約定或返還訓練費用的責任。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/120/content/text",
+      "nodeId": "home-faq-item-6-answer",
+      "route": "/zh-hant",
+      "oldValue": "首先在現場報警取得事故報告，並至醫療機構取得診斷證明。之後依序進行過失比例認定、保險理賠、和解或訴訟。超車事故等過失判斷複雜的案件，建議尋求專業協助。",
+      "newValue": "先確保現場安全，有人受傷時優先聯絡119救護，並撥110報警。在安全情況下保留照片、行車紀錄器影像及目擊者資料，儘速通知保險公司；受傷者應就醫並保存診斷證明與費用單據。事故資料可事後向警方申請，再依證據與保險內容處理責任、理賠及和解；有爭議時可考慮調解或訴訟。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/122/content/text",
+      "nodeId": "home-faq-item-7-question-text",
+      "route": "/zh-hant",
+      "oldValue": "在健身房或場所設施受傷，可以請求損害賠償嗎？",
+      "newValue": "在健身房或其他場所受傷，可以請求損害賠償嗎？",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/123/content/text",
+      "nodeId": "home-faq-item-7-answer",
+      "route": "/zh-hant",
+      "oldValue": "若能證明設施管理者違反安全管理義務，即可請求損害賠償。消費者保護法、民法侵權行為等多項法律依據皆可能適用，蒐集證據（監視器畫面、診斷書、照片等）是關鍵。",
+      "newValue": "有可能，但須確認事故原因、損害及兩者的關聯。若設施或服務欠缺應有的安全性，或經營者、管理者有過失，可能依《消費者保護法》或民法請求賠償。請保留現場照片、監視器影像、診斷證明書及醫療費用單據，供判斷責任與賠償範圍。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/126/content/text",
+      "nodeId": "home-faq-item-8-answer",
+      "route": "/zh-hant",
+      "oldValue": "台灣離婚分為①協議離婚（雙方合意＋法院公證）與②裁判離婚（調解→訴訟）。韓台跨國離婚涉及準據法、管轄法院、財產分割及親權等問題，建議諮詢熟悉兩國法律的律師。",
+      "newValue": "須先確認離婚應適用哪一國法律；若向台灣法院提出請求，還須確認法院有無管轄權。適用台灣民法時，協議離婚須有書面、二人以上證人簽名，並向戶政機關辦理登記，並非必須經法院公證。另可透過法院調解、和解或判決離婚。跨國案件還須分別處理夫妻財產、未成年子女安排，以及另一國的承認與登記。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/129/content/text",
+      "nodeId": "home-faq-item-9-answer",
+      "route": "/zh-hant",
+      "oldValue": "台灣法院以子女最佳利益為原則，綜合考量養育環境、父母經濟能力、子女意願等因素。跨國案件還須適用國際私法中的慣常居所等原則。",
+      "newValue": "適用台灣法時，離婚父母可先協議由一方或雙方共同行使、負擔未成年子女的權利義務。協議不成或協議不利於子女時，法院會依子女最佳利益處理，考量照顧情形、親子關係、子女意願及父母的生活狀況等。涉外案件還須分別確認法院管轄與準據法；父母子女間的法律關係，原則上依子女的本國法。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/131/content/text",
+      "nodeId": "home-faq-item-10-question-text",
+      "route": "/zh-hant",
+      "oldValue": "在台灣被牽涉刑事案件該怎麼辦？",
+      "newValue": "在台灣涉及刑事案件，該怎麼辦？",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/132/content/text",
+      "nodeId": "home-faq-item-10-answer",
+      "route": "/zh-hant",
+      "oldValue": "偵查階段即可委任律師陪偵。了解警詢時的陳述權、緘默權等基本權利，並在初期建立法律策略，對結果有重大影響。外國人另需注意限制出境、羈押等議題。",
+      "newValue": "收到通知後，先確認應訊身分、時間與地點。若是被告或犯罪嫌疑人，可在警詢或偵查階段委任辯護律師，並依法行使緘默權、請求調查有利證據；語言不通時，應由通譯協助。若已遭逮捕、羈押或限制出境，須另行確認救濟程序及期限。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/134/content/text",
+      "nodeId": "home-faq-item-11-question-text",
+      "route": "/zh-hant",
+      "oldValue": "諮詢方式如何進行？",
+      "newValue": "有哪些諮詢方式？",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/135/content/text",
+      "nodeId": "home-faq-item-11-answer",
+      "route": "/zh-hant",
+      "oldValue": "可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語與中文皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。",
+      "newValue": "可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。可使用中文、韓文、日文或英文，須事先預約，以一小時為單位。諮詢前可依律師指示準備相關資料。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/137/content/text",
+      "nodeId": "home-faq-item-12-question-text",
+      "route": "/zh-hant",
+      "oldValue": "物流業、化妝品等特殊產業也能設立公司嗎？",
+      "newValue": "物流業、化粧品等特殊產業也能設立公司嗎？",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/138/content/text",
+      "nodeId": "home-faq-item-12-answer",
+      "route": "/zh-hant",
+      "oldValue": "可以，但物流業需取得運輸許可，化妝品須完成 PIF（產品資訊檔案）登錄及 FDA 備查等產業別額外許可。事前掌握產業法規並與設立程序同步進行，可節省時間與成本。",
+      "newValue": "可申請設立，但須依實際營業項目確認資格與許可。例如經營汽車貨運，須取得籌備核准，並在領得營業執照後營業；外國投資人另須確認投資限制。化粧品製造或輸入業者，須在適用產品供應、販售、贈送、公開陳列或提供試用前完成產品登錄，並自行建立、更新及保存產品資訊檔案（PIF）供查核。免辦工廠登記的製造場所所生產的固態手工香皂，另有排除規定。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/351/content/text",
+      "nodeId": "home-attorney-intro-1",
+      "route": "/zh-hant",
+      "oldValue": "專精企業與個人案件，提供韓文與日文法律溝通。",
+      "newValue": "辦理企業與個人法律事務，可使用中文、韓文、日文或英文諮詢。",
+      "baselineWholeFileSha256": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+      "resultingWholeFileSha256": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+      "rootApprovalSource": "reviews/zh-home-faq-independent.md (root-approved; item11 last sentence: 諮詢前可依律師指示準備相關資料。)",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/site.json",
+      "jsonPointer": "/sourceCollectionOverrides/serviceAreas/0/intro/ko",
+      "nodeId": null,
+      "route": "/ko/services/family",
+      "oldValue": "한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.",
+      "newValue": "법무법인 호정은 이혼·재산분할·친권·상속 등 가사 사건에서 대만 가사소송법과 국제사법을 함께 검토해 한국인 의뢰인의 사안에 맞는 절차와 전략을 정리합니다.",
+      "baselineWholeFileSha256": "2f561432465c587c5c8e90bc5f03f4b1178c65306afeb2b523e41f9a62a797fe",
+      "resultingWholeFileSha256": "744028de57eb1c909b492b17cfdb11abae17b593a6e023b3312462f375e94848",
+      "rootApprovalSource": "public-copy-data-patch.proposed.json + src/data/service-details.ts family.ko intro",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1779434820423-15.published.json",
+      "jsonPointer": "/document/nodes/23/content/text",
+      "nodeId": "page-privacy-section-1-paragraph-0",
+      "route": "/ko/privacy",
+      "oldValue": "수집한 정보는 상담 요청 확인, 회신, 예약 조율, 사건 적합성 검토, 웹사이트 품질 개선, 보안 유지 목적에 한해 사용합니다.",
+      "newValue": "수집한 정보는 상담 요청 확인, 회신, 예약 조율, 사건을 맡을 수 있는지 검토, 웹사이트 품질 개선, 보안 유지 목적에 한해 사용합니다.",
+      "baselineWholeFileSha256": "af5675647327dea3c13ecd65a70ef0238596a005790756b00cc4a52f5c71c970",
+      "resultingWholeFileSha256": "9114ff96b73bc89f141582d15980fc427a3cdc91c0061b5853a66fc1aac48d78",
+      "rootApprovalSource": "reviews/published-legal-copy-independent.md §A",
+      "status": "APPLIED_ISOLATED_ONLY"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212876102-11.published.json",
+      "jsonPointer": "/document/nodes/28/content/text",
+      "nodeId": "page-disclaimer-section-2-paragraph-0",
+      "route": "/zh-hant/disclaimer",
+      "oldValue": "本站提供之外部連結僅為便利性用途，對第三方內容之正確性或即時性不負保證責任。",
+      "newValue": "本站提供之外部連結僅為方便讀者查閱，對第三方內容之正確性或即時性不負保證責任。",
+      "baselineWholeFileSha256": "2dcf0ccb272a9e85b19b271f3a6defb87f8876be0dcd40ff94959dc32630e9a1",
+      "resultingWholeFileSha256": "c9d040bc146ba3ad255a68adde2148687b033860fd1f8161df40cc2b9d275135",
+      "rootApprovalSource": "reviews/published-legal-copy-independent.md §B",
+      "status": "APPLIED_ISOLATED_ONLY"
+    }
+  ],
+  "unchangedEvidence": [
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/site.json",
+      "jsonPointer": "/sourceCollectionOverrides/serviceAreas/0/title/ko",
+      "route": "/ko/services/family",
+      "value": "가사소송",
+      "reason": "Matches canonical service-details.ts family.ko title (no drift)"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/site.json",
+      "jsonPointer": "/sourceCollectionOverrides/serviceAreas/0/subtitle/ko",
+      "route": "/ko/services/family",
+      "value": "이혼, 재산분할, 친권, 상속 등 가사 사건 전략적 대응",
+      "reason": "Matches canonical service-details.ts family.ko subtitle"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/110/content/text",
+      "nodeId": "home-faq-item-3-question-text",
+      "route": "/zh-hant",
+      "value": "沒有辦公室也能設立公司嗎？",
+      "reason": "Item 3 KEEP"
+    },
+    {
+      "relativeDataPath": "builder-site/tseng-law-main-site/pages/page-1780212874795-1.published.json",
+      "jsonPointer": "/document/nodes/111/content/text",
+      "nodeId": "home-faq-item-3-answer",
+      "route": "/zh-hant",
+      "value": "公司登記需要營業地址。除自行承租辦公室外，也可使用共享辦公空間或商業登記地址，但依產業別可能需要實際營業場所。",
+      "reason": "Item 3 KEEP"
+    }
+  ],
+  "inputHashesBefore": {
+    "page-1780212874795-1": "2a604fac4a22477b96428860365a4cdf336e6c2a12b19d120c02066ec6ce2d75",
+    "site.json": "2f561432465c587c5c8e90bc5f03f4b1178c65306afeb2b523e41f9a62a797fe",
+    "page-1779434820423-15": "af5675647327dea3c13ecd65a70ef0238596a005790756b00cc4a52f5c71c970",
+    "page-1780212876102-11": "2dcf0ccb272a9e85b19b271f3a6defb87f8876be0dcd40ff94959dc32630e9a1"
+  },
+  "inputHashesAfter": {
+    "page-1780212874795-1": "a54a073be4d6013b6c741dd3fb51651b262b05d925f832c7255c56c451907eaa",
+    "site.json": "744028de57eb1c909b492b17cfdb11abae17b593a6e023b3312462f375e94848",
+    "page-1779434820423-15": "9114ff96b73bc89f141582d15980fc427a3cdc91c0061b5853a66fc1aac48d78",
+    "page-1780212876102-11": "c9d040bc146ba3ad255a68adde2148687b033860fd1f8161df40cc2b9d275135"
+  },
+  "faqNativeBuilderSyncMismatches": []
+}

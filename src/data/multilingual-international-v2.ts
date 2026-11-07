@@ -40,7 +40,7 @@ export const CORE_HOME_PATHS: Record<SiteLocale, CoreHomePaths> = {
     companySetup: { label: EN_PATH_LABELS.companySetup, href: EN_COMPANY_SETUP_PATH },
     dispute: { label: EN_PATH_LABELS.dispute, href: EN_LITIGATION_PATH },
     guide: { label: EN_PATH_LABELS.companyGuide, href: EN_COMPANY_GUIDE_PATH },
-    ariaLabel: 'Company setup and dispute paths',
+    ariaLabel: 'Taiwan company formation and disputes',
   },
   ja: {
     companySetup: {
@@ -70,7 +70,7 @@ export const CORE_HOME_PATHS: Record<SiteLocale, CoreHomePaths> = {
       label: '대만 회사설립 가이드 읽기',
       href: '/ko/guides/taiwan-company-setup',
     },
-    ariaLabel: '회사설립과 분쟁 경로',
+    ariaLabel: '대만 회사설립·분쟁 안내',
   },
   'zh-hant': {
     companySetup: {
@@ -85,7 +85,7 @@ export const CORE_HOME_PATHS: Record<SiteLocale, CoreHomePaths> = {
       label: '閱讀台灣公司設立指南',
       href: '/zh-hant/guides/taiwan-company-setup',
     },
-    ariaLabel: '公司設立與爭議路徑',
+    ariaLabel: '台灣公司設立與爭議',
   },
 };
 
@@ -616,8 +616,8 @@ export const LITIGATION_SITUATION_NAV: Record<
   }
 > = {
   en: {
-    aria: 'Start with the situation closest to yours',
-    lead: 'Start with the situation closest to yours',
+    aria: 'Situation categories',
+    lead: 'Pick the situation closest to yours',
     unpaid: 'Unpaid Invoices or Missing Supplier Deliveries',
     civil: 'Contract Disputes and Civil Claims',
     criminal: 'Police or Criminal Matters',
@@ -661,7 +661,7 @@ export const CIVIL_COMMERCIAL_COPY: Record<
 > = {
   en: {
     heading: 'Business Contracts and Payment Disputes',
-    body: 'Commercial disputes can involve unpaid invoices, undelivered orders, inspection disagreements, and a counterparty that stops responding. Those situations are reviewed as contract and payment problems, not as injury claims.',
+    body: 'Commercial disputes can involve unpaid invoices, undelivered orders, inspection disagreements, and a counterparty that stops responding. The firm reviews those as contract and payment problems, not injury claims.',
     debtLinkLabel: 'Taiwan debt recovery and supplier disputes',
     injuryHeading: 'Injury, Accident and Other Damages Claims',
     injuryBody:
@@ -698,9 +698,9 @@ export const INVESTMENT_PATH_COPY: Record<
   { heading: string; lawyerLabel: string; guideLabel: string }
 > = {
   en: {
-    heading: 'Read the process or discuss legal support',
-    lawyerLabel: 'Discuss Company Formation Legal Support',
-    guideLabel: 'Understand the Setup Process',
+    heading: 'Read the setup steps or ask about formation',
+    lawyerLabel: 'Taiwan company formation',
+    guideLabel: 'Setup process guide',
   },
   ja: {
     heading: '設立の情報を読む／法律相談をする',

@@ -67,7 +67,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       ' spiega come formulare un riassunto che un’avvocata o un avvocato esamina.',
     columnsViewAllLabel: 'Vedere tutti gli articoli',
     columnsReadMoreLabel: 'Continua a leggere',
-    columnsReviewLabel: 'Verificato dall’avvocata Wei Tseng',
+    columnsReviewLabel: 'Diritto di Taiwan',
     columnsOriginalLanguageBadge: 'Lingua originale',
     columnsOriginalLanguageNote:
       'I seguenti articoli non sono ancora disponibili in italiano. L’elenco resta nella lingua originale e apre la relativa pagina linguistica; il contenuto non viene tradotto automaticamente.',
@@ -93,7 +93,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'La lingua della pagina e la lingua di consulenza non sono la stessa cosa',
+          heading: 'Lingua della pagina e lingue di consulenza',
           paragraphs: [
             'Questa pagina è scritta in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto nelle quattro lingue di consulenza inglese, cinese (中文), giapponese e coreano. Leggere le indicazioni in italiano non significa che il colloquio con l’avvocata o l’avvocato avvenga in italiano.',
             'Non promettiamo un interprete, né un termine di risposta, né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo un canale di comunicazione.',
@@ -200,7 +200,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lavoro con parti straniere',
           paragraphs: [
-            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea e dal Giappone e altri clienti internazionali nelle aree indicate.',
+            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea e dal Giappone e altri clienti internazionali nelle aree indicate.',
             'Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nelle aree indicate e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.',
           ],
         },
@@ -555,7 +555,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       ' uit hoe u een korte samenvatting opstelt die een advocaat kan beoordelen.',
     columnsViewAllLabel: 'Alle artikelen bekijken',
     columnsReadMoreLabel: 'Verder lezen',
-    columnsReviewLabel: 'Beoordeeld door advocaat Wei Tseng',
+    columnsReviewLabel: 'Taiwanees recht',
     columnsOriginalLanguageBadge: 'Oorspronkelijke taal',
     columnsOriginalLanguageNote:
       'De volgende artikelen zijn nog niet in het Nederlands beschikbaar. De lijst blijft in de oorspronkelijke taal en opent de betreffende taalpagina; de inhoud wordt niet automatisch vertaald.',
@@ -688,7 +688,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Werk met buitenlandse betrokkenen',
           paragraphs: [
-            'Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Het kantoor Taichung behandelt in het bijzonder bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea en Japan en werkt met andere internationale cliënten in de genoemde groepen.',
+            'Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea en Japan en werkt met andere internationale cliënten in de genoemde groepen.',
             'Of wij een zaak kunnen aannemen, hangt af van de inhoud en van de taal van de communicatie. Valt uw zaak in de genoemde groepen en kan zij in een van de vier consultatietalen worden besproken, dan kunt u een samenvatting ter beoordeling sturen.',
           ],
         },
@@ -1043,7 +1043,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       ' wyjaśnia, jak sformułować streszczenie, które adwokat rozpatruje.',
     columnsViewAllLabel: 'Zobacz wszystkie artykuły',
     columnsReadMoreLabel: 'Czytaj dalej',
-    columnsReviewLabel: 'Sprawdziła adwokatka Wei Tseng',
+    columnsReviewLabel: 'Prawo Tajwanu',
     columnsOriginalLanguageBadge: 'Język oryginału',
     columnsOriginalLanguageNote:
       'Poniższe artykuły nie są jeszcze dostępne po polsku. Lista pozostaje w języku oryginału i otwiera odpowiednią stronę językową; treść nie jest tłumaczona automatycznie.',
@@ -1176,7 +1176,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Praca z podmiotami zagranicznymi',
           paragraphs: [
-            'Praca transgraniczna obejmuje zakładanie spółek, wizy, zgłoszenia znaków towarowych i patentów, ocenę ryzyka prawnego oraz doradztwo podatkowe przedsiębiorstw. Biuro w Taichung prowadzi zwłaszcza sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Adwokatka Wei Tseng (曾雋崴) towarzyszy klientom z Korei, Japonii i innym klientom międzynarodowym we wskazanych grupach.',
+            'Praca transgraniczna obejmuje zakładanie spółek, wizy, zgłoszenia znaków towarowych i patentów, ocenę ryzyka prawnego oraz doradztwo podatkowe przedsiębiorstw. Adwokatka Wei Tseng (曾雋崴) towarzyszy klientom z Korei, Japonii i innym klientom międzynarodowym we wskazanych grupach.',
             'Czy możemy przyjąć sprawę, zależy od treści i od języka komunikacji. Jeśli sprawa wchodzi we wskazane grupy i można ją omówić w jednym z czterech języków konsultacji, można wysłać streszczenie do rozpatrzenia.',
           ],
         },

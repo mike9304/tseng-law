@@ -12,6 +12,7 @@ interface MemberAuthClientProps {
 function copy(locale: SiteLocale) {
   if (locale === 'zh-hant') {
     return {
+      eyebrow: '會員',
       title: '會員登入',
       subtitle: '會員帳戶由事務所確認後建立。既有會員請登入。',
       login: '登入',
@@ -22,16 +23,18 @@ function copy(locale: SiteLocale) {
   }
   if (locale === 'en') {
     return {
+      eyebrow: 'Members',
       title: 'Member sign in',
       subtitle: 'Member accounts are issued by the firm after review. Existing members can sign in.',
       login: 'Sign in',
       email: 'Email',
       password: 'Password',
-      loading: 'Working...',
+      loading: 'Signing in...',
     };
   }
   if (locale === 'ja') {
     return {
+      eyebrow: '会員',
       title: '会員ログイン',
       subtitle: '会員アカウントは事務所での確認後に発行されます。既存の会員はログインしてください。',
       login: 'ログイン',
@@ -41,6 +44,7 @@ function copy(locale: SiteLocale) {
     };
   }
   return {
+    eyebrow: '회원',
     title: '회원 로그인',
     subtitle: '회원 계정은 담당자가 확인 후 발급합니다. 기존 회원은 로그인해 주세요.',
     login: '로그인',
@@ -89,7 +93,7 @@ export default function MemberAuthClient({ locale, nextPath }: MemberAuthClientP
     >
       <section className={styles.authPanel}>
         <div className={styles.authIntro}>
-          <p>Members</p>
+          <p>{t.eyebrow}</p>
           <h1>{t.title}</h1>
           <span>{t.subtitle}</span>
         </div>

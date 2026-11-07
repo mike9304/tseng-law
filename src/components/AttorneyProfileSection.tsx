@@ -35,7 +35,7 @@ const labels = {
     education: 'Education',
     experience: 'Experience',
     fullProfile: 'Full profile',
-    consult: 'Book consultation',
+    consult: 'Email about a consultation',
     representative: 'Partner',
     teamTitle: 'Team Members',
     partnerTitle: 'Partner CPA',

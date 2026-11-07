@@ -16,7 +16,7 @@ export const sectionLabelsByLocale: Record<Locale, Record<HomeSectionId, string>
     practice: '업무',
     about: '변호사',
     results: '사례',
-    stats: '성과',
+    stats: '소개',
     faq: 'FAQ',
     offices: '오시는길',
     contact: '연락처',

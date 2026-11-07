@@ -90,24 +90,23 @@ const relatedColumnsZh = [
 export const guideContent: Record<SiteLocale, GuideContent> = {
   ko: {
     title: '대만 법인설립(회사설립) 종합 가이드',
-    metaTitle: '대만 법인설립·회사설립 절차·비용 총정리 (2026) | 법무법인 호정',
+    metaTitle: '대만 법인설립 절차·비용 안내 (2026) | 법무법인 호정',
     description:
-      '대만 법인설립(회사설립) 절차(투심회 승인→사명 예심→설립 등기→세적 등기→계좌 개설), 법인 형태 비교(자회사·지사·연락사무소), 비용·기간, 자주 묻는 질문까지 한국어로 정리한 종합 가이드입니다.',
+      '대만 법인설립 절차(회사명 예비심사·필요 시 외국인 투자 승인·예비 계좌·자본금 송금·등기), 자회사·지사·연락사무소 비교, 비용·기간, 자주 묻는 질문을 한국어로 정리합니다.',
     keywords: [
       '대만 회사설립',
       '대만 법인설립',
       '대만 회사설립 비용',
       '대만 회사설립 절차',
-      '대만 투자심의위원회',
+      '경제부 투자審議司',
       '대만 자회사',
       '대만 지사',
     ],
     heroLabel: 'COMPLETE GUIDE',
     summary: [
-      '대만 법인설립 절차는 투심회 승인, 사명 예심·공증, 설립·세적 등기, 정식 계좌 개설 순으로 진행됩니다.',
-      '대만 회사 설립 자체는 최소 자본금 제한이 없어 1대만 달러로도 가능하지만, 대표자의 취업허가증·거류증이 필요하면 단일 주주 기준 최소 50만 대만 달러의 자본금이 필요합니다.',
-      '회사 설립에 약 3개월, 설립 후 취업허가증·거류증 취득에 약 1개월이 소요되는 것이 일반적입니다.',
-      '핵심 절차는 투자심의위원회(투심회) 투자 승인 → 사명 예심·위임장 공증 → 설립 등기 → 세무 등기 → 은행 정식 계좌 개설의 흐름으로 진행됩니다.',
+      '외국인 투자 회사 설립은 회사명 예비심사·위임장 공증 → 필요 시 경제부 투자審議司 외국인 투자 승인 → 설립준비 명의 예비 계좌 → 자본금 송금·투자자본 심사 → 법인·세무 등기 → 정식 계좌 전환 순으로 이어지는 경우가 많습니다.',
+      '회사 설립 자체는 법정 최소 자본금이 없으나 설립 비용·회계사 자본 확인 등 실무 요건은 별도이며, 취업허가·거류는 별도 심사입니다. 고용주 자격은 工作資格及審查標準 제39조 등 대안 조건 중 하나를 충족해야 합니다(50만·300만 TWD 등은 단독 자격이 아님). https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031',
+      '소요 기간은 외국인 투자 승인 필요 여부, 송금·은행 심사, 업종별 허가에 따라 달라지며 고정되지 않습니다.',
     ],
     planHeading: '사업 계획부터 정리하기',
     planIntro:
@@ -125,19 +124,19 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     },
     procedureHeading: '대만 법인설립 절차 (5단계)',
     procedureIntro:
-      '아래 5단계는 대만 법인설립의 핵심 흐름을 정리한 것입니다. 각 단계의 세부 서류와 일정은 사안에 따라 달라질 수 있습니다.',
+      '아래 5단계는 대만 법인설립에서 자주 거치는 흐름을 정리한 것입니다. 각 단계의 세부 서류와 일정은 사안에 따라 달라질 수 있습니다.',
     steps: [
       {
-        name: '투자심의위원회(투심회) 투자 승인',
-        text: '외국인은 대만 투자심의위원회에 투자계획서를 제출해 심사를 받아야 합니다. 투심회는 자본금이 실제 투자 용도로 쓰이는지 확인하며, 승인 후 1년 이내에 자본금을 송금해야 합니다.',
+        name: '회사명 예비심사 및 위임장 공증',
+        text: '회사의 중국어 명칭을 검색·예약하고, 대만 변호사 등에게 위임장 인증·공증을 진행합니다. 등록 주소를 물색하거나 투자계획서를 준비하면 이후 심사·등기 일정을 줄이는 데 도움이 됩니다.',
       },
       {
-        name: '사명 예심 및 위임장 공증',
-        text: '회사의 중국어 명칭을 검색·신청하고, 대만 변호사 등에게 위임장 인증·공증을 진행합니다. 투자계획 심사와 병행해 회사 등록 주소지를 물색하면 시간을 줄일 수 있습니다.',
+        name: '외국인 투자 승인(필요한 경우)',
+        text: '외국인 투자에 해당하면 경제부 투자審議司(Department of Investment Review)에 투자계획서를 제출해 심사를 받습니다. 승인 후 예비 계좌 개설·자본금 송금·투자자본 심사로 이어지며, 승인 없이 진행 가능한 구조인지는 사전에 확인해야 합니다.',
       },
       {
-        name: '설립 등기 (자본금 송금·감사·법인 등기)',
-        text: '회사 예비 계좌를 개설하고 자본금을 송금한 뒤 자본금 감사를 거쳐 경제부에 법인 등기를 마칩니다. 한국 은행에서 송금할 때는 본인이 직접 방문해 송금해야 하고 해외직접투자 신고가 필요합니다.',
+        name: '설립 등기 (예비 계좌·자본금 송금·투자자본 심사·법인 등기)',
+        text: '승인·명칭 예약 후 설립준비 명의 예비 계좌를 개설하고 자본금을 송금한 뒤 투자자본 심사를 거쳐 법인 등기를 마칩니다. 송금 국가·은행별 요건(한국발 송금의 해외직접투자 신고 등)은 별도로 확인합니다.',
       },
       {
         name: '세적(세무) 등기',
@@ -168,10 +167,10 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costColumns: ['항목', '내용'],
     // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
-      { item: '최소 자본금(설립 자체)', values: ['법정 최소 없음 (1대만 달러 가능)'] },
-      { item: '취업허가증·거류증용 자본금', values: ['단일 주주 최소 50만 대만 달러 (대만 파트너 있으면 약 17만 대만 달러)'] },
-      { item: '설립 소요 기간', values: ['약 3개월'] },
-      { item: '취업허가증·거류증 소요 기간', values: ['약 1개월'] },
+      { item: '최소 자본금(설립 자체)', values: ['법정 최소 없음(설립비·회계 확인 등 실무 요건은 별도)'] },
+      { item: '취업허가 고용주 자격(工作資格及審查標準 제39조 대안 예)', values: ['납입 자본금·在台營運資금 50만 TWD 이상, 연 매출 300만 TWD 이상, 수출입·대리수수료 실적 등(단독 자격 아님)'] },
+      { item: '설립 소요 기간', values: ['승인·송금·은행·업종에 따라 상이(고정 기간 없음)'] },
+      { item: '취업허가·거류 심사', values: ['회사 설립과 별도, 사안별'] },
       { item: '영업세', values: ['5% (2개월마다 신고)'] },
       { item: '법인세', values: ['20% (연간)'] },
       { item: '한국-대만 이중과세 약정', values: ['2023.12.27 발효, 2024.1.1부터 적용. 고정 사업장이 아니면 영업이익 면세, 배당금 상한세율 10%'] },
@@ -180,7 +179,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     faq: [
       {
         q: '대만 법인설립 시 최소 자본금이 있나요?',
-        a: '회사 설립 자체는 최소 자본금 제한이 없어 1대만 달러로도 가능합니다. 다만 대표자의 취업허가증과 거류증이 필요하면 단일 주주 기준 최소 50만 대만 달러, 대만 파트너가 있으면 그 3분의 1(약 17만 대만 달러)을 투자해야 하며 회사 연 매출액이 300만 대만 달러를 초과해야 합니다.',
+        a: '회사 설립 자체는 법정 최소 자본금이 없으나 설립 비용·회계사 자본 확인 등 실무 요건은 별도입니다. 취업허가·거류는 별도이며, 설립 후 1년 미만 회사가 외국인 주관 업무를 채용할 때 고용주는 工作資格及審查標準 제39조 조건 중 하나(50만·300만 TWD, 수출입 실적 등)를 충족해야 합니다. 50만·300만은 단독 자격이 아니라 대안 기준입니다. https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031',
       },
       {
         q: '회사를 설립하면 대만 비자를 받을 수 있나요?',
@@ -196,11 +195,11 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         q: '법인설립에 보통 얼마나 걸리나요?',
-        a: '회사 설립에 약 3개월, 설립 후 취업허가증과 거류증 취득에 약 1개월이 소요되는 것이 일반적입니다. 점포 임대 계약 시작일은 가능한 늦게 잡는 것이 안전합니다.',
+        a: '소요 기간은 외국인 투자 승인, 송금·은행 심사, 업종별 허가에 따라 달라집니다. 점포 임대 계약 시작일은 가능한 늦게 잡는 편이 부담을 줄입니다.',
       },
       {
         q: '대만 법인설립 절차는 어떻게 되나요?',
-        a: '투심회 승인, 사명 예심·공증, 설립·세적 등기, 정식 계좌 개설 순으로 진행됩니다.',
+        a: '회사명 예비심사·공증 → 필요 시 외국인 투자 승인 → 예비 계좌·송금·투자자본 심사 → 설립·세적 등기 → 정식 계좌 전환 순으로 진행되는 경우가 많습니다. 구조와 국적에 따라 세부 요건은 달라집니다.',
       },
     ],
     relatedHeading: '관련 칼럼',
@@ -221,7 +220,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     title: '台灣公司設立完整指南',
     metaTitle: '台灣公司設立流程與費用總整理（2026）| 昊鼎國際法律事務所',
     description:
-      '整理台灣公司設立流程（經濟部投資審議司核准→公司名稱預查→設立登記→稅籍登記→銀行開戶）、設立型態比較（子公司、分公司、辦事處）、費用與時間及常見問題，並說明台灣本地企業與外國投資人應分別檢視的事項。',
+      '整理台灣公司設立流程（公司名稱預查→經濟部投資審議司核准→設立登記→稅籍登記→銀行開戶）、子公司、分公司與辦事處的比較，以及費用、時間與常見問題；並區分台灣本地企業與外國投資人應分別檢視的事項。',
     keywords: [
       '台灣公司設立',
       '台灣公司設立流程',
@@ -232,9 +231,9 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     ],
     heroLabel: 'COMPLETE GUIDE',
     summary: [
-      '台灣公司設立本身沒有最低資本額限制，一元新台幣亦可設立；但代表人需要工作許可與居留證時，單一股東須至少投資新台幣50萬元。',
-      '一般而言，公司設立約需3個月，設立後申請工作許可與居留證約需1個月。',
-      '主要流程為：經濟部投資審議司投資核准 → 公司名稱預查與授權書公證 → 設立登記 → 稅籍登記 → 開立銀行正式帳戶。',
+      '公司設立本身沒有統一的法定最低資本額，但會計師資本額查核須涵蓋設立成本等實務要求；工作許可與居留另依外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準（工作資格及審查標準）第39條等檢視雇主條件，50萬元、300萬元營業額等為替代門檻之一，非唯一路徑。',
+      '時程依投資核准、匯款與銀行審查、產業許可而異，並無固定月數。',
+      '外國投資人常見順序為：公司名稱預查與授權書公證 → 必要時向經濟部投資審議司申請核准 → 以籌備處名義開立預備帳戶 → 資本匯入與查核 → 公司登記 → 稅籍登記 → 預備帳戶轉為正式帳戶。',
     ],
     planHeading: '先整理事業計畫',
     planIntro:
@@ -264,12 +263,12 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       '以下5個階段是台灣公司設立的主要流程；各階段所需文件與時程，依個案而有不同。',
     steps: [
       {
-        name: '經濟部投資審議司投資核准',
-        text: '外國人須向經濟部投資審議司提出投資計畫書，接受審查。經濟部投資審議司將確認資本額確實用於投資；核准後，須於1年內匯入資本額。',
+        name: '公司名稱預查與授權書公證',
+        text: '申請公司中文名稱預查，並辦理授權書的認證與公證；同時可著手尋找公司登記地址或準備投資計畫書，以縮短後續審查與登記時程。',
       },
       {
-        name: '公司名稱預查與授權書公證',
-        text: '申請公司中文名稱預查，並辦理授權書的認證與公證；同時可著手尋找公司登記地址，以縮短整體時程。',
+        name: '經濟部投資審議司投資核准',
+        text: '外國人須向經濟部投資審議司提出投資計畫書，接受審查。經濟部投資審議司將確認資本額確實用於投資；核准後，須於1年內匯入資本額。',
       },
       {
         name: '設立登記（資本匯入、查核、公司登記）',
@@ -304,10 +303,10 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costColumns: ['項目', '內容'],
     // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
-      { item: '最低資本額（設立本身）', values: ['無法定最低資本額（1元新台幣亦可）'] },
-      { item: '工作許可、居留證所需資本額', values: ['單一股東至少新台幣50萬元（有台灣合夥人則約17萬元）'] },
-      { item: '設立所需時間', values: ['約3個月'] },
-      { item: '工作許可、居留證所需時間', values: ['約1個月'] },
+      { item: '最低資本額（設立本身）', values: ['無統一法定最低資本額（設立成本及查核等實務要求另計）'] },
+      { item: '工作許可雇主條件（第39條替代門檻示例）', values: ['實收資本額或在台營運資金達50萬元以上、營業額達300萬元以上、進出口或代理佣金實績等（非單一路徑）'] },
+      { item: '設立所需時間', values: ['依核准、匯款、銀行及產業而異'] },
+      { item: '工作許可與居留', values: ['與公司設立分開審查'] },
       { item: '營業稅', values: ['5%（每2個月申報）'] },
       { item: '營利事業所得稅', values: ['20%（每年）'] },
       { item: '台韓避免雙重課稅協定', values: ['2023年12月27日生效，自2024年1月1日起適用；未透過固定營業場所取得的營業利潤免稅，股利稅率上限10%'] },
@@ -316,7 +315,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     faq: [
       {
         q: '台灣公司設立有最低資本額嗎？',
-        a: '公司設立本身沒有最低資本額限制，1元新台幣亦可設立。但代表人需要工作許可與居留證時，單一股東須至少投資新台幣50萬元，有台灣合夥人時為其三分之一（約17萬元），且公司年營業額須超過新台幣300萬元。',
+        a: '公司設立本身沒有統一的法定最低資本額，但會計師資本額查核須涵蓋設立成本等實務要求。工作許可與居留另案審查；設立未滿一年之公司聘僱第一位外國人擔任僑外投資事業主管工作時，雇主須符合工作資格及審查標準第39條條件之一（50萬元資本額或在台營運資金、300萬元營業額、進出口或代理佣金實績等為替代門檻，非僅「50萬＋300萬」）。https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031',
       },
       {
         q: '設立公司後可以取得台灣居留資格嗎？',
@@ -332,7 +331,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         q: '設立通常需要多久？',
-        a: '一般而言，公司設立約需3個月，設立後申請工作許可與居留證約需1個月。營業場所租約的起租日，建議盡量往後安排，較為穩妥。',
+        a: '所需時間因投資核准、匯款與銀行審查、產業許可而異。營業場所租約的起租日，建議盡量往後安排，較為穩妥。',
       },
     ],
     relatedHeading: '相關專欄',
@@ -359,7 +358,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       'Taiwan company registration',
       'Taiwan subsidiary',
       'Taiwan branch office',
-      'Taiwan Investment Commission',
+      'Department of Investment Review, MOEA',
       'set up company in Taiwan cost',
     ],
     heroLabel: 'INFORMATION GUIDE',
@@ -383,12 +382,12 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       'The outline below is a conditional overview of tasks that often arise when a foreign investor forms a Taiwan company. It is not a single sequence, duration, or document list that applies to every structure or nationality.',
     steps: [
       {
-        name: 'Investment Commission (投審會) approval',
-        text: 'Foreign investors must file an investment plan with the Investment Commission for review. The Commission verifies that the capital is genuinely used for investment; after approval, capital must be remitted within one year.',
+        name: 'Company name pre-check and power of attorney notarization',
+        text: 'Apply to reserve the Chinese company name and complete authentication and notarization of the power of attorney. Locating a registered office or drafting the investment plan in parallel can shorten later review and registration.',
       },
       {
-        name: 'Company name pre-check and power of attorney notarization',
-        text: 'Apply to reserve the Chinese company name and complete authentication and notarization of the power of attorney. Searching for a registered office address in parallel saves time.',
+        name: 'Foreign investment approval (when required)',
+        text: 'Foreign investment must be filed with the Department of Investment Review, MOEA when applicable. After approval, a preparatory account and capital remittance with verification follow; whether approval is required depends on the structure and activity.',
       },
       {
         name: 'Incorporation registration (capital remittance, audit, registration)',
@@ -423,10 +422,10 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costColumns: ['Item', 'Detail'],
     // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
-      { item: 'Minimum capital (formation itself)', values: ['No statutory minimum (1 TWD possible)'] },
-      { item: 'Capital for work permit / residence card', values: ['Sole shareholder at least TWD 500,000 (about TWD 170,000 with a Taiwanese partner)'] },
-      { item: 'Formation duration', values: ['About 3 months'] },
-      { item: 'Work permit / residence card duration', values: ['About 1 month'] },
+      { item: 'Minimum capital (formation itself)', values: ['No general statutory minimum; a CPA must verify that capital covers formation costs'] },
+      { item: 'Employer test for work permits (Art. 39 alternatives, examples)', values: ['Paid-in capital or operating funds in Taiwan TWD 500,000+, revenue TWD 3M+, import/export or agency commission records, etc. (not a single mandatory pair)'] },
+      { item: 'Formation duration', values: ['Varies with approval, banking, and industry'] },
+      { item: 'Work permits and residence', values: ['Separate from incorporation; case-specific'] },
       { item: 'Business tax (VAT)', values: ['5% (filed every 2 months)'] },
       { item: 'Corporate income tax', values: ['20% (annual)'] },
       { item: 'Korea-specific tax agreement', values: ['See the country-specific section below. The Taiwan–Korea income tax agreement is not a worldwide investor rule.'] },
@@ -513,7 +512,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     title: '台湾法人設立（会社設立）総合ガイド',
     metaTitle: '台湾法人設立・会社設立の手続き・費用まとめ (2026) | 昊鼎国際法律事務所',
     description:
-      '台湾法人設立（会社設立）の手続き（経済部投資審議司（旧・投資審議委員会）の承認→社名予備審査→設立登記→税務登記→口座開設）、法人形態の比較（子会社・支店・代表者事務所（いわゆる駐在員事務所））、費用・期間、よくある質問まで日本語でまとめた総合ガイドです。',
+      '台湾法人設立の手続き（社名予備審査→必要に応じた投資審議司の承認→準備口座・送金・登記）、法人形態の比較（子会社・支店・代表者事務所）、費用・期間、よくある質問まで日本語でまとめた総合ガイドです。',
     keywords: [
       '台湾会社設立',
       '台湾法人設立',
@@ -525,10 +524,9 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     ],
     heroLabel: 'COMPLETE GUIDE',
     summary: [
-      '台湾法人設立の手続きは、投資審議司の承認、社名予備審査・公証、設立・税務登記、正式口座開設の順で進みます。',
-      '台湾の会社設立自体に最低資本金の制限はなく1新台湾ドル（NT$）でも可能ですが、代表者の就業許可証・居留証が必要な場合は、単一株主基準で最低NT$50万の資本金が必要です。',
-      '会社設立に約3ヶ月、設立後の就業許可証・居留証の取得に約1ヶ月かかるのが一般的です。',
-      '核心手続きは、投資審議司の投資承認 → 社名予備審査・委任状公証 → 設立登記 → 税務登記 → 銀行正式口座開設の流れで進みます。',
+      '外国人投資による会社設立では、社名予備審査・委任状公証のあと、必要に応じて投資審議司の投資承認を経て、準備口座開設・送金・資本金査定・登記に進む流れが多いです。',
+      '会社設立自体に法定の統一最低資本金はありませんが、会計士による資本額審定では設立費用をカバーする払込済資本金が求められることがあります。就業許可・居留は別手続きで、雇用側は工作資格及審查標準第39条などの代替要件のいずれかを満たす必要があります（50万・300万TWD等は単独要件ではありません）。',
+      '所要期間は投資承認の要否、送金・銀行審査、業種許可により異なり、固定の月数はありません。',
     ],
     planHeading: '事業計画から整理する',
     planIntro:
@@ -561,12 +559,12 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       '以下の5段階は台湾法人設立の核心的な流れをまとめたものです。各段階の詳細書類とスケジュールは案件によって異なる場合があります。',
     steps: [
       {
-        name: '投資審議司の投資承認',
-        text: '外国人は台湾の投資審議司に投資計画書を提出して審査を受ける必要があります。投資審議司は資本金が実際の投資用途に使われるかを確認し、承認後1年以内に資本金を送金しなければなりません。',
+        name: '社名予備審査と委任状の公証',
+        text: '会社の中国語名称を検索・申請し、台湾弁護士などへの委任状の認証・公証を行います。登記住所の選定や投資計画書の準備を並行すると、以降の審査・登記を短縮しやすくなります。',
       },
       {
-        name: '社名予備審査と委任状の公証',
-        text: '会社の中国語名称を検索・申請し、台湾弁護士などへの委任状の認証・公証を行います。投資計画の審査と並行して会社登記住所を探すと時間を短縮できます。',
+        name: '投資審議司の投資承認',
+        text: '外国人は台湾の投資審議司に投資計画書を提出して審査を受ける必要があります。投資審議司は資本金が実際の投資用途に使われるかを確認し、承認後1年以内に資本金を送金しなければなりません。',
       },
       {
         name: '設立登記（資本金送金・監査・法人登記）',
@@ -601,10 +599,10 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costColumns: ['項目', '内容'],
     // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
-      { item: '最低資本金（設立自体）', values: ['法定最低額なし（NT$1でも可能）'] },
-      { item: '就業許可証・居留証用の資本金', values: ['単一株主で最低NT$50万（台湾パートナーがいる場合は約NT$17万）'] },
-      { item: '設立にかかる期間', values: ['約3ヶ月'] },
-      { item: '就業許可証・居留証にかかる期間', values: ['約1ヶ月'] },
+      { item: '最低資本金（設立自体）', values: ['統一の法定最低額なし（設立費用・査定等の実務要件は別途）'] },
+      { item: '就業許可の雇主要件（工作資格及審查標準第39条の代替例）', values: ['払込済資本金・在台運営資金50万TWD以上、売上300万TWD以上、輸出入・代理手数料実績など（単独要件ではない）'] },
+      { item: '設立にかかる期間', values: ['承認・送金・銀行・業種により異なる'] },
+      { item: '就業許可・居留', values: ['会社設立とは別審査'] },
       { item: '営業税', values: ['5%（2ヶ月ごとに申告）'] },
       { item: '法人税', values: ['20%（年間）'] },
     ],
@@ -612,7 +610,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     faq: [
       {
         q: '台湾法人設立に最低資本金はありますか？',
-        a: '会社設立自体に最低資本金の制限はなく、NT$1でも可能です。ただし代表者の就業許可証と居留証が必要な場合は、単一株主基準で最低NT$50万、台湾パートナーがいる場合はその3分の1（約NT$17万）を投資する必要があり、会社の年間売上高がNT$300万を超える必要があります。',
+        a: '会社設立自体に統一の法定最低資本金はありません。会計士による資本額査定では設立費用をカバーする払込済資本金が実務上必要になることがあります。就業許可・居留は別手続きで、設立後1年未満の会社が外国人を管理職として雇用する場合、雇主は就業服務法関連の外国人雇用資格・審査基準（工作資格及審查標準）第39条のいずれかの要件（払込済資本金・在台運営資金50万TWD以上、売上300万TWD以上、輸出入・代理手数料実績など、単独要件ではない）を満たす必要があります。https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031',
       },
       {
         q: '会社を設立すれば台湾のビザを取得できますか？',
@@ -628,11 +626,11 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         q: '法人設立には通常どのくらいかかりますか？',
-        a: '会社設立に約3ヶ月、設立後の就業許可証と居留証の取得に約1ヶ月かかるのが一般的です。店舗賃貸契約の開始日はできるだけ遅く設定するのが安全です。',
+        a: '所要期間は投資承認、送金・銀行審査、業種許可により異なります。店舗賃貸契約の開始日はできるだけ遅く設定するのが無難です。',
       },
       {
         q: '台湾法人設立の手続きはどのようになっていますか？',
-        a: '投資審議司の承認、社名予備審査・公証、設立・税務登記、正式口座開設の順で進みます。',
+        a: '社名予備審査や必要書類の公証を行い、必要に応じて投資審議司の承認を受けたうえで、設立・税務登記、正式口座開設に進みます。形態や国籍により細部は異なります。',
       },
     ],
     relatedHeading: '関連コラム',

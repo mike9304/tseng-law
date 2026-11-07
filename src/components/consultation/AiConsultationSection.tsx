@@ -114,27 +114,27 @@ function shouldUseFallbackErrorMessage(error: unknown): boolean {
 
 function getFreshnessLabel(locale: Locale, freshness: 'fresh' | 'review_needed' | 'unknown'): string {
   if (locale === 'ko') {
-    if (freshness === 'fresh') return '칼럼 최신성 양호';
-    if (freshness === 'review_needed') return '최신성 재검토 필요';
-    return '최신성 확인 전';
+    if (freshness === 'fresh') return '참고 칼럼 날짜가 비교적 최근입니다';
+    if (freshness === 'review_needed') return '일부 칼럼은 다시 확인하는 편이 좋습니다';
+    return '칼럼 날짜는 아직 확인하지 않았습니다';
   }
 
   if (locale === 'zh-hant') {
-    if (freshness === 'fresh') return '文章時效正常';
-    if (freshness === 'review_needed') return '建議再次確認時效';
-    return '時效尚未確認';
+    if (freshness === 'fresh') return '參考文章日期較近';
+    if (freshness === 'review_needed') return '建議再確認文章是否已更新';
+    return '尚未核對文章日期';
   }
 
-  if (freshness === 'fresh') return 'Source freshness checked';
-  if (freshness === 'review_needed') return 'Source freshness should be reviewed';
-  return 'Source freshness not confirmed';
+  if (freshness === 'fresh') return 'Referenced columns are recent';
+  if (freshness === 'review_needed') return 'Some references may be out of date';
+  return 'Reference dates not checked';
 }
 
 function getConfidenceLabel(locale: Locale, confidence: 'high' | 'medium' | 'low'): string {
   if (locale === 'ko') {
-    if (confidence === 'high') return '근거 신뢰도 높음';
-    if (confidence === 'medium') return '근거 신뢰도 중간';
-    return '근거 신뢰도 낮음';
+    if (confidence === 'high') return '답변 근거가 비교적 분명합니다';
+    if (confidence === 'medium') return '답변 근거가 제한적입니다';
+    return '답변 근거가 부족할 수 있습니다';
   }
 
   if (locale === 'zh-hant') {
@@ -143,9 +143,9 @@ function getConfidenceLabel(locale: Locale, confidence: 'high' | 'medium' | 'low
     return '依據可信度：低';
   }
 
-  if (confidence === 'high') return 'High source confidence';
-  if (confidence === 'medium') return 'Medium source confidence';
-  return 'Low source confidence';
+  if (confidence === 'high') return 'Answer draws on clearer sources';
+  if (confidence === 'medium') return 'Answer uses limited sources';
+  return 'Answer may lack solid sources';
 }
 
 function getMinimalFormLabels(locale: Locale): { nameOrCompany: string; optionalPhone: string } {
@@ -522,7 +522,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
 
               {lastResponse?.references.length ? (
                 <div className="consultation-ai-references">
-                  <strong>{locale === 'ko' ? 'AI 참고 칼럼' : locale === 'zh-hant' ? 'AI 參考文章' : 'Referenced Columns'}</strong>
+                  <strong>{locale === 'ko' ? '참고한 칼럼' : locale === 'zh-hant' ? '參考文章' : 'Referenced columns'}</strong>
                   <div className="consultation-ai-reference-list">
                     {lastResponse.references.map((reference) => (
                       <Link

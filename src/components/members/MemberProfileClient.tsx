@@ -139,10 +139,10 @@ export default function MemberProfileClient({ member, locale }: MemberProfileCli
         <input name="email" type="email" defaultValue={current.email} required readOnly aria-readonly="true" disabled={pending} data-member-profile-email-readonly="true" />
         <small>
           {locale === 'ko'
-            ? '이메일 변경은 보안 확인이 필요합니다. 고객센터에 문의해 주세요.'
+            ? '이메일 변경은 보안 확인이 필요합니다. 이메일로 문의해 주세요.'
             : locale === 'zh-hant'
-              ? '變更電子郵件需安全驗證，請聯絡客服。'
-              : 'Email changes require verification — please contact support.'}
+              ? '變更電子郵件需安全驗證，請以電子郵件聯絡我們。'
+              : 'Email changes need verification — contact us by email.'}
         </small>
       </label>
       <label>

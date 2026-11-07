@@ -435,7 +435,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     scroll: '본문으로 스크롤',
     skip: '건너뛰기',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
-    service: '대만 법률 상담 · 한국어·일본어·영어 소통',
+    service: '대만 법률 상담 · 한국어·중국어·일본어·영어',
     contact: '상담 연락처',
   },
   'zh-hant': {
@@ -462,7 +462,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     scroll: '下にスクロール',
     skip: 'スキップ',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
-    service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
+    service: '台湾の法律相談 · 日本語・中国語・英語・韓国語で対応',
     contact: '相談窓口',
   },
   vi: {
@@ -472,7 +472,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     skip: 'Bỏ qua phần mở đầu',
     mediaAlt:
       'Cảnh quay trên không dưới ánh sáng tự nhiên, bay qua dãy Trung Ương Sơn Mạch và biển mây của Đài Loan',
-    service: 'Hỗ trợ pháp lý tại Đài Loan · Tiếng Anh, tiếng Nhật và tiếng Hàn',
+    service: 'Hỗ trợ pháp lý tại Đài Loan · tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn',
     contact: 'Liên hệ văn phòng',
   },
   id: {
@@ -482,7 +482,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     skip: 'Lewati intro',
     mediaAlt:
       'Rekaman udara dalam cahaya alami yang terang, melintasi Pegunungan Tengah Taiwan dan lautan awan',
-    service: 'Dukungan hukum Taiwan · Bahasa Inggris, Jepang, dan Korea',
+    service: 'Dukungan hukum Taiwan · bahasa Inggris, Tionghoa, Jepang, dan Korea',
     contact: 'Hubungi kantor kami',
   },
   th: {
@@ -492,7 +492,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     skip: 'ข้ามบทนำ',
     mediaAlt:
       'ภาพมุมสูงใต้แสงธรรมชาติที่สว่าง บินเหนือเทือกเขาตอนกลางของไต้หวันและทะเลหมอก',
-    service: 'บริการทางกฎหมายในไต้หวัน · ภาษาอังกฤษ ญี่ปุ่น และเกาหลี',
+    service: 'บริการทางกฎหมายในไต้หวัน · อังกฤษ จีน ญี่ปุ่น และเกาหลี',
     contact: 'ติดต่อสำนักงาน',
   },
   fil: {
@@ -502,7 +502,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     skip: 'Laktawan ang intro',
     mediaAlt:
       'Maliwanag na aerial na kuha sa natural na liwanag, lumilipad sa ibabaw ng Central Mountain Range ng Taiwan at dagat ng mga ulap',
-    service: 'Legal na suporta sa Taiwan · Ingles, Hapon at Koreano',
+    service: 'Legal na suporta sa Taiwan · Ingles, Tsino, Hapon at Koreano',
     contact: 'Makipag-ugnayan sa firm',
   },
   ar: {

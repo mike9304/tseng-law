@@ -19,7 +19,7 @@ export default function UpdatesTabs({ locale }: { locale: Locale }) {
         <SectionLabel>{updates.label}</SectionLabel>
         <h2 className="section-title">{updates.title}</h2>
         <OrnamentDivider />
-        <div className="updates-tabs" role="tablist" aria-label="Updates">
+        <div className="updates-tabs" role="tablist" aria-label={updates.title}>
           {updates.tabs.map((tab) => (
             <button
               key={tab.id}

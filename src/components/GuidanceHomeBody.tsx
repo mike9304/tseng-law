@@ -541,8 +541,8 @@ export default function GuidanceHomeBody({
             items={[...pack.pages.faq.faqs]}
             id="faq"
             sectionClassName="section section--gray"
-            headingLabel="FAQ"
-            headingTitle={pack.nav.faq}
+            headingLabel={pack.pages.faq.eyebrow}
+            headingTitle={pack.pages.faq.title}
             layout="split"
           />
         </Reveal>

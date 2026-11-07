@@ -149,7 +149,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
           '대만 도로교통안전규칙 제101조의 추월 금지 조건과 같은 차로에서의 추월 절차, 익명 사고 사례를 통한 과실 판단 요소를 결과 보장 없이 정리합니다.',
         href: '/ko/insights/overtaking-accident',
         category: 'legal',
-        readTime: '4분 분량',
+        readTime: '4분',
         image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
         keywords: [
           '대만 추월 사고',
@@ -174,7 +174,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
           '대만의 협의·조정·재판이혼 절차, 국제결혼·외국 이혼의 호적·승인 문제, 부부재산, 이혼 후 청구와 미성년 자녀 문제를 결과 보장 없이 정리합니다.',
         href: '/ko/insights/divorce-qna',
         category: 'legal',
-        readTime: '18분 분량',
+        readTime: '18분',
         image: '/images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
         keywords: [
           '대만 이혼 절차',
@@ -204,7 +204,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'labor-severance',
-        title: '대만 노동법: 대만에서 퇴직금 받기 어렵다고??',
+        title: '대만 퇴직금: 한국과 다른 지급 조건',
         summary: '한국과 대만의 퇴직금 제도 차이와 해고·퇴직금 관계를 비교합니다.',
         href: '/ko/insights/labor-severance',
         category: 'legal',
@@ -213,7 +213,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'traffic-accident-procedure',
-        title: '대만에서 교통사고 발생시',
+        title: '대만 교통사고 발생 시 대응 절차',
         summary: '사고 직후 대응, 경찰 신고, 보험 처리, 배상 청구 절차를 안내합니다.',
         href: '/ko/insights/traffic-accident-procedure',
         category: 'legal',
@@ -333,7 +333,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'inheritance-custody',
-        title: '台灣繼承與親權：遺屬法律指南',
+        title: '台灣繼承與親權：遺族法律指南',
         summary: '說明台灣法下的繼承順位、配偶剩餘財產請求、親權權利義務及未成年人財產保護。',
         href: '/zh-hant/insights/taiwan-inheritance-custody-analysis',
         category: 'legal',
@@ -402,7 +402,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'labor-severance',
-        title: '台灣勞動法：資遣費真的很難領嗎？',
+        title: '台灣資遣費：與韓國制度的差異',
         summary: '比較韓國與台灣制度差異，釐清資遣費要件。',
         href: '/zh-hant/insights/labor-severance',
         category: 'legal',
@@ -520,7 +520,7 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['minimum service period', 'training-cost repayment', 'prepaid benefit', 'attribution']
   },
   'labor-severance': {
-    title: 'Taiwan Labor Law: Is Severance Really Hard to Receive?',
+    title: 'Taiwan Severance: How Payout Rules Differ From Korea',
     summary: 'A comparison of Taiwan and Korea severance systems with practical legal conditions.',
     keywords: ['labor law', 'severance', 'dismissal']
   },

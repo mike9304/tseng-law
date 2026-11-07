@@ -29,7 +29,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     description: '증준외 변호사가 이끄는 팀으로, 대만 법률업무와 한국·대만 관련 사건을 담당합니다.',
     story: [
       '한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
-      '법률, 회계, 세무 및 행정 실무를 연결해 사건 초기 검토부터 분쟁 대응까지 일관된 전략을 제공합니다.',
+      '투자·회사 설립과 분쟁 관련 법률 업무를 맡습니다. 회계·세무 검토가 필요한 사안은 협력 회계사와 함께 확인합니다.',
     ],
     members: [
       {
@@ -60,7 +60,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외',
         intro: [
           '교육부 법제처 근무 경험을 바탕으로 행정쟁송·민사 사건을 수행합니다.',
-          '대학·교원 권리 분쟁, 민원·소청 사건 대응 경험이 풍부합니다.',
+          '대학·교원 권리 분쟁과 민원·소청 사건도 담당합니다.',
         ],
         education: ['국립 중흥대학 법학과 학사'],
         experience: ['교육부 법제처 사무원', '법무법인 호정 변호사'],
@@ -73,7 +73,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/chang-fangyu.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
-          '다년간 여러 법률사무소에서 선임 법무전문원으로 근무하며, 소송 지원, 기업 법무 및 외국인 투자 관련 업무 등 다양한 법률 실무 경험을 쌓아온 베테랑 법무전문원입니다.',
+          '여러 법률사무소에서 선임 법무전문원으로 소송 지원, 기업 법무, 외국인 투자 업무를 담당해 왔습니다.',
           '소송 지원, 회사 설립, 외국인 투자 승인, 각종 인허가 및 한국·대만 간 커뮤니케이션을 지원합니다.',
         ],
         education: ['동해대학교 법학 학사'],
@@ -159,7 +159,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/chang-fangyu.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
-          '曾於多家法律事務所擔任資深法務專員多年，在訴訟支援、公司法務及外國人投資等領域累積法律實務經驗。',
+          '曾在多家法律事務所擔任資深法務專員，辦理訴訟支援、公司法務及外國人投資相關工作。',
           '負責訴訟支援、公司設立、外國人投資核准、各類許可申請及台韓聯繫。',
         ],
         education: ['東海大學法律學系學士'],
@@ -201,7 +201,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     description: 'Led by Attorney Wei Tseng, the team handles Taiwan legal matters and Korea–Taiwan cases.',
     story: [
       'Consultations are available in English, Chinese, Korean, and Japanese.',
-      'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
+      'We advise on Taiwan investment, company formation, and disputes. Where accounting or tax review is needed, we work with external accountants.',
     ],
     members: [
       {
@@ -245,7 +245,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/chang-fangyu.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
-          'A veteran paralegal with many years of experience as a senior paralegal at several law firms, covering litigation support, corporate legal affairs, and foreign investment matters.',
+          'Previously served as a senior paralegal at several law firms, handling litigation support, corporate work, and foreign-investment matters.',
           'Supports litigation, company formation, foreign investment approvals, permit applications, and communications with overseas clients.'
         ],
         education: ['LL.B., Tunghai University'],
@@ -268,7 +268,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       {
         id: 'huang-shengping',
         name: 'Shengping Huang',
-        role: 'Partner CPA',
+        role: 'Collaborating CPA',
         email: 'joe700619@chixin.com.tw',
         photo: '/images/team/huang-shengping.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-2',
@@ -287,7 +287,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     description: '曾雋崴弁護士が率いるチームが、台湾の法律業務と韓国・台湾に関わる案件を担当します。',
     story: [
       '日本語・中国語・英語・韓国語でご相談いただけます。',
-      '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
+      '台湾での投資・会社設立、紛争に関する法律実務を担当します。会計・税務の確認が必要な案件では、提携会計士と連携します。',
     ],
     members: [
       {
@@ -318,7 +318,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외',
         intro: [
           '教育部法制処での勤務経験を生かし、行政争訟および民事事件を担当しています。',
-          '大学・教員の権利をめぐる紛争や、陳情・不服申立てに関する案件の対応経験が豊富です。',
+          '大学・教員の権利をめぐる紛争や、陳情・不服申立ての案件にも対応しています。',
         ],
         education: ['国立中興大学法律学科 学士号取得'],
         experience: ['教育部法制処', '昊鼎国際法律事務所 弁護士'],
@@ -331,7 +331,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/chang-fangyu.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
-          '複数の法律事務所で長年にわたりシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連業務など、幅広い法律実務の経験を積んでいます。',
+          '複数の法律事務所でシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連を担当してきました。',
           '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、海外クライアントとのコミュニケーションを支援します。',
         ],
         education: ['東海大学法律学科 学士号取得'],
@@ -346,7 +346,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
           '韓国事務所での相談日程の調整と連絡業務を担当しています。',
-          '情報工学の知見を生かして文書・業務システムを管理し、弁護士チームとクライアントの円滑なコミュニケーションを支えています。',
+          '情報工学の知見を生かして文書・業務システムを管理し、弁護士チームとクライアントの連絡を支えています。',
         ],
         education: ['国立成功大学でコンピュータサイエンスを専攻（学士）'],
         experience: ['昊鼎国際法律事務所 韓国業務チーム'],

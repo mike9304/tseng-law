@@ -75,64 +75,54 @@ const copy: Record<SiteLocale, {
   contactDesc: string;
   contactBtn: string;
   emptyMsg: string;
-  reviewLead: string;
-  reviewTail: string;
   breadcrumbServices: string;
 }> = {
   ko: {
     backLabel: '← 업무분야 목록으로',
     keyPointsLabel: '핵심 요약',
-    attorneyHeading: '이 분야 담당 변호사',
-    columnsLabel: '관련 칼럼 — 자세히 알아보기',
+    attorneyHeading: '담당 변호사',
+    columnsLabel: '관련 칼럼',
     readMore: '자세히 읽기 →',
     contactLabel: '상담 예약',
     contactDesc: '이 분야에 대해 궁금한 점이 있으시면 언제든 문의해 주세요.',
     contactBtn: '문의하기',
     emptyMsg: '이 분야의 전문 칼럼을 준비 중입니다.',
-    reviewLead: '이 페이지는 ',
-    reviewTail: '가 검토하고 관련 칼럼과 상담 흐름을 연결했습니다.',
     breadcrumbServices: '업무분야',
   },
   'zh-hant': {
     backLabel: '← 返回服務領域',
     keyPointsLabel: '重點摘要',
-    attorneyHeading: '本領域承辦律師',
+    attorneyHeading: '承辦律師',
     columnsLabel: '相關專欄',
     readMore: '閱讀全文 →',
     contactLabel: '預約諮詢',
     contactDesc: '對本服務領域有任何疑問，歡迎來信諮詢。',
     contactBtn: '電子郵件諮詢',
     emptyMsg: '本領域的專欄準備中。',
-    reviewLead: '本頁內容由 ',
-    reviewTail: '審閱，並附上相關專欄與諮詢方式。',
     breadcrumbServices: '服務領域',
   },
   en: {
     backLabel: '← Back to services',
     keyPointsLabel: 'Key Points',
-    attorneyHeading: 'Lead Attorney for This Practice Area',
-    columnsLabel: 'Related Columns — Learn More',
+    attorneyHeading: 'Lead attorney',
+    columnsLabel: 'Related columns',
     readMore: 'Read full article →',
     contactLabel: 'Book Consultation',
     contactDesc: `Email a brief summary of your question to ${CONSULTATION_EMAIL}. Sensitive files should follow after attorney instructions.`,
     contactBtn: 'Contact Us',
     emptyMsg: 'Columns for this practice area are being prepared.',
-    reviewLead: 'This page is reviewed by ',
-    reviewTail: ' and connects related columns with the consultation flow.',
     breadcrumbServices: 'Services',
   },
   ja: {
     backLabel: '← サービス一覧へ',
     keyPointsLabel: '主なポイント',
-    attorneyHeading: 'この分野の担当弁護士',
-    columnsLabel: '関連コラム — 詳しく見る',
+    attorneyHeading: '担当弁護士',
+    columnsLabel: '関連コラム',
     readMore: '記事を読む →',
     contactLabel: '法律相談',
     contactDesc: `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
     contactBtn: 'お問い合わせ',
     emptyMsg: 'この分野の関連コラムを準備中です。',
-    reviewLead: 'このページは',
-    reviewTail: 'が内容を確認し、関連コラムと相談窓口をご案内しています。',
     breadcrumbServices: '取扱業務',
   },
 };
@@ -464,15 +454,6 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               ) : null}
               {area.slug === 'civil' ? <CivilCommercialBlock locale={locale} /> : null}
               {(area.sourceSlug ?? area.slug) === 'criminal' ? <CriminalBoardLink locale={locale} /> : null}
-              {attorney && (area.sourceSlug ?? area.slug) !== 'criminal' ? (
-                <p className="svc-review-note">
-                  {t.reviewLead}
-                  <Link href={`/${locale}/lawyers/${attorney.slug}`} className="link-underline">
-                    {attorney.name}
-                  </Link>
-                  {t.reviewTail}
-                </p>
-              ) : null}
 
               {points.length > 0 && (
                 <div className="svc-keypoints" id={zhHant || ja || en ? 'service-keypoints' : undefined}>

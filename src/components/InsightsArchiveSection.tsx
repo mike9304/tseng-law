@@ -115,7 +115,7 @@ const copyByLocale = {
     title: '칼럼 아카이브',
     description: ARCHIVE_INTRO_COPY.ko,
     readMore: '자세히 보기',
-    dateFallback: '게시일 확인중',
+    dateFallback: '게시일 확인 중',
     prevLabel: '이전',
     nextLabel: '다음',
     carouselLabel: '최신 칼럼',

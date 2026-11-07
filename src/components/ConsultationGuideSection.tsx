@@ -7,7 +7,7 @@ const guideCopy = {
   ko: {
     label: 'GUIDE',
     title: '상담 전 확인 사항',
-    description: '문의 채널과 준비 자료를 미리 확인하면 상담 연결과 답변 정리가 더 빨라집니다.',
+    description: '연락 방법과 준비할 자료를 미리 확인해 두시면 됩니다.',
     cards: [
       {
         title: '가능한 상담 채널',
@@ -69,7 +69,7 @@ const guideCopy = {
   en: {
     label: 'GUIDE',
     title: 'Before You Contact Us',
-    description: 'Preparing the right materials in advance helps us route your inquiry and structure the consultation more efficiently.',
+    description: 'Knowing how to reach us and what to prepare ahead of time helps us arrange the consultation.',
     cards: [
       {
         title: 'Available channels',
@@ -107,8 +107,8 @@ const guideCopy = {
         title: 'ご利用いただける連絡手段',
         items: [
           'メールでお問い合わせいただけます。',
-          'ご希望の相談形式がある場合は、ご連絡時にお知らせください。',
-          'ご希望の使用言語がある場合は、ご連絡時にお知らせください。',
+          '台北での対面面談、Zoom または Google Meet のオンライン相談に対応しています。',
+          '韓国語・中国語・英語・日本語でご相談いただけます。',
         ],
       },
       {

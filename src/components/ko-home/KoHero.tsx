@@ -81,9 +81,7 @@ export default function KoHero() {
             법무법인 호정
           </p>
           <h1 id="ko-hero-title" className={styles.heroTitle}>
-            대만 법률을
-            <br />
-            한국어로 명확하게.
+            {hero.title}
           </h1>
           <p className={styles.heroLede}>{hero.subtitle}</p>
           <div className={styles.heroActions}>

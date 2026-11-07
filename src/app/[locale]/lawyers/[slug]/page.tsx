@@ -62,7 +62,6 @@ const sectionLabels = {
     internalLinks: '관련 서비스 및 콘텐츠',
     externalProfiles: '외부 프로필 및 채널',
     contact: '상담 문의',
-    searchTerms: '자주 찾는 검색 주제',
   },
   'zh-hant': {
     pageLabel: '律師簡介',
@@ -73,7 +72,6 @@ const sectionLabels = {
     internalLinks: '相關服務與內容',
     externalProfiles: '外部簡介與頻道',
     contact: '電子郵件諮詢',
-    searchTerms: '常見搜尋主題',
   },
   en: {
     pageLabel: 'PROFILE',
@@ -84,7 +82,6 @@ const sectionLabels = {
     internalLinks: 'Related Services and Content',
     externalProfiles: 'External Profiles and Channels',
     contact: 'Book Consultation',
-    searchTerms: 'Common Search Topics',
   },
   ja: {
     pageLabel: '弁護士プロフィール',
@@ -95,7 +92,6 @@ const sectionLabels = {
     internalLinks: '関連サービス・コンテンツ',
     externalProfiles: '外部プロフィール・チャンネル',
     contact: '相談を申し込む',
-    searchTerms: 'よく検索されるテーマ',
   },
 } as const;
 
@@ -344,21 +340,6 @@ export default async function LawyerProfilePage(
                   </a>
                 </div>
               </div>
-
-              {/* WO-X1 (EN-08 · J23): search-term chips read as SEO labels to
-                  EN/JA visitors, so they stay in metadata only there. */}
-              {locale === 'en' || locale === 'ja' ? null : (
-                <article className={`profile-entity-card ${styles.entityCard}`}>
-                  <div className="section-label">{labels.searchTerms}</div>
-                  <div className="profile-chip-group">
-                    {profile.searchTerms.map((term) => (
-                      <span key={term} className="profile-chip profile-chip--entity">
-                        {term}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              )}
 
               <div className={`profile-proof-grid ${styles.proofGrid}`}>
                 {profile.proofPoints.map((item) => (

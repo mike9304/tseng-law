@@ -61,12 +61,12 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '대만 변호사 · 파트너 변호사',
       title: '증준외 대만변호사 프로필',
       description:
-        '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
+        '대만 회사설립·투자·소송·비자·지식재산 업무를 담당하는 증준외 변호사의 경력과 대표 사례입니다. 상담은 한국어·중국어·일본어·영어로 가능합니다.',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '증준외 변호사는 한국·일본 고객의 대만 투자, 회사설립, 소송, 지식재산, 비자 및 리스크 검토 업무를 수행합니다.',
-        '당사무소는 한국어·중국어·일본어·영어로 상담을 제공하며, 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
+        '상담과 문서 검토, 필요한 절차 진행 및 분쟁 대응을 맡습니다.',
         '한국 유학생 헬스장 손해배상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 대표 사례가 있으며, WEI Lawyer 채널과 외부 매체를 통해 대만 법률을 설명하고 있습니다.',
       ],
       languages: ['한국어', '중국어', '일본어', '영어'],
@@ -211,7 +211,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       image: '/images/team/wei-tseng-official.png',
       summary: [
         'Attorney Wei Tseng advises overseas companies and individuals on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
-        'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, and connects the initial consultation, filings, execution, and dispute response into one strategy.',
+        'She advises clients in English, Chinese, Korean, and Japanese, from the initial consultation through filings and dispute proceedings.',
         'Representative work includes a gym injury claim that was won at first instance and later settled on appeal, alongside regular legal publishing through WEI Lawyer and external media appearances.',
       ],
       languages: ['English', 'Chinese', 'Korean', 'Japanese'],
@@ -286,7 +286,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '曾雋崴弁護士は、日本企業・在台日本人の方をはじめ、外国からのクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
-        '曾雋崴弁護士は日本語・中国語・英語・韓国語で直接ご相談に対応し、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
+        '日本語・中国語・英語・韓国語で直接ご相談いただけます。初回相談のほか、各種手続きや紛争対応を扱っています。',
         '留学生のジム負傷事故に関する損害賠償請求で一審勝訴を得た後、控訴審で和解により終結した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
       ],
       languages: ['日本語', '中国語', '英語', '韓国語'],

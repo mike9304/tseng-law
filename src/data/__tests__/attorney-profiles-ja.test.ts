@@ -85,7 +85,7 @@ describe('Japanese attorney profile', () => {
   it('uses the approved professional Japanese wording', () => {
     expect(japaneseProfile.practiceAreas).toContain('台湾投資に関する法務顧問');
     expect(japaneseProfile.faq[0].answer).toContain('台湾投資に関する法務顧問');
-    expect(japaneseProfile.summary[1]).toContain('各種手続の遂行');
+    expect(japaneseProfile.summary[1]).toContain('各種手続きや紛争対応を扱っています');
     // User decision 2026-09-28 (1A): first-instance win + appeal settlement,
     // no award amount.
     expect(japaneseProfile.summary[2]).toContain(

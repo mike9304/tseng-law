@@ -5,6 +5,7 @@ import SmartLink from '@/components/SmartLink';
 import { ZhHantTrail } from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
+import { siteContent } from '@/data/site-content';
 import {
   homeAttorneyButtonSurfaceIds,
   homeAttorneyImageSurfaceIds,
@@ -12,50 +13,6 @@ import {
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
-
-const copyByLocale = {
-  ko: {
-    label: 'ABOUT',
-    title: '증준외 변호사, 한국 고객을 위한 대만 법률 파트너',
-    description:
-      '대만 변호사 증준외는 한국어·일본어·중국어 커뮤니케이션 역량을 바탕으로 투자·법인설립·소송까지 연결된 전략을 제공합니다.',
-    summary:
-      '법원 소송 실무와 기업 법률고문 경험을 바탕으로, SBS 뉴스에 법률 의견과 해설을 제공하고 WEI Lawyer를 통해 법률정보를 꾸준히 발행하고 있습니다.',
-    cta: '변호사 프로필 보기'
-  },
-  'zh-hant': {
-    label: 'ABOUT',
-    title: '曾雋崴律師：服務在地與跨境客戶的台灣律師',
-    description:
-      '曾雋崴律師能以韓文、日文、中文溝通，協助規劃投資、公司設立與訴訟策略。',
-    summary:
-      '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續在 WEI Lawyer 發布法律資訊。',
-    cta: '查看律師簡介'
-  },
-  en: {
-    label: 'ABOUT',
-    title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
-    description:
-      'Attorney Wei Tseng provides integrated investment, incorporation, and litigation strategy, and consults directly in English, Chinese, Korean, and Japanese.',
-    summary:
-      'Experienced in court litigation and corporate advisory work; has provided legal commentary to Korea’s SBS News and publishes Taiwan-law explainers on the WEI Lawyer channel.',
-    cta: 'View Lawyer Profile'
-  },
-  ja: {
-    label: 'ABOUT',
-    title: '曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー',
-    description:
-      '曾雋崴弁護士は日本語・中国語・英語・韓国語で直接ご相談に対応し、投資・会社設立・訴訟まで一貫した戦略を提供します。',
-    summary:
-      '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',
-    cta: '弁護士プロフィールを見る',
-  },
-} as const;
-
-/** The home attorney copy for a locale (label, title, summary, link label). The en home design renders the same copy in its own stage. */
-export function getHomeAttorneyCopy(locale: SiteLocale) {
-  return copyByLocale[locale];
-}
 
 function protectAboutHeadingUnit(title: string, unit: string) {
   const index = title.indexOf(unit);
@@ -84,6 +41,17 @@ export type HomeAttorneyOverride = {
   largePortrait?: boolean;
 };
 
+/** The home attorney copy for a locale (label, title, summary, link label). The en home design renders the same copy in its own stage. */
+export function getHomeAttorneyCopy(locale: SiteLocale) {
+  const home = siteContent[locale].homeAttorney;
+  return {
+    label: home.label,
+    title: home.title,
+    summary: home.summary,
+    cta: home.ctaLabel,
+  };
+}
+
 export default function HomeAttorneySplit({
   locale,
   presentation,
@@ -98,7 +66,7 @@ export default function HomeAttorneySplit({
   /** Optional slot rendered directly above the summary paragraph (ja design). Omitted: nothing is rendered. */
   beforeSummary?: ReactNode;
 }) {
-  const copy = copyByLocale[locale];
+  const home = siteContent[locale].homeAttorney;
   const profilePath = override?.href ?? getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
   const useLargeOfficialPortrait = override
@@ -109,12 +77,12 @@ export default function HomeAttorneySplit({
   const imageAlt = override?.imageAlt ?? `${lead.name} ${lead.role}`;
   const badgeName = override?.badgeName ?? lead.name;
   const badgeRole = override?.badgeRole ?? lead.role;
-  const label = override?.label ?? copy.label;
-  const title = override?.title ?? copy.title;
+  const label = override?.label ?? home.label;
+  const title = override?.title ?? home.title;
   const intro = override?.intro ?? lead.intro;
-  const summary = override?.summary ?? copy.summary;
+  const summary = override?.summary ?? home.summary;
   const contactLine = override?.contactLine ?? `${lead.name} · ${lead.role} · ${lead.email}`;
-  const cta = override?.cta ?? copy.cta;
+  const cta = override?.cta ?? home.ctaLabel;
 
   return (
     <section className="section section--gray split-section split--img-left" id={omitLandmarkId ? undefined : 'about'} data-tone="light">

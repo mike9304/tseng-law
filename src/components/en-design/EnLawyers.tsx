@@ -30,7 +30,7 @@ export function EnLawyersGlance() {
   return (
     <EnGlance
       items={[
-        { term: 'Lead attorney', value: <Link href={`/en/lawyers/${profile.slug}`}>{profile.name}</Link>, note: profile.role },
+        { term: 'Partner attorney', value: <Link href={`/en/lawyers/${profile.slug}`}>{profile.name}</Link>, note: profile.role },
         { term: 'Languages', value: profile.languages.join(', ') },
         { term: 'Offices', value: enOfficeNames().join(' · ') },
       ]}

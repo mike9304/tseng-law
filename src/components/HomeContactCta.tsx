@@ -33,7 +33,8 @@ export default function HomeContactCta({
   const consultationEmail = getConsultationPublicEmail();
   const consultationEmailHref = getConsultationPublicMailto(locale);
   const consultationAriaLabel = getConsultationCtaLabel(locale);
-  const { title, description } = content.homeContactCta;
+  const title = content.homeContactCta.title;
+  const description = content.homeContactCta.description;
   const ai = getAiIntakeDiscovery(locale);
 
   return (

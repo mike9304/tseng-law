@@ -3,7 +3,7 @@ export const viSiteCopy = {
   home: {
     title: 'Dịch vụ pháp lý\ntại Đài Loan.',
     description: 'Tư vấn và giải quyết tranh chấp cho cá nhân, gia đình và doanh nghiệp theo pháp luật Đài Loan.',
-    audience: 'Thông tin bằng tiếng Việt dành cho quý vị đang làm việc, học tập, sinh sống hoặc kinh doanh tại Đài Loan.',
+    audience: 'Nội dung trang bằng tiếng Việt, dành cho người đang học tập, làm việc, sinh sống hoặc kinh doanh tại Đài Loan.',
     servicesAction: 'Các lĩnh vực hỗ trợ',
     articlesAction: 'Bài viết pháp luật',
     issuesAction: 'Pháp luật qua tin tức',
@@ -11,14 +11,14 @@ export const viSiteCopy = {
   },
   services: {
     title: 'Công việc, gia đình và kinh doanh',
-    description: 'Tư vấn và giải quyết tranh chấp về lao động, gia đình, dân sự, hình sự, đầu tư và sở hữu trí tuệ.',
+    description: 'Lao động, gia đình, dân sự, hình sự, đầu tư và sở hữu trí tuệ theo pháp luật Đài Loan.',
     detailAction: 'Phạm vi hỗ trợ',
     allAction: 'Xem các dịch vụ',
     scopeTitle: 'Phạm vi của từng vụ việc',
     criminalAction: 'Bài viết về tố tụng hình sự',
   },
   columns: {
-    title: 'Pháp luật Đài Loan, bằng tiếng Việt',
+    title: 'Bài viết pháp luật Đài Loan',
     description: 'Bài viết về những vấn đề pháp lý trong đời sống và hoạt động kinh doanh tại Đài Loan.',
     allAction: 'Tất cả bài viết',
     readAction: 'Đọc bài viết',
@@ -33,7 +33,7 @@ export const viSiteCopy = {
     aboutAction: 'Về văn phòng',
   },
   faq: {
-    title: 'Trao đổi với văn phòng',
+    title: 'Câu hỏi thường gặp',
     allAction: 'Các câu hỏi thường gặp',
   },
   offices: {
@@ -45,7 +45,7 @@ export const viSiteCopy = {
     title: 'Trao đổi về vụ việc của quý vị',
     description: 'Quý vị có thể gửi một bản tóm tắt về vụ việc, mối liên hệ với Đài Loan và thời hạn đang cần giải quyết. Phạm vi công việc và chi phí được xác nhận riêng trước khi bắt đầu.',
     emailLabel: 'Email liên hệ',
-    disclosureLabel: 'Ngôn ngữ và việc tiếp nhận yêu cầu',
+    disclosureLabel: 'Ngôn ngữ tư vấn và cách gửi yêu cầu',
     formAction: 'Biểu mẫu liên hệ',
     privacyAction: 'Cách xử lý thông tin cá nhân',
     preparationTitle: 'Nội dung trao đổi ban đầu',

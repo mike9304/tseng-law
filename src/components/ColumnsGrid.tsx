@@ -42,7 +42,7 @@ const searchCopy = {
     category: '카테고리',
     year: '연도',
     month: '월',
-    query: '검색어',
+    query: '키워드',
     noMatches: '선택한 조건에 맞는 칼럼이 없습니다. 필터를 초기화하면 모든 칼럼을 볼 수 있습니다.',
     noPosts: '아직 게시된 칼럼이 없습니다.',
   },

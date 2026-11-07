@@ -10,7 +10,6 @@ export type LandingContent = {
   keywords: string[];
   heroLabel: string;
   title: string;
-  /** Direct declarative paragraph AI engines can excerpt verbatim. */
   lead: string[];
   servicesHeading: string;
   services: string[];
@@ -45,12 +44,12 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     lead: [
       '법무법인 호정(Hovering International Law Firm)은 타이베이에 소재한 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어·영어로 상담합니다.',
       '대만 회사설립, 민사·형사 소송, 투자 자문을 다루며, 한국 기업과 개인의 대만 법률 문제를 한국어 소통으로 안내합니다.',
-      '초기 상담에서 사실관계 정리, 관할·절차 설계, 문서 검토, 소송 대응까지 한 흐름으로 검토합니다.',
+      '초기 문의 이후 사실관계 정리, 관할·절차, 문서 검토, 소송 단계까지 같은 언어로 안내합니다.',
     ],
     servicesHeading: '업무 분야',
     services: [
       '대만 회사설립·법인 설립(자회사·지사·연락사무소)',
-      '대만 투자·투심회 승인·비자(취업허가증·거류증)',
+      '대만 투자·필요 시 외국인 투자 승인·비자(취업허가증·거류증)',
       '민사·형사 소송 및 손해배상·교통사고',
       '계약 검토·채권 회수·부동산 분쟁',
       '상표·지식재산권, 노사·가사·상속',
@@ -77,7 +76,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       },
       {
         q: '한국 기업의 대만 회사설립도 도와주시나요?',
-        a: '네. 자회사·지사·연락사무소 설립, 투심회 투자 승인, 비자(취업허가증·거류증), 세무 등기까지 설립 전 과정을 한국어로 안내합니다.',
+        a: '네. 자회사·지사·연락사무소 설립, 회사명 예비심사, 필요 시 외국인 투자 승인, 예비 계좌·자본금 송금·등기, 비자(취업허가증·거류증), 세무 등기까지 설립 과정을 한국어로 안내합니다.',
       },
       {
         q: '대만에서 한국인이 소송을 할 때 변호사가 필요한가요?',
@@ -100,7 +99,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       { href: 'taiwan-litigation-lawyer', label: '대만 소송 변호사 안내' },
       { href: 'services', label: '대만 법률 서비스 전체 보기' },
     ],
-    ctaTitle: '대만 법률 문제, 한국어로 상담 받으세요',
+    ctaTitle: '한국어로 대만 법률 상담 문의',
     ctaText:
       '회사설립, 투자, 소송, 가사 분쟁 등 대만 법률 문제가 있으시면 증준외 대만 변호사에게 이메일로 문의해 주세요. 내용을 검토한 뒤 상담 흐름을 안내해 드립니다.',
     ctaButton: '증준외 대만 변호사에게 이메일 상담',
@@ -199,7 +198,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     lead: [
       'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, English, Chinese, and Japanese.',
       'The firm handles Taiwan company setup, civil and criminal litigation, and investment advisory, guiding Korean companies and individuals through Taiwan legal matters in Korean.',
-      'From fact-finding and jurisdiction design in the first consultation to document review and litigation response, the firm works through the matter end to end.',
+      'After the first enquiry, the firm explains jurisdiction, documents, and litigation steps in the same language when those topics arise.',
     ],
     servicesHeading: 'Practice Areas',
     services: [

@@ -6,6 +6,7 @@ import {
   guidanceLanguageNames,
   guidanceTeamCopy,
 } from '@/data/international-guidance-team';
+import { viSiteCopy } from '@/data/vi-site';
 import { getOrganizationName } from '@/lib/seo';
 import styles from './ViArticle.module.css';
 
@@ -32,7 +33,7 @@ export default function ViArticleAuthority() {
         <h3 className={styles.name}><Link href="/vi/lawyers">{name}</Link></h3>
         <p>{buildGuidanceQualificationSentence('vi', name, getOrganizationName('en'))}</p>
         <p className={styles.languages}>{copy.consultationLanguagesLabel}: {languages.join(', ')}.</p>
-        <Link className={styles.profileLink} href="/vi/lawyers">Xem luật sư và đội ngũ <span aria-hidden>→</span></Link>
+        <Link className={styles.profileLink} href="/vi/lawyers">{viSiteCopy.team.action}<span aria-hidden> →</span></Link>
       </div>
     </section>
   );

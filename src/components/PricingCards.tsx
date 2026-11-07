@@ -42,7 +42,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         details: [
           '대면 또는 화상 상담',
           '한국어·영어·중국어·일본어 상담 가능',
-          '법률 이슈 분석 및 방향 제시',
+          '법률 쟁점 정리와 대응 방향 안내',
           '사전 예약 필수'
         ]
       },
@@ -162,7 +162,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         details: [
           'In person in Taipei or by video',
           'Available in English, Chinese, Korean, and Japanese',
-          'Legal issue analysis & guidance',
+          'Review of legal issues and next steps',
           'Appointment required'
         ]
       },

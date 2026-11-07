@@ -34,7 +34,7 @@ const GROUPS: Record<AppleDesignLocale, readonly ServiceGroup[]> = {
 export const KO_SERVICE_ORDER = ['investment', 'labor', 'ip', 'civil', 'criminal', 'family'] as const;
 
 const CARD_LABELS: Record<AppleDesignLocale, { tags: string; detail: string; sep: string }> = {
-  'zh-hant': { tags: '常見情境', detail: '查看詳情', sep: '：' },
+  'zh-hant': { tags: '常見情境', detail: '服務說明', sep: '：' },
   ko: { tags: '주요 업무', detail: '자세히 보기', sep: ': ' },
 };
 

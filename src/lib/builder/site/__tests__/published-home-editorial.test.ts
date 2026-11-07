@@ -5,11 +5,14 @@ import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
 import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import savedJulyHome from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home-july.json';
+import approvedCopyMap from '@/lib/builder/canvas/__tests__/fixtures/approved-zh-home-copy-20261107.json';
 import {
   hasLegacyJulyZhHantHomeDualTree,
   normalizeLegacyZhHantHome,
   normalizeLegacyZhHantHomeRead,
 } from '@/lib/builder/canvas/home-zh-hant-parity';
+import { readZhHantStockHomeCopy } from '@/lib/builder/site/zh-hant-stock-home-copy';
+import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import {
   CURRENT9_COMPOSITE_RENDER_ORDER,
   JULY_NATURAL_FLOW_SECTION_IDS,
@@ -59,6 +62,45 @@ function julyFixture() {
     'zh-hant',
     true,
   );
+}
+
+function applyApprovedZhHomeCopy20261107(doc: BuilderCanvasDocument) {
+  const byId = new Map(doc.nodes.map((node) => [node.id, node]));
+  for (const change of approvedCopyMap.changes) {
+    const node = byId.get(change.node_id);
+    if (!node || node.kind !== 'text') throw new Error(`expected text node ${change.node_id}`);
+    if (node.content.text !== change.old) throw new Error(`old literal mismatch for ${change.node_id}`);
+    node.content = { ...node.content, text: change.new };
+  }
+}
+
+function approvedNov20261107Fixture() {
+  const doc = julyFixture();
+  applyApprovedZhHomeCopy20261107(doc);
+  return doc;
+}
+
+function expectedStockCopyLiteralsFromApprovedMap() {
+  const raw = structuredClone(savedJulyHome);
+  const byId = new Map(raw.nodes.map((node) => [node.id, node]));
+  for (const change of approvedCopyMap.changes) {
+    const node = byId.get(change.node_id);
+    if (!node || node.kind !== 'text') throw new Error(`expected text node ${change.node_id}`);
+    if (node.content.text !== change.old) throw new Error(`old literal mismatch for ${change.node_id}`);
+    node.content = { ...node.content, text: change.new };
+  }
+  const intro = byId.get('home-attorney-intro-1');
+  const faqItems = [];
+  for (let index = 0; index < 13; index += 1) {
+    const question = byId.get(`home-faq-item-${index}-question-text`);
+    const answer = byId.get(`home-faq-item-${index}-answer`);
+    if (question?.kind !== 'text' || answer?.kind !== 'text') throw new Error(`faq ${index} missing`);
+    faqItems.push({ question: question.content.text, answer: answer.content.text });
+  }
+  return {
+    attorneyIntro: intro?.kind === 'text' ? intro.content.text : undefined,
+    faqItems,
+  };
 }
 
 function contentString(node: { content: Record<string, unknown> } | undefined, keys: string[]) {
@@ -263,6 +305,42 @@ describe('current9 published home editorial admission', () => {
       homeEditorialPresentation: 'editorial',
     });
     expect(publishedHomeEditorialCompositeProps(hero, { current9: false, july: null })).toEqual({});
+  });
+});
+
+describe('2026-11-07 approved zh-hant home copy variant', () => {
+  it('admits the approved 422-node variant with legacy July presentation and safe envelope', async () => {
+    const doc = approvedNov20261107Fixture();
+    expect(doc.nodes).toHaveLength(422);
+    expect(await hasLegacyJulyZhHantHomeDualTree(doc, 'zh-hant', true)).toBe(true);
+    expect(isSafeNormalizedDocumentEnvelope(doc)).toBe(true);
+    expect(deriveJulyHeroEditorialPresentation(doc, 'zh-hant')).not.toBeNull();
+  });
+
+  it('reads all 13 FAQ pairs and attorney intro from the literal map', () => {
+    const expected = expectedStockCopyLiteralsFromApprovedMap();
+    const copy = readZhHantStockHomeCopy(approvedNov20261107Fixture());
+    expect(copy.faqItems).toHaveLength(13);
+    expect(copy.attorneyIntro).toBe(expected.attorneyIntro);
+    copy.faqItems.forEach((item, index) => {
+      expect(item.question).toBe(expected.faqItems[index]?.question);
+      expect(item.answer).toBe(expected.faqItems[index]?.answer);
+    });
+  });
+
+  it('leaves normalized input unchanged and keeps normalizeLegacyZhHantHome idempotent', () => {
+    const doc = approvedNov20261107Fixture();
+    const original = structuredClone(doc);
+    expect(normalizeLegacyZhHantHome(doc, 'zh-hant', true)).toBe(doc);
+    expect(doc).toEqual(original);
+    expect(normalizeLegacyZhHantHome(doc, 'zh-hant', true)).toBe(doc);
+  });
+
+  it('keeps normalizeLegacyZhHantHomeRead idempotent on the approved variant', async () => {
+    const doc = approvedNov20261107Fixture();
+    const read = await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true);
+    expect(await hasLegacyJulyZhHantHomeDualTree(read, 'zh-hant', true)).toBe(true);
+    expect(await normalizeLegacyZhHantHomeRead(read, 'zh-hant', true)).toBe(read);
   });
 });
 

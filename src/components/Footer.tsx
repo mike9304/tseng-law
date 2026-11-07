@@ -109,12 +109,12 @@ export default function Footer({
   const officeQuickLinksLabel =
     guidanceFooter?.officeQuickLinksLabel ??
     (locale === 'ko'
-      ? '사무소 위치 바로가기'
+      ? '사무소 위치'
       : locale === 'zh-hant'
-        ? '事務所據點快速連結'
+        ? '各據點'
         : locale === 'ja'
-          ? '事務所所在地へのクイックリンク'
-          : 'Quick links to office locations');
+          ? '事務所所在地'
+          : 'Office locations');
   // Office order in `contact.locations` is taipei / taichung / kaohsiung /
   // pingtung, the same order `guidanceOfficeCopy.officeTitles` declares.
   const guidanceOfficeOrder: readonly GuidanceOfficeId[] = [

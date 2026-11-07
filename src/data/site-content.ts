@@ -273,8 +273,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         ],
         featured: [
           {
-            title: '대만 투자 및 소송 전 과정 지원',
-            description: '회사 설립부터 소송까지 한국·일본 고객을 위한 실무 지원을 제공합니다.',
+            title: '대만 투자·회사 설립과 소송',
+            description: '회사 설립부터 소송까지 한국·일본 고객의 대만 법률 업무를 다룹니다.',
             href: '/ko/services'
           },
           {
@@ -334,7 +334,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'TAIWAN LEGAL',
       title: '대만 법률을 한국어로 명확하게.',
       subtitle:
-        '한국어·중국어·일본어·영어로 소통하며 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
+        '한국어·중국어·일본어·영어로 대만 투자·소송·자문 문의에 답합니다.',
       typingPhrases: [
         '대만 투자, 법인설립의 시작',
         '대만 소송, 승소의 경험',
@@ -447,9 +447,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     stats: {
       label: 'ABOUT',
-      title: '공식 프로필로 확인하는 국제 업무 기반',
+      title: '대만 4개 사무소, 네 가지 언어 상담',
       description:
-        '당사무소는 한국어·중국어·일본어·영어 4개 언어로 대만 법률 상담을 제공합니다. 공식 변호사 프로필을 기준으로 대만 4개 사무소, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 두 개의 최상위급 어학 자격을 정리했습니다.',
+        '한국어·중국어·일본어·영어로 대만 법률 상담을 제공합니다. 대만 내 4개 사무소에서 7개 업무 분야를 다루며, 증준외 변호사는 TOPIK 6급과 JLPT N1 자격을 보유하고 있습니다.',
       highlightWords: [
         '대만 4개 사무소',
         '중국어',
@@ -473,7 +473,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '대만 투자·회사 설립 안내',
-          summary: '회사 설립, 비자 신청, 상표·특허, 세무 상담 등 투자 전 과정을 지원합니다.',
+          summary: '대만 법인 설립과 운영에 필요한 비자·지식재산·세무 업무를 안내합니다.',
           date: '상시',
           tag: '가이드',
           href: '/ko/services#investment'
@@ -555,7 +555,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '대만 투자·회사 설립',
           summary:
-            '회사 설립, 비자 신청, 상표·특허 신청, 법적 위험 분석, 세무 상담 등 투자 전 과정을 지원합니다.',
+            '대만 법인 설립과 운영에 필요한 비자·지식재산·세무 업무를 안내합니다.',
           meta: '업무',
           tag: '투자·자문',
           href: '/ko/services#investment',
@@ -582,18 +582,20 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     services: {
       label: 'SERVICES',
       title: '주요 서비스',
-      description: '대만 내 투자, 소송, 자문 전반을 구조화하여 제공합니다.',
+      description: '대만 투자·회사 설립, 소송, 자문 업무를 안내합니다.',
       items: [
         {
           title: '투자·법인설립',
-          description: '한국 기업의 대만 진출을 위한 법인 형태 선택(자회사·지사·유한회사)부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보까지 전 과정을 지원합니다. 화장품·물류 등 업종별 인허가 요건과 해산·청산을 통한 자본금 회수 절차까지 안내합니다.',
+          description:
+            '한국 기업의 대만 진출 시 법인 형태(자회사·지사·연락사무소)를 정한 뒤 회사명 예비심사·예약을 거치고, 필요한 경우 외국인 투자 승인을 신청합니다. 설립 준비 명의로 예비계좌를 연 뒤 자본금을 송금하고, 자본금 심사와 회사 등기, 영업장소 확인까지 절차를 안내합니다. 화장품은 제품정보 파일(PIF) 작성·보관 의무가 있으며, 화물자동차 운송업 등 실제 사업에 따른 인허가와 해산·청산을 통한 자본 회수도 다룹니다.',
           href: '/ko/services#investment',
           details: [
-            '법인 형태 비교: 자회사 vs 지사 vs 유한회사',
-            '투자심의위원회(투심회) 승인 절차 대행',
-            '자본금 송금·예비계좌·정식계좌 전환',
+            '법인 형태 비교: 자회사 vs 지사 vs 연락사무소',
+            '회사명 예비심사·예약(투자 승인 전)',
+            '필요 시 외국인 투자 승인 신청·절차 대행',
+            '예비계좌 개설·자본금 송금·자본금 심사',
             '영업장소 용도지역 적합성 사전 확인',
-            '업종별 인허가: 화장품(PIF), 물류(운송면허) 등',
+            '화장품 제품정보 파일(PIF) 작성·보관, 화물자동차 운송업 등 사업별 인허가',
             '해산·청산 절차를 통한 합법적 자본금 회수',
           ],
           relatedColumns: [
@@ -609,7 +611,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '민사소송·손해배상',
-          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
+          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건을 맡습니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
           href: '/ko/services#civil',
           details: [
             '손해배상 청구 소송 (인신사고·재산피해)',
@@ -626,7 +628,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '가사소송',
-          description: '이혼, 재산분할, 친권, 상속 등 가사 사건을 대응합니다. 한국-대만 국제결혼 증가에 따른 협의이혼·조정이혼 절차, 외국인 배우자의 호적 등록 문제, 상속 순위 및 잔여재산 분배 청구까지 전략적으로 지원합니다.',
+          description: '이혼, 재산분할, 친권, 상속 등 가사 사건을 맡습니다. 협의이혼·조정이혼·재판이혼 절차, 외국인 배우자 호적 등록, 상속 순위 및 잔여재산 분배 청구 등 한국과 대만에 걸친 사안을 검토합니다.',
           href: '/ko/services#family',
           details: [
             '협의이혼: 증인 2인 확보 및 호적 등록',
@@ -790,7 +792,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '대만 투자·회사 설립 체크리스트',
-          summary: '설립 전 준비 사항과 주요 절차를 요약합니다.',
+          summary: '법인 형태 결정 후 회사명 예비심사·예약, 필요 시 외국인 투자 승인, 예비계좌·송금·등기 순으로 정리합니다.',
           tag: '가이드',
           href: '/ko/services#investment'
         },
@@ -954,8 +956,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       cta: { label: '이메일 상담 신청', href: consultationMailto.ko }
     },
     homeContactCta: {
-      title: '대만 법률 이슈, 지금 바로 상담하세요.',
-      description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.'
+      title: '대만 법률 문의는 이메일로 보내 주세요.',
+      description:
+        '문의 내용과 연락처를 보내 주시면 업무 범위와 비용을 안내합니다.',
     },
     footer: {
       note: '한국어·중국어·일본어·영어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
@@ -1352,14 +1355,16 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '投資與公司設立',
-          description: '從公司型態選擇（子公司、分公司、有限公司）、經濟部投資審議司審查、資本匯入、銀行開戶到營業場所確認，協助外國投資人（含韓國企業）在台設立營運據點。另處理化粧品產品登錄與PIF建立、保存，物流業運輸執照等特殊行業許可，以及解散清算程序。',
+          description:
+            '從公司型態選擇（子公司、分公司、代表處）起，先辦理公司名稱預查／保留，必要時向經濟部投資審議司申請僑外投資核准；以籌備處名義開立籌備處帳戶後辦理資本匯入與資本額審定，再完成公司登記與營業場所確認。另處理化粧品產品登錄與產品資訊檔（PIF）建立保存、汽車貨運等業務所需的行業許可，以及解散清算程序。',
           href: '/zh-hant/services#investment',
           details: [
-            '公司型態比較：子公司、分公司、有限公司',
-            '經濟部投資審議司核准程序代辦',
-            '資本額匯入、籌備處帳戶轉為正式帳戶',
+            '設立型態比較：子公司、分公司、代表人辦事處',
+            '公司名稱預查／保留（投資核准前）',
+            '必要時經濟部投資審議司僑外投資核准代辦',
+            '籌備處帳戶開立、資本匯入與資本額審定、籌備處帳戶轉為正式帳戶',
             '營業場所土地使用分區事先確認',
-            '特殊行業許可：化粧品（PIF）、物流（運輸執照）等',
+            '化粧品產品登錄與產品資訊檔（PIF）建立保存、汽車貨運等業務的許可',
             '解散清算程序與合法資本回收',
           ],
           relatedColumns: [
@@ -1818,8 +1823,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         ],
         featured: [
           {
-            title: 'End-to-End Support for Taiwan Investment and Litigation',
-            description: 'From incorporation to dispute resolution, we provide practical support for international clients.',
+            title: 'Taiwan investment, setup, and litigation',
+            description: 'From incorporation to disputes, we handle Taiwan legal work for international clients.',
             href: '/en/services'
           },
           {
@@ -1931,7 +1936,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Labor / Criminal / Civil / Family',
-          summary: 'Comprehensive dispute and litigation support.',
+          summary: 'Labor, criminal, civil, and family disputes in Taiwan.',
           meta: 'Guide',
           href: '/en/services#labor',
           image: '/images/feature-2.svg'
@@ -2038,7 +2043,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'IP / Labor / Criminal / Civil / Family Matters',
-          summary: 'Comprehensive handling across key litigation and advisory areas.',
+          summary: 'Patent, trademark, labor, criminal, civil, and family disputes in Taiwan.',
           date: 'Ongoing',
           tag: 'Guide',
           href: '/en/services#ip'
@@ -2139,14 +2144,16 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       items: [
         {
           title: 'Investment & Incorporation',
-          description: 'End-to-end support from entity structuring to approvals, banking, permits, and launch.',
+          description:
+            'For Taiwan market entry we compare entity types (subsidiary, branch, representative office), reserve the company name, and apply for foreign investment approval when required. A preparatory bank account is opened before capital is remitted, followed when applicable by capital verification, company registration, and business-premises confirmation. Cosmetics product compliance—including PIF creation and retention—regulatory requirements for logistics activities, and lawful capital recovery via dissolution or liquidation are also covered.',
           href: '/en/services#investment',
           details: [
-            'Compare entity structures: subsidiary, branch, and limited company',
-            'Investment Commission approval and application support',
-            'Capital remittance, preparatory accounts, and conversion to operating accounts',
+            'Compare entity structures: subsidiary, branch, and representative office',
+            'Company name reservation (before investment approval)',
+            'Foreign investment approval and filing when required',
+            'Preparatory account opening, capital remittance, and capital verification',
             'Advance review of zoning and permitted use for business premises',
-            'Industry-specific permits, including cosmetics PIF and logistics licensing',
+            'Cosmetics product compliance (PIF creation and retention) and regulatory requirements for logistics activities',
             'Lawful capital recovery through dissolution and liquidation'
           ],
           relatedColumns: [
@@ -2713,7 +2720,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '労使・刑事・民事・家事',
-          summary: '紛争・訴訟の包括的サポート。',
+          summary: '労使・刑事・民事・家事の紛争・訴訟。',
           meta: 'ガイド',
           href: '/ja/services#labor',
           image: '/images/feature-2.svg'
@@ -2820,7 +2827,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '知財・労使・刑事・民事・家事',
-          summary: '主要分野の訴訟・顧問を包括的に対応。',
+          summary: '知財・労使・刑事・民事・家事の訴訟・顧問。',
           date: '常時',
           tag: 'ガイド',
           href: '/ja/services#ip'
@@ -2921,14 +2928,16 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       items: [
         {
           title: '投資・会社設立',
-          description: '日本企業をはじめ外国企業の台湾進出に際し、台湾子会社・台湾支店・代表者事務所等の組織形態の選定から、必要に応じた経済部投資審議司への投資申請、投資資金の送金・投資額審定、銀行口座の開設、営業場所の適法性確認まで一貫して支援します。化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可、解散・清算等による残余財産・投資資金回収の法的手続についてもご案内します。',
+          description:
+            '日本企業をはじめ外国企業の台湾進出に際し、組織形態を選んだあと会社名の事前確認・予約を経て、必要に応じて経済部投資審議司への投資申請を支援します。承認後は設立準備口座の開設、送金、資本金査定、会社登記、営業場所の適法性確認まで手続をご案内します。化粧品の製品登録と製品情報ファイル（PIF）の作成・保存義務、自動車貨物運送業等の許認可、解散・清算による資金回収についても対応します。',
           href: '/ja/services#investment',
           details: [
             '台湾子会社（有限公司・股份有限公司）、台湾支店、代表者事務所の比較',
-            '経済部投資審議司への投資申請・投資額審定（該当する場合）',
-            '投資資金の送金、会社設立準備口座の開設・正式口座への切替え',
+            '会社名の事前確認・予約（投資審査の前）',
+            '経済部投資審議司への投資申請支援（該当する場合）',
+            '会社設立準備口座の開設、投資資金の送金、資本金査定',
             '事業所の土地使用分区・用途適合性の事前確認',
-            '化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可',
+            '化粧品の製品登録と製品情報ファイル（PIF）の作成・保存、自動車貨物運送業等の業種別許認可',
             '解散・清算、減資等による残余財産・投資資金回収の法的手続'
           ],
           relatedColumns: [
@@ -3017,9 +3026,9 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾雋崴弁護士——国際クライアントの台湾法パートナー',
+      title: '曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー',
       summary:
-        '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',
+        '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。日本語で直接ご相談いただけます。訴訟実務と企業の法律顧問として、日本企業の台湾進出から契約・労務・紛争まで対応します。',
       ctaLabel: '弁護士プロフィールを見る'
     },
     homeResults: {

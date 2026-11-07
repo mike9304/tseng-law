@@ -35,7 +35,7 @@ const DOORS = [
     text: '在台設立公司與投資審查，可用中文、韓文、日文或英文溝通。',
     links: [
       { label: '投資與公司設立', href: '/zh-hant/services/investment' },
-      { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' },
+      { label: '韓語諮詢', href: '/zh-hant/korean-lawyer-in-taiwan' },
     ],
   },
 ] as const satisfies ReadonlyArray<{ title: string; text: string; image?: string; links: ReadonlyArray<{ label: string; href: string }> }>;

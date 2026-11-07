@@ -27,7 +27,7 @@ const ABOUT_LABELS: Record<AppleDesignLocale, {
   'zh-hant': {
     founded: '創立',
     offices: '據點',
-    languages: '溝通語言',
+    languages: '諮詢語言',
     languagesValue: '中文・韓文・日文・英文',
     contactLink: '聯絡方式',
     jumpsLabel: '本頁內容',

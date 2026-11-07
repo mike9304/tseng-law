@@ -48,17 +48,17 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學), với văn phòng tại Đài Bắc, Cao Hùng, Đài Trung và Bình Đông. Văn phòng không cam kết kết quả vụ việc. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Hovering International Law Firm được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學), với văn phòng tại Đài Bắc, Cao Hùng, Đài Trung và Bình Đông. Văn phòng Đài Trung xử lý việc liên quan Hàn Quốc và Nhật Bản. Văn phòng không cam kết kết quả vụ việc. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/lawyers', '/vi/services'],
     },
     lawyers: {
       answer:
-        'Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư thành viên của văn phòng. Đội ngũ phụ trách pháp luật Đài Loan và các vụ việc giữa Hàn Quốc và Đài Loan, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Luật sư tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Đội ngũ do luật sư Wei Tseng phụ trách xử lý pháp luật Đài Loan và vụ việc giữa Hàn Quốc và Đài Loan. Luật sư Wei Tseng (曾雋崴) được cấp phép hành nghề tại Đài Loan và là luật sư đối tác của văn phòng; bà làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/about', '/vi/contact'],
     },
     pricing: {
       answer:
-        'Trang này không công bố bảng giá. Phạm vi công việc được xác định từ tóm tắt quý vị gửi, rồi mức phí và cách tính được xác nhận trước khi bắt đầu. Buổi tư vấn có thể là dịch vụ có thu phí. Ngoài thù lao luật sư có thể có khoản nộp cho tòa án hoặc cơ quan nhà nước. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Trang này không công bố bảng giá. Phạm vi công việc được xác định từ tóm tắt quý vị gửi, rồi mức phí và cách tính được xác nhận trước khi bắt đầu. Buổi tư vấn có thể là dịch vụ có thu phí. Ngoài thù lao luật sư có thể có khoản nộp cho tòa án hoặc cơ quan nhà nước. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/contact', '/vi/faq'],
     },
     contact: {
@@ -68,7 +68,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Phần hỏi đáp trả lời ở mức thông tin chung: sáu lĩnh vực công việc, cách chuẩn bị tóm tắt, chi phí và ý nghĩa của việc gửi yêu cầu. Yêu cầu đã gửi đang chờ luật sư xem xét; không phải ý kiến pháp lý, không phải lịch hẹn, và không tạo lập quan hệ giữa luật sư và khách hàng. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        'Phần hỏi đáp trả lời ở mức thông tin chung: sáu lĩnh vực công việc, cách chuẩn bị tóm tắt, chi phí và ý nghĩa của việc gửi yêu cầu. Yêu cầu đã gửi đang chờ luật sư xem xét; không phải ý kiến pháp lý, không phải lịch hẹn, và không tạo lập quan hệ giữa luật sư và khách hàng. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/contact', '/vi/services'],
     },
   },
@@ -85,7 +85,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Tim yang dipimpin advokat Wei Tseng menangani urusan hukum Taiwan dan perkara Korea–Taiwan. Wei Tseng (曾雋崴) adalah advokat berizin praktik di Taiwan dan advokat mitra di Hovering International Law Firm, yang bekerja untuk klien dari Korea, Jepang, dan klien internasional lainnya. Konsultasi di kantor hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
+        'Tim yang dipimpin advokat Wei Tseng menangani urusan hukum Taiwan dan perkara Korea–Taiwan. Wei Tseng (曾雋崴) berizin praktik di Taiwan dan merupakan advokat mitra di Hovering International Law Firm; ia menangani klien dari Korea, Jepang, dan klien internasional lainnya. Konsultasi di kantor hanya dalam empat bahasa: Inggris, Mandarin (中文), Jepang, dan Korea.',
       sources: ['/id/about', '/id/contact'],
     },
     pricing: {
@@ -95,7 +95,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Kirimkan ringkasan melalui formulir kontak: apa yang terjadi, bantuan apa yang Anda perlukan, apa kaitan perkara itu dengan Taiwan, dan tenggat waktu jika Anda mengetahuinya. Pada tahap awal Anda belum perlu mengirim dokumen identitas atau seluruh bukti. Kantor tidak menjanjikan waktu balasan dan tidak memastikan janji temu melalui halaman ini. Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
+        'Kirimkan ringkasan melalui formulir kontak: apa yang terjadi, bantuan yang Anda butuhkan, kaitannya dengan Taiwan, dan tenggat jika ada. Pada tahap awal belum perlu mengirim dokumen identitas atau seluruh bukti. Kantor tidak menjanjikan waktu balasan dan tidak memastikan janji temu lewat halaman ini. Konsultasi dengan advokat hanya dalam empat bahasa: Inggris, Mandarin (中文), Jepang, dan Korea.',
       sources: ['/id/faq', '/id/pricing'],
     },
     faq: {
@@ -235,7 +235,7 @@ export const guidanceAnswers: Record<
   es: {
     services: {
       answer:
-        'El despacho atiende seis áreas de práctica según el derecho de Taiwán: inversión y constitución de sociedades, litigios civiles y daños, matrimonio, familia y sucesiones, asuntos laborales, asuntos penales y propiedad intelectual. El alcance de cada asunto se confirma por separado después de que un abogado revise el contenido que usted envía. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'El despacho atiende seis áreas de práctica según el derecho de Taiwán: inversión y constitución de sociedades, litigios civiles y daños, matrimonio, familia y sucesiones, asuntos laborales, asuntos penales y propiedad intelectual. El alcance de cada asunto se confirma por separado después de que una abogada o un abogado revise el contenido que usted envía. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
       sources: ['/es/faq', '/es/contact'],
     },
     about: {
@@ -260,7 +260,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Esta parte responde a preguntas frecuentes como información general: las seis áreas de práctica, la preparación antes del contacto, el modo de fijar los honorarios y el significado de enviar un mensaje. Una solicitud enviada espera la revisión de un abogado; no es asesoramiento jurídico, no es una cita y no crea una relación entre abogado y cliente. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'Esta parte responde a preguntas frecuentes como información general: las seis áreas de práctica, la preparación antes del contacto, el modo de fijar los honorarios y el significado de enviar un mensaje. Una solicitud enviada espera la revisión de una abogada o de un abogado; no es asesoramiento jurídico, no es una cita y no crea una relación entre abogada o abogado y cliente. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
       sources: ['/es/contact', '/es/services'],
     },
   },
@@ -325,7 +325,7 @@ export const guidanceAnswers: Record<
     faq: {
       answer:
         'Esta parte responde a perguntas frequentes no plano da informação geral: os seis grupos de trabalho, a preparação antes do contacto, o modo de fixar os honorários e o significado de enviar uma mensagem. Um pedido enviado espera a revisão de uma advogada ou de um advogado; não é parecer jurídico, não é uma marcação e não cria uma relação entre advogada ou advogado e cliente. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.',
-        sources: ['/pt/contact', '/pt/services'],
+      sources: ['/pt/contact', '/pt/services'],
     },
   },
   'zh-hans': {
@@ -453,7 +453,7 @@ export const guidanceAnswers: Record<
     faq: {
       answer:
         'Bu bölüm sık sorulan soruları genel bilgi düzeyinde yanıtlar: altı çalışma alanı, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
-        sources: ['/tr/contact', '/tr/services'],
+      sources: ['/tr/contact', '/tr/services'],
     },
   },
   it: {

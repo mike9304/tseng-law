@@ -28011,6 +28011,18 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 @media (max-width: 767px) {
   .site [data-guidance-page='home'] .hero { min-height: max(560px, 100svh); }
   .site [data-guidance-page='home'] .hero .container.hero-inner { padding-inline: 20px; }
+  /* Reserve a row for the full localized video control above the hero copy. */
+  .site:not(.intl-folio) [data-guidance-page='home'] .hero .container.hero-inner {
+    padding-block-start: 5rem;
+  }
+
+  /* Keep the control above the hero scrims while media stays below them. */
+  .site:not(.intl-folio) [data-guidance-page='home'] .hero .hero-media {
+    z-index: auto;
+  }
+  .site:not(.intl-folio) [data-guidance-page='home'] .hero .hero-media .decorative-autoplay-video__video {
+    z-index: 0;
+  }
   .site [data-guidance-page='home'] .hero .hero-title { font-size: clamp(34px, 9vw, 44px) !important; }
   .site [data-guidance-page='home'] .hero .hero-cta-actions > * { flex: 1 1 100%; justify-content: center; }
 }

@@ -70,7 +70,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       ', wie Sie eine Zusammenfassung formulieren, die eine Anwältin oder ein Anwalt prüft.',
     columnsViewAllLabel: 'Alle Beiträge ansehen',
     columnsReadMoreLabel: 'Weiterlesen',
-    columnsReviewLabel: 'Geprüft von Rechtsanwältin Wei Tseng',
+    columnsReviewLabel: 'Taiwan-Recht',
     columnsOriginalLanguageBadge: 'Originalsprache',
     columnsOriginalLanguageNote:
       'Die folgenden Beiträge liegen noch nicht auf Deutsch vor. Die Liste bleibt in der Originalsprache und öffnet die jeweilige Sprachseite; der Inhalt wird nicht automatisch übersetzt.',
@@ -527,7 +527,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Ver todo',
     },
     columns: {
-      description: 'Artículos que explican temas frecuentes del derecho de Taiwán.',
+      description: 'Artículos sobre cuestiones frecuentes del derecho de Taiwán.',
       viewAllLabel: 'Ver todo',
     },
     lawyers: {
@@ -559,7 +559,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       ' explica cómo redactar un resumen que un abogado revisará.',
     columnsViewAllLabel: 'Ver todos los artículos',
     columnsReadMoreLabel: 'Seguir leyendo',
-    columnsReviewLabel: 'Revisado por la abogada Wei Tseng',
+    columnsReviewLabel: 'Derecho de Taiwán',
     columnsOriginalLanguageBadge: 'Idioma original',
     columnsOriginalLanguageNote:
       'Los artículos siguientes aún no están en español. Esta lista permanece en el idioma original y abre esa página; el contenido no se traduce de forma automática.',
@@ -1047,7 +1047,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       ' explique comment rédiger un résumé qu’une avocate ou un avocat examinera.',
     columnsViewAllLabel: 'Voir tous les articles',
     columnsReadMoreLabel: 'Lire la suite',
-    columnsReviewLabel: 'Révisé par l’avocate Wei Tseng',
+    columnsReviewLabel: 'Droit taïwanais',
     columnsOriginalLanguageBadge: 'Langue d’origine',
     columnsOriginalLanguageNote:
       'Les articles suivants ne sont pas encore disponibles en français. La liste reste dans la langue d’origine et ouvre la page correspondante ; le contenu n’est pas traduit automatiquement.',
@@ -1535,7 +1535,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       ' explica como redigir um resumo que uma advogada ou um advogado irá examinar.',
     columnsViewAllLabel: 'Ver todos os artigos',
     columnsReadMoreLabel: 'Continuar a ler',
-    columnsReviewLabel: 'Revisto pela advogada Wei Tseng',
+    columnsReviewLabel: 'Direito de Taiwan',
     columnsOriginalLanguageBadge: 'Língua original',
     columnsOriginalLanguageNote:
       'Os artigos seguintes ainda não estão disponíveis em português. A lista permanece na língua original e abre essa página; o conteúdo não é traduzido de forma automática.',
@@ -2023,7 +2023,7 @@ export const russianGuidanceContent: GuidanceLocaleContent = {
       ' объясняет, как составить краткое изложение, которое рассмотрит адвокат.',
     columnsViewAllLabel: 'Смотреть все материалы',
     columnsReadMoreLabel: 'Читать далее',
-    columnsReviewLabel: 'Проверено адвокатом Wei Tseng (曾雋崴)',
+    columnsReviewLabel: 'Право Тайваня',
     columnsOriginalLanguageBadge: 'Язык оригинала',
     columnsOriginalLanguageNote:
       'Следующие материалы ещё не подготовлены на русском языке. Список остаётся на языке оригинала и открывает соответствующую языковую страницу; содержание автоматически не переводится.',
@@ -2511,7 +2511,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       ' sayfası, bir avukatın inceleyeceği özeti nasıl yazacağınızı açıklar.',
     columnsViewAllLabel: 'Tüm yazılara bakın',
     columnsReadMoreLabel: 'Devamını oku',
-    columnsReviewLabel: 'Avukat Wei Tseng tarafından incelendi',
+    columnsReviewLabel: 'Tayvan hukuku',
     columnsOriginalLanguageBadge: 'Özgün dil',
     columnsOriginalLanguageNote:
       'Aşağıdaki yazılar henüz Türkçe hazır değildir. Liste özgün dilde kalır ve ilgili dil sayfasını açar; içerik kendiliğinden çevrilmez.',

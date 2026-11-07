@@ -96,9 +96,9 @@ const copyByLocale: Record<Locale, PopupCopy> = {
   },
   en: {
     badge: '2026 EVENT',
-    title: '2026 Commemorative Review Event',
+    title: '2026 client review event',
     body:
-      'Hovering International Law Firm is hosting a free 30-minute consultation review event for all clients. Our lawyer and staff will join a Google Meet session, and participation is completed after you leave a review.',
+      'Hovering International Law Firm is offering a free 30-minute Google Meet consultation for clients. A lawyer and a team member will join the call; leave one Google Maps review afterward to complete participation.',
     points: ['Eligible: all new and existing clients', 'Format: 30-minute free Google Meet consultation', 'How to join: leave one Google Maps review after consultation'],
     cta: 'Contact about this event',
     close: 'Close',

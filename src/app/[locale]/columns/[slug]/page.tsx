@@ -7,9 +7,6 @@ import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHead
 import { notFound } from 'next/navigation';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import { filterMarketBoardColumns } from '@/data/market-column-curation';
-import {
-  AI_COLUMN_ATTORNEY_HEADING,
-} from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
 import { columnAlternateLocales } from '@/lib/column-language-links';
@@ -46,40 +43,40 @@ const copy: Record<SiteLocale | 'vi', {
   vi: columnUiVi.article,
   ko: {
     backLabel: '← 칼럼 목록으로',
-    attorneyHeading: '상담 변호사',
+    attorneyHeading: '담당 변호사',
     guideTitle: '함께 보는 주제',
-    consultationTitle: '상담 예약',
-    consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
+    consultationTitle: '상담 문의',
+    consultationText: '대만 법률 문의는 이메일로 접수합니다.',
     consultationButton: '문의하기',
     faqHeading: '자주 묻는 질문',
     tocLabel: '이 글의 목차',
   },
   'zh-hant': {
     backLabel: '← 返回專欄列表',
-    attorneyHeading: '諮詢律師',
+    attorneyHeading: '承辦律師',
     guideTitle: '延伸主題',
-    consultationTitle: '預約諮詢',
-    consultationText: '如有台灣法律問題，歡迎來信諮詢。',
+    consultationTitle: '諮詢聯絡',
+    consultationText: '台灣法律問題可來信詢問。',
     consultationButton: '電子郵件諮詢',
     faqHeading: '常見問題',
     tocLabel: '本文目錄',
   },
   en: {
     backLabel: '← Back to Insights',
-    attorneyHeading: 'Consulting Attorney',
+    attorneyHeading: 'Lead attorney',
     guideTitle: 'Related Topics',
-    consultationTitle: 'Book Consultation',
-    consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
+    consultationTitle: 'Consultation',
+    consultationText: 'Questions about Taiwan law can be sent by email.',
     consultationButton: 'Contact Us',
     faqHeading: 'Frequently Asked Questions',
     tocLabel: 'In this article',
   },
   ja: {
     backLabel: '← コラム一覧へ',
-    attorneyHeading: 'ご相談いただける弁護士',
+    attorneyHeading: '担当弁護士',
     guideTitle: '関連トピック',
-    consultationTitle: '相談予約',
-    consultationText: '台湾法務についてご不明点があれば、お気軽にお問い合わせください。',
+    consultationTitle: '相談の問い合わせ',
+    consultationText: '台湾法務のご質問はメールで受け付けています。',
     consultationButton: 'お問い合わせ',
     faqHeading: 'よくある質問',
     tocLabel: 'この記事の目次',
@@ -208,8 +205,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
     ? splitColumnContentAfterHeading(post.content, post.diagramVideo.afterHeading)
     : null;
   // Consultation information is independent of the article's internal provenance.
-  const attorneyHeading = urlLocale === 'vi' ? t.attorneyHeading
-    : folioArticle?.consultingAttorney ?? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en;
+  const attorneyHeading = urlLocale === 'vi'
+    ? t.attorneyHeading
+    : folioArticle?.consultingAttorney ?? t.attorneyHeading;
   const guideLinks =
     guidanceLocale
       ? [

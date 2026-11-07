@@ -56,7 +56,7 @@ const GENERIC_MODULE_COPY: Record<Exclude<SiteLocale, 'ja'>, Pick<UnavailableCop
   ko: {
     label: '이용 안내',
     title: '현재 이 언어로 이용할 수 없습니다',
-    description: '이 언어로 제공되는 콘텐츠나 기능이 아직 없습니다. 도움이 필요하시면 문의해 주세요.',
+    description: '아직 이 언어로 열린 페이지나 기능이 없습니다. 문의가 필요하면 연락해 주세요.',
   },
   'zh-hant': {
     label: '使用說明',

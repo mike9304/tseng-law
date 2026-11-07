@@ -3,7 +3,7 @@
  * ko service's description in site-content (or a split of one phrase, e.g. 「피의자·피해자 대리」). No new claims.
  */
 export const KO_SERVICE_SCENARIOS: Readonly<Record<string, readonly string[]>> = {
-  investment: ['법인 형태 선택', '투자심의위원회 승인', '업종별 인허가'],
+  investment: ['법인 형태 선택', '회사명 예비심사·예약', '업종별 허가'],
   civil: ['계약 분쟁', '손해배상', '소비자 피해'],
   family: ['이혼', '재산분할', '상속'],
   labor: ['해고', '퇴직금', '근로계약 분쟁'],

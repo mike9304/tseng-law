@@ -13,7 +13,7 @@ export default function EnSituationTable({ id = 'situations', title = 'Living or
     <section className={styles.situations} id={id} aria-labelledby={headingId} data-en-situation-table>
       <div className="container">
         <div className={styles.situationsHead}>
-          <p className={styles.eyebrow}>Start here</p>
+          <p className={styles.eyebrow}>By situation</p>
           <h2 id={headingId} className={styles.title2} data-en-rise>{title}</h2>
         </div>
         <ol className={styles.situationTable}>

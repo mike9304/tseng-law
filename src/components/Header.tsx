@@ -463,7 +463,7 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
         { label: 'Firm Overview', href: '/en/about' },
         { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Office Locations', href: '/en/contact#offices' },
-        { label: 'Contact Us', href: getConsultationPublicMailto('en') }
+        { label: 'Email inquiry', href: getConsultationPublicMailto('en') }
       ]
     })
   ];

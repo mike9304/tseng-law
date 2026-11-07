@@ -24,7 +24,7 @@ type OverseasEntryCopy = {
 export const OVERSEAS_ENTRY_CONTENT: Partial<Record<SiteLocale, OverseasEntryCopy>> = {
   en: {
     heading: 'For overseas companies and international clients',
-    lede: 'Start with the issue in front of you. Each guide explains what to prepare and how we can help.',
+    lede: 'Start with the issue in front of you. Each link opens a guide on documents and next steps.',
     items: [
       {
         href: '/en/taiwan-company-setup-lawyer',
@@ -65,7 +65,7 @@ export const OVERSEAS_ENTRY_CONTENT: Partial<Record<SiteLocale, OverseasEntryCop
       {
         href: '/ja/taiwan-litigation-lawyer',
         label: '契約・紛争・訴訟',
-        description: '契約紛争・未払い請求、民事訴訟、損害賠償について最初に確認すべきポイント。',
+        description: '契約紛争・未払い請求、民事訴訟、損害賠償の案内。',
       },
       {
         href: '/ja/services/labor',

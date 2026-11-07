@@ -102,7 +102,7 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     stages: [
       { title: 'At the scene', text: 'Safety and assistance come first. Preserving police, medical and scene records comes next.' },
       { title: 'Liability and loss', text: 'Assessing fault and damages means comparing how the vehicles moved, the medical evidence and the expenses.' },
-      { title: 'Settlement and later steps', text: 'Settlement involves distinguishing insurance payments, settlement terms and releases, while keeping track of each procedure’s deadline.' },
+      { title: 'Settlement and later steps', text: 'Insurance payouts, settlement wording, and release clauses work differently; note the deadline for each step.' },
     ],
     countriesTitle: 'The procedure depends on where the accident happened',
     countriesIntro: 'The guidance here covers accidents in Taiwan. For an accident in the United States, Japan or Korea, the official resources linked here and local legal advice are the starting points.',

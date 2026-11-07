@@ -39,7 +39,7 @@ export default function TrafficDiagramFigure({
   const copy = diagram.copy[locale];
   if (!copy) return null;
   const captionId = `traffic-diagram-${diagram.id}-caption`;
-  const VideoPlayer = diagram.kind !== 'still' && diagram.playback === 'manual' ? TrafficManualVideo : DecorativeAutoplayVideo;
+  const isManualPlayback = diagram.kind !== 'still' && diagram.playback === 'manual';
   const aspectRatios = {
     '--diagram-aspect': `${diagram.width} / ${diagram.height}`,
     '--diagram-mobile-aspect': `${diagram.mobileWidth} / ${diagram.mobileHeight}`,
@@ -58,24 +58,43 @@ export default function TrafficDiagramFigure({
               <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" unoptimized />
             </picture>
           ) : <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
-        ) : <VideoPlayer
-          mp4Src={diagram.mp4}
-          webmSrc={diagram.webm}
-          poster={diagram.poster}
-          mobileMp4Src={diagram.mobileMp4}
-          mobileWebmSrc={diagram.mobileWebm}
-          mobilePoster={diagram.mobilePoster}
-          mobileMediaQuery={TRAFFIC_DIAGRAM_MOBILE_QUERY}
-          alt={copy.alt}
-          sizes={sizes}
-          width={diagram.width}
-          height={diagram.height}
-          rootMargin="200px 0px"
-          controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
-          playbackTools={diagram.playbackTools}
-          describedBy={captionId}
-          controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
-        />}
+        ) : isManualPlayback ? (
+          <TrafficManualVideo
+            mp4Src={diagram.mp4}
+            webmSrc={diagram.webm}
+            poster={diagram.poster}
+            mobileMp4Src={diagram.mobileMp4}
+            mobileWebmSrc={diagram.mobileWebm}
+            mobilePoster={diagram.mobilePoster}
+            mobileMediaQuery={TRAFFIC_DIAGRAM_MOBILE_QUERY}
+            alt={copy.alt}
+            sizes={sizes}
+            width={diagram.width}
+            height={diagram.height}
+            controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+            playbackTools={diagram.playbackTools}
+            playbackToolLocale={locale}
+            describedBy={captionId}
+            controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
+          />
+        ) : (
+          <DecorativeAutoplayVideo
+            mp4Src={diagram.mp4}
+            webmSrc={diagram.webm}
+            poster={diagram.poster}
+            mobileMp4Src={diagram.mobileMp4}
+            mobileWebmSrc={diagram.mobileWebm}
+            mobilePoster={diagram.mobilePoster}
+            mobileMediaQuery={TRAFFIC_DIAGRAM_MOBILE_QUERY}
+            alt={copy.alt}
+            sizes={sizes}
+            width={diagram.width}
+            height={diagram.height}
+            rootMargin="200px 0px"
+            controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+            controlIcons={locale === 'zh-hant' ? ZH_VIDEO_CONTROL_ICONS : undefined}
+          />
+        )}
       </div>
       <figcaption id={captionId} className={styles.caption}>
         <span className={styles.legend}>{copy.legend}</span>

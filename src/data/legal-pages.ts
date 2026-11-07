@@ -137,7 +137,7 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: '개선 요청',
           paragraphs: [
-            '이용 중 접근성 문제를 발견하시면 이메일 또는 연락 페이지를 통해 알려주시면 우선순위를 두고 검토하겠습니다.',
+            '이용 중 접근성 문제를 발견하시면 이메일 또는 연락 페이지로 알려 주시면 확인하겠습니다.',
           ],
         },
       ],
@@ -319,7 +319,7 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: 'Your choices and contact',
           paragraphs: [
-            'To request access, correction, deletion, or withdrawal of consent, email the official consultation address at wei@hoveringlaw.com.tw. If a legal retention duty or an active legal matter limits the request, the reason for the limitation should be explained.',
+            'To request access, correction, deletion, or withdrawal of consent, email the official consultation address at wei@hoveringlaw.com.tw. If a legal retention duty or an active legal matter limits what we can do, we explain why.',
             'Privacy questions and requests concerning your personal information are received at wei@hoveringlaw.com.tw, and we reply with the outcome in the order requests arrive.',
           ],
         },

@@ -10,12 +10,12 @@ categories:
   - "Taiwan Legal Information"
 topic: "company"
 featured_image: "../images/ISSUE-20261108-06-taiwan-us-rd-platform-subsidy-ip-ownership/featured-01.webp"
-featured_image_alt: "An unbranded circuit board and metal prototype on an empty laboratory workbench"
+featured_image_alt: "An unbranded circuit board and metal prototype on a laboratory workbench."
 featured_image_caption: "Editorial illustration of a fictional laboratory, not a photograph of a project participating in the announced program."
 social_image: "../images/ISSUE-20261108-06-taiwan-us-rd-platform-subsidy-ip-ownership/featured-01.jpg"
 faq:
   - q: "Does a subsidy covering 50% of R&D costs give the government 50% ownership?"
-    a: "That ownership split does not follow from the announced funding cap. Article 15 requires the Taiwan grant contract to address research-result ownership, and the existing A+ international-cooperation guidance refers ownership to the partners' contractual IP agreement. The forthcoming call terms and actual agreements still matter."
+    a: "That ownership split does not follow from the announced funding cap. Article 15 requires the Taiwan grant contract to address research-result ownership, and the existing A+ international-cooperation guidance provides that ownership is determined by the partners' IP agreement. The forthcoming call terms and actual agreements still matter."
   - q: "Is a funding approval enough to start receiving Taiwan subsidy payments?"
     a: "Approval must be followed by a grant contract within the deadline in the approval letter. Article 15 also requires the contract to specify payment conditions and proportions. An approved extension for signing cannot exceed one month."
   - q: "What happens if the funded project falls seriously behind schedule?"
@@ -36,7 +36,7 @@ The currently posted [A+ international-cooperation guidance, dated August 2025](
 
 Taiwan's subsidy regulations also require a contract. [Article 15](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0030115&flno=15) requires the grant agreement to address ownership of R&D results, the project and its duration, progress milestones, payment conditions and proportions, expenditure accounting, and grounds for ending the agreement. The grant contract and the partners' collaboration contract therefore need to be considered together. A funding percentage does not supply an ownership percentage.
 
-For a US startup bringing an existing design to a Taiwan manufacturer's development project, an agreement can distinguish that design from improvements created during the collaboration. It can also address whether each party receives ownership or permission to use particular results. Those are proposed contractual arrangements, not rights established merely by attending the platform's launch. A promise of commercial access needs enough detail to show what technology it covers and who may use it.
+For a US startup bringing an existing design to a Taiwan manufacturer's development project, an agreement can distinguish that design from improvements created during the collaboration. It can also address whether each party receives ownership or permission to use particular results. The parties would need to negotiate those terms. A promise of commercial access needs enough detail to show what technology it covers and who may use it.
 
 ## Funding comes with continuing obligations
 

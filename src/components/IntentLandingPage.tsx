@@ -41,13 +41,13 @@ const labels = {
   ko: {
     terms: '관련 주제',
     overview: '상담 범위',
-    fit: '상담이 필요한 경우',
-    points: '우선 검토 포인트',
+    fit: "주요 상담 내용",
+    points: "먼저 확인할 사항",
     detailLabel: '진행 절차',
-    detailTitle: '진행 흐름과 준비 자료',
+    detailTitle: "절차와 준비 서류",
     process: '진행 절차',
-    prepare: '미리 준비하면 좋은 자료',
-    caution: '놓치기 쉬운 포인트',
+    prepare: "준비 서류",
+    caution: "추가 확인 사항",
     servicesTitle: '관련 서비스',
     serviceButton: '서비스 보기',
     columnsTitle: '관련 칼럼',
@@ -642,6 +642,7 @@ export default function IntentLandingPage({
             </article>
 
             <div className={`intent-subgrid ${styles.subgrid}`}>
+              {page.idealFor.length > 0 ? (
               <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.fit}</h2>
                 <ul className="intent-article-list">
@@ -650,6 +651,7 @@ export default function IntentLandingPage({
                   ))}
                 </ul>
               </article>
+              ) : null}
 
               <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.points}</h2>

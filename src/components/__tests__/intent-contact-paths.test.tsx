@@ -53,7 +53,7 @@ describe('intent landing EN/JA contact paths', () => {
         expect(header).toContain('Send an inquiry');
       }
 
-      expect(html).toContain('Do not send passport or identification numbers');
+      expect(html).toContain('Leave out passport or ID numbers, bank details and original identity documents.');
       expect(cta).toContain(`href="${mailto}"`);
       expect(cta).toContain('href="/en/pricing"');
       expect(cta).toContain('Send a brief initial summary');

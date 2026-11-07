@@ -9,9 +9,9 @@ import {
 
 const cardLabels = {
   ko: {
-    heading: '담당 변호사',
-    practice: '주요 대응 분야',
-    channels: '공개 프로필 및 채널',
+    heading: "변호사 소개",
+    practice: "주요 업무",
+    channels: "프로필과 유튜브",
     profile: '상세 프로필',
     contact: '상담 문의',
   },

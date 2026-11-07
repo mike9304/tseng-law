@@ -18,7 +18,7 @@ function authorityCardHeadings(html: string): string[] {
 }
 
 // Shared locale chrome (IntentLandingPage labels + AttorneyAuthorityCard default heading).
-const koSharedAttorneyHeading = '담당 변호사';
+const koSharedAttorneyHeading = '변호사 소개';
 const koSharedCtaText =
   '사건 개요, 대만과의 관련성, 기한과 연락처를 간단히 보내 주세요. 업무를 맡을 수 있는지와 이해충돌 여부를 확인한 뒤 상담 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.';
 const obsoleteKoSearchAttorneyHeading = '이 검색어와 가장 가까운 담당 대만 변호사';
@@ -72,13 +72,13 @@ describe('intent landing page-level overrides', () => {
   });
 
   it.each(intentPageSlugs.filter((slug) => slug !== semiconductorSlug))(
-    'falls back to the shared Korean strings on /ko/%s',
+    'renders the shared Korean card and configured CTA on /ko/%s',
     (slug) => {
       const html = renderLanding('ko', slug);
 
       expect(authorityCardHeadings(html)).toEqual([koSharedAttorneyHeading]);
       expect(html).not.toContain(obsoleteKoSearchAttorneyHeading);
-      expect(html).toContain(koSharedCtaText);
+      expect(html).toContain(getIntentPage('ko', slug)!.ctaTextOverride ?? koSharedCtaText);
     },
   );
 

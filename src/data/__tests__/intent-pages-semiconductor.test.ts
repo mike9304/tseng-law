@@ -194,8 +194,13 @@ describe('semiconductor supplier intent page', () => {
         } else {
           expect(page?.seoTitle).toBeUndefined();
         }
-        expect(page?.ctaTextOverride).toBeUndefined();
-        expect(page?.serviceBlurbs).toBeUndefined();
+        if (locale === 'ko' && otherSlug === 'taiwan-company-setup-lawyer') {
+          expect(page?.ctaTextOverride).toContain('설립 희망 시기');
+          expect(Object.keys(page?.serviceBlurbs ?? {})).toEqual(['investment', 'ip', 'labor']);
+        } else {
+          expect(page?.ctaTextOverride).toBeUndefined();
+          expect(page?.serviceBlurbs).toBeUndefined();
+        }
       }
     }
   });

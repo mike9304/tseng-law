@@ -22,6 +22,13 @@ const INITIAL_INQUIRY_PREP: Record<SiteLocale, string> = {
   'zh-hant': '初次詢問請只提供案件概要與聯絡方式，請勿附上敏感資訊。',
 };
 
+const EMAIL_COMMUNICATION_NOTE: Record<SiteLocale, string> = {
+  ko: '네 언어를 사용하기 어려우시면 이메일에 알려 주세요. 가능한 소통 방법을 확인해 드리며, 통역 제공이나 다른 언어의 상담을 보장하지는 않습니다.',
+  en: 'If you cannot use any of these four languages, say so in your email. We will check whether communication is possible. An interpreter or consultation in another language may not be available.',
+  ja: 'この4言語でのやり取りが難しい場合は、メールにその旨をお書きください。対応可能な連絡方法を確認します。通訳の手配や他の言語での相談をお約束するものではありません。',
+  'zh-hant': '若您無法使用這四種語言，請在電子郵件中註明。我們會先確認可行的溝通方式，但無法保證提供口譯或其他語言的諮詢。',
+};
+
 export default function ContactEmailActions({ locale }: { locale: SiteLocale }) {
   const [copyNotice, setCopyNotice] = useState('');
   const [copySucceeded, setCopySucceeded] = useState<boolean | null>(null);
@@ -81,7 +88,7 @@ export default function ContactEmailActions({ locale }: { locale: SiteLocale }) 
         >{copyNotice}</p>
         <p className="contact-email-actions__note">{INITIAL_INQUIRY_PREP[locale]}</p>
         <p className="contact-email-actions__note">{inquiryCopy.consultationNotice}</p>
-        <p className="contact-email-actions__note">{inquiryCopy.methodConfirmationNotice}</p>
+        <p className="contact-email-actions__note">{EMAIL_COMMUNICATION_NOTE[locale]}</p>
       </div>
     </div>
   );

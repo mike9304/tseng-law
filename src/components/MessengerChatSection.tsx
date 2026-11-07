@@ -26,7 +26,7 @@ function getConfig(locale: SiteLocale): MessengerConfig {
       primaryDescription: CONSULTATION_EMAIL,
       features: [
         '법인설립·투자 관련 문의',
-        '소송·분쟁 상담 예약',
+        '소송·분쟁 관련 문의',
         '비자·체류 관련 문의',
         '공식 이메일 접수',
       ],
@@ -38,7 +38,7 @@ function getConfig(locale: SiteLocale): MessengerConfig {
     return {
       sectionTitle: 'Email Consultation',
       sectionDescription:
-        'Send your inquiry to our official email address. We reply in the language you write in. Office time zone: Taipei (GMT+8).',
+        'Send your inquiry to our official email address. You can write the first message in your own language. Legal consultations are available in English, Chinese, Japanese and Korean. Our office uses Taipei time (GMT+8).',
       primaryLabel: 'Official consultation email',
       primaryDescription: CONSULTATION_EMAIL,
       features: [
@@ -75,7 +75,7 @@ function getConfig(locale: SiteLocale): MessengerConfig {
     primaryDescription: CONSULTATION_EMAIL,
     features: [
       '公司設立與投資相關問題',
-      '訴訟與爭議諮詢預約',
+      '訴訟與爭議相關問題',
       '簽證與居留相關問題',
       '諮詢方式與時間安排',
     ],

@@ -106,7 +106,9 @@ describe('public-contact concise intake alignment', () => {
     expect(warning).toMatch(/passport/i);
     expect(warning).toMatch(/instruct/i);
     expect(warning).not.toMatch(/citizenship is not required|citizenship and attachments are not required/i);
-    expect(getSensitiveInformationWarning('ja')).toContain('機微情報');
-    expect(getSensitiveInformationWarning('ko')).toContain('민감정보');
+    expect(getSensitiveInformationWarning('ja')).toContain('旅券番号');
+    expect(getSensitiveInformationWarning('ja')).toContain('弁護士からの案内');
+    expect(getSensitiveInformationWarning('ko')).toContain('주민등록번호');
+    expect(getSensitiveInformationWarning('ko')).toContain('민감한 자료');
   });
 });

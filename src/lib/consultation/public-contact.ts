@@ -132,15 +132,15 @@ export function getCopyEmailFailureMessage(locale: SiteLocale): string {
 
 export function getSensitiveInformationWarning(locale: SiteLocale): string {
   if (locale === 'ko') {
-    return '초기 문의에는 사건 또는 업무의 개요와 연락처만 보내주시기 바랍니다. 주민등록번호, 여권번호, 계좌번호, 신분증 원본 등 민감정보는 이메일이나 일반 문의 폼으로 보내지 마시고, 담당 변호사의 별도 안내 후 안전한 방식으로 제출해 주세요.';
+    return '처음 문의하실 때는 사건이나 업무의 개요와 연락처를 보내 주세요. 주민등록번호, 여권번호, 계좌번호, 신분증 원본 등 민감한 자료는 첨부하지 말고, 변호사의 안내를 받은 뒤 안전한 방법으로 보내 주세요.';
   }
   if (locale === 'zh-hant') {
-    return '初次聯絡時，請僅提供案件或業務概要及聯絡方式。請勿透過電子郵件或一般諮詢表單傳送身分證字號、護照號碼、銀行帳戶資料或證件正本等敏感資訊；請待承辦律師另行指示後，再以安全方式提供。';
+    return '初次聯絡時，請提供案件或業務概要及聯絡方式。請勿在初次詢問的電子郵件中附上身分證字號、護照號碼、銀行帳戶資料或證件正本等敏感資訊；請待律師另行指示後，再以安全方式提供。';
   }
   if (locale === 'ja') {
-    return '初回のお問い合わせでは、案件または業務の概要と連絡先のみをお送りください。旅券番号、身分証番号、銀行口座情報、身分証明書の原本などの機微情報は、メールや一般のお問い合わせフォームでは送信せず、担当弁護士からの案内後に安全な方法でご提出ください。';
+    return '初回のお問い合わせでは、案件の概要と連絡先をお送りください。旅券番号、身分証番号、銀行口座情報、身分証明書の原本などは、初回のメールに記載・添付しないでください。弁護士からの案内を受けてから、安全な方法でご提出ください。';
   }
-  return 'For an initial inquiry, please provide only a brief matter or business overview and your contact details. Do not send passport or identification numbers, bank account details, or original identity documents by email or through the general inquiry form. Provide sensitive materials only through a secure method after receiving instructions from the attorney.';
+  return 'Send only a brief summary of your situation and your contact details with your first inquiry. Leave out passport or ID numbers, bank details and original identity documents. Wait for the attorney’s instructions before sending sensitive documents through a secure channel.';
 }
 
 export function getAttorneyReviewNotice(locale: Locale, options?: { emphasizeImmediate?: boolean }): string {

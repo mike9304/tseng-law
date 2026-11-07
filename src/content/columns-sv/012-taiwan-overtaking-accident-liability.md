@@ -27,7 +27,7 @@ För att köra om fordonet framför i samma körfält måste föraren bak först
 
 Fordonet bak får köra om först efter att fordonet framför har sänkt farten och vikit undan, eller visat vilja att lämna företräde med handsignal eller höger blinkers.
 
-Därefter ska det omkörande fordonet tända vänster blinkers, passera till vänster med minst 0,5 meters avstånd till fordonet framför och, när ett säkert avstånd är säkrat, tända höger blinkers och återgå tryggt till ursprungligt körfält.
+Därefter ska det omkörande fordonet tända vänster blinkers, passera till vänster med minst 0,5 meters avstånd till fordonet framför och, när ett säkert avstånd har uppnåtts, tända höger blinkers och återgå tryggt till ursprungligt körfält.
 
 Denna ordning av signaler och företräde i samma körfält betyder inte att omkörning skulle vara tillåten på en förbjuden plats eller under ett förbjudet villkor. Innan omkörningen påbörjas måste alla villkor i artikel 101 bedömas tillsammans.
 

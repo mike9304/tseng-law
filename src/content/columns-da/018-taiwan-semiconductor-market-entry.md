@@ -81,7 +81,7 @@ At fuldføre registreringen i Taiwan indebærer ikke, at personalet fra det uden
 
 Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwanske datterselskab (et selskab med godkendt investering, hvor udlændinge ejer mere end 1/3 af aktierne) eller af filialen af et udenlandsk selskab. Allerede ved ansættelsen af den første udlænding skal arbejdsgiveren dog opfylde et af kriterierne i artikel 39 i standarderne for kvalifikationer og efterprøvelse af udlændinges arbejde (工作資格及審查標準). For et selskab, der har eksisteret i under 1 år, gælder blandt andet indbetalt kapital (for en filial driftsmidler i Taiwan) på mindst 500.000 TWD eller en omsætning på mindst 3.000.000 TWD. For et selskab, der har eksisteret i 1 år eller længere, gælder blandt andet en gennemsnitlig omsætning i det seneste 1 år eller de seneste 3 år på mindst 3.000.000 TWD. Ansætter arbejdsgiveren 2 eller flere udlændinge af samme art, skal disse udlændinge og arbejdsgiveren opfylde de almindelige standarder i kapitel 2 (artikel 38 stk. 2). Hvis man forudser, at udenlandsk personale arbejder i Taiwan, skal man før stiftelsen af selskabet afklare, om den påtænkte kapital når den gældende grænse.
 
-## 7. Strukturer der kan passe til forskellige faser af virksomhedens udvikling
+## 6. Strukturer der kan passe til forskellige faser af virksomhedens udvikling
 
 De følgende scenarier er hypotetiske og skal hjælpe overvejelsen; de garanterer ikke, at en given måde er retmæssig eller bedre.
 
@@ -91,7 +91,7 @@ Udenlandske virksomheder der udvider salget og den tekniske støtte i Taiwan. Hv
 
 Udenlandske virksomheder i markedsundersøgelsesfasen. Hvis man før en salgsorganisation kun vil have informations- og kontaktfunktioner, kan et repræsentationskontor (代表人辦事處) vurderes. Hvis den faktiske plan omfatter salg af lagre eller arbejde på stedet, skal det særskilt afklares, om disse aktiviteter er tilladt.
 
-## 8. Til den første samtale rækker et driftsoverblik; man behøver ikke straks at overdrage alle fortrolige bilag
+## 7. Til den første samtale rækker et driftsoverblik; man behøver ikke straks at overdrage alle fortrolige bilag
 
 Ved den første samtale kan man samle grundoplysningerne om hovedsædet og om den, der indskyder, en almen beskrivelse af produktet eller tjenesten, den påtænkte transaktionsstrøm, planerne for personale og anlæg i Taiwan og de kontrakt- og støttevilkår, som kunderne kræver. Det, der endnu ikke er besluttet, kan mærkes som »afventende«.
 

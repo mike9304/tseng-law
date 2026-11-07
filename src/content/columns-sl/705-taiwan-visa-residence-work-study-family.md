@@ -25,7 +25,7 @@ faq:
 
 Sprejem na univerzo še ne pove, s katerim vizumom naj študent pride na Tajvan. Pri običajni študijski poti lahko brezvizumski prihod onemogoči prijavo za prebivanje v državi, medtem ko [16. člen zakona o tujih strokovnjakih](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) nekaterim strokovnjakom takšno neposredno prijavo omogoča. Zato je treba namen selitve povezati z vstopnim statusom pred potovanjem.
 
-[BOCA za redni študij](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) in [učenje kitajščine](https://www.boca.gov.tw/fp-158-260-9690c-2.html) objavlja ločene pogoje. Državljanstvo in uporabljeni potni list vplivata na vizumsko upravičenost. Podrobnosti za konkretno prijavo poda [pristojno tajvansko predstavništvo](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html).
+BOCA objavlja ločene pogoje za [redni študij](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) in [učenje kitajščine](https://www.boca.gov.tw/fp-158-260-9690c-2.html). Državljanstvo in uporabljeni potni list vplivata na vizumsko upravičenost. Podrobnosti za konkretno prijavo poda [pristojno tajvansko predstavništvo](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html).
 
 ## Dovoljen obisk in podlaga za prebivanje
 

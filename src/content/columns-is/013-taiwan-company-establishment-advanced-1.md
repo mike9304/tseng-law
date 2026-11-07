@@ -35,9 +35,7 @@ Við gerð fjárfestingaráætlunarinnar þarf nákvæmt heimilisfang félagsins
 
 Þegar síðar er undirbúningsreikningur félagsins (公司籌備處帳戶) opnaður í bankanum skoða þó margir bankar leigusamninginn (租賃契約) og skoða heimilisfang félagsins á staðnum.
 
-Starfsmaður hjá taívönskum banka hefur sagt beint að
-
-margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð á sífellt strangari hátt.
+Starfsmaður hjá taívönskum banka hefur sagt beint að margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð á sífellt strangari hátt.
 
 Þegar í grunntextanum hefur lesandi tekið fram að opnun reiknings hafi reynst erfiðasta skrefið; það stenst.
 

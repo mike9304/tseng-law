@@ -37,7 +37,7 @@ Co do dokumentów policji, na miejscu wypadku można otrzymać odcinek rejestrac
 
 ## Q3. W razie obrażeń, jakie roszczenia i jakie terminy należy sprawdzić?
 
-Art. 284 Kodeksu karnego reguluje uszkodzenie ciała z nieostrożności (過失傷害) i ciężkie uszkodzenie ciała z nieostrożności (過失致重傷). Ponieważ według art. 287 Kodeksu karnego jest to przestępstwo ścigane z oskarżenia prywatnego (告訴乃論之罪), zgodnie z art. 237 tajwańskiego Kodeksu postępowania karnego (刑事訴訟法) skargę należy co do zasady wnieść w ciągu 6 miesięcy od dnia, w którym sprawca stał się znany.
+Art. 284 Kodeksu karnego reguluje uszkodzenie ciała z nieostrożności (過失傷害) i ciężkie uszkodzenie ciała z nieostrożności (過失致重傷). Ponieważ według art. 287 Kodeksu karnego ściganie tych przestępstw wymaga skargi (告訴乃論之罪), zgodnie z art. 237 tajwańskiego Kodeksu postępowania karnego (刑事訴訟法) skargę należy co do zasady wnieść w ciągu 6 miesięcy od dnia, w którym sprawca stał się znany.
 
 W cywilnym roszczeniu o naprawienie szkody (損害賠償), według art. 197 tajwańskiego Kodeksu cywilnego (民法) roszczenie nie jest już możliwe po upływie 2 lat od dnia, w którym szkoda i dłużnik odszkodowania stały się znane, albo 10 lat od dnia czynu niedozwolonego. Które fakty wpływają na przedawnienie (消滅時效), należy zbadać osobno.
 
@@ -59,7 +59,7 @@ W akcie ugody (和解書) należy zindywidualizować datę, miejsce i strony wyp
 
 Ugoda (和解) z art. 736 Kodeksu cywilnego jest umową, w której strony wzajemnie ustępują, aby zakończyć spór albo go uniknąć. Według art. 737 Kodeksu cywilnego zakres, w jakim prawa wygasają, ocenia się także tylko w granicach tego, co porzucono w akcie ugody. Nie należy zatem twierdzić, bez zbadania tekstu, że wszystkie przyszłe roszczenia znikają.
 
-Jeżeli chodzi o przestępstwo ścigane z oskarżenia prywatnego, według art. 238 Kodeksu postępowania karnego skargę można cofnąć aż do zamknięcia rozprawy ustnej pierwszej instancji, a po cofnięciu nie można jej wnieść ponownie. Jednak w przestępstwie, które nie jest ścigane z oskarżenia prywatnego, oskarżenie nie kończy się automatycznie przez ugodę prywatną, a fakt ugody nie zobowiązuje zawsze do cofnięcia skargi.
+Jeżeli chodzi o przestępstwo, którego ściganie wymaga skargi, według art. 238 Kodeksu postępowania karnego skargę można cofnąć przed zamknięciem rozprawy ustnej pierwszej instancji, a po cofnięciu nie można jej wnieść ponownie. Jednak w przypadku przestępstwa, którego ściganie nie wymaga skargi, oskarżenie nie kończy się automatycznie przez ugodę prywatną, a fakt ugody nie zobowiązuje zawsze do cofnięcia skargi.
 
 ### Oficjalne podstawy Q1–Q5
 
@@ -195,7 +195,7 @@ Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任�
 - [Standard świadczeń obowiązkowego ubezpieczenia odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Umowa wzorcowa ubezpieczenia komunikacyjnego użytku prywatnego Komisji Nadzoru Finansowego (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Czy po wypadku można wszystko zostawić ubezpieczycielowi?
+## Q16. Czy po wypadku można wszystko zostawić ubezpieczycielowi?
 
 ​
 
@@ -231,7 +231,7 @@ Jeżeli powierza się akta ubezpieczycielowi, należy w sposób ciągły śledzi
 
 ​
 
-Q17. Jaka jest odpowiedzialność karna za uszkodzenie ciała z nieostrożności sprawcy wypadku drogowego?
+## Q17. Jaka jest odpowiedzialność karna za uszkodzenie ciała z nieostrożności sprawcy wypadku drogowego?
 
 ​
 
@@ -255,11 +255,11 @@ W części wyroków za ciężkie uszkodzenie ciała z nieostrożności orzekano 
 
 ​
 
-Q18. Jeżeli zawierają Państwo ugodę z drugą stroną, czy można cofnąć skargę karną?
+## Q18. Jeżeli zawierają Państwo ugodę z drugą stroną, czy można cofnąć skargę karną?
 
 ​
 
-Uszkodzenie ciała z nieostrożności i ciężkie uszkodzenie ciała z nieostrożności są przestępstwem ściganym z oskarżenia prywatnego (告訴乃論之罪), dlatego skargę karną można cofnąć.
+Uszkodzenie ciała z nieostrożności i ciężkie uszkodzenie ciała z nieostrożności należą do przestępstw, których ściganie wymaga skargi (告訴乃論之罪), dlatego skargę karną można cofnąć.
 
 ​
 
@@ -275,7 +275,7 @@ W niektórych sprawach możliwe jest warunkowe zawieszenie wykonania kary (緩�
 
 ​
 
-Q19. Jeżeli po wypadku opuszcza się miejsce, czy przestępstwo karne ucieczki jest zawsze spełnione?
+## Q19. Jeżeli po wypadku opuszcza się miejsce, czy przestępstwo karne ucieczki jest zawsze spełnione?
 
 ​
 
@@ -295,7 +295,7 @@ Jeżeli są tylko szkody pojazdu, nie uważa się tego za ucieczkę.
 
 ​
 
-Q20. Jak szuka się adwokata do wypadku drogowego?
+## Q20. Jak szuka się adwokata do wypadku drogowego?
 
 ​
 

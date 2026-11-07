@@ -195,7 +195,7 @@ Poistenie zodpovednosti voči tretím osobám (第三人責任險), úrazové po
 - [Sadzobník plnenia z povinného poistenia zodpovednosti vozidiel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorová zmluva poistenia vozidiel súkromného použitia Komisie pre finančný dohľad (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Možno po nehode nechať všetko na poisťovateľovi?
+## Q16. Možno po nehode nechať všetko na poisťovateľovi?
 
 ​
 
@@ -231,7 +231,7 @@ Ak je vec zverená poisťovateľovi, treba priebežne sledovať postup vybavovan
 
 ​
 
-Q17. Aká je trestná zodpovednosť za ublíženie na zdraví z nedbanlivosti páchateľa dopravnej nehody?
+## Q17. Aká je trestná zodpovednosť za ublíženie na zdraví z nedbanlivosti páchateľa dopravnej nehody?
 
 ​
 
@@ -255,7 +255,7 @@ V niektorých rozsudkoch bol za ťažké ublíženie na zdraví z nedbanlivosti 
 
 ​
 
-Q18. Ak uzavriete zmier s druhou stranou, možno vziať trestné oznámenie späť?
+## Q18. Ak uzavriete zmier s druhou stranou, možno vziať trestné oznámenie späť?
 
 ​
 
@@ -275,7 +275,7 @@ V niektorých prípadoch je možný podmienečný odklad výkonu trestu (緩刑)
 
 ​
 
-Q19. Ak sa po nehode opustí miesto, je trestný čin úteku vždy naplnený?
+## Q19. Ak sa po nehode opustí miesto, je trestný čin úteku vždy naplnený?
 
 ​
 
@@ -295,7 +295,7 @@ Ak ide len o škody na vozidle, nepovažuje sa to za útek.
 
 ​
 
-Q20. Ako sa hľadá advokát na dopravnú nehodu?
+## Q20. Ako sa hľadá advokát na dopravnú nehodu?
 
 ​
 

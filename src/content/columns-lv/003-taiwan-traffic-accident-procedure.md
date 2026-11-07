@@ -195,7 +195,7 @@ Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險)
 - [Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas pabalstu standarts](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finanšu uzraudzības komisijas (金融監督管理委員會) standarta privātās lietošanas automašīnu apdrošināšanas līgums](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Jautājums 16. Vai pēc negadījuma visu var atstāt apdrošinātājam?
+## Jautājums 16. Vai pēc negadījuma visu var atstāt apdrošinātājam?
 
 ​
 
@@ -231,7 +231,7 @@ Ja lieta uzticēta apdrošinātājam, nepārtraukti jāseko kārtošanas gaitai 
 
 ​
 
-Jautājums 17. Kāda ir kriminālatbildība par aiz neuzmanības nodarītu miesas bojājumu ceļu satiksmes negadījuma vainīgajam?
+## Jautājums 17. Kāda ir kriminālatbildība par aiz neuzmanības nodarītu miesas bojājumu ceļu satiksmes negadījuma vainīgajam?
 
 ​
 
@@ -255,7 +255,7 @@ Dažos spriedumos par aiz neuzmanības nodarītu smagu miesas bojājumu ir uzlik
 
 ​
 
-Jautājums 18. Ja noslēdzat izlīgumu ar otru pusi, vai kriminālsūdzību var atsaukt?
+## Jautājums 18. Ja noslēdzat izlīgumu ar otru pusi, vai kriminālsūdzību var atsaukt?
 
 ​
 
@@ -275,7 +275,7 @@ Dažos gadījumos ir iespējama nosacīta soda izpildes atlikšana (緩刑); tas
 
 ​
 
-Jautājums 19. Ja pēc negadījuma atstāj vietu, vai kriminālais noziegums par aizbraukšanu vienmēr ir izpildīts?
+## Jautājums 19. Ja pēc negadījuma atstāj vietu, vai kriminālais noziegums par aizbraukšanu vienmēr ir izpildīts?
 
 ​
 
@@ -295,7 +295,7 @@ Ja ir tikai transportlīdzekļa bojājumi, to neuzskata par aizbraukšanu.
 
 ​
 
-Jautājums 20. Kā meklē advokātu ceļu satiksmes negadījumam?
+## Jautājums 20. Kā meklē advokātu ceļu satiksmes negadījumam?
 
 ​
 

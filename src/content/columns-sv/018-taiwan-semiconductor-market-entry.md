@@ -81,7 +81,7 @@ Att bolagsregistrering i Taiwan är avslutad innebär inte att det utländska hu
 
 För en företagsledare i ett utländskt bolags taiwanesiska dotterbolag (ett bolag med godkänd investering där utländska medborgare äger mer än 1/3 av aktierna) eller filial är ansökan om arbetstillstånd förhållandevis enklare. Redan vid anställningen av den första utländska personen måste arbetsgivaren dock uppfylla något av kriterierna i artikel 39 i bestämmelserna om kvalifikationer och prövning av utlänningars arbete (工作資格及審查標準). För ett bolag som har funnits i mindre än 1 år gäller bland annat inbetalt kapital (för en filial driftsmedel i Taiwan) på minst 500.000 TWD eller en omsättning på minst 3.000.000 TWD; för ett bolag som har funnits i 1 år eller längre gäller bland annat en genomsnittlig omsättning under det senaste 1 året eller de senaste 3 åren på minst 3.000.000 TWD. Anställer arbetsgivaren 2 eller fler utländska personer av samma slag ska dessa personer och arbetsgivaren uppfylla de allmänna normerna i kapitel 2 (artikel 38, 2:a stycket). Om du planerar att låta utländsk personal arbeta i Taiwan bör du därför före bolagsbildningen bekräfta om det planerade kapitalet når den tillämpliga tröskeln.
 
-## 7. Strukturer att jämföra efter verksamhetens utvecklingssteg
+## 6. Strukturer att jämföra efter verksamhetens utvecklingssteg
 
 Följande är hypotetiska exempel för att underlätta tanken; det garanterar inte att ett visst sätt är lagligt eller att det är att föredra.
 
@@ -91,7 +91,7 @@ Utländska företag där försäljning och tekniskt stöd i Taiwan successivt ut
 
 Utländska företag i marknadsundersökningsfas. Om du före en säljorganisation bara vill ha informationsinhämtning och kontaktfunktion kan representationskontor prövas. Om den faktiska planen omfattar försäljning ur lager eller arbete på plats ska det dock separat bekräftas om den verksamheten är tillåten.
 
-## 8. Vid det första samtalet räcker en driftsöversikt; all konfidentiell information behöver inte lämnas först
+## 7. Vid det första samtalet räcker en driftsöversikt; all konfidentiell information behöver inte lämnas först
 
 Inför en första kontakt (rådgivning sker endast på engelska, kinesiska, japanska eller koreanska) kan du sammanställa grunduppgifter om huvudkontor och tillskottsgivare, en allmän beskrivning av produkt eller tjänst, det planerade transaktionsflödet, plan för personal och anläggningar i Taiwan samt de avtals- och stödvillkor som kunderna kräver. Det som ännu inte är bestämt kan märkas som ”ej fastställt”.
 

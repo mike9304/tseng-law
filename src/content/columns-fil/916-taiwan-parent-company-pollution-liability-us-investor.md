@@ -39,7 +39,7 @@ Panimulang punto ang ulat. Tatanungin sa mabisang pagsusuri kung sino ang nagpai
 
 Para sa 246 claimants, pinawalang-bisa ng Supreme Court ang nauugnay na mga bahagi at ibinalik ang mga ito para sa karagdagang paglilitis. Ibinasura naman ang mga apelang may kinalaman sa 262 claimants. Kabilang sa remand ang mga pagkukulang sa pagsusuri ng pinsala, ebidensiya at awtoridad na maghabol. Nasa [buod ng disposisyon ng hukuman](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) ang mga bilang at limitasyong ito.
 
-Malinaw ang hating resulta: may remand para sa 246 claimants at ibinasurang mga apelang may kinalaman sa 262 claimants. Hindi ipinasiya sa remand na walang habol ang lahat ng apektado, at hindi natapos sa pagbasura ng mga apela ang buong litigasyon.
+Hindi ipinasiya sa remand na walang habol ang lahat ng apektado, at hindi natapos sa pagbasura ng mga apela ang buong litigasyon.
 
 Sa pagsusuri ng historical exposure bago ang transaksyon, kailangang tukuyin ang partikular na paglilitis at kalagayan nito bago tantiyahin ang obligasyon. Hindi sapat ang isang petsa ng desisyon.
 

@@ -19,11 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Gdy rozpoczynają Państwo działalność gastronomiczną, pierwszym problemem jest znalezienie adresu lokalu (營業地址).
 
-Oprócz sytuacji rynkowej
-
-innym ważnym punktem jest
-
-to, czy ten adres leży w strefie, w której prowadzenie „zakładu gastronomicznego” jest możliwe.
+Oprócz sytuacji rynkowej innym ważnym punktem jest to, czy ten adres leży w strefie, w której prowadzenie „zakładu gastronomicznego” jest możliwe.
 
 ​
 

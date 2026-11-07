@@ -97,6 +97,56 @@ function allText(locale: 'fr' | 'pt'): string {
   return packStrings(locale).map(([, value]) => value).join('\n');
 }
 
+function guidanceContentShapeWithoutContact(locale: 'de' | 'fr' | 'pt'): unknown {
+  const pack = guidanceContent[locale];
+  const { contact, ...pagesWithoutContact } = pack.pages;
+  return shapeOf({ ...pack, pages: pagesWithoutContact });
+}
+
+function assertContactPageSections(locale: 'fr' | 'pt', sectionCount = 3): void {
+  const sections = guidanceContent[locale].pages.contact.sections;
+  expect(sections, `${locale} contact section count`).toHaveLength(sectionCount);
+  for (const [index, section] of sections.entries()) {
+    expect(typeof section.heading, `${locale} contact.sections[${index}].heading type`).toBe('string');
+    expect(section.heading.trim().length, `${locale} contact.sections[${index}].heading empty`).toBeGreaterThan(0);
+    expect(Array.isArray(section.paragraphs), `${locale} contact.sections[${index}].paragraphs`).toBe(true);
+    expect(section.paragraphs?.length ?? 0, `${locale} contact.sections[${index}].paragraphs empty`).toBeGreaterThan(0);
+    for (const paragraph of section.paragraphs ?? []) {
+      expect(typeof paragraph).toBe('string');
+      expect(paragraph.trim().length).toBeGreaterThan(0);
+    }
+    if (section.items !== undefined) {
+      expect(Array.isArray(section.items)).toBe(true);
+      for (const item of section.items ?? []) {
+        expect(typeof item).toBe('string');
+        expect(item.trim().length).toBeGreaterThan(0);
+      }
+    }
+  }
+}
+
+function composedContactSurface(locale: 'fr' | 'pt'): string {
+  return [
+    guidanceAnswers[locale].contact?.answer ?? '',
+    ...guidanceContent[locale].pages.contact.sections.flatMap((section) => [
+      ...(section.paragraphs ?? []),
+      ...(section.items ?? []),
+    ]),
+  ].join(' ');
+}
+
+const FR_GUARANTEE_DENIAL_PATTERNS: readonly RegExp[] = [
+  /ne garantit ni/gi,
+  /n['’]est garanti\b/gi,
+];
+
+function stripFrGuaranteeDenials(value: string): string {
+  return FR_GUARANTEE_DENIAL_PATTERNS.reduce(
+    (text, pattern) => text.replace(pattern, ''),
+    value,
+  );
+}
+
 describe('fr/pt guidance is a page language, not a consultation language', () => {
   it('names the four consultation languages on the French contact and FAQ surfaces', () => {
     const contact = guidanceContent.fr.pages.contact.sections.map((section) => section.paragraphs.join(' ')).join(' ');
@@ -151,7 +201,8 @@ describe('fr/pt guidance packs are complete', () => {
   });
 
   it.each(['fr', 'pt'] as const)('has the identical field set and section shape as de on %s', (locale) => {
-    expect(shapeOf(guidanceContent[locale])).toEqual(shapeOf(guidanceContent.de));
+    expect(guidanceContentShapeWithoutContact(locale)).toEqual(guidanceContentShapeWithoutContact('de'));
+    assertContactPageSections(locale, 3);
     expect(shapeOf(guidanceOfficeCopy[locale])).toEqual(shapeOf(guidanceOfficeCopy.de));
     expect(shapeOf(guidanceFooterCopy[locale])).toEqual(shapeOf(guidanceFooterCopy.de));
     expect(shapeOf(guidanceTeamCopy[locale])).toEqual(shapeOf(guidanceTeamCopy.de));
@@ -171,13 +222,13 @@ describe('fr/pt attorney gender and language FAQ', () => {
   it('names Wei Tseng as a female attorney in French', () => {
     const text = allText('fr');
     expect(text).toMatch(/l[’']avocate Wei Tseng/);
-    expect(guidanceContent.fr.home.columnsReviewLabel).toMatch(/avocate Wei Tseng/);
+    expect(guidanceContent.fr.home.columnsReviewLabel).toBe('Droit taïwanais');
   });
 
   it('names Wei Tseng as a female attorney in Portuguese', () => {
     const text = allText('pt');
     expect(text).toMatch(/a advogada Wei Tseng/i);
-    expect(guidanceContent.pt.home.columnsReviewLabel).toMatch(/advogada Wei Tseng/);
+    expect(guidanceContent.pt.home.columnsReviewLabel).toBe('Direito de Taiwan');
   });
 
   it('answers the French consultation-language FAQ in the negative', () => {
@@ -199,14 +250,59 @@ describe('fr/pt attorney gender and language FAQ', () => {
   });
 });
 
+describe('fr guarantee denial stripping (regression)', () => {
+  const garantiPattern = /garanti/i;
+
+  it('accepts negative-only copy after stripping exact denial phrases', () => {
+    expect(stripFrGuaranteeDenials('Le cabinet ne garantit ni résultat ni délai')).not.toMatch(garantiPattern);
+    expect(stripFrGuaranteeDenials("Ce service n'est garanti par aucune promesse commerciale")).not.toMatch(
+      garantiPattern,
+    );
+  });
+
+  it('rejects positive-only copy', () => {
+    expect(stripFrGuaranteeDenials('Nous garantissons un accompagnement dédié')).toMatch(garantiPattern);
+  });
+
+  it('rejects mixed negative then positive garanti', () => {
+    const mixed = 'Le cabinet ne garantit ni délai, mais garantit un suivi personnalisé';
+    expect(stripFrGuaranteeDenials(mixed)).toMatch(garantiPattern);
+  });
+
+  it('rejects mixed positive then negative garanti', () => {
+    const mixed = 'garantit un accompagnement; le cabinet ne garantit ni résultat';
+    expect(stripFrGuaranteeDenials(mixed)).toMatch(garantiPattern);
+  });
+
+  it('does not strip n’est garantie as the allowed n’est garanti denial token', () => {
+    const feminine = 'La conformité n’est garantie par le cadre contractuel';
+    expect(stripFrGuaranteeDenials(feminine)).toBe(feminine);
+    expect(stripFrGuaranteeDenials(feminine)).toMatch(garantiPattern);
+  });
+});
+
 describe('fr/pt forbidden-token scan', () => {
+  it('uses exclusive limiters on French and Portuguese GEO answers and composed contact surfaces', () => {
+    for (const [key, entry] of Object.entries(guidanceAnswers.fr)) {
+      if (key === 'contact') continue;
+      expect(entry.answer).toMatch(/seulement/i);
+    }
+    for (const [key, entry] of Object.entries(guidanceAnswers.pt)) {
+      if (key === 'contact') continue;
+      expect(entry.answer).toMatch(/apenas/i);
+    }
+    expect(composedContactSurface('fr')).toMatch(/seulement/i);
+    expect(composedContactSurface('pt')).toMatch(/apenas/i);
+  });
+
   it('keeps French copy free of advertising and consultation claims outside the language-FAQ question', () => {
     for (const [path, value] of packStrings('fr')) {
       const isLanguageFaqQuestion =
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION.fr;
       for (const [label, pattern] of FR_FORBIDDEN) {
         if (isLanguageFaqQuestion && label === 'consultation en français') continue;
-        expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
+        const scanned = label === 'garanti' ? stripFrGuaranteeDenials(value) : value;
+        expect(scanned, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
   });

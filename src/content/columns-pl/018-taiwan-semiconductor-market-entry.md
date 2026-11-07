@@ -81,7 +81,7 @@ Zakończenie rejestracji na Tajwanie nie oznacza, że personel zagranicznej cent
 
 Stosunkowo łatwiej jest uzyskać zezwolenie na pracę dla zarządzającego tajwańską spółką zależną (spółką z zatwierdzoną inwestycją, w której cudzoziemcy posiadają więcej niż 1/3 udziałów lub akcji) lub oddziałem spółki zagranicznej. Jednak także przy zatrudnieniu pierwszego cudzoziemca pracodawca musi spełniać jedno z kryteriów art. 39 Standardów kwalifikacji i oceny pracy cudzoziemców (工作資格及審查標準). Dla spółki działającej krócej niż 1 rok kryteria obejmują kapitał wpłacony (dla oddziału — środki operacyjne na Tajwanie) w wysokości co najmniej 500.000 TWD albo obrót co najmniej 3.000.000 TWD; dla spółki działającej 1 rok lub dłużej obejmują one przeciętny obrót z ostatniego 1 roku albo z ostatnich 3 lat w wysokości co najmniej 3.000.000 TWD. Jeśli pracodawca zatrudnia 2 lub więcej cudzoziemców tego samego rodzaju, ci cudzoziemcy i pracodawca muszą spełniać ogólne standardy rozdziału 2 (art. 38 ust. 2). Jeśli planują Państwo, że personel zagraniczny będzie pracował na Tajwanie, trzeba przed założeniem spółki potwierdzić, czy planowany kapitał osiąga właściwy próg.
 
-## 7. Struktury, które mogą pasować według etapu handlu
+## 6. Struktury, które mogą pasować według etapu handlu
 
 Poniższe scenariusze są hipotetyczne, aby pomóc w myśleniu; nie ustalają, że dany sposób jest legalny lub korzystniejszy.
 
@@ -91,7 +91,7 @@ Zagraniczne przedsiębiorstwa, które rozszerzają sprzedaż i wsparcie technicz
 
 Zagraniczne przedsiębiorstwa w fazie badania rynku. Jeśli przed organizacją sprzedaży chcą Państwo tylko funkcji informacji i łączności, można ocenić biuro przedstawicielskie. Jeśli rzeczywisty plan obejmuje sprzedaż zapasów lub pracę na miejscu, trzeba osobno potwierdzić, czy te działalności są dozwolone.
 
-## 8. Na pierwsze spotkanie wystarczy panorama operacyjna; nie trzeba od razu przekazywać wszystkich materiałów poufnych
+## 7. Na pierwsze spotkanie wystarczy panorama operacyjna; nie trzeba od razu przekazywać wszystkich materiałów poufnych
 
 Przy pierwszym spotkaniu można zebrać dane podstawowe centrali i inwestorów, ogólny opis produktu lub usługi, przewidywany przepływ operacji, plany personelu i instalacji na Tajwanie oraz warunki umowy i wsparcia, których żądają klienci. To, czego jeszcze nie ustalono, można oznaczyć jako „do ustalenia”.
 

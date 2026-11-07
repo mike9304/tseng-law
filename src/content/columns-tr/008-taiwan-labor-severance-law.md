@@ -22,8 +22,6 @@ faq:
 
 Wei Tseng (曾雋崴), Tayvan avukatı.
 
-Tayvan’da kıdem tazminatının (資遣費) ne zaman doğduğu aşağıda anlatılır.
-
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
 Bu ayrım uygulamada sık karıştırılır.

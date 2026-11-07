@@ -195,7 +195,7 @@ Kolmannen osapuolen vastuuvakuutus (第三人責任險), kuljettajan tapaturmava
 - [Korvausnormi moottoriajoneuvojen pakollisesta vastuuvakuutuksesta](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Rahoitusvalvontakomission (金融監督管理委員會) vakiosopimus yksityisestä moottoriajoneuvovakuutuksesta](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Voiko onnettomuuden jälkeen jättää kaiken vakuutusyhtiön hoidettavaksi?
+## Q16. Voiko onnettomuuden jälkeen jättää kaiken vakuutusyhtiön hoidettavaksi?
 
 ​
 
@@ -231,7 +231,7 @@ Jos asia jätetään vakuutusyhtiölle, teidän on seurattava käsittelyn etenem
 
 ​
 
-Q17. Mikä on aiheuttajan rikosoikeudellinen vastuu tuottamuksellisesta ruumiinvammasta?
+## Q17. Mikä on aiheuttajan rikosoikeudellinen vastuu tuottamuksellisesta ruumiinvammasta?
 
 ​
 
@@ -255,7 +255,7 @@ Tuottamuksellisesta törkeästä ruumiinvammasta tuomioistuimet määräävät y
 
 ​
 
-Q18. Voiko rangaistusvaatimuksen peruuttaa, jos tekee sovinnon vastapuolen kanssa?
+## Q18. Voiko rangaistusvaatimuksen peruuttaa, jos tekee sovinnon vastapuolen kanssa?
 
 ​
 
@@ -275,7 +275,7 @@ Ehdollinen vankeusrangaistus (緩刑) voi joissakin tapauksissa tulla kyseeseen;
 
 ​
 
-Q19. Täyttyykö rangaistava pako aina, kun onnettomuuspaikan jättää?
+## Q19. Täyttyykö rangaistava pako aina, kun onnettomuuspaikan jättää?
 
 ​
 
@@ -295,7 +295,7 @@ Pelkässä ajoneuvovahingossa sitä ei pidetä pakona onnettomuuspaikalta.
 
 ​
 
-Q20. Miten löytää asianajaja liikenneonnettomuuksiin?
+## Q20. Miten löytää asianajaja liikenneonnettomuuksiin?
 
 ​
 

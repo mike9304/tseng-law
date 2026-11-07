@@ -96,7 +96,7 @@ og den nye ledelsen begynte straks etter tiltredelsen,
 
 med sikte på å senke personalkostnadene,
 
-suksessivt å innkalle høytlønnede langvarige medarbeidere til samtaler
+suksessivt å innkalle høytlønnede langvarige medarbeidere til samtaler.
 
 Dengang var min part, hr. B, ansatt i over 10 år hos selskap A
 
@@ -200,15 +200,14 @@ eller omplasserer medarbeidere til merkelige stillinger,
 
 skal du sikre bevis.
 
-dine normale fremmøteregistreringer,
+Sikre bevis som er gunstige for deg:
 
-overarbeidsregistre, prestasjonsregistre,
-
-interne regler, e-postutveksling med kolleger og overordnede
-
-samt samtaleopptak med overordnede —
-
-sikre bevis som er gunstige for deg.
+- dine normale fremmøteregistreringer
+- overarbeidsregistre
+- prestasjonsregistre
+- interne regler
+- e-postutveksling med kolleger og overordnede
+- samtaleopptak med overordnede
 
 ​
 

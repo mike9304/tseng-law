@@ -61,11 +61,7 @@ Herr Lin mente sanksjonen var svært urettferdig og ba om en grunnlovstolkning.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-I Taiwan
-
-møter personer med synshemming mange hindringer i oppvekst, aktivitet, læring og utdanning,
-
-og yrkene de kan utøve, er sterkt begrenset.
+I Taiwan møter personer med synshemming mange hindringer i oppvekst, aktivitet, læring og utdanning, og yrkene de kan utøve, er sterkt begrenset.
 
 Derfor vedtok datidens lovgiver, for å verne personer med synshemming, som sto i en svakere stilling,
 

@@ -195,7 +195,7 @@ Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vair
 - [Privalomojo transporto priemonių civilinės atsakomybės draudimo išmokų standartas](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finansų priežiūros komisijos (金融監督管理委員會) privačių transporto priemonių draudimo pavyzdinė sutartis](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Ar po įvykio galima viską palikti draudikui?
+## Q16. Ar po įvykio galima viską palikti draudikui?
 
 ​
 
@@ -231,7 +231,7 @@ Jei byla patikima draudikui, reikia nuolat stebėti tvarkymo eigą ir atidžiai 
 
 ​
 
-Q17. Kokia yra eismo įvykio kaltininko baudžiamoji atsakomybė už neatsargų sužalojimą?
+## Q17. Kokia yra eismo įvykio kaltininko baudžiamoji atsakomybė už neatsargų sužalojimą?
 
 ​
 
@@ -255,7 +255,7 @@ Kai kuriuose nuosprendžiuose už neatsargų sunkų sužalojimą skirta 4 mėnes
 
 ​
 
-Q18. Jei sudarote taikos susitarimą su kita šalimi, ar galima atsiimti baudžiamąjį skundą?
+## Q18. Jei sudarote taikos susitarimą su kita šalimi, ar galima atsiimti baudžiamąjį skundą?
 
 ​
 
@@ -275,7 +275,7 @@ Kai kuriais atvejais gali būti galimas bausmės vykdymo atidėjimas (緩刑); t
 
 ​
 
-Q19. Jei po įvykio paliekama vieta, ar baudžiamasis pabėgimo nusikaltimas visada įvykdomas?
+## Q19. Jei po įvykio paliekama vieta, ar baudžiamasis pabėgimo nusikaltimas visada įvykdomas?
 
 ​
 
@@ -295,7 +295,7 @@ Jei yra tik transporto priemonės žala, tai nelaikoma pabėgimu.
 
 ​
 
-Q20. Kaip rasti advokatą eismo įvykio bylai?
+## Q20. Kaip rasti advokatą eismo įvykio bylai?
 
 ​
 

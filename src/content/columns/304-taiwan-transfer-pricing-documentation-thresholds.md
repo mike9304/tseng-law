@@ -78,7 +78,7 @@ author: "legal-ai-assistant"
 
 수입총액과 특수관계 거래 총액이 위 기준 중 어디에 걸리는지 판단이 서지 않으면, 호정(昊鼎)국제법률사무소 이메일([wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw))로 최근 연도 숫자를 보내 주셔도 됩니다.
 
-12월 결산 회사라면 2025년도분 결산신고 기간은 2026년 5월 1일부터 31일까지였습니다([소득세법 제71조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)). 로컬파일은 그때 이미 갖춰져 있어야 했습니다. 마스터파일과 국가별보고서가 필요한 회사의 2025년도분 제출 기한은 2026년 12월 31일입니다.
+12월 결산 회사라면 2025년도분 결산신고 기간은 2026년 5월 1일부터 6월 1일까지였습니다. [소득세법 제71조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)의 마감일인 5월 31일이 휴일이어서 [6월 1일로 이월됐습니다](https://www.dot.gov.tw/singlehtml/ch26?cntId=ccaf96de0f98427ba329e462da152251). 로컬파일은 그때 이미 갖춰져 있어야 했습니다. 마스터파일과 국가별보고서가 필요한 회사의 2025년도분 제출 기한은 2026년 12월 31일입니다.
 
 ## 참고한 공식 자료
 

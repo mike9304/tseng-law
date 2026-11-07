@@ -50,7 +50,7 @@ Az általános gépjárműves árufuvarozásra elvben legalább 25.000.000 TWD (
 
 ### Tőke- és járműfeltételek és korlátozott kivételek
 
-Ha általános társaság újonnan gépjárműves árufuvarozást folytat, elvben legalább 25.000.000 TWD tőke és legalább 20 új jármű vonatkozik. A csak költöztetésre szakosodott esetben legalább 10.000.000 TWD tőke és legalább 8 új jármű, a Kinmenben vagy Lienchiangban (Matsu) folytatott esetben legalább 10.000.000 TWD tőke és legalább 5 új jármű a külön mérce. A Kinmen–Lienchiang mércét használó vállalkozót az engedélyezett terület szerinti tevékenységi kör korlátozza.
+ A Kinmen–Lienchiang mércét használó vállalkozót az engedélyezett terület szerinti tevékenységi kör korlátozza.
 
 A természetes személy által folytatott kisteherautós fuvarozás (小貨車) a szokásos társaságalapítástól elkülönülő, szűk intézmény. A feltételek között szerepel, hogy a kérelmező az illetékes körzetben háztartás-nyilvántartással rendelkezzen, kisteherautóra szóló hivatásos vezetői engedélye legyen, és 1 saját tulajdonú, 2 éven belüli korú kisteherautót használjon. Ez nem az a szokásos út, amelyet külföldi jogi személy a gépjárműves árufuvarozásba lépéshez használ.
 

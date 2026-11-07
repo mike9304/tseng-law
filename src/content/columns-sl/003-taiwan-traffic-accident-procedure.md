@@ -195,7 +195,7 @@ Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarova
 - [Tarifa dajatev obveznega zavarovanja avtomobilske odgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorčna pogodba zavarovanja vozil zasebne rabe Komisije za finančni nadzor (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Ali je po nesreči mogoče vse prepustiti zavarovatelju?
+## Q16. Ali je po nesreči mogoče vse prepustiti zavarovatelju?
 
 ​
 
@@ -231,7 +231,7 @@ Zato ne priporočam, da celoten spor prepustite zavarovalnici.
 
 ​
 
-Q17. Kakšna je kazenska odgovornost za malomarno telesno poškodbo storilca prometne nesreče?
+## Q17. Kakšna je kazenska odgovornost za malomarno telesno poškodbo storilca prometne nesreče?
 
 ​
 
@@ -255,7 +255,7 @@ V nekaterih sodbah je bila za hudo malomarno telesno poškodbo izrečena kazen 4
 
 ​
 
-Q18. Če sklenete poravnavo z nasprotno stranjo, lahko umaknete kazenski predlog?
+## Q18. Če sklenete poravnavo z nasprotno stranjo, lahko umaknete kazenski predlog?
 
 ​
 
@@ -275,7 +275,7 @@ V nekaterih zadevah je mogoča pogojna obsodba, torej pogojni odlog izvršitve (
 
 ​
 
-Q19. Če se po nesreči zapusti kraj, je kaznivo dejanje pobega vedno izpolnjeno?
+## Q19. Če se po nesreči zapusti kraj, je kaznivo dejanje pobega vedno izpolnjeno?
 
 ​
 
@@ -295,7 +295,7 @@ Predhodni pogoj pobega s kraja nesreče (肇事逃逸) je, da je bil kdo poškod
 
 ​
 
-Q20. Kako se išče odvetnica ali odvetnik za prometno nesrečo?
+## Q20. Kako se išče odvetnica ali odvetnik za prometno nesrečo?
 
 ​
 

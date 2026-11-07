@@ -56,7 +56,7 @@ Transportul cu camion mic (小貨車) exploatat de o persoană fizică este un r
 
 Plăcile de vehicul (車輛牌照) de uz comercial eliberate unui antreprenor de transport cu autovehicule de constituire nouă nu pot fi radiate prin restituire (繳銷) nici transmise prin schimbarea titularului la registrul vehiculului (過戶轉讓) timp de 1 an de la data eliberării.
 
-Această restricție vizează radierea plăcii de uz comercial prin restituire și transmiterea prin schimbarea titularului la registrul vehiculului. Celelalte tratamente, inclusiv casarea, înlocuirea și celelalte forme de dispoziție asupra vehiculului, trebuie confirmate aparte după normele în vigoare ale autorității drumurilor competente.
+Celelalte tratamente, inclusiv casarea, înlocuirea și celelalte forme de dispoziție asupra vehiculului, trebuie confirmate aparte după normele în vigoare ale autorității drumurilor competente.
 
 ### Investiție străină și aprobarea sectorului
 

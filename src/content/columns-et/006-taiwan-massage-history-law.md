@@ -61,19 +61,11 @@ Härra Lin pidas seda karistust väga ebaõiglaseks ja taotles põhiseaduse tõl
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Taiwanis
+Taiwanis kohtavad nägemispuudega isikud palju takistusi arengus, igapäevategevuses, õppimises ja hariduses, ning alad, millel nad võivad tegutseda, on väga piiratud.
 
-kohtavad nägemispuudega isikud palju takistusi arengus, igapäevategevuses, õppimises ja hariduses,
+Seetõttu tolleaegne seadusandja, et kaitsta nägemispuudega isikuid, kes olid nõrgemas seisundis, kehtestas seaduse, mis kaitses nägemispuudega isikute tööd ja õigust toimetulekule (生存權).
 
-ning alad, millel nad võivad tegutseda, on väga piiratud.
-
-Seetõttu tolleaegne seadusandja, et kaitsta nägemispuudega isikuid, kes olid nõrgemas seisundis,
-
-kehtestas seaduse, mis kaitses nägemispuudega isikute tööd ja õigust toimetulekule (生存權).
-
-Aja kulgemise ja tarbijaturu laienemisega
-
-tõusis siiski seisukoht, et pelgalt nägemispuudega isikute õiguste kaitse piiras liigselt ilma nägemispuudeta isikute õigust tööle.
+Aja kulgemise ja tarbijaturu laienemisega tõusis siiski seisukoht, et pelgalt nägemispuudega isikute õiguste kaitse piiras liigselt ilma nägemispuudeta isikute õigust tööle.
 
 Vaidluses nägemispuudega isikute ja ilma nägemispuudeta isikute kutseõiguste üle esitati palju vastandlikke arvamusi.
 

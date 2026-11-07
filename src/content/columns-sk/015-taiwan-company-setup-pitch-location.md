@@ -19,11 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Keď začínate gastronomickú činnosť, prvým problémom je nájsť adresu prevádzkarne (營業地址).
 
-Okrem trhovej situácie rozhoduje ešte jedna vec.
-
-Tou vecou je zóna, v ktorej sa adresa nachádza.
-
-Rozhoduje, či táto adresa leží v zóne, kde je prevádzka „reštaurácie“ možná.
+Okrem trhovej situácie rozhoduje aj to, či sa adresa nachádza v zóne, kde je prevádzka „reštaurácie“ možná.
 
 ​
 

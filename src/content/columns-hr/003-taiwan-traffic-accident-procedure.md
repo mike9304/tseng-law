@@ -195,7 +195,7 @@ Osiguranje odgovornosti prema trećim osobama (第三人責任險), osiguranje o
 - [Tarifa davanja obveznog osiguranja odgovornosti za vozila](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Ogledni ugovor osiguranja vozila za privatnu uporabu Povjerenstva za financijski nadzor (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Možete li nakon nesreće sve prepustiti osiguravatelju?
+## Q16. Možete li nakon nesreće sve prepustiti osiguravatelju?
 
 ​
 
@@ -231,7 +231,7 @@ Ako se stvar povjeri osiguravatelju, treba kontinuirano pratiti tijek rješavanj
 
 ​
 
-Q17. Kakva je kaznena odgovornost za nehajnu tjelesnu ozljedu počinitelja prometne nesreće?
+## Q17. Kakva je kaznena odgovornost za nehajnu tjelesnu ozljedu počinitelja prometne nesreće?
 
 ​
 
@@ -255,7 +255,7 @@ U nekim je presudama za nehajnu tešku tjelesnu ozljedu izrečena kazna od 4 mje
 
 ​
 
-Q18. Ako se s drugom stranom nagodite, možete li povući kaznenu prijavu?
+## Q18. Ako se s drugom stranom nagodite, možete li povući kaznenu prijavu?
 
 ​
 
@@ -275,7 +275,7 @@ U nekim slučajevima može biti moguća uvjetna osuda (緩刑); to međutim nije
 
 ​
 
-Q19. Ako nakon nesreće napustite mjesto, je li kazneno djelo bijega uvijek ostvareno?
+## Q19. Ako nakon nesreće napustite mjesto, je li kazneno djelo bijega uvijek ostvareno?
 
 ​
 
@@ -295,7 +295,7 @@ Ako postoji samo šteta na vozilu, to se ne smatra bijegom.
 
 ​
 
-Q20. Kako se traži odvjetnik za prometnu nesreću?
+## Q20. Kako se traži odvjetnik za prometnu nesreću?
 
 ​
 

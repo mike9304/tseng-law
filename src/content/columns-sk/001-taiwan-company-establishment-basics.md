@@ -26,7 +26,7 @@ Cesty, ktorými zahraničné podniky a samostatne zárobkovo činné osoby vstup
 
 Založenie spoločnosti (公司設立), zahraničná investícia, bankový účet, dane, miesto činnosti, pracovné povolenie (工作許可) a pobytový postup sú prepojené, no nepredstavujú ten istý postup. Dokončenie zápisu spoločnosti neznamená, že posúdenie investičných prostriedkov alebo odvetvových povolení sú plne ukončené, ani že spoločníci, a ak ide o akciovú spoločnosť, akcionári (股東), alebo vedúci môžu ihneď pracovať na Taiwane.
 
-Preto je spoľahlivejšie od začiatku spoločne posúdiť podnikateľský model, sídla investorov a ústredia, očakávané obchody, tok prostriedkov, rozmiestnenie personálu a miesto činnosti. Tento príspevok najprv rozlišuje formy vstupu na Taiwan a potom postupne predstavuje všeobecný priebeh založenia dcérskej spoločnosti, predbežné overenia týkajúce sa odvetvia a miesta, pracovné povolenie, pobyt a kapitál zahraničných osôb a podstatné dane.
+Preto je spoľahlivejšie od začiatku spoločne posúdiť podnikateľský model, sídla investorov a ústredia, očakávané obchody, tok prostriedkov, rozmiestnenie personálu a miesto činnosti.
 
 ## 1. Formy vstupu na Taiwan: dcérska spoločnosť, pobočka, reprezentačná kancelária
 

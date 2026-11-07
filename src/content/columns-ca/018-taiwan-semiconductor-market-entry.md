@@ -81,7 +81,7 @@ Completar el registre a Taiwan no implica que el personal de la seu estrangera p
 
 Per al gerent d’una filial (societat amb inversió autoritzada en què els estrangers posseeixen més d’un terç (1/3) de les accions) o sucursal taiwanesa d’una societat estrangera, el permís de treball és, en termes relatius, més fàcil d’obtenir. Això no és una promesa de concessió. Fins i tot en contractar el primer estranger, l’ocupador ha de complir un dels criteris de l’article 39 de les Normes de qualificació i revisió del treball d’estrangers. Per a una societat amb menys d’1 any, els criteris inclouen un capital desemborsat (en el cas d’una sucursal, fons d’explotació a Taiwan) d’almenys 500.000 TWD o uns ingressos d’almenys 3.000.000 TWD; per a una societat amb 1 any o més, inclouen uns ingressos mitjans de l’últim any o dels últims 3 anys d’almenys 3.000.000 TWD. Si l’ocupador contracta 2 o més estrangers del mateix tipus, aquests estrangers i l’ocupador han de complir els criteris generals del capítol 2 (article 38, apartat 2). Si es preveu que personal estranger treballi a Taiwan, cal confirmar abans de constituir la societat si el capital previst assoleix el llindar aplicable.
 
-## 7. Estructures que poden encaixar segons l’etapa del negoci
+## 6. Estructures que poden encaixar segons l’etapa del negoci
 
 Els escenaris següents són hipotètics i només serveixen per orientar l’anàlisi; no garanteixen que un mode sigui lícit o preferible.
 
@@ -91,7 +91,7 @@ Empreses que amplien vendes i suport tècnic a Taiwan. Si es planeja contractar 
 
 Empreses en fase d’estudi de mercat. Si, abans d’una organització de vendes, només es volen funcions d’informació i enllaç, es pot avaluar una oficina de representació. Si el pla real inclou venda d’inventari o treball in situ, cal confirmar per separat si aquestes activitats estan permeses.
 
-## 8. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal lliurar tota la informació confidencial d’entrada
+## 7. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal lliurar tota la informació confidencial d’entrada
 
 En la primera consulta es poden reunir dades bàsiques de la seu i dels inversors, una descripció general del producte o servei, el flux d’operacions previst, plans de personal i instal·lacions a Taiwan, i les condicions de contracte i suport que demanen els clients. El que no estigui decidit es pot marcar com a «pendent».
 

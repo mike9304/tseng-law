@@ -40,7 +40,7 @@ Gayunman, kung may batayan sa ilalim ng [Artikulo 14 ng Batas sa mga Pamantayan 
 
 ​
 
-Gayunman, kung ang empleyado ay gumawa ng gawaing labag sa batas,
+Sa pagtanggal ng kompanya sa ilalim ng Artikulo 12, kung ang empleyado ay gumawa ng gawaing labag sa batas,
 
 malubhang lumabag sa kontrata sa paggawa o sa mga tuntunin ng kompanya,
 
@@ -48,7 +48,7 @@ o lumiban sa trabaho nang tatlong sunod na araw o anim na araw sa loob ng isang 
 
 Maaaring tanggalin siya ng kompanya kahit hindi binabayaran ng separation pay.
 
-Gayunman, para sa bawat dahilan maliban sa ikatlo (pinal na hatol na pagkabilanggo), kailangang tanggalin ng kompanya ang empleyado sa loob ng 30 araw mula nang malaman nito ang pangyayari (Artikulo 12, talata 2 ng Batas sa mga Pamantayan sa Paggawa).
+Para sa bawat dahilan maliban sa ikatlo (pinal na hatol na pagkabilanggo), kailangang tanggalin ng kompanya ang empleyado sa loob ng 30 araw mula nang malaman nito ang pangyayari (Artikulo 12, talata 2 ng Batas sa mga Pamantayan sa Paggawa).
 
 ​
 

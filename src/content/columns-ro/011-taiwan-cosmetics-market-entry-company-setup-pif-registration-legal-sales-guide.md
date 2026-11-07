@@ -84,7 +84,7 @@ Retragerea sau distrugerea (銷毀) nu este o măsură care însoțește automat
 
 ## 3. Reglementarea etichetării, a promovării și a publicității
 
-Publicitatea se apreciază nu doar după frază, ci după ansamblul prezentării, inclusiv numele produsului, textul, imaginea, simbolul și sunetul. Sunt interzise expresiile false sau exagerate și pretinderea unei eficacități medicale, și trebuie acordată o atenție deosebită expresiilor medicale precum tratarea acneei, antiinflamator sau bactericid. Amenda administrativă este de 40.000 TWD până la 200.000 TWD pentru o publicitate falsă sau exagerată, și de 600.000 TWD până la 5.000.000 TWD pentru o pretindere de eficacitate medicală. Publicațiile influencerilor și ale altora trebuie examinate după același criteriu dacă, în fond, sunt publicitate.
+Publicitatea se apreciază nu doar după frază, ci după ansamblul prezentării, inclusiv numele produsului, textul, imaginea, simbolul și sunetul. Sunt interzise expresiile false sau exagerate și pretinderea unei eficacități medicale, și trebuie acordată o atenție deosebită expresiilor medicale precum tratarea acneei, antiinflamator sau bactericid. Publicațiile influencerilor și ale altora trebuie examinate după același criteriu dacă, în fond, sunt publicitate.
 
 ### Se apreciază după ansamblul prezentării, nu după fiecare cuvânt
 

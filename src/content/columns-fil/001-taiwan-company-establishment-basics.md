@@ -26,7 +26,7 @@ Iba-iba ang paraan ng pagpasok ng mga kompanyang Pilipino at ng mga indibidwal n
 
 Lalo na, magkakaugnay ngunit hindi magkakatulad na hakbang ang pagtatatag ng kompanya, ang pamumuhunang dayuhan, ang bank account, ang buwis, ang lugar ng operasyon, ang permiso sa trabaho (工作許可) at ang mga hakbang sa paninirahan. Hindi nangangahulugang natapos na ang pagsusuri sa halaga ng puhunan o ang lahat ng lisensiya ayon sa uri ng negosyo dahil lamang natapos ang rehistro ng kompanya, at hindi rin nangangahulugang makapagtatrabaho nang agad sa Taiwan ang shareholder o ang manager.
 
-Kaya mas ligtas na sabay-sabay suriin mula sa simula ang modelo ng negosyo, ang kinaroroonan ng mamumuhunan at ng punong tanggapan, ang inaasahang mga transaksiyon, ang daloy ng pondo, ang pagtatalaga ng tauhan, at ang lugar ng operasyon. Sa artikulong ito, matapos ipagkaiba ang mga anyo ng pagpasok sa Taiwan, sunod-sunod na ipapaliwanag ang karaniwang daloy ng pagtatatag ng subsidiary, ang paunang pagtiyak hinggil sa uri ng negosyo at sa lugar, ang mga suliranin ng dayuhan sa trabaho, paninirahan at kapital, at ang mga pangunahing buwis.
+Kaya mas ligtas na sabay-sabay suriin mula sa simula ang modelo ng negosyo, ang kinaroroonan ng mamumuhunan at ng punong tanggapan, ang inaasahang mga transaksiyon, ang daloy ng pondo, ang pagtatalaga ng tauhan, at ang lugar ng operasyon.
 
 ## 1. Mga Anyo ng Pagpasok sa Taiwan: Subsidiary, Branch at Representative Office
 

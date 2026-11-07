@@ -63,7 +63,7 @@ Poza przyjęciem na uczelnię BOCA może wymagać dokumentów wykształcenia, ś
 
 Nauka mandaryńskiego ma własny harmonogram. Zasadniczo przed przyjazdem potrzebna jest [wiza visitor na naukę języka](https://www.boca.gov.tw/fp-158-260-9690c-2.html). Następnie trzeba ukończyć cztery miesiące w uprawnionym ośrodku językowym przy uczelni uznanej przez tajwańskie Ministerstwo Edukacji i zapisać się na co najmniej trzy kolejne miesiące. Taki okres nauki jest warunkiem późniejszego ubiegania się o pobyt.
 
-Frekwencję trzeba udokumentować. [BOCA wymaga](https://www.boca.gov.tw/fp-166-285-041cb-2.html) co najmniej 15 godzin zajęć tygodniowo od poniedziałku do piątku. Nieobecności, łącznie z udzielonymi zwolnieniami z zajęć, nie mogą przekroczyć jednej czwartej godzin. Samo opłacenie kursu nie dowodzi spełnienia tych warunków.
+Frekwencję trzeba udokumentować. [BOCA wymaga](https://www.boca.gov.tw/fp-166-285-041cb-2.html) co najmniej 15 godzin zajęć tygodniowo od poniedziałku do piątku. Nieobecności, łącznie z udzielonymi zwolnieniami z zajęć, nie mogą przekroczyć jednej czwartej łącznej liczby godzin zajęć. Samo opłacenie kursu nie dowodzi spełnienia tych warunków.
 
 Zajęcie dorywcze podczas studiów wymaga właściwej podstawy pracy. [Art. 43 i 50 ustawy o usługach zatrudnienia](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) określają zasady zezwoleń i zatrudnienia wskazanych kategorii studentów. Ani przyjęcie na uczelnię, ani studencka ARC nie zastępują potrzebnego zezwolenia. Dla studentów objętych art. 50 limit wynosi 20 godzin tygodniowo poza wakacjami letnimi i zimowymi.
 

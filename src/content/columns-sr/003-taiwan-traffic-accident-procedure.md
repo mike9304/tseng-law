@@ -195,7 +195,7 @@ Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od
 - [Tarifa davanja obaveznog osiguranja od autoodgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Ogledni ugovor osiguranja vozila privatne upotrebe Komisije za finansijski nadzor (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Može li se nakon nezgode sve ostaviti osiguravaču?
+## Q16. Može li se nakon nezgode sve ostaviti osiguravaču?
 
 ​
 
@@ -231,7 +231,7 @@ Ako se stvar poveri osiguravaču, treba neprekidno pratiti tok rešavanja i paž
 
 ​
 
-Q17. Kakva je krivična odgovornost za telesnu povredu iz nehata učinioca saobraćajne nezgode?
+## Q17. Kakva je krivična odgovornost za telesnu povredu iz nehata učinioca saobraćajne nezgode?
 
 ​
 
@@ -255,7 +255,7 @@ U nekim presudama za tešku telesnu povredu iz nehata izrečena je kazna zatvora
 
 ​
 
-Q18. Ako zaključite poravnanje s drugom stranom, može li se krivični predlog oštećenog povući?
+## Q18. Ako zaključite poravnanje s drugom stranom, može li se krivični predlog oštećenog povući?
 
 ​
 
@@ -275,7 +275,7 @@ Uslovna osuda (緩刑) može biti moguća u nekim slučajevima; to nije obećanj
 
 ​
 
-Q19. Ako se nakon nezgode napusti mesto, je li krivično delo bekstva uvek ostvareno?
+## Q19. Ako se nakon nezgode napusti mesto, je li krivično delo bekstva uvek ostvareno?
 
 ​
 
@@ -295,7 +295,7 @@ Ako postoje samo štete na vozilu, to se ne smatra bekstvom.
 
 ​
 
-Q20. Kako se traži advokat za saobraćajnu nezgodu?
+## Q20. Kako se traži advokat za saobraćajnu nezgodu?
 
 ​
 

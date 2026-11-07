@@ -89,8 +89,6 @@ Den part, der først og med tilstrækkelig grund bringer aftalen til ophør, kan
 
 I taiwanske arbejdskonflikter (勞資糾紛) er tidspunktet derfor afgørende.
 
-Netop tidspunktet er meget vigtigt.
-
 Den, der forbereder sig i forvejen, står i de fleste tilfælde stærkere til at varetage sine rettigheder.
 
 ---

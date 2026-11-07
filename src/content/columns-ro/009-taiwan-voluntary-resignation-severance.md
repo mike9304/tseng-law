@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Imagine principală](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-După cum am arătat într-un articol anterior, în Taiwan nu este ușor pentru salariat să obțină indemnizația de concediere (資遣費).
+După cum am arătat într-un [articol anterior](/ro/columns/taiwan-labor-severance-law), în Taiwan nu este ușor pentru salariat să obțină indemnizația de concediere (資遣費).
 
 ​
 

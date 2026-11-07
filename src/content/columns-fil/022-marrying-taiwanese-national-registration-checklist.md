@@ -64,6 +64,6 @@ Maaaring gamitin ang marriage record bilang ebidensiya sa hiwalay na aplikasyon 
 
 ### Tanong sa batas ng Taiwan
 
-Maaaring makipag-ugnayan kay abogada 曾雋崴 ng Hovering International Law Office sa [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) gamit ang maikling paglalarawan ng nasyonalidad, tirahan, dating kasal, household registration ng Taiwanese na kapareha at mga dokumentong mayroon na. Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2. Itanong muna ang paraan ng pagpapadala ng sensitibong dokumento. Ang batas ng Pilipinas ay dapat talakayin sa naaangkop na awtoridad o tagapayo roon.
+Maaaring makipag-ugnayan kay abogada 曾雋崴 ng Hovering International Law Firm sa [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) gamit ang maikling paglalarawan ng nasyonalidad, tirahan, dating kasal, household registration ng Taiwanese na kapareha at mga dokumentong mayroon na. Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2. Itanong muna ang paraan ng pagpapadala ng sensitibong dokumento. Ang batas ng Pilipinas ay dapat talakayin sa naaangkop na awtoridad o tagapayo roon.
 
 Sinuri ang mga opisyal na sanggunian noong 27 Setyembre 2026. Sa tumatanggap na tanggapan kinukumpirma ang listahan ng dokumento, appointment, bayad at deadline.

@@ -80,7 +80,7 @@ Po pribavljanju dozvole za pripremu osnivanja pripremu treba načelno završiti 
 
 ## 3. Sticanje postojećeg preduzetnika
 
-Sticanjem akcija dozvola se ne prenosi. Pri sticanju akcija dozvola se ne stiče niti prenosi; ciljno društvo, nosilac dozvole, i dalje postoji kao isto pravno lice i dalje drži poslovnu dozvolu za prevoz. Pri prenosu delatnosti ili imovine poslovna dozvola za prevoz ciljnog društva sama po sebi ne prelazi na sticaoca. Treba potvrditi važenje poslovne dozvole za prevoz i obim odobrenih delatnosti, vozila i registarske tablice za komercijalnu upotrebu, parkirališne objekte, članstvo u strukovnom udruženju, povrede i zaostale obaveze, osiguranje, obezbeđenje i ugovorne klauzule o promeni kontrole, te sprovesti odobrenje strane investicije i potrebni postupak odobrenja ili izmene kod nadležnog organa za puteve.
+Pri sticanju akcija dozvola se ne stiče niti prenosi; ciljno društvo, nosilac dozvole, i dalje postoji kao isto pravno lice i dalje drži poslovnu dozvolu za prevoz. Pri prenosu delatnosti ili imovine poslovna dozvola za prevoz ciljnog društva sama po sebi ne prelazi na sticaoca. Treba potvrditi važenje poslovne dozvole za prevoz i obim odobrenih delatnosti, vozila i registarske tablice za komercijalnu upotrebu, parkirališne objekte, članstvo u strukovnom udruženju, povrede i zaostale obaveze, osiguranje, obezbeđenje i ugovorne klauzule o promeni kontrole, te sprovesti odobrenje strane investicije i potrebni postupak odobrenja ili izmene kod nadležnog organa za puteve.
 
 ### Razlika između sticanja akcija i prenosa delatnosti ili imovine
 

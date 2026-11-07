@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Hovedbilde](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Som tidligere belyst er det i Taiwan ikke lett for arbeidstakere å motta sluttvederlag (資遣費).
+I Taiwan er det ikke lett for arbeidstakere å motta sluttvederlag (資遣費).
 
 ​
 

@@ -187,19 +187,7 @@ Aðrir starfsmenn sem höfðu látið af störfum stóðu hins vegar ekki jafn s
 
 Vegna þess að slík mál eru mörg skalt þú varðveita sönnunargögn.
 
-Sama gildir þegar félagið grípur til ótilhlýðilegra ráða.
-
-Þá skalt þú varðveita sönnunargögn.
-
-Þegar félagið hengir sig í smávægileg mistök starfsmanna skalt þú varðveita sönnunargögn.
-
-Sama gildir þegar það setur markmið sem erfitt er að ná.
-
-Sama gildir þegar það setur óhóflegar kröfur.
-
-Sama gildir þegar það flytur starfsmenn í einkennilegar stöður.
-
-Þá skalt þú varðveita sönnunargögn.
+Þetta á einnig við þegar félagið grípur til ótilhlýðilegra ráða, hengir sig í smávægileg mistök starfsmanna, setur markmið sem erfitt er að ná, setur óhóflegar kröfur eða flytur starfsmenn í einkennilegar stöður.
 
 Varðveittu venjulegar mætingaskrár þínar.
 

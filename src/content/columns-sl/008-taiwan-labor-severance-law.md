@@ -44,7 +44,7 @@ Obveznost izplačila odpravnine nastane šele tedaj, ko družba delavca odpusti.
 
 hudo krši pogodbo o zaposlitvi ali interni delovni red (工作規則),
 
-ali se brez razloga ne zglasi 3 dni zapored ali 6 dni v enem mesecu (曠工),
+ali se brez utemeljenega razloga ne zglasi 3 dni zapored ali 6 dni v enem mesecu (曠工),
 
 lahko družba odpusti brez izplačila odpravnine.
 

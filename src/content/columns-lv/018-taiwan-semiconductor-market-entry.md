@@ -81,7 +81,7 @@ Reģistrācijas pabeigšana Taivānā nenozīmē, ka ārvalstu galvenā biroja d
 
 Taivānas meitas sabiedrības (ieguldījuma atļauju saņēmusi sabiedrība, kurā ārzemniekiem pieder vairāk nekā 1/3 akciju) un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Tomēr jau pirmā ārzemnieka nodarbināšanai darba devējam jāatbilst vienam no Ārzemnieku darba kvalifikācijas un izvērtēšanas standartu 39. panta kritērijiem. Sabiedrībai, kas ir jaunāka par 1 gadu, kritēriji cita starpā ietver iemaksāto kapitālu (filiālei — darbības līdzekļus Taivānā) vismaz TWD 500.000 vai apgrozījumu vismaz TWD 3.000.000; sabiedrībai, kas ir 1 gadu veca vai vecāka, tie cita starpā ietver vidējo apgrozījumu pēdējā 1 gada vai 3 gadu laikā vismaz TWD 3.000.000. Ja darba devējs nodarbina 2 vai vairāk viena veida ārzemniekus, šiem ārzemniekiem un darba devējam jāatbilst 2. nodaļas vispārīgajiem standartiem (38. panta 2. daļa). Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai paredzētais kapitāls atbilst attiecīgajam slieksnim.
 
-## 7. Struktūras, ko var salīdzināt pēc uzņēmuma attīstības pakāpes
+## 6. Struktūras, ko var salīdzināt pēc uzņēmuma attīstības pakāpes
 
 Turpmākās situācijas ir hipotētiskas, lai atbalstītu pārdomas; tās nesola noteiktu iznākumu, ka kāds veids ir likumīgs vai labāks.
 
@@ -91,7 +91,7 @@ Turpmākās situācijas ir hipotētiskas, lai atbalstītu pārdomas; tās nesola
 
 Ārvalstu uzņēmumi tirgus izpētes posmā. Ja pirms pārdošanas organizācijas izveides vēlaties tikai informācijas vākšanas un saskarsmes funkcijas, var vērtēt pārstāvniecību. Ja tomēr faktiskais plāns ietver uzglabāto preču pārdošanu vai darbu uz vietas, atsevišķi jāpārbauda, vai šīs darbības ir atļautas.
 
-## 8. Pirmajai konsultācijai pietiek ar darbības pārskatu; nav vajadzīgs uzreiz nodot visus konfidenciālos materiālus
+## 7. Pirmajai konsultācijai pietiek ar darbības pārskatu; nav vajadzīgs uzreiz nodot visus konfidenciālos materiālus
 
 Pirmajā konsultācijā var sakārtot galvenā biroja un ieguldītāju pamatdatus, vispārīgu izstrādājuma vai pakalpojuma aprakstu, paredzēto darījumu plūsmu, personāla un iekārtu plānu Taivānā un līguma un atbalsta nosacījumus, ko prasa klienti. Kas vēl nav nolemts, var apzīmēt kā „nenoteikts“.
 

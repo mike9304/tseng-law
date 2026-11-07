@@ -96,7 +96,7 @@ en de nieuwe leiding begon dadelijk na de aantreding,
 
 om de personeelskosten te verlagen,
 
-hoogbetaalde langdurige werknemers achtereenvolgens tot gesprekken te ontbieden
+hoogbetaalde langdurige werknemers achtereenvolgens tot gesprekken te ontbieden.
 
 De heer B was toen meer dan 10 jaar bij vennootschap A tewerkgesteld
 
@@ -136,7 +136,7 @@ B was de werknemer met het beste resultaat in de regio Midden-Taiwan,
 
 had de vennootschap veel geld gebracht
 
-en werkte elke dag gewetensvol,
+en werkte elke dag gewetensvol.
 
 Daarom wees hij deze onredelijke eis krachtig af.
 

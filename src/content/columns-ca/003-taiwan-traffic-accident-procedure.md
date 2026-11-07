@@ -195,7 +195,7 @@ L’assegurança de responsabilitat civil davant tercers (第三人責任險), l
 - [Barem de prestacions de l’assegurança obligatòria de responsabilitat civil d’automòbils](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contracte tipus d’assegurança d’automòbil d’ús particular de la Comissió de Supervisió Financera (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-16. Després de l’accident, es pot deixar tot en mans de l’asseguradora?
+## 16. Després de l’accident, es pot deixar tot en mans de l’asseguradora?
 
 ​
 
@@ -231,7 +231,7 @@ Si s’encomana a l’asseguradora, s’ha de seguir contínuament el procés de
 
 ​
 
-17. Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
+## 17. Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
 
 ​
 
@@ -255,7 +255,7 @@ En algunes sentències per lesions greus per imprudència s’ha imposat una pen
 
 ​
 
-18. Si es transigeix amb l’altra part, es pot desistir de la querella penal?
+## 18. Si es transigeix amb l’altra part, es pot desistir de la querella penal?
 
 ​
 
@@ -275,7 +275,7 @@ En alguns casos el tribunal pot acordar la suspensió de la pena (緩刑); no é
 
 ​
 
-19. Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
+## 19. Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
 
 ​
 
@@ -295,7 +295,7 @@ Si només hi ha danys en el vehicle, no es considera fuga.
 
 ​
 
-20. Com es busca un advocat per a un accident de trànsit?
+## 20. Com es busca un advocat per a un accident de trànsit?
 
 ​
 

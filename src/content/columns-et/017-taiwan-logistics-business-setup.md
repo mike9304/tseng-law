@@ -50,8 +50,6 @@ Tavalisele mootorveokite kaubaveole kehtib põhimõtteliselt miinimumkapital TWD
 
 ### Kapitali- ja sõidukinõuded ning piiratud erandid
 
-Kui tavaline äriühing asutab uue mootorveokite kaubaveo ettevõtte, kehtib põhimõtteliselt miinimumkapital TWD 25.000.000 ja vähemalt 20 uut veoautot. Ainult kolimisi puudutava tegevuse korral kehtib eraldi kriteerium: miinimumkapital TWD 10.000.000 ja vähemalt 8 uut veoautot; Kinmeni või Lienchiangi kriteeriumi kasutava tegevuse korral miinimumkapital TWD 10.000.000 ja vähemalt 5 uut veoautot. Kinmeni või Lienchiangi kriteeriumi kasutav ettevõtja allub heakskiidetud piirkonnast tulenevale tegevusulatuse piirangule.
-
 Füüsilise isiku väikese veoauto vedu on kitsas kord, mis erineb tavalisest äriühingu asutamisest. Eelduseks on muu hulgas, et taotlejal on leibkonna registreerimine pädevas piirkonnas ja väikeste sõidukite kutselise juhiluba ning et ta kasutab 1 isiklikus omandis olevat väikest veoautot, mille vanus ei ületa 2 aastat. See ei ole tavaline viis, kuidas välismaine juriidiline isik mootorveokite kaubaveole siseneb.
 
 Uuele mootorsõidukiveo ettevõtjale väljastatud tegevussõiduki numbrimärki (車輛牌照) ei tohi väljastamise päevast 1 aasta jooksul tagastada kustutamiseks (繳銷) ega sõidukiregistris omandit üle kanda ega loovutada (過戶轉讓).

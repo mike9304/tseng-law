@@ -31,7 +31,7 @@ Artikel 185-4 i Taiwans strafflag (刑法) reglerar det straffrättsliga ansvare
 
 Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119 i Taiwan (ambulans och brand), och vid brott eller en akut säkerhetssituation 110 (polis) eller 112 från mobiltelefon. Gör också anmälan till polisen efter trafikolyckans omständigheter.
 
-När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Vittnens kontaktuppgifter bör inte utelämnas, och inte heller en begäran om att övervakningsbilder (監視器影像) och färdskrivare (行車紀錄器) bevaras, eller parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
+När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Du bör samla in vittnens kontaktuppgifter, uppgifter om parterna, fordonet och försäkringen samt journalen (病歷). Du bör också begära att övervakningsbilder (監視器影像) och inspelningar från fordonskameror (行車紀錄器) bevaras. Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
 
 Vad gäller polisens handlingar kan du på olycksplatsen få talongen för registrering av parterna i trafikolyckan (道路交通事故當事人登記聯單). Efter 7 dagar från olycksdagen kan skissen och fotona från platsen (現場圖 / 現場照片) begäras; efter 30 dagar från olycksdagen kan tabellen för preliminär analys av trafikolyckan (道路交通事故初步分析研判表) begäras. Utfärdandetidpunkt och ansökningsvillkor ska bekräftas på nytt hos den behöriga polismyndigheten.
 
@@ -195,7 +195,7 @@ Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfalls
 - [Ersättningsnivåerna för den obligatoriska motorfordonsansvarsförsäkringen](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardavtal för personbilsförsäkring från Taiwans finansövervakningskommission (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kan man efter olyckan lämna allt åt försäkringsgivaren?
+## Q16. Kan man efter olyckan lämna allt åt försäkringsgivaren?
 
 ​
 
@@ -231,7 +231,7 @@ Om akten anförtros försäkringsgivaren ska utredningsförloppet följas fortl�
 
 ​
 
-Q17. Vad är det straffrättsliga ansvaret för vållande till kroppsskada för den som orsakat en trafikolycka?
+## Q17. Vad är det straffrättsliga ansvaret för vållande till kroppsskada för den som orsakat en trafikolycka?
 
 ​
 
@@ -255,7 +255,7 @@ I vissa domar om vållande till grov kroppsskada förekommer omkring 4 månaders
 
 ​
 
-Q18. Om man förlikas med motparten, kan man återkalla den straffrättsliga angivelsen?
+## Q18. Om man förlikas med motparten, kan man återkalla den straffrättsliga angivelsen?
 
 ​
 
@@ -275,7 +275,7 @@ I vissa fall kan påföljden bestämmas till villkorlig dom (緩刑) i stället 
 
 ​
 
-Q19. Om man lämnar platsen efter olyckan, är det straffrättsliga brottet flykt alltid uppfyllt?
+## Q19. Om man lämnar platsen efter olyckan, är det straffrättsliga brottet flykt alltid uppfyllt?
 
 ​
 
@@ -295,7 +295,7 @@ Om det endast finns skada på fordonet anses detta inte som flykt.
 
 ​
 
-Q20. Hur söker man en advokat för en trafikolycka?
+## Q20. Hur söker man en advokat för en trafikolycka?
 
 ​
 

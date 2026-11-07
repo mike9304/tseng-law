@@ -61,19 +61,11 @@ Herra Lin piti tätä seuraamusta hyvin epäoikeudenmukaisena ja pyysi perustusl
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Taiwanissa
+Taiwanissa näkövammaiset kohtaavat monia esteitä kasvussa, toimintakyvyssä, opiskelussa ja koulutuksessa, ja alat, joita he voivat harjoittaa, ovat hyvin rajoitetut.
 
-näkövammaiset kohtaavat monia esteitä kasvussa, toimintakyvyssä, opiskelussa ja koulutuksessa,
+Siksi silloinen lainsäätäjä, suojellakseen näkövammaisia, jotka olivat heikommassa asemassa, sääti lain, joka suojeli näkövammaisten työn ja toimeentulon oikeutta (生存權).
 
-ja alat, joita he voivat harjoittaa, ovat hyvin rajoitetut.
-
-Siksi silloinen lainsäätäjä, suojellakseen näkövammaisia, jotka olivat heikommassa asemassa,
-
-sääti lain, joka suojeli näkövammaisten työn ja toimeentulon oikeutta (生存權).
-
-Ajan kulun ja kulutusmarkkinan laajenemisen myötä
-
-kuului kuitenkin näkemys, jonka mukaan pelkkä näkövammaisten oikeuksien suoja rajoitti liikaa ilman näkövammaa olevien työnteko-oikeutta.
+Ajan kulun ja kulutusmarkkinan laajenemisen myötä kuului kuitenkin näkemys, jonka mukaan pelkkä näkövammaisten oikeuksien suoja rajoitti liikaa ilman näkövammaa olevien työnteko-oikeutta.
 
 Keskustelussa näkövammaisten ja ilman näkövammaa olevien ammatillisista oikeuksista esitettiin lukuisia vastakkaisia mielipiteitä.
 

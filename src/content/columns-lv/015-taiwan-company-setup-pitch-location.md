@@ -19,11 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Sākot ēdināšanas darbību, pirmais jautājums ir atrast darbības adresi (營業地址).
 
-Līdzās tirgus situācijai
-
-vēl viens būtisks apsvērums ir tas,
-
-vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
+Līdzās tirgus situācijai vēl viens būtisks apsvērums ir tas, vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
 ​
 

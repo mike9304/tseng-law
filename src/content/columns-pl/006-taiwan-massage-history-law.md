@@ -61,11 +61,7 @@ Pan Lin uznał tę sankcję za bardzo niesprawiedliwą i wystąpił o wykładni�
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Na Tajwanie
-
-osoby z niepełnosprawnością wzroku napotykają liczne przeszkody, między innymi we wzroście, aktywności, nauce i edukacji,
-
-a zawody, które mogą wykonywać, są bardzo ograniczone.
+Na Tajwanie osoby z niepełnosprawnością wzroku napotykają liczne przeszkody, między innymi we wzroście, aktywności, nauce i edukacji, a zawody, które mogą wykonywać, są bardzo ograniczone.
 
 Dlatego ówczesny ustawodawca, aby chronić osoby z niepełnosprawnością wzroku, które znajdowały się w pozycji słabszej,
 

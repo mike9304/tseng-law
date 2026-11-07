@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![முதன்மைப் படம்](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-நான் முன்பு கூறியபடி, தைவானில் பணியாளர் சட்டப்பூர்வ பணிநீக்க நஷ்டஈடு (資遣費) பெறுவது எளிதல்ல.
+நான் [முந்தைய கட்டுரையில்](/ta/columns/taiwan-labor-severance-law) கூறியபடி, தைவானில் பணியாளர் சட்டப்பூர்வ பணிநீக்க நஷ்டஈடு (資遣費) பெறுவது எளிதல்ல.
 
 ​
 

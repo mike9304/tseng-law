@@ -54,9 +54,8 @@ Tanmateix, per a tots els motius llevat del núm. 3 (condemna ferma a pena de pr
 
 Li ho resumeixo en una taula senzilla.
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Tipus | Acomiadament econòmic (資遣員工, 經濟解僱) | Acomiadament disciplinari (解僱員工, 懲戒解僱) | Dimissió voluntària del treballador (員工自請離職) |
+| --- | --- | --- | --- |
 | Significat | Quan l’ocupador, segons la situació de gestió, necessita un ajust de personal, la causa sorgeix en l’àmbit de gestió de l’ocupador i no és responsabilitat del treballador. Per això l’ocupador ha de respectar el període de preavís (預告期間) i assumir obligacions com el pagament de la indemnització per acomiadament, a fi d’equilibrar el perjudici del treballador. | Si el treballador comet un acte il·lícit o impropi, l’ocupador pot posar fi de seguida al contracte de treball (勞動契約) sense preavís i no ha de pagar la indemnització per acomiadament. Això és una de les facultats disciplinàries de l’ocupador. | En un contracte de durada indefinida, el treballador té llibertat per posar fi al contracte en qualsevol moment, però ha de respectar el període de preavís segons la seva antiguitat, a fi que l’ocupador pugui organitzar el traspàs del lloc i buscar una altra persona. |
 | Requisits | Sí  (article 11 de la Llei de normes laborals de Taiwan) | Sí  (article 12 de la Llei de normes laborals de Taiwan) | No |
 | Preavís | Necessari | No necessari | Necessari |

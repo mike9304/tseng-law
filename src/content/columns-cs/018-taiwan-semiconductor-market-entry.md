@@ -81,7 +81,7 @@ Dokončení zápisu na Tchaj-wanu neznamená, že zaměstnanci zahraničního ú
 
 Pro vedoucího tchajwanské dceřiné společnosti (společnosti se schválenou investicí, v níž cizinci drží více než 1/3 podílů) a pobočky zahraniční společnosti je žádost o pracovní povolení relativně snazší. Avšak i při zaměstnání prvního cizince musí zaměstnavatel splnit jedno z kritérií článku 39 Standardů kvalifikace a přezkumu práce cizinců (工作資格及審查標準). U společnosti, která existuje méně než 1 rok, kritéria zahrnují splacený kapitál (u pobočky provozní prostředky na Tchaj-wanu) nejméně 500.000 TWD nebo obrat nejméně 3.000.000 TWD; u společnosti, která existuje 1 rok nebo déle, zahrnují průměrný obrat za poslední 1 rok nebo 3 roky nejméně 3.000.000 TWD. Zaměstnává-li zaměstnavatel 2 nebo více cizinců stejného typu, musí tito cizinci a zaměstnavatel splnit obecné standardy kapitoly 2 (článek 38 odstavec 2). Pokud plánujete, že zahraniční zaměstnanci budou pracovat na Tchaj-wanu, je třeba před založením tchajwanské společnosti předem ověřit, zda nastavení kapitálu splňuje příslušný práh.
 
-## 7. Struktury, které lze porovnat podle stupně rozvoje podniku
+## 6. Struktury, které lze porovnat podle stupně rozvoje podniku
 
 Následující situace jsou hypotetické k podpoře úvahy; neslibují určený výsledek, že určitý způsob je zákonný nebo lepší.
 
@@ -91,7 +91,7 @@ Zahraniční podniky, které na Tchaj-wanu postupně rozšiřují prodej a techn
 
 Zahraniční podniky ve fázi průzkumu trhu. Pokud před zřízením prodejní organizace chcete jen funkce sběru informací a styku, lze posoudit zastoupení. Pokud však skutečný plán zahrnuje prodej skladovaného zboží nebo práci na místě, je třeba zvlášť ověřit, zda tyto činnosti jsou povoleny.
 
-## 8. Pro první konzultaci stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
+## 7. Pro první konzultaci stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
 
 Při první konzultaci lze uspořádat základní údaje o ústředí a investorech, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako „nevyřízeno“.
 

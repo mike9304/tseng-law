@@ -50,7 +50,7 @@ Za uobičajeni cestovni prijevoz tereta automobilima načelno se primjenjuje naj
 
 ### Zahtjevi kapitala i vozila te ograničene iznimke
 
-Kad uobičajeno društvo prvi put započinje cestovni prijevoz tereta automobilima, načelno se primjenjuje najmanji kapital 25.000.000 TWD i najmanje 20 novih vozila. Za onoga tko se posvećuje samo selidbi primjenjuje se vlastito mjerilo najmanjeg kapitala 10.000.000 TWD i najmanje 8 novih vozila, a za onoga tko djeluje na Kinmenu ili u Lienchiangu (Matsu) najmanji kapital 10.000.000 TWD i najmanje 5 novih vozila. Poduzetnik koji rabi mjerilo Kinmena ili Lienchianga podliježe ograničenju opsega djelatnosti prema odobrenom području.
+Poduzetnik koji rabi mjerilo Kinmena ili Lienchianga podliježe ograničenju opsega djelatnosti prema odobrenom području.
 
 Prijevoz malim teretnim vozilom (小貨車) koji obavlja fizička osoba uzak je režim, različit od uobičajenog osnivanja društava. Među zahtjevima jest da podnositelj ima evidenciju kućanstava u nadležnom okrugu, da ima profesionalnu vozačku dozvolu za mala vozila i da rabi jedno malo teretno vozilo u vlasništvu starosti koja ne premašuje 2 godine. To nije uobičajeni put kojim strana pravna osoba stupa u cestovni prijevoz tereta automobilima.
 

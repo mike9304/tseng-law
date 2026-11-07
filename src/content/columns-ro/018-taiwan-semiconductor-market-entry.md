@@ -73,7 +73,7 @@ Când o societate străină constituie o filială taiwaneză, numele se verific�
 
 În schimb, pentru a constitui o sucursală taiwaneză a unei societăți străine obișnuite, o autorizare de investiție a Departamentului de examinare a investițiilor al Ministerului Economiei (經濟部投資審議司) nu este în principiu cerută; Departamentul comerțului al Ministerului Economiei (經濟部商業發展署) tratează înregistrarea de sucursală și determinarea de capital conexă. Rămân necesare verificarea prealabilă a numelui, viramentul capitalului de exploatare, verificarea capitalului și înregistrarea fiscală; calendarul este în general mai scurt.
 
-Cele de mai sus sunt un sfat privind concepția contractului. Simpla alegere a unei anume forme juridice nu face tranzacția licită și nu previne litigiile.
+Cele de mai sus privesc alegerea formei juridice și procedurile de înregistrare în Taiwan. Simpla alegere a unei anume forme juridice nu face tranzacția licită și nu previne litigiile.
 
 ## 5. Înregistrarea societară și munca licită a unui inginer nu sunt același lucru
 
@@ -81,7 +81,7 @@ A încheia înregistrarea în Taiwan nu implică faptul că personalul sediului 
 
 Este relativ mai ușor să se obțină permisul de muncă pentru un gestionar al filialei taiwaneze a unei societăți străine (societate cu autorizare de investiție la care străinii dețin peste 1/3 din acțiuni) sau al sucursalei acesteia. Totuși, chiar și la angajarea primului străin, angajatorul trebuie să îndeplinească unul dintre criteriile de la art. 39 din Standardele de calificări și de examinare (工作資格及審查標準) pentru munca străinilor. Pentru o societate cu mai puțin de 1 an de la constituire, criteriile includ un capital vărsat (pentru o sucursală, fonduri de exploatare în Taiwan) de cel puțin 500.000 TWD sau o cifră de afaceri de cel puțin 3.000.000 TWD; pentru o societate cu 1 an sau mai mult, ele includ o cifră de afaceri medie din ultimul 1 an sau din ultimii 3 ani de cel puțin 3.000.000 TWD. Dacă angajatorul angajează 2 sau mai mulți străini de același tip, acești străini și angajatorul trebuie să îndeplinească standardele generale din capitolul 2 (art. 38 alineatul 2). Dacă intenționați ca personal străin să lucreze în Taiwan, trebuie confirmat înainte de a constitui societatea dacă capitalul prevăzut atinge pragul aplicabil.
 
-## 7. Structuri care pot conveni după etapa de dezvoltare a activității
+## 6. Structuri care pot conveni după etapa de dezvoltare a activității
 
 Scenariile următoare sunt ipotetice pentru a ajuta la reflecție; nu stabilesc că un mod ar fi licit sau preferabil.
 
@@ -91,7 +91,7 @@ Scenariile următoare sunt ipotetice pentru a ajuta la reflecție; nu stabilesc 
 
 Întreprinderi străine în fază de studiu de piață. Dacă, înaintea unei organizații de vânzări, vreți numai funcții de informare și de legătură, un birou de reprezentare se poate evalua. Dacă planul real include vânzarea de stocuri sau munca pe loc, trebuie confirmat aparte dacă aceste activități sunt permise.
 
-## 8. Pentru prima convorbire, o prezentare de ansamblu a operațiunilor este suficientă; nu este necesar să se predea de la început toate actele confidențiale
+## 7. Pentru prima convorbire, o prezentare de ansamblu a operațiunilor este suficientă; nu este necesar să se predea de la început toate actele confidențiale
 
 La prima convorbire, puteți reuni datele de bază ale sediului și ale aportorilor, o descriere generală a produsului sau a serviciului, fluxul de activitate prevăzut, planurile de personal și de instalații în Taiwan, și condițiile de contract și de sprijin pe care le cer clienții. Ceea ce nu este încă decis se poate marca ca „în așteptare”.
 

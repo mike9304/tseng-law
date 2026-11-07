@@ -25,8 +25,10 @@ const EXPECTED_EN_TITLE =
 const EXPECTED_KO_TITLE =
   '직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외';
 const EXPECTED_EN_BODY_SHA256 =
-  '9e1da57f10360ba6bcad8cb1fcff87b7ed047f1d2991bcf39fb3654cea2d870c';
-const EXPECTED_VISIBLE_WORD_COUNT = 540;
+  '53986aaf19ec5465e47c6acd4fa01f5dbd0c6d0b6fe72713d3f310d49c7d68db';
+const EXPECTED_EN_FILE_SHA256 =
+  '6f16c708117b1f86b7f8c2709fe2321f565d6ccc47385565492ddd7292aa026e';
+const EXPECTED_VISIBLE_WORD_COUNT = 533;
 
 function extractDestinations(content: string, pattern: RegExp): string[] {
   return Array.from(content.matchAll(pattern), (match) => match[1]);
@@ -160,6 +162,8 @@ describe('English labor column 009 mirror', () => {
 
   it('freezes corrected body integrity, word count, read time, and name safety', () => {
     const post = getColumnPost(SLUG, 'en');
+    const fileHash = createHash('sha256').update(enRaw).digest('hex');
+    expect(fileHash).toBe(EXPECTED_EN_FILE_SHA256);
     const bodyHash = createHash('sha256')
       .update(enParsed.content)
       .digest('hex');

@@ -195,7 +195,7 @@ Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojišt
 - [Standard plnění povinného pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorová smlouva pojištění vozidel soukromého užití Komise finančního dohledu (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Lze po nehodě nechat vše na pojistiteli?
+## Q16. Lze po nehodě nechat vše na pojistiteli?
 
 ​
 
@@ -231,7 +231,7 @@ Je-li věc svěřena pojistiteli, je třeba průběžně sledovat postup vyřizo
 
 ​
 
-Q17. Jaká je trestní odpovědnost za ublížení na zdraví z nedbalosti pachatele dopravní nehody?
+## Q17. Jaká je trestní odpovědnost za ublížení na zdraví z nedbalosti pachatele dopravní nehody?
 
 ​
 
@@ -255,7 +255,7 @@ V některých rozsudcích byl za těžké ublížení na zdraví z nedbalosti ul
 
 ​
 
-Q18. Uzavřete-li smír s druhou stranou, lze vzít trestní žalobu zpět?
+## Q18. Uzavřete-li smír s druhou stranou, lze vzít trestní žalobu zpět?
 
 ​
 
@@ -275,7 +275,7 @@ V některých případech je možné podmíněné odsouzení, tedy podmíněný 
 
 ​
 
-Q19. Opustí-li se místo po nehodě, je trestný čin útěku vždy naplněn?
+## Q19. Opustí-li se místo po nehodě, je trestný čin útěku vždy naplněn?
 
 ​
 
@@ -295,7 +295,7 @@ Jsou-li jen škody vozidla, nepovažuje se to za útěk.
 
 ​
 
-Q20. Jak se hledá advokát k dopravní nehodě?
+## Q20. Jak se hledá advokát k dopravní nehodě?
 
 ​
 

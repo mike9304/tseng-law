@@ -81,7 +81,7 @@ Tai, kad Taivane užbaigta bendrovės registracija, nereiškia, kad užsienio pa
 
 Užsienio bendrovės Taivano dukterinės bendrovės (investicijos leidimą gavusi bendrovė, kurioje užsieniečiams priklauso daugiau kaip 1/3 akcijų) ir filialo vadovui leidimą dirbti gauti yra santykinai lengviau. Tačiau net samdant pirmąjį užsienietį darbdavys privalo atitikti vieną iš Užsieniečių darbo kvalifikacijos ir peržiūros standartų 39 straipsnio kriterijų. Bendrovei, įsteigtai mažiau nei prieš 1 metus, kriterijai apima, be kita ko, apmokėtą kapitalą (filialui — veiklos lėšas Taivane) ne mažiau kaip 500.000 TWD arba apyvartą ne mažesnę kaip 3.000.000 TWD; bendrovei, įsteigtai prieš 1 metus ar anksčiau, jie apima, be kita ko, vidutinę apyvartą per paskutinius 1 metus ar 3 metus ne mažesnę kaip 3.000.000 TWD. Jei darbdavys samdo 2 ar daugiau to paties tipo užsieniečių, tie užsieniečiai ir darbdavys turi atitikti 2 skyriaus bendruosius standartus (38 straipsnio 2 dalis). Jei planuojate, kad užsienio darbuotojai dirbs Taivane, prieš steigiant Taivano bendrovę iš anksto reikia patikrinti, ar numatytas kapitalas atitinka taikytiną ribą.
 
-## 7. Struktūros, kurias galima palyginti pagal verslo plėtros etapą
+## 6. Struktūros, kurias galima palyginti pagal verslo plėtros etapą
 
 Toliau pateiktos situacijos yra hipotetinės, skirtos mąstymui paremti; jomis negarantuojama, kad kuris nors būdas yra teisėtas ar geresnis.
 
@@ -91,7 +91,7 @@ Toliau pateiktos situacijos yra hipotetinės, skirtos mąstymui paremti; jomis n
 
 Įmonės rinkos tyrimo etape. Jei prieš sudarant pardavimo organizaciją norite tik informacijos rinkimo ir ryšių funkcijų, galima vertinti atstovybę. Tačiau jei faktinis planas apima sandėlyje laikomų prekių pardavimą ar darbą vietoje, atskirai reikia patikrinti, ar ta veikla leidžiama.
 
-## 8. Pirmai konsultacijai pakanka veiklos apžvalgos; nebūtina iš karto perduoti visų konfidencialių dokumentų
+## 7. Pirmai konsultacijai pakanka veiklos apžvalgos; nebūtina iš karto perduoti visų konfidencialių dokumentų
 
 Pirmai konsultacijai galima sutvarkyti pagrindinės buveinės ir investuotojų pagrindinius duomenis, bendrą produkto ar paslaugos aprašymą, numatomą sandorių eigą, personalo ir įrenginių Taivane planą ir sutarčių bei pagalbos sąlygas, kurių prašo klientai. Kas dar nenuspręsta, galima pažymėti kaip „nenuspręsta“.
 

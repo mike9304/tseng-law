@@ -195,7 +195,7 @@ A harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a
 - [A kötelező gépjármű-felelősségbiztosítás kifizetési tarifája](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [A Pénzügyi Felügyeleti Bizottság (金融監督管理委員會) magánhasználatú gépjármű-biztosítási mintaszerződése](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. A baleset után rábízható-e minden a biztosítóra?
+## Q16. A baleset után rábízható-e minden a biztosítóra?
 
 ​
 
@@ -231,7 +231,7 @@ Ha az iratokat a biztosítóra bízzák, folyamatosan követni kell az ügyinté
 
 ​
 
-Q17. Mi a közúti baleset okozójának gondatlan testi sértés miatti büntetőjogi felelőssége?
+## Q17. Mi a közúti baleset okozójának gondatlan testi sértés miatti büntetőjogi felelőssége?
 
 ​
 
@@ -255,7 +255,7 @@ Gondatlan súlyos testi sértés miatt egyes ítéletekben mintegy 4 hónap, gon
 
 ​
 
-Q18. Ha egyezséget kötnek a másik féllel, visszavonható-e a büntetőjogi panasz?
+## Q18. Ha egyezséget kötnek a másik féllel, visszavonható-e a büntetőjogi panasz?
 
 ​
 
@@ -275,7 +275,7 @@ A bíróság egyes esetekben felfüggesztheti a büntetés végrehajtását (緩
 
 ​
 
-Q19. Ha a baleset után elhagyják a helyszínt, mindig megvalósul-e az elmenekülés bűncselekménye (肇事逃逸)?
+## Q19. Ha a baleset után elhagyják a helyszínt, mindig megvalósul-e az elmenekülés bűncselekménye (肇事逃逸)?
 
 ​
 
@@ -295,7 +295,7 @@ Ha csak járműkár van, ezt nem tekintik elmenekülésnek.
 
 ​
 
-Q20. Hogyan keresnek ügyvédet közúti balesethez?
+## Q20. Hogyan keresnek ügyvédet közúti balesethez?
 
 ​
 

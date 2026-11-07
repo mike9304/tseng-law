@@ -22,7 +22,7 @@ faq:
 
 Kung nais ng isang dayuhang brand ng kosmetiko (化粧品) na ipamahagi ang produkto nito sa Taiwan, kailangan nitong pagpasyahan kung kanino ipagkakatiwala ang pag-import, kailan tatapusin ang rehistrasyon ng produkto (產品登錄), sino ang mamamahala sa Product Information File (PIF, 產品資訊檔案) at saan ito iingatan, at sa anong pamantayan susuriin ang pagmamarka (標示) at ang advertising. Maaaring gumamit ng lokal na taga-angkat ang mga dayuhang brand at maaari rin silang direktang magpatakbo ng negosyo sa Taiwan, kaya hindi natatapos ang paghahanda sa pagbebenta sa pagpapasya lamang kung magtatatag ba ng kompanya.
 
-Maaaring mag-iba ang mga obligasyong nalalapat ayon sa uri ng produkto at sa pagawaan, sa aktuwal na anyo ng pag-import, sa paraan ng pamamahagi at sa nilalaman ng advertising. Sa ibaba ay ipapaliwanag nang magkakahiwalay ang anyo ng pagpasok sa merkado at ang entidad na nagdadala ng pananagutang itinakda ng batas, ang rehistrasyon ng produkto sa TFDA, ang paghahanda, pag-update at pag-iingat ng PIF, ang pagmamarka at advertising, at ang inspeksiyon at mga hakbang sa pagwawasto. Bago itakda ang aktuwal na iskedyul ng suplay, kailangang muling tiyakin ayon sa bawat produkto ang pinakabagong batas at ang patnubay ng ahensiyang may hurisdiksiyon (主管機關).
+Maaaring mag-iba ang mga obligasyong nalalapat ayon sa uri ng produkto at sa pagawaan, sa aktuwal na anyo ng pag-import, sa paraan ng pamamahagi at sa nilalaman ng advertising. Bago itakda ang aktuwal na iskedyul ng suplay, kailangang muling tiyakin ayon sa bawat produkto ang pinakabagong batas at ang patnubay ng ahensiyang may hurisdiksiyon (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 

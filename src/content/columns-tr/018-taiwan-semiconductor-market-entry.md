@@ -81,7 +81,7 @@ Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı ke
 
 Yabancı şirketin Tayvan bağlı şirketi (yatırım izni almış ve yabancıların payların üçte birinden (1/3) fazlasına sahip olduğu şirket) ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ilk yabancıyı istihdam ederken bile işveren, yabancıların çalışmasına ilişkin Nitelik ve İnceleme Standartlarının 39. maddesindeki ölçütlerden birini karşılamalıdır. Kuruluşundan 1 yıldan az geçmiş şirket için ölçütler arasında ödenmiş sermaye (şubede Tayvan’daki işletme fonu) en az 500.000 TWD veya ciro en az 3.000.000 TWD yer alır; kuruluşundan 1 yıl veya daha fazla geçmiş şirket için ölçütler arasında son 1 yıl veya 3 yıllık ortalama ciro en az 3.000.000 TWD yer alır. İşveren aynı türden 2 veya daha fazla yabancı istihdam ederse bu yabancılar ve işveren 2. bölümdeki genel standartları karşılamalıdır (38. madde, 2. fıkra). Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı doğrulanmalıdır.
 
-## 7. İş gelişme aşamasına göre karşılaştırılabilecek yapılar
+## 6. İş gelişme aşamasına göre karşılaştırılabilecek yapılar
 
 Aşağıdakiler düşünmeye yardımcı varsayımsal inceleme durumlarıdır; belirli bir yöntemin hukuka uygun veya daha iyi olduğunu garanti eden sonuç değildir.
 
@@ -91,7 +91,7 @@ Tayvan içinde satış ve teknik desteği giderek genişleten şirket. Tayvan’
 
 Pazar araştırması aşamasındaki şirket. Satış örgütü kurulmadan önce yalnızca bilgi toplama ve irtibat işlevi isteniyorsa temsilcilik incelenebilir. Ancak gerçek plan stok mal satışı veya saha çalışmasını içeriyorsa, o faaliyetin yapılıp yapılamayacağı ayrıca doğrulanmalıdır.
 
-## 8. İlk görüşmede yalnızca işletme özeti yeterlidir; gizli belgelerin tamamını ilk yazışmada vermek gerekmez
+## 7. İlk görüşmede yalnızca işletme özeti yeterlidir; gizli belgelerin tamamını ilk yazışmada vermek gerekmez
 
 İlk görüşmede merkezin ve yatırımcıların temel bilgisi, ürün veya hizmetin genel açıklaması, öngörülen işlem akışı, Tayvan personel ve tesis planı, müşterinin istediği sözleşme ve destek koşulları derlenebilir. Henüz kararlaşmamış hususlar “belirsiz” diye işaretlenebilir.
 

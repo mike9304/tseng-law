@@ -81,7 +81,7 @@ Dovršetak upisa društva na Tajvanu ne znači da zaposlenici strane središnjic
 
 Za voditelja tajvanskog kćerinskog društva (društva s odobrenim ulaganjem u kojem stranci drže više od 1/3 udjela) i podružnice stranog društva zahtjev za dozvolu za rad relativno je lakši. Međutim, i pri zapošljavanju prvog stranca poslodavac mora ispunjavati jedan od kriterija iz članka 39. Standarda kvalifikacija i ocjene rada stranaca (工作資格及審查標準). Za društvo koje postoji kraće od 1 godine kriteriji uključuju uplaćeni kapital (za podružnicu poslovna sredstva na Tajvanu) od najmanje 500.000 TWD ili promet od najmanje 3.000.000 TWD; za društvo koje postoji 1 godinu ili dulje uključuju prosječni promet u posljednjoj 1 godini ili 3 godine od najmanje 3.000.000 TWD. Ako poslodavac zapošljava 2 ili više stranaca iste vrste, ti stranci i poslodavac moraju ispunjavati opće standarde poglavlja 2 (članak 38. stavak 2.). Ako planirate da strani zaposlenici rade na Tajvanu, prije osnivanja tajvanskog društva treba unaprijed potvrditi ispunjava li predviđeni kapital taj prag.
 
-## 7. Strukture koje se mogu usporediti prema stupnju razvoja pothvata
+## 6. Strukture koje se mogu usporediti prema stupnju razvoja pothvata
 
 Sljedeće su situacije hipotetske radi potpore razmišljanju; ne obećavaju da je neki način zakonit ili poželjniji.
 
@@ -91,7 +91,7 @@ Strana poduzeća koja na Tajvanu postupno proširuju prodaju i tehničku potporu
 
 Strana poduzeća u fazi istraživanja tržišta. Ako prije postavljanja prodajne organizacije želite samo funkcije prikupljanja obavijesti i veze, može se ocijeniti predstavništvo (代表人辦事處). Ako međutim stvarni plan obuhvaća prodaju skladištene robe ili rad na mjestu, treba zasebno potvrditi jesu li te djelatnosti dopuštene.
 
-## 8. Za prvo savjetovanje dostatan je pregled poslovanja; nije nužno odmah predati sve povjerljive podloge
+## 7. Za prvo savjetovanje dostatan je pregled poslovanja; nije nužno odmah predati sve povjerljive podloge
 
 Pri prvom savjetovanju možete urediti osnovne podatke središnjice i ulagača, opći opis proizvoda ili usluge, predviđeni tok poslova, plan osoblja i postrojenja na Tajvanu te ugovorne i potporne uvjete koje kupci zahtijevaju. Što još nije odlučeno, može se označiti kao „nije utvrđeno”.
 

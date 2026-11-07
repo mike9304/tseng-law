@@ -195,7 +195,7 @@ Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu si
 - [Zorunlu otomobil mali sorumluluk sigortası ödeme tablosu](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finansal Denetim Komisyonunun (金融監督管理委員會) özel kullanımlı otomobil sigortası örnek sözleşmesi](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kazadan sonra her şey sigortacıya bırakılabilir mi?
+## Q16. Kazadan sonra her şey sigortacıya bırakılabilir mi?
 
 ​
 
@@ -231,7 +231,7 @@ Süreç sigortacıya emanet edilirse, yürütme süreci sürekli izlenmeli ve he
 
 ​
 
-Q17. Trafik kazası failinin taksirle yaralamadaki ceza sorumluluğu nedir?
+## Q17. Trafik kazası failinin taksirle yaralamadaki ceza sorumluluğu nedir?
 
 ​
 
@@ -255,7 +255,7 @@ Bazı kararlarda taksirle ağır yaralama için yaklaşık 4 aylık, taksirle ö
 
 ​
 
-Q18. Karşı tarafla uzlaşılırsa ceza şikâyeti geri alınabilir mi?
+## Q18. Karşı tarafla uzlaşılırsa ceza şikâyeti geri alınabilir mi?
 
 ​
 
@@ -275,7 +275,7 @@ Mahkeme bazı hallerde cezanın ertelenmesine (緩刑) hükmedebilir; bu bir vaa
 
 ​
 
-Q19. Kazadan sonra yer terk edilirse ceza kaçma suçu her zaman oluşur mu?
+## Q19. Kazadan sonra yer terk edilirse ceza kaçma suçu her zaman oluşur mu?
 
 ​
 
@@ -295,7 +295,7 @@ Yalnızca araç hasarı varsa bu kaçma sayılmaz.
 
 ​
 
-Q20. Trafik kazası için avukat nasıl aranır?
+## Q20. Trafik kazası için avukat nasıl aranır?
 
 ​
 

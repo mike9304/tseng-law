@@ -195,7 +195,7 @@ Asigurarea de răspundere civilă față de terți (第三人責任險), asigura
 - [Baremul de prestații al asigurării obligatorii de răspundere civilă auto](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contractul-tip de asigurare auto de uz particular al Comisiei de supraveghere financiară (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. După accident, se poate lăsa totul în mâinile asigurătorului?
+## Q16. După accident, se poate lăsa totul în mâinile asigurătorului?
 
 ​
 
@@ -231,7 +231,7 @@ Dacă se încredințează dosarul asigurătorului, trebuie urmărit în mod cont
 
 ​
 
-Q17. Care este răspunderea penală pentru leziuni din imprudență a autorului unui accident de circulație?
+## Q17. Care este răspunderea penală pentru leziuni din imprudență a autorului unui accident de circulație?
 
 ​
 
@@ -255,7 +255,7 @@ Pentru leziunile grave din imprudență, o pedeapsă de 4 luni este de obicei pr
 
 ​
 
-Q18. Dacă se încheie o tranzacție cu cealaltă parte, se poate desista de la plângerea penală?
+## Q18. Dacă se încheie o tranzacție cu cealaltă parte, se poate desista de la plângerea penală?
 
 ​
 
@@ -275,7 +275,7 @@ Instanța poate dispune suspendarea executării pedepsei (緩刑); aceasta nu es
 
 ​
 
-Q19. Dacă se părăsește locul după accident, delictul penal de fugă este întotdeauna constituit?
+## Q19. Dacă se părăsește locul după accident, delictul penal de fugă este întotdeauna constituit?
 
 ​
 
@@ -295,7 +295,7 @@ Dacă există numai daune la vehicul, aceasta nu este considerată o fugă.
 
 ​
 
-Q20. Cum se caută un avocat pentru un accident de circulație?
+## Q20. Cum se caută un avocat pentru un accident de circulație?
 
 ​
 

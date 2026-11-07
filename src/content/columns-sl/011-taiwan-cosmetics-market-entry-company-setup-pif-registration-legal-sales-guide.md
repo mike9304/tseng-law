@@ -44,7 +44,7 @@ Tajvanska hčerinska družba in podružnica tuje družbe nista ista organizacija
 
 Če je potreben postopek tuje naložbe, je treba preveriti napotke Oddelka za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) kot trenutno pristojnega organa. Rok, potreben za dovoljenje naložbe, nakazilo sredstev, vpis družbe ali podružnice, odprtje bančnega računa, davčno registracijo (稅籍登記) in pridobitev statusa uvoznika, se razlikuje glede na vlagatelja, panogo, organizacijsko obliko, predloženo dokumentacijo in to, ali pride do popravka ali dopolnitve. Zato je treba namesto določitve datuma vstopa na trg ob predpostavki stalnega roka najprej preveriti, kateri postopki se uporabijo in kakšne so najnovejše zahteve za vložitev.
 
-Ne glede na izbrano strukturo je osrednji subjekt odgovornosti v regulaciji kozmetike je proizvajalec ali uvoznik kozmetike. Ureditev dokumentacije k izdelku ali oceno varnosti (安全性評估) je mogoče zaupati zunanjemu strokovnjaku, vendar samo zaupanje dela ne prenese pravne odgovornosti proizvajalca ali uvoznika. Ločiti pogodbeno delitev dela od subjekta, ki nosi odgovornost po zakonu, je izhodišče pregleda strukture vstopa.
+Ne glede na izbrano strukturo je osrednji subjekt odgovornosti v regulaciji kozmetike proizvajalec ali uvoznik kozmetike. Ureditev dokumentacije k izdelku ali oceno varnosti (安全性評估) je mogoče zaupati zunanjemu strokovnjaku, vendar samo zaupanje dela ne prenese pravne odgovornosti proizvajalca ali uvoznika. Ločiti pogodbeno delitev dela od subjekta, ki nosi odgovornost po zakonu, je izhodišče pregleda strukture vstopa.
 
 ## 2. Registracija izdelka in PIF sta dve različni ureditvi
 

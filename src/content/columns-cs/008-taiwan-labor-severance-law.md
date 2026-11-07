@@ -44,7 +44,7 @@ Dopustí-li se však zaměstnanec protiprávního činu,
 
 závažně poruší pracovní smlouvu nebo vnitřní řád (工作規則),
 
-nebo se bez důvodu nedostaví 3 dny po sobě nebo 6 dnů v jednom měsíci (曠工),
+nebo se bez oprávněného důvodu nedostaví 3 dny po sobě nebo 6 dnů v jednom měsíci (曠工),
 
 může společnost propustit bez výplaty odstupného.
 

@@ -17,21 +17,17 @@ summary: "Voluntary resignation in Taiwan usually yields no severance. Labor Sta
 
 As noted previously, it is generally difficult for employees in Taiwan to receive severance pay.
 
-​
 
-In particular, when employees resign voluntarily,
 
-they are generally not entitled to severance pay (Article 18 of the Labor Standards Act),
+When employees resign voluntarily, they are generally not entitled to severance pay (Article 18 of the Labor Standards Act), unlike in Korea.
 
-unlike in Korea.
 
-​
 
 There are, however, exceptions.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-In the following exceptional circumstances, an employer must pay severance even if an employee resigns voluntarily (Article 14 of the Labor Standards Act, which applies Article 17 mutatis mutandis):
+An employer must pay severance even if an employee resigns voluntarily in the following exceptional circumstances (Article 14 of the Labor Standards Act, which applies Article 17 mutatis mutandis):
 
 1. Where, when entering into the labor contract, the employer makes a false representation that misleads the employee and creates a risk that the employee will suffer harm
 
@@ -49,53 +45,25 @@ In the following exceptional circumstances, an employer must pay severance even 
 
 However, in the case of grounds 2 and 4, the employee may not terminate the contract if the employer has already terminated its contract with that agent, or if the person with the notifiable communicable disease is already receiving treatment under health regulations (paragraph 3 of Article 14 of the Labor Standards Act).
 
-​
 
-The most common examples are employers who
 
-fail to pay wages on time,
-
-fail to pay overtime,
-
-or fail to enroll employees in labor insurance or national health insurance.
+Common examples include employers who fail to pay wages on time, fail to pay overtime, or fail to enroll employees in labor insurance or national health insurance.
 
 In such cases, when the employee terminates the labor contract on that ground, the employer must pay severance.
 
-​
 
-The Labor Standards Act provides, however, that
 
-if an employee wishes to terminate the labor contract on either ground 1 or 6 above (for example, because the employer failed to enroll the employee in insurance),
-
-the employee must terminate the labor contract within 30 days after becoming aware of the circumstances,
-
-or, in the case of ground 6, within 30 days after becoming aware of the resulting harm.
+The Labor Standards Act provides, however, that if an employee wishes to terminate the labor contract on either ground 1 or 6 above (for example, because the employer failed to enroll the employee in insurance), the employee must terminate the labor contract within 30 days after becoming aware of the circumstances, or, in the case of ground 6, within 30 days after becoming aware of the resulting harm.
 
 Employees must therefore pay close attention to these deadlines.
 
-​
 
-In other words,
 
-Taiwan law gives either party the right—
+Taiwan law gives either party the right—depending on whether the employer is at fault or the employee is at fault—to withhold severance or to claim it.
 
-depending on whether the employer is at fault
+Sometimes, when both the employer and the employee are at fault, and a dispute arises, the party that first terminates the contract on sufficient grounds may either avoid paying severance or claim it.
 
-or the employee is at fault—
-
-to withhold severance or to claim it.
-
-Sometimes, when both the employer and the employee are at fault,
-
-and a dispute arises,
-
-the party that first terminates the contract on sufficient grounds
-
-may either avoid paying severance or claim it.
-
-Therefore, in Taiwan labor disputes,
-
-“timing” is crucial.
+Therefore, in Taiwan labor disputes, “timing” is crucial.
 
 In most cases, the party that prepares in advance is better positioned to protect its rights.
 

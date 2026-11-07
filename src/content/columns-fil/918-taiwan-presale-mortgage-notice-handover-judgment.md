@@ -37,7 +37,7 @@ Noong Agosto, pumirma ang buyer ng consent form upang makapasok para mag-renovat
 
 Naipasa sa developer ang loan noong 5 Nobyembre. Sa warranty document ng magkabilang panig, 28 Nobyembre ang nakatalang petsa ng pag-abot. Nasa [Punto 4 ng desisyon](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), printed pages 182–186, ang pangangatwiran at kaugnay na ebidensiya.
 
-Alin sa mga obligasyon ang natapos nang maayos ang loan? Hiwalay na sinuri ng hukuman ang loan, pagbabayad at turnover. Hindi pinayagang palitan ng sulat tungkol sa loan ang abiso ng pag-abot.
+Alin sa mga obligasyon ang tinupad ng abiso sa loan, at alin ang wala pa? Hiwalay na sinuri ng hukuman ang loan, pagbabayad at turnover. Hindi pinayagang palitan ng sulat tungkol sa loan ang abiso ng pag-abot.
 
 Iginiit din ng developer na dapat nang bayaran ng buyer ang buong halaga matapos matanggap ang sulat. Sa paghahambing ng installment schedule, natagpuan ng hukuman na nagbayad ang buyer ayon sa bawat takdang yugto at nabayaran nang buo bago ang turnover. Dahil doon, tinanggihan ang paratang ng developer na nahuli ang buyer sa pagbabayad.
 

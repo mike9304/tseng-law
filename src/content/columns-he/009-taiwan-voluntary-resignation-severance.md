@@ -25,8 +25,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ​
 
-אולם יש מקרים חריגים.
-
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
 במצבים המיוחדים הבאים חייב המעסיק לשלם לעובד דמי פיטורים אף אם העובד מפסיק מעצמו (סעיף 14 לחוק תקני העבודה, ואותו סעיף מחיל בדרך של היקש את סעיף 17; 勞動基準法第14條):

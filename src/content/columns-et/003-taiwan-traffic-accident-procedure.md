@@ -195,7 +195,7 @@ Vastutuskindlustus kolmanda isiku suhtes (第三人責任險), juhi õnnetuskind
 - [Hüvitisnorm mootorsõidukite kohustusliku vastutuskindlustuse kohta](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finantsjärelevalve komisjoni (金融監督管理委員會) tüüpleping eraotstarbelise mootorsõidukikindlustuse kohta](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kas pärast õnnetust võib kõik jätta kindlustusandja hooleks?
+## Q16. Kas pärast õnnetust võib kõik jätta kindlustusandja hooleks?
 
 ​
 
@@ -231,7 +231,7 @@ Kui asi jäetakse kindlustusandjale, peate teie jälgima käsitlemise kulgu ja v
 
 ​
 
-Q17. Milline on põhjustaja kriminaalvastutus hooletusest põhjustatud kehavigastuse eest?
+## Q17. Milline on põhjustaja kriminaalvastutus hooletusest põhjustatud kehavigastuse eest?
 
 ​
 
@@ -255,7 +255,7 @@ Raske kehavigastuse hooletusest põhjustamise eest on mõnes otsuses määratud 
 
 ​
 
-Q18. Kas kriminaalkaebuse saab tagasi võtta, kui tehakse kokkulepe vastaspoolega?
+## Q18. Kas kriminaalkaebuse saab tagasi võtta, kui tehakse kokkulepe vastaspoolega?
 
 ​
 
@@ -275,7 +275,7 @@ Tingimisi karistus (緩刑) võib mõnel juhul tulla kõne alla; see ei ole luba
 
 ​
 
-Q19. Kas karistatav põgenemine täitub alati, kui sündmuskoht jäetakse?
+## Q19. Kas karistatav põgenemine täitub alati, kui sündmuskoht jäetakse?
 
 ​
 
@@ -295,7 +295,7 @@ Kui kahju on ainult sõidukil, ei ole tegemist sündmuskohalt põgenemisega.
 
 ​
 
-Q20. Kuidas leida advokaat liiklusõnnetuste asjadeks?
+## Q20. Kuidas leida advokaat liiklusõnnetuste asjadeks?
 
 ​
 

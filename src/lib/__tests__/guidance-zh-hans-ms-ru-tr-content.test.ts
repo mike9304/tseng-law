@@ -121,8 +121,58 @@ function allText(locale: NewGuidanceLocale): string {
   return packStrings(locale).map(([, value]) => value).join('\n');
 }
 
+const CONTACT_SECTION_COUNT: Partial<Record<NewGuidanceLocale, number>> = {
+  'zh-hans': 4,
+  ms: 4,
+};
+
+function guidanceContentShapeWithoutContact(locale: 'de' | NewGuidanceLocale): unknown {
+  const pack = guidanceContent[locale];
+  const { contact, ...pagesWithoutContact } = pack.pages;
+  return shapeOf({ ...pack, pages: pagesWithoutContact });
+}
+
+function assertContactPageSections(locale: NewGuidanceLocale): void {
+  const sectionCount = CONTACT_SECTION_COUNT[locale] ?? 3;
+  const sections = guidanceContent[locale].pages.contact.sections;
+  expect(sections, `${locale} contact section count`).toHaveLength(sectionCount);
+  for (const [index, section] of sections.entries()) {
+    expect(typeof section.heading, `${locale} contact.sections[${index}].heading type`).toBe('string');
+    expect(section.heading.trim().length, `${locale} contact.sections[${index}].heading empty`).toBeGreaterThan(0);
+    expect(Array.isArray(section.paragraphs), `${locale} contact.sections[${index}].paragraphs`).toBe(true);
+    expect(section.paragraphs?.length ?? 0, `${locale} contact.sections[${index}].paragraphs empty`).toBeGreaterThan(0);
+    for (const paragraph of section.paragraphs ?? []) {
+      expect(typeof paragraph).toBe('string');
+      expect(paragraph.trim().length).toBeGreaterThan(0);
+    }
+    if (section.items !== undefined) {
+      expect(Array.isArray(section.items)).toBe(true);
+      for (const item of section.items ?? []) {
+        expect(typeof item).toBe('string');
+        expect(item.trim().length).toBeGreaterThan(0);
+      }
+    }
+  }
+}
+
+function composedContactSurface(locale: NewGuidanceLocale): string {
+  return [
+    guidanceAnswers[locale].contact?.answer ?? '',
+    ...guidanceContent[locale].pages.contact.sections.flatMap((section) => [
+      ...(section.paragraphs ?? []),
+      ...(section.items ?? []),
+    ]),
+  ].join(' ');
+}
+
 function isZhHansFreeDenial(value: string): boolean {
   return /不(说|表示|承诺|声称).{0,16}免费|并非免费|不是免费|没有免费/.test(value);
+}
+
+const TR_GUARANTEE_DENIAL_PATTERN = /garanti edilmez/gi;
+
+function stripTrGuaranteeDenials(value: string): string {
+  return value.replace(TR_GUARANTEE_DENIAL_PATTERN, '');
 }
 
 describe('zh-hans/ms/ru/tr guidance language contract', () => {
@@ -185,7 +235,8 @@ describe('zh-hans/ms/ru/tr guidance packs are complete', () => {
   });
 
   it.each(['zh-hans', 'ms', 'ru', 'tr'] as const)('has the identical field set and section shape as de on %s', (locale) => {
-    expect(shapeOf(guidanceContent[locale])).toEqual(shapeOf(guidanceContent.de));
+    expect(guidanceContentShapeWithoutContact(locale)).toEqual(guidanceContentShapeWithoutContact('de'));
+    assertContactPageSections(locale);
     expect(shapeOf(guidanceOfficeCopy[locale])).toEqual(shapeOf(guidanceOfficeCopy.de));
     expect(shapeOf(guidanceFooterCopy[locale])).toEqual(shapeOf(guidanceFooterCopy.de));
     expect(shapeOf(guidanceTeamCopy[locale])).toEqual(shapeOf(guidanceTeamCopy.de));
@@ -204,7 +255,7 @@ describe('zh-hans/ms/ru/tr attorney gender and language FAQ', () => {
   it('names Wei Tseng with the gender-neutral peguam in Malay', () => {
     const text = allText('ms');
     expect(text).toMatch(/peguam Wei Tseng/i);
-    expect(guidanceContent.ms.home.columnsReviewLabel).toMatch(/peguam Wei Tseng/);
+    expect(guidanceContent.ms.home.columnsReviewLabel).toBe('Undang-undang Taiwan');
   });
 
   it('names Wei Tseng as адвокат Wei Tseng (曾雋崴) with feminine agreement in Russian', () => {
@@ -216,12 +267,12 @@ describe('zh-hans/ms/ru/tr attorney gender and language FAQ', () => {
 
   it('names Wei Tseng with gender-neutral avukat in Turkish', () => {
     expect(allText('tr')).toMatch(/Avukat Wei Tseng/);
-    expect(guidanceContent.tr.home.columnsReviewLabel).toMatch(/Avukat Wei Tseng/);
+    expect(guidanceContent.tr.home.columnsReviewLabel).toBe('Tayvan hukuku');
   });
 
   it('names Wei Tseng as 律师曾雋崴 in Simplified Chinese', () => {
     expect(allText('zh-hans')).toContain('曾雋崴');
-    expect(guidanceContent['zh-hans'].home.columnsReviewLabel).toMatch(/律师曾雋崴/);
+    expect(guidanceContent['zh-hans'].home.columnsReviewLabel).toBe('台湾法律');
   });
 
   it('answers the Simplified Chinese consultation-language FAQ in the affirmative', () => {
@@ -255,6 +306,28 @@ describe('zh-hans/ms/ru/tr attorney gender and language FAQ', () => {
   });
 });
 
+describe('tr guarantee denial stripping (regression)', () => {
+  const garantiPattern = /garanti/i;
+
+  it('accepts negative-only copy after stripping exact garanti edilmez', () => {
+    expect(stripTrGuaranteeDenials('Sonuç garanti edilmez.')).not.toMatch(garantiPattern);
+  });
+
+  it('rejects positive-only copy', () => {
+    expect(stripTrGuaranteeDenials('Sonuç garanti edilir.')).toMatch(garantiPattern);
+  });
+
+  it('rejects mixed negative then positive garanti', () => {
+    const mixed = 'Sonuç garanti edilmez; süreç garanti edilir';
+    expect(stripTrGuaranteeDenials(mixed)).toMatch(garantiPattern);
+  });
+
+  it('rejects mixed positive then negative garanti', () => {
+    const mixed = 'Süreç garanti edilir ve sonuç garanti edilmez';
+    expect(stripTrGuaranteeDenials(mixed)).toMatch(garantiPattern);
+  });
+});
+
 describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
   it('keeps Simplified Chinese copy free of advertising claims outside the language-FAQ question', () => {
     for (const [path, value] of packStrings('zh-hans')) {
@@ -269,15 +342,21 @@ describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
   });
 
   it('uses exclusive limiters on Malay, Russian and Turkish GEO answers and inquiry notices', () => {
-    for (const entry of Object.values(guidanceAnswers.ms)) {
+    for (const [key, entry] of Object.entries(guidanceAnswers.ms)) {
+      if (key === 'contact') continue;
       expect(entry.answer).toMatch(/hanya dijalankan/);
     }
-    for (const entry of Object.values(guidanceAnswers.ru)) {
+    for (const [key, entry] of Object.entries(guidanceAnswers.ru)) {
+      if (key === 'contact') continue;
       expect(entry.answer).toMatch(/проводится только на/);
     }
-    for (const entry of Object.values(guidanceAnswers.tr)) {
+    for (const [key, entry] of Object.entries(guidanceAnswers.tr)) {
+      if (key === 'contact') continue;
       expect(entry.answer).toMatch(/yalnızca .+ yapılır/);
     }
+    expect(composedContactSurface('ms')).toMatch(/hanya dijalankan/i);
+    expect(composedContactSurface('ru')).toMatch(/проводится только/i);
+    expect(composedContactSurface('tr')).toMatch(/yalnızca/i);
     expect(internationalInquiryCopy.ms.consultationNotice).toMatch(/hanya dijalankan dalam empat bahasa/);
     expect(internationalInquiryCopy.ru.consultationNotice).toMatch(/только на четырёх языках/);
     expect(internationalInquiryCopy.tr.consultationNotice).toMatch(/yalnızca dört dilde/);
@@ -314,7 +393,8 @@ describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION.tr;
       for (const [label, pattern] of TR_FORBIDDEN) {
         if (isLanguageFaqQuestion && label === 'Türkçe danışma') continue;
-        expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
+        const scanned = label === 'garanti' ? stripTrGuaranteeDenials(value) : value;
+        expect(scanned, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
   });

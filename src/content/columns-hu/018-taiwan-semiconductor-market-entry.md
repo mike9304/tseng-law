@@ -81,7 +81,7 @@ Attól, hogy Tajvanon a társasági bejegyzés befejeződött, a külföldi köz
 
 Külföldi társaság tajvani leányvállalatának (beruházási engedéllyel rendelkező társaság, amelyben külföldiek részesedése meghaladja az 1/3-ot) és fióktelepének vezetőjénél a munkavállalási engedély kérelme viszonylag könnyebb. Az első külföldi munkavállaló foglalkoztatásakor is teljesítenie kell azonban a munkáltatónak a külföldiek munkavállalási feltételeiről és elbírálási szabályairól szóló szabályzat (工作資格及審查標準) 39. cikke szerinti feltételek egyikét. Az 1 évnél rövidebb ideje fennálló társaságnál a feltételek közé tartozik a befizetett tőke (fióktelepnél a tajvani működési tőke) legalább 500.000 TWD vagy az árbevétel legalább 3.000.000 TWD; az 1 éve vagy annál régebben fennálló társaságnál pedig a legutóbbi 1 év vagy 3 év átlagos árbevétele legalább 3.000.000 TWD. Ha a munkáltató 2 vagy több azonos típusú külföldit foglalkoztat, e külföldieknek és a munkáltatónak a 2. fejezet általános előírásainak kell megfelelniük (38. cikk 2. bekezdés). Ezért ha külföldi munkavállalókat Tajvanon kívánnak foglalkoztatni, a tajvani társaságalapítás előtt előre ellenőrizni kell, hogy a tőkebeállítás eléri-e az adott küszöböt.
 
-## 7. A vállalkozás fejlődési szakasza szerint összevethető szerkezetek
+## 6. A vállalkozás fejlődési szakasza szerint összevethető szerkezetek
 
 Az alábbiak a gondolkodást segítő hipotetikus vizsgálati helyzetek, és nem olyan következtetés, amely meghatározott módot jogszerűnek vagy jobbnak ígérne, és nem ígér meghatározott eredményt.
 
@@ -91,7 +91,7 @@ A tajvani értékesítést és műszaki támogatást fokozatosan bővítő váll
 
 Piackutatási szakaszban lévő vállalkozás. Ha értékesítési szervezet előtt csak információgyűjtést és kapcsolattartást kívánnak tartani, a képviseleti iroda vizsgálható. Ha azonban a tényleges terv készletáru-értékesítést vagy helyszíni munkát tartalmaz, külön ellenőrizni kell, végezhető-e az a tevékenység.
 
-## 8. Az első megkereséshez elég az üzemeltetési áttekintés, nem kell először az összes bizalmas anyagot átadni
+## 7. Az első megkereséshez elég az üzemeltetési áttekintés, nem kell először az összes bizalmas anyagot átadni
 
 Az első egyeztetéskor a központ és a befektetők alapadatait, a termék vagy szolgáltatás általános ismertetését, a tervezett ügyleti folyamatot, a tajvani személyzeti és létesítményi tervet, valamint az ügyfél által kért szerződéses és támogatási feltételeket kell rendezni. Amit még nem döntöttek el, „nincs rögzítve” jelöléssel ellátható.
 

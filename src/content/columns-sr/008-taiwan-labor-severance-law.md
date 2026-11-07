@@ -44,7 +44,7 @@ Ako međutim zaposleni učini protivpravni akt,
 
 teško prekrši ugovor o radu ili pravilnik o radu (工作規則),
 
-ili se bez razloga ne pojavi 3 dana uzastopno ili 6 dana u mesecu (曠工),
+ili se bez opravdanog razloga ne pojavi 3 dana uzastopno ili 6 dana u mesecu (曠工),
 
 društvo može da otpusti bez isplate otpremnine.
 

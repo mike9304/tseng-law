@@ -81,7 +81,7 @@ Rekisteröinnin saattaminen päätökseen Taiwanissa ei merkitse, että ulkomais
 
 Työluvan saaminen on suhteellisen helpompaa taiwanilaisen tytäryhtiön (sijoitushyväksytty yhtiö, jonka osakkeista ulkomaalaisilla on yli 1/3) tai ulkomaisen yhtiön sivuliikkeen johtajalle. Jo ensimmäistä ulkomaalaista palkattaessa työnantajan on kuitenkin täytettävä jokin ulkomaalaisten työskentelyn pätevyys- ja arviointistandardien 39 artiklan kriteereistä. Alle 1 vuoden ikäisellä yhtiöllä kriteereihin kuuluvat muun muassa maksettu pääoma (sivuliikkeellä Taiwanin toimintavarat) vähintään 500.000 TWD tai liikevaihto vähintään 3.000.000 TWD; vähintään 1 vuoden ikäisellä yhtiöllä niihin kuuluvat muun muassa keskimääräinen liikevaihto viimeisen 1 vuoden tai 3 vuoden ajalta vähintään 3.000.000 TWD. Jos työnantaja palkkaa vähintään 2 samantyyppistä ulkomaalaista, näiden ulkomaalaisten ja työnantajan on täytettävä 2 luvun yleiset standardit (38 artiklan 2 momentti). Jos ennakoidaan, että ulkomaista henkilöstöä työskentelee Taiwanissa, on ennen yhtiön perustamista vahvistettava, saavuttaako suunniteltu pääoma voimassa olevan rajan.
 
-## 7. Rakenteet, jotka kaupan vaiheen mukaan voivat sopia
+## 6. Rakenteet, jotka kaupan vaiheen mukaan voivat sopia
 
 Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät takaa, että tietty tapa olisi lainmukainen tai parempi.
 
@@ -91,7 +91,7 @@ Ulkomaiset yritykset, jotka laajentavat myyntiä ja teknistä tukea Taiwanissa. 
 
 Ulkomaiset yritykset markkinatutkimusvaiheessa. Jos ennen myyntiorganisaatiota halutaan vain tieto- ja yhteystoimintoja, voidaan arvioida edustustoa (代表人辦事處). Jos tosiasiallinen suunnitelma käsittää varastojen myynnin tai työn paikan päällä, on erikseen vahvistettava, ovatko nämä toimet sallittuja.
 
-## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia aineistoja ei tarvitse heti luovuttaa
+## 7. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia aineistoja ei tarvitse heti luovuttaa
 
 Ensimmäistä yhteydenottoa varten (neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi) voidaan koota perustiedot päätoimipaikasta ja sijoittajasta, yleinen kuvaus tuotteesta tai palvelusta, suunniteltu transaktiovirta, suunnitelmat henkilöstöstä ja laitoksista Taiwanissa sekä sopimus- ja tukiehdot, joita asiakkaat vaativat. Se, mitä ei ole vielä päätetty, voidaan merkitä ”odottavaksi”.
 

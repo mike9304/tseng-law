@@ -21,8 +21,6 @@ Kui restoranitegevus algab, on esimene probleem leida tegevuskoht (營業地址)
 
 Lisaks turuolukorrale tuleb arvestada ka lubatud tegevusega.
 
-Teine oluline küsimus on see, kas aadress asub tsoonis, kus toitlustus on lubatud.
-
 Kontrollida tuleb, kas kõnealune aadress (營業地址) asub tsoonis, kus „toitlustuse“ tegevus on võimalik.
 
 ​

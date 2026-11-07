@@ -96,7 +96,7 @@ Pozůstalý rodič jej nemůže užívat volně. Podle čl. 1087 a čl. 1088 ob�
 
 Zvláštní majetek označuje majetek, který náleží samotnému nezletilému. Zděděné vklady, nemovitosti, akcie nebo jiná práva je třeba potvrdit jako majetek dítěte a spravovat zvlášť v jeho zájmu. I když otec, matka nebo opatrovník přebírají správu, nestávají se vlastníky tohoto majetku, a nesmějí s ním disponovat za účelem úhrady vlastních životních nákladů nebo svých dluhů.
 
-Podle čl. 1088 občanského zákoníku (民法) rodiče zvláštní majetek dítěte spravují společně a mají právo jej užívat a požívat jeho výnosy; disponovat s ním smějí jen v zájmu dítěte. Pro opatrovníky platí samostatná zákonná omezení. Je důležité zaznamenat druh majetku, nutnost nakládání, přiměřenost protiplnění a plán uchování a užití výtěžku. U úkonů velké hodnoty a rizika, jako prodej nemovitosti, zřízení zajištění nebo podniková investice, je třeba také ověřit, zda se vyžaduje povolení jiných norem nebo soudní postup.
+Je důležité zaznamenat druh majetku, nutnost nakládání, přiměřenost protiplnění a plán uchování a užití výtěžku. U úkonů velké hodnoty a rizika, jako prodej nemovitosti, zřízení zajištění nebo podniková investice, je třeba také ověřit, zda se vyžaduje povolení jiných norem nebo soudní postup.
 
 Jsou-li rodiče a dítě spoludědici téhož dědického majetku nebo se stanou stranami smlouvy, může vzniknout střet zájmů. Je třeba posoudit režim zvláštního zástupce čl. 1086 občanského zákoníku (民法) a ověřit, kdo může dítě zastoupit v dohodě o rozdělení nebo v procesních úkonech. Je-li jednání rodiče v rozporu se zájmy dítěte a rodič je podle zákona nemůže zastupovat, může soud jmenovat zvláštního zástupce na návrh osoby či orgánu, kterým zákon toto právo přiznává, nebo z úřední povinnosti.
 

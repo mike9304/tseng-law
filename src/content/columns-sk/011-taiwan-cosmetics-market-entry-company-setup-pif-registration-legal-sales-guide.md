@@ -84,7 +84,7 @@ Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nas
 
 ## 3. Úprava označenia, propagácie a reklamy
 
-Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta je od 40.000 do 200.000 TWD za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších treba takisto posúdiť podľa toho istého kritéria, ak sú v podstate reklamou.
+Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku.
 
 ### Posudzuje sa podľa celého vyjadrenia, nie podľa každého slova
 

@@ -30,23 +30,15 @@ Today, I would like to explain severance pay in Taiwan.
 
 By way of comparison with some other jurisdictions — Korea is one labeled example — a company there must generally pay severance when an employee leaves.
 
-Taiwan, however, is different:
-
-a company is obligated to pay severance only when it dismisses the employee.
+Taiwan, however, is different: a company is obligated to pay severance only when it dismisses the employee.
 
 If the employee resigns voluntarily, the company does not need to pay severance.
 
 However, if a ground under [Article 14 of the Labor Standards Act](/en/columns/taiwan-voluntary-resignation-severance) exists, such as the company failing to pay wages or violating labor laws and regulations, and the employee terminates the contract because of it, the company must pay severance.
 
-However, if the employee engages in unlawful conduct,
+However, if the employee engages in unlawful conduct, seriously violates the labor contract or company rules, or is absent from work without justification for three consecutive days or for six days in one month, the company may dismiss the employee without paying severance.
 
-seriously violates the labor contract or company rules,
-
-or is absent from work without justification for three consecutive days or for six days in one month,
-
-the company may dismiss the employee without paying severance.
-
-However, for every ground except item 3 (a final sentence of imprisonment), the company must dismiss the employee within 30 days of learning of the circumstances (Article 12, Paragraph 2 of the Labor Standards Act).
+For every ground except item 3 (a final sentence of imprisonment), the company must dismiss the employee within 30 days of learning of the circumstances (Article 12, Paragraph 2 of the Labor Standards Act).
 
 I will summarize this in a simple table.
 
@@ -56,7 +48,6 @@ I will summarize this in a simple table.
 | Meaning | When an employer needs to adjust staffing because of business conditions, the reason arises from the employer’s business and is not attributable to the worker. The employer must therefore observe the advance-notice period and pay severance to mitigate the resulting disadvantage to the worker. | When a worker engages in unlawful or improper conduct, the employer may immediately terminate the labor contract without prior notice and need not pay severance. This is an exercise of the employer’s disciplinary authority. | Under a contract with no fixed term, a worker is free to terminate the contract but must observe the notice period applicable to the worker’s length of service, giving the employer time to arrange a handover and find a replacement. |
 | Conditions | Yes  (Taiwan Labor Standards Act Article 11) | Yes  (Taiwan Labor Standards Act Article 12) | None |
 | Prior notice | Required | Not required | Required |
-| Difficulty | Easy | Difficult | Easy |
 | Whether the company must pay severance (資遣費) | Required | Not required | Not required (except where the employee terminates the contract for an Article 14 ground) |
 |  | Taiwan Labor Standards Act Article 11 (勞動基準法第11條): Except in one of the following circumstances, an employer may not terminate a labor contract even after giving the worker prior notice.  1. The employer’s business is suspended or transferred  2. The employer’s business incurs operating losses or undergoes a business contraction  3. Force majeure necessitates suspending business for one month or more  4. The nature of the business has changed, staff reduction is necessary, and there is no suitable position to reassign the worker  5. The worker is clearly unable to perform the assigned work | Taiwan Labor Standards Act Article 12 (勞動基準法第12條): An employer may dismiss a worker without prior notice in any of the following circumstances.  1. The worker misrepresents facts when entering into the labor contract, thereby misleading the employer and creating a risk of harm to the business  2. The worker commits violence against or seriously insults the employer, a member of the employer’s family, the employer’s agent, or another coworker  3. The worker receives a final sentence of fixed-term imprisonment or a more severe penalty and is neither granted a suspended sentence nor permitted to commute the sentence to a fine  4. The worker seriously violates the labor contract or work rules  5. The worker intentionally damages or consumes machinery, tools, raw materials, products, or other property owned by the employer, or intentionally discloses the employer’s technical or business secrets, thereby causing damage to the employer  6. The worker is absent without justification for three consecutive days or for six or more days in one month |  |
 
@@ -64,145 +55,33 @@ I will summarize this in a simple table.
 > the employer must pay severance equal to 0.5 months of average wages.
 > (Up to a maximum of six months’ wages) This is the formula for years of service governed by Article 12 of the Labor Pension Act; for years of service governed by Article 17 of the Labor Standards Act, severance is one month of average wages per full year with no cap. The Labor Pension Act applies to Taiwanese nationals, foreign nationals who are married to a Taiwanese national and have been granted residence, foreign nationals who have been granted permanent residence, and similar workers (Article 7, Paragraph 1), and, from 2026, to foreign professionals doing professional work ([Article 24 of the Act for the Recruitment and Employment of Foreign Professionals](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); severance for other workers, and for years of service before the Act applied, is calculated under Article 17 of the Labor Standards Act. Service of less than one year is calculated pro rata, and the company must pay the severance within 30 days after the contract ends.
 
-When an employee has both a high salary and substantial length of service,
+When an employee has both a high salary and substantial length of service, the severance payment will also be relatively large.
 
-the severance payment will also be relatively large.
+Some unscrupulous companies in Taiwan use various tactics to avoid making large severance payments and pressure employees to resign voluntarily.
 
-Some unscrupulous companies in Taiwan use various tactics
-
-to avoid making large severance payments
-
-and pressure employees to resign voluntarily.
-
-Employees should remain vigilant
-
-and avoid falling into such a scheme.
+Employees should remain vigilant and avoid falling into such a scheme.
 
 Let me share a case I handled.
 
-Company A is well known and has branches across Taiwan.
+Company A is well known and has branches across Taiwan. For some reason, the company’s management changed, and as soon as the new manager took office, in order to cut personnel costs, the company began calling high-paid, long-serving employees into individual meetings.
 
-For some reason, the company’s management changed,
+My client, Mr. B, had worked at Company A for more than ten years and was the highest-performing salesperson in central Taiwan. Because his salary and bonuses were very high, the company singled out Mr. B.
 
-and as soon as the new manager took office,
+One day, a senior company executive called B into a meeting and suddenly began accusing him of not working diligently. The executive said that the company was struggling, that B should make a sacrifice and set an example, and demanded that B accept a pay cut and a demotion. Otherwise, the executive said, B would have to leave the company. The executive handed him a sheet of A4 paper and ordered him to write, “I, OOO, voluntarily agree to accept a lower position and salary.” The executive also said that this written agreement would be shown to all the other employees so they would follow suit.
 
-in order to cut personnel costs,
+B was the top performer in the central region, had generated substantial revenue for the company, and was working diligently every day, so he strongly objected to this unreasonable demand. B refused to write the statement, and the company executive eventually became angry and told him to leave.
 
-the company began calling high-paid, long-serving employees into individual meetings.
+Feeling deeply wronged and distressed, B left the company he had worked at for ten years and did not return to work afterward. Using the same tactics, the company reduced the salaries of many senior employees, and some employees could not endure this treatment and resigned voluntarily.
 
-My client, Mr. B, had worked at Company A for more than ten years
+But B had realized early on that, after the change in management, the company was trying to force employees to leave through improper means, and he had discovered that the company posted recruitment advertisements even before employees resigned. On the day B went into the meeting, B recorded the entire meeting on his mobile phone and was therefore able to prove that he had not resigned voluntarily.
 
-and was the highest-performing salesperson in central Taiwan.
+With a lawyer’s help, B was able to receive a substantial severance payment, but the other employees who had left were not as fortunate.
 
-Because his salary and bonuses were very high,
+Because such cases are common, when a company uses improper methods, you must preserve evidence. If the company seizes on an employee’s minor mistakes, sets unreachable targets, makes unreasonable demands, or assigns the employee to an unusual position, you must preserve evidence.
 
-the company singled out Mr. B.
+Keep your regular attendance records, overtime and performance records, the company’s work rules, and emails with coworkers and supervisors. Record conversations with your supervisor. Preserve any evidence that supports your position.
 
-One day, a senior company executive called B into a meeting
-
-and suddenly began accusing him of not working diligently.
-
-The executive said that the company was struggling,
-
-that B should make a sacrifice and set an example,
-
-and demanded that B accept a pay cut and a demotion.
-
-The executive said that otherwise B would have to leave the company,
-
-handed him a sheet of A4 paper,
-
-and ordered him to write, “I, OOO, voluntarily agree to accept a lower position and salary.”
-
-The executive also said that this written agreement would be shown to all the other employees
-
-so they would follow suit.
-
-B was the top performer in the central region,
-
-had generated substantial revenue for the company,
-
-and was working diligently every day,
-
-so he strongly objected to this unreasonable demand.
-
-B refused to write the statement,
-
-and the company executive eventually became angry and told him to leave.
-
-Feeling deeply wronged and distressed,
-
-B left the company he had worked at for ten years
-
-and did not return to work afterward.
-
-Using the same tactics, the company
-
-reduced the salaries of many senior employees,
-
-and some employees could not endure this treatment
-
-and resigned voluntarily.
-
-But B had realized early on that, after the change in management,
-
-the company was trying to force employees to leave through improper means,
-
-and he had discovered that the company posted recruitment advertisements even before employees resigned.
-
-On the day B went into the meeting,
-
-B recorded the entire meeting on his mobile phone
-
-and was therefore able to prove that he had not resigned voluntarily.
-
-With a lawyer’s help,
-
-B was able to receive a substantial severance payment,
-
-but the other employees who had left were not as fortunate.
-
-Because such cases are common,
-
-when a company uses improper methods,
-
-you must preserve evidence.
-
-If the company seizes on an employee’s minor mistakes,
-
-sets unreachable targets,
-
-makes unreasonable demands,
-
-or assigns the employee to an unusual position,
-
-you must preserve evidence.
-
-Keep your regular attendance records.
-
-Keep your overtime and performance records.
-
-Keep the company’s work rules and emails with coworkers and supervisors.
-
-Record conversations with your supervisor.
-
-Preserve any evidence that supports your position.
-
-If you work in Taiwan,
-
-obtaining severance can be harder than you might think.
-
-Do not give in to the company too readily,
-
-and remain alert to attempts by the company to dismiss you unfairly
-
-or pressure you into resigning voluntarily.
-
-Severance is an employee’s legal entitlement,
-
-and the company is obligated to pay it.
-
-You too should protect your rights in Taiwan.
+If you work in Taiwan, obtaining severance can be harder than you might think. Do not give in to the company too readily, and remain alert to attempts by the company to dismiss you unfairly or pressure you into resigning voluntarily. Severance is an employee’s legal entitlement, and the company is obligated to pay it. You too should protect your rights in Taiwan.
 
 ---
 

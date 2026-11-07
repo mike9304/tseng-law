@@ -81,7 +81,7 @@ Menyempurnakan pendaftaran di Taiwan tidak bermakna bahawa kakitangan pejabat ut
 
 Agak lebih mudah memperoleh permit kerja bagi pengurus anak syarikat (syarikat yang pelaburannya diluluskan dan yang sahamnya dipegang oleh warga asing melebihi 1/3) atau cawangan Taiwan syarikat asing. Namun, walaupun mengambil orang asing yang pertama, majikan mesti memenuhi salah satu kriteria dalam perkara 39 Piawaian Kelayakan dan Semakan bagi kerja warga asing. Bagi syarikat yang berusia kurang daripada satu tahun, kriteria itu termasuk modal berbayar (bagi cawangan, dana operasi di Taiwan) sekurang-kurangnya TWD 500,000 atau hasil sekurang-kurangnya TWD 3,000,000; bagi syarikat yang berusia satu tahun atau lebih, kriteria itu termasuk hasil purata sepanjang satu tahun atau tiga tahun terkini sekurang-kurangnya TWD 3,000,000. Jika majikan mengambil dua orang asing atau lebih daripada jenis yang sama, orang asing itu dan majikan mesti memenuhi piawaian umum Bab 2 (perkara 38, perenggan 2). Jika anda merancang bahawa kakitangan asing bekerja di Taiwan, perlu disahkan sebelum menubuhkan syarikat sama ada modal yang dirancang mencapai ambang yang terpakai.
 
-## 7. Struktur yang boleh sesuai menurut peringkat perdagangan
+## 6. Struktur yang boleh sesuai menurut peringkat perdagangan
 
 Senario berikut ialah hipotesis sebagai bahan untuk menimbang pilihan. Ia tidak menjamin bahawa suatu cara adalah sah atau lebih baik.
 
@@ -91,7 +91,7 @@ Syarikat asing yang memperluas jualan dan sokongan teknikal di Taiwan. Jika anda
 
 Syarikat asing dalam fasa kajian pasaran. Jika, sebelum organisasi jualan, anda hanya mahu fungsi maklumat dan perhubungan, pejabat perwakilan boleh dinilai. Jika pelan sebenar merangkumi jualan stok atau kerja di tempat, perlu disahkan secara berasingan sama ada aktiviti ini dibenarkan.
 
-## 8. Bagi perundingan pertama, gambaran operasi mencukupi; tidak perlu menyerahkan dari awal semua dokumen sulit
+## 7. Bagi perundingan pertama, gambaran operasi mencukupi; tidak perlu menyerahkan dari awal semua dokumen sulit
 
 Semasa perundingan pertama, anda boleh mengumpulkan data asas pejabat utama dan pelabur, perihalan umum produk atau perkhidmatan, aliran operasi yang dirancang, pelan kakitangan dan kemudahan di Taiwan, serta syarat kontrak dan sokongan yang diminta pelanggan. Yang belum diputuskan boleh ditanda sebagai “menunggu”.
 

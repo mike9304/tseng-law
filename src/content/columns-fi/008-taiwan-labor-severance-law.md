@@ -22,8 +22,6 @@ faq:
 
 Erorahaa (資遣費) Taiwanissa maksetaan vain, kun laissa säädetyt edellytykset täyttyvät.
 
-Alla selvitetään, milloin eroraha (資遣費) Taiwanissa maksetaan ja milloin ei.
-
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
 Monet teistä tietävät tämän jo.
@@ -44,7 +42,7 @@ Jos työntekijä kuitenkin tekee lainvastaisen teon,
 
 rikkoo vakavasti työsopimusta tai työsääntöjä (工作規則),
 
-tai on ilman syytä poissa työstä 3 peräkkäisenä päivänä tai 6 päivänä kuukauden aikana (曠工),
+tai on ilman pätevää syytä poissa työstä 3 peräkkäisenä päivänä tai 6 päivänä kuukauden aikana (曠工),
 
 yhtiö voi irtisanoa maksamatta erorahaa.
 

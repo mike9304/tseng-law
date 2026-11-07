@@ -81,7 +81,7 @@ Končan vpis družbe na Tajvanu ne pomeni, da lahko zaposleni sedeža v tujini n
 
 Za vodjo tajvanske hčerinske družbe (družbe z odobreno naložbo, v kateri imajo tujci več kot 1/3 deležev) in podružnice tuje družbe je vloga za delovno dovoljenje razmeroma lažja. Vendar mora delodajalec tudi pri zaposlitvi prvega tujca izpolnjevati eno od meril 39. člena Standardov kvalifikacij in presoje dela tujcev (工作資格及審查標準). Pri družbi, ki obstaja manj kot 1 leto, merila vključujejo vplačani kapital (pri podružnici poslovna sredstva na Tajvanu) najmanj 500.000 TWD ali promet najmanj 3.000.000 TWD; pri družbi, ki obstaja 1 leto ali več, vključujejo povprečni promet v zadnjem 1 letu ali zadnjih 3 letih najmanj 3.000.000 TWD. Če delodajalec zaposli 2 ali več tujcev iste vrste, morajo ti tujci in delodajalec izpolnjevati splošne standarde 2. poglavja (38. člen, 2. odstavek). Če načrtujete, da bodo tuji zaposleni delali na Tajvanu, je treba pred ustanovitvijo tajvanske družbe vnaprej potrditi, ali višina kapitala dosega ustrezni prag.
 
-## 7. Strukture, ki jih je mogoče primerjati glede na stopnjo razvoja podjetja
+## 6. Strukture, ki jih je mogoče primerjati glede na stopnjo razvoja podjetja
 
 Naslednje situacije so hipotetični zgledi v podporo razmisleku; ne obljubljajo določenega izida, da je določen način zakonit ali boljši.
 
@@ -91,7 +91,7 @@ Tuja podjetja, ki na Tajvanu postopoma širijo prodajo in tehnično podporo. Če
 
 Tuja podjetja v fazi raziskave trga. Če pred ustanovitvijo prodajne organizacije želite le funkcije zbiranja podatkov in stikov, je mogoče presoditi predstavništvo. Če pa dejanski načrt vključuje prodajo skladiščenega blaga ali delo na kraju, je treba posebej potrditi, ali so te dejavnosti dovoljene.
 
-## 8. Za prvi posvet zadošča operativni pregled; ni treba takoj predati vse zaupne dokumentacije
+## 7. Za prvi posvet zadošča operativni pregled; ni treba takoj predati vse zaupne dokumentacije
 
 Pri prvem posvetu je mogoče urediti osnovne podatke sedeža in vlagateljev, splošen opis izdelka ali storitve, predvideni tok poslov, načrt osebja in objektov na Tajvanu ter pogodbene ter podporne pogoje, ki jih zahtevajo stranke. Kar še ni odločeno, je mogoče označiti kot »še ni določeno«.
 

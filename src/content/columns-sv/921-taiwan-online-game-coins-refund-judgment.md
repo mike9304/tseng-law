@@ -31,7 +31,7 @@ Keelungs distriktsdomstol avslog spelarens överklagande den 13 september 2021 i
 
 Avtalet lät spelaren först köpa poäng och därefter använda dem för speltjänster eller varor. De kvarvarande mynten var avsedda som spelmarker i tävlingsomgångar. Enligt domstolen var de därför inte oanvända betalda poäng som skulle återbetalas enligt avtalet, och inte heller spelavgifter som företaget hade tagit emot. Myntsaldo kunde inte räknas om till ett kontant krav.
 
-Domstolen ansåg vidare att en möjlighet att lösa in sådana spelmarkörer hos företaget skulle röra hasardspel. Skälet hörde till detta spels upplägg. Vid ett annat spel behöver förvärvet, användningsmöjligheterna och om mynten redan använts undersökas; etiketten ”mynt” räcker inte för att avslå återbetalning. Den fullständiga analysen finns i [domens åttonde avsnitt](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), tryckta sidorna 148–152.
+Domstolen ansåg vidare att en möjlighet att lösa in sådana spelmarker hos företaget skulle röra hasardspel. Skälet hörde till detta spels upplägg. Vid ett annat spel behöver förvärvet, användningsmöjligheterna och om mynten redan använts undersökas; etiketten ”mynt” räcker inte för att avslå återbetalning. Den fullständiga analysen finns i [domens åttonde avsnitt](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), tryckta sidorna 148–152.
 
 Hur kunde avtalet vara avslutat utan återbetalning? Spelaren hade själv meddelat att avtalet upphörde, så domstolen kunde fastställa den verkan och därefter pröva om de kvarvarande mynten omfattades av återbetalning. Det innebar inte att företagets samtliga ursprungliga skäl för avstängning eller uppsägning var lagliga.
 

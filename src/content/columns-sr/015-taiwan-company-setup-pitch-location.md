@@ -19,11 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kada započinjete ugostiteljsku delatnost, prvo pitanje jeste pronaći adresu mesta delatnosti (營業地址).
 
-Osim tržišne situacije
-
-važna je i
-
-činjenica da li ta adresa leži u zoni u kojoj je delatnost „restoran” moguća.
+Osim tržišne situacije, važna je i činjenica da li ta adresa leži u zoni u kojoj je delatnost „restoran” moguća.
 
 ​
 

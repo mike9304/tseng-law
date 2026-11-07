@@ -81,7 +81,7 @@ Að ljúka skráningu á Taívan merkir ekki að starfsfólk erlendra höfuðst�
 
 Það er tiltölulega einfaldara að öðlast atvinnuleyfi fyrir stjórnanda dótturfélags á Taívan (félags sem hefur hlotið fjárfestingarheimild og þar sem útlendingar eiga meira en 1/3 hluta) eða útibús erlends félags. Jafnvel þegar fyrsti útlendingurinn er ráðinn skal vinnuveitandi þó uppfylla eitt af viðmiðunum í 39. gr. staðla um hæfi og athugun vegna starfa útlendinga. Fyrir félag sem er yngra en 1 árs eru viðmiðin meðal annars innborgað hlutafé (fyrir útibú rekstrarfé á Taívan) að lágmarki 500.000 TWD eða velta að lágmarki 3.000.000 TWD; fyrir félag sem er 1 árs eða eldra eru þau meðal annars meðalvelta síðasta 1 ár eða 3 ár að lágmarki 3.000.000 TWD. Ráði vinnuveitandi 2 eða fleiri útlendinga af sömu gerð skulu þeir útlendingar og vinnuveitandinn uppfylla almennu viðmiðin í 2. kafla (38. gr. 2. mgr.). Sé gert ráð fyrir að erlent starfsfólk vinni á Taívan, skal áður en félagið er stofnað staðfesta hvort fyrirhugað hlutafé nái viðeigandi viðmiði.
 
-## 7. Skipulag sem eftir þróunarstigi starfseminnar má bera saman
+## 6. Skipulag sem eftir þróunarstigi starfseminnar má bera saman
 
 Eftirfarandi aðstæður eru tilgátur til aðstoðar við íhugun; þær slá því ekki föstu að tiltekin leið sé lögmæt eða betri.
 
@@ -91,7 +91,7 @@ Erlend fyrirtæki sem víkka sölu og tæknilegan stuðning á Taívan. Sé ætl
 
 Erlend fyrirtæki á markaðskönnunarstigi. Vilji maður, áður en söluskipulag er sett á fót, aðeins hafa upplýsinga- og tengiliðahlutverk, má kanna umboðsskrifstofu (代表人辦事處). Nái raunveruleg áætlun til sölu birgða eða vinnu á staðnum, skal sérstaklega staðfesta hvort sú starfsemi sé heimil.
 
-## 8. Til fyrsta samtals nægir rekstraryfirlit; ekki þarf að afhenda öll trúnaðargögn strax
+## 7. Til fyrsta samtals nægir rekstraryfirlit; ekki þarf að afhenda öll trúnaðargögn strax
 
 Við fyrsta samtal má safna grunnupplýsingum um höfuðstöðvar og fjárfesta, almennri lýsingu á vöru eða þjónustu, fyrirhuguðu viðskiptaflæði, áætlunum um mannafla og aðstöðu á Taívan og samnings- og stuðningsskilmálum sem viðskiptavinir krefjast. Það sem enn er óákveðið má merkja sem „óákveðið“.
 

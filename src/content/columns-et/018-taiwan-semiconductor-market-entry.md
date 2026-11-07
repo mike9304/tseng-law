@@ -81,7 +81,7 @@ Registreerimise lõpuleviimine Taiwanis ei tähenda, et välismaise peakontori p
 
 Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte (investeerimisloaga äriühing, milles välismaalastele kuulub üle 1/3 aktsiatest) või välismaise äriühingu filiaali juhile. Ent juba esimese välismaalase töölevõtmisel peab tööandja vastama ühele välismaalaste töö kvalifikatsiooni- ja läbivaatamisstandardite artikli 39 kriteeriumile. Alla 1 aasta vanuse äriühingu puhul kuuluvad kriteeriumide hulka sissemakstud kapital (filiaali puhul Taiwani tegevusvahendid) vähemalt TWD 500.000 või käive vähemalt TWD 3.000.000; vähemalt 1 aasta vanuse äriühingu puhul kuuluvad nende hulka keskmine käive viimase 1 aasta või 3 aasta jooksul vähemalt TWD 3.000.000. Kui tööandja võtab tööle vähemalt 2 sama liiki välismaalast, peavad need välismaalased ja tööandja vastama 2. peatüki üldistele standarditele (artikli 38 lõige 2). Kui on kavas, et Taiwanis töötab välismaine personal, tuleb enne äriühingu asutamist kindlaks teha, kas kavandatud kapital saavutab kehtiva künnise.
 
-## 7. Struktuurid, mis võivad tegevuse etapi järgi sobida
+## 6. Struktuurid, mis võivad tegevuse etapi järgi sobida
 
 Järgmised stsenaariumid on hüpoteetilised kaalumise abiks; need ei kinnita, et kindel viis oleks seaduslik või eelistatav.
 
@@ -91,7 +91,7 @@ Välismaised ettevõtted, kes laiendavad müüki ja tehnilist tuge Taiwanis. Kui
 
 Välismaised ettevõtted turu-uuringu etapis. Kui enne müügiorganisatsiooni soovitakse ainult teabe- ja sidetoiminguid, võib hinnata esindusbürood (代表人辦事處). Kui tegelik kava hõlmab varude müüki või tööd kohapeal, tuleb eraldi kindlaks teha, kas need toimingud on lubatud.
 
-## 8. Esimeseks vestluseks piisab tegevuse ülevaatest; kõiki konfidentsiaalseid materjale ei ole vaja kohe üle anda
+## 7. Esimeseks vestluseks piisab tegevuse ülevaatest; kõiki konfidentsiaalseid materjale ei ole vaja kohe üle anda
 
 Esimeseks kontaktiks (nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles) võib koguda põhiandmed peakontori ja investori kohta, üldise kirjelduse tootest või teenusest, kavandatud tehinguvoo, kavad personali ja rajatiste kohta Taiwanis ning lepingu- ja toetustingimused, mida kliendid nõuavad. See, mida ei ole veel otsustatud, võib märkida „ootel“.
 

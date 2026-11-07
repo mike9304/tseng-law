@@ -19,7 +19,7 @@ faq:
 
 ![Redaksjonelt foto til å vurdere inntredelsesstrukturen i Taiwan for en halvledervirksomhet](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Når handelen med taiwanske kunder begynner, kan det utenlandske hovedsetet motta forskjellige krav: å behandle tilbud og kontrakter i Taiwan, å holde et reservedelslager i Taiwan for akutte behov, eller å innsette personale til installasjon og vedlikehold (子公司). Da spør man gjerne først: «Rekker det å stifte et selskap i Taiwan (子公司) for å løse dette?»
+Når handelen med taiwanske kunder begynner, kan det utenlandske hovedsetet motta forskjellige krav: å behandle tilbud og kontrakter i Taiwan, å holde et reservedelslager i Taiwan for akutte behov, eller å innsette personale til installasjon og vedlikehold. Da spør man gjerne først: «Rekker det å stifte et selskap i Taiwan (子公司) for å løse dette?»
 
 Det som først skal klarlegges, er hvem i Taiwan som påtar seg hva. Den strukturen som skal vurderes, endrer seg etter om det utenlandske hovedsetet fortsetter med å underskrive salgskontraktene, et taiwansk selskap kjøper varer og selger dem videre, eller det lokale personalet kun yter teknisk støtte.
 
@@ -81,9 +81,9 @@ Avsnittet over sammenligner bare registreringsprosessen for filial og dattersels
 
 Det er relativt enklere å erverve arbeidstillatelsen for en leder av det taiwanske datterselskapet (子公司, et selskap med godkjent investering der utlendinger eier mer enn 1/3 av aksjene) eller av filialen av et utenlandsk selskap. Allerede ved ansettelsen av den første utlendingen må arbeidsgiveren imidlertid oppfylle ett av kriteriene i artikkel 39 i standardene for kvalifikasjoner og vurdering av utlendingers arbeid (工作資格及審查標準). For et selskap som har eksistert i under 1 år, gjelder blant annet innbetalt kapital (for en filial driftsmidler i Taiwan) på minst 500.000 TWD eller en omsetning på minst 3.000.000 TWD. For et selskap som har eksistert i 1 år eller lenger, gjelder blant annet en gjennomsnittlig omsetning de siste 1 eller 3 årene på minst 3.000.000 TWD. Ansetter arbeidsgiveren 2 eller flere utlendinger av samme art, må disse utlendingene og arbeidsgiveren oppfylle de alminnelige standardene i kapittel 2 (artikkel 38 ledd 2). Hvis man forutser at utenlandsk personale arbeider i Taiwan, skal man før stiftelsen av selskapet bekrefte om den påtenkte kapitalen når den gjeldende grensen.
 
-## 7. Strukturer som etter handelens fase kan passe
+## 6. Strukturer som etter handelens fase kan passe
 
-De følgende scenariene er hypotetiske for å hjelpe vurderingen; de fastslår ikke at en gitt måte er rettmessig eller bedre (子公司).
+De følgende scenariene er hypotetiske for å hjelpe vurderingen; de fastslår ikke at en gitt måte er rettmessig eller bedre.
 
 Utenlandske virksomheter rettet mot den innledende eksporten. Hvis det i Taiwan ennå verken er arbeidstakere eller lagre, og man vil etterprøve etterspørselen via en uavhengig distributør, kan man først se leveringen, distribusjonsforholdet og virksomhetsfeltet i Taiwan. En distribusjonskontrakt alene løser ikke alle reguleringsspørsmål i Taiwan.
 
@@ -91,7 +91,7 @@ Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan. H
 
 Utenlandske virksomheter i markedsundersøkelsesfasen. Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg fra lager eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
 
-## 8. Til den første samtalen rekker en driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
+## 7. Til den første samtalen rekker en driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
 
 Til en første kontakt (rådgivning bare på engelsk, kinesisk, japansk eller koreansk) kan du samle grunnopplysningene om hovedkontoret og om den som skyter inn kapital, en allmenn beskrivelse av produktet eller tjenesten, den påtenkte transaksjonsstrømmen, planene for personale og anlegg i Taiwan og de kontrakt- og støttevilkårene som kundene krever. Det som ennå ikke er besluttet, kan merkes som «avventende».
 

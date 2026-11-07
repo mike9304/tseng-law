@@ -195,7 +195,7 @@ Insurans liabiliti sivil terhadap pihak ketiga (第三人責任險), insurans ke
 - [Skala manfaat insurans liabiliti sivil kenderaan wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Kontrak jenis insurans kenderaan penggunaan khas Suruhanjaya Penyeliaan Kewangan (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Selepas kemalangan, bolehkah semuanya dibiarkan di tangan penanggung insurans?
+## Q16. Selepas kemalangan, bolehkah semuanya dibiarkan di tangan penanggung insurans?
 
 ​
 
@@ -231,7 +231,7 @@ Jika fail diserahkan kepada penanggung insurans, proses siasatan mesti diikuti s
 
 ​
 
-Q17. Apakah tanggungjawab jenayah bagi kecederaan kerana kecuaian pelaku kemalangan jalan raya?
+## Q17. Apakah tanggungjawab jenayah bagi kecederaan kerana kecuaian pelaku kemalangan jalan raya?
 
 ​
 
@@ -255,7 +255,7 @@ Bagi kecederaan berat kerana kecuaian, mahkamah pada masa ini pada umumnya menja
 
 ​
 
-Q18. Jika berdamai dengan pihak lain, bolehkah aduan jenayah ditarik?
+## Q18. Jika berdamai dengan pihak lain, bolehkah aduan jenayah ditarik?
 
 ​
 
@@ -275,7 +275,7 @@ Dalam sesetengah kes, penggantungan hukuman (緩刑) mungkin dipertimbangkan seh
 
 ​
 
-Q19. Jika meninggalkan tempat kejadian selepas kemalangan, adakah kesalahan jenayah melarikan diri sentiasa terbentuk?
+## Q19. Jika meninggalkan tempat kejadian selepas kemalangan, adakah kesalahan jenayah melarikan diri sentiasa terbentuk?
 
 ​
 
@@ -295,7 +295,7 @@ Jika hanya terdapat kerosakan kenderaan, ini tidak dianggap sebagai melarikan di
 
 ​
 
-Q20. Bagaimana mencari peguam untuk kemalangan jalan raya?
+## Q20. Bagaimana mencari peguam untuk kemalangan jalan raya?
 
 ​
 

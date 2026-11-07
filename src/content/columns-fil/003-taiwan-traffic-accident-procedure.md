@@ -195,7 +195,7 @@ Ang seguro sa pananagutan sa ikatlong panig (third-party liability insurance, �
 - [Pamantayan ng bayad ng Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險給付標準)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Karaniwang kontrata ng seguro sa personal na sasakyan ng Financial Supervisory Commission (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Maaari bang ipaubaya sa kompanya ng seguro ang lahat matapos ang aksidente?
+## Q16. Maaari bang ipaubaya sa kompanya ng seguro ang lahat matapos ang aksidente?
 
 ​
 
@@ -231,7 +231,7 @@ Kung ipauubaya ito sa kompanya ng seguro, kailangang tuloy-tuloy na subaybayan a
 
 ​
 
-Q17. Ano ang pananagutang kriminal ng may kagagawan sa aksidente sa trapiko para sa pinsala dahil sa kapabayaan?
+## Q17. Ano ang pananagutang kriminal ng may kagagawan sa aksidente sa trapiko para sa pinsala dahil sa kapabayaan?
 
 ​
 
@@ -255,7 +255,7 @@ Ang malubhang pinsala dahil sa kapabayaan ay karaniwang humigit-kumulang 4 na bu
 
 ​
 
-Q18. Kung nagkasundo ako sa kabilang panig, maaari bang urungin ang reklamong kriminal?
+## Q18. Kung nagkasundo ako sa kabilang panig, maaari bang urungin ang reklamong kriminal?
 
 ​
 
@@ -275,7 +275,7 @@ Sa ilang kaso ay maaaring pag-isipan ng hukuman ang suspended sentence (緩刑, 
 
 ​
 
-Q19. Kapag umalis sa pinangyarihan matapos ang aksidente, tiyak bang nabubuo ang kriminal na pagtakas matapos ang aksidente?
+## Q19. Kapag umalis sa pinangyarihan matapos ang aksidente, tiyak bang nabubuo ang kriminal na pagtakas matapos ang aksidente?
 
 ​
 
@@ -295,7 +295,7 @@ Kung pinsala lamang sa sasakyan ang naganap, hindi ito itinuturing na pagtakas m
 
 ​
 
-Q20. Paano makakahanap ng abogado para sa aksidente sa trapiko?
+## Q20. Paano makakahanap ng abogado para sa aksidente sa trapiko?
 
 ​
 

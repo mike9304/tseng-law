@@ -39,7 +39,7 @@ Taivānā ir arī daudz masāžas ielu.
 
 Tur tiek iekārtotas visdažādākās masāžas vietas.
 
-Ir masāža, ko veic personas ar redzes traucējumiem (視障按摩), pēdu masāža, eļļas masāža, tai masāža un citas formas.
+Ir masāža, ko veic personas ar redzes traucējumiem (視障按摩), pēdu masāža, eļļas masāža, taju masāža un citas formas.
 
 Būtībā ikviens var izvēlēties masāžu pēc paša gaumes, lai atbrīvotu saspringumu.
 

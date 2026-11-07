@@ -88,7 +88,7 @@ Reklamen bedöms inte bara utifrån en enskild mening, utan utifrån hela framst
 
 ### Bedömningen görs utifrån hela framställningen, inte utifrån enskilda ord
 
-Om märkning, marknadsföring (宣傳) eller reklam är falsk eller överdriven, eller om de påstår medicinsk verkan (醫療效能), bedöms det inte bara utifrån ett visst ord. Man granskar tillsammans produktnamnet, meningarna, bilden, symbolen, ljudet, det föregående och efterföljande sammanhanget och det samlade intryck som konsumenten får. Det intryck som den centrala reklamframställningen skapat undanröjs inte nödvändigtvis bara genom en inskränkande uppgift i liten stil, så både varje text och den slutliga reklamen måste ses över.
+Man granskar tillsammans produktnamnet, meningarna, bilden, symbolen, ljudet, det föregående och efterföljande sammanhanget och det samlade intryck som konsumenten får. Det intryck som den centrala reklamframställningen skapat undanröjs inte nödvändigtvis bara genom en inskränkande uppgift i liten stil, så både varje text och den slutliga reklamen måste ses över.
 
 Att till exempel hävda att en kosmetika behandlar akne, har antiinflammatorisk verkan eller bakteriedödande effekt kan utgöra ett påstående om medicinsk verkan. Man måste också tillsammans bekräfta sättet att kombinera ett sjukdomsnamn med produkten, bilder före och efter användning, framställning som för tankarna till vårdpersonal och det sammanhang som knyter förklaringen av ingrediensen till en terapeutisk effekt av produkten.
 

@@ -75,17 +75,11 @@ Citiem vārdiem sakot,
 
 Taivānas tiesības atkarībā no tā, vai vaina ir darba devēja vai darbinieka pusē, katrai pusei piešķir tiesības atlaišanas pabalstu neizmaksāt vai to prasīt.
 
-Vaina var būt darba devēja pusē vai darbinieka pusē.
-
-No tā ir atkarīgs, kura puse atlaišanas pabalstu var neizmaksāt un kura to var prasīt.
-
 Dažkārt, ja vaina ir abām darba attiecību pusēm,
 
 ja izceļas strīds,
 
-izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu.
-
-Puse, kas līgumu izbeidz pirmā ar pietiekamu pamatu, var atlaišanas pabalstu neizmaksāt vai to prasīt.
+izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu un tādējādi var atlaišanas pabalstu neizmaksāt vai to prasīt.
 
 Tāpēc Taivānas darba strīdos (勞資糾紛)
 

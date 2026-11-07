@@ -55,7 +55,7 @@ Bu koşullar birlikte aranır. Ödenmemiş bir borç veya tek bir kirlilik bulgu
 
 Kâr dağıtımı, sermaye azaltımı veya yatırımdan çıkışta para aktarımı onaylanmadan önce bilinen maruziyetler, çözülmemiş talepler ve Tayvan şirketinde kalacak kaynaklar birlikte incelenebilir. Arşivin düzenli tutulması, planlanan aktarımın hukuka uygunluğunu tek başına doğrulamaz.
 
-Somut bir değerlendirme için [İngilizce iletişim sayfasında](/en/contact) işlem, ilgili Tayvan şirketi ve öngörülen kapanış veya aktarım tarihi belirtilebilir; teknik raporların ve çalışanlara ait hassas bilgilerin iletim yöntemi ayrıca kararlaştırılabilir. İlk kirlilik bulgusunu, buna verilen yanıtı ve sonraki malvarlığı kararını birbirine bağlayan bir dosya, değerlendirmeyi kolaylaştırır.
+Somut bir değerlendirme için [iletişim sayfasında](/tr/contact) işlem, ilgili Tayvan şirketi ve öngörülen kapanış veya aktarım tarihi belirtilebilir; teknik raporların ve çalışanlara ait hassas bilgilerin iletim yöntemi ayrıca kararlaştırılabilir. İlk kirlilik bulgusunu, buna verilen yanıtı ve sonraki malvarlığı kararını birbirine bağlayan bir dosya, değerlendirmeyi kolaylaştırır.
 
 ## Resmî kaynaklar
 

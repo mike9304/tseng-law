@@ -80,7 +80,7 @@ Po získání povolení přípravy založení se příprava zásadně musí doko
 
 ## 3. Nabytí stávajícího podnikatele
 
-Nabytím akcií se povolení nepřevádí. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a registrační značky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
+Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a registrační značky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
 
 ### Rozdíl mezi nabytím akcií a převodem podniku nebo aktiv
 

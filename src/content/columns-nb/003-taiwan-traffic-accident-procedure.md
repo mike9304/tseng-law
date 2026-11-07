@@ -195,7 +195,7 @@ Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesfors
 - [Ytelsesnorm for den obligatoriske ansvarsforsikring for motorkjøretøyer](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardkontrakt fra Kommisjonen for finansielt tilsyn (金融監督管理委員會) for privat motorkjøretøyforsikring](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kan alt etter ulykken overlates til forsikringsselskapet?
+## Q16. Kan alt etter ulykken overlates til forsikringsselskapet?
 
 ​
 
@@ -231,7 +231,7 @@ Overlater du det til forsikringsselskapet, skal du løpende følge behandlingsfo
 
 ​
 
-Q17. Hva er den forårsakendes strafferettslige ansvar for uaktsom kroppsskade?
+## Q17. Hva er den forårsakendes strafferettslige ansvar for uaktsom kroppsskade?
 
 ​
 
@@ -255,7 +255,7 @@ Ved uaktsom grov kroppsskade er det i enkelte dommer idømt omkring 4 måneders 
 
 ​
 
-Q18. Kan den strafferettslige klage trekkes tilbake hvis man inngår forlik med motparten?
+## Q18. Kan den strafferettslige klage trekkes tilbake hvis man inngår forlik med motparten?
 
 ​
 
@@ -275,7 +275,7 @@ En betinget dom (緩刑) kan være mulig i enkelte saker; dette er ikke et løft
 
 ​
 
-Q19. Er straffbar flukt fra ulykkesstedet alltid oppfylt når man forlater stedet?
+## Q19. Er straffbar flukt fra ulykkesstedet alltid oppfylt når man forlater stedet?
 
 ​
 
@@ -295,7 +295,7 @@ Ved rene skader på kjøretøy gjelder det ikke som flukt fra ulykkesstedet.
 
 ​
 
-Q20. Hvordan finner man en advokat til trafikkulykker?
+## Q20. Hvordan finner man en advokat til trafikkulykker?
 
 ​
 

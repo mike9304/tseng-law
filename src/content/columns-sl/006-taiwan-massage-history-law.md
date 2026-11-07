@@ -21,9 +21,7 @@ Način umivanja las v teh salonih je bil zelo poseben.
 
 Poleg striženja so obstajale različne storitve, kot sta britje in nega obraza.
 
-Bistvo pa je bilo, da so stranki sede umili lase in ji hkrati zmasirali lasišče, ramena in vrat.
-
-Že ob striženju so stranki lahko umili lase in jo hkrati zmasirali.
+Bistvo pa je bilo, da so stranki ob striženju sede umili lase in ji hkrati zmasirali lasišče, ramena in vrat.
 
 Zelo je spominjalo na današnje umivanje las v vietnamskem slogu.
 

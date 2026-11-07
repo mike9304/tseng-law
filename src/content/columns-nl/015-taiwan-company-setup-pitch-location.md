@@ -23,8 +23,6 @@ Naast de marktsituatie moet worden nagegaan of het adres in een zone ligt waar e
 
 Dat punt is de gebruiksbestemming van het adres.
 
-Men moet nagaan of dat adres (營業地址) in een zone ligt waar de exploitatie van een “horecazaak” mogelijk is.
-
 ​
 
 Begint men de activiteit in de stad Taipei, dan kan de voorafgaande raadpleging van de bedrijfsruimte worden gebruikt.

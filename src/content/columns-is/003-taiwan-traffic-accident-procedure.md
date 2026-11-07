@@ -195,7 +195,7 @@ Greiðsluviðmiðið (強制汽車責任保險給付標準), sem breytt var 29. 
 - [Greiðsluviðmið skyldubundinnar ábyrgðartryggingar vélknúinna ökutækja](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Staðalsamningur fjármálaeftirlitsnefndarinnar (金融監督管理委員會) um einkatryggingu vélknúinna ökutækja](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Má fela tryggingafélaginu allt eftir slysið?
+## Q16. Má fela tryggingafélaginu allt eftir slysið?
 
 ​
 
@@ -231,7 +231,7 @@ Ef þú felur það tryggingafélaginu ættir þú að fylgjast stöðugt með m
 
 ​
 
-Q17. Hvaða refsiábyrgð ber tjónvaldur vegna gáleysislegrar líkamsmeiðingar?
+## Q17. Hvaða refsiábyrgð ber tjónvaldur vegna gáleysislegrar líkamsmeiðingar?
 
 ​
 
@@ -255,7 +255,7 @@ Við umreikning í sekt kveður 41. gr. 1. mgr. hegningarlaga (刑法) á um umr
 
 ​
 
-Q18. Má afturkalla refsiréttarkæru ef sátt er gerð við gagnaðila?
+## Q18. Má afturkalla refsiréttarkæru ef sátt er gerð við gagnaðila?
 
 ​
 
@@ -275,7 +275,7 @@ Dauði af gáleysi leyfir ekki niðurfellingu kæru; sé þó sátt gerð við f
 
 ​
 
-Q19. Telst það alltaf refsiverður flótti að yfirgefa vettvanginn?
+## Q19. Telst það alltaf refsiverður flótti að yfirgefa vettvanginn?
 
 ​
 
@@ -295,7 +295,7 @@ Forsenda flótta frá vettvangi slyss (肇事逃逸) er að einhver hafi meiðst
 
 ​
 
-Q20. Hvernig finnur maður lögmann vegna umferðarslysa?
+## Q20. Hvernig finnur maður lögmann vegna umferðarslysa?
 
 ​
 

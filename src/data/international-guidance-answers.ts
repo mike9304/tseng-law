@@ -223,7 +223,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Senden Sie Ihre Zusammenfassung über das Kontaktformular: was geschehen ist, welche Hilfe Sie brauchen, welchen Bezug die Sache zu Taiwan hat und die Frist, falls Sie eine kennen. In der Anfangsphase müssen Sie noch keine Ausweisdokumente oder den gesamten Beweisbestand senden. Die Kanzlei verspricht keine Antwortfrist und bestätigt keinen Termin über diese Seite. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.',
+        'Senden Sie über das Kontaktformular eine kurze Zusammenfassung Ihres Anliegens.',
       sources: ['/de/faq', '/de/pricing'],
     },
     faq: {
@@ -255,7 +255,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envíe su resumen a través del formulario de contacto: qué ocurrió, qué ayuda necesita, qué relación tiene el asunto con Taiwán y el plazo si lo conoce. En esta primera fase no hace falta enviar documentos de identidad ni el expediente completo de pruebas. El despacho no promete un plazo de respuesta y no confirma una cita a través de esta página. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'Envíe por el formulario una breve solicitud con los datos esenciales de su caso.',
       sources: ['/es/faq', '/es/pricing'],
     },
     faq: {
@@ -287,7 +287,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envoyez votre résumé par le formulaire de contact : ce qui s’est passé, l’aide demandée, le lien avec Taïwan et le délai s’il existe. À ce stade, n’envoyez pas encore de pièces d’identité ni l’ensemble des preuves. Le cabinet ne promet pas de délai de réponse et ne confirme pas de rendez-vous par cette page. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Envoyez par le formulaire de contact un bref résumé de votre situation.',
       sources: ['/fr/faq', '/fr/pricing'],
     },
     faq: {
@@ -319,7 +319,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envie o seu resumo através do formulário de contacto: o que ocorreu, que ajuda precisa, que relação tem o assunto com Taiwan e o prazo se o conhecer. Nesta primeira fase não é preciso enviar documentos de identidade nem o processo completo de provas. O escritório não promete um prazo de resposta e não confirma uma marcação através desta página. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.',
+        'Envie pelo formulário de contacto um breve resumo do seu pedido.',
       sources: ['/pt/faq', '/pt/pricing'],
     },
     faq: {
@@ -415,7 +415,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Отправьте краткое изложение через контактную форму: что произошло, какая помощь нужна, какая связь у дела с Тайванем и срок, если он есть. На этом этапе ещё не нужно отправлять документы, удостоверяющие личность, или все доказательства. Фирма не обещает срок ответа и не подтверждает запись через эту страницу. Консультация проводится только на английском, китайском, японском и корейском языках.',
+        'Отправьте через контактную форму краткое изложение сути обращения.',
       sources: ['/ru/faq', '/ru/pricing'],
     },
     faq: {
@@ -447,7 +447,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Özetinizi iletişim formu üzerinden gönderin: ne olduğu, hangi konuda yardıma ihtiyaç duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Durumunuzu iletişim formunda kısaca anlatabilirsiniz.',
       sources: ['/tr/faq', '/tr/pricing'],
     },
     faq: {

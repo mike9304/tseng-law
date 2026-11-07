@@ -195,7 +195,7 @@ Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesfor
 - [Ydelsesnorm for den obligatoriske ansvarsforsikring for motorkøretøjer](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardkontrakt fra Kommissionen for finansielt tilsyn (金融監督管理委員會) for privat motorkøretøjsforsikring](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kan alt efter ulykken overlades til forsikringsselskabet?
+## Q16. Kan alt efter ulykken overlades til forsikringsselskabet?
 
 ​
 
@@ -231,7 +231,7 @@ Overlader du det til forsikringsselskabet, bør du løbende følge behandlingsfo
 
 ​
 
-Q17. Hvilket strafferetligt ansvar har skadevolderen for uagtsom legemsbeskadigelse?
+## Q17. Hvilket strafferetligt ansvar har skadevolderen for uagtsom legemsbeskadigelse?
 
 ​
 
@@ -255,7 +255,7 @@ I nogle afgørelser er uagtsom grov legemsbeskadigelse straffet med omkring 4 m�
 
 ​
 
-Q18. Kan påtalebegæringen trækkes tilbage, hvis man indgår forlig med modparten?
+## Q18. Kan påtalebegæringen trækkes tilbage, hvis man indgår forlig med modparten?
 
 ​
 
@@ -275,7 +275,7 @@ I nogle sager kan der idømmes en betinget dom (緩刑), så frihedsstraffen ikk
 
 ​
 
-Q19. Er den strafbare flugt altid opfyldt, når man forlader ulykkesstedet?
+## Q19. Er den strafbare flugt altid opfyldt, når man forlader ulykkesstedet?
 
 ​
 
@@ -295,7 +295,7 @@ Ved blot køretøjsskade gælder det ikke som flugt fra ulykkesstedet.
 
 ​
 
-Q20. Hvordan finder man en advokat til trafikulykker?
+## Q20. Hvordan finder man en advokat til trafikulykker?
 
 ​
 

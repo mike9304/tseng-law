@@ -44,7 +44,7 @@ Jeśli zatrudniona osoba popełnia jednak czyn bezprawny,
 
 poważnie narusza umowę o pracę lub regulamin pracy (工作規則),
 
-albo opuszcza pracę bez powodu przez 3 dni z rzędu lub przez 6 dni w jednym miesiącu (曠工),
+albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu lub przez 6 dni w jednym miesiącu (曠工),
 
 spółka może zwolnić bez wypłaty odprawy.
 

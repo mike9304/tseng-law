@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { intentPageSlugs } from '@/data/intent-pages';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
-import type {
-  GuidanceLocale,
-  GuidancePageKey,
+import {
+  guidanceContent,
+  type GuidanceLocale,
+  type GuidancePageKey,
 } from '@/data/international-guidance-content';
 import { GUIDANCE_LOCALES_4, GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
 
@@ -484,6 +485,17 @@ function wordCount(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length;
 }
 
+/** Geo answer block plus contact page cards (sections); contact invitation alone is not the language boundary. */
+function composedContactText(locale: GuidanceLocale): string {
+  const answer = guidanceAnswers[locale].contact?.answer ?? '';
+  const sectionText = guidanceContent[locale].pages.contact.sections.flatMap((section) => [
+    section.heading ?? '',
+    ...(section.paragraphs ?? []),
+    ...(section.items ?? []),
+  ]);
+  return [answer, ...sectionText].join(' ');
+}
+
 const entries = GUIDANCE_LOCALES.flatMap((locale) =>
   ANSWER_PAGE_KEYS.map((key) => ({
     locale,
@@ -522,6 +534,22 @@ describe('guidanceAnswers', () => {
   it('keeps every answer inside its length window', () => {
     for (const { locale, key, entry } of entries) {
       const answer = entry?.answer ?? '';
+      if (key === 'contact') {
+        expect(answer.trim().length, `${locale}/contact answer empty`).toBeGreaterThan(0);
+        if (locale === 'th' || locale === 'my' || locale === 'km') {
+          const chars = [...answer].length;
+          expect(chars, `${locale}/contact chars=${chars}`).toBeLessThanOrEqual(
+            locale === 'th' ? MAX_THAI_CHARS : MAX_STACKED_SCRIPT_CHARS,
+          );
+        } else if (locale === 'zh-hans') {
+          const chars = [...answer].length;
+          expect(chars, `${locale}/contact chars=${chars}`).toBeLessThanOrEqual(MAX_ZH_HANS_CHARS);
+        } else {
+          const words = wordCount(answer);
+          expect(words, `${locale}/contact words=${words}`).toBeLessThanOrEqual(MAX_WORDS);
+        }
+        continue;
+      }
       if (locale === 'th' || locale === 'my' || locale === 'km') {
         const chars = [...answer].length;
         expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_THAI_CHARS);
@@ -558,11 +586,21 @@ describe('guidanceAnswers', () => {
     }
   });
 
-  it('names the four consultation languages in every answer', () => {
+  it('names the four consultation languages in every non-contact answer', () => {
     for (const { locale, key, entry } of entries) {
+      if (key === 'contact') continue;
       const answer = entry?.answer ?? '';
       for (const term of CONSULTATION_LANGUAGE_TERMS[locale] ?? []) {
         expect(answer, `${locale}/${key} is missing "${term}"`).toContain(term);
+      }
+    }
+  });
+
+  it('names the four consultation languages on each composed contact page', () => {
+    for (const locale of GUIDANCE_LOCALES) {
+      const text = composedContactText(locale);
+      for (const term of CONSULTATION_LANGUAGE_TERMS[locale] ?? []) {
+        expect(text, `${locale}/contact composed is missing "${term}"`).toContain(term);
       }
     }
   });

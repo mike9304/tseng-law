@@ -69,9 +69,9 @@ Unele bănci pot impune cerințe suplimentare, de exemplu o durată de folosire 
 
 5. Poate societatea să angajeze salariați străini?
 
-A. Primul salariat: cererea se depune ca muncă de conducere într-o întreprindere de investiție obișnuită a chinezilor stabiliți în străinătate sau a străinilor (一般僑外投資事業主管工作). Criteriul „muncii de natură specializată sau tehnică” de la punctul B de mai jos nu se aplică, dar se aplică condițiile de îndeplinit, între care cea de conducător (經理人) al unei societăți al cărei aport al chinezilor stabiliți în străinătate sau al străinilor depășește 1/3, precum și condițiile de rezultate ale angajatorului referitoare la capital și cifră de afaceri (art. 38 și 39 din standardele de examinare).
+A. Primul salariat angajat pentru o funcție de conducere: cererea se depune ca muncă de conducere într-o întreprindere de investiție obișnuită a chinezilor stabiliți în străinătate sau a străinilor (一般僑外投資事業主管工作). Criteriul „muncii de natură specializată sau tehnică” de la punctul B de mai jos nu se aplică, dar se aplică condițiile de îndeplinit, între care cea de conducător (經理人) al unei societăți al cărei aport al chinezilor stabiliți în străinătate sau al străinilor depășește 1/3, precum și condițiile de rezultate ale angajatorului referitoare la capital și cifră de afaceri (art. 38 și 39 din standardele de examinare).
 
-B. De la al doilea salariat există restricții: dacă sunt angajați mai mult de 1 străin, formarea și experiența relevantă a salariatului străin, remunerarea medie și condițiile de capital și de cifră de afaceri ale societății urmează „munca specializată sau tehnică” (專門性或技術性工作).
+B. Dacă angajatorul angajează mai mult de o persoană în funcțiile de conducere prevăzute la art. 38 alin. (1) pct. 1–3, formarea și experiența relevantă a salariatului străin, remunerarea medie și condițiile aplicabile societății privind capitalul și cifra de afaceri se verifică potrivit capitolului II privind „munca specializată sau tehnică” (專門性或技術性工作).
 
 Consultați site-ul Ministerului Muncii din Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Glavni prikaz](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-U poslednje vreme su mnogi ljudi uspešno osnovali društvo (公司) na Tajvanu i stekla radnu vizu i ispravu o boravku stranca (外僑居留證).
+U poslednje vreme su mnogi ljudi uspešno osnovali društvo (公司) na Tajvanu i stekli radnu vizu i ispravu o boravku stranca (外僑居留證).
 
 Pitanja koja se često postavljaju pri osnivanju sastavila sam u nastavku.
 

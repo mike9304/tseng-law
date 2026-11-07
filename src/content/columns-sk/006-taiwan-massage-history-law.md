@@ -61,11 +61,7 @@ Pán Lin považoval túto sankciu za veľmi nespravodlivú a požiadal o ústavn
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Na Taiwane
-
-osoby so zrakovým postihnutím narážajú na početné prekážky v raste, aktivite, učení a vzdelávaní, okrem iného,
-
-a povolania, ktoré môžu vykonávať, sú veľmi obmedzené.
+Na Taiwane osoby so zrakovým postihnutím narážajú na početné prekážky v raste, aktivite, učení a vzdelávaní, okrem iného, a povolania, ktoré môžu vykonávať, sú veľmi obmedzené.
 
 Preto vtedajší zákonodarca, aby chránil osoby so zrakovým postihnutím, ktoré sa nachádzali v slabšom postavení,
 

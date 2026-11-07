@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Hlavní obrázek](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Jak bylo uvedeno dříve, na Tchaj-wanu není pro zaměstnance snadné získat odstupné (資遣費).
+Na Tchaj-wanu není pro zaměstnance snadné získat odstupné (資遣費).
 
 ​
 

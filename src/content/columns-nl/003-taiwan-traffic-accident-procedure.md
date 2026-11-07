@@ -195,7 +195,7 @@ Aansprakelijkheidsverzekering jegens derden (第三人責任險), bestuurdersong
 - [Prestatiemaatstaf van de verplichte autoverzekering van civiele aansprakelijkheid](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standaardcontract van de Commissie voor financieel toezicht (金融監督管理委員會) voor particuliere autoverzekering](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kan na het ongeval alles aan de verzekeringsmaatschappij worden overgelaten?
+## Q16. Kan na het ongeval alles aan de verzekeringsmaatschappij worden overgelaten?
 
 ​
 
@@ -231,7 +231,7 @@ Laat u het aan de verzekeringsmaatschappij over, dan moet u het behandelingsverl
 
 ​
 
-Q17. Wat is de strafrechtelijke verantwoordelijkheid van de veroorzaker wegens letsel door nalatigheid?
+## Q17. Wat is de strafrechtelijke verantwoordelijkheid van de veroorzaker wegens letsel door nalatigheid?
 
 ​
 
@@ -255,7 +255,7 @@ Bij zwaar letsel door nalatigheid legt de rechtspraak in de regel ongeveer 4 maa
 
 ​
 
-Q18. Kan de strafrechtelijke klacht worden ingetrokken indien men met de wederpartij schikking sluit?
+## Q18. Kan de strafrechtelijke klacht worden ingetrokken indien men met de wederpartij schikking sluit?
 
 ​
 
@@ -275,7 +275,7 @@ In sommige gevallen is een voorwaardelijke straf (緩刑) mogelijk, zodat de str
 
 ​
 
-Q19. Is bij verlaten van de ongevallenplaats steeds de strafbare vlucht vervuld?
+## Q19. Is bij verlaten van de ongevallenplaats steeds de strafbare vlucht vervuld?
 
 ​
 
@@ -295,7 +295,7 @@ Bij louter voertuigschade geldt dat niet als ongevallenvlucht.
 
 ​
 
-Q20. Hoe vindt men een advocaat voor verkeersongevallen?
+## Q20. Hoe vindt men een advocaat voor verkeersongevallen?
 
 ​
 

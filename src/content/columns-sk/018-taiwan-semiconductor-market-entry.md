@@ -81,7 +81,7 @@ Dokončenie zápisu na Taiwane neznamená, že zamestnanci zahraničného ústre
 
 Pre vedúceho taiwanskej dcérskej spoločnosti (spoločnosti so schválenou investíciou, v ktorej cudzinci držia viac ako 1/3 podielov) a pobočky zahraničnej spoločnosti je žiadosť o pracovné povolenie relatívne ľahšia. Aj pri zamestnaní prvého cudzinca však zamestnávateľ musí splniť jedno z kritérií článku 39 Štandardov kvalifikácie a preskúmania práce cudzincov (工作資格及審查標準). Pri spoločnosti, ktorá existuje menej ako 1 rok, kritériá zahŕňajú splatený kapitál (pri pobočke prevádzkové prostriedky na Taiwane) najmenej 500.000 TWD alebo obrat najmenej 3.000.000 TWD; pri spoločnosti, ktorá existuje 1 rok alebo dlhšie, zahŕňajú priemerný obrat za posledný 1 rok alebo 3 roky najmenej 3.000.000 TWD. Ak zamestnávateľ zamestnáva 2 alebo viacerých cudzincov rovnakého typu, títo cudzinci a zamestnávateľ musia splniť všeobecné štandardy kapitoly 2 (článok 38 odsek 2). Ak plánujete, že zahraniční zamestnanci budú pracovať na Taiwane, treba pred založením taiwanskej spoločnosti vopred overiť, či nastavenie kapitálu spĺňa príslušný prah.
 
-## 7. Štruktúry, ktoré možno porovnať podľa stupňa rozvoja podniku
+## 6. Štruktúry, ktoré možno porovnať podľa stupňa rozvoja podniku
 
 Nasledujúce situácie sú hypotetické na podporu úvahy; nesľubujú určitý výsledok a nehovoria, že daný spôsob je zákonný alebo výhodnejší.
 
@@ -91,7 +91,7 @@ Zahraničné podniky, ktoré na Taiwane postupne rozširujú predaj a technickú
 
 Zahraničné podniky vo fáze prieskumu trhu. Ak pred zriadením predajnej organizácie chcete len funkcie zberu informácií a styku, možno posúdiť zastúpenie. Ak však skutočný plán zahŕňa predaj skladovaného tovaru alebo prácu na mieste, treba osobitne overiť, či sú tieto činnosti povolené.
 
-## 8. Na prvú konzultáciu stačí prevádzkový prehľad; nie je nutné hneď odovzdávať všetky dôverné podklady
+## 7. Na prvú konzultáciu stačí prevádzkový prehľad; nie je nutné hneď odovzdávať všetky dôverné podklady
 
 Pri prvej konzultácii možno usporiadať základné údaje ústredia a vkladateľov, všeobecný opis výrobku alebo služby, predpokladaný tok transakcií, plán personálu a zariadenia na Taiwane a zmluvné a podporné podmienky, ktoré požadujú zákazníci. Čo ešte nie je rozhodnuté, možno označiť ako „nevybavené“.
 

@@ -51,7 +51,7 @@ Miktarın güncellenmesi her zaman yeni bir uyuşmazlık yaratmaz. Hukuki gerek�
 
 [ABD Uluslararası Ticaret İdaresinin 30 Eylül 2026 tarihli enerji raporu](https://www.trade.gov/market-intelligence/taiwan-energy-industry), Tayvan’daki enerji altyapısı ve elektrik şebekelerine yönelik yıl sonu ve 2027 için planlanan alımları, ABD’li tedarikçiler açısından fırsatlarıyla birlikte anlatıyor. Bunlar beklenen alımlardır. Rapor, belirli bir ihalenin açıldığını, bir şirketin yeterliğini veya gelecekteki sözleşmenin 85-1 kapsamındaki sınıflandırmasını doğrulamaz.
 
-Teklif hazırlayan ekip, alımın türünü sözleşmenin uyuşmazlık maddesiyle birlikte inceleyebilir. Mevcut bir uyuşmazlığa ilişkin değerlendirme için [İngilizce iletişim sayfasında](/en/contact) proje türü, istenen sonuç ve yaklaşan işlem tarihi belirtilebilir. Dosyada en çok açıklık sağlayan belgeler, talebin ne zaman değiştiğini ve idarenin hangi öneriye yanıt verdiğini gösterenlerdir.
+Teklif hazırlayan ekip, alımın türünü sözleşmenin uyuşmazlık maddesiyle birlikte inceleyebilir. Mevcut bir uyuşmazlığa ilişkin değerlendirme için [iletişim sayfasında](/tr/contact) proje türü, istenen sonuç ve yaklaşan işlem tarihi belirtilebilir. Dosyada en çok açıklık sağlayan belgeler, talebin ne zaman değiştiğini ve idarenin hangi öneriye yanıt verdiğini gösterenlerdir.
 
 ## Resmî kaynaklar
 

@@ -19,11 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Când începeți o activitate de alimentație, prima problemă este să găsiți adresa localului (營業地址).
 
-Pe lângă situația pieței,
-
-un alt punct important este
-
-să știți dacă această adresă se situează într-o zonă unde exploatarea unui „local de alimentație” este posibilă.
+Pe lângă situația pieței, un alt punct important este să știți dacă această adresă se situează într-o zonă unde exploatarea unui „local de alimentație” este posibilă.
 
 ​
 

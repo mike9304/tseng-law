@@ -188,8 +188,6 @@ Der findes mange sådanne sager.
 
 Du skal sikre beviser, når selskabet bruger upassende midler.
 
-Det gælder, når selskabet tager upassende midler i brug.
-
 Selskabet kan fastlægge små fejl hos medarbejdere.
 
 Det kan sætte vanskeligt nåelige mål.

@@ -30,27 +30,17 @@ Beaucoup d’entre vous le savent déjà.
 
 À Taïwan, le départ d’un salarié ne donne pas automatiquement droit à une indemnité de licenciement.
 
-La règle applicable à Taïwan est la suivante :
-
 L’obligation de verser l’indemnité de licenciement ne naît que lorsque la société licencie le salarié.
 
 Si le salarié démissionne de lui-même, la société n’a pas à verser d’indemnité de licenciement.
 
 Toutefois, s’il existe un motif visé à l’[article 14 de la loi sur les normes du travail](/fr/columns/taiwan-voluntary-resignation-severance), par exemple si la société ne verse pas le salaire ou enfreint les lois et règlements du travail, et que le salarié met fin au contrat pour ce motif, la société doit verser l’indemnité de licenciement.
 
-​
 
-Si le salarié commet toutefois un acte illicite,
-
-viole gravement le contrat de travail ou le règlement intérieur (工作規則),
-
-ou s’absente du travail sans motif légitime 3 jours de suite ou 6 jours dans un mois (曠工),
-
-la société peut licencier sans verser d’indemnité de licenciement.
+Si le salarié commet toutefois un acte illicite, viole gravement le contrat de travail ou le règlement intérieur (工作規則) ou s’absente du travail sans motif légitime 3 jours de suite ou 6 jours dans un mois (曠工), la société peut licencier sans verser d’indemnité de licenciement.
 
 Toutefois, pour tous les motifs sauf le point 3 (condamnation définitive à une peine d’emprisonnement), la société doit licencier le salarié dans les 30 jours à compter du moment où elle a eu connaissance des faits (article 12, alinéa 2, de la loi sur les normes du travail).
 
-​
 
 Le tableau ci-dessous résume ces distinctions.
 
@@ -68,113 +58,51 @@ Le tableau ci-dessous résume ces distinctions.
 > l’employeur doit verser 0,5 mois de salaire moyen (平均工資) à titre d’indemnité de licenciement.
 > (au plus 6 mois de salaire) Cette formule s’applique à l’ancienneté à laquelle l’article 12 de la loi sur la pension de retraite des travailleurs (勞工退休金條例) s’applique ; pour l’ancienneté à laquelle l’article 17 de la loi sur les normes du travail (勞動基準法) s’applique, un mois de salaire moyen est versé par une année, sans plafond. La loi sur la pension de retraite des travailleurs s’applique aux ressortissants taïwanais, aux étrangers mariés à un ressortissant taïwanais qui se sont vu accorder la résidence, aux étrangers titulaires d’une résidence permanente et aux travailleurs assimilés (article 7, alinéa 1), et, à partir de 2026, aux professionnels étrangers exerçant une activité professionnelle ([article 24 de la loi sur le recrutement et l’emploi des professionnels étrangers (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)) ; l’indemnité des autres travailleurs, ainsi que celle des périodes d’ancienneté antérieures à l’application de la loi, se calcule selon l’article 17 de la loi sur les normes du travail. L’ancienneté inférieure à 1 an se calcule au prorata, et la société doit verser l’indemnité dans les 30 jours suivant la fin du contrat.
 
-​
 
-Si le salaire du salarié est élevé et qu’une certaine ancienneté est atteinte,
+Si le salaire du salarié est élevé et qu’une certaine ancienneté est atteinte, l’indemnité de licenciement est aussi relativement plus élevée.
 
-l’indemnité de licenciement est aussi relativement plus élevée.
+Alors, certaines sociétés taïwanaises peu scrupuleuses emploient divers moyens pour ne pas avoir à verser des indemnités de licenciement élevées et poussent les salariés à démissionner eux-mêmes.
 
-Alors, certaines sociétés taïwanaises peu scrupuleuses emploient divers moyens,
+Les salariés doivent être prudents et veiller à ne pas céder à la manœuvre de la société.
 
-pour ne pas avoir à verser des indemnités de licenciement élevées,
-
-et poussent les salariés à démissionner eux-mêmes.
-
-Les salariés doivent être prudents
-
-et veiller à ne pas céder à la manœuvre de la société.
-
-​
 
 Voici une affaire que j’ai traitée.
 
 Il existe la société A, connue, avec des établissements dans tout Taïwan.
 
-Pour une raison quelconque, la direction a changé,
-
-et la nouvelle direction a commencé, dès sa prise de fonctions,
-
-afin de réduire les coûts de personnel,
-
-à convoquer successivement les salariés bien payés et anciens à des entretiens
+Pour une raison quelconque, la direction a changé, et la nouvelle direction a, dès sa prise de fonctions, commencé à convoquer successivement les salariés bien payés et anciens à des entretiens afin de réduire les coûts de personnel.
 
 À l’époque, mon client, M. B, était employé depuis plus de dix ans auprès de la société A.
 
 Il était le commercial le plus performant de la région du centre de Taïwan.
 
-Parce que le salaire et les primes étaient très élevés,
+Parce que le salaire et les primes étaient très élevés, la société a pris monsieur B pour cible.
 
-la société a pris monsieur B pour cible.
 
-​
+Un jour, un cadre dirigeant a convoqué B à un entretien et a commencé soudain à le blâmer, disant que B ne travaillait pas avec conscience.
 
-Un jour, un cadre dirigeant a convoqué B à un entretien
+La société serait en difficulté ; B devrait se sacrifier et servir d’exemple, et baisser son salaire ainsi que son poste.
 
-et a commencé soudain à le blâmer, disant que B ne travaillait pas avec conscience.
+Sinon, B devrait quitter la société.
 
-La société serait en difficulté,
+Le cadre lui a remis une feuille A4 et lui a indiqué d’écrire : « Je, [Nom], baisse volontairement mon poste et mon salaire ».
 
-B devrait se sacrifier et servir d’exemple
+On voulait montrer cet accord à tous les autres salariés, afin qu’ils suivent.
 
-et baisser son salaire ainsi que son poste.
 
-Sinon, B devrait quitter la société ;
+B était le salarié au meilleur résultat de la région du centre de Taïwan, avait rapporté beaucoup d’argent à la société et travaillait chaque jour avec conscience.
 
-il a donné à B une feuille A4
+Il a fortement rejeté cette exigence déraisonnable, a refusé d’écrire cela, et finalement le cadre de la société lui a ordonné avec colère de partir.
 
-et lui a indiqué d’écrire : « Je, [Nom], baisse volontairement mon poste et mon salaire »
+B a quitté, avec un sentiment d’injustice et de tristesse, la société où il était depuis dix ans, et n’est plus ensuite venu travailler.
 
-comme contenu.
 
-Cet accord, on voulait le montrer à tous les autres salariés,
+De la même manière, la société a baissé les salaires de nombreux salariés dirigeants, et une partie des salariés n’a pas supporté ce traitement et a démissionné elle-même.
 
-afin qu’ils suivent.
 
-​
+B avait toutefois, après le changement de direction, reconnu que la société voulait faire partir les salariés de façon inappropriée, et l’avait remarqué tôt.
 
-B était le salarié au meilleur résultat de la région du centre de Taïwan,
-
-avait rapporté beaucoup d’argent à la société
-
-et travaillait chaque jour avec conscience,
-
-c’est pourquoi il a fortement rejeté cette exigence déraisonnable.
-
-B a refusé d’écrire cela,
-
-et finalement le cadre de la société lui a ordonné avec colère de partir.
-
-B a quitté, avec un sentiment d’injustice et de tristesse,
-
-la société où il était depuis 10 ans,
-
-et n’est plus ensuite venu travailler.
-
-​
-
-De la même manière, la société
-
-a baissé les salaires de nombreux salariés dirigeants
-
-et une partie des salariés n’a pas supporté ce traitement
-
-et a démissionné elle-même
-
-​
-
-B avait toutefois, après le changement de direction,
-
-reconnu que la société voulait faire partir les salariés de façon inappropriée,
-
-et l’avait remarqué tôt
-
-et, parce qu’il avait déjà découvert des offres d’emploi avant le départ de salariés,
-
-B a, le jour où il s’est rendu à l’entretien,
-
-enregistré tout le déroulement avec le téléphone mobile
-
-et a pu prouver qu’il n’avait pas démissionné lui-même.
+Parce qu’il avait déjà découvert des offres d’emploi avant le départ de salariés, B a, le jour où il s’est rendu à l’entretien, enregistré tout le déroulement avec le téléphone mobile et a pu prouver qu’il n’avait pas démissionné lui-même.
 
 L’enregistrement peut montrer que B n’a pas démissionné de lui-même.
 
@@ -182,39 +110,15 @@ Savoir si l’indemnité de licenciement est due dépend encore des faits de l�
 
 Les autres salariés partis n’avaient pas cet enregistrement.
 
-​
 
-Parce qu’il existe beaucoup de tels cas,
+Parce qu’il existe beaucoup de tels cas, vous devez conserver des preuves si la société emploie des moyens inappropriés.
 
-vous devez conserver des preuves,
+Lorsque la société consigne de petites erreurs des salariés, fixe des objectifs difficiles à atteindre, pose des exigences excessives ou mute les salariés à des postes étranges, vous devez conserver des preuves.
 
-si la société emploie des moyens inappropriés.
+Vos relevés de présence habituels, relevés d’heures supplémentaires, relevés de performance, règlement intérieur, correspondance par courriel avec les collègues et les supérieurs ainsi que les enregistrements d’entretien avec les supérieurs — conservez les preuves qui vous sont favorables.
 
-Si la société consigne de petites erreurs des salariés,
 
-fixe des objectifs difficiles à atteindre,
-
-pose des exigences excessives
-
-ou mute les salariés à des postes étranges,
-
-vous devez conserver des preuves.
-
-Vos relevés de présence habituels,
-
-relevés d’heures supplémentaires, relevés de performance,
-
-règlement intérieur, correspondance par courriel avec les collègues et les supérieurs
-
-ainsi que les enregistrements d’entretien avec les supérieurs —
-
-conservez les preuves qui vous sont favorables.
-
-​
-
-Si vous travaillez à Taïwan,
-
-l’indemnité de licenciement est plus difficile à obtenir qu’on ne le pense.
+Si vous travaillez à Taïwan, l’indemnité de licenciement est plus difficile à obtenir qu’on ne le pense.
 
 Ne transigez pas facilement avec la société.
 
@@ -222,9 +126,7 @@ Veillez à ce que la société ne vous licencie pas de façon inappropriée.
 
 Ne vous laissez pas pousser à démissionner vous-même.
 
-L’indemnité de licenciement est un droit légal du salarié,
-
-et la société doit la verser lorsque la loi l’exige.
+L’indemnité de licenciement est un droit légal du salarié, et la société doit la verser lorsque la loi l’exige.
 
 Vous aussi, vous devez protéger vos droits à Taïwan.
 

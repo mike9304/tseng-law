@@ -17,19 +17,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
-Quando se começa uma atividade de restauração, o primeiro problema é encontrar o endereço do local (營業地址).
-
-Além da situação do mercado, há outro ponto importante.
-
-Esse ponto é o seguinte.
-
-Há que saber se esse endereço se situa numa zona onde a exploração de um «estabelecimento de restauração» é possível.
+Quem abre um estabelecimento de restauração precisa primeiro de um endereço de local (營業地址) que o mercado suporte e que a regulamentação autorize para esse ramo.
 
 ​
 
-Se se começar a atividade na cidade de Taipé, há um instrumento público.
-
-Pode utilizar-se o sistema de «consulta prévia do local» (營業場所預先查詢) do gabinete do comércio da cidade de Taipé (臺北市商業處).
+Na cidade de Taipé existe o sistema de «consulta prévia do local» (營業場所預先查詢) do gabinete do comércio (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,7 +33,7 @@ Contudo, para esta verificação, deve carregar-se o «extrato de inscrição im
 
 Qualquer pessoa pode pedir junto do gabinete da administração fundiária (地政事務所) o «extrato de inscrição imobiliária de tipo II» de um endereço qualquer.
 
-Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所), há quem possa tratar do pedido.
+Quem não puder deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所) pode mandar tratar do pedido.
 
 Pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou de um advogado.
 

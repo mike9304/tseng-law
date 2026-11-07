@@ -40,9 +40,7 @@ Namun, apabila terdapat dasar menurut [Pasal 14 Undang-Undang Standar Ketenagake
 
 ​
 
-Namun apabila karyawan melakukan perbuatan melawan hukum,
-
-melanggar perjanjian kerja atau peraturan perusahaan (工作規則) secara berat,
+Sebaliknya, apabila karyawan melakukan perbuatan melawan hukum, melanggar perjanjian kerja atau peraturan perusahaan (工作規則) secara berat,
 
 atau mangkir tanpa alasan sah (曠工) selama 3 hari berturut-turut atau 6 hari dalam satu bulan,
 
@@ -70,161 +68,37 @@ Saya akan merangkumnya untuk Anda dalam sebuah tabel sederhana.
 
 ​
 
-Apabila gaji karyawan tinggi dan masa kerjanya sudah cukup panjang,
+Apabila gaji karyawan tinggi dan masa kerjanya sudah cukup panjang, jumlah pesangonnya pun menjadi relatif besar. Pada titik inilah sebagian perusahaan Taiwan yang tidak beritikad baik, demi menghindari pembayaran pesangon yang besar, menempuh berbagai cara agar karyawan mengundurkan diri atas kemauan sendiri. Karyawan harus berhati-hati dan menjaga diri agar tidak terjebak oleh maksud perusahaan.
 
-jumlah pesangonnya pun menjadi relatif besar.
+Saya ingin menceritakan satu perkara yang pernah saya tangani. Ada sebuah perusahaan A yang terkenal dan memiliki cabang di seluruh wilayah Taiwan. Karena suatu sebab, pengelola perusahaan itu berganti, dan begitu menjabat, pengelola yang baru berupaya menekan biaya tenaga kerja perusahaan, sehingga mulai memanggil karyawan dengan gaji tinggi dan masa kerja panjang satu per satu untuk diajak berbicara.
 
-Pada titik inilah sebagian perusahaan Taiwan yang tidak beritikad baik, demi menghindari pembayaran pesangon yang besar,
-
-menempuh berbagai cara
-
-agar karyawan mengundurkan diri atas kemauan sendiri.
-
-Karyawan harus berhati-hati
-
-dan menjaga diri agar tidak terjebak oleh maksud perusahaan.
+Klien saya waktu itu, Tuan B, adalah karyawan yang telah bekerja lebih dari 10 tahun di perusahaan A dan merupakan tenaga penjualan dengan pencapaian tertinggi di wilayah Taiwan bagian tengah. Karena gaji bulanan dan bonusnya sangat tinggi, perusahaan menjadikan Tuan B sebagai sasaran.
 
 ​
 
-Saya ingin menceritakan satu perkara yang pernah saya tangani.
+Pada suatu hari, seorang pejabat tinggi perusahaan memanggil B untuk berbicara, lalu tiba-tiba mulai menuduh B tidak bekerja dengan sungguh-sungguh. Dengan alasan perusahaan sedang mengalami kesulitan, pejabat itu menyatakan bahwa B harus berkorban dan memberi teladan, lalu menuntut B menerima penurunan gaji dan jabatan. Bila menolak, B harus meninggalkan perusahaan.
 
-Ada sebuah perusahaan A yang terkenal dan memiliki cabang di seluruh wilayah Taiwan.
+Pejabat itu menyerahkan selembar kertas A4 kepada B dan memerintahkannya menulis kalimat “Saya, [nama], dengan sukarela bersedia diturunkan jabatan dan gajinya” sebagai isi pernyataan tersebut. Ia juga menyatakan akan memperlihatkan surat kesepakatan itu kepada seluruh karyawan lain supaya mereka mengikutinya.
 
-Karena suatu sebab, pengelola perusahaan itu berganti,
-
-dan begitu menjabat, pengelola yang baru
-
-berupaya menekan biaya tenaga kerja perusahaan,
-
-sehingga mulai memanggil karyawan dengan gaji tinggi dan masa kerja panjang satu per satu untuk diajak berbicara.
-
-Klien saya waktu itu, Tuan B, adalah karyawan yang telah bekerja lebih dari 10 tahun di perusahaan A
-
-dan merupakan tenaga penjualan dengan pencapaian tertinggi di wilayah Taiwan bagian tengah.
-
-Karena gaji bulanan dan bonusnya sangat tinggi,
-
-perusahaan menjadikan Tuan B sebagai sasaran.
+B adalah karyawan dengan pencapaian terbaik di wilayah tengah, telah menghasilkan banyak keuntungan bagi perusahaan, dan setiap hari bekerja dengan sungguh-sungguh, sehingga ia sangat keberatan terhadap tuntutan yang tidak masuk akal itu. B menolak menuliskan pernyataan tersebut, dan pada akhirnya pejabat perusahaan itu marah besar lalu menyuruh B keluar. Dengan perasaan terzalimi dan sedih, B meninggalkan perusahaan tempatnya bekerja selama 10 tahun, dan setelah itu tidak pernah masuk kerja lagi.
 
 ​
 
-Pada suatu hari, seorang pejabat tinggi perusahaan memanggil B untuk berbicara,
+Dengan cara yang sama, perusahaan tersebut menurunkan gaji banyak karyawan pada jabatan senior, dan sebagian karyawan tidak sanggup menanggung perlakuan itu sehingga mengundurkan diri atas kemauan sendiri.
 
-lalu tiba-tiba mulai menuduh B tidak bekerja dengan sungguh-sungguh.
+Akan tetapi B sudah menyadari bahwa setelah perusahaan mengganti pengelolanya, perusahaan berupaya mendorong para karyawan keluar dengan cara yang tidak patut, dan hal itu telah ia sadari sejak awal. Ia pun menemukan bahwa perusahaan sudah memasang iklan lowongan kerja bahkan sebelum karyawan mengundurkan diri, sehingga pada hari B memasuki ruang pembicaraan itu, ia merekam seluruh proses pembicaraan dengan telepon genggamnya dan dapat membuktikan bahwa B tidak mengundurkan diri atas kemauan sendiri.
 
-Dengan alasan perusahaan sedang mengalami kesulitan,
-
-pejabat itu menyatakan bahwa B harus berkorban dan memberi teladan,
-
-lalu menuntut B menerima penurunan gaji dan jabatan.
-
-Apabila menolak, B harus meninggalkan perusahaan.
-
-Pejabat itu menyerahkan selembar kertas A4 kepada B,
-
-dan memerintahkannya menulis kalimat “Saya, [nama], dengan sukarela bersedia diturunkan jabatan dan gajinya”
-
-sebagai isi pernyataan tersebut.
-
-Ia juga menyatakan akan memperlihatkan surat kesepakatan itu kepada seluruh karyawan lain
-
-supaya mereka mengikutinya.
+Apakah pesangon wajib dibayar tetap bergantung pada fakta perkara. Pendampingan advokat tidak dengan sendirinya menetapkan hak atas pesangon menurut undang-undang, tetapi karyawan lain yang telah keluar tidak serta-merta berada pada kedudukan yang sama.
 
 ​
 
-B adalah karyawan dengan pencapaian terbaik di wilayah tengah,
+Karena kasus seperti ini sangat banyak, ketika perusahaan menempuh cara-cara yang tidak patut — misalnya mempermasalahkan kesalahan kecil karyawan, menetapkan target yang sulit dicapai, mengajukan tuntutan yang tidak masuk akal, atau menempatkan karyawan pada posisi yang tidak wajar — Anda harus menyimpan bukti.
 
-telah menghasilkan banyak keuntungan bagi perusahaan,
+Catatan kehadiran Anda yang normal, catatan kerja lembur, catatan pencapaian kerja, peraturan perusahaan, catatan email dengan rekan kerja dan atasan, serta rekaman percakapan dengan atasan Anda — simpanlah bukti yang menguntungkan diri Anda sendiri.
 
-dan setiap hari bekerja dengan sungguh-sungguh,
+Apabila Anda bekerja di Taiwan, pesangon ternyata lebih sulit diperoleh daripada yang mungkin Anda bayangkan. Jangan mudah berkompromi dengan perusahaan, dan berhati-hatilah agar perusahaan tidak memberhentikan Anda secara tidak patut atau mendorong Anda mengundurkan diri atas kemauan sendiri.
 
-sehingga ia sangat keberatan terhadap tuntutan yang tidak masuk akal itu.
-
-B menolak menuliskan pernyataan tersebut,
-
-dan pada akhirnya pejabat perusahaan itu marah besar lalu menyuruh B keluar.
-
-Dengan perasaan terzalimi dan sedih,
-
-B meninggalkan perusahaan tempatnya bekerja selama 10 tahun,
-
-dan setelah itu tidak pernah masuk kerja lagi.
-
-​
-
-Dengan cara yang sama, perusahaan tersebut
-
-menurunkan gaji banyak karyawan pada jabatan senior,
-
-dan sebagian karyawan tidak sanggup menanggung perlakuan itu
-
-sehingga mengundurkan diri atas kemauan sendiri.
-
-​
-
-Akan tetapi B sudah menyadari bahwa setelah perusahaan mengganti pengelolanya,
-
-perusahaan berupaya mendorong para karyawan keluar dengan cara yang tidak patut,
-
-dan hal itu telah ia sadari sejak awal.
-
-Ia pun menemukan bahwa perusahaan sudah memasang iklan lowongan kerja bahkan sebelum karyawan mengundurkan diri,
-
-sehingga pada hari B memasuki ruang pembicaraan itu,
-
-ia merekam seluruh proses pembicaraan dengan telepon genggamnya
-
-dan dapat membuktikan bahwa B tidak mengundurkan diri atas kemauan sendiri.
-
-Apakah pesangon wajib dibayar tetap bergantung pada fakta perkara,
-
-dan pendampingan advokat tidak dengan sendirinya menetapkan hak atas pesangon menurut undang-undang,
-
-tetapi karyawan lain yang telah keluar tidak serta-merta berada pada kedudukan yang sama.
-
-​
-
-Karena kasus seperti ini sangat banyak,
-
-ketika perusahaan menempuh cara-cara yang tidak patut,
-
-Anda harus menyimpan bukti.
-
-Dalam keadaan ketika perusahaan mempermasalahkan kesalahan kecil karyawan,
-
-menetapkan target yang sulit dicapai,
-
-mengajukan tuntutan yang tidak masuk akal,
-
-atau menempatkan karyawan pada posisi yang tidak wajar,
-
-Anda harus menyimpan bukti.
-
-Catatan kehadiran Anda yang normal,
-
-catatan kerja lembur, catatan pencapaian kerja,
-
-peraturan perusahaan, catatan email dengan rekan kerja dan atasan,
-
-serta rekaman percakapan dengan atasan Anda —
-
-simpanlah bukti yang menguntungkan diri Anda sendiri.
-
-​
-
-Apabila Anda bekerja di Taiwan,
-
-pesangon ternyata lebih sulit diperoleh daripada yang mungkin Anda bayangkan.
-
-Jangan mudah berkompromi dengan perusahaan,
-
-dan berhati-hatilah agar perusahaan tidak memberhentikan Anda secara tidak patut
-
-atau mendorong Anda mengundurkan diri atas kemauan sendiri.
-
-Pesangon adalah hak hukum karyawan,
-
-dan sudah semestinya perusahaan membayarkannya.
+Jika syarat menurut hukum terpenuhi, pesangon merupakan hak karyawan yang wajib dibayarkan perusahaan.
 
 Anda pun harus melindungi hak-hak Anda sendiri di Taiwan.
 

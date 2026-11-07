@@ -38,19 +38,9 @@ Kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung 
 
 Liegt jedoch ein Grund nach [Artikel 14 des Arbeitsstandardsgesetzes](/de/columns/taiwan-voluntary-resignation-severance) vor, etwa dass die Gesellschaft den Lohn nicht zahlt oder gegen arbeitsrechtliche Vorschriften verstößt, und kündigt die beschäftigte Person deshalb den Vertrag, muss die Gesellschaft Abfindung zahlen.
 
-​
-
-Begeht die beschäftigte Person jedoch eine rechtswidrige Handlung,
-
-verletzt sie den Arbeitsvertrag oder die Betriebsregeln (工作規則) in schwerwiegender Weise,
-
-oder bleibt sie ohne Grund 3 Tage hintereinander oder 6 Tage in einem Monat der Arbeit fern (曠工),
-
-kann die Gesellschaft kündigen, ohne Abfindung zu zahlen.
+Begeht die beschäftigte Person jedoch eine rechtswidrige Handlung, verletzt sie den Arbeitsvertrag oder die Betriebsregeln (工作規則) in schwerwiegender Weise, oder bleibt sie ohne Grund 3 Tage hintereinander oder 6 Tage in einem Monat der Arbeit fern (曠工), kann die Gesellschaft kündigen, ohne Abfindung zu zahlen.
 
 Bei allen Gründen mit Ausnahme von Nummer 3 (rechtskräftige Freiheitsstrafe) muss die Gesellschaft jedoch innerhalb von 30 Tagen ab Kenntnis der Umstände kündigen (Artikel 12 Absatz 2 des Arbeitsstandardsgesetzes).
-
-​
 
 Die folgende Tabelle fasst die Unterschiede zusammen.
 
@@ -68,165 +58,19 @@ Die folgende Tabelle fasst die Unterschiede zusammen.
 > 0,5 Monatsbeträge des Durchschnittslohns (平均工資) als Abfindung zahlen.
 > (höchstens 6 Monatsgehälter) Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 des Gesetzes über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je einem Jahr ein Monat des Durchschnittslohns ohne Obergrenze gezahlt. Das Gesetz über die Altersversorgung der Arbeitnehmer gilt für taiwanesische Staatsangehörige, für ausländische Staatsangehörige, die mit einer Person taiwanesischer Staatsangehörigkeit verheiratet sind und denen Aufenthalt gewährt wurde, für ausländische Staatsangehörige mit Daueraufenthalt und für ähnliche Beschäftigte (Artikel 7 Absatz 1) sowie ab 2026 für ausländische Fachkräfte, die fachliche Tätigkeiten ausüben ([Artikel 24 des Gesetzes über die Anwerbung und Beschäftigung ausländischer Fachkräfte (外國專業人才延攬及僱用法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=24)); die Abfindung für andere Beschäftigte und für Betriebszugehörigkeit vor der Anwendbarkeit des Gesetzes wird nach Artikel 17 des Arbeitsstandardsgesetzes berechnet. Betriebszugehörigkeit von weniger als einem Jahr wird anteilig berechnet, und die Gesellschaft muss die Abfindung innerhalb von 30 Tagen nach Beendigung des Vertrags zahlen.
 
-​
+Ist das Gehalt der beschäftigten Person hoch und eine gewisse Betriebszugehörigkeit erreicht, fällt auch die Abfindung verhältnismäßig höher aus. Dann setzen manche unseriöse taiwanesische Gesellschaften verschiedene Mittel ein, um hohe Abfindungen nicht zahlen zu müssen, und bringen Beschäftigte dazu, selbst zu kündigen. Beschäftigte müssen vorsichtig sein und darauf achten, nicht auf die Absicht der Gesellschaft hereinzufallen.
 
-Ist das Gehalt der beschäftigten Person hoch und eine gewisse Betriebszugehörigkeit erreicht,
+Ein von der Verfasserin bearbeiteter Fall verdeutlicht das. Es gibt die bekannte Gesellschaft A mit Niederlassungen in ganz Taiwan. Aus irgendeinem Grund wechselte die Geschäftsleitung, und die neue Leitung begann sogleich nach Amtsantritt, um Personalkosten zu senken, hochbezahlte langjährige Beschäftigte nacheinander zu Gesprächen zu laden. Damals war meine Partei, Herr B, mehr als 10 Jahre bei Gesellschaft A beschäftigt. Er war der Vertriebsmitarbeiter mit dem höchsten Ergebnis in der Region Zentraltaiwan. Weil Gehalt und Bonus sehr hoch waren, nahm die Gesellschaft Herrn B ins Visier.
 
-fällt auch die Abfindung verhältnismäßig höher aus.
+Eines Tages rief ein leitender Angestellter B zum Gespräch und begann plötzlich zu tadeln, B arbeite nicht gewissenhaft. Die Gesellschaft sei in Schwierigkeiten, B müsse Opfer bringen und ein Vorbild sein und Gehalt sowie Stellung senken. Andernfalls müsse B die Gesellschaft verlassen; er gab B ein Blatt A4 und wies ihn an zu schreiben: „Ich, [Name], senke Stellung und Gehalt freiwillig“ als Inhalt. Diese Vereinbarung wolle man allen anderen Beschäftigten zeigen, damit sie folgen.
 
-Dann setzen manche unseriöse taiwanesische Gesellschaften verschiedene Mittel ein,
+Der Mitarbeiter mit dem besten Ergebnis in der Region Zentraltaiwan lehnte die Forderung ab: B hatte der Gesellschaft viel Geld eingebracht und arbeitete täglich gewissenhaft. Er weigerte sich, den freiwilligen Verzicht schriftlich zu bestätigen; schließlich wies ihn die Führungskraft der Gesellschaft zornig an zu gehen. Danach verließ B mit dem Gefühl der Ungerechtigkeit und Trauer die Gesellschaft, bei der er zehn Jahre beschäftigt gewesen war, und erschien nicht mehr zur Arbeit.
 
-um hohe Abfindungen nicht zahlen zu müssen,
+Auf dieselbe Weise senkte die Gesellschaft die Gehälter vieler leitender Beschäftigter; ein Teil der Beschäftigten ertrug diese Behandlung nicht und kündigte selbst. B hatte nach dem Wechsel der Geschäftsleitung jedoch erkannt, dass die Gesellschaft Beschäftigte auf unangemessene Weise zum Ausscheiden bewegen wollte, und Stellenanzeigen schon vor dem Ausscheiden anderer Beschäftigter entdeckt. Am Tag des Gesprächs nahm er den gesamten Ablauf mit dem Mobiltelefon auf und konnte beweisen, dass er nicht selbst gekündigt hatte. Mit anwaltlicher Hilfe ließ er später klären, dass ihm die Abfindung nach dem Gesetz zustand, während andere ausgeschiedene Beschäftigte diesen Nachweis nicht führen konnten.
 
-und bringen Beschäftigte dazu, selbst zu kündigen.
+Weil es viele solche Fälle gibt, müssen Sie Beweise sichern, wenn die Gesellschaft unangemessene Mittel einsetzt. Hält die Gesellschaft kleine Fehler von Beschäftigten fest, setzt schwer erreichbare Ziele, stellt überzogene Forderungen oder versetzt Beschäftigte auf merkwürdige Stellen, müssen Sie Beweise sichern. Ihre normalen Anwesenheitsaufzeichnungen, Überstundenaufzeichnungen, Leistungsaufzeichnungen, Betriebsregeln, E-Mail-Verkehr mit Kolleginnen, Kollegen und Vorgesetzten sowie Gesprächsaufzeichnungen mit Vorgesetzten — sichern Sie Beweise, die für Sie günstig sind.
 
-Beschäftigte müssen vorsichtig sein
-
-und darauf achten, nicht auf die Absicht der Gesellschaft hereinzufallen.
-
-​
-
-Ein von der Verfasserin bearbeiteter Fall verdeutlicht das.
-
-Es gibt die bekannte Gesellschaft A mit Niederlassungen in ganz Taiwan.
-
-Aus irgendeinem Grund wechselte die Geschäftsleitung,
-
-und die neue Leitung begann sogleich nach Amtsantritt,
-
-um Personalkosten zu senken,
-
-hochbezahlte langjährige Beschäftigte nacheinander zu Gesprächen zu laden
-
-Damals war meine Partei, Herr B, mehr als 10 Jahre bei Gesellschaft A beschäftigt
-
-Er war der Vertriebsmitarbeiter mit dem höchsten Ergebnis in der Region Zentraltaiwan.
-
-Weil Gehalt und Bonus sehr hoch waren,
-
-nahm die Gesellschaft Herrn B ins Visier.
-
-​
-
-Eines Tages rief ein leitender Angestellter B zum Gespräch
-
-und begann plötzlich zu tadeln, B arbeite nicht gewissenhaft.
-
-Die Gesellschaft sei in Schwierigkeiten,
-
-B müsse Opfer bringen und ein Vorbild sein
-
-und Gehalt sowie Stellung senken.
-
-Andernfalls müsse B die Gesellschaft verlassen;
-
-er gab B ein Blatt A4
-
-und wies ihn an zu schreiben: „Ich, [Name], senke Stellung und Gehalt freiwillig“
-
-als Inhalt.
-
-Diese Vereinbarung wolle man allen anderen Beschäftigten zeigen,
-
-damit sie folgen.
-
-​
-
-B war der Mitarbeiter mit dem besten Ergebnis in der Region Zentraltaiwan,
-
-hatte der Gesellschaft viel Geld eingebracht
-
-und arbeitete täglich gewissenhaft,
-
-weshalb er diese unvernünftige Forderung sehr ablehnte.
-
-B weigerte sich, dies zu schreiben,
-
-und schließlich wies ihn die Führungskraft der Gesellschaft zornig an zu gehen.
-
-B verließ mit dem Gefühl der Ungerechtigkeit und Trauer
-
-die Gesellschaft, bei der er 10 Jahre gewesen war,
-
-und erschien danach nicht mehr zur Arbeit.
-
-​
-
-Auf dieselbe Weise senkte die Gesellschaft
-
-die Gehälter vieler leitender Beschäftigter
-
-und ein Teil der Beschäftigten ertrug diese Behandlung nicht
-
-und kündigte selbst
-
-​
-
-B hatte jedoch nach dem Wechsel der Geschäftsleitung
-
-erkannt, dass die Gesellschaft Beschäftigte auf unangemessene Weise zum Ausscheiden bewegen wollte,
-
-und dies frühzeitig bemerkt
-
-und weil er schon vor dem Ausscheiden von Beschäftigten Stellenanzeigen entdeckt hatte,
-
-nahm B an dem Tag, an dem er ins Gespräch ging,
-
-den gesamten Ablauf mit dem Mobiltelefon auf
-
-und konnte beweisen, dass er nicht selbst gekündigt hatte.
-
-Deshalb konnte er später mit anwaltlicher Hilfe
-
-klären lassen, dass ihm die Abfindung nach dem Gesetz zustand,
-
-während andere ausgeschiedene Beschäftigte diesen Nachweis nicht führen konnten.
-
-​
-
-Weil es viele solche Fälle gibt,
-
-müssen Sie Beweise sichern,
-
-wenn die Gesellschaft unangemessene Mittel einsetzt.
-
-Wenn die Gesellschaft kleine Fehler von Beschäftigten festhält,
-
-schwer erreichbare Ziele setzt,
-
-überzogene Forderungen stellt
-
-oder Beschäftigte auf merkwürdige Stellen versetzt,
-
-müssen Sie Beweise sichern.
-
-Ihre normalen Anwesenheitsaufzeichnungen,
-
-Überstundenaufzeichnungen, Leistungsaufzeichnungen,
-
-Betriebsregeln, E-Mail-Verkehr mit Kolleginnen, Kollegen und Vorgesetzten
-
-sowie Gesprächsaufzeichnungen mit Vorgesetzten —
-
-sichern Sie Beweise, die für Sie günstig sind.
-
-​
-
-Wenn Sie in Taiwan arbeiten, ist die Abfindung schwerer zu erhalten, als man denkt.
-
-Dieser Unterschied wird häufig unterschätzt.
-
-Schließen Sie nicht leicht Kompromisse mit der Gesellschaft.
-
-Achten Sie darauf, dass die Gesellschaft Sie nicht unangemessen entlässt.
-
-Achten Sie auch darauf, sich nicht zur eigenen Kündigung drängen zu lassen.
-
-Die Abfindung ist ein gesetzliches Recht der beschäftigten Person.
-
-Liegen die gesetzlichen Voraussetzungen vor, hat die Gesellschaft sie zu zahlen.
-
-Auch Sie müssen in Taiwan Ihre Rechte schützen.
+Wenn Sie in Taiwan arbeiten, ist die Abfindung schwerer zu erhalten, als man denkt. Dieser Unterschied wird häufig unterschätzt. Schließen Sie nicht leicht Kompromisse mit der Gesellschaft. Achten Sie darauf, dass die Gesellschaft Sie nicht unangemessen entlässt. Lassen Sie sich nicht zur eigenen Kündigung drängen. Die Abfindung ist ein gesetzliches Recht der beschäftigten Person. Liegen die gesetzlichen Voraussetzungen vor, hat die Gesellschaft sie zu zahlen. In Taiwan gilt es, die eigenen Ansprüche im Auge zu behalten.
 
 ---
 

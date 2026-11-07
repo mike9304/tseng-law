@@ -250,46 +250,32 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'NAPÍŠTE NÁM',
-      title: 'Ako kanceláriu osloviť',
-      description:
-        'Jazyk stránky, jazyky konzultácie, postup pre prípad, že neovládate žiadny zo štyroch jazykov, a čo táto stránka nesľubuje.',
-      intro:
-        'Skôr než nám napíšete, rozlíšte nasledujúce tri body. Bývajú zamenené, ale znamenajú rôzne veci.',
-      sections: [
+      "eyebrow": "NAPÍŠTE NÁM",
+      "title": "Ako kanceláriu osloviť",
+      "description": "Kontakt na kanceláriu pri právnych otázkach týkajúcich sa Taiwanu.",
+      "intro": "Ak poznáte lehotu, uveďte ju hneď v prvej správe.",
+      "sections": [
         {
-          heading: 'Tri veci, ktoré treba držať oddelene',
-          paragraphs: [
-            'Jazyk zobrazenia stránky, jazyk konzultácie s advokátkou alebo advokátom a jazyk, v ktorom píšete, sú tri rôzne veci.',
-          ],
-          items: [
-            'Jazyk stránky: tieto informácie sú napísané po slovensky.',
-            'Jazyk konzultácie: konzultácia prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
-            'Váš jazyk písania: zhrnutie môžete napísať vo svojom jazyku; pôvodný text sa uchová bez zmeny.',
-          ],
+          "heading": "Jazyky konzultácie a komunikácia",
+          "paragraphs": [
+            "Konzultácia s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky. Prvú správu môžete napísať vo svojom jazyku.",
+            "Ak neovládate žiadny z týchto jazykov, uveďte to v e-maile. Posúdime, či existuje vhodný spôsob komunikácie. Tlmočníka, službu v slovenčine alebo v inom jazyku mimo štyroch uvedených ani prijatie každej veci kancelária nesľubuje."
+          ]
         },
         {
-          heading: 'Ak neovládate žiadny zo štyroch jazykov konzultácie',
-          paragraphs: [
-            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme a posúdime, či existuje vhodný spôsob komunikácie; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
-            'Ide iba o posúdenie, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.',
-          ],
+          "heading": "Čo by mala obsahovať prvá správa",
+          "paragraphs": [
+            "Uveďte, čo sa stalo, akú pomoc potrebujete a akú väzbu má vec na Taiwan. Ak ste už dostali písomnosť súdu alebo úradu, uveďte dátum na písomnosti.",
+            "V počiatočnej fáze zatiaľ nemusíte zasielať číslo pasu, číslo dokladu, údaje o účte, zdravotnú dokumentáciu ani súbor dôkazov. Vyčkajte pokynov advokátky alebo advokáta a citlivé dokumenty zašlite až potom bezpečnou cestou."
+          ]
         },
         {
-          heading: 'Čo by mala obsahovať prvá správa',
-          paragraphs: [
-            'Uveďte, čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. Ak ste už dostali písomnosť súdu alebo úradu, uveďte dátum na písomnosti.',
-            'V počiatočnej fáze zatiaľ nemusíte zasielať číslo pasu, číslo dokladu, údaje o účte, zdravotnú dokumentáciu ani súbor dôkazov. Vyčkajte pokynov advokátky alebo advokáta a citlivé dokumenty zašlite až potom bezpečnou cestou.',
-          ],
-        },
-        {
-          heading: 'Čo táto stránka nesľubuje',
-          paragraphs: [
-            'Nesľubujeme lehotu na odpoveď, nepotvrdzujeme stretnutie prostredníctvom tejto stránky, nesľubujeme konkrétnu advokátku ani konkrétneho advokáta a neposkytujeme tlmočníka. Písomný preklad je niečo iné: Vaša správa sa automaticky neprekladá.',
-            'Ak odošlete žiadosť, obsah sa uchová a čaká na posúdenie. Ak po určitom čase nedostanete odpoveď, môžete napísať znova na e-mailovú adresu uvedenú na kontaktnej stránke.',
-          ],
-        },
-      ],
+          "heading": "Po e-maile",
+          "paragraphs": [
+            "Odoslaním e-mailu ešte nedostanete právne stanovisko, stretnutie sa tým nepotvrdí a vzťah medzi advokátkou alebo advokátom a klientom sa nezakladá. Lehota na odpoveď ani konkrétna advokátka či advokát sa nesľubujú. Ak po určitom čase nedostanete odpoveď, použite znova e-mailové prepojenie na tejto stránke."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'ČASTÉ OTÁZKY',
@@ -738,46 +724,32 @@ export const bulgarianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'КОНТАКТ',
-      title: 'Как да се свържете с кантората',
-      description:
-        'Език на страницата, езици за консултация, редът, ако не можете да ползвате нито един от четирите езика, и какво тази страница не обещава.',
-      intro:
-        'Преди да ни пишете, разграничете следните три неща. Често ги смесват, но те означават различно нещо.',
-      sections: [
+      "eyebrow": "КОНТАКТ",
+      "title": "Как да се свържете с кантората",
+      "description": "Свържете се с кантората по въпроси, свързани с правото на Тайван.",
+      "intro": "Ако знаете срок, посочете го още в първото съобщение.",
+      "sections": [
         {
-          heading: 'Три неща, които трябва да се държат отделно',
-          paragraphs: [
-            'Езикът на показване на страницата, езикът на консултацията с адвокатка или адвокат и езикът, на който пишете, са три различни неща.',
-          ],
-          items: [
-            'Език на страницата: тези сведения са написани на български.',
-            'Език на консултацията: консултацията се провежда само на английски, китайски (中文), японски и корейски.',
-            'Език на писмото Ви: можете да напишете кратко изложение на своя език; оригиналният текст се запазва без промяна.',
-          ],
+          "heading": "Езици за консултация и комуникация",
+          "paragraphs": [
+            "Консултацията с адвокатка или адвокат се провежда само на английски, китайски (中文), японски и корейски. Първото съобщение можете да напишете на своя език.",
+            "Ако не можете да ползвате нито един от тези езици, посочете го в имейла. Проверяваме дали има приложим начин на комуникация. Не обещаваме преводач, услуга на български или на друг език извън четирите посочени, нито приемане на всяко дело."
+          ]
         },
         {
-          heading: 'Ако не можете да ползвате нито един от четирите езика за консултация',
-          paragraphs: [
-            'Във формуляра за контакт можете да изберете „Начинът на комуникация трябва да бъде потвърден“. Отговаряме, за да разгледаме приложим начин на комуникация, ако има такъв; услуга на друг език не се осигурява и срок за отговор не се обещава.',
-            'Това е само проверка, а не обещание. Не обещаваме преводач, не обещаваме услуга на български или на друг език извън четирите посочени и не обещаваме, че ще приемем всяко дело.',
-          ],
+          "heading": "Какво трябва да има в първото съобщение",
+          "paragraphs": [
+            "Посочете какво се е случило, каква помощ Ви е нужна и какво отношение има делото към Тайван. Ако вече сте получили писмо от съд или орган, посочете датата върху писмото.",
+            "В началния етап още не е нужно да изпращате номер на паспорт, номер на документ за самоличност, данни за сметка, медицинско досие или всички доказателства. Изчакайте указания на адвокатката или адвоката и след това изпратете чувствителните документи по сигурен път."
+          ]
         },
         {
-          heading: 'Какво трябва да има в първото съобщение',
-          paragraphs: [
-            'Посочете какво се е случило, каква помощ Ви е нужна, какво отношение има делото към Тайван и срока, ако го знаете. Ако вече сте получили писмо от съд или орган, посочете датата върху писмото.',
-            'В началния етап още не е нужно да изпращате номер на паспорт, номер на документ за самоличност, данни за сметка, медицинско досие или всички доказателства. Изчакайте указания на адвокатката или адвоката и след това изпратете чувствителните документи по сигурен път.',
-          ],
-        },
-        {
-          heading: 'Какво тази страница не обещава',
-          paragraphs: [
-            'Не обещаваме срок за отговор, не потвърждаваме среща чрез тази страница, не обещаваме конкретна адвокатка или адвокат и не осигуряваме преводач. Устният преводач и писменият превод на обръщението са различни неща: съобщението Ви не се превежда автоматично.',
-            'Ако изпратите запитване, съдържанието се запазва и чака преглед. Ако няма отговор, можете отново да пишете на адреса на електронна поща, посочен на страницата за контакт.',
-          ],
-        },
-      ],
+          "heading": "След имейла",
+          "paragraphs": [
+            "Изпращането на имейл не означава правна консултация, не потвърждава среща и не създава отношения между адвокатка или адвокат и клиент. Срок за отговор или конкретна адвокатка или адвокат не се обещават. Ако след известно време няма отговор, използвайте отново връзката за електронна поща на тази страница."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'ВЪПРОСИ',
@@ -1225,46 +1197,32 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Kako kontaktirati ured',
-      description:
-        'Jezik stranice, jezici savjetovanja, postupak ako ne govorite nijedan od četiri jezika i što ova stranica ne obećava.',
-      intro:
-        'Prije nego što nam se javite, razlikujte sljedeće tri točke. Često se miješaju, ali znače različite stvari.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Kako kontaktirati ured",
+      "description": "Kontakt s uredom u pravnim pitanjima koja se odnose na Tajvan.",
+      "intro": "Ako znate rok, navedite ga već u prvoj poruci.",
+      "sections": [
         {
-          heading: 'Tri stvari koje treba držati odvojeno',
-          paragraphs: [
-            'Jezik prikaza stranice, jezik savjetovanja s odvjetnicom ili odvjetnikom i jezik na kojemu pišete tri su različite stvari.',
-          ],
-          items: [
-            'Jezik stranice: ove su informacije napisane na hrvatskom.',
-            'Jezik savjetovanja: savjetovanje se odvija samo na engleskom, kineskom (中文), japanskom i korejskom.',
-            'Vaš jezik pisanja: sažetak možete napisati na svojem jeziku; izvorni se tekst čuva neizmijenjen.',
-          ],
+          "heading": "Jezici savjetovanja i komunikacija",
+          "paragraphs": [
+            "Savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Prvu poruku možete napisati na svojem jeziku.",
+            "Ako ne govorite nijedan od tih jezika, navedite to u e-poruci. Procijenit ćemo provediv način komunikacije. Tumača, uslugu na hrvatskom ili na drugom jeziku izvan četiri navedena jezika niti prihvaćanje svakog predmeta ne obećujemo."
+          ]
         },
         {
-          heading: 'Ako ne govorite nijedan od četiri jezika savjetovanja',
-          paragraphs: [
-            'U kontaktnom obrascu možete odabrati „Način komunikacije treba potvrditi”. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
-            'Riječ je samo o procjeni, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.',
-          ],
+          "heading": "Što bi trebala sadržavati prva poruka",
+          "paragraphs": [
+            "Navedite što se dogodilo, kakva Vam je pomoć potrebna i kakvu vezu predmet ima s Tajvanom. Ako ste već primili pismeno suda ili tijela, navedite datum na pismenu.",
+            "U početnoj fazi još ne trebate slati broj putovnice, broj isprave, podatke o računu, zdravstvenu dokumentaciju ni cjelokupni dokazni materijal. Pričekajte upute odvjetnice ili odvjetnika i osjetljive isprave pošaljite tek potom sigurnim putem."
+          ]
         },
         {
-          heading: 'Što bi trebala sadržavati prva poruka',
-          paragraphs: [
-            'Navedite što se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu predmet ima s Tajvanom i rok, ako ga znate. Ako ste već primili pismeno suda ili tijela, navedite datum na pismenu.',
-            'U početnoj fazi još ne trebate slati broj putovnice, broj isprave, podatke o računu, zdravstvenu dokumentaciju ni cjelokupni dokazni materijal. Pričekajte upute odvjetnice ili odvjetnika i osjetljive isprave pošaljite tek potom sigurnim putem.',
-          ],
-        },
-        {
-          heading: 'Što ova stranica ne obećava',
-          paragraphs: [
-            'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod je nešto drugo: Vaša se poruka ne prevodi automatski.',
-            'Ako pošaljete zahtjev, sadržaj se čuva i čeka pregled. Ako nakon nekog vremena ne primite odgovor, možete se ponovno javiti na adresu e-pošte navedenu na kontaktnoj stranici.',
-          ],
-        },
-      ],
+          "heading": "Nakon e-pošte",
+          "paragraphs": [
+            "Slanje e-pošte ne znači da ste dobili pravno mišljenje, ne potvrđuje sastanak i ne uspostavlja odnos između odvjetnice ili odvjetnika i klijenta. Rok za odgovor ni određena odvjetnica ili odvjetnik se ne obećavaju. Ako nakon nekog vremena ne primite odgovor, ponovno upotrijebite poveznicu e-pošte na ovoj stranici."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'PITANJA',
@@ -1712,46 +1670,32 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Kako se obratiti kancelariji',
-      description:
-        'Jezik stranice, jezici konsultacije, postupak ako ne možete da koristite nijedan od četiri jezika, i šta ova stranica ne obećava.',
-      intro:
-        'Pre nego što nam pišete, razlikujte sledeće tri tačke. Često se mešaju, ali znače različite stvari.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Kako se obratiti kancelariji",
+      "description": "Kontakt sa kancelarijom u pravnim pitanjima vezanim za Tajvan.",
+      "intro": "Ako znate rok, navedite ga već u prvoj poruci.",
+      "sections": [
         {
-          heading: 'Tri stvari koje treba držati odvojeno',
-          paragraphs: [
-            'Jezik prikaza stranice, jezik konsultacije sa advokatkinjom ili advokatom i jezik na kojem pišete tri su različite stvari.',
-          ],
-          items: [
-            'Jezik stranice: ove informacije napisane su na srpskom.',
-            'Jezik konsultacije: konsultacija se odvija samo na engleskom, kineskom (中文), japanskom i korejskom.',
-            'Vaš jezik pisanja: sažetak možete napisati na svom jeziku; izvorni tekst se čuva bez izmene.',
-          ],
+          "heading": "Jezici konsultacije i komunikacija",
+          "paragraphs": [
+            "Konsultacija sa advokatkinjom ili advokatom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Prvu poruku možete napisati na svom jeziku.",
+            "Ako ne možete da koristite nijedan od tih jezika, navedite to u e-poruci. Ocenićemo izvodljiv način komunikacije. Tumača, uslugu na srpskom ili na drugom jeziku van četiri navedena jezika niti prihvatanje svake stvari ne obećujemo."
+          ]
         },
         {
-          heading: 'Ako ne možete da koristite nijedan od četiri jezika konsultacije',
-          paragraphs: [
-            'U kontaktnom obrascu možete izabrati „Način komunikacije treba potvrditi”. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
-            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na jeziku van ta četiri navedena jezika, niti da ćemo prihvatiti svaku stvar.',
-          ],
+          "heading": "Šta treba da sadrži prva poruka",
+          "paragraphs": [
+            "Navedite šta se dogodilo, kakva Vam je pomoć potrebna i kakvu vezu stvar ima sa Tajvanom. Ako ste već primili pismeno suda ili organa, navedite datum na pismenu.",
+            "U početnoj fazi još ne morate slati broj pasoša, broj isprave, podatke o računu, medicinsku dokumentaciju niti celokupne dokaze. Sačekajte uputstva advokatkinje ili advokata i osetljive dokumente pošaljite tek potom bezbednim putem."
+          ]
         },
         {
-          heading: 'Šta treba da sadrži prva poruka',
-          paragraphs: [
-            'Navedite šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. Ako ste već primili pismeno suda ili organa, navedite datum na pismenu.',
-            'U početnoj fazi još ne morate slati broj pasoša, broj isprave, podatke o računu, medicinsku dokumentaciju niti celokupne dokaze. Sačekajte uputstva advokatkinje ili advokata i osetljive dokumente pošaljite tek potom bezbednim putem.',
-          ],
-        },
-        {
-          heading: 'Šta ova stranica ne obećava',
-          paragraphs: [
-            'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak preko ove stranice, ne obećavamo određenu advokatkinju niti određenog advokata i ne obezbeđujemo tumača. Pismeni prevod je nešto drugo: Vaša poruka se automatski ne prevodi.',
-            'Ako pošaljete zahtev, sadržaj se čuva i čeka ocenu. Ako posle izvesnog vremena ne dobijete odgovor, možete ponovo pisati na adresu elektronske pošte navedenu na kontaktnoj stranici.',
-          ],
-        },
-      ],
+          "heading": "Nakon e-pošte",
+          "paragraphs": [
+            "Slanje e-pošte ne znači da ste dobili pravno mišljenje, ne potvrđuje sastanak i ne zasniva odnos između advokatkinje ili advokata i klijenta. Rok za odgovor ni određena advokatkinja ili advokat se ne obećavaju. Ako posle izvesnog vremena ne dobijete odgovor, ponovo upotrebite vezu e-pošte na ovoj stranici."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'PITANJA',
@@ -2199,46 +2143,32 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'STIK',
-      title: 'Kako stopiti v stik s pisarno',
-      description:
-        'Jezik strani, jeziki posveta, postopek, če ne obvladate nobenega od štirih jezikov, in česa ta stran ne obljublja.',
-      intro:
-        'Preden nam pišete, ločite naslednje tri točke. Pogosto se mešajo, pomenijo pa različne stvari.',
-      sections: [
+      "eyebrow": "STIK",
+      "title": "Kako stopiti v stik s pisarno",
+      "description": "Stik s pisarno pri pravnih vprašanjih, povezanih s Tajvanom.",
+      "intro": "Če poznate rok, ga navedite že v prvem sporočilu.",
+      "sections": [
         {
-          heading: 'Tri stvari, ki jih je treba držati ločeno',
-          paragraphs: [
-            'Jezik prikaza strani, jezik posveta z odvetnico ali odvetnikom in jezik, v katerem pišete, so tri različne stvari.',
-          ],
-          items: [
-            'Jezik strani: ti napotki so napisani v slovenščini.',
-            'Jezik posveta: posvet poteka samo v angleščini, kitajščini (中文), japonščini in korejščini.',
-            'Vaš jezik pisanja: povzetek lahko napišete v svojem jeziku; izvirno besedilo se shrani nespremenjeno.',
-          ],
+          "heading": "Jeziki posveta in sporazumevanje",
+          "paragraphs": [
+            "Posvet z odvetnico ali odvetnikom poteka samo v angleščini, kitajščini (中文), japonščini in korejščini. Prvo sporočilo lahko napišete v svojem jeziku.",
+            "Če ne obvladate nobenega od teh jezikov, to navedite v e-pošti. Ocenimo, ali obstaja izvedljiv način sporazumevanja. Tolmača, storitve v slovenščini ali v drugem jeziku zunaj štirih navedenih jezikov ter sprejema vsake zadeve ne obljubljamo."
+          ]
         },
         {
-          heading: 'Če ne obvladate nobenega od štirih jezikov posveta',
-          paragraphs: [
-            'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
-            'Gre le za oceno, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.',
-          ],
+          "heading": "Kaj naj vsebuje prvo sporočilo",
+          "paragraphs": [
+            "Navedite, kaj se je zgodilo, kakšno pomoč potrebujete in kakšno vez ima zadeva s Tajvanom. Če ste že prejeli pisanje sodišča ali organa, navedite datum na pisanju.",
+            "V začetni fazi še ni treba pošiljati številke potnega lista, številke osebnega dokumenta, podatkov o računu, zdravstvene dokumentacije niti zbirke dokazov. Počakajte na navodila odvetnice ali odvetnika in občutljive dokumente pošljite šele nato po varni poti."
+          ]
         },
         {
-          heading: 'Kaj naj vsebuje prvo sporočilo',
-          paragraphs: [
-            'Navedite, kaj se je zgodilo, kakšno pomoč potrebujete, kakšno vez ima zadeva s Tajvanom in rok, če ga poznate. Če ste že prejeli pisanje sodišča ali organa, navedite datum na pisanju.',
-            'V začetni fazi še ni treba pošiljati številke potnega lista, številke osebnega dokumenta, podatkov o računu, zdravstvene dokumentacije niti zbirke dokazov. Počakajte na navodila odvetnice ali odvetnika in občutljive dokumente pošljite šele nato po varni poti.',
-          ],
-        },
-        {
-          heading: 'Česa ta stran ne obljublja',
-          paragraphs: [
-            'Ne obljubljamo roka za odgovor, ne potrjujemo sestanka prek te strani, ne obljubljamo določene odvetnice niti določenega odvetnika in ne zagotavljamo tolmača. Pisni prevod je nekaj drugega: vaše sporočilo se ne prevaja samodejno.',
-            'Če pošljete prošnjo, se vsebina shrani in čaka na oceno. Če po nekaj času ne prejmete odgovora, lahko znova pišete na e-naslov, naveden na strani za stik.',
-          ],
-        },
-      ],
+          "heading": "Po e-pošti",
+          "paragraphs": [
+            "Pošiljanje e-pošte še ne pomeni, da ste prejeli pravno mnenje, ne potrjuje sestanka in ne vzpostavi razmerja med odvetnico ali odvetnikom in stranko. Rok za odgovor ali določena odvetnica ali odvetnik se ne obljubljajo. Če po nekaj času ne prejmete odgovora, ponovno uporabite povezavo e-pošte na tej strani."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'VPRAŠANJA',

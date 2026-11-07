@@ -193,9 +193,8 @@ describe('it/nl/pl guidance packs are complete', () => {
 
 describe('it/nl/pl attorney gender and language FAQ', () => {
   it('names Wei Tseng as l’avvocata in Italian', () => {
-    const text = allText('it');
-    expect(text).toMatch(/l’avvocata Wei Tseng/i);
-    expect(guidanceContent.it.home.columnsReviewLabel).toMatch(/avvocata Wei Tseng/);
+    expect(guidanceContent.it.pages.lawyers.title).toMatch(/l’avvocata Wei Tseng/i);
+    expect(allText('it')).toMatch(/l’avvocata Wei Tseng/i);
   });
 
   it('names Wei Tseng with gender-neutral advocaat and feminine pronouns in Dutch', () => {

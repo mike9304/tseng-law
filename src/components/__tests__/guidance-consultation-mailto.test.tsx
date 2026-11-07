@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import ViPageBody from '@/components/vi-design/ViPageBody';
 import ViHomeBody from '@/components/vi-design/ViHomeBody';
 import GuidanceHomeBody from '@/components/GuidanceHomeBody';
+import { guidanceContent } from '@/data/international-guidance-content';
+import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { GUIDANCE_LOCALES_4, GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
 import { GUIDANCE_CONSULTATION_EMAIL_TEMPLATES } from '@/lib/consultation/guidance-contact-templates';
 import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
@@ -45,6 +47,46 @@ describe('localized guidance consultation links', () => {
         expect(link.href).toBe(getLocalizedConsultationMailto(locale));
       }
     }
+  });
+
+  it('renders the Vietnamese contact intro, answer and three guidance sections in the correct regions', () => {
+    const page = guidanceContent.vi.pages.contact;
+    const answer = guidanceAnswers.vi.contact;
+    if (!answer) {
+      throw new Error('Vietnamese contact answer block is missing from guidanceAnswers.vi');
+    }
+    const [language, preparation, receipt] = page.sections;
+    expect(language, 'language section missing').toBeDefined();
+    expect(preparation, 'preparation section missing').toBeDefined();
+    expect(receipt, 'receipt section missing').toBeDefined();
+
+    const html = renderToStaticMarkup(<ViPageBody pageKey="contact" />);
+    expect(html).toContain(page.intro);
+    expect(html).toContain(answer.answer);
+
+    for (const section of page.sections) {
+      expect(html).toContain(section.heading);
+      for (const paragraph of section.paragraphs) {
+        expect(html).toContain(paragraph);
+      }
+    }
+
+    const inquiryIndex = html.indexOf('id="international-inquiry"');
+    expect(inquiryIndex).toBeGreaterThan(0);
+    const asideHtml = html.slice(0, inquiryIndex);
+    const panelHtml = html.slice(inquiryIndex);
+
+    for (const paragraph of language.paragraphs) {
+      expect(asideHtml).toContain(paragraph);
+    }
+    for (const paragraph of preparation.paragraphs) {
+      expect(asideHtml).toContain(paragraph);
+    }
+    for (const paragraph of receipt.paragraphs) {
+      expect(panelHtml).toContain(paragraph);
+      expect(asideHtml).not.toContain(paragraph);
+    }
+
   });
 
   it('uses the Vietnamese draft on the dedicated home, contact, team and legal pages', () => {

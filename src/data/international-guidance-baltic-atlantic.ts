@@ -250,46 +250,32 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKTAI',
-      title: 'Kaip kreiptis į kontorą',
-      description:
-        'Puslapio kalba, konsultacijos kalbos, eiga, jei nemokate nė vienos iš keturių kalbų, ir tai, ko šis puslapis nežada.',
-      intro:
-        'Prieš rašydami mums, atskirkite šiuos tris punktus. Jie dažnai maišomi, bet reiškia skirtingus dalykus.',
-      sections: [
+      "eyebrow": "KONTAKTAI",
+      "title": "Kaip kreiptis į kontorą",
+      "description": "Kontaktas su kontora dėl teisinių klausimų, susijusių su Taivanu.",
+      "intro": "Jei žinote terminą, nurodykite jį pirmame laiške.",
+      "sections": [
         {
-          heading: 'Trys dalykai, kuriuos reikia laikyti skyrium',
-          paragraphs: [
-            'Puslapio rodymo kalba, konsultacijos su advokate arba advokatu kalba ir kalba, kuria rašote, yra trys skirtingi dalykai.',
-          ],
-          items: [
-            'Puslapio kalba: ši informacija parašyta lietuviškai.',
-            'Konsultacijos kalba: konsultacija vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.',
-            'Jūsų rašymo kalba: santrauką galite parašyti savo kalba; originalus tekstas išsaugomas be pakeitimų.',
-          ],
+          "heading": "Konsultacijos kalbos ir bendravimas",
+          "paragraphs": [
+            "Konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Pirmą laišką galite parašyti savo kalba.",
+            "Jei nemokate nė vienos iš šių kalbų, tai įrašykite laiške. Tada įvertinsime, ar yra tinkamas bendravimo būdas; vertimo žodžiu, paslaugos kita kalba ir kiekvienos bylos priėmimo nežadame."
+          ]
         },
         {
-          heading: 'Jei nemokate nė vienos iš keturių konsultacijos kalbų',
-          paragraphs: [
-            'Kontaktinėje formoje galite pasirinkti „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.',
-            'Tai tik vertinimas, o ne pažadas. Nežadame vertimo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.',
-          ],
+          "heading": "Ką įrašyti pirmame laiške",
+          "paragraphs": [
+            "Nurodykite, kas įvyko, kokios pagalbos reikia ir kokį ryšį byla turi su Taivanu. Jei jau gavote teismo ar institucijos raštą, nurodykite datą, įrašytą rašte.",
+            "Pradiniame etape dar nereikia siųsti paso numerio, dokumento numerio, sąskaitos duomenų, sveikatos dokumentacijos ar viso įrodymų rinkinio. Palaukite advokatės arba advokato nurodymų ir jautrius dokumentus tada siųskite saugiu keliu."
+          ]
         },
         {
-          heading: 'Ką turėtų apimti pirmasis pranešimas',
-          paragraphs: [
-            'Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą, įrašytą rašte.',
-            'Pradiniame etape dar nereikia siųsti paso numerio, dokumento numerio, sąskaitos duomenų, sveikatos dokumentacijos ar viso įrodymų rinkinio. Palaukite advokatės arba advokato nurodymų ir jautrius dokumentus tada siųskite saugiu keliu.',
-          ],
-        },
-        {
-          heading: 'Ko šis puslapis nežada',
-          paragraphs: [
-            'Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir vertimo žodžiu neteikiame. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.',
-            'Jei išsiųsite užklausą, turinys išsaugomas ir laukia įvertinimo. Jei po kurio laiko atsakymo negausite, galite vėl parašyti el. pašto adresu, nurodytu kontaktų puslapyje.',
-          ],
-        },
-      ],
+          "heading": "Po el. laiško",
+          "paragraphs": [
+            "Vien el. laiško išsiuntimas nereiškia, kad gavote teisinę konsultaciją, susitikimas yra patvirtintas ar atsirado advokato ir kliento santykiai. Negalime pažadėti konkretaus atsakymo termino ar konkrečios advokatės arba advokato paskyrimo. Jei po kurio laiko atsakymo negausite, galite parašyti dar kartą."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'KLAUSIMAI',
@@ -737,46 +723,32 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'SAZIŅA',
-      title: 'Kā sazināties ar biroju',
-      description:
-        'Lapas valoda, konsultācijas valodas, rīcība, ja nevarat lietot nevienu no četrām valodām, un tas, ko šī lapa nesola.',
-      intro:
-        'Pirms mums rakstāt, nošķiriet šos trīs punktus. Tos bieži sajauc, taču tie nozīmē atšķirīgas lietas.',
-      sections: [
+      "eyebrow": "SAZIŅA",
+      "title": "Kā sazināties ar biroju",
+      "description": "Saziņa ar biroju par juridiskiem jautājumiem, kas saistīti ar Taivānu.",
+      "intro": "Ja zināt termiņu, norādiet to pirmajā ziņojumā.",
+      "sections": [
         {
-          heading: 'Trīs lietas, kas jātur nošķirtas',
-          paragraphs: [
-            'Lapas valoda, konsultācijas valoda un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
-          ],
-          items: [
-            'Lapas valoda: šī informācija ir rakstīta latviešu valodā.',
-            'Konsultācijas valoda: konsultācija notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.',
-            'Valoda, kurā rakstāt: kopsavilkumu varat rakstīt savā valodā; sākotnējais teksts tiek saglabāts bez izmaiņām.',
-          ],
+          "heading": "Konsultācijas valodas un saziņa",
+          "paragraphs": [
+            "Konsultācija ar advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā. Pirmo ziņojumu varat rakstīt savā valodā.",
+            "Ja nevarat lietot nevienu no šīm valodām, norādiet to e-pastā. Tad izvērtēsim, vai pastāv izmantojams saziņas veids; tulku, pakalpojumu citā valodā un katras lietas pieņemšanu nesolām."
+          ]
         },
         {
-          heading: 'Ja nevarat lietot nevienu no četrām konsultācijas valodām',
-          paragraphs: [
-            'Saziņas veidlapā varat izvēlēties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu, vai pastāv izmantojams saziņas veids; pakalpojums citā valodā nav garantēts, un atbildes termiņš netiek solīts.',
-            'Tas ir tikai izvērtēšanas solis, nevis solījums. Mēs nesolām tulku, pakalpojumu latviešu valodā vai citā valodā ārpus četrām minētajām valodām un nesolām, ka pieņemsim katru lietu.',
-          ],
+          "heading": "Kas jāiekļauj pirmajā ziņojumā",
+          "paragraphs": [
+            "Nosauciet, kas ir noticis, kāda palīdzība Jums vajadzīga un kāda saikne lietai ir ar Taivānu. Ja jau esat saņēmuši tiesas vai iestādes rakstu, nosauciet rakstā norādīto datumu.",
+            "Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokāta norādījumus un sensitīvos dokumentus pēc tam sūtiet drošā ceļā."
+          ]
         },
         {
-          heading: 'Kas jāietver pirmajā ziņojumā',
-          paragraphs: [
-            'Nosauciet, kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Ja jau esat saņēmuši tiesas vai iestādes rakstu, nosauciet rakstā norādīto datumu.',
-            'Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokātes vai advokāta norādījumus; sensitīvos dokumentus pēc tam sūtiet drošā ceļā.',
-          ],
-        },
-        {
-          heading: 'Ko šī lapa nesola',
-          paragraphs: [
-            'Ar šīs lapas starpniecību mēs nesolām ne atbildes termiņu, ne apstiprinātu tikšanos, ne konkrētu advokāti vai konkrētu advokātu, un mēs nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
-            'Ja nosūtāt pieteikumu, saturs tiek saglabāts un gaida izvērtējumu. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt no jauna uz e-pasta adresi, kas norādīta saziņas lapā.',
-          ],
-        },
-      ],
+          "heading": "Pēc e-pasta",
+          "paragraphs": [
+            "Nosūtot e-pastu, jūs vēl nesaņemat juridisku konsultāciju; tas arī neapstiprina tikšanos un nerada advokāta un klienta attiecības. Mēs nevaram garantēt atbildes termiņu vai konkrēta advokāta iesaisti. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt mums atkārtoti."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'JAUTĀJUMI',
@@ -1225,46 +1197,32 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Kuidas büroo poole pöörduda',
-      description:
-        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei luba.',
-      intro:
-        'Enne kui meile kirjutate, eristage järgmised kolm asja. Neid aetakse sageli segi, kuid need tähendavad erinevaid asju.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Kuidas büroo poole pöörduda",
+      "description": "Bürooga saab e-kirjaga ühendust võtta Taiwaniga seotud õigusküsimuste korral.",
+      "intro": "Kui teate tähtaega, nimetage seda esimeses kirjas.",
+      "sections": [
         {
-          heading: 'Kolm asja, mida tuleb hoida lahus',
-          paragraphs: [
-            'Lehe kuvakeel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.',
-          ],
-          items: [
-            'Lehe keel: need juhised on kirjutatud eesti keeles.',
-            'Nõustamiskeel: nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles.',
-            'Keel, milles kirjutate: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.',
-          ],
+          "heading": "Nõustamiskeeled ja suhtlus",
+          "paragraphs": [
+            "Nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Esimese kirja võite kirjutada oma keeles.",
+            "Kui te ei oska ühtegi neist keeltest, kirjutage seda e-kirjas. Seejärel kontrollime, kas on olemas kasutatav suhtlusviis; tõlgiteenust, teenust muus keeles ja iga asja vastuvõtmist ei taga."
+          ]
         },
         {
-          heading: 'Kui te ei oska ühtegi neljast nõustamiskeelest',
-          paragraphs: [
-            'Kontaktvormil võite valida „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaja kohta lubadust ei anta.',
-            'See on üksnes kontroll, mitte lubadus. Me ei anna lubadust tõlgi, teenuse eesti keeles ega muus keeles väljaspool neid nelja keelt ega selle kohta, et võtame iga asja vastu.',
-          ],
+          "heading": "Mis peaks olema esimeses kirjas",
+          "paragraphs": [
+            "Nimetage, mis on juhtunud, millist abi vajate ja milline side on asjal Taiwaniga. Kui olete juba saanud kirja kohtult või asutuselt, nimetage kirjal olev kuupäev.",
+            "Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist kanalit pidi."
+          ]
         },
         {
-          heading: 'Mis peaks olema esimeses teates',
-          paragraphs: [
-            'Nimetage, mis on juhtunud, millist abi vajate, milline side on asjal Taiwaniga, ja tähtaeg, kui te selle teate. Kui olete juba saanud kirja kohtult või asutuselt, nimetage kirjal olev kuupäev.',
-            'Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist kanalit pidi.',
-          ],
-        },
-        {
-          heading: 'Mida see leht ei luba',
-          paragraphs: [
-            'Me ei anna lubadust vastamise tähtaja kohta, ei kinnita kohtumist selle lehe kaudu, ei anna lubadust konkreetse advokaadi kohta ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.',
-            'Kui saadate taotluse, säilitatakse sisu ja see ootab läbivaatamist. Kui te mõne aja pärast vastust ei saa, võite kirjutada uuesti kontaktlehel nimetatud e-posti aadressile.',
-          ],
-        },
-      ],
+          "heading": "Pärast e-kirja",
+          "paragraphs": [
+            "Üksnes e-kirja saatmine ei tähenda, et olete saanud õigusnõu, kohtumine on kinnitatud või tekkinud on advokaadi ja kliendi suhe. Me ei saa lubada kindlat vastamistähtaega ega konkreetse advokaadi osalemist. Kui mõne aja pärast vastust ei saa, võite meile uuesti kirjutada."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'KÜSIMUSED',
@@ -1714,46 +1672,32 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'CONTACTE',
-      title: 'Com contactar amb el despatx',
-      description:
-        'Idioma de la pàgina, idiomes de consulta, què passa si no pot fer servir aquests quatre idiomes, i el que aquesta pàgina no garanteix.',
-      intro:
-        'Abans d’escriure’ns, tingui en compte aquests tres punts per separat. Sovint es confonen, però no volen dir el mateix.',
-      sections: [
+      "eyebrow": "CONTACTE",
+      "title": "Com contactar amb el despatx",
+      "description": "Contacti amb el despatx per a qüestions jurídiques relacionades amb Taiwan.",
+      "intro": "Si coneix algun termini, indiqui’l en el primer missatge.",
+      "sections": [
         {
-          heading: 'Tres coses que convé distingir',
-          paragraphs: [
-            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses diferents.',
-          ],
-          items: [
-            'Idioma de la pàgina: aquesta orientació està escrita en català.',
-            'Idioma de consulta: la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.',
-            'Idioma del seu text: pot escriure el resum en el seu propi idioma, i el text original es conserva tal com està.',
-          ],
+          "heading": "Idiomes de consulta i comunicació",
+          "paragraphs": [
+            "La consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Pot escriure el primer missatge en el seu propi idioma.",
+            "Si no pot fer servir cap d’aquests idiomes, indiqui-ho al correu. Aleshores comprovem si existeix una via possible de comunicació; no podem garantir intèrpret, servei en un altre idioma ni l’acceptació de tots els assumptes."
+          ]
         },
         {
-          heading: 'Si no pot fer servir cap dels quatre idiomes de consulta',
-          paragraphs: [
-            'Al formulari de contacte pot triar «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.',
-            'Això és només un pas de comprovació, no és una promesa. No prometem cap intèrpret, no prometem cap servei en català ni en un altre idioma fora dels quatre indicats, i no prometem que puguem acceptar tots els assumptes.',
-          ],
+          "heading": "Què indicar en el primer missatge",
+          "paragraphs": [
+            "Indiqui què va passar, quina ajuda necessita i quina relació té l’assumpte amb Taiwan. Si ja ha rebut un escrit d’un tribunal o d’una autoritat, indiqui la data d’aquest escrit.",
+            "En aquesta primera fase encara no cal enviar número de passaport, número d’identitat, dades bancàries, historial mèdic ni l’expedient complet de proves. Esperi les indicacions de l’advocada o l’advocat i enviï aleshores el material sensible per un mitjà segur."
+          ]
         },
         {
-          heading: 'Què convé escriure en el primer missatge',
-          paragraphs: [
-            'Indiqui què va passar, quina ajuda necessita, quina relació té l’assumpte amb Taiwan i el termini si el coneix. Si ja ha rebut un escrit d’un tribunal o d’una autoritat, indiqui la data d’aquest escrit.',
-            'En aquesta primera fase encara no cal enviar número de passaport, número d’identitat, dades bancàries, historial mèdic ni l’expedient complet de proves. Esperi les indicacions de l’advocada o l’advocat i enviï aleshores el material sensible per un mitjà segur.',
-          ],
-        },
-        {
-          heading: 'El que aquesta pàgina no garanteix',
-          paragraphs: [
-            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no oferim cap intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
-            'Quan envia una sol·licitud, el contingut es guarda i espera revisió. Si al cap d’un temps no rep resposta, pot tornar a escriure a l’adreça de correu que figura a la pàgina de contacte.',
-          ],
-        },
-      ],
+          "heading": "Després del correu",
+          "paragraphs": [
+            "Enviar un correu al despatx no equival a rebre assessorament jurídic ni confirma una cita ni crea una relació entre advocada o advocat i client. No podem garantir un termini de resposta ni la designació d’una advocada o advocat concret. Si al cap d’un temps no rep resposta, torni a fer servir l’enllaç de correu d’aquesta pàgina."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'PREGUNTES',
@@ -2202,46 +2146,32 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'SAMBAND',
-      title: 'Hvernig þú nærð til skrifstofunnar',
-      description:
-        'Tungumál síðunnar, tungumál ráðgjafarinnar, ferlið ef þú talar ekkert af þessum fjórum tungumálum, og það sem þessi síða heitir ekki.',
-      intro:
-        'Áður en þú skrifar okkur skaltu greina á milli þessara þriggja atriða. Þau eru oft blanduð saman en merkja ólíka hluti.',
-      sections: [
+      "eyebrow": "SAMBAND",
+      "title": "Hvernig þú nærð til skrifstofunnar",
+      "description": "Hægt er að hafa samband við skrifstofuna með tölvupósti vegna lagamála tengdra Taívan.",
+      "intro": "Ef þú þekkir frest skaltu nefna hann í fyrstu skilaboðunum.",
+      "sections": [
         {
-          heading: 'Þrír hlutir sem halda þarf aðskildum',
-          paragraphs: [
-            'Birtingartungumál síðunnar, tungumálið sem ráðgjöf við lögmann fer fram á, og tungumálið sem þú skrifar á, eru þrír aðskildir hlutir.',
-          ],
-          items: [
-            'Tungumál síðunnar: þessar leiðbeiningar eru skrifaðar á íslensku.',
-            'Tungumál ráðgjafar: ráðgjöf fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
-            'Tungumálið sem þú skrifar á: þú mátt skrifa samantektina á þínu eigin tungumáli; frumtextinn er vistaður óbreyttur.',
-          ],
+          "heading": "Tungumál ráðgjafar og samskipti",
+          "paragraphs": [
+            "Ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku. Þú mátt skrifa fyrstu skilaboðin á þínu eigin tungumáli.",
+            "Ef þú talar ekkert af þessum tungumálum skaltu segja það í tölvupóstinum. Við könnum þá hvort nothæf samskiptaleið sé til. Við getum þó ekki lofað túlkaþjónustu, þjónustu á öðru tungumáli eða því að taka að okkur öll mál."
+          ]
         },
         {
-          heading: 'Ef þú talar ekkert af fjórum tungumálum ráðgjafarinnar',
-          paragraphs: [
-            'Í tengiliðaeyðublaðinu geturðu valið „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og engum svarfresti er lofað.',
-            'Þetta er aðeins könnunarþrep, ekki loforð. Við heitum ekki túlki, ekki þjónustu á íslensku eða á öðru tungumáli utan fjögurra tilgreindra tungumála, og ekki að við tökum hvert mál.',
-          ],
+          "heading": "Hvað ætti að standa í fyrstu skilaboðunum",
+          "paragraphs": [
+            "Segðu frá því sem gerðist, hvers konar aðstoð þú þarft og hvaða tengsl málið hefur við Taívan. Ef þú hefur þegar fengið bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna á bréfinu.",
+            "Í upphafi þarftu enn ekki að senda vegabréfsnúmer, kennitölu, reikningsupplýsingar, sjúkraskrá eða öll sönnunargögn. Bíddu eftir leiðbeiningum lögmanns og sendu viðkvæm gögn þá um örugga leið."
+          ]
         },
         {
-          heading: 'Hvað ætti að standa í fyrstu skilaboðunum',
-          paragraphs: [
-            'Segðu frá því sem gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinum, ef þú þekkir hann. Ef þú hefur þegar fengið bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna á bréfinu.',
-            'Í upphafi þarftu enn ekki að senda vegabréfsnúmer, kennitölu, reikningsupplýsingar, sjúkraskrá eða öll sönnunargögn. Bíddu eftir leiðbeiningum lögmanns og sendu viðkvæm gögn þá um örugga leið.',
-          ],
-        },
-        {
-          heading: 'Það sem þessi síða heitir ekki',
-          paragraphs: [
-            'Við heitum engum svarfresti, staðfestum engan tíma í gegnum þessa síðu, heitum ekki tilteknum lögmanni og útvegum ekki túlk. Skrifleg þýðing er annað: skilaboðin þín eru ekki þýdd sjálfkrafa.',
-            'Þegar þú sendir beiðni er innihaldið vistað og bíður mats. Fáirðu ekki svar að einhverjum tíma liðnum geturðu skrifað að nýju á netfangið sem er tilgreint á tengiliðasíðunni.',
-          ],
-        },
-      ],
+          "heading": "Eftir tölvupóst",
+          "paragraphs": [
+            "Að senda tölvupóst felur ekki í sér lögfræðilegt álit, staðfestingu á tíma eða stofnun sambands milli lögmanns og skjólstæðings. Við getum ekki heitið svarfresti né tilteknum lögmanni. Ef þú færð ekki svar að einhverjum tíma liðnum geturðu notað tölvupósttengilinn á þessari síðu aftur."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'SPURNINGAR',

@@ -259,46 +259,32 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'CONTATTI',
-      title: 'Come raggiungere lo studio',
-      description:
-        'Lingua della pagina, lingue di consulenza, il da farsi se non può usare nessuna delle quattro lingue, e che cosa questa pagina non promette.',
-      intro:
-        'Prima di scriverci, distingua i tre punti seguenti. Vengono spesso mescolati, ma significano cose diverse.',
-      sections: [
+      "eyebrow": "CONTATTI",
+      "title": "Come raggiungere lo studio",
+      "description": "Contatti con lo studio per questioni giuridiche relative a Taiwan.",
+      "intro": "Se conosce un termine, lo indichi già nel primo messaggio.",
+      "sections": [
         {
-          heading: 'Tre cose che devono restare distinte',
-          paragraphs: [
-            'La lingua di visualizzazione della pagina, la lingua di consulenza con l’avvocata o l’avvocato e la lingua in cui scrive sono tre cose distinte.',
-          ],
-          items: [
-            'Lingua della pagina: queste indicazioni sono scritte in italiano.',
-            'Lingua di consulenza: la consulenza si svolge in inglese, cinese (中文), giapponese e coreano.',
-            'La Sua lingua di scrittura: può scrivere il riassunto nella Sua lingua; il testo originale viene conservato senza modifiche.',
-          ],
+          "heading": "Lingue di consulenza e comunicazione",
+          "paragraphs": [
+            "La consulenza con un’avvocata o un avvocato si svolge soltanto in inglese, cinese (中文), giapponese e coreano. Può scrivere il primo messaggio nella Sua lingua.",
+            "Se non può usare nessuna di queste lingue, lo indichi nell’e-mail. Valuteremo allora se è possibile comunicare. Non possiamo garantire l’intervento di un interprete, una consulenza in un’altra lingua né l’accettazione di ogni richiesta."
+          ]
         },
         {
-          heading: 'Se non può usare nessuna delle quattro lingue di consulenza',
-          paragraphs: [
-            'Nel modulo di contatto può scegliere «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione praticabile, se un canale del genere esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
-            'Questo è soltanto un passo di esame, non è una promessa. Non promettiamo un interprete, una prestazione in italiano o in un’altra lingua fuori dalle quattro lingue indicate, né promettiamo di accettare ogni questione.',
-          ],
+          "heading": "Cosa indicare nel primo messaggio",
+          "paragraphs": [
+            "Indichi che cosa è accaduto, di quale aiuto ha bisogno e quale nesso ha la questione con Taiwan. Se ha già ricevuto uno scritto di un tribunale o di un’autorità, indichi la data sullo scritto.",
+            "Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili attraverso un canale sicuro."
+          ]
         },
         {
-          heading: 'Che cosa dovrebbe contenere il primo messaggio',
-          paragraphs: [
-            'Indichi che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se ne conosce uno. Se ha già ricevuto uno scritto di un tribunale o di un’autorità, indichi la data sullo scritto.',
-            'Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili attraverso un canale sicuro.',
-          ],
-        },
-        {
-          heading: 'Che cosa questa pagina non promette',
-          paragraphs: [
-            'Non promettiamo un termine di risposta, non confermiamo un appuntamento tramite questa pagina, non promettiamo una determinata avvocata o un determinato avvocato e non mettiamo a disposizione un interprete. La traduzione scritta è un’altra cosa: il Suo messaggio non viene tradotto automaticamente.',
-            'Se invia una richiesta, il contenuto viene conservato e attende l’esame. Se dopo un po’ di tempo non riceve risposta, può scrivere di nuovo all’indirizzo di posta elettronica indicato nella pagina di contatto.',
-          ],
-        },
-      ],
+          "heading": "Dopo l’e-mail",
+          "paragraphs": [
+            "Inviare un’e-mail allo studio non costituisce parere giuridico, non conferma un appuntamento né instaura un rapporto con l’avvocata o l’avvocato. Non possiamo garantire un termine di risposta né l’assegnazione a una determinata avvocata o avvocato. Se dopo un po’ di tempo non riceve risposta, usi di nuovo il collegamento e-mail su questa pagina."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'DOMANDE',
@@ -747,46 +733,32 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'CONTACT',
-      title: 'Hoe u het kantoor bereikt',
-      description:
-        'De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen spreekt, en wat deze pagina niet toezegt.',
-      intro:
-        'Houd, voordat u ons schrijft, de volgende drie punten uit elkaar. Zij worden vaak door elkaar gehaald, maar betekenen iets anders.',
-      sections: [
+      "eyebrow": "CONTACT",
+      "title": "Hoe u het kantoor bereikt",
+      "description": "Contact met het kantoor per e-mail over juridische zaken met betrekking tot Taiwan.",
+      "intro": "Kent u een termijn, vermeld die dan in het eerste bericht.",
+      "sections": [
         {
-          heading: 'Drie dingen die gescheiden moeten blijven',
-          paragraphs: [
-            'De weergavetaal van de pagina, de consultatietaal met de advocaat en de taal waarin u schrijft, zijn drie gescheiden dingen.',
-          ],
-          items: [
-            'Taal van de pagina: deze toelichting is in het Nederlands geschreven.',
-            'Consultatietaal: de consultatie vindt plaats in het Engels, Chinees (中文), Japans en Koreaans.',
-            'Uw schrijftaal: u mag de samenvatting in uw eigen taal schrijven; de oorspronkelijke tekst wordt ongewijzigd bewaard.',
-          ],
+          "heading": "Consultatietalen en communicatie",
+          "paragraphs": [
+            "De consultatie met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans. U mag het eerste bericht in uw eigen taal schrijven.",
+            "Als u geen van deze talen spreekt, vermeld dat in de e-mail. Wij onderzoeken dan of communicatie mogelijk is. Tolken, een dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, of de behandeling van elke zaak kunnen wij daarbij niet toezeggen."
+          ]
         },
         {
-          heading: 'Als u geen van de vier consultatietalen spreekt',
-          paragraphs: [
-            'In het contactformulier kunt u “De manier van communiceren moet nog worden afgesproken” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
-            'Dit is alleen een afstemming, geen toezegging. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.',
-          ],
+          "heading": "Wat in het eerste bericht moet staan",
+          "paragraphs": [
+            "Noem wat er is gebeurd, welke hulp u nodig hebt en welk verband de zaak met Taiwan heeft. Als u al een schrijven van een rechter of een instantie hebt ontvangen, noem de datum op het schrijven.",
+            "In de beginfase hoeft u nog geen paspoortnummer, identiteitsnummer, rekeninggegevens, medische dossiers of alle bewijsstukken te sturen. Wacht op aanwijzingen van de advocaat en stuur gevoelige stukken dan via een beveiligd kanaal."
+          ]
         },
         {
-          heading: 'Wat in het eerste bericht moet staan',
-          paragraphs: [
-            'Noem wat er is gebeurd, welke hulp u nodig hebt, welk verband de zaak met Taiwan heeft en de termijn, als u er een kent. Als u al een schrijven van een rechter of een instantie hebt ontvangen, noem de datum op het schrijven.',
-            'In de beginfase hoeft u nog geen paspoortnummer, identiteitsnummer, rekeninggegevens, medische dossiers of het gehele bewijs te sturen. Wacht op aanwijzingen van de advocaat en stuur gevoelige stukken dan via een veilige weg.',
-          ],
-        },
-        {
-          heading: 'Wat deze pagina niet toezegt',
-          paragraphs: [
-            'Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven niet dat een bepaalde advocaat de zaak behandelt en stellen geen tolk ter beschikking. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.',
-            'Als u een verzoek stuurt, wordt de inhoud bewaard en wacht op beoordeling. Ontvangt u na enige tijd geen antwoord, dan kunt u opnieuw schrijven naar het e-mailadres op de contactpagina.',
-          ],
-        },
-      ],
+          "heading": "Na uw e-mail",
+          "paragraphs": [
+            "Een e-mail naar het kantoor is nog geen juridisch advies, bevestigt geen afspraak en schept geen relatie tussen advocaat en cliënt. Wij kunnen geen antwoordtermijn garanderen noch toezeggen dat een bepaalde advocaat de zaak behandelt. Ontvangt u na enige tijd geen antwoord, gebruik dan opnieuw de e-maillink op deze pagina."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'VRAGEN',
@@ -1235,46 +1207,32 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak skontaktować się z kancelarią',
-      description:
-        'Język strony, języki konsultacji, postępowanie, gdy nie posługują się Państwo żadnym z czterech języków, oraz to, czego ta strona nie obiecuje.',
-      intro:
-        'Zanim Państwo do nas napiszą, prosimy rozróżnić trzy poniższe punkty. Często się je miesza, ale oznaczają coś innego.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Jak skontaktować się z kancelarią",
+      "description": "Kontakt z kancelarią w sprawach prawnych dotyczących Tajwanu.",
+      "intro": "Jeśli znany jest termin, prosimy podać go już w pierwszej wiadomości.",
+      "sections": [
         {
-          heading: 'Trzy rzeczy, które muszą pozostać rozdzielone',
-          paragraphs: [
-            'Język wyświetlania strony, język konsultacji z adwokatem i język, w którym Państwo piszą, to trzy osobne rzeczy.',
-          ],
-          items: [
-            'Język strony: te informacje są napisane po polsku.',
-            'Język konsultacji: konsultacja odbywa się po angielsku, chińsku (中文), japońsku i koreańsku.',
-            'Język pisania: można napisać streszczenie we własnym języku; oryginalny tekst jest zapisywany bez zmian.',
-          ],
+          "heading": "Języki konsultacji i komunikacja",
+          "paragraphs": [
+            "Konsultacja z adwokatem odbywa się wyłącznie po angielsku, chińsku (中文), japońsku i koreańsku. Mogą Państwo napisać pierwszą wiadomość we własnym języku.",
+            "Jeśli nie posługują się Państwo żadnym z tych języków, prosimy napisać o tym w e-mailu. Sprawdzamy wtedy możliwy sposób komunikacji. Tłumacza ustnego, świadczenia w innym języku ani przyjęcia każdej sprawy nie możemy obiecać."
+          ]
         },
         {
-          heading: 'Jeśli nie posługują się Państwo żadnym z czterech języków konsultacji',
-          paragraphs: [
-            'W formularzu kontaktowym można wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
-            'To jedynie wstępne ustalenie i nie jest obietnicą. Nie obiecujemy tłumacza ustnego, świadczenia po polsku ani w innym języku poza czterema wskazanymi językami, i nie obiecujemy, że przyjmiemy każdą sprawę.',
-          ],
+          "heading": "Co podać w pierwszej wiadomości",
+          "paragraphs": [
+            "Prosimy podać, co się stało, jakiej pomocy potrzeba i jaki związek ma sprawa z Tajwanem. Jeśli otrzymali Państwo już pismo sądu lub urzędu, prosimy podać datę na piśmie.",
+            "Na początku nie trzeba jeszcze wysyłać numeru paszportu, numeru dokumentu tożsamości, danych rachunku, dokumentacji medycznej ani całości dowodów. Prosimy czekać na wskazówki adwokata i dopiero wtedy wysłać wrażliwe dokumenty bezpiecznym kanałem."
+          ]
         },
         {
-          heading: 'Co powinno znaleźć się w pierwszej wiadomości',
-          paragraphs: [
-            'Prosimy podać, co się stało, jakiej pomocy potrzeba, jaki związek ma sprawa z Tajwanem oraz termin, jeśli jest znany. Jeśli otrzymano już pismo sądu lub urzędu, prosimy podać datę na piśmie.',
-            'Na początku nie trzeba jeszcze wysyłać numeru paszportu, numeru dokumentu tożsamości, danych rachunku, dokumentacji medycznej ani całości dowodów. Prosimy czekać na wskazówki adwokata i dopiero wtedy wysłać wrażliwe dokumenty bezpieczną drogą.',
-          ],
-        },
-        {
-          heading: 'Czego ta strona nie obiecuje',
-          paragraphs: [
-            'Nie obiecujemy terminu odpowiedzi, nie potwierdzamy spotkania za pośrednictwem tej strony, nie obiecujemy konkretnego adwokata i nie zapewniamy tłumacza ustnego. Tłumaczenie pisemne to coś innego: wiadomość nie jest tłumaczona automatycznie.',
-            'Jeśli Państwo wyślą wniosek, treść jest zapisywana i czeka na rozpatrzenie. Jeśli nie ma odpowiedzi, można ponownie napisać na adres poczty elektronicznej podany na stronie kontaktu.',
-          ],
-        },
-      ],
+          "heading": "Po e-mailu",
+          "paragraphs": [
+            "Wysłanie wiadomości e-mail do kancelarii nie stanowi porady prawnej, nie potwierdza spotkania i nie tworzy stosunku między adwokatem a klientem. Nie możemy zagwarantować terminu odpowiedzi ani obsługi sprawy przez konkretnego adwokata. Jeśli po pewnym czasie nie otrzymają Państwo odpowiedzi, prosimy skorzystać ponownie z łącza e-mail na tej stronie."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'PYTANIA',

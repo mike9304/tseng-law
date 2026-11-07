@@ -263,46 +263,32 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
-      description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
-      intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Jak kancelář oslovit",
+      "description": "Kontakt s kanceláří při právních otázkách týkajících se Tchaj-wanu.",
+      "intro": "Znáte-li lhůtu, uveďte ji hned v první zprávě.",
+      "sections": [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
-          paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
-          ],
-          items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
-          ],
+          "heading": "Jazyky porady a komunikace",
+          "paragraphs": [
+            "Porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. První zprávu můžete napsat ve svém jazyce.",
+            "Neovládáte-li žádný z těchto jazyků, uveďte to v e-mailu. Posoudíme, zda je schůdný způsob komunikace; tlumočníka, službu mimo tyto čtyři jazyky ani přijetí každé věci neslibujeme."
+          ]
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
-          paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
-          ],
+          "heading": "Co uvést v první zprávě",
+          "paragraphs": [
+            "Uveďte, co se stalo, jakou pomoc potřebujete a jakou vazbu má věc na Tchaj-wan. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.",
+            "V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou."
+          ]
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
-          paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
-          ],
-        },
-        {
-          heading: 'Co tato stránka neslibuje',
-          paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
-          ],
-        },
-      ],
+          "heading": "Po e-mailu",
+          "paragraphs": [
+            "Odesláním e-mailu ještě neobdržíte právní stanovisko, schůzka se tím nepotvrzuje a vztah mezi advokátkou nebo advokátem a klientem nevzniká. Lhůtu k odpovědi ani konkrétní advokátku nebo advokáta neslibujeme. Neobdržíte-li po nějaké době odpověď, použijte znovu odkaz na e-mail na této stránce."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'OTÁZKY',
@@ -755,46 +741,32 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KAPCSOLAT',
-      title: 'Hogyan érheti el az irodát',
-      description:
-        'Az oldal nyelve, a tanácsadás nyelvei, a teendő akkor, ha a négy nyelv egyikét sem tudja használni, és amit ez az oldal nem ígér.',
-      intro:
-        'Mielőtt írna nekünk, különítse el az alábbi három dolgot. Gyakran keverednek, pedig mást jelentenek.',
-      sections: [
+      "eyebrow": "KAPCSOLAT",
+      "title": "Hogyan érheti el az irodát",
+      "description": "Kapcsolatfelvétel az irodával Tajwanhoz kapcsolódó jogi ügyekben.",
+      "intro": "Ha ismeri a határidőt, jelezze azt már az első üzenetben.",
+      "sections": [
         {
-          heading: 'Három dolog, amelyet külön kell tartani',
-          paragraphs: [
-            'Az oldal megjelenítési nyelve, az ügyvéddel folytatott tanácsadás nyelve és az a nyelv, amelyen ír, három különböző dolog.',
-          ],
-          items: [
-            'Az oldal nyelve: ez a tájékoztatás magyarul készült.',
-            'A tanácsadás nyelve: a tanácsadás angolul, kínaiul (中文), japánul és koreaiul zajlik.',
-            'Az Ön írásának nyelve: az összefoglalót a saját nyelvén írhatja; az eredeti szöveg változatlanul megmarad.',
-          ],
+          "heading": "Tanácsadási nyelvek és kommunikáció",
+          "paragraphs": [
+            "A tanácsadás ügyvéddel kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik. Az első üzenetet a saját nyelvén írhatja.",
+            "Ha egyik ilyen nyelvet sem tudja használni, írja ezt meg az e-mailben. Megvizsgáljuk, van-e járható kommunikációs mód; tolmácsot, más nyelvű szolgáltatást vagy minden ügy elvállalását nem ígérjük."
+          ]
         },
         {
-          heading: 'Ha a négy tanácsadási nyelv egyikét sem tudja használni',
-          paragraphs: [
-            'A kapcsolatfelvételi űrlapon választhatja azt, hogy „A kommunikáció módját meg kell erősíteni”. Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.',
-            'Ez csak vizsgálati lépés, nem ígéret. Nem ígérünk tolmácsot, magyar vagy a négy megjelölt nyelven kívüli más nyelvű szolgáltatást, és azt sem, hogy minden ügyet elvállalunk.',
-          ],
+          "heading": "Mit tartalmazzon az első üzenet",
+          "paragraphs": [
+            "Adja meg, mi történt, milyen segítségre van szüksége és milyen kötődése van az ügynek Tajvanhoz. Ha már kapott bírósági vagy hatósági iratot, adja meg az iraton szereplő dátumot.",
+            "A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, bankszámlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el."
+          ]
         },
         {
-          heading: 'Mit tartalmazzon az első üzenet',
-          paragraphs: [
-            'Adja meg, mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidőt, ha ismer ilyet. Ha már kapott bírósági vagy hatósági iratot, adja meg az iraton szereplő dátumot.',
-            'A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, bankszámlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el.',
-          ],
-        },
-        {
-          heading: 'Amit ez az oldal nem ígér',
-          paragraphs: [
-            'Nem ígérünk válaszadási határidőt, ezen az oldalon keresztül nem erősítünk meg időpontot, nem ígérünk meghatározott ügyvédet, és tolmácsot sem biztosítunk. Az írásbeli fordítás más kérdés: az üzenetét automatikusan nem fordítjuk le.',
-            'Ha megkeresést küld, a tartalmát megőrizzük, és az vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
-          ],
-        },
-      ],
+          "heading": "Az e-mail elküldése után",
+          "paragraphs": [
+            "Az e-mail elküldése önmagában nem minősül jogi tanácsadásnak, nem erősít meg időpontot, és nem hoz létre ügyfél–ügyvéd viszonyt. Válaszadási határidőt és meghatározott ügyvédet nem ígérünk. Ha egy idő után nem kap választ, küldjön új üzenetet az oldalon található e-mail-linken keresztül."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'KÉRDÉSEK',
@@ -1247,46 +1219,32 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'CONTACT',
-      title: 'Cum puteți contacta cabinetul',
-      description:
-        'Limba paginii, limbile de consultanță, ce este de făcut dacă nu puteți folosi niciuna dintre cele patru limbi și ce nu promite această pagină.',
-      intro:
-        'Înainte de a ne scrie, deosebiți următoarele trei puncte. Sunt adesea amestecate, dar înseamnă lucruri diferite.',
-      sections: [
+      "eyebrow": "CONTACT",
+      "title": "Cum puteți contacta cabinetul",
+      "description": "Contactați cabinetul pentru chestiuni juridice legate de Taiwan.",
+      "intro": "Dacă cunoașteți un termen, indicați-l în primul mesaj.",
+      "sections": [
         {
-          heading: 'Trei lucruri care trebuie ținute separat',
-          paragraphs: [
-            'Limba de afișare a paginii, limba consultanței cu avocatul și limba în care scrieți sunt trei lucruri distincte.',
-          ],
-          items: [
-            'Limba paginii: aceste informații sunt scrise în limba română.',
-            'Limba consultanței: consultanța se desfășoară în engleză, chineză (中文), japoneză și coreeană.',
-            'Limba în care scrieți: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.',
-          ],
+          "heading": "Limbile de consultanță și comunicare",
+          "paragraphs": [
+            "Consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Puteți scrie primul mesaj în limba dumneavoastră.",
+            "Dacă nu puteți folosi niciuna dintre aceste limbi, spuneți acest lucru în e-mail. Examinăm dacă există o cale practică de comunicare; nu promitem interpret, serviciu în altă limbă sau preluarea oricărei cauze."
+          ]
         },
         {
-          heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
-          paragraphs: [
-            'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
-            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret și nicio prestație în limba română sau în altă limbă în afara celor patru arătate; nu preluăm orice cauză.',
-          ],
+          "heading": "Ce ar trebui să cuprindă primul mesaj",
+          "paragraphs": [
+            "Arătați ce s-a întâmplat, de ce ajutor aveți nevoie și ce legătură are cauza cu Taiwanul. Dacă ați primit deja un act de la o instanță sau de la o autoritate, indicați data de pe act.",
+            "În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură."
+          ]
         },
         {
-          heading: 'Ce ar trebui să cuprindă primul mesaj',
-          paragraphs: [
-            'Arătați ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. Dacă ați primit deja un act de la o instanță sau de la o autoritate, indicați data de pe act.',
-            'În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.',
-          ],
-        },
-        {
-          heading: 'Ce nu promite această pagină',
-          paragraphs: [
-            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem un anumit avocat și nu punem la dispoziție un interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
-            'Dacă trimiteți o solicitare, conținutul se păstrează și așteaptă examinarea. Dacă după un timp nu primiți răspuns, puteți scrie din nou la adresa de e-mail arătată pe pagina de contact.',
-          ],
-        },
-      ],
+          "heading": "După e-mail",
+          "paragraphs": [
+            "Trimiterea unui e-mail nu înseamnă consultanță juridică, nu confirmă o programare și nu creează o relație avocat–client. Nu putem promite un termen de răspuns sau un anumit avocat. Dacă după un timp nu primiți răspuns, folosiți din nou legătura de e-mail de pe această pagină."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'ÎNTREBĂRI',
@@ -1740,46 +1698,32 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'КОНТАКТИ',
-      title: 'Як звернутися до фірми',
-      description:
-        'Мова сторінки, мови консультації, що робити, якщо Ви не володієте жодною з чотирьох мов, і чого ця сторінка не обіцяє.',
-      intro:
-        'Перш ніж написати нам, розрізніть такі три речі. Їх часто змішують, але вони означають різне.',
-      sections: [
+      "eyebrow": "КОНТАКТИ",
+      "title": "Як звернутися до фірми",
+      "description": "Зверніться до фірми з питань, пов’язаних із правом Тайваню.",
+      "intro": "Якщо Ви знаєте строк, зазначте його вже в першому повідомленні.",
+      "sections": [
         {
-          heading: 'Три речі, які треба тримати окремо',
-          paragraphs: [
-            'Мова відображення сторінки, мова консультації з адвокатом і мова, якою Ви пишете, — це три різні речі.',
-          ],
-          items: [
-            'Мова сторінки: ці відомості написано українською.',
-            'Мова консультації: консультація відбувається англійською, китайською (中文), японською та корейською.',
-            'Ваша мова письма: виклад справи можете написати своєю мовою; первинний текст зберігається без змін.',
-          ],
+          "heading": "Мови консультації та спілкування",
+          "paragraphs": [
+            "Консультація з адвокатом відбувається лише англійською, китайською (中文), японською та корейською. Перше повідомлення можете написати своєю мовою.",
+            "Якщо Ви не володієте жодною з цих мов, зазначте це в електронному листі. Ми розглянемо, чи є придатний спосіб спілкування; перекладача, послуги іншою мовою та прийняття кожної справи не обіцяємо."
+          ]
         },
         {
-          heading: 'Якщо Ви не володієте жодною з чотирьох мов консультації',
-          paragraphs: [
-            'У формі звернення Ви можете обрати «Спосіб спілкування потребує підтвердження». Ми відповідаємо, щоб розглянути придатний спосіб спілкування, якщо такий є; послуги іншою мовою не гарантовано, а строку відповіді не обіцяно.',
-            'Це лише етап розгляду, а не обіцянка. Ми не обіцяємо перекладача, послуги українською чи іншою мовою поза чотирма зазначеними, і не обіцяємо, що візьмемо кожну справу.',
-          ],
+          "heading": "Що має містити перше повідомлення",
+          "paragraphs": [
+            "Зазначте, що сталося, якої допомоги Ви потребуєте і який зв’язок справа має з Тайванем. Якщо Ви вже одержали документ суду чи органу влади, зазначте дату на документі.",
+            "На початковому етапі Вам ще не потрібно надсилати номер паспорта, номер документа, дані рахунку, медичні документи чи всю сукупність доказів. Дочекайтеся вказівок адвоката та надішліть чутливі документи лише після цього безпечним способом."
+          ]
         },
         {
-          heading: 'Що має містити перше повідомлення',
-          paragraphs: [
-            'Зазначте, що сталося, якої допомоги Ви потребуєте, який зв’язок справа має з Тайванем, і строк, якщо Ви його знаєте. Якщо Ви вже одержали документ суду чи органу влади, зазначте дату на документі.',
-            'На початковому етапі Вам ще не потрібно надсилати номер паспорта, номер документа, дані рахунку, медичні документи чи всю сукупність доказів. Дочекайтеся вказівок адвоката та надішліть чутливі документи лише після цього безпечним способом.',
-          ],
-        },
-        {
-          heading: 'Чого ця сторінка не обіцяє',
-          paragraphs: [
-            'Ми не обіцяємо строку відповіді, не підтверджуємо зустріч через цю сторінку, не обіцяємо певного адвоката і не надаємо перекладача. Усний перекладач і письмовий переклад Вашого звернення — різні речі: Ваше повідомлення не перекладається автоматично.',
-            'Якщо Ви надішлете запит, зміст збережеться й очікуватиме розгляду. Якщо через деякий час Ви не одержите відповіді, можете написати ще раз на адресу електронної пошти, зазначену на сторінці контактів.',
-          ],
-        },
-      ],
+          "heading": "Після електронного листа",
+          "paragraphs": [
+            "Надсилання електронного листа само по собі не означає юридичну консультацію, не підтверджує зустріч і не створює відносин між адвокатом і клієнтом. Ми не можемо гарантувати строк відповіді чи участь певного адвоката. Якщо через деякий час Ви не одержите відповіді, скористайтеся знову посиланням електронної пошти на цій сторінці."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'ЧАСТІ ПИТАННЯ',
@@ -2237,46 +2181,32 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'ΕΠΙΚΟΙΝΩΝΙΑ',
-      title: 'Πώς να επικοινωνήσετε με το γραφείο',
-      description:
-        'Η γλώσσα της σελίδας, οι γλώσσες της συμβουλευτικής, τι ισχύει αν δεν μιλάτε καμία από τις τέσσερις γλώσσες, και τι δεν υπόσχεται η σελίδα αυτή.',
-      intro:
-        'Πριν μας γράψετε, ξεχωρίστε τα ακόλουθα τρία σημεία. Συχνά συγχέονται, αλλά σημαίνουν διαφορετικά πράγματα.',
-      sections: [
+      "eyebrow": "ΕΠΙΚΟΙΝΩΝΙΑ",
+      "title": "Πώς να επικοινωνήσετε με το γραφείο",
+      "description": "Επικοινωνήστε με το γραφείο για νομικά θέματα που αφορούν την Ταϊβάν.",
+      "intro": "Αν γνωρίζετε προθεσμία, αναφέρετέ την στο πρώτο μήνυμα.",
+      "sections": [
         {
-          heading: 'Τρία πράγματα που πρέπει να μένουν χωριστά',
-          paragraphs: [
-            'Η γλώσσα εμφάνισης της σελίδας, η γλώσσα της συμβουλευτικής με δικηγόρο και η γλώσσα στην οποία γράφετε είναι τρία διαφορετικά πράγματα.',
-          ],
-          items: [
-            'Γλώσσα της σελίδας: οι πληροφορίες αυτές είναι γραμμένες στα ελληνικά.',
-            'Γλώσσα της συμβουλευτικής: η συμβουλευτική διεξάγεται στα αγγλικά, κινεζικά (中文), ιαπωνικά και κορεατικά.',
-            'Η γλώσσα στην οποία γράφετε: μπορείτε να γράψετε την περίληψη στη γλώσσα σας· το πρωτότυπο κείμενο διατηρείται αμετάβλητο.',
-          ],
+          "heading": "Γλώσσες συμβουλευτικής και επικοινωνία",
+          "paragraphs": [
+            "Η συμβουλευτική με δικηγόρο διεξάγεται μόνο στα αγγλικά, κινεζικά (中文), ιαπωνικά και κορεατικά. Μπορείτε να γράψετε το πρώτο μήνυμα στη γλώσσα σας.",
+            "Αν δεν μιλάτε καμία από αυτές τις γλώσσες, αναφέρετέ το στο e-mail. Εξετάζουμε αν υπάρχει εφικτός τρόπος επικοινωνίας· δεν υποσχόμαστε διερμηνέα, υπηρεσία σε άλλη γλώσσα ούτε ανάληψη κάθε υπόθεσης."
+          ]
         },
         {
-          heading: 'Αν δεν μιλάτε καμία από τις τέσσερις γλώσσες συμβουλευτικής',
-          paragraphs: [
-            'Στη φόρμα επικοινωνίας μπορείτε να επιλέξετε «Ο τρόπος επικοινωνίας χρειάζεται επιβεβαίωση». Απαντούμε για να εξετάσουμε έναν εφικτό τρόπο επικοινωνίας, αν υπάρχει τέτοιος· υπηρεσία σε άλλη γλώσσα δεν είναι εγγυημένη, ούτε δίνεται υπόσχεση για προθεσμία απάντησης.',
-            'Αυτό είναι μόνο ένα βήμα εξέτασης, όχι υπόσχεση. Δεν υποσχόμαστε ούτε διερμηνέα, ούτε υπηρεσία στα ελληνικά ή σε άλλη γλώσσα εκτός των τεσσάρων που αναφέρθηκαν, ούτε ότι αναλαμβάνουμε κάθε υπόθεση.',
-          ],
+          "heading": "Τι να περιλαμβάνει το πρώτο μήνυμα",
+          "paragraphs": [
+            "Αναφέρετε τι συνέβη, ποια βοήθεια χρειάζεστε και ποιον δεσμό έχει η υπόθεση με την Ταϊβάν. Αν έχετε ήδη λάβει έγγραφο δικαστηρίου ή αρχής, αναφέρετε την ημερομηνία του εγγράφου.",
+            "Στο αρχικό στάδιο δεν χρειάζεται ακόμη να στείλετε αριθμό διαβατηρίου, αριθμό ταυτότητας, στοιχεία λογαριασμού, ιατρικά έγγραφα ή το σύνολο των αποδεικτικών στοιχείων. Περιμένετε τις οδηγίες του δικηγόρου και στείλτε τότε τα ευαίσθητα έγγραφα με ασφαλή τρόπο."
+          ]
         },
         {
-          heading: 'Τι πρέπει να περιέχει το πρώτο μήνυμα',
-          paragraphs: [
-            'Αναφέρετε τι συνέβη, ποια βοήθεια χρειάζεστε, ποιον δεσμό έχει η υπόθεση με την Ταϊβάν και την προθεσμία, αν τη γνωρίζετε. Αν έχετε ήδη λάβει έγγραφο δικαστηρίου ή αρχής, αναφέρετε την ημερομηνία του εγγράφου.',
-            'Στο αρχικό στάδιο δεν χρειάζεται ακόμη να στείλετε αριθμό διαβατηρίου, αριθμό ταυτότητας, στοιχεία λογαριασμού, ιατρικά έγγραφα ή το σύνολο των αποδεικτικών στοιχείων. Περιμένετε τις οδηγίες της δικηγόρου ή του δικηγόρου και στείλτε τότε τα ευαίσθητα έγγραφα με ασφαλή τρόπο.',
-          ],
-        },
-        {
-          heading: 'Τι δεν υπόσχεται η σελίδα αυτή',
-          paragraphs: [
-            'Δεν υποσχόμαστε προθεσμία απάντησης, δεν επιβεβαιώνουμε ραντεβού μέσω αυτής της σελίδας, δεν υποσχόμαστε συγκεκριμένο δικηγόρο και δεν παρέχουμε διερμηνέα. Η γραπτή μετάφραση είναι άλλο ζήτημα: το μήνυμά σας δεν μεταφράζεται αυτόματα.',
-            'Αν στείλετε αίτημα, το περιεχόμενο διατηρείται και αναμένει εξέταση. Αν μετά από κάποιο διάστημα δεν λάβετε απάντηση, μπορείτε να γράψετε ξανά στη διεύθυνση ηλεκτρονικού ταχυδρομείου που αναφέρεται στη σελίδα επικοινωνίας.',
-          ],
-        },
-      ],
+          "heading": "Μετά το e-mail",
+          "paragraphs": [
+            "Η αποστολή e-mail δεν συνιστά νομική συμβουλευτική, δεν επιβεβαιώνει ραντεβού και δεν δημιουργεί σχέση δικηγόρου–εντολέα. Δεν μπορούμε να εγγυηθούμε προθεσμία απάντησης ούτε συγκεκριμένο δικηγόρο. Αν μετά από κάποιο διάστημα δεν λάβετε απάντηση, χρησιμοποιήστε ξανά τον σύνδεσμο e-mail σε αυτή τη σελίδα."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'ΕΡΩΤΗΣΕΙΣ',
@@ -2738,46 +2668,32 @@ export const hebrewGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'יצירת קשר',
-      title: 'כיצד לפנות אל המשרד',
-      description:
-        'שפת העמוד, שפות הייעוץ, מה לעשות אם אינכם יכולים להשתמש באף אחת מארבע השפות, ומה עמוד זה אינו מבטיח.',
-      intro:
-        'לפני שתכתבו לנו, הבחינו בין שלוש הנקודות הבאות. הן מעורבבות לעיתים קרובות, אך משמעותן שונה.',
-      sections: [
+      "eyebrow": "יצירת קשר",
+      "title": "כיצד לפנות אל המשרד",
+      "description": "יצירת קשר עם המשרד בנושאים משפטיים הנוגעים לטאיוואן.",
+      "intro": "אם המועד ידוע לכם, ציינו אותו בהודעה הראשונה.",
+      "sections": [
         {
-          heading: 'שלושה דברים שיש להפריד ביניהם',
-          paragraphs: [
-            'שפת התצוגה של העמוד, שפת הייעוץ עם עורכת הדין או עורך הדין והשפה שבה אתם כותבים הן שלושה דברים נפרדים.',
-          ],
-          items: [
-            'שפת העמוד: מידע זה כתוב בעברית.',
-            'שפת הייעוץ: הייעוץ מתקיים באנגלית, בסינית (中文), ביפנית ובקוריאנית.',
-            'שפת הכתיבה שלכם: אפשר לכתוב את התקציר בשפתכם; הטקסט המקורי נשמר ללא שינוי.',
-          ],
+          "heading": "שפות הייעוץ ותקשורת",
+          "paragraphs": [
+            "הייעוץ עם עורכת דין או עורך דין מתקיים באנגלית, בסינית (中文), ביפנית ובקוריאנית בלבד. אפשר לכתוב את ההודעה הראשונה בשפתכם.",
+            "אם אינכם יכולים להשתמש באף אחת משפות אלה, ציינו זאת בדוא\"ל. נבחן אם קיימת דרך תקשורת מעשית; איננו מבטיחים מתורגמן, שירות בשפה אחרת או קבלת כל עניין."
+          ]
         },
         {
-          heading: 'אם אינכם יכולים להשתמש באף אחת מארבע שפות הייעוץ',
-          paragraphs: [
-            'בטופס יצירת הקשר אפשר לבחור "יש לאשר את דרך התקשורת". אנו משיבים כדי לבחון דרך תקשורת מעשית, אם קיימת כזו; שירות בשפה אחרת אינו מובטח ומועד למענה אינו מובטח.',
-            'זהו צעד בדיקה בלבד, ולא הבטחה. איננו מבטיחים מתורגמן, שירות בעברית או בשפה אחרת מלבד ארבע השפות שצוינו, ואיננו מבטיחים שנקבל כל עניין.',
-          ],
+          "heading": "מה לכלול בהודעה הראשונה",
+          "paragraphs": [
+            "ציינו מה קרה, לאיזו עזרה אתם זקוקים ומהי זיקת העניין לטאיוואן. אם כבר קיבלתם מסמך מבית משפט או מרשות, ציינו את התאריך הנקוב בו.",
+            "בשלב הראשון אין צורך לשלוח עדיין מספר דרכון, מספר תעודה, פרטי חשבון, מסמכים רפואיים או את מכלול הראיות. המתינו להנחיית עורכת הדין או עורך הדין, ורק אז שלחו מסמכים רגישים בדרך מאובטחת."
+          ]
         },
         {
-          heading: 'מה צריכה לכלול ההודעה הראשונה',
-          paragraphs: [
-            'ציינו מה קרה, לאיזו עזרה אתם זקוקים, מהי זיקת העניין לטאיוואן, ואת המועד אם הוא ידוע לכם. אם כבר קיבלתם מסמך מבית משפט או מרשות, ציינו את התאריך הנקוב בו.',
-            'בשלב הראשון אין צורך לשלוח עדיין מספר דרכון, מספר תעודה, פרטי חשבון, מסמכים רפואיים או את מכלול הראיות. המתינו להנחיית עורכת הדין או עורך הדין, ורק אז שלחו מסמכים רגישים בדרך מאובטחת.',
-          ],
-        },
-        {
-          heading: 'מה עמוד זה אינו מבטיח',
-          paragraphs: [
-            'איננו מבטיחים מועד למענה, איננו מאשרים פגישה דרך עמוד זה, איננו מבטיחים עורכת דין או עורך דין מסוימים ואיננו מעמידים מתורגמן. תרגום בכתב הוא עניין אחר: ההודעה שלכם אינה מתורגמת אוטומטית.',
-            'אם תשלחו פנייה, התוכן יישמר וימתין לבדיקה. אם לאחר זמן מה לא תקבלו מענה, אפשר לכתוב שוב לכתובת הדואר האלקטרוני המצוינת בעמוד יצירת הקשר.',
-          ],
-        },
-      ],
+          "heading": "לאחר שליחת הדוא\"ל",
+          "paragraphs": [
+            "שליחת דוא\"ל אינה מהווה ייעוץ משפטי, אינה מאשרת פגישה ואינה יוצרת יחסי עורך דין–לקוח. איננו מבטיחים מועד למענה או עורך דין מסוים. אם לאחר זמן מה לא תקבלו מענה, השתמשו שוב בקישור הדוא\"ל בעמוד זה."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'שאלות',

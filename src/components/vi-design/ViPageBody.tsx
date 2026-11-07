@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import { guidanceContent, type GuidancePageKey } from '@/data/international-guidance-content';
-import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
+import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { viServicePresentation, viSiteCopy } from '@/data/vi-site';
 import { getLocalizedConsultationMailto } from '@/lib/consultation/localized-mailto';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
@@ -49,21 +49,33 @@ function ServicesBody() {
 
 function ContactBody() {
   const page = guidanceContent.vi.pages.contact;
-  const preparation = page.sections[2];
-  const receipt = page.sections[3];
+  const language = page.sections[0];
+  const preparation = page.sections[1];
+  const receipt = page.sections[2];
+  const contactAnswer = guidanceAnswers.vi.contact;
   return (
     <>
       <ViContainer>
+        {contactAnswer ? <p className={styles.documentIntro}>{contactAnswer.answer}</p> : null}
+        {page.intro ? <p className={styles.documentIntro}>{page.intro}</p> : null}
         <div className={styles.contactLayout}>
           <aside className={styles.contactAside}>
             <div className={styles.contactEmail}>
               <h2>{viSiteCopy.contact.emailLabel}</h2>
               <a href={getLocalizedConsultationMailto('vi')}>{CONSULTATION_EMAIL}</a>
-              {/* The contact page skips ViContactBand (which carries this notice everywhere else), so the
-                  consultation languages are stated here, next to the address people write to. */}
-              <p className={styles.contactLanguageNote}>{internationalInquiryCopy.vi.consultationNotice}</p>
+              {language ? (
+                <div className={styles.contactLanguageNote}>
+                  <h2>{language.heading}</h2>
+                  {language.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                </div>
+              ) : null}
             </div>
-            {preparation ? <div className={styles.contactPreparation}><h2>{viSiteCopy.contact.preparationTitle}</h2>{preparation.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
+            {preparation ? (
+              <div className={styles.contactPreparation}>
+                <h2>{preparation.heading}</h2>
+                {preparation.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : null}
             <div className={styles.contactAsideLinks}>
               <Link className={styles.textLink} href="/vi/pricing">{guidanceContent.vi.nav.pricing}<ZhHantMonoIcon name="chevron-right" size={16} /></Link>
               <a className={styles.textLink} href="#offices">{viSiteCopy.contact.officeAction}<ZhHantMonoIcon name="chevron-right" size={16} /></a>
@@ -71,7 +83,12 @@ function ContactBody() {
           </aside>
           <section id="international-inquiry" className={styles.inquiryPanel} aria-label={viSiteCopy.contact.formAction}>
             <InternationalInquiryForm locale="vi" />
-            {receipt ? <details className={styles.receiptNotice}><summary>{viSiteCopy.contact.receiptTitle}</summary>{receipt.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</details> : null}
+            {receipt ? (
+              <details className={styles.receiptNotice}>
+                <summary>{receipt.heading}</summary>
+                {receipt.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </details>
+            ) : null}
           </section>
         </div>
       </ViContainer>

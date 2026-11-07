@@ -121,10 +121,7 @@ function allText(locale: NewGuidanceLocale): string {
   return packStrings(locale).map(([, value]) => value).join('\n');
 }
 
-const CONTACT_SECTION_COUNT: Partial<Record<NewGuidanceLocale, number>> = {
-  'zh-hans': 4,
-  ms: 4,
-};
+const CONTACT_SECTION_COUNT: Partial<Record<NewGuidanceLocale, number>> = {};
 
 function guidanceContentShapeWithoutContact(locale: 'de' | NewGuidanceLocale): unknown {
   const pack = guidanceContent[locale];
@@ -173,6 +170,12 @@ const TR_GUARANTEE_DENIAL_PATTERN = /garanti edilmez/gi;
 
 function stripTrGuaranteeDenials(value: string): string {
   return value.replace(TR_GUARANTEE_DENIAL_PATTERN, '');
+}
+
+const ZH_HANS_GUARANTEE_DENIAL_PATTERN = /不保证/g;
+
+function stripZhHansGuaranteeDenials(value: string): string {
+  return value.replace(ZH_HANS_GUARANTEE_DENIAL_PATTERN, '');
 }
 
 describe('zh-hans/ms/ru/tr guidance language contract', () => {
@@ -328,6 +331,15 @@ describe('tr guarantee denial stripping (regression)', () => {
   });
 });
 
+describe('zh-hans guarantee denial stripping', () => {
+  it('accepts a negative promise without hiding a positive promise in the same text', () => {
+    expect(stripZhHansGuaranteeDenials('我们不保证由某位律师经办。')).not.toMatch(/保证/);
+    expect(stripZhHansGuaranteeDenials('我们保证成功。')).toMatch(/保证/);
+    expect(stripZhHansGuaranteeDenials('不保证回复时限，但保证成功。')).toMatch(/保证/);
+    expect(stripZhHansGuaranteeDenials('保证成功，但不保证回复时限。')).toMatch(/保证/);
+  });
+});
+
 describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
   it('keeps Simplified Chinese copy free of advertising claims outside the language-FAQ question', () => {
     for (const [path, value] of packStrings('zh-hans')) {
@@ -336,7 +348,8 @@ describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
       for (const [label, pattern] of ZH_HANS_FORBIDDEN) {
         if (isLanguageFaqQuestion) continue;
         if (label === '免费咨询' && isZhHansFreeDenial(value)) continue;
-        expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
+        const scanned = label === '保证' ? stripZhHansGuaranteeDenials(value) : value;
+        expect(scanned, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
   });

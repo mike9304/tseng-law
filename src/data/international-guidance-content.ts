@@ -451,47 +451,33 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'Liên hệ',
-        title: 'Trao đổi về vụ việc của quý vị',
-        description:
-          'Gửi yêu cầu tư vấn cho Hovering International Law Firm tại Đài Loan. Thông tin về ngôn ngữ trao đổi, tài liệu ban đầu và cách tiếp nhận yêu cầu.',
-        intro:
-          'Quý vị có thể gửi một bản tóm tắt về vụ việc, điều cần hỗ trợ và thời hạn liên quan. Văn phòng xem xét nội dung trước khi trao đổi về phạm vi công việc và chi phí.',
-        sections: [
-          {
-            heading: 'Ngôn ngữ trao đổi',
-            paragraphs: [
-              'Quý vị có thể đọc website và viết yêu cầu bằng tiếng Việt. Ngôn ngữ sử dụng trong buổi tư vấn cần được xác nhận theo các lựa chọn dưới đây.',
-            ],
-            items: [
-              'Nội dung website: tiếng Việt.',
-              'Tư vấn với luật sư: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
-              'Nội dung yêu cầu: quý vị có thể viết bằng ngôn ngữ của mình; văn bản gốc được giữ nguyên.',
-            ],
-          },
-          {
-            heading: 'Khi cần trao đổi bằng ngôn ngữ khác',
-            paragraphs: [
-              'Mục “Cần xác nhận cách liên hệ” dành cho quý vị không thể trao đổi bằng ngôn ngữ nào trong bốn ngôn ngữ tư vấn. Văn phòng trao đổi qua email để xác nhận phương thức khả thi, nếu có; không cam kết thời gian phản hồi.',
-              'Lựa chọn này là yêu cầu xác nhận, không phải lời hứa cung cấp dịch vụ bằng ngôn ngữ khác hoặc bố trí phiên dịch. Không phải mọi vụ việc đều có thể tiếp nhận.',
-            ],
-          },
-          {
-            heading: 'Thông tin cho lần liên hệ đầu tiên',
-            paragraphs: [
-              'Diễn biến chính, yêu cầu của quý vị, mối liên hệ với Đài Loan và thời hạn đã biết giúp luật sư xem xét yêu cầu. Nếu có giấy tờ của tòa án hoặc cơ quan nhà nước, ngày ghi trên giấy tờ cũng là thông tin cần thiết.',
-              'Ở bước đầu, quý vị chưa cần gửi số hộ chiếu, số giấy tờ tùy thân, thông tin tài khoản ngân hàng, hồ sơ y tế hay toàn bộ chứng cứ. Tài liệu nhạy cảm chỉ nên gửi theo hướng dẫn riêng của luật sư.',
-            ],
-          },
-          {
-            heading: 'Sau khi gửi yêu cầu',
-            paragraphs: [
-              'Biểu mẫu tiếp nhận nội dung để xem xét, chưa xác nhận lịch hẹn hoặc luật sư phụ trách. Văn phòng không cam kết thời gian phản hồi hay bố trí phiên dịch. Tin nhắn được giữ nguyên và không được dịch tự động.',
-              'Sau khi yêu cầu được lưu, quý vị nhận được mã tiếp nhận. Nếu chưa nhận được phản hồi, quý vị có thể liên hệ lại qua email và cung cấp mã này.',
-            ],
-          },
-        ],
-      },
+      "eyebrow": "Liên hệ",
+      "title": "Trao đổi về vụ việc của quý vị",
+      "description": "Liên hệ văn phòng về các vấn đề pháp lý liên quan đến Đài Loan.",
+      "intro": "Nếu quý vị biết thời hạn liên quan, hãy nêu trong email đầu tiên.",
+      "sections": [
+        {
+          "heading": "Ngôn ngữ tư vấn và liên hệ",
+          "paragraphs": [
+            "Tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Quý vị có thể viết email đầu tiên bằng ngôn ngữ của mình.",
+            "Nếu quý vị không thể trao đổi bằng bất kỳ ngôn ngữ nào trong bốn ngôn ngữ đó, hãy nêu rõ trong email. Văn phòng xem xét xem có phương thức liên lạc khả thi hay không; không cam kết phiên dịch, dịch vụ bằng ngôn ngữ khác hay tiếp nhận mọi vụ việc."
+          ]
+        },
+        {
+          "heading": "Nội dung email đầu tiên",
+          "paragraphs": [
+            "Nên nêu diễn biến chính, yêu cầu của quý vị và mối liên hệ với Đài Loan. Nếu có giấy tờ của tòa án hoặc cơ quan nhà nước, hãy ghi ngày trên giấy tờ.",
+            "Ở bước đầu, quý vị chưa cần gửi số hộ chiếu, số giấy tờ tùy thân, thông tin tài khoản ngân hàng, hồ sơ y tế hay toàn bộ chứng cứ. Tài liệu nhạy cảm chỉ nên gửi theo hướng dẫn riêng và kênh an toàn sau đó."
+          ]
+        },
+        {
+          "heading": "Sau khi gửi email",
+          "paragraphs": [
+            "Việc gửi email không đồng nghĩa với việc quý vị đã được tư vấn pháp lý, có lịch hẹn được xác nhận hoặc đã thiết lập quan hệ luật sư – khách hàng. Văn phòng không cam kết thời gian phản hồi hay luật sư cụ thể. Nếu sau một thời gian quý vị chưa nhận được phản hồi, hãy dùng lại liên kết email trên trang này."
+          ]
+        }
+      ]
+    },
       faq: {
         eyebrow: 'Hỏi đáp',
         title: 'Câu hỏi thường gặp',
@@ -945,47 +931,33 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'KONTAK',
-        title: 'Cara menghubungi kantor kami',
-        description:
-          'Bahasa halaman, bahasa konsultasi, cara menanganinya jika keempat bahasa itu tidak dapat Anda gunakan, dan hal-hal yang tidak dijamin.',
-        intro:
-          'Sebelum menghubungi kami, perhatikan tiga hal terpisah berikut. Ketiganya kerap tertukar, padahal maknanya berbeda.',
-        sections: [
-          {
-            heading: 'Tiga hal yang perlu dibedakan',
-            paragraphs: [
-              'Bahasa tampilan halaman, bahasa konsultasi dengan advokat, dan bahasa yang Anda pakai menulis pesan adalah tiga hal yang berdiri sendiri.',
-            ],
-            items: [
-              'Bahasa halaman: panduan ini ditulis dalam bahasa Indonesia.',
-              'Bahasa konsultasi: konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
-              'Bahasa tulisan Anda: Anda boleh menulis ringkasan dalam bahasa Anda sendiri, dan teks aslinya disimpan apa adanya.',
-            ],
-          },
-          {
-            heading: 'Jika keempat bahasa konsultasi itu tidak dapat Anda gunakan',
-            paragraphs: [
-              'Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
-              'Ini hanyalah langkah pemastian, bukan janji. Kami tidak menjanjikan penerjemah, tidak menjanjikan layanan dalam bahasa Indonesia atau bahasa lain di luar keempat bahasa tersebut, dan tidak menjanjikan bahwa setiap perkara dapat kami terima.',
-            ],
-          },
-          {
-            heading: 'Apa yang sebaiknya ditulis pada pesan pertama',
-            paragraphs: [
-              'Sebutkan apa yang terjadi, bantuan apa yang Anda perlukan, apa kaitan perkara itu dengan Taiwan, dan tenggat waktu jika Anda mengetahuinya. Jika Anda sudah menerima surat dari pengadilan atau instansi pemerintah, sebutkan tanggal pada surat tersebut.',
-              'Pada tahap awal Anda belum perlu mengirim nomor paspor, nomor identitas, data rekening bank, rekam medis, atau seluruh berkas bukti. Tunggulah petunjuk dari advokat, lalu kirim bahan yang sensitif dengan cara yang aman.',
-            ],
-          },
-          {
-            heading: 'Hal-hal yang tidak dijamin halaman ini',
-            paragraphs: [
-              'Kami tidak menjanjikan waktu balasan, tidak memastikan janji temu melalui halaman ini, tidak menjanjikan advokat tertentu yang akan menangani perkara, dan tidak menyediakan penerjemah. Penerjemahan tulisan adalah hal terpisah: pesan yang Anda kirim tidak diterjemahkan secara otomatis.',
-              'Ketika Anda mengirim permintaan, isinya tersimpan dan menunggu ditinjau. Jika setelah beberapa waktu Anda belum menerima balasan, Anda dapat mengirim ulang melalui alamat email yang tertera pada halaman kontak.',
-            ],
-          },
-        ],
-      },
+      "eyebrow": "KONTAK",
+      "title": "Cara menghubungi kantor kami",
+      "description": "Hubungi kantor kami melalui email untuk urusan hukum yang berkaitan dengan Taiwan.",
+      "intro": "Jika Anda mengetahui tenggat waktu, sebutkan dalam pesan pertama.",
+      "sections": [
+        {
+          "heading": "Bahasa konsultasi dan komunikasi",
+          "paragraphs": [
+            "Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Anda boleh menulis pesan pertama dalam bahasa Anda sendiri.",
+            "Jika Anda tidak dapat menggunakan satu pun dari keempat bahasa itu, nyatakan dalam email. Kami meninjau apakah ada cara berkomunikasi yang memungkinkan; penerjemah, layanan dalam bahasa lain, dan penerimaan setiap perkara tidak dijanjikan."
+          ]
+        },
+        {
+          "heading": "Apa yang sebaiknya ditulis pada pesan pertama",
+          "paragraphs": [
+            "Sebutkan apa yang terjadi, bantuan apa yang Anda perlukan, dan apa kaitan perkara itu dengan Taiwan. Jika Anda sudah menerima surat dari pengadilan atau instansi pemerintah, sebutkan tanggal pada surat tersebut.",
+            "Pada tahap awal Anda belum perlu mengirim nomor paspor, nomor identitas, data rekening bank, rekam medis, atau seluruh berkas bukti. Tunggulah petunjuk dari advokat, lalu kirim bahan yang sensitif melalui cara yang aman."
+          ]
+        },
+        {
+          "heading": "Setelah email terkirim",
+          "paragraphs": [
+            "Mengirim email tidak berarti Anda sudah menerima nasihat hukum, memperoleh konfirmasi janji temu, atau menjalin hubungan advokat–klien. Kami tidak menjanjikan waktu balasan maupun advokat tertentu. Jika setelah beberapa waktu Anda belum menerima balasan, gunakan kembali tautan email pada halaman ini."
+          ]
+        }
+      ]
+    },
       faq: {
         eyebrow: 'PERTANYAAN UMUM',
         title: 'Pertanyaan yang sering diajukan',
@@ -1439,47 +1411,33 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'ติดต่อ',
-        title: 'วิธีติดต่อสำนักงาน',
-        description:
-          'ภาษาของหน้าเว็บ ภาษาที่ใช้ให้คำปรึกษา แนวทางเมื่อท่านใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ และสิ่งที่ไม่ได้รับประกัน',
-        intro:
-          'ก่อนติดต่อเข้ามา โปรดแยกแยะ 3 เรื่องต่อไปนี้ออกจากกัน ทั้งสามเรื่องมักถูกเข้าใจปะปนกัน ทั้งที่มีความหมายต่างกัน',
-        sections: [
-          {
-            heading: '3 เรื่องที่ต้องแยกจากกัน',
-            paragraphs: [
-              'ภาษาที่ใช้แสดงหน้าเว็บ ภาษาที่ใช้ปรึกษากับทนายความ และภาษาที่ท่านใช้เขียนข้อความ เป็นสามเรื่องที่เป็นอิสระจากกัน',
-            ],
-            items: [
-              'ภาษาของหน้าเว็บ: ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย',
-              'ภาษาที่ใช้ให้คำปรึกษา: การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
-              'ภาษาที่ท่านเขียน: ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ และข้อความต้นฉบับจะถูกเก็บไว้ตามเดิม',
-            ],
-          },
-          {
-            heading: 'หากท่านใช้ภาษาใดใน 4 ภาษาที่ใช้ให้คำปรึกษาไม่ได้',
-            paragraphs: [
-              'ในแบบฟอร์มติดต่อ ท่านสามารถเลือก “ต้องยืนยันวิธีติดต่อ” ได้ จากนั้นเราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน ทั้งนี้ เราไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
-              'ขั้นตอนนี้เป็นเพียงการยืนยัน ไม่ใช่คำมั่นสัญญา เราไม่รับประกันว่าจะจัดล่ามให้ ไม่รับประกันว่าจะให้บริการเป็นภาษาไทยหรือภาษาอื่นนอกเหนือจาก 4 ภาษาข้างต้น และไม่รับประกันว่าจะรับดำเนินการได้ทุกเรื่อง',
-            ],
-          },
-          {
-            heading: 'ควรเขียนอะไรในข้อความแรก',
-            paragraphs: [
-              'ควรระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่หากท่านทราบ หากได้รับหมายหรือหนังสือจากศาลหรือหน่วยงานของรัฐแล้ว โปรดแจ้งวันที่ปรากฏในเอกสารนั้นด้วย',
-              'ในขั้นแรกยังไม่จำเป็นต้องส่งเลขหนังสือเดินทาง เลขบัตรประจำตัว ข้อมูลบัญชีธนาคาร เวชระเบียน หรือแฟ้มพยานหลักฐานทั้งหมด โปรดรอคำแนะนำจากทนายความ แล้วจึงส่งเอกสารที่มีความอ่อนไหวด้วยวิธีที่ปลอดภัย',
-            ],
-          },
-          {
-            heading: 'สิ่งที่หน้านี้ไม่ได้รับประกัน',
-            paragraphs: [
-              'เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความที่ท่านส่งมาจะไม่ถูกแปลโดยอัตโนมัติ',
-              'เมื่อท่านส่งเรื่องเข้ามา เนื้อหาจะถูกบันทึกไว้และรอการตรวจสอบ หากผ่านไประยะหนึ่งแล้วท่านยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งเรื่องซ้ำได้ทางอีเมลตามที่อยู่ในหน้าติดต่อ',
-            ],
-          },
-        ],
-      },
+      "eyebrow": "ติดต่อ",
+      "title": "วิธีติดต่อสำนักงาน",
+      "description": "ติดต่อสำนักงานทางอีเมลเกี่ยวกับปัญหาทางกฎหมายที่เกี่ยวข้องกับไต้หวัน",
+      "intro": "หากท่านทราบกำหนดเวลาที่เกี่ยวข้อง โปรดระบุในข้อความแรก",
+      "sections": [
+        {
+          "heading": "ภาษาที่ใช้ให้คำปรึกษาและการติดต่อ",
+          "paragraphs": [
+            "การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี ท่านเขียนข้อความแรกด้วยภาษาของท่านเองได้",
+            "หากท่านไม่สามารถสื่อสารได้ด้วยภาษาใดเลยในสี่ภาษานี้ โปรดระบุในอีเมล เราพิจารณาว่ามีวิธีสื่อสารที่เป็นไปได้หรือไม่ ไม่รับประกันล่าม การให้บริการเป็นภาษาอื่น หรือการรับดำเนินการทุกเรื่อง"
+          ]
+        },
+        {
+          "heading": "ควรเขียนอะไรในข้อความแรก",
+          "paragraphs": [
+            "ควรระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด และเรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร หากได้รับหมายหรือหนังสือจากศาลหรือหน่วยงานของรัฐแล้ว โปรดแจ้งวันที่ปรากฏในเอกสารนั้น",
+            "ในขั้นแรกยังไม่จำเป็นต้องส่งเลขหนังสือเดินทาง เลขบัตรประจำตัว ข้อมูลบัญชีธนาคาร เวชระเบียน หรือแฟ้มพยานหลักฐานทั้งหมด โปรดรอคำแนะนำจากทนายความ แล้วจึงส่งเอกสารที่มีความอ่อนไหวด้วยวิธีที่ปลอดภัย"
+          ]
+        },
+        {
+          "heading": "หลังส่งอีเมล",
+          "paragraphs": [
+            "การส่งอีเมลเพียงอย่างเดียวยังไม่ได้หมายความว่าท่านได้รับคำปรึกษาทางกฎหมาย มีนัดหมายที่ยืนยันแล้ว หรือเกิดความสัมพันธ์ระหว่างทนายความกับลูกความ เราไม่รับประกันระยะเวลาตอบกลับหรือการดูแลเรื่องโดยทนายความคนใดคนหนึ่ง หากผ่านไประยะหนึ่งแล้วท่านยังไม่ได้รับการติดต่อกลับ สามารถส่งอีเมลถึงสำนักงานอีกครั้งได้"
+          ]
+        }
+      ]
+    },
       faq: {
         eyebrow: 'คำถามที่พบบ่อย',
         title: 'คำถามที่พบบ่อย',
@@ -1933,47 +1891,33 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'MAKIPAG-UGNAYAN',
-        title: 'Paano makipag-ugnayan sa tanggapan',
-        description:
-          'Ang wika ng pahina, ang mga wika ng konsultasyon, ang gagawin kung hindi ninyo magagamit ang apat na wikang iyon, at ang mga bagay na hindi ginagarantiya.',
-        intro:
-          'Bago kayo makipag-ugnayan, pansinin ang tatlong magkahiwalay na bagay sa ibaba. Madalas itong pinaghahalo, gayong magkaiba ang kahulugan ng bawat isa.',
-        sections: [
-          {
-            heading: 'Tatlong bagay na dapat paghiwalayin',
-            paragraphs: [
-              'Magkahiwalay na bagay ang wika ng pahina, ang wika ng konsultasyon sa abogado, at ang wikang ginagamit ninyo sa pagsulat ng mensahe.',
-            ],
-            items: [
-              'Wika ng pahina: nakasulat sa Filipino ang gabay na ito.',
-              'Wika ng konsultasyon: isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano ang konsultasyon sa abogado.',
-              'Wika ng pagsulat ninyo: maaari ninyong isulat ang buod sa sarili ninyong wika, at iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo.',
-            ],
-          },
-          {
-            heading: 'Kung hindi ninyo magagamit ang apat na wika ng konsultasyon',
-            paragraphs: [
-              'Sa form ng katanungan, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
-              'Hakbang lamang ito ng pagkumpirma, hindi pangako. Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng serbisyo sa Filipino o sa alinmang wikang wala sa apat na nabanggit, at hindi kami nangangakong matatanggap ang bawat usapin.',
-            ],
-          },
-          {
-            heading: 'Ano ang dapat isulat sa unang mensahe',
-            paragraphs: [
-              'Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Kung may natanggap na kayong papeles mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsang nakasulat doon.',
-              'Sa unang yugto ay hindi pa ninyo kailangang ipadala ang numero ng pasaporte, numero ng ID, detalye ng bank account, talaang medikal, o buong hanay ng ebidensya. Hintayin ang tagubilin ng abogado, at saka ipadala ang mga sensitibong dokumento sa ligtas na paraan.',
-            ],
-          },
-          {
-            heading: 'Ang mga hindi ginagarantiya ng pahinang ito',
-            paragraphs: [
-              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nangangako ng interpreter para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
-              'Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahinang Makipag-ugnayan.',
-            ],
-          },
-        ],
-      },
+      "eyebrow": "MAKIPAG-UGNAYAN",
+      "title": "Paano makipag-ugnayan sa tanggapan",
+      "description": "Makipag-ugnayan sa tanggapan tungkol sa mga usaping legal na may kaugnayan sa Taiwan.",
+      "intro": "Kung may takdang panahon na alam ninyo, isulat ito sa unang mensahe.",
+      "sections": [
+        {
+          "heading": "Wika ng konsultasyon at pakikipag-ugnayan",
+          "paragraphs": [
+            "Isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano ang konsultasyon sa abogado. Maaari ninyong isulat ang unang mensahe sa sarili ninyong wika.",
+            "Kung hindi ninyo magagamit ang alinman sa apat na wikang iyon, sabihin ito sa email. Susuriin namin kung may posibleng paraan ng pakikipag-usap; hindi namin ginagarantiya ang interpreter, serbisyo sa ibang wika, o pagtanggap sa bawat usapin."
+          ]
+        },
+        {
+          "heading": "Ano ang dapat isulat sa unang mensahe",
+          "paragraphs": [
+            "Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, at ano ang kaugnayan ng usapin sa Taiwan. Kung may natanggap na kayong papeles mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsang nakasulat doon.",
+            "Sa unang yugto ay hindi pa ninyo kailangang ipadala ang numero ng pasaporte, numero ng ID, detalye ng bank account, talaang medikal, o buong hanay ng ebidensya. Hintayin ang tagubilin ng abogado, at saka ipadala ang mga sensitibong dokumento sa ligtas na paraan."
+          ]
+        },
+        {
+          "heading": "Matapos maipadala ang email",
+          "paragraphs": [
+            "Ang pagpapadala ng email ay hindi nangangahulugang nabigyan na kayo ng legal na payo, may kumpirmadong appointment na kayo, o nabuo na ang ugnayan ng abogado at kliyente. Walang ipinapangakong panahon ng pagsagot o tiyak na abogado. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, gamitin muli ang link ng email sa pahinang ito."
+          ]
+        }
+      ]
+    },
       faq: {
         eyebrow: 'MGA MADALAS ITANONG',
         title: 'Mga madalas itanong',
@@ -2427,47 +2371,33 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'التواصل',
-        title: 'كيفية التواصل مع المكتب',
-        description:
-          'لغة الصفحة، ولغات الاستشارة، وما يحدث إذا لم تكن تستخدم تلك اللغات الأربع، وما لا يمكن ضمانه.',
-        intro:
-          'قبل التواصل، يُرجى الانتباه إلى ثلاثة أمور منفصلة. يسهل الخلط بينها، لكن لكل منها معنى خاص.',
-        sections: [
-          {
-            heading: 'ثلاثة أمور ينبغي التمييز بينها',
-            paragraphs: [
-              'لغة عرض الصفحة، ولغة الجلسة مع المحامي، واللغة التي تكتب بها رسالتك، ثلاثة أمور مستقلة بعضها عن بعض.',
-            ],
-            items: [
-              'لغة الصفحة: هذا القسم الإرشادي مكتوب بالعربية.',
-              'لغة الاستشارة: الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
-              'لغة كتابتك: يمكنك كتابة الملخّص بلغتك، ويُحفَظ النص الأصلي كما هو.',
-            ],
-          },
-          {
-            heading: 'إذا لم تكن تستخدم أيًّا من اللغات الأربع',
-            paragraphs: [
-              'يمكنك في نموذج التواصل اختيار بند «يلزم تأكيد طريقة التواصل». وسيستخدم المكتب رسالة الرد لتأكيد طريقة التواصل إن وُجدت طريقة ممكنة؛ وهذا ليس التزامًا بوجود طريقة مناسبة، ولا التزامًا بمدة للرد.',
-              'وهذه خطوة تأكيد لا وعد. فنحن لا نلتزم بتوفير ترجمة فورية، ولا نلتزم بتقديم الدعم بأي لغة أخرى غير اللغات الأربع المذكورة، ولا نلتزم بقبول كل قضية.',
-            ],
-          },
-          {
-            heading: 'ماذا تكتب في رسالتك الأولى',
-            paragraphs: [
-              'يُستحسن أن تذكر: ما الذي حدث، وما المساعدة التي تريدها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. وإذا تسلّمت ورقة من محكمة أو من جهة حكومية فاذكر التاريخ المدوّن عليها.',
-              'ولا حاجة في هذه المرحلة إلى إرسال رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي أو السجلات الطبية أو ملف الأدلة كاملًا. انتظر إرشاد المحامي ثم أرسل المستندات الحسّاسة بطريقة آمنة.',
-            ],
-          },
-          {
-            heading: 'ما لا تضمنه هذه الصفحة',
-            paragraphs: [
-              'لا نلتزم بمدة للرد، ولا نؤكّد المواعيد عبر هذه الصفحة، ولا نلتزم بأن يتولّى القضية محامٍ بعينه، ولا نوفّر ترجمة فورية. وترجمة النصوص مسألة منفصلة: فالرسالة التي ترسلها لا تُترجَم ترجمة آلية.',
-              'وعند إرسال طلبك يُحفَظ محتواه وينتظر المراجعة. وإذا لم تتلقَّ ردًا بعد مدة، فيمكنك إعادة الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
-            ],
-          },
-        ],
-      },
+      "eyebrow": "التواصل",
+      "title": "كيفية التواصل مع المكتب",
+      "description": "تواصل مع المكتب عبر البريد الإلكتروني بشأن المسائل القانونية المتعلقة بتايوان.",
+      "intro": "إن كنت تعرف موعدًا نهائيًا ذا صلة، فاذكره في رسالتك الأولى.",
+      "sections": [
+        {
+          "heading": "لغات الاستشارة وطريقة التواصل",
+          "paragraphs": [
+            "تُقدَّم الاستشارات مع المحامي بالإنجليزية أو الصينية (中文) أو اليابانية أو الكورية فقط. يمكنك كتابة الرسالة الأولى بلغتك.",
+            "إذا لم تكن تستطيع التواصل بأيٍّ من اللغات الأربع، اذكر ذلك في البريد الإلكتروني. نراجع إن وُجدت طريقة تواصل عملية؛ ولا نلتزم بترجمة فورية ولا بتقديم الدعم بلغة أخرى ولا بقبول كل قضية."
+          ]
+        },
+        {
+          "heading": "ماذا تكتب في رسالتك الأولى",
+          "paragraphs": [
+            "يُستحسن أن تذكر ما الذي حدث، وما المساعدة التي تريدها، وما صلة القضية بتايوان. وإذا تسلّمت ورقة من محكمة أو من جهة حكومية فاذكر التاريخ المدوّن عليها.",
+            "ولا حاجة في هذه المرحلة إلى إرسال رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي أو السجلات الطبية أو ملف الأدلة كاملًا. انتظر إرشاد المحامي ثم أرسل المستندات الحسّاسة بطريقة آمنة."
+          ]
+        },
+        {
+          "heading": "بعد إرسال البريد الإلكتروني",
+          "paragraphs": [
+            "إرسال الرسالة وحده لا يعني أنك حصلت على مشورة قانونية أو تأكيد لموعد، ولا ينشئ علاقة بين المحامي والموكّل. لا نلتزم بمدة للرد ولا بمحامٍ بعينه. وإذا لم تتلقَّ ردًا بعد مدة، يمكنك استخدام رابط البريد الإلكتروني في هذه الصفحة مجددًا."
+          ]
+        }
+      ]
+    },
       faq: {
         eyebrow: 'الأسئلة الشائعة',
         title: 'الأسئلة الشائعة',

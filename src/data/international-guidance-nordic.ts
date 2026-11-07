@@ -260,46 +260,32 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Hur du når byrån',
-      description:
-        'Sidans språk, rådgivningsspråken, vad som gäller om du inte behärskar något av de fyra språken, och vad den här sidan inte utlovar.',
-      intro:
-        'Innan du skriver till oss bör du skilja på följande tre saker. De blandas ofta ihop, men betyder olika saker.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Hur du når byrån",
+      "description": "Kontakt med byrån i juridiska frågor som rör Taiwan.",
+      "intro": "Känner du till en frist, ange den redan i det första meddelandet.",
+      "sections": [
         {
-          heading: 'Tre saker som måste hållas isär',
-          paragraphs: [
-            'Sidans visningsspråk, rådgivningsspråket med advokaten och språket du skriver på är tre skilda saker.',
-          ],
-          items: [
-            'Sidans språk: Den här vägledningen är skriven på svenska.',
-            'Rådgivningsspråk: Rådgivningen sker endast på engelska, kinesiska (中文), japanska och koreanska.',
-            'Språket du skriver på: Du får skriva sammanfattningen på ditt eget språk; originaltexten sparas oförändrad.',
-          ],
+          "heading": "Rådgivningsspråk och kommunikation",
+          "paragraphs": [
+            "Rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Du får skriva det första meddelandet på ditt eget språk.",
+            "Om du inte behärskar något av de fyra språken, skriv det i e-postmeddelandet. Vi undersöker om det finns en användbar kommunikationsväg. Vi utlovar inte tolk, rådgivning på andra språk eller att ta emot varje ärende."
+          ]
         },
         {
-          heading: 'Om du inte behärskar något av de fyra rådgivningsspråken',
-          paragraphs: [
-            'I kontaktformuläret kan du välja ”Kommunikationsvägen måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid utlovas.',
-            'Det är bara ett steg för att undersöka saken, inte ett löfte. Vi lovar inte en tolk, inte rådgivning på svenska eller på ett annat språk utanför de fyra som nämns, och inte att vi tar emot varje ärende.',
-          ],
+          "heading": "Vad som bör stå i det första meddelandet",
+          "paragraphs": [
+            "Ange vad som har hänt, vilken hjälp du behöver och vilket samband ärendet har med Taiwan. Om du redan har fått en skrivelse från en domstol eller en myndighet, nämn datumet på skrivelsen.",
+            "I inledningen behöver du ännu inte skicka passnummer, identitetsnummer, kontouppgifter, journaler eller hela bevisningen. Vänta på besked från advokaten och skicka då känsliga handlingar på ett säkert sätt."
+          ]
         },
         {
-          heading: 'Vad som bör stå i det första meddelandet',
-          paragraphs: [
-            'Ange vad som har hänt, vilken hjälp du behöver, vilket samband ärendet har med Taiwan och vilken frist som gäller, om du känner till någon. Om du redan har fått en skrivelse från en domstol eller en myndighet, nämn datumet på skrivelsen.',
-            'I inledningen behöver du ännu inte skicka passnummer, identitetsnummer, kontouppgifter, journaler eller hela bevisningen. Vänta på besked från advokaten och skicka då känsliga handlingar på ett säkert sätt.',
-          ],
-        },
-        {
-          heading: 'Vad den här sidan inte utlovar',
-          paragraphs: [
-            'Vi lovar ingen svarstid, bekräftar ingen tid via den här sidan, lovar inte en viss advokat och ordnar inte en tolk. Skriftlig översättning är något annat: ditt meddelande översätts inte automatiskt.',
-            'När du skickar en begäran sparas innehållet och väntar på granskning. Om du efter en tid inte får svar kan du skriva på nytt till den e-postadress som anges på kontaktsidan.',
-          ],
-        },
-      ],
+          "heading": "Efter e-postmeddelandet",
+          "paragraphs": [
+            "Att du skickar e-post betyder inte i sig att du har fått juridisk rådgivning, en bekräftad bokning eller att ett förhållande mellan advokat och klient har uppstått. Vi utlovar ingen svarstid och ingen viss advokat. Om du efter en tid inte får svar kan du använda e-postlänken på den här sidan igen."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'FRÅGOR',
@@ -748,46 +734,32 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Sådan kontakter du kontoret',
-      description:
-        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker nogen af de fire sprog, og hvad denne side ikke lover.',
-      intro:
-        'Før du skriver til os, bør du holde følgende tre punkter adskilt. De blandes ofte, men betyder forskellige ting.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Sådan kontakter du kontoret",
+      "description": "Kontakt til kontoret om juridiske spørgsmål vedrørende Taiwan.",
+      "intro": "Kender du en frist, så angiv den allerede i den første meddelelse.",
+      "sections": [
         {
-          heading: 'Tre ting, der skal holdes adskilt',
-          paragraphs: [
-            'Sidens visningssprog, rådgivningssproget med advokaten og det sprog, du skriver på, er tre adskilte ting.',
-          ],
-          items: [
-            'Sidens sprog: Disse vejledninger er skrevet på dansk.',
-            'Rådgivningssprog: Rådgivningen foregår kun på engelsk, kinesisk (中文), japansk og koreansk.',
-            'Det sprog, du skriver på: Du må skrive resuméet på dit eget sprog; originalteksten gemmes uændret.',
-          ],
+          "heading": "Rådgivningssprog og kommunikation",
+          "paragraphs": [
+            "Rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Du må skrive den første meddelelse på dit eget sprog.",
+            "Hvis du ikke behersker nogen af de fire sprog, skriv det i e-mailen. Vi undersøger, om der findes en brugbar kommunikationsvej. Vi lover ikke tolk, rådgivning på andre sprog eller at tage imod enhver sag."
+          ]
         },
         {
-          heading: 'Hvis du ikke behersker nogen af de fire rådgivningssprog',
-          paragraphs: [
-            'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
-            'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk og ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og vi tager ikke enhver sag.',
-          ],
+          "heading": "Hvad der bør stå i den første meddelelse",
+          "paragraphs": [
+            "Angiv, hvad der er sket, hvilken hjælp du har brug for og hvilket forhold sagen har til Taiwan. Hvis du allerede har fået en skrivelse fra en ret eller en myndighed, nævn datoen på skrivelsen.",
+            "I begyndelsen behøver du endnu ikke sende pasnummer, identitetsnummer, kontooplysninger, patientjournaler eller hele bevismaterialet. Vent på anvisninger fra advokaten og send da følsomme dokumenter ad en sikker vej."
+          ]
         },
         {
-          heading: 'Hvad der bør stå i den første meddelelse',
-          paragraphs: [
-            'Angiv, hvad der er sket, hvilken hjælp du har brug for, hvilket forhold sagen har til Taiwan, og fristen, hvis du kender en. Hvis du allerede har fået en skrivelse fra en ret eller en myndighed, nævn datoen på skrivelsen.',
-            'I begyndelsen behøver du endnu ikke sende pasnummer, identitetsnummer, kontooplysninger, patientjournaler eller hele bevismaterialet. Vent på anvisninger fra advokaten og send da følsomme dokumenter ad en sikker vej.',
-          ],
-        },
-        {
-          heading: 'Hvad denne side ikke lover',
-          paragraphs: [
-            'Vi lover ingen svartid, bekræfter ingen tid via denne side, lover ikke en bestemt advokat og stiller ikke en tolk til rådighed. Skriftlig oversættelse er noget andet: Din meddelelse oversættes ikke automatisk.',
-            'Når du sender en anmodning, gemmes indholdet og venter på gennemgang. Hvis du efter nogen tid ikke får svar, kan du skrive på ny til den e-mailadresse, der er angivet på kontaktsiden.',
-          ],
-        },
-      ],
+          "heading": "Efter e-mailen",
+          "paragraphs": [
+            "Når du sender en e-mail, betyder det ikke i sig selv, at du har fået juridisk rådgivning, en bekræftet aftale eller at der er opstået et forhold mellem advokat og klient. Vi lover ingen svartid og ingen bestemt advokat. Hvis du efter nogen tid ikke får svar, kan du bruge e-maillinket på denne side igen."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'SPØRGSMÅL',
@@ -1236,46 +1208,32 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Slik når du kontoret',
-      description:
-        'Sidens språk, rådgivningsspråkene, fremgangsmåten hvis du ikke behersker noen av de fire språkene, og hva denne siden ikke lover.',
-      intro:
-        'Før du skriver til oss, bør du skille mellom disse tre punktene. De blandes ofte sammen, men betyr ulike ting.',
-      sections: [
+      "eyebrow": "KONTAKT",
+      "title": "Slik når du kontoret",
+      "description": "Kontakt kontoret om juridiske spørsmål knyttet til Taiwan.",
+      "intro": "Kjenner du en frist, nevn den allerede i den første meldingen.",
+      "sections": [
         {
-          heading: 'Tre ting som må holdes atskilt',
-          paragraphs: [
-            'Sidens visningsspråk, språket rådgivningen med advokaten foregår på, og språket du selv skriver på, er tre atskilte ting.',
-          ],
-          items: [
-            'Sidens språk: Disse veiledningene er skrevet på norsk.',
-            'Rådgivningsspråk: Rådgivningen foregår bare på engelsk, kinesisk (中文), japansk og koreansk.',
-            'Språket du skriver på: Du kan skrive sammendraget på ditt eget språk; originalteksten lagres uendret.',
-          ],
+          "heading": "Rådgivningsspråk og kommunikasjon",
+          "paragraphs": [
+            "Rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk. Du kan skrive den første meldingen på ditt eget språk.",
+            "Hvis du ikke behersker noen av de fire språkene, skriv det i e-posten. Vi undersøker om det finnes en brukbar kommunikasjonsvei. Vi lover ikke tolk, bistand på andre språk eller å ta imot enhver sak."
+          ]
         },
         {
-          heading: 'Hvis du ikke behersker noen av de fire rådgivningsspråkene',
-          paragraphs: [
-            'I kontaktskjemaet kan du velge «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke om det finnes en brukbar kommunikasjonsvei; rådgivning på et annet språk loves ikke, og vi lover ingen svartid.',
-            'Det er bare et forsøk, ikke et løfte. Vi lover ikke tolk, ikke bistand på norsk eller på andre språk enn de fire nevnte, og ikke at vi tar imot enhver sak.',
-          ],
+          "heading": "Hva som bør stå i den første meldingen",
+          "paragraphs": [
+            "Fortell hva som har skjedd, hvilken hjelp du trenger og hvilken tilknytning saken har til Taiwan. Har du allerede fått en skrivelse fra en domstol eller en myndighet, nevn datoen på skrivelsen.",
+            "I begynnelsen trenger du ennå ikke sende passnummer, identitetsnummer, kontoopplysninger, pasientjournaler eller hele bevismaterialet. Vent på anvisning fra advokaten, og send da sensitive dokumenter på en sikker måte."
+          ]
         },
         {
-          heading: 'Hva som bør stå i den første meldingen',
-          paragraphs: [
-            'Fortell hva som har skjedd, hvilken hjelp du trenger, hvilken tilknytning saken har til Taiwan, og fristen, hvis du kjenner en. Har du allerede fått en skrivelse fra en domstol eller en myndighet, nevn datoen på skrivelsen.',
-            'I begynnelsen trenger du ennå ikke sende passnummer, identitetsnummer, kontoopplysninger, pasientjournaler eller hele bevismaterialet. Vent på anvisning fra advokaten, og send da sensitive dokumenter på en sikker måte.',
-          ],
-        },
-        {
-          heading: 'Hva denne siden ikke lover',
-          paragraphs: [
-            'Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke at en bestemt advokat tar saken, og stiller ikke med tolk. Skriftlig oversettelse er noe annet: meldingen din oversettes ikke automatisk.',
-            'Når du sender en forespørsel, lagres innholdet og venter på vurdering. Får du ikke svar etter en tid, kan du skrive på nytt til e-postadressen som er oppgitt på kontaktsiden.',
-          ],
-        },
-      ],
+          "heading": "Etter e-posten",
+          "paragraphs": [
+            "Når du sender en e-post, betyr det ikke i seg selv at du har fått juridisk rådgivning, en bekreftet time eller at det er oppstått et klientforhold. Vi lover ingen svartid og ingen bestemt advokat. Får du ikke svar etter en tid, kan du bruke e-postlenken på denne siden igjen."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'SPØRSMÅL',
@@ -1724,46 +1682,32 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'YHTEYSTIEDOT',
-      title: 'Miten tavoitatte toimiston',
-      description:
-        'Sivun kieli, neuvontakielet, menettely, jos ette osaa mitään neljästä kielestä, ja mitä tämä sivu ei lupaa.',
-      intro:
-        'Ennen kuin kirjoitatte meille, erottakaa seuraavat kolme seikkaa. Ne sekoitetaan usein, mutta merkitsevät eri asioita.',
-      sections: [
+      "eyebrow": "YHTEYSTIEDOT",
+      "title": "Miten tavoitatte toimiston",
+      "description": "Ottakaa yhteyttä toimistoon Taiwanin oikeuteen liittyvissä asioissa.",
+      "intro": "Jos tunnette määräajan, mainitkaa se ensimmäisessä viestissä.",
+      "sections": [
         {
-          heading: 'Kolme asiaa, jotka on pidettävä erillään',
-          paragraphs: [
-            'Sivun näyttökieli, neuvontakieli asianajajan kanssa ja kieli, jolla kirjoitatte, ovat kolme erillistä asiaa.',
-          ],
-          items: [
-            'Sivun kieli: Nämä ohjeet on kirjoitettu suomeksi.',
-            'Neuvontakieli: Neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
-            'Kieli, jolla kirjoitatte: Voitte kirjoittaa yhteenvedon omalla kielellänne; alkuperäinen teksti säilytetään muuttamattomana.',
-          ],
+          "heading": "Neuvontakielet ja viestintä",
+          "paragraphs": [
+            "Neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Voitte kirjoittaa ensimmäisen viestin omalla kielellänne.",
+            "Jos ette osaa mitään neljästä kielestä, kirjoittakaa siitä sähköpostissa. Selvitämme, onko käyttökelpoista viestintätapaa. Emme lupaa tulkkia, neuvontaa muilla kielillä emmekä jokaisen asian vastaanottoa."
+          ]
         },
         {
-          heading: 'Jos ette osaa mitään neljästä neuvontakielestä',
-          paragraphs: [
-            'Yhteydenottolomakkeessa voitte valita ”En osaa mitään neljästä kielestä — viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
-            'Tämä on vain selvitysvaihe, ei lupaus. Emme lupaa tulkkia, emme neuvontaa suomeksi tai muulla kielellä näiden neljän kielen ulkopuolella, emmekä sitä, että otamme vastaan jokaista asiaa.',
-          ],
+          "heading": "Mitä ensimmäisessä viestissä tulisi olla",
+          "paragraphs": [
+            "Ilmoittakaa, mitä on tapahtunut, millaista apua tarvitsette ja mikä yhteys asialla on Taiwaniin. Jos olette jo saaneet asiakirjan tuomioistuimelta tai viranomaiselta, mainitkaa sen päivämäärä.",
+            "Alkuvaiheessa teidän ei vielä tarvitse lähettää passinumeroa, henkilötunnusta, tilitietoja, potilasasiakirjoja tai koko todistusaineistoa. Odottakaa asianajajan ohjeita ja lähettäkää sitten arkaluonteiset asiakirjat suojattua kanavaa pitkin."
+          ]
         },
         {
-          heading: 'Mitä ensimmäisessä viestissä tulisi olla',
-          paragraphs: [
-            'Ilmoittakaa, mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Jos olette jo saaneet asiakirjan tuomioistuimelta tai viranomaiselta, mainitkaa sen päivämäärä.',
-            'Alkuvaiheessa teidän ei vielä tarvitse lähettää passinumeroa, henkilötunnusta, tilitietoja, potilasasiakirjoja tai koko todistusaineistoa. Odottakaa asianajajan ohjeita ja lähettäkää sitten arkaluonteiset asiakirjat suojattua kanavaa pitkin.',
-          ],
-        },
-        {
-          heading: 'Mitä tämä sivu ei lupaa',
-          paragraphs: [
-            'Emme lupaa vastausaikaa, emme vahvista tapaamista tämän sivun kautta, emme lupaa tiettyä asianajajaa emmekä järjestä tulkkia. Kirjallinen käännös on eri asia: viestiänne ei käännetä automaattisesti.',
-            'Kun lähetätte pyynnön, sisältö säilytetään ja odottaa tarkistusta. Jos ette jonkin ajan kuluttua saa vastausta, voitte kirjoittaa uudelleen yhteyssivulla ilmoitettuun sähköpostiosoitteeseen.',
-          ],
-        },
-      ],
+          "heading": "Sähköpostin jälkeen",
+          "paragraphs": [
+            "Sähköpostin lähettäminen ei vielä tarkoita oikeudellista neuvontaa, ei vahvista tapaamista eikä synnytä yksinään suhdetta asianajajan ja päämiehen välillä. Emme lupaa vastausaikaa emmekä tiettyä asianajajaa. Jos ette jonkin ajan kuluttua saa vastausta, voitte käyttää tämän sivun sähköpostilinkkiä uudelleen."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'USEIN KYSYTTYÄ',

@@ -211,9 +211,16 @@ describe('guidanceContent.ar', () => {
 
     const paths = withSentence.map(([path]) => path);
     expect(paths.some((path) => path.startsWith('guidanceContent.ar.pages.home'))).toBe(true);
-    expect(paths.some((path) => path.startsWith('guidanceContent.ar.pages.contact'))).toBe(true);
     expect(paths.some((path) => path.startsWith('guidanceContent.ar.pages.faq'))).toBe(true);
     expect(internationalInquiryCopy.ar.consultationNotice).toContain(CONSULTATION_SENTENCE);
+
+    const contactText = guidanceContent.ar.pages.contact.sections
+      .flatMap((section) => section.paragraphs)
+      .join(' ');
+    for (const term of CONSULTATION_LANGUAGE_TERMS) {
+      expect(contactText, `contact missing consultation language term “${term}”`).toContain(term);
+    }
+    expect(contactText).toMatch(/فقط/);
 
     for (const term of CONSULTATION_LANGUAGE_TERMS) {
       expect(CONSULTATION_SENTENCE).toContain(term);

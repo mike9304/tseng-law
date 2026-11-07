@@ -259,46 +259,32 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: '联系',
-      title: '如何联系事务所',
-      description:
-        '页面语言、咨询语言、当您无法使用四种语言时的做法，以及本页不承诺的事项。',
-      intro:
-        '写信之前，请先区分以下三点。它们常被混在一起，但含义不同。',
-      sections: [
+      "eyebrow": "联系",
+      "title": "如何联系事务所",
+      "description": "就台湾相关法律事项，请通过本页电邮联系事务所。",
+      "intro": "如有已知期限，请在首次来信中注明。",
+      "sections": [
         {
-          heading: '必须分开的三件事',
-          paragraphs: [
-            '页面的显示语言、与律师的咨询语言，以及您写信所用的语言，是三件分开的事。',
-          ],
-          items: [
-            '页面语言：本说明以简体中文撰写。',
-            '咨询语言：咨询以英语、中文、日语和韩语进行。',
-            '您的书写语言：您可以用自己的语言撰写摘要；原文会按原样保存。',
-          ],
+          "heading": "咨询语言与沟通安排",
+          "paragraphs": [
+            "律师咨询仅以英语、中文、日语和韩语进行；咨询使用的中文指普通话与书面中文。您可以用自己的语言撰写首次来信。",
+            "若您无法使用这四种语言中的任何一种，请在电邮中写明。我们会评估是否有可行的沟通安排；不承诺口译、其他语言服务，也不承诺一定受理。"
+          ]
         },
         {
-          heading: '若您无法使用四种咨询语言中的任何一种',
-          paragraphs: [
-            '在联系表单中，您可以选择“沟通方式待确认”。我们会回复，评估是否有可行的沟通安排；不以其他语言提供服务，也不承诺回复时限。',
-            '这只是评估步骤，不是承诺。我们不承诺口译、不以四种语言之外的语言提供服务，也不承诺受理每一件事项。',
-          ],
+          "heading": "首次来信请说明",
+          "paragraphs": [
+            "请说明发生了什么、您需要何种协助，以及事项与台湾的关联。若已收到法院或行政机关文书，请写明文书上的日期。",
+            "初期不必发送护照号码、身份证号、银行账户信息、病历或全部证据。请等待律师指示，再以安全方式发送敏感文件。"
+          ]
         },
         {
-          heading: '首次来信应写什么',
-          paragraphs: [
-            '请说明发生了什么、您需要何种协助、事项与台湾的关联，以及您所知的期限。若已收到法院或行政机关文书，请写明文书上的日期。',
-            '初期不必发送护照号码、身份证号、银行账户信息、病历或全部证据。请等待律师指示，再以安全方式发送敏感文件。',
-          ],
-        },
-        {
-          heading: '本页不承诺的事项',
-          paragraphs: [
-            '我们不承诺回复时限，不通过本页确认预约，不指定特定律师，也不提供口译。书面翻译另行安排；您写下的原文不会自动翻译。',
-            '发送请求后，内容会保存等候处理。若长时间未收到回复，可再次致函联系页所列电子邮箱。',
-          ],
-        },
-      ],
+          "heading": "发送电邮之后",
+          "paragraphs": [
+            "发送电邮本身并不表示我们已提供法律意见、确认预约或接受委托。我们不承诺回复时限，也不保证由某位特定律师经办。若长时间未收到回复，可再次使用本页的电邮链接。"
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: '常见问题',
@@ -747,46 +733,32 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'HUBUNGI',
-      title: 'Bagaimana anda menghubungi firma',
-      description:
-        'Bahasa halaman, bahasa perundingan, apa yang berlaku jika anda tidak dapat menggunakan mana-mana daripada empat bahasa, dan apa yang halaman ini tidak janjikan.',
-      intro:
-        'Sebelum anda menulis, sila bezakan tiga perkara berikut. Ia kerap dicampur, tetapi bermakna perkara yang berbeza.',
-      sections: [
+      "eyebrow": "HUBUNGI",
+      "title": "Bagaimana anda menghubungi firma",
+      "description": "Hubungi firma melalui e-mel untuk hal undang-undang berkaitan Taiwan.",
+      "intro": "Jika anda mengetahui tarikh akhir, nyatakannya dalam mesej pertama.",
+      "sections": [
         {
-          heading: 'Tiga perkara yang mesti kekal berasingan',
-          paragraphs: [
-            'Bahasa paparan halaman, bahasa perundingan dengan peguam, dan bahasa yang anda gunakan untuk menulis ialah tiga perkara yang berasingan.',
-          ],
-          items: [
-            'Bahasa halaman: Maklumat ini ditulis dalam bahasa Melayu.',
-            'Bahasa perundingan: Perundingan hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.',
-            'Bahasa tulisan anda: Anda boleh menulis ringkasan dalam bahasa anda sendiri; teks asal disimpan tanpa diubah.',
-          ],
+          "heading": "Bahasa perundingan dan komunikasi",
+          "paragraphs": [
+            "Perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea. Anda boleh menulis mesej pertama dalam bahasa anda sendiri.",
+            "Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, nyatakannya dalam e-mel. Kami meneliti sama ada terdapat cara berkomunikasi yang boleh digunakan; kami tidak menjanjikan jurubahasa, perkhidmatan dalam bahasa lain, atau bahawa setiap perkara pasti diterima."
+          ]
         },
         {
-          heading: 'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa perundingan',
-          paragraphs: [
-            'Dalam borang pertanyaan anda boleh memilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti sama ada terdapat cara berkomunikasi yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
-            'Ini hanya langkah semakan, bukan janji. Kami tidak menjanjikan jurubahasa, tidak menjanjikan perkhidmatan dalam bahasa Melayu atau bahasa lain di luar empat bahasa tersebut, dan tidak menjanjikan bahawa kami menerima setiap hal.',
-          ],
+          "heading": "Apa yang sepatutnya ada dalam mesej pertama",
+          "paragraphs": [
+            "Nyatakan apa yang berlaku, bantuan yang anda perlukan, dan kaitan hal itu dengan Taiwan. Jika anda sudah menerima surat mahkamah atau pihak berkuasa, nyatakan tarikh pada surat itu.",
+            "Pada peringkat awal anda belum perlu menghantar nombor pasport, nombor pengenalan, data akaun, rekod perubatan atau semua bukti. Tunggu arahan peguam, kemudian hantar dokumen sensitif melalui cara yang selamat."
+          ]
         },
         {
-          heading: 'Apa yang sepatutnya ada dalam mesej pertama',
-          paragraphs: [
-            'Nyatakan apa yang berlaku, bantuan yang anda perlukan, kaitan hal itu dengan Taiwan, dan tempoh jika anda mengetahuinya. Jika anda sudah menerima surat mahkamah atau pihak berkuasa, nyatakan tarikh pada surat itu.',
-            'Pada peringkat awal anda belum perlu menghantar nombor pasport, nombor pengenalan, data akaun, rekod perubatan atau seluruh bukti. Tunggu arahan peguam, kemudian hantar dokumen sensitif melalui cara yang selamat.',
-          ],
-        },
-        {
-          heading: 'Apa yang halaman ini tidak janjikan',
-          paragraphs: [
-            'Kami tidak menjanjikan tempoh jawapan, tidak mengesahkan janji temu melalui halaman ini, tidak menjanjikan peguam tertentu, dan tidak menyediakan jurubahasa. Terjemahan bertulis ialah perkara lain: mesej anda tidak diterjemah secara automatik.',
-            'Jika anda menghantar permintaan, kandungannya disimpan dan menunggu semakan. Jika selepas beberapa masa anda tidak menerima jawapan, anda boleh menulis semula ke alamat e-mel yang dinyatakan pada halaman hubungan.',
-          ],
-        },
-      ],
+          "heading": "Selepas e-mel dihantar",
+          "paragraphs": [
+            "Menghantar e-mel tidak bermakna anda telah menerima nasihat undang-undang, mengesahkan janji temu atau menjalinkan hubungan peguam–klien. Kami tidak menjanjikan masa balasan atau peguam tertentu. Jika agak lama anda masih belum menerima jawapan, gunakan semula pautan e-mel pada halaman ini."
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'SOALAN LAZIM',
@@ -1235,46 +1207,32 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     contact: {
-      eyebrow: 'संपर्क',
-      title: 'कार्यालय तक कैसे पहुँचें',
-      description:
-        'पृष्ठ की भाषा, परामर्श भाषाएँ, वह मार्ग जब आप चार भाषाओं में से किसी का उपयोग न कर सकें, और यह पृष्ठ क्या नहीं कहता।',
-      intro:
-        'लिखने से पहले निम्नलिखित तीन बिंदु अलग रखें। इन्हें प्रायः मिला दिया जाता है, किंतु अर्थ भिन्न हैं।',
-      sections: [
+      "eyebrow": "संपर्क",
+      "title": "कार्यालय से कैसे संपर्क करें",
+      "description": "ताइवान से जुड़े कानूनी मामलों में इस पृष्ठ के ई-मेल लिंक से कार्यालय से संपर्क करें।",
+      "intro": "यदि आपको समयसीमा ज्ञात हो, तो उसे पहले संदेश में लिखें।",
+      "sections": [
         {
-          heading: 'तीन बातें जो अलग रहनी चाहिए',
-          paragraphs: [
-            'पृष्ठ की प्रदर्शन भाषा, अधिवक्ता से परामर्श भाषा और वह भाषा जिसमें आप लिखते हैं — ये तीन अलग बातें हैं।',
-          ],
-          items: [
-            'पृष्ठ भाषा: यह जानकारी हिंदी में लिखी गई है।',
-            'परामर्श भाषा: परामर्श अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
-            'आपकी लेखन भाषा: आप सार अपनी भाषा में लिख सकते हैं; मूल पाठ अपरिवर्तित रखा जाता है।',
-          ],
+          "heading": "परामर्श भाषाएँ और संचार",
+          "paragraphs": [
+            "अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है। आप प्रथम संदेश अपनी भाषा में लिख सकते हैं।",
+            "यदि आप चार भाषाओं में से किसी का उपयोग नहीं कर सकते, तो ई-मेल में स्पष्ट लिखें। हम जाँचते हैं कि कोई व्यावहारिक संचार मार्ग संभव है या नहीं; दुभाषिया, अन्य भाषा में सेवा या हर मामला लेने का वादा नहीं करते।"
+          ]
         },
         {
-          heading: 'यदि आप चार परामर्श भाषाओं में से किसी का उपयोग नहीं कर सकते',
-          paragraphs: [
-            'संपर्क फ़ॉर्म में आप “संचार मार्ग की पुष्टि आवश्यक है” चुन सकते हैं। हम उत्तर देते हैं ताकि व्यावहारिक संचार मार्ग जाँचा जा सके, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा नहीं दी जाती और उत्तर की समयसीमा नहीं कही जाती।',
-            'यह केवल जाँच का चरण है, वादा नहीं। हम दुभाषिए का वादा नहीं करते, हिंदी या चार कही गई भाषाओं के बाहर किसी अन्य भाषा में सेवा का वादा नहीं करते, और यह भी नहीं कहते कि हम प्रत्येक मामला लेंगे।',
-          ],
+          "heading": "प्रथम संदेश में क्या लिखें",
+          "paragraphs": [
+            "बताएँ कि क्या हुआ, आपको किस सहायता की आवश्यकता है और मामले का ताइवान से क्या संबंध है। यदि आपको न्यायालय या प्राधिकरण का पत्र पहले ही मिल चुका है, तो पत्र की तिथि बताएँ।",
+            "आरंभिक चरण में आपको अभी पासपोर्ट संख्या, पहचान संख्या, खाता विवरण, चिकित्सा अभिलेख या संपूर्ण प्रमाण नहीं भेजने होते। अधिवक्ता के निर्देश की प्रतीक्षा करें और तब संवेदनशील कागजात सुरक्षित मार्ग से भेजें।"
+          ]
         },
         {
-          heading: 'प्रथम संदेश में क्या होना चाहिए',
-          paragraphs: [
-            'बताएँ कि क्या हुआ, आपको किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और समयसीमा, यदि आप जानते हैं। यदि आपको न्यायालय या प्राधिकरण का पत्र पहले ही मिल चुका है, तो पत्र की तिथि बताएँ।',
-            'आरंभिक चरण में आपको अभी पासपोर्ट संख्या, पहचान संख्या, खाता विवरण, चिकित्सा अभिलेख या संपूर्ण प्रमाण नहीं भेजने होते। अधिवक्ता के संकेत की प्रतीक्षा करें और तब संवेदनशील कागजात सुरक्षित मार्ग से भेजें।',
-          ],
-        },
-        {
-          heading: 'यह पृष्ठ क्या नहीं कहता',
-          paragraphs: [
-            'हम उत्तर की समयसीमा नहीं कहते, इस पृष्ठ से नियुक्ति पुष्ट नहीं करते, किसी निश्चित अधिवक्ता का वादा नहीं करते और दुभाषिया नहीं देते। लिखित अनुवाद अलग बात है: आपके संदेश का स्वचालित अनुवाद नहीं होता।',
-            'जब आप अनुरोध भेजते हैं, तो सामग्री रखी जाती है और जाँच की प्रतीक्षा करती है। यदि कुछ समय बाद उत्तर न आए, तो आप संपर्क पृष्ठ पर बताए गए ई-मेल पते पर फिर लिख सकते हैं।',
-          ],
-        },
-      ],
+          "heading": "ई-मेल भेजने के बाद",
+          "paragraphs": [
+            "ई-मेल भेजने से कानूनी राय, नियुक्ति की पुष्टि या अधिवक्ता–मुवक्किल संबंध स्वतः स्थापित नहीं होते। उत्तर की निश्चित समयसीमा या किसी निश्चित अधिवक्ता का वादा नहीं किया जाता। यदि कुछ समय बाद उत्तर न मिले, तो इस पृष्ठ के ई-मेल लिंक का पुनः उपयोग करें।"
+          ]
+        }
+      ]
     },
     faq: {
       eyebrow: 'सामान्य प्रश्न',

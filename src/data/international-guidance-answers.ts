@@ -63,7 +63,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Quý vị có thể gửi tóm tắt vụ việc, yêu cầu hỗ trợ và thời hạn qua biểu mẫu. Bước đầu chưa cần giấy tờ tùy thân hay toàn bộ chứng cứ. Văn phòng không cam kết thời gian phản hồi; lịch hẹn cần xác nhận riêng. Tư vấn bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
+        "Quý vị có thể gửi tóm tắt vụ việc qua liên kết email trên trang này.",
       sources: ['/vi/faq', '/vi/pricing'],
     },
     faq: {
@@ -95,7 +95,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Kirimkan ringkasan melalui formulir kontak: apa yang terjadi, bantuan yang Anda butuhkan, kaitannya dengan Taiwan, dan tenggat jika ada. Pada tahap awal belum perlu mengirim dokumen identitas atau seluruh bukti. Kantor tidak menjanjikan waktu balasan dan tidak memastikan janji temu lewat halaman ini. Konsultasi dengan advokat hanya dalam empat bahasa: Inggris, Mandarin (中文), Jepang, dan Korea.',
+        "Kirim ringkasan singkat melalui tautan email pada halaman ini.",
       sources: ['/id/faq', '/id/pricing'],
     },
     faq: {
@@ -127,7 +127,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'โปรดส่งสรุปเรื่องผ่านแบบฟอร์มติดต่อ โดยระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่ ในขั้นแรกยังไม่จำเป็นต้องส่งเอกสารแสดงตนหรือพยานหลักฐานทั้งหมด สำนักงานไม่รับประกันระยะเวลาตอบกลับและไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+        "โปรดส่งสรุปเรื่องผ่านลิงก์อีเมลบนหน้านี้",
       sources: ['/th/faq', '/th/pricing'],
     },
     faq: {
@@ -159,7 +159,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Ipadala ang buod sa pamamagitan ng form ng katanungan: kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Sa unang yugto ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensya. Walang ipinapangakong panahon ng pagsagot at walang kinukumpirmang appointment dito. Isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano ang konsultasyon sa abogado.',
+        "Maaari ninyong ipadala ang buod sa pamamagitan ng link ng email sa pahinang ito.",
       sources: ['/fil/faq', '/fil/pricing'],
     },
     faq: {
@@ -191,7 +191,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'أرسل ملخّصك عبر نموذج التواصل: ما الذي حدث، وما المساعدة التي تحتاج إليها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. ولا حاجة في المرحلة الأولى إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا. ولا يلتزم المكتب بمدة للرد، ولا يؤكّد المواعيد عبر هذه الصفحة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+        "يمكنك إرسال ملخّص القضية عبر رابط البريد الإلكتروني في هذه الصفحة.",
       sources: ['/ar/faq', '/ar/pricing'],
     },
     faq: {
@@ -351,7 +351,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        '请通过联系表单提交摘要：发生了什么、需要何种协助、事项与台湾的关联，以及期限（若有）。初期不必发送身份证件或全部证据。事务所不承诺回复时限，也不通过本页确认预约。咨询以英语、中文、日语和韩语进行。',
+        "请通过本页电邮链接简要说明您的情况。",
       sources: ['/zh-hans/faq', '/zh-hans/pricing'],
     },
     faq: {
@@ -383,7 +383,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Hantar ringkasan melalui borang pertanyaan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        "Hantar ringkasan pendek melalui pautan e-mel pada halaman ini.",
       sources: ['/ms/faq', '/ms/pricing'],
     },
     faq: {
@@ -479,7 +479,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        "Invii tramite il collegamento e-mail di questa pagina una breve descrizione della situazione e dell’aiuto di cui ha bisogno.",
       sources: ['/it/faq', '/it/pricing'],
     },
     faq: {
@@ -511,7 +511,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Stuur uw samenvatting via het contactformulier: wat er is gebeurd, welke hulp u nodig hebt, welk verband de zaak met Taiwan heeft en de termijn, als u er een kent. In de beginfase hoeft u nog geen identiteitsdocumenten of het gehele bewijs te sturen. Het kantoor belooft geen antwoordtermijn en bevestigt geen afspraak via deze pagina. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        "Stuur via de e-maillink op deze pagina een korte beschrijving van de situatie en welke hulp u nodig hebt.",
       sources: ['/nl/faq', '/nl/pricing'],
     },
     faq: {
@@ -543,7 +543,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Prosimy wysłać streszczenie przez formularz kontaktowy: co się stało, jakiej pomocy potrzeba, jaki związek ma sprawa z Tajwanem oraz termin, jeśli jest znany. Na początku nie trzeba jeszcze wysyłać dokumentów tożsamości ani całości dowodów. Kancelaria nie obiecuje terminu odpowiedzi i nie potwierdza spotkania za pośrednictwem tej strony. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+        "Prosimy wysłać przez łącze e-mail na tej stronie krótki opis sytuacji i potrzebnej pomocy.",
       sources: ['/pl/faq', '/pl/pricing'],
     },
     faq: {
@@ -575,7 +575,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+        "इस पृष्ठ के ई-मेल लिंक से अपनी स्थिति का संक्षिप्त सार भेजें।",
       sources: ['/hi/faq', '/hi/pricing'],
     },
     faq: {
@@ -607,7 +607,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Skicka din sammanfattning via kontaktformuläret: vad som har hänt, vilken hjälp du behöver, vilket samband ärendet har med Taiwan och fristen, om du känner till den. I det första steget behöver du ännu inte skicka identitetshandlingar eller hela bevisningen. Byrån lovar ingen svarstid och bekräftar ingen tid via den här sidan. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        "Skicka via e-postlänken på den här sidan en kort beskrivning av situationen och vilken hjälp du behöver.",
       sources: ['/sv/faq', '/sv/pricing'],
     },
     faq: {
@@ -639,7 +639,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Send dit resumé via kontaktformularen: hvad der er sket, hvilken hjælp du har brug for, hvilken forbindelse sagen har med Taiwan, og fristen, hvis du kender den. I det første trin behøver du endnu ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekræfter ingen tid via denne side. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        "Send via e-maillinket på denne side en kort beskrivelse af situationen og den hjælp, du har brug for.",
       sources: ['/da/faq', '/da/pricing'],
     },
     faq: {
@@ -671,7 +671,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Send sammendraget ditt via kontaktskjemaet: hva som har skjedd, hvilken hjelp du trenger, hvilken tilknytning saken har til Taiwan, og fristen hvis du kjenner den. I første omgang trenger du ennå ikke sende identitetsdokumenter eller hele bevismaterialet. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        "Send via e-postlenken på denne siden en kort beskrivelse av situasjonen og hvilken hjelp du trenger.",
       sources: ['/nb/faq', '/nb/pricing'],
     },
     faq: {
@@ -703,7 +703,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Lähettäkää yhteenveto yhteydenottolomakkeella: mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Ensimmäisessä vaiheessa ei vielä tarvitse lähettää henkilöllisyysasiakirjoja eikä koko todistusaineistoa. Toimisto ei lupaa vastausaikaa eikä vahvista tapaamista tämän sivun kautta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        "Lähettäkää tämän sivun sähköpostilinkin kautta lyhyt kuvaus tilanteesta ja tarvitsemastanne avusta.",
       sources: ['/fi/faq', '/fi/pricing'],
     },
     faq: {
@@ -735,7 +735,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        "Pošlete prostřednictvím odkazu na e-mail na této stránce stručný popis situace a toho, o jakou pomoc žádáte.",
       sources: ['/cs/faq', '/cs/pricing'],
     },
     faq: {
@@ -767,7 +767,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Küldjön összefoglalót a kapcsolatfelvételi űrlapon: mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidő, ha ismeri. A kezdeti szakaszban még nem kell személyazonosító okmányokat vagy a teljes bizonyítékanyagot beküldeni. Az iroda nem ígér válaszadási határidőt, és nem erősít meg időpontot ezen az oldalon keresztül. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        "Küldjön az oldalon található e-mail-linken keresztül rövid összefoglalót a helyzetéről és a szükséges segítségről.",
       sources: ['/hu/faq', '/hu/pricing'],
     },
     faq: {
@@ -799,7 +799,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Trimiteți un rezumat prin formularul de contact: ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. În faza inițială nu trebuie trimise încă acte de identitate sau întregul material probator. Cabinetul nu promite un termen de răspuns și nu confirmă o programare prin această pagină. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        "Trimiteți prin legătura de e-mail de pe această pagină un scurt rezumat al situației și al ajutorului de care aveți nevoie.",
       sources: ['/ro/faq', '/ro/pricing'],
     },
     faq: {
@@ -831,7 +831,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Надішліть виклад через форму звернення: що сталося, якої допомоги потребуєте, який зв’язок справа має з Тайванем, і строк, якщо Ви його знаєте. На початковому етапі ще не потрібно надсилати документи, що посвідчують особу, чи весь доказовий матеріал. Фірма не обіцяє строку відповіді та не підтверджує зустріч через цю сторінку. Консультація відбувається лише англійською, китайською, японською та корейською.',
+        "Надішліть за посиланням електронної пошти на цій сторінці стислий опис ситуації та допомоги, якої Ви потребуєте.",
       sources: ['/uk/faq', '/uk/pricing'],
     },
     faq: {
@@ -863,7 +863,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Στείλτε περίληψη με τη φόρμα επικοινωνίας: τι συνέβη, ποια βοήθεια χρειάζεστε, ποιον δεσμό έχει η υπόθεση με την Ταϊβάν και την προθεσμία, αν τη γνωρίζετε. Στο αρχικό στάδιο δεν χρειάζεται ακόμη να σταλούν έγγραφα ταυτότητας ή το σύνολο των αποδεικτικών στοιχείων. Το γραφείο δεν υπόσχεται προθεσμία απάντησης και δεν επιβεβαιώνει ραντεβού μέσω αυτής της σελίδας. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+        "Στείλτε μέσω του συνδέσμου e-mail σε αυτή τη σελίδα μια σύντομη περιγραφή της κατάστασης και της βοήθειας που χρειάζεστε.",
       sources: ['/el/faq', '/el/pricing'],
     },
     faq: {
@@ -895,7 +895,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'שלחו תקציר בטופס יצירת הקשר: מה קרה, לאיזו עזרה אתם זקוקים, מהי זיקת העניין לטאיוואן, והמועד אם הוא ידוע לכם. בשלב הראשון אין צורך לשלוח עדיין מסמכי זיהוי או את מכלול הראיות. המשרד אינו מבטיח מועד למענה ואינו מאשר פגישה דרך עמוד זה. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+        "שלחו בקישור הדוא\"ל בעמוד זה תקציר קצר של המצב והעזרה שאתם זקוקים לה.",
       sources: ['/he/faq', '/he/pricing'],
     },
     faq: {
@@ -927,7 +927,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'যোগাযোগ ফর্ম থেকে আপনার সার পাঠান: কী ঘটেছে, কী সহায়তা দরকার, বিষয়টির তাইওয়ানের সঙ্গে কী যোগ এবং জানা থাকলে সময়সীমা। শুরুতে পরিচয়পত্র বা সম্পূর্ণ প্রমাণ পাঠানো আবশ্যক নয়। কার্যালয় উত্তরের সময়সীমার প্রতিশ্রুতি দেয় না এবং এই পাতা থেকে সাক্ষাৎ নির্ধারণ নিশ্চিত করে না। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয় ভাষায় হয়।',
+        "এই পাতার ই-মেইল লিঙ্কে সংক্ষেপে আপনার বিষয় লিখে পাঠান।",
       sources: ['/bn/faq', '/bn/pricing'],
     },
     faq: {
@@ -959,7 +959,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'رابطہ فارم سے اپنا خلاصہ بھیجیں: کیا ہوا، کس مدد کی ضرورت ہے، معاملے کا تائیوان سے کیا تعلق ہے اور اگر معلوم ہو تو مہلت۔ شروع میں شناختی دستاویز یا مکمل ثبوت بھیجنا ضروری نہیں۔ دفتر جواب کی مدت کا وعدہ نہیں کرتا اور اس صفحے سے ملاقات کا وقت طے نہیں کرتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔',
+        "اس صفحے کے ای میل لنک سے مختصراً اپنا معاملہ لکھ کر بھیجیں۔",
       sources: ['/ur/faq', '/ur/pricing'],
     },
     faq: {
@@ -991,7 +991,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'خلاصه را از فرم تماس بفرستید: چه رخ داده، چه کمکی می‌خواهید، موضوع چه ربطی به تایوان دارد، و مهلت را اگر می‌دانید. در مرحلهٔ نخست نیازی به فرستادن مدارک هویت یا همهٔ ادله نیست. دفتر مهلت پاسخ وعده نمی‌دهد و وقت ملاقات را از این صفحه تأیید نمی‌کند. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.',
+        "خلاصهٔ موضوع را از پیوند رایانامهٔ این صفحه بفرستید.",
       sources: ['/fa/faq', '/fa/pricing'],
     },
     faq: {
@@ -1023,7 +1023,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'ဆက်သွယ်ပုံစံမှ အကျဉ်းချုပ် ပေးပို့ပါ။ ဖြစ်ပျက်သည်၊ မည်သည့်အကူအညီ လိုသည်၊ အမှု၏ ထိုင်ဝမ်နှင့် ဆက်စပ်မှုနှင့် သိပါက သတ်မှတ်ကာလကို ဖော်ပြပါ။ အစောပိုင်းအဆင့်တွင် ကိုယ်ပိုင်အထောက်အထား သို့မဟုတ် သက်သေအားလုံးကို မပေးပို့ရသေးပါ။ ရုံးသည် ပြန်ကြားချိန်ကို အာမမခံသည့်အပြင် ဤစာမျက်နှာမှ ချိန်းဆိုမှုကို အတည်မပြုပါ။ တိုင်ပင်ဆွေးနွေးမှုကို အင်္ဂလိပ်၊ တရုတ် (中文)၊ ဂျပန်နှင့် ကိုရီးယားဖြင့်သာ ဆောင်ရွက်သည်။',
+        "ဤစာမျက်နှာရှိ အီးမေးလ်လင့်မှတစ်ဆင့် အခြေအနေနှင့် လိုအပ်ချက်အကျဉ်း ပေးပို့ပါ။",
       sources: ['/my/faq', '/my/pricing'],
     },
     faq: {
@@ -1055,7 +1055,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'தொடர்புப் படிவத்தின் வழியாக உங்கள் சுருக்கத்தை அனுப்புங்கள்: என்ன நடந்தது, எந்த உதவி தேவை, வழக்கிற்கும் தைவானுக்கும் உள்ள தொடர்பு, தெரிந்தால் காலக்கெடு. தொடக்கத்தில் அடையாள ஆவணங்கள் அல்லது முழுச் சான்றையும் அனுப்ப வேண்டியதில்லை. அலுவலகம் பதிலளிக்கும் காலக்கெடு எதையும் உறுதி அளிக்கவில்லை; இந்தப் பக்கத்திலிருந்து சந்திப்பையும் உறுதிப்படுத்தவில்லை. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரிய மொழி ஆகியவற்றிலேயே நடைபெறும்.',
+        "இந்தப் பக்கத்தின் மின்னஞ்சல் இணைப்பில் சுருக்கமாக உங்கள் வழக்கை எழுதி அனுப்புங்கள்.",
       sources: ['/ta/faq', '/ta/pricing'],
     },
     faq: {
@@ -1087,7 +1087,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'सम्पर्क फारमबाट आफ्नो सार पठाउनुहोस्: के भयो, कुन सहयोग चाहिन्छ, मुद्दाको ताइवानसँग के सम्बन्ध छ र थाहा भए समयसीमा। सुरुमा परिचयपत्र वा पूरा प्रमाण पठाउन पर्दैन। फर्म जवाफको समयसीमाको वाचा गर्दैन र यस पृष्ठबाट निर्धारित भेट पुष्टि गर्दैन। परामर्श अङ्ग्रेजी, चिनियाँ, जापानी र कोरियालीमा मात्र हुन्छ।',
+        "यस पृष्ठको इमेल लिङ्कबाट आफ्नो विषयको संक्षिप्त विवरण पठाउनुहोस्।",
       sources: ['/ne/faq', '/ne/pricing'],
     },
     faq: {
@@ -1119,7 +1119,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'សូមផ្ញើសេចក្ដីសង្ខេបតាមទម្រង់ទំនាក់ទំនង ដោយបញ្ជាក់ថាអ្វីបានកើតឡើង លោកអ្នកត្រូវការជំនួយអ្វី រឿងនេះពាក់ព័ន្ធតៃវ៉ាន់យ៉ាងណា និងកាលកំណត់បើមាន។ នៅដំណាក់កាលដំបូងមិនចាំបាច់ផ្ញើឯកសារអត្ដសញ្ញាណ ឬភស្ដុតាងទាំងអស់ទេ។ ការិយាល័យមិនសន្យារយៈពេលឆ្លើយតប និងមិនបញ្ជាក់ការណាត់ជួបតាមទំព័រនេះ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។',
+        "សូមផ្ញើសេចក្ដីសង្ខេបតាមតំណអ៊ីមែលនៅលើទំព័រនេះ។",
       sources: ['/km/faq', '/km/pricing'],
     },
     faq: {
@@ -1151,7 +1151,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Холбоо барих маягтаар товч тойм илгээнэ үү: юу болсон, ямар тусламж хэрэгтэй, хэрэг Тайваньтай ямар холбоотой, хугацаа байвал түүнийг. Энэ шатанд иргэний үнэмлэх, бүх нотлох баримтыг илгээх шаардлагагүй. Фирм хариу өгөх хугацаа амлахгүй, энэ хуудсаар цаг товлолт баталгаажуулахгүй. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.',
+        "Энэ хуудсын имэйл холбоосоор товч тоймоо илгээнэ үү.",
       sources: ['/mn/faq', '/mn/pricing'],
     },
     faq: {
@@ -1183,7 +1183,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ netreba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+        "Zašlite prostredníctvom e-mailového prepojenia na tejto stránke stručný opis situácie a toho, akú pomoc potrebujete.",
       sources: ['/sk/faq', '/sk/pricing'],
     },
     faq: {
@@ -1215,7 +1215,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Изпратете кратко изложение чрез формуляра за контакт: какво се е случило, каква помощ е нужна, каква връзка има делото с Тайван и срока, ако има такъв. На този етап още не е нужно да изпращате документи за самоличност или всички доказателства. Кантората не обещава срок за отговор и не потвърждава среща чрез тази страница. Консултацията се провежда само на английски, китайски, японски и корейски.',
+        "Изпратете чрез връзката за електронна поща на тази страница кратко описание на ситуацията и каква помощ Ви е нужна.",
       sources: ['/bg/faq', '/bg/pricing'],
     },
     faq: {
@@ -1247,7 +1247,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Pošaljite sažetak kontaktnim obrascem: što se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu predmet ima s Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati isprave o identitetu ni cjelokupni dokazni materijal. Ured ne obećava rok za odgovor i ne potvrđuje sastanak putem ove stranice. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        "Pošaljite nam putem poveznice e-pošte na ovoj stranici kratak opis situacije i navedite kakva Vam je pomoć potrebna.",
       sources: ['/hr/faq', '/hr/pricing'],
     },
     faq: {
@@ -1279,7 +1279,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati lične isprave niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        "Pošaljite nam putem veze e-pošte na ovoj stranici kratak opis situacije i navedite kakva Vam je pomoć potrebna.",
       sources: ['/sr/faq', '/sr/pricing'],
     },
     faq: {
@@ -1311,7 +1311,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Pošljite povzetek prek obrazca za stik: kaj se je zgodilo, kakšno pomoč potrebujete, kakšno vez ima zadeva s Tajvanom in rok, če ga poznate. V začetni fazi še ni treba pošiljati osebnih dokumentov niti celotnega dokaznega gradiva. Pisarna ne obljublja roka za odgovor in ne potrjuje sestanka prek te strani. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
+        "Pošljite prek povezave e-pošte na tej strani kratek opis situacije in kakšno pomoč potrebujete.",
       sources: ['/sl/faq', '/sl/pricing'],
     },
     faq: {
@@ -1343,7 +1343,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Atsiųskite santrauką kontaktine forma: kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Pradiniame etape dar nereikia siųsti tapatybės dokumentų ar visos įrodymų medžiagos. Kontora nežada atsakymo termino ir nepatvirtina susitikimo per šį puslapį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        "Atsiųskite per šio puslapio el. pašto nuorodą trumpą situacijos ir reikalingos pagalbos aprašymą.",
       sources: ['/lt/faq', '/lt/pricing'],
     },
     faq: {
@@ -1375,7 +1375,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Nosūtiet kopsavilkumu saziņas veidlapā: kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Sākumposmā vēl nav jānosūta personas dokumenti vai visa pierādījumu kopa. Birojs nesola atbildes termiņu un neapstiprina tikšanos, izmantojot šo lapu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        "Nosūtiet caur e-pasta saiti šajā lapā īsu situācijas un nepieciešamās palīdzības aprakstu.",
       sources: ['/lv/faq', '/lv/pricing'],
     },
     faq: {
@@ -1407,7 +1407,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Saatke kokkuvõte kontaktvormiga: mis juhtus, millist abi vajate, milline on asja side Taiwaniga, ja tähtaeg, kui see on teada. Algfaasis ei ole vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali. Büroo ei anna lubadust vastamise tähtaja kohta ega kinnita kohtumist selle lehe kaudu. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
+        "Saatke selle lehe e-posti lingi kaudu lühike ülevaade olukorrast ja vajalikust abist.",
       sources: ['/et/faq', '/et/pricing'],
     },
     faq: {
@@ -1439,7 +1439,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Enviï un resum pel formulari de contacte: què va passar, quina ajuda necessita, quin vincle té l’assumpte amb Taiwan i el termini, si el coneix. En la fase inicial encara no cal enviar documents d’identitat ni tot el material de prova. El despatx no promet un termini de resposta i no confirma una cita a través d’aquesta pàgina. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+        "Enviï per l’enllaç de correu d’aquesta pàgina una breu descripció de la situació i de l’ajuda que necessita.",
       sources: ['/ca/faq', '/ca/pricing'],
     },
     faq: {
@@ -1471,7 +1471,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Sendu samantektina með tengiliðaeyðublaðinu: hvað gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinn ef þú þekkir hann. Í fyrsta skrefi þarftu enn ekki að senda persónuskilríki eða öll sönnunargögn. Skrifstofan heitir engum svarfresti og staðfestir engan tíma í gegnum þessa síðu. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
+        "Sendu í gegnum tölvupósttengilinn á þessari síðu stutta lýsingu á aðstæðum og þeirri aðstoð sem þú þarft.",
       sources: ['/is/faq', '/is/pricing'],
     },
     faq: {

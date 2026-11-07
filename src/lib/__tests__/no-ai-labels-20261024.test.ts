@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { getColumnDisclaimer } from '@/lib/ai-authored-columns';
 
 /** 2026-10-24: no public AI label anywhere in published content (captions, alt text, body). */
@@ -16,22 +16,31 @@ function walk(dir: string): string[] {
 }
 
 describe('no AI labels in published content', () => {
-  const files = walk(ROOT);
+  let files: { file: string; lines: string[] }[] = [];
+
+  // Read thousands of content files once, allowing for a cold or busy filesystem.
+  beforeAll(() => {
+    files = walk(ROOT).map((file) => ({
+      file: path.relative(ROOT, file),
+      lines: fs.readFileSync(file, 'utf8').split('\n'),
+    }));
+  }, 60_000);
+
   it('finds content files', () => expect(files.length).toBeGreaterThan(0));
   it('no content file carries an AI-generated/AI-written label', () => {
-    const hits = files.flatMap((f) =>
-      fs.readFileSync(f, 'utf8').split('\n')
+    const hits = files.flatMap(({ file, lines }) =>
+      lines
         .map((line, i) => ({ line, i }))
         .filter(({ line }) => !/\]\(https?:/.test(line) && LABEL.test(line))
-        .map(({ i, line }) => `${path.relative(ROOT, f)}:${i + 1}: ${line.slice(0, 120)}`),
+        .map(({ i, line }) => `${file}:${i + 1}: ${line.slice(0, 120)}`),
     );
     expect(hits).toEqual([]);
   });
   it('image captions and alt text never mention AI', () => {
-    const hits = files.flatMap((f) =>
-      fs.readFileSync(f, 'utf8').split('\n')
+    const hits = files.flatMap(({ file, lines }) =>
+      lines
         .filter((l) => /^(featured_image_caption|featured_image_alt|image_caption|image_alt):/.test(l) && /\bAI\b|ＡＩ|\bIA\b|人工智慧|인공지능/.test(l))
-        .map((l) => `${path.relative(ROOT, f)}: ${l.slice(0, 120)}`),
+        .map((l) => `${file}: ${l.slice(0, 120)}`),
     );
     expect(hits).toEqual([]);
   });

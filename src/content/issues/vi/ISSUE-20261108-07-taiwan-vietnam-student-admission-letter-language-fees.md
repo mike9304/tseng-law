@@ -17,7 +17,7 @@ faq:
   - q: "Thư chấp thuận nhập học có bắt buộc phải có bản tiếng Việt không?"
     a: "Điều 7 yêu cầu thông tin bằng tiếng Trung và tiếng Anh; trường có thể cung cấp thêm bản bằng ngôn ngữ của sinh viên. Vì vậy, bản tiếng Việt không phải yêu cầu bắt buộc của điều này."
   - q: "Thông tin về học bổng tại triển lãm có thay được giấy tờ chứng minh tài chính không?"
-    a: "Điều 7 yêu cầu chứng minh đủ khả năng tài chính để học tại Đài Loan, hoặc chứng minh được chính phủ, trường hay tổ chức tư nhân cấp học bổng toàn phần. Thông tin giới thiệu cơ hội học bổng chưa phải chứng minh đã được cấp học bổng toàn phần."
+    a: "Điều 7 yêu cầu chứng minh đủ khả năng tài chính để học tại Đài Loan, hoặc chứng minh được chính phủ, trường hay tổ chức tư nhân cấp học bổng toàn phần. Thông tin giới thiệu cơ hội học bổng không thay thế giấy tờ chứng minh sinh viên đã được cấp học bổng toàn phần."
   - q: "Trường có được giao toàn bộ việc tuyển sinh cho trung tâm tư vấn không?"
     a: "Điều 6 không cho phép trường giao việc tuyển sinh cho tổ chức hay cá nhân ngoài trường, trừ quảng bá và hỗ trợ sinh viên thực hiện thủ tục cần thiết để đến Đài Loan. Thông tin do trường hoặc bên được trường giao việc cung cấp không được trái quy định và thông báo tuyển sinh."
 audience: ["vi"]
@@ -36,7 +36,7 @@ Sau buổi tư vấn, gia đình có thể muốn biết học bằng ngôn ng�
 
 Thư phải ghi tên sinh viên, chương trình và bậc học, ngôn ngữ giảng dạy, năm nhập học và ngày bắt đầu học kỳ. Quy định thu, hoàn học phí cùng các khoản phí học tập, thông tin học bổng và những nội dung cần thông báo khác cũng phải có trong thư. Trường phải cung cấp bằng tiếng Trung và tiếng Anh, đồng thời xác nhận sinh viên hiểu quyền, nghĩa vụ liên quan.
 
-Trường có thể cung cấp thêm bản tiếng Việt. Với chương trình được giới thiệu bằng tiếng Anh, nội dung về ngôn ngữ trên thư nhập học là căn cứ để đối chiếu lời tư vấn.
+Trường có thể cung cấp thêm bản tiếng Việt. Với chương trình được giới thiệu là giảng dạy bằng tiếng Anh, nội dung về ngôn ngữ trên thư nhập học là căn cứ để đối chiếu lời tư vấn.
 
 ## Thông tin tuyển sinh và vai trò của trung tâm tư vấn
 
@@ -44,11 +44,11 @@ Theo [Điều 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0110001&f
 
 Trường chỉ được giao cho bên ngoài việc quảng bá hoặc hỗ trợ sinh viên làm thủ tục cần thiết để đến Đài Loan, trong phạm vi ngoại lệ của điều này. Việc tuyển sinh còn lại không được giao cho tổ chức, cá nhân ngoài trường. Trường cũng phải kịp thời kiểm tra xem bên được giao việc có thu phí bất hợp lý, thiết lập quan hệ vay mượn với sinh viên hoặc vi phạm pháp luật hay không.
 
-Thông tin phải nhất quán. Cùng điều luật cấm trường và bên được giao việc cung cấp thông tin trái quy định tuyển sinh, thông báo tuyển sinh hoặc quy định liên quan. Nếu khoản phí hay ngôn ngữ được tư vấn khác với văn bản của trường, thư trả lời của bộ phận tuyển sinh sẽ giúp làm rõ chỗ chênh lệch.
+Thông tin phải nhất quán. Điều này cũng cấm trường và bên được giao việc cung cấp thông tin trái quy định tuyển sinh, thông báo tuyển sinh hoặc quy định liên quan. Nếu khoản phí hay ngôn ngữ được tư vấn khác với văn bản của trường, thư trả lời của bộ phận tuyển sinh sẽ giúp làm rõ chỗ chênh lệch.
 
 ## Học bổng toàn phần và chứng minh tài chính
 
-Điều 7 yêu cầu hồ sơ có chứng minh đủ khả năng tài chính để học tại Đài Loan, hoặc chứng minh được chính phủ, trường hay tổ chức tư nhân cấp học bổng toàn phần. Có cơ hội xin học bổng chưa có nghĩa đã được nhận.
+Điều 7 yêu cầu hồ sơ có giấy tờ chứng minh đủ khả năng tài chính để học tại Đài Loan, hoặc chứng minh được chính phủ, trường hay tổ chức tư nhân cấp học bổng toàn phần. Có cơ hội xin học bổng chưa có nghĩa đã được nhận.
 
 Bản tin về triển lãm không xác nhận học bổng cho từng người. Với gia đình đang tính chi phí, thông báo cấp học bổng và các khoản thu ghi trong hồ sơ của trường mới cho thấy phần nào đã được hỗ trợ, phần nào còn phải tự chi trả.
 

@@ -63,6 +63,8 @@ In a brokered deal, the agency agreement, written offer, earnest money receipt, 
 
 Dual agency requires both sides' written consent ([Article 24-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060066&flno=24-2)). The brokerage must then treat both sides fairly on comparable prices and contract terms, inform the buyer or tenant, disclose defects professional diligence should have found, and help with inspections. Anyone brokering as a business must also investigate the contract matters, the parties' ability to perform, and their capacity to conclude that contract ([Civil Code Article 567](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=567), paragraph 2). Advertising that does not match the facts also brings liability for damages ([Article 21](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060066&flno=21)).
 
+In a brokered deal, the written offer, earnest money receipt and disclosure statement should all bear a licensed broker's signature. Without it, the brokerage faces a fine and the agent a reprimand (申誡) under Articles 29 and 31, each at paragraph 1, item 1.
+
 ## Who pays when the information was wrong
 
 When an agent's intentional or negligent act in brokering or sales-agency (代銷) work causes loss to a party to the deal, the brokerage and the agent are jointly liable ([Article 26](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060066&flno=26), paragraph 2). So a buyer can claim against a brokerage the seller hired.
@@ -76,8 +78,6 @@ How large is that? [Article 3 of the deposit rules](https://law.moj.gov.tw/LawCl
 ## Where a Taiwan lawyer fits
 
 Taiwan lawyers can check refund and withdrawal terms, weigh a Fair Trade Commission complaint, and handle repayment, liability, fund mediation and litigation. Consultations on [civil matters](/en/services/civil) are available at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Hovering International Law Firm (昊鼎國際法律事務所), Taipei: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103. Taichung: 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453.
-
-In a brokered deal, the written offer, earnest money receipt and disclosure statement should all bear a licensed broker's signature. Without it, the brokerage faces a fine and the agent a reprimand (申誡) under Articles 29 and 31, each at paragraph 1, item 1.
 
 ## Sources
 

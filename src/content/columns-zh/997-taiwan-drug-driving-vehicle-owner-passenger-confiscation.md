@@ -62,7 +62,7 @@ author: legal-ai-assistant
 外國人借車給他人時，也應把車主、駕駛與乘客的資料分開。借出時間、對方狀態、返還前聯繫、檢驗結果與沒入通知依時間排好，才能確認要爭執的是哪一項處分。
 
 
-在台灣遇到這類問題，可委託律師核對車主罰鍰與沒入處分、整理借車證據，並確認可用的交通裁決救濟程序及期限。家屬人在海外，也可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+在台灣遇到這類問題，可委託律師核對車主罰鍰與沒入處分、整理借車證據，並確認可用的交通裁決救濟程序及期限。家屬人在海外，也可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

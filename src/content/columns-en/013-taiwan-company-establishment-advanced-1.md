@@ -46,15 +46,9 @@ Because Taiwan has many money-laundering cases, opening a bank account is becomi
 
 Advice:
 
-Because the investment-plan review also takes time,
-
-prepare the investment plan while looking for a registered office address.
+Because the investment-plan review also takes time, prepare the investment plan while looking for a registered office address. Allow time to find an address, sign a lease, open a preparatory company account, and remit the capital.
 
 Under Article 9 of the Statute for Investment by Foreign Nationals, the approved capital contribution must arrive in full within the period set by the competent authority (核定期限); confirm the actual deadline in the individual approval document (in practice it is often set at around one year).
-
-so you will have enough time to find an address, sign a lease,
-
-open a preparatory company account, and remit the capital.
 
 2. Can I open a company bank account without a Taiwan residence certificate?
 

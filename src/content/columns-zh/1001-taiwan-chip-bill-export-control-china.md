@@ -53,7 +53,7 @@ author: legal-ai-assistant
 
 現行貿易法沒有這些新條文。[法務部現行法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0090004)的一般刑度與草案不同。現行實體管理名單與再出口程序，可見[既有專文](/zh-hant/columns/taiwan-semiconductor-export-control-entity-list-2025)；本文只談公聽會的新規定。
 
-企業可趁現在整理最終使用者、目的地、轉售限制與核准紀錄，並預留公告後調整交期的空間。草案還可能變動。可委託台灣律師核對現行許可義務、契約轉售限制及最終使用者資料；[企業法律諮詢](/zh-hant/services/investment)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是台北市大同区承徳路一段35号7F-2。提供產品規格、交易方與既有核准文件，才能對照實際交易。
+企業可趁現在整理最終使用者、目的地、轉售限制與核准紀錄，並預留公告後調整交期的空間。草案還可能變動。可委託台灣律師核對現行許可義務、契約轉售限制及最終使用者資料；[企業法律諮詢](/zh-hant/services/investment)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是103 臺北市大同區承德路一段35號7樓之2。提供產品規格、交易方與既有核准文件，才能對照實際交易。
 
 ## 參考資料
 

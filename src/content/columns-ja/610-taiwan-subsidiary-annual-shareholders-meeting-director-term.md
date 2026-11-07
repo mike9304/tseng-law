@@ -107,7 +107,7 @@ author: "legal-ai-assistant"
 
 昊鼎国際法律事務所、[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。
 
-董事一人の場合に記録しておくことを勧めるのは、決算を承認した日と対象となる会計年度です。二人の董事を置く股份有限公司なら、董事会規定の準用により議事録が必要になります（[第128条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=128-1)第2項、[第207条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=207)、[第183条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J00%380001&flno=183)）。
+董事一人の場合に記録しておくことを勧めるのは、決算を承認した日と対象となる会計年度です。
 
 ## 参考にした公的資料
 

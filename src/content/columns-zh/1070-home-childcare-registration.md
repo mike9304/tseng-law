@@ -51,7 +51,7 @@ featured_image_caption: 虛構情境
 
 另一部法律已經公布，還沒有施行。[兒童托育服務法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050217)於2026年5月8日制定公布全文94條。[第94條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050217&flno=94)把施行日期交給行政院。截至2026年11月5日，全國法規資料庫仍標示施行日期未定、尚未生效。[第92條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050217&flno=92)寫明，自施行之日起，居家托育和托育機構的管理適用新法，兒少法裡關於居家托育服務和托嬰中心的規定不再適用。現在據以登記和處罰的，仍是上面的第25條、第26條和第90條。
 
-家長或托育人員可委託台灣律師核對登記資格、契約與改善通知，處理收托人數或裁罰爭議。[法律諮詢](/zh-hant/services/civil)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是台北市大同区承徳路一段35号7F-2。核對收托人數時，請把同一時段實際在場的孩子與年齡一起列出。
+家長或托育人員可委託台灣律師核對登記資格、契約與改善通知，處理收托人數或裁罰爭議。[法律諮詢](/zh-hant/services/civil)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是103 臺北市大同區承德路一段35號7樓之2。核對收托人數時，請把同一時段實際在場的孩子與年齡一起列出。
 
 ## 參考
 

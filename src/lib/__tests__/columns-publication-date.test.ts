@@ -822,7 +822,113 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '1013': '2026-11-03',
   '1014': '2026-11-03',
   '1015': '2026-11-03',
+  // Reviewed main-locale batch outside the 2026-11-08 release packet (published 2026-11-06).
+  '1073': '2026-11-06',
+  '1074': '2026-11-06',
+  '1075': '2026-11-06',
+  '1076': '2026-11-06',
+  '1077': '2026-11-06',
+  '1078': '2026-11-06',
+  '1079': '2026-11-06',
+  '1080': '2026-11-06',
+  '1081': '2026-11-06',
+  '1082': '2026-11-06',
+  '1083': '2026-11-06',
+  '1084': '2026-11-06',
+  '1085': '2026-11-06',
+  '1086': '2026-11-06',
+  '1087': '2026-11-06',
+  '1088': '2026-11-06',
+  '1089': '2026-11-06',
+  '1090': '2026-11-06',
+  '1091': '2026-11-06',
+  '1092': '2026-11-06',
+  '1093': '2026-11-06',
+  '1094': '2026-11-06',
+  '1095': '2026-11-06',
+  '1096': '2026-11-06',
+  '1097': '2026-11-06',
+  '1098': '2026-11-06',
+  '1099': '2026-11-06',
+  '1100': '2026-11-06',
+  '1101': '2026-11-06',
+  '1102': '2026-11-06',
+  '1103': '2026-11-06',
+  '1104': '2026-11-06',
+  '1105': '2026-11-06',
+  '1106': '2026-11-06',
+  '1107': '2026-11-06',
+  '1108': '2026-11-06',
+  '1109': '2026-11-06',
+  '1110': '2026-11-06',
+  '1111': '2026-11-06',
+  '1112': '2026-11-06',
 };
+
+/**
+ * Reviewed 2026-11-06 main-locale columns (sources: frontmatter `published`, archive sort).
+ * Preserved on main per article-release integration-proof `other_main_content_preserved`.
+ */
+const REVIEWED_MAIN_COLUMN_SLUGS_20261106: Record<string, readonly string[]> = {
+  ko: [
+    'taiwan-korean-employee-missing-pension-contributions',
+    'taiwan-former-employee-contract-apparent-authority',
+    'taiwan-paid-judgment-debt-second-enforcement-objection',
+    'taiwan-shareholder-derivative-suit-director-litigation-costs',
+    'taiwan-litigation-notice-korean-manufacturer-intervention-effect',
+    'taiwan-creditor-revocation-debtor-property-transfer',
+    'taiwan-attached-loaned-machinery-third-party-objection-defendant',
+    'taiwan-administrative-decision-missing-appeal-instructions-deadline',
+    'taiwan-creditor-refuses-payment-consignation-debt-discharge',
+    'taiwan-creditor-subrogation-debtor-unclaimed-receivable',
+  ],
+  'zh-hant': [
+    'taiwan-occupational-accident-emergency-return-home-eight-hour-report',
+    'taiwan-taoyuan-agricultural-disaster-certificate-low-interest-loan',
+    'taiwan-nonurban-land-permeable-area-compensation-draft-2026',
+    'taiwan-agricultural-business-subsidy-eligibility-draft-2026',
+    'taiwan-railway-training-ticketing-security-operational-medical-check-draft',
+    'taiwan-private-infrastructure-construction-income-tax-reporting-draft',
+    'taiwan-power-industry-bond-investment-net-profit-use-draft',
+    'taiwan-oral-nicotine-import-control-smoking-cessation-description',
+    'taiwan-lost-well-drilling-technician-certificate-reissue-authority',
+    'taiwan-military-supplier-certificate-restoration-three-year-period',
+  ],
+  en: [
+    'taiwan-us-driver-license-exchange-state-nationality-reciprocity',
+    'taiwan-us-dollar-debt-nt-dollar-check-currency-agreement',
+    'taiwan-partial-payment-multiple-debts-appropriation-order',
+    'taiwan-civil-plaintiff-withdrawal-defendant-response-consent',
+    'taiwan-us-civil-case-taiwan-evidence-court-request',
+    'taiwan-us-employee-signature-authority-fbar-records-handoff',
+    'taiwan-us-citizen-government-records-access-information-request',
+    'taiwan-recruiter-mainland-china-candidate-data-transfer-restriction',
+    'taiwan-overseas-draftee-departure-documents-return-2026',
+    'taiwan-gambling-link-paid-promotion-principal-accomplice-proceeds',
+  ],
+  ja: [
+    'taiwan-tainan-bail-company-asset-transaction-prior-report-order',
+    'taiwan-foreign-yacht-repair-berthing-permit-extension',
+    'taiwan-columbarium-nonperiodic-use-right-duration',
+    'taiwan-religious-group-land-nominee-registration-special-application',
+    'taiwan-recreational-diving-foreign-certification-scope',
+    'taiwan-temporary-antique-exhibition-reexport-application-timing',
+    'taiwan-underwater-cultural-heritage-discovery-emergency-exception',
+    'taiwan-indigenous-traditional-pattern-commercial-use-permission',
+    'taiwan-domestic-air-ticket-refund-thirty-percent-deduction-scope',
+    'taiwan-micro-electric-two-wheeler-rental-insurance-contract',
+  ],
+};
+
+function archiveLeadWithReviewedNov6(locale: string): string[] {
+  const reviewedNov6 = REVIEWED_MAIN_COLUMN_SLUGS_20261106[locale] ?? [];
+  return [...reviewedNov6, ...archiveLeadSlugsFor(locale)];
+}
+
+function expectedArchiveLeadPublicationDate(slug: string, locale: string): string {
+  if (REVIEWED_MAIN_COLUMN_SLUGS_20261106[locale]?.includes(slug)) return '2026-11-06';
+  return archiveLeadPublicationDate(slug, locale);
+}
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
 // decision 2026-09-28); these locales derive the publication date from date_display.
@@ -890,11 +996,11 @@ const GAP_COLUMN_SLUGS = [
 const GAP = GAP_COLUMN_SLUGS.length;
 
 // 2026-09-30 expertise columns in the Korean archive (043, 046, 048): newest, in source order.
-const KO_EXPERTISE_SLUGS = archiveLeadSlugsFor('ko'); // 051…059 (2026-10-01, source order) then the 2026-09-30 batch
-const KO_LEAD = KO_EXPERTISE_SLUGS.length;
+const KO_ARCHIVE_LEAD_SLUGS = archiveLeadWithReviewedNov6('ko'); // Nov 6 main batch, then 2026-11-05 … 2026-09-30 lead
+const KO_LEAD = KO_ARCHIVE_LEAD_SLUGS.length;
 
 const EXPECTED_ARCHIVE_ORDER = [
-  ...KO_EXPERTISE_SLUGS,
+  ...KO_ARCHIVE_LEAD_SLUGS,
   ...GAP_COLUMN_SLUGS,
   ...NEW_DIVORCE_SLUGS,
   'marrying-taiwanese-national-registration-checklist',
@@ -941,7 +1047,7 @@ describe('Korean column publication dates', () => {
     const posts = getAllColumnPosts('ko');
 
     expect(posts.map((post) => post.slug)).toEqual(EXPECTED_ARCHIVE_ORDER);
-    expect(posts.slice(0, KO_LEAD).map((post) => post.slug)).toEqual(KO_EXPERTISE_SLUGS);
+    expect(posts.slice(0, KO_LEAD).map((post) => post.slug)).toEqual(KO_ARCHIVE_LEAD_SLUGS);
     expect(posts.slice(KO_LEAD, KO_LEAD + GAP).map((post) => post.slug)).toEqual(GAP_COLUMN_SLUGS);
     expect(posts.slice(KO_LEAD + GAP, KO_LEAD + GAP + 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
     expect(posts[KO_LEAD + GAP + 5]?.slug).toBe(SEMICONDUCTOR_SLUG);
@@ -970,7 +1076,8 @@ describe('localized column publication ordering', () => {
           ? NATIVE_LOCALE_COLUMN_FILES[locale as keyof typeof NATIVE_LOCALE_COLUMN_FILES].length
           : 0;
       const expertiseCount = expertiseSlugsFor(locale).length; // 041–048 subset + 050 traffic
-      expect(files).toHaveLength(31 + nativeCount + expertiseCount);
+      const reviewedNov6Count = REVIEWED_MAIN_COLUMN_SLUGS_20261106[locale]?.length ?? 0;
+      expect(files).toHaveLength(31 + nativeCount + expertiseCount + reviewedNov6Count);
       for (const file of files) {
         const verifiedDate = verifiedPublicationDate(locale, file);
         const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'));
@@ -988,11 +1095,11 @@ describe('localized column publication ordering', () => {
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const allPosts = getAllColumnPosts(locale);
     // The 2026-09-30 expertise columns (a per-locale subset of 041-048) lead the archive.
-    const expertiseSlugs = archiveLeadSlugsFor(locale);
+    const expertiseSlugs = archiveLeadWithReviewedNov6(locale);
     const lead = expertiseSlugs.length;
     expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
     expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
-      expertiseSlugs.map((slug) => archiveLeadPublicationDate(slug, locale)),
+      expertiseSlugs.map((slug) => expectedArchiveLeadPublicationDate(slug, locale)),
     );
     // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
     // so equal-date source order places them right after that batch; the shared corpus follows.

@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 提告之後，檢察官做的第一件事，可能是把案子送去調解。
 
-2024年1月1日施行的醫療事故預防及爭議處理法規定，檢察官偵查或法院審理的醫療爭議刑事案件，應移付管轄的醫療爭議調解會先行調解，調解期間停止偵查、審判（[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=16)第1項）。同條第4項另列例外，例如已經依本法調解不成立的案件。調解會要在資料齊備起45日內開會、3個月內完成，必要時可延長（[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=14)）。
+2024年1月1日施行的醫療事故預防及爭議處理法規定，檢察官偵查或法院審理的醫療爭議刑事案件，應移付管轄的醫療爭議調解會先行調解，調解期間停止偵查、審判（[第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=16)第1項）。同條第4項另列例外，例如已經依本法調解不成立的案件。調解會要在資料齊備之日起45日內開會、3個月內完成，必要時可延長（[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=14)）。
 
 醫院這邊呢？醫療機構應組成醫療事故關懷小組，在事故發生翌日起5個工作日內，向病人、家屬或代理人說明、溝通並提供關懷；家屬因語言、文化因素溝通困難時，要由受過相關訓練的人員協助（[第6條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=6)）。這個過程裡，醫院或醫事人員表達的遺憾、道歉或讓步，除非醫療爭議當事人都同意，不得在本案訴訟中採為證據（[第7條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020227&flno=7)）。道歉歸道歉。證據要另外留。
 

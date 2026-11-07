@@ -47,7 +47,7 @@ Las transferencias prueban lo primero. Lo segundo suele salir de los mensajes: u
 
 ## Vivir en Taiwán cambia la caución
 
-Aquí la mudanza a Taipéi importa. El [artículo 96 del Código de Procedimiento Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=96) obliga al tribunal a ordenar que el demandante preste caución por las costas cuando no tiene domicilio, oficina ni establecimiento en Taiwán y el demandado lo pide. Si fija su domicilio en Taipéi, la diseñadora queda fuera de ese supuesto.
+Aquí la mudanza a Taipéi importa. El [artículo 96 del Código de Procedimiento Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=96) obliga al tribunal a ordenar que el demandante preste caución por las costas cuando no tiene domicilio, oficina ni establecimiento en Taiwán y el demandado lo pide. Si la diseñadora fija su domicilio en Taipéi, queda fuera de ese supuesto.
 
 Otra cosa sería si siguiera en Guadalajara. El demandado podría pedir la caución, salvo respecto de la parte de la deuda que no discute o si ella tuviera en Taiwán bienes suficientes para cubrir las costas. La petición debe hacerse antes de debatir oralmente el fondo, salvo que el motivo se conozca después ([artículo 97](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=97)). Si la caución no se presta en el plazo fijado, el tribunal desestima la demanda, salvo que se preste antes de esa resolución ([artículo 101](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=101)).
 

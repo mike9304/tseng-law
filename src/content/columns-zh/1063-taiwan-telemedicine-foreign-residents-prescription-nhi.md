@@ -80,7 +80,7 @@ author: legal-ai-assistant
 
 已經投保，也要再確認該通訊診療項目的給付規定與醫院處理。預約時把照護類型、初診或複診、接收電子處方的藥局、健保申報及部分負擔一次問清，能減少看診後才發現流程不通的情況。
 
-特別法的投保例外，可參考[外籍員工家人的健保資格](/zh-hant/columns/taiwan-nhi-dependents-foreign-employee-family-six-months)。有診療同意、收費、病歷提供爭議，或需核對保險資格通知時，可委託台灣律師檢視相關文件；[民事諮詢](/zh-hant/services/civil)信箱是 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址為台北市大同区承徳路一段35号7F-2。就診日期、醫院說明、處方與收費明細應一起保存，方便釐清爭議項目。
+特別法的投保例外，可參考[外籍員工家人的健保資格](/zh-hant/columns/taiwan-nhi-dependents-foreign-employee-family-six-months)。有診療同意、收費、病歷提供爭議，或需核對保險資格通知時，可委託台灣律師檢視相關文件；[民事諮詢](/zh-hant/services/civil)信箱是 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址為103 臺北市大同區承德路一段35號7樓之2。就診日期、醫院說明、處方與收費明細應一起保存，方便釐清爭議項目。
 
 ## 參考資料
 

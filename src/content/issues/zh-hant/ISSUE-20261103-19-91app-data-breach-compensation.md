@@ -53,7 +53,7 @@ author: legal-ai-assistant
 
 先掛斷也可以。對方說得出訂單內容，也不能據此認定是官方。訂單紀錄在可能遭存取的項目內。已轉帳或提供金融資料的，立即聯絡銀行止付、報警，保存簡訊、通話、轉帳與訂單紀錄，再向91APP提出申請。
 
-在台灣處理這類案件，可委託律師檢視收到的通知、遭詐騙的金流與個資侵害證據，確認公司補償條件是否含和解或權利拋棄，並評估個資法請求及時效。也可參考[從海外委任台灣律師](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/civil)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+在台灣處理這類案件，可委託律師檢視收到的通知、遭詐騙的金流與個資侵害證據，確認公司補償條件是否含和解或權利拋棄，並評估個資法請求及時效。也可參考[從海外委任台灣律師](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/civil)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

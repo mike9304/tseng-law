@@ -19,7 +19,7 @@ faq:
   - q: "Do I get the deposit back if I return on time?"
     a: "Not automatically. A deposit posted to secure the trip comes back, with the interest it earned, once you have met the ruling's terms and the court releases the bail obligation or lets the bail be withdrawn (Articles 119(3) and 119-1(1)). In September 2025 the Taoyuan District Court found that an NT$80,000 deposit had served its purpose, securing a Filipino defendant's return by the end of August, and authorized its return with the interest actually earned. If a defendant on bail absconds, the deposit and its interest are forfeited (Articles 118 and 119-1(2))."
   - q: "What if the court says no?"
-    a: "A court ruling on an exit ban can be appealed by 抗告 within ten days of service (Article 404(1)(2) and Article 406). A decision by a prosecutor or presiding judge is challenged by asking the court to set it aside or change it within ten days of the decision, or of service if it was served (Article 416). Filing an appeal does not suspend the ban (Article 409)."
+    a: "A court ruling on an exit ban can be challenged by an interlocutory appeal (抗告) within ten days of service (Article 404(1)(2) and Article 406). A decision by a prosecutor or presiding judge is challenged by asking the court to set it aside or change it within ten days of the decision, or of service if it was served (Article 416). Filing an appeal does not suspend the ban (Article 409)."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -59,8 +59,6 @@ Who can ask for a change? The defendant and defense counsel, applying to the pro
 Who pays if you stay away? Whoever posted the bail. Under [Article 118](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=118), when a defendant on bail absconds, the court orders the surety to pay the set amount and forfeits it, or simply forfeits a deposit already paid, interest included ([Article 119-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=119-1)). The New Taipei grant also wrote forfeiture for a late return into its own terms.
 
 If the answer is no, a court ruling can be appealed within ten days of service ([Articles 404(1)(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=404) and [406](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=406)). A prosecutor's decision is taken to the court under [Article 416](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=416), also within ten days. The ban stays in force meanwhile ([Article 409](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=409)). A non-prosecution or deferred-prosecution decision, an acquittal, a suspended sentence or certain other outcomes end the ban automatically, though it can be kept during the appeal period or an appeal if needed ([Article 93-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-4)).
-
-New Taipei's later ruling records the defendant's claim of settlement and payment, a booked flight, and the move to the summary-judgment track.
 
 For the first 24 hours after an arrest, see [Taken to a Taiwan Police Station: The First 24 Hours Are Not a Release Promise](/en/columns/taken-taiwan-police-station-first-24-hours-not-release). Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); its Taichung office is at 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City 40453 (40453 臺中市北區館前路19號6樓之1).
 

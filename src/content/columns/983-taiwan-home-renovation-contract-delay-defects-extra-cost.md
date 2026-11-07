@@ -94,7 +94,7 @@ featured_image_caption: "가상의 장면"
 
 ## 조정과 소송, 금액에 따라 갈리는 길
 
-향진시 공소에는 민사 사건을 다루는 조정위원회가 있습니다([향진시조해조례 제1조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=1)). 신청은 서면이나 구두로 하고([제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=10)), 검증비 외에는 비용을 받지 않습니다([제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=23)). 법원이 조정을 핵정(核定)하면 같은 사건으로 다시 소송할 수 없고, 민사 조정은 확정판결과 같은 효력을 가집니다([제27조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=27)).
+향진시 공소에는 민사 사건을 다루는 조정위원회가 있습니다([향진시조정조례 제1조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=1)). 신청은 서면이나 구두로 하고([제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=10)), 검증비 외에는 비용을 받지 않습니다([제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=23)). 법원이 조정을 핵정(核定)하면 같은 사건으로 다시 소송할 수 없고, 민사 조정은 확정판결과 같은 효력을 가집니다([제27조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=27)).
 
 업체와의 다툼이 소비 분쟁이라면 업체, 소비자보호단체, 소비자서비스센터에 신소(申訴)하고, 업체는 15일 안에 처리해야 합니다. 처리되지 않으면 지방정부 소비자보호관에게 신소하고, 그래도 해결되지 않으면 소비분쟁조정위원회에 조정을 신청합니다([소비자보호법 제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=43), [제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=44)). 범본 제24조도 이 조정위원회, 향진시구 공소 조정위원회, 법원 조정을 나란히 적습니다.
 
@@ -139,10 +139,10 @@ featured_image_caption: "가상의 장면"
 - [민사소송법 제406조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=406)
 - [민사소송법 제427조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=427)
 - [민사소송법 제436조의8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=436-8)
-- [향진시조해조례(鄉鎮市調解條例) 제1조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=1)
-- [향진시조해조례 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=10)
-- [향진시조해조례 제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=23)
-- [향진시조해조례 제27조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=27)
+- [향진시조정조례(鄉鎮市調解條例) 제1조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=1)
+- [향진시조정조례 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=10)
+- [향진시조정조례 제23조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=23)
+- [향진시조정조례 제27조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020003&flno=27)
 - [소비자보호법(消費者保護法) 제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=43)
 - [소비자보호법 제44조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=44)
 - [공우대하관리조례(公寓大廈管理條例) 제6조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6)

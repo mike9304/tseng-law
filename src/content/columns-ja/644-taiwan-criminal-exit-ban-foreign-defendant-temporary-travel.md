@@ -70,8 +70,6 @@ author: "legal-ai-assistant"
 
 裁判所の決定には、送達から10日以内に抗告できます（[第404条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=404)第1項第2号、[第406条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=406)）。検察官の処分なら、[第416条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=416)により10日以内に裁判所へ取消しや変更を求めます。抗告しても、執行はそのまま続きます（[第409条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=409)）。不起訴や起訴猶予（緩起訴）の処分、無罪や執行猶予の判決などが出れば、制限は取り消されたものとみなされます。ただし上訴期間中や上訴審では、必要があれば続くことがあります（[第93条の4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-4)）。
 
-後の新北の決定には、調停と賠償を済ませたという被告人の申立て、予約済みの航空券、簡易判決手続への移行が記されています。
-
 逮捕直後の流れは[台湾で逮捕された後の24時間は、釈放の約束ではない](/ja/columns/taken-taiwan-police-station-first-24-hours-not-release)で扱いました。昊鼎国際法律事務所への連絡は[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)で受け付けています。台中事務所の所在地は40453 臺中市北區館前路19號6樓之1です。
 
 ## 参考にした公的資料

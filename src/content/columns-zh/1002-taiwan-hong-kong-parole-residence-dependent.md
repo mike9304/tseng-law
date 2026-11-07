@@ -65,7 +65,7 @@ author: legal-ai-assistant
 
 戶籍資料也要備妥。若準備依親，還需要戶籍與婚姻證明、過去入出境及居留紀錄，以及[許可辦法第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=Q0020008&flno=17)規定的警察紀錄證明等申請文件。犯罪、服刑與家庭生活資料，也應完整交由律師評估，不宜只送結婚證明。
 
-台灣律師可協助閱覽上述命令、確認救濟程序與期限，並評估依親申請及家庭關係資料如何提出。家屬人在海外，可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事與身分文件諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+台灣律師可協助閱覽上述命令、確認救濟程序與期限，並評估依親申請及家庭關係資料如何提出。家屬人在海外，可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事與身分文件諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

@@ -106,9 +106,9 @@ During a lawful National Immigration Agency extension, a fresh graduate with a T
 
 Someone who came to study may apply after graduation, before residence ends. [Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=11) of the residence regulations gives the certificate one year from the day after the old period ends, and one further extension before that year ends if needed, for two years at most. Also listed: a spouse already permitted to reside, children under eighteen, and children eighteen or older who cannot live independently because of physical or mental disability. Amended December 30, 2025. Item 10(2) of the [National Immigration Agency instructions](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/), updated January 19, 2026, states the same periods.
 
-Student-work rules in the United States, Korea, and Japan are outside this column. Write to Hovering International Law Firm at wei@hoveringlaw.com.tw.
-
 On the Agency [page for fresh graduates](https://ezworktaiwan.wda.gov.tw/cp.aspx?n=511766BD9E956242), updated January 30, 2026, the kind of job in that period is not limited, and the maximum is two years. If another law requires a professional qualification or practice registration, the graduate must still obtain it. The page's example is a physician. Neither [Article 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=12) nor that page sets a weekly number for the extension.
+
+Student-work rules in the United States, Korea, and Japan are outside this column. Write to Hovering International Law Firm at wei@hoveringlaw.com.tw.
 
 ## Official sources
 

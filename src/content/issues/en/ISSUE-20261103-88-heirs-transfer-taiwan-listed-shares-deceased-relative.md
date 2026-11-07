@@ -42,7 +42,7 @@ That record also matters for the estate tax return. Listed shares are generally 
 
 [Article 42](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=42) puts the duty on the other side too. Government agencies and private businesses handling a transfer of inherited property must ask for one of these certificates and may not register the transfer without it.
 
-For a decedent who was not an ROC national, generally only property located in Taiwan is subject to Taiwan estate tax, and the return goes to the National Taxation Bureau of Taipei ([Articles 1 and 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)). Taiwan-listed shares of a Taiwan company fall on the Taiwan side. Our column on [estate tax for foreign decedents](/en/columns/taiwan-estate-tax-foreign-decedent) covers scope and deadlines.
+For a decedent who was not an ROC national, generally only property located in Taiwan is subject to Taiwan estate tax, and the return goes to the National Taxation Bureau of Taipei ([Article 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=1) and [Article 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=23)). Taiwan-listed shares of a Taiwan company fall on the Taiwan side. Our column on [estate tax for foreign decedents](/en/columns/taiwan-estate-tax-foreign-decedent) covers scope and deadlines.
 
 ## Step three: the transfer file
 

@@ -70,7 +70,7 @@ Withholding on the same payments is covered in [Paying a US or Vietnamese Parent
 
 Hovering International Law Firm can look at how a subsidiary's sales split between taxable and zero-rated, or at the business tax side of an intercompany service agreement; write to [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw).
 
-September–October sales and purchases go into the November return. Until then, each e-invoice to an individual must reach the platform within 2 days after the day of issue. Business invoices get 7.
+September–October sales and purchases go into the November return. Each e-invoice to an individual must reach the platform within 2 days after the day of issue. For business invoices, the deadline is 7 days.
 
 ## Official sources
 

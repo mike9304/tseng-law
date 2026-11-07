@@ -54,7 +54,7 @@ author: legal-ai-assistant
 
 [刑法第185條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4)也處罰致人受傷後逃逸，刑度是六月以上五年以下；致人死亡或重傷後逃逸，則是一年以上七年以下。駕駛對事故發生無過失時，應減輕或免除其刑。民事請求、保險給付與刑事程序不能互相取代。家屬保留事故認定、死亡證明、親屬關係、保險資料與申請紀錄，才能判斷保險人或法定基金中的哪一條路可用。
 
-在台灣處理這類案件，可委託律師核對家屬請求順位、協助保險或基金申請，並把刑事案件資料與民事損害項目整理成可提出的證據。也可參考[和解金與補償基金如何扣除](/zh-hant/columns/taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/civil)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+在台灣處理這類案件，可委託律師核對家屬請求順位、協助保險或基金申請，並把刑事案件資料與民事損害項目整理成可提出的證據。也可參考[和解金與補償基金如何扣除](/zh-hant/columns/taiwan-uninsured-settlement-excludes-compulsory-insurance-fund-deduction)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/civil)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

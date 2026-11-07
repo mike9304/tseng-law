@@ -55,7 +55,7 @@ author: legal-ai-assistant
 
 若案件仍在境外調查，先確認當地律師與程序；若已有確定裁判，則需完整裁判與執行紀錄，才能分析第9條。兩邊的罪名文字看起來相似，也不代表構成要件相同。
 
-可委託台灣律師核對台灣端的犯罪指控與境外裁判、執行紀錄，準備偵查或審判中的辯護。[刑事諮詢](/zh-hant/services/criminal)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是台北市大同区承徳路一段35号7F-2。家屬在海外時可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)，先備齊完整裁判與實際服刑證明。
+可委託台灣律師核對台灣端的犯罪指控與境外裁判、執行紀錄，準備偵查或審判中的辯護。[刑事諮詢](/zh-hant/services/criminal)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是103 臺北市大同區承德路一段35號7樓之2。家屬在海外時可參考[委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)，先備齊完整裁判與實際服刑證明。
 
 ## 參考資料
 

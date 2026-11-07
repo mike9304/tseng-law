@@ -54,7 +54,7 @@ author: legal-ai-assistant
 
 받은 보험급여는 [제32조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=32)에 따라 피보험자의 손해배상 일부로 봅니다. 보험금과 민사 배상을 각각 계산한 뒤 대조해야 합니다. 지금 단계에서 필요한 것은 어느 운전자에게 전부 책임이 있다는 추측보다, 승객 각자의 상해와 비용을 보여 주는 기록입니다.
 
-대만에서 이 문제가 생기면 변호사에게 보험사 확인, 귀국 후 진료 자료와 사고의 인과관계 정리, 운송계약과 손해배상 청구 검토을 맡길 수 있습니다. [해외에서 위임하는 방법](/ko/columns/hire-taiwan-lawyer-from-abroad)과 [민사 상담](/ko/services/civil)을 참고하실 수 있어요. 상담은 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 요청해 주세요. 주소는 台北市大同区承徳路一段35号7F-2입니다.
+대만에서 이 문제가 생기면 변호사에게 보험사 확인, 귀국 후 진료 자료와 사고의 인과관계 정리, 운송계약과 손해배상 청구 검토를 맡길 수 있습니다. [해외에서 위임하는 방법](/ko/columns/hire-taiwan-lawyer-from-abroad)과 [민사 상담](/ko/services/civil)을 참고하실 수 있어요. 상담은 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 요청해 주세요. 주소는 台北市大同区承徳路一段35号7F-2입니다.
 
 ## 참고 자료
 

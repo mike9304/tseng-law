@@ -41,7 +41,7 @@ An advice agreement is not evidence that every legal formality has been met. For
 
 [Trust Act article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020024&flno=4) requires trust registration for registrable property rights before the trust can be asserted against third parties. For shares or corporate bonds, notice to the issuing company is required to assert the trust against that company. A family charter does not itself show those steps were completed.
 
-This article explains contracts and legal procedures; it is not investment advice. An English-speaking lawyer in Taipei can review the bank agreement, outside providers' responsibilities and the family's will and trust documents together. For [inheritance advice](/en/services/family), contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), at 台北市大同区承徳路一段35号7F-2. The guide to [instructing a Taiwan lawyer from abroad](/en/columns/hire-taiwan-lawyer-from-abroad) explains the engagement process; preserve both the signed documents and the proposed work schedule.
+This article explains contracts and legal procedures; it is not investment advice. An English-speaking lawyer in Taipei can review the bank agreement, outside providers' responsibilities and the family's will and trust documents together. For [inheritance advice](/en/services/family), contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103. The guide to [instructing a Taiwan lawyer from abroad](/en/columns/hire-taiwan-lawyer-from-abroad) explains the engagement process; preserve both the signed documents and the proposed work schedule.
 
 ## Sources
 

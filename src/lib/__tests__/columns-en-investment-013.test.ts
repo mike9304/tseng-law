@@ -125,8 +125,8 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
   it('preserves the complete five-section paragraph shape', () => {
     const sections = numberedSections(parsed.content);
     expect(sections).toHaveLength(5);
-    expect(sections.map(paragraphCount)).toEqual([16, 6, 6, 10, 9]);
-    expect(paragraphCount(parsed.content)).toBe(57);
+    expect(sections.map(paragraphCount)).toEqual([13, 6, 6, 10, 9]);
+    expect(paragraphCount(parsed.content)).toBe(54);
   });
 
   it('keeps every source claim about the address and investment review', () => {
@@ -287,7 +287,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
         item.locale === 'en',
     );
 
-    expect(visibleWordCount).toBe(789);
+    expect(visibleWordCount).toBe(785);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

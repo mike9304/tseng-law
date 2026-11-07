@@ -19,7 +19,7 @@ author: "legal-ai-assistant"
 ---
 # A Taiwan Summons Arrives: What Ignoring It Means for a Defendant and for a Witness
 
-A summons (傳票) from a district prosecutors office reaches a foreign manager in Taipei (an invented scene). The warning it must carry is either compulsory production alone, or a fine plus compulsory production. Which one depends on whether the manager is summoned as a defendant or as a witness.
+A summons (傳票) from a district prosecutors' office reaches a foreign manager in Taipei (an invented scene). The warning it must carry is either compulsory production alone, or a fine plus compulsory production. Which one depends on whether the manager is summoned as a defendant or as a witness.
 
 For a defendant, a category that includes a suspect still under investigation, the Code of Criminal Procedure requires the summons to state the case and to warn that compulsory production (拘提), meaning being brought in by force, may be ordered after an unjustified absence ([Art. 71](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=71)). For a witness, it has to state what the testimony is meant to prove and warn of a fine as well as compulsory production ([Art. 175](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=175)).
 

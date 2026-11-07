@@ -64,7 +64,7 @@ If the designer also believes the car never crossed on red, she must state that 
 
 If the weekend also involved a collision, scene response and compensation are separate issues discussed in [Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation](/en/columns/taiwan-traffic-accident-procedure).
 
-Her messages about the car keys may help place the loan alongside the date on the notice. If she believes her friend was responsible, she must inform the penalty authority who he is, with relevant evidence and his supporting documents, before the appearance date under [Article 85(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85).
+Her messages about the car keys may help place the loan alongside the date on the notice.
 
 ## Legal help with the notice and records
 

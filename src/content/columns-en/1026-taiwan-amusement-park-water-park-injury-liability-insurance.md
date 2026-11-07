@@ -60,7 +60,7 @@ A 110 cm child queues for a water slide marked "120 cm and above". The attendant
 
 Can the park point to the sign and walk away? Item 3 of the prohibited terms says no. The breach counts. Where the injured person's fault contributed to the damage, a court may reduce or deny compensation, and the same applies to the fault of their representative ([Civil Code art. 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217)(1), (3)), so a parent's carelessness may count. Parks must also assign ride operators and qualified lifeguards with rescue gear ([Regulations art. 34](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0110018&flno=34)(1)).
 
-## Records the park keeps
+## Rescue duties and records the park keeps
 
 Under item 5 of the mandatory terms, operators must help with rescue or hospital transfer when a visitor falls ill or is hurt, and are liable for damage caused by failing to.
 

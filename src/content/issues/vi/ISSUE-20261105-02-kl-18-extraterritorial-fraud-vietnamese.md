@@ -37,7 +37,7 @@ Mười tám người bị bắt chưa phải là kết luận rằng mọi ngư
 
 [Điều 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=9) nói rằng cùng một hành vi dù đã có bản án đã có hiệu lực của nước ngoài vẫn có thể bị xử theo luật này. Nếu đã chấp hành toàn bộ hoặc một phần hình phạt ở nước ngoài, tòa có thể miễn thi hành toàn bộ hoặc một phần hình phạt tại Đài Loan. Đây là quyền cân nhắc. Luật không quy định tự động trừ số ngày đã chấp hành theo một công thức tương ứng. Không đủ tình tiết tăng nặng thì điểm 11 Điều 5 không áp dụng.
 
-Luật sư tại Đài Loan có thể kiểm tra cáo buộc tại Đài Loan, bản án nước ngoài và chứng nhận chấp hành hình phạt để chuẩn bị bào chữa. Bạn có thể [tư vấn hình sự](/vi/services) qua [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 台北市大同区承徳路一段35号7F-2. Nếu được gọi làm chứng, xem thêm bài về [giấy triệu tập nhân chứng tại Đài Loan](/vi/columns/taiwan-criminal-witness-summons-refuse-testimony); cần xác định tư cách ghi trên giấy trước khi chuẩn bị lời khai.
+Luật sư tại Đài Loan có thể kiểm tra cáo buộc tại Đài Loan, bản án nước ngoài và chứng nhận chấp hành hình phạt để chuẩn bị bào chữa. Bạn có thể [tư vấn hình sự](/vi/services) qua [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 103 臺北市大同區承德路一段35號7樓之2. Nếu được gọi làm chứng, xem thêm bài về [giấy triệu tập nhân chứng tại Đài Loan](/vi/columns/taiwan-criminal-witness-summons-refuse-testimony); cần xác định tư cách ghi trên giấy trước khi chuẩn bị lời khai.
 
 ## Nguồn tham khảo
 

@@ -53,9 +53,7 @@ A single screenshot in reply: is that the report? Not necessarily. A screenshot 
 
 Under [Article 541, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=541), the mandatary must hand over to the principal the money, things (物品) and fruits (孳息) received through handling the mandated affair. Sale proceeds paid into the acquaintance's exchange or bank account, or a New Taiwan dollar balance left in the account used for the trades, must be handed over if they were received through handling the mandate. The agreement and transaction records can help trace that balance to the engineer's trading arrangement.
 
-The account bears the acquaintance's name. Under [Article 541, paragraph 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=541), the mandatary must transfer rights acquired in their own name for the principal. The account name alone does not answer which rights, if any, were acquired for the engineer. The agreement and trade records matter. A demand can separate money received through handling the mandate under paragraph 1 from rights acquired in the acquaintance's name for the engineer under paragraph 2.
-
-Rights acquired for the principal in the mandatary's name must be transferred under [Article 541, paragraph 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=541). The provision does not itself give the engineer control of the acquaintance's exchange account.
+The account bears the acquaintance's name. Under [Article 541, paragraph 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=541), the mandatary must transfer rights acquired in their own name for the principal. The account name alone does not answer which rights, if any, were acquired for the engineer. The agreement and trade records matter. A demand can separate money received through handling the mandate under paragraph 1 from rights acquired in the acquaintance's name for the engineer under paragraph 2. The provision does not itself give the engineer control of the acquaintance's exchange account.
 
 ## A report and a handover do not undo a market loss
 

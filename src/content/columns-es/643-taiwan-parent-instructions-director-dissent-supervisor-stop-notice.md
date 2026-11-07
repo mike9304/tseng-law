@@ -34,7 +34,7 @@ En una sociedad anónima de Taiwán (股份有限公司) con consejo de administ
 
 El [artículo 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=193) obliga al consejo a ejecutar los negocios conforme a la ley, los estatutos y los acuerdos de la junta de accionistas, y hace responsables a los administradores que participan en una resolución cuando esta infringe esas reglas y causa daño a la sociedad. La misma disposición exime de esa responsabilidad a quien manifestó oposición y puede acreditarla mediante un registro o una declaración escrita.
 
-La traducción aclara lo votado. Para acreditar una oposición interesa, además, el documento que recoge lo que la administradora expresó ante ese acuerdo: por ejemplo, una observación que solicite incorporar al acta. El idioma del archivo o la aprobación previa del socio no resuelven por sí solos esa cuestión. Quien participa en silencio debe poder demostrar una oposición efectivamente manifestada si pretende invocar la exención.
+La traducción del acuerdo aclara lo votado. Para acreditar una oposición interesa, además, el documento que recoge lo que la administradora expresó ante ese acuerdo: por ejemplo, una observación que solicite incorporar al acta. El idioma del archivo o la aprobación previa del socio no resuelven por sí solos esa cuestión. Quien participa en silencio debe poder demostrar una oposición efectivamente manifestada si pretende invocar la exención.
 
 Importa el alcance. La exención del artículo 193 se refiere a la responsabilidad prevista para ese acuerdo; una ejecución ilícita posterior se valora por separado. Por eso, una revisión de documentos puede abarcar tanto la votación como las órdenes que siguieron a la reunión.
 

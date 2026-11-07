@@ -85,7 +85,7 @@ author: legal-ai-assistant
 ## 참고 자료
 
 - [대만 의사법(醫師法) 제11조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020001&flno=11)
-- [원격진료규정(通訊診察治療辦法)(通訊診察治療辦法), 제3조·제13조~제16조·제18조·제20조·제21조](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197)
+- [원격진료규정(通訊診察治療辦法), 제3조·제13조~제16조·제18조·제20조·제21조](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197)
 - 대만 약사법(藥事法): [제37조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0030001&flno=37), [제50조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0030001&flno=50)
 - 대만 의료법(醫療法): [제68조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=68), [제72조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=72)
 - [대만 건강보험법(全民健康保險法) 제9조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=9), [같은 법 시행세칙 제8조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060002&flno=8)

@@ -23,7 +23,7 @@ En el derecho español, quien manda en una sociedad sin haber sido nombrado pued
 
 En buena parte, sí. El [artículo 8.3 de la Ley de Sociedades (公司法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=8) hace responder civil, penal y administrativamente como un director a quien, sin serlo, ejerce de hecho sus funciones o controla el personal, las finanzas o la gestión de la sociedad y dirige a los directores. La otra mitad de la respuesta está en el apartado 1: en una sociedad limitada (有限公司) o anónima (股份有限公司), el responsable legal es el director, y si usted acepta, el director inscrito será usted.
 
-Con un conocido que dirige desde fuera, quedan dentro los dos.
+Con un conocido que dirige desde fuera, quedan dentro tanto el director inscrito como quien ejerce de hecho las funciones.
 
 ## Lo que sigue a cargo del director inscrito
 

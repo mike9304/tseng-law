@@ -52,11 +52,11 @@ Since July 1, 2021, [Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx
 2. Taiwan houses and land make up 50% or more of the value of the company's shares or capital;
 3. the shares are not listed, OTC-traded or emerging-board stock.
 
-The ministry's [filing directions for the house and land tax](https://law-out.mof.gov.tw/LawContent.aspx?id=GL009961) (amended April 21, 2026), point 6, test the holding on every day of the year before the sale: more than 50% on any single day is enough. Real estate held by companies the subsidiary controls also counts toward the 50%.
+The ministry's [filing directions for the house and land tax](https://law-out.mof.gov.tw/LawContent.aspx?id=GL009961) (amended April 21, 2026), point 6, test the holding on every day of the year before the sale: more than 50% on any single day is enough. The first condition can still be met even if the seller has reduced its stake below 50% before closing. Real estate held by companies the subsidiary controls also counts toward the 50%.
 
 For an enterprise headquartered outside Taiwan, the rate is 45% for a holding period of two years or less and 35% beyond that, computed separately from other income ([Article 24-5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=24-5), paragraph 2, item 2). The 20% rate for holdings over five years appears only in the list for enterprises headquartered in Taiwan. A seller with no fixed place of business or business agent in Taiwan files and pays through an agent approved under [Article 60 of the Enforcement Rules of the Income Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340004&flno=60), paragraph 2, at the tax office where the agent is located when filing (point 23 of the directions).
 
-Selling a small block does not avoid the rule. In an example published by the Taipei National Taxation Bureau, a company holding 60% of an unlisted real estate trading company sold 10% of that company's shares less than a year after buying them. It reported the gain as suspended securities income. The bureau treated it as house and land income taxed at 45%, assessed more than NT$2 million in additional tax and imposed a fine ([release of December 11, 2025](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=b5447e5f080b4394a1cca1fe99105868)).
+Selling a small block does not avoid the rule. In an example published by the Taipei National Taxation Bureau, the seller held 60% of an unlisted real estate trading company. Less than a year after the purchase, it sold 10% of its holding. It reported the gain as suspended securities income. The bureau treated it as house and land income taxed at 45%, assessed more than NT$2 million in additional tax and imposed a fine ([release of December 11, 2025](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=b5447e5f080b4394a1cca1fe99105868)).
 
 Long-held shares get some relief. Two dates matter. If the shares were acquired on or before June 30, 2021, the share of the gain matching the proportion of the company's Taiwan real estate acquired on or before December 31, 2015 falls outside the rule (point 2 of the directions).
 
@@ -84,8 +84,6 @@ Under [Article 10 of the Act For Investment by Foreign Nationals](https://law.mo
 Taking profits out as a dividend before a sale is a separate route; see [Taiwan Subsidiary Dividends to a US Parent](/en/columns/taiwan-dividend-withholding-foreign-parent-tax-agreement-rates). Winding the company up instead is covered in [Closing a Taiwan Company](/en/columns/withdraw-capital-taiwan-company).
 
 If you are weighing a sale and want the subsidiary's form, certificates and real estate share reviewed first, Hovering International Law Firm can be reached at [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw).
-
-Timing matters here too. The holding test looks back a full year, and selling down below 50% first does not reset it: one day above half in the year before the sale still meets the first condition.
 
 ## Official sources
 

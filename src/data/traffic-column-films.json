@@ -9572,7 +9572,7 @@
     "height": 720,
     "title": "مدارک پس از تصادف رانندگی",
     "description": "این فیلم بی‌صدا در 80 ثانیه ایمنی و اعلام حادثه، عکس‌های محل، سوابق اصلی، درمان، تعمیر، کاهش درآمد و بررسی شروط سازش را نشان می‌دهد.",
-    "disclosure": "Fictional scene",
+    "disclosure": "صحنهٔ ساختگی",
     "durationSeconds": 80,
     "sceneCount": 8,
     "chapters": [
@@ -9798,7 +9798,7 @@
     "height": 720,
     "title": "شرایط سبقت و شواهد پس از برخورد",
     "description": "این فیلم بی‌صدا در 100 ثانیه ممنوعیت سبقت، علامت‌ها، فاصله، برخورد ساختگی هنگام بازگشت به خط، عکس خسارت، فیلم اصلی و بررسی راه، زمان‌بندی و تقصیر را به هم پیوند می‌دهد.",
-    "disclosure": "Fictional scene",
+    "disclosure": "صحنهٔ ساختگی",
     "durationSeconds": 100,
     "sceneCount": 10,
     "chapters": [
@@ -9810,7 +9810,7 @@
       {
         "start": 10,
         "title": "هشدار و راه‌دادن در همان خط",
-        "text": "در صورت مجازبودن: دو بوق کوتاه یا یک بار علامت با چراغ جلو. منتظر راه‌دادن راننده جلو بمانید؛ با تکرار علامت او را مجبور نکنید."
+        "text": "در صورت مجاز بودن: دو بوق کوتاه یا یک بار علامت با چراغ جلو. منتظر راه‌دادن راننده جلو بمانید؛ با تکرار علامت او را مجبور نکنید."
       },
       {
         "start": 20,
@@ -10156,7 +10156,7 @@
     "poster": "/images/column-videos/two-stops-film-v1-en.jpg",
     "width": 1280,
     "height": 720,
-    "title": "Two blocked routes, six minutes of driving and a bat",
+    "title": "Road rage: two stops, six minutes of driving and a bat",
     "description": "A silent 140-second film distinguishes the two stops, intervening driving, object identification, the defence, the two offences and the limits of the first-instance judgment.",
     "disclosure": "Fictional scene",
     "durationSeconds": 140,

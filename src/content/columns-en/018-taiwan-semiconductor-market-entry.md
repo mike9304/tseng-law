@@ -75,7 +75,7 @@ When a foreign company forms a Taiwan subsidiary, it generally pre-clears the co
 
 By contrast, when an ordinary foreign company establishes a Taiwan branch, investment approval from the Investment Commission is generally not required. The Department of Commerce of the Ministry of Economic Affairs handles branch registration and related capital determination. Name pre-check, remittance of working capital, capital verification, and tax registration are still required, and the formation timetable is usually shorter.
 
-The foregoing is contract-design advice. Merely having a particular form does not make a transaction lawful and does not prevent disputes.
+This overview concerns entity choice and registration. Merely having a particular form does not make a transaction lawful and does not prevent disputes.
 
 ## 5. Company registration and an engineer’s lawful work are not the same thing
 

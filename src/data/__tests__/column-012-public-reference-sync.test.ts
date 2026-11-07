@@ -69,7 +69,7 @@ const expectedArchiveRecords = {
       '대만 도로교통안전규칙 제101조의 추월 금지 조건과 같은 차로에서의 추월 절차, 익명 사고 사례를 통한 과실 판단 요소를 결과 보장 없이 정리합니다.',
     href: '/ko/insights/overtaking-accident',
     category: 'legal',
-    readTime: '4분 분량',
+    readTime: '4분',
     image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
     keywords: [
       '대만 추월 사고',
@@ -161,7 +161,7 @@ const expectedCivilTitles = {
 } as const;
 
 const expectedCivilIntros = {
-  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
+  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건을 맡습니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
     '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，一審勝訴，二審和解結案，並以中文、韓文、日文或英文與外國當事人溝通，協助其進行在台訴訟。',
   en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we won at first instance before the case settled on appeal, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
@@ -236,10 +236,10 @@ const expectedHomeFeaturedIds = [
   'cosmetics-market-entry',
 ];
 const expectedOtherPostsSha256 = {
-  ko: '3de8b200827c3e956e861843a89abdc6cf8fa43d0df3541afd717724e57fa548',
+  ko: '4ec9e8213052e8e39592881df63eb8d63da3bb4d64cd5f3b2ffaacc22c577838',
   'zh-hant':
-    'df20c6aa39cde13f5f97991e281d69cc8045baecfb432d4e78f30764453b29a0',
-  en: '0acec06a17b31de792af5dd9ef033f3ac0845c10746d5a778a6596a332e320e4',
+    'a72cc796db6240c7ada2f129aa403787c85ca6cc6f757969f9275247fdbd61de',
+  en: '32616d8e48d88e0bd7c52801c15cc79fa56a550a71dd185184830ca8666a32a3',
 } as const;
 
 function getRelatedColumn(locale: (typeof siteLocales)[number]) {

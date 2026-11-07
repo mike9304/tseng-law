@@ -42,7 +42,6 @@ author: "legal-ai-assistant"
 
 상속분은 [제1138조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1138)와 [제1144조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1144)가 정합니다. 배우자 외의 1순위는 직계비속입니다. 배우자가 1순위 상속인과 함께 상속하면, 그 상속분은 그 상속인들과 균등합니다. 자녀가 몇 명인지는 기사에 없어서, 절반인지 3분의 1인지는 정하지 않습니다.
 
-혼인 신고와 상속 다툼을 설명하기 위해 만든 가상의 장면입니다. 핑둥의 특정 가정이나 당사자를 찍은 사진이 아닙니다.
 
 호적 기재와 1심 판결문을 맞춰 보려면 호정국제법률사무소(昊鼎國際法律事務所) 증준외(曾雋崴) 변호사에게 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 보내면 됩니다. 타이베이 사무소는 103 臺北市大同區承德路一段35號7樓之2, 타이중 사무소는 40453 臺中市北區館前路19號6樓之1입니다.
 

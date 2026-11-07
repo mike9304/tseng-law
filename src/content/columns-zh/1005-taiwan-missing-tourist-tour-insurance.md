@@ -57,7 +57,7 @@ author: legal-ai-assistant
 
 各方案上限不同。部分方案的「無限制」是取消該特約的給付上限，不是終身補償。保險期間、被保險人範圍、失聯或遇難的定義、救援人數、住宿天數、免責、事前通知都要看。不要先認定民間搜尋、翻譯與延長住宿一定全額理賠。失聯本身不會自動帶來保險金或旅行社特別補償。
 
-家人在台灣失聯時，可委託台灣律師整理警方受理紀錄、旅行社往來文件，評估向台灣當地業者求償的依據。日本旅行契約的爭議，仍可能需要依準據法與管轄請日本專業人士協助。人在海外的家屬，可先參考[從國外委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+家人在台灣失聯時，可委託台灣律師整理警方受理紀錄、旅行社往來文件，評估向台灣當地業者求償的依據。日本旅行契約的爭議，仍可能需要依準據法與管轄請日本專業人士協助。人在海外的家屬，可先參考[從國外委任台灣律師的方式](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需[民事諮詢](/zh-hant/services/civil)，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

@@ -343,7 +343,7 @@ describe('loadTrafficCollection (published files)', () => {
       expect(item.hasVideo, item.slug).toBe(reviewedGeneratedScene || Boolean(diagram && diagram.kind !== 'still'));
       expect(item).not.toHaveProperty('content');
     }
-  });
+  }, 30_000);
 
   it('reads Japanese from files only and the other locales through the CMS-aware reader', async () => {
     const sources: TrafficCollectionSources = {

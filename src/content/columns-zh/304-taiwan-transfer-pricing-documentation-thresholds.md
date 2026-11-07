@@ -73,7 +73,7 @@ author: "legal-ai-assistant"
 
 公司落在哪個門檻不好判斷時，可以把近一年的收入總額與受控交易總額寄到昊鼎國際法律事務所（[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)）。
 
-曆年制的公司，114年度結算申報期間是2026年5月1日至31日（[所得稅法第71條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)），移轉訂價報告那時就該備妥。要送集團主檔報告或國別報告的公司，114年度的期限是2026年12月31日。
+曆年制的公司，結算申報的法定期間為每年5月1日至31日（[所得稅法第71條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)）；114年度因截止日遇假日，[申報期限順延至2026年6月1日](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9df57e81b0484b04a86488b9d16e8888)。應備妥移轉訂價報告的公司，須在辦理結算申報時備妥。要送集團主檔報告或國別報告的公司，114年度的期限是2026年12月31日。
 
 ## 參考的官方資料
 

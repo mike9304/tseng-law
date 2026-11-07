@@ -12,9 +12,9 @@ topic: "other"
 featured_image: "../images/635-taiwan-traffic-ticket-other-driver-notice/featured-01.webp"
 faq:
   - q: "運転していた人の名前を伝えるだけで足りますか？"
-    a: "[道路交通管理處罰條例第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)では、取り締まられた違反を他人に帰すべきだと考える処罰対象者は、通知書の出頭期日（應到案日期）より前に、関連する証拠とその人に関する証明書類を添え、処罰機関に責任を負うべき人を知らせなければなりません。処罰機関はその人に直ちに別途通知し、出頭を求めて法に従って処理しなければなりません。適用される期限までに規定どおりに行わなければ、違反した条項に従って処罰されます。通知書が遅れて届いた場合は、下の送達に関する説明に沿って、送達記録と第85条の届出期限を処罰機関に確認する必要があります（[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)、[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)）。"
+    a: "[道路交通管理處罰條例第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)では、取り締まられた違反を他人に帰すべきだと考える処罰対象者は、通知書の出頭期日（應到案日期）より前に、関連する証拠とその人に関する証明書類を添え、処罰機関に責任を負うべき人を知らせなければなりません。処罰機関はその人に直ちに別途通知し、出頭を求めて法に従って処理しなければなりません。適用される期限までに規定どおりに行わなければ、違反した条項に従って処罰されます。通知書が遅れて届いた場合は、「受領から30日を数える手続」にある送達の説明に沿って、送達記録と第85条の届出期限を処罰機関に確認する必要があります（[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)、[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)）。"
   - q: "通知書を受け取ってから30日以内に知らせればよいのですか？"
-    a: "[第9条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=9)の30日は、通知書を受け取ってから数えます。処罰対象者はこの期間内に[第92条第4項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=92)の罰鍰基準に従って指定の場所で納付し、裁決を経ずに事件を終えることができます。取締りの事実に不服があれば、同じ期間内に処罰機関へ意見を述べなければなりません。違反を別の人に帰すべきだと考えるなら、[第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)に従い、通知書の出頭期日より前に関連する証拠とその人に関する証明書類を添え、処罰機関に知らせます。二つの日付は一致するとは限りません。通知書が遅れて届いたときは、下の送達に関する説明のとおり、記載された期日だけで届出の機会がなくなったと判断せず、[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)と[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)を踏まえて処罰機関に確認してください。"
+    a: "[第9条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=9)の30日は、通知書を受け取ってから数えます。処罰対象者はこの期間内に[第92条第4項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=92)の罰鍰基準に従って指定の場所で納付し、裁決を経ずに事件を終えることができます。取締りの事実に不服があれば、同じ期間内に処罰機関へ意見を述べなければなりません。違反を別の人に帰すべきだと考えるなら、[第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)に従い、通知書の出頭期日より前に関連する証拠とその人に関する証明書類を添え、処罰機関に知らせます。二つの日付は一致するとは限りません。通知書が遅れて届いたときは、「受領から30日を数える手続」にある送達の説明のとおり、記載された期日だけで届出の機会がなくなったと判断せず、[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)と[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)を踏まえて処罰機関に確認してください。"
 audience: ["ja"]
 author: "legal-ai-assistant"
 ---
@@ -35,7 +35,7 @@ author: "legal-ai-assistant"
 
 この社員には、車の鍵を渡す約束をしたメッセージが残っています。受け渡しの日時が分かれば、通知書に書かれた違反の日時とも照らし合わせられます。同僚についての書類を集めるには、本人の協力が必要になるかもしれません。違反を同僚に帰すべきだと考えるなら、出頭期日より前に、関連する証拠と同僚についての証明書類を[第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)に従って処罰機関に出す必要があります。
 
-[第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)により、知らせを受けた処罰機関は、責任を負うべき人に直ちに別途通知し、出頭を求めて法に従って処理しなければなりません。適用される期限までに規定どおりに行わなかった人は、違反した条項に従って処罰されます。通知書が遅れて届いた場合は、[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)と[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)も関わります。記載された期日だけで届出の期限が過ぎたとは判断できません。下の送達に関する説明を確認してください。
+[第85条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=85)により、知らせを受けた処罰機関は、責任を負うべき人に直ちに別途通知し、出頭を求めて法に従って処理しなければなりません。適用される期限までに規定どおりに行わなかった人は、違反した条項に従って処罰されます。通知書が遅れて届いた場合は、[処理細則第15条第2項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=15)と[第36条第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080029&flno=36)も関わります。記載された期日だけで届出の期限が過ぎたとは判断できません。「受領から30日を数える手続」にある送達の説明を確認してください。
 
 ## 通知書を出した機関と、処罰する機関
 

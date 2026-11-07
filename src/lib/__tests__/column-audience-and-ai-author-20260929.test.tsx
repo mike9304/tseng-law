@@ -21,21 +21,88 @@ import {
 } from '@/lib/ai-authored-columns';
 import { buildArticleJsonLd } from '@/lib/seo';
 import AiAuthorBox from '@/components/AiAuthorBox';
-import { archiveLeadPublicationDate, expertiseSlugsFor } from './native-locale-columns';
+import { archiveLeadPublicationDate, archiveLeadSlugsFor } from './native-locale-columns';
+
+/** Same-day archive order as columns-publication-date.test.ts (Nov 6 main batch, then registered lead). */
+const REVIEWED_MAIN_COLUMN_SLUGS_20261106: Record<string, readonly string[]> = {
+  ko: [
+    'taiwan-korean-employee-missing-pension-contributions',
+    'taiwan-former-employee-contract-apparent-authority',
+    'taiwan-paid-judgment-debt-second-enforcement-objection',
+    'taiwan-shareholder-derivative-suit-director-litigation-costs',
+    'taiwan-litigation-notice-korean-manufacturer-intervention-effect',
+    'taiwan-creditor-revocation-debtor-property-transfer',
+    'taiwan-attached-loaned-machinery-third-party-objection-defendant',
+    'taiwan-administrative-decision-missing-appeal-instructions-deadline',
+    'taiwan-creditor-refuses-payment-consignation-debt-discharge',
+    'taiwan-creditor-subrogation-debtor-unclaimed-receivable',
+  ],
+  'zh-hant': [
+    'taiwan-occupational-accident-emergency-return-home-eight-hour-report',
+    'taiwan-taoyuan-agricultural-disaster-certificate-low-interest-loan',
+    'taiwan-nonurban-land-permeable-area-compensation-draft-2026',
+    'taiwan-agricultural-business-subsidy-eligibility-draft-2026',
+    'taiwan-railway-training-ticketing-security-operational-medical-check-draft',
+    'taiwan-private-infrastructure-construction-income-tax-reporting-draft',
+    'taiwan-power-industry-bond-investment-net-profit-use-draft',
+    'taiwan-oral-nicotine-import-control-smoking-cessation-description',
+    'taiwan-lost-well-drilling-technician-certificate-reissue-authority',
+    'taiwan-military-supplier-certificate-restoration-three-year-period',
+  ],
+  en: [
+    'taiwan-us-driver-license-exchange-state-nationality-reciprocity',
+    'taiwan-us-dollar-debt-nt-dollar-check-currency-agreement',
+    'taiwan-partial-payment-multiple-debts-appropriation-order',
+    'taiwan-civil-plaintiff-withdrawal-defendant-response-consent',
+    'taiwan-us-civil-case-taiwan-evidence-court-request',
+    'taiwan-us-employee-signature-authority-fbar-records-handoff',
+    'taiwan-us-citizen-government-records-access-information-request',
+    'taiwan-recruiter-mainland-china-candidate-data-transfer-restriction',
+    'taiwan-overseas-draftee-departure-documents-return-2026',
+    'taiwan-gambling-link-paid-promotion-principal-accomplice-proceeds',
+  ],
+  th: ['taiwan-refined-soybean-oil-tariff-columns-zero-duty'],
+  id: ['taiwan-online-clothing-outer-packaging-hygiene-seal-withdrawal'],
+  hi: ['taiwan-deceased-taxpayer-bank-deposit-tax-payment'],
+  fr: ['taiwan-genetic-sequencer-import-ccc-classification-2026'],
+  de: ['taiwan-standard-transactions-independent-mandate-restriction'],
+  it: ['taiwan-medical-device-clinical-trial-portal-registration-scope'],
+  es: ['taiwan-franchise-interviewer-recruiter-advertiser-liability'],
+  pt: ['taiwan-patent-prosecution-response-equivalence-estoppel'],
+  ar: ['taiwan-delivery-order-minimum-guaranteed-payment-january-2027'],
+  vi: ['taiwan-migrant-worker-multidrug-resistant-tuberculosis-treatment'],
+  'zh-hans': ['taiwan-financial-business-trial-sixty-day-review-supplement-period'],
+  fil: ['taiwan-philippines-direct-hiring-november-2026-new-occupations'],
+  ja: [
+    'taiwan-tainan-bail-company-asset-transaction-prior-report-order',
+    'taiwan-foreign-yacht-repair-berthing-permit-extension',
+    'taiwan-columbarium-nonperiodic-use-right-duration',
+    'taiwan-religious-group-land-nominee-registration-special-application',
+    'taiwan-recreational-diving-foreign-certification-scope',
+    'taiwan-temporary-antique-exhibition-reexport-application-timing',
+    'taiwan-underwater-cultural-heritage-discovery-emergency-exception',
+    'taiwan-indigenous-traditional-pattern-commercial-use-permission',
+    'taiwan-domestic-air-ticket-refund-thirty-percent-deduction-scope',
+    'taiwan-micro-electric-two-wheeler-rental-insurance-contract',
+  ],
+};
 
 /**
- * Newest registered audience column of a locale: latest publication day, then the
- * higher column number (expertiseSlugsFor is in filename order). File numbers are
- * not dates — the tax board's 30x files were published before the 2026-10-07 batch.
+ * Newest registered own-audience column in `locale`: highest publication day, then
+ * highest column number (same tie-break as archive lead / prioritizeRecommendedColumns).
  */
 function newestLeadSlug(locale: string): string | undefined {
-  const slugs = expertiseSlugsFor(locale);
+  const reviewedNov6 = REVIEWED_MAIN_COLUMN_SLUGS_20261106[locale];
+  if (reviewedNov6?.length) {
+    return reviewedNov6[reviewedNov6.length - 1];
+  }
+  const slugs = archiveLeadSlugsFor(locale);
   let best: { slug: string; date: string; index: number } | undefined;
   slugs.forEach((slug, index) => {
     const date = archiveLeadPublicationDate(slug, locale);
     if (!best || date > best.date || (date === best.date && index > best.index)) best = { slug, date, index };
   });
-  return best?.slug;
+  return best?.slug ?? slugs[0];
 }
 
 vi.mock('next/image', () => ({

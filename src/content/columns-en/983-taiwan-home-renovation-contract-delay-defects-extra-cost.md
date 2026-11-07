@@ -19,7 +19,7 @@ featured_image_caption: "Fictional scene"
 
 # Renovating Your Home in Taiwan: Late Work, Defects and Extra Charges Under the Civil Code
 
-NT$310,000. That was a renovation firm's extras invoice in the last week of a Taipei apartment job, against a signed quote (報價單) of NT$820,000 (an invented example). Whether the owner owes it turns on two facts: was the quote a fixed price or an estimate, and who ordered the extra work, and when?
+NT$310,000. That was a renovation firm's extras invoice in the last week of a Taipei apartment job, against a signed quote (報價單) of NT$820,000 (an invented example). Whether the owner owes it turns on three questions: was the quote a fixed price or an estimate; who ordered the extra work; and when?
 
 ## A contract for work
 

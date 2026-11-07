@@ -69,11 +69,11 @@ author: "legal-ai-assistant"
 
 条文は2026年10月14日に全国法規資料庫で確認しました。法律全体の直近の改正日は2024年8月7日です（[全文](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400001)）。主管機関は金融監督管理委員会です（[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=3)）。売却に伴う課税については、[台湾子会社の株式を売却するときの税金](/ja/columns/selling-shares-taiwan-company-securities-transaction-tax-agreements)で扱っています。
 
-資料についての相談は、昊鼎国際法律事務所の wei@hoveringlaw.com.tw で受け付けています。
-
 請求には時効もあります。[証券取引法第21条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=21)は、この法律に基づく損害賠償請求権について、賠償を受けられる原因を請求権者が知った時から2年間行使しなければ消滅すると定めています。募集、発行または売買の日から5年を超えた場合も同じです。二つの期間は起算点が異なり、後日の訂正公告の日が当然に両方の起算日になるわけではありません。
 
 年度財務報告、後日の訂正公告があればその公告、買付けと保有の記録を並べると、問題の売上項目、署名・押印、取引の日付を照合できます。請求では、報告内容の問題と損害とのつながりも確かめることになります。
+
+資料についての相談は、昊鼎国際法律事務所の wei@hoveringlaw.com.tw で受け付けています。
 
 ## 参考にした公的資料
 

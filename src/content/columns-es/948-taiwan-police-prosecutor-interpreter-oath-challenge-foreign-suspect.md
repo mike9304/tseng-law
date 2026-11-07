@@ -41,7 +41,7 @@ Ahí cabe escribir que pidió intérprete de español, que el interrogatorio sig
 
 ## La citación y el intérprete que trae un amigo
 
-Con la fiscalía, la petición puede hacerse antes de llegar. Las [pautas del Ministerio de Justicia para fiscalías](https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL072123) recomiendan que el fiscal se interese por si hace falta interpretación y que la citación lo advierta con una nota o con un formulario de solicitud adjunto (punto 3). Otra situación es acudir con un amigo hispanohablante, o con alguien que busca la empresa. Antes de nombrar a esa persona, el fiscal debe informarse de quién es, de cómo interpreta y de qué relación tiene con usted, y oír a los demás interrogados (punto 7).
+Con la fiscalía, la petición puede hacerse antes de llegar. Las [pautas del Ministerio de Justicia para fiscalías](https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL072123) recomiendan que el fiscal se interese por si hace falta interpretación y que la citación lo advierta con una nota o con un formulario de solicitud adjunto (punto 3). Otra situación es acudir con un amigo hispanohablante o con un intérprete buscado por la empresa. Antes de nombrar a esa persona, el fiscal debe informarse de quién es, de cómo interpreta y de qué relación tiene con usted, y oír a los demás interrogados (punto 7).
 
 ## Ante el fiscal o el juez
 

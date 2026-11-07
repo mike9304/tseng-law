@@ -99,7 +99,7 @@ A court may also order deportation of a foreigner sentenced to imprisonment or a
 - [Article 5(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000008&flno=5)
 - [Article 8(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000008&flno=8)
 - [Criminal Code Articles 12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=12)
-- [13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13)
+- [Criminal Code Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13)
 - [Article 17(3)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000008&flno=17)
 - [Article 11-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000008&flno=11-1)
 - [Article 10](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL001431&LawNo=10&media=print)

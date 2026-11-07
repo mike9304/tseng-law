@@ -51,7 +51,7 @@ author: legal-ai-assistant
 
 家屬若以後收到外國拘留、起訴、判決、執行或遣返文件，應分開保存。文件不要混放。外國警方的指控、檢察官起訴與法院判決，能證明的程序階段各不相同。
 
-在台灣處理這類案件，可委託律師確認境外行為可能涉及的人口販運或詐欺條文、整理各人的實際參與證據，並協助家屬理解台灣偵查通知。也可參考[從海外委任台灣律師](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/criminal)；諮詢地址為台北市大同区承徳路一段35号7F-2。
+在台灣處理這類案件，可委託律師確認境外行為可能涉及的人口販運或詐欺條文、整理各人的實際參與證據，並協助家屬理解台灣偵查通知。也可參考[從海外委任台灣律師](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)。如需諮詢，請寄信至[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，或參考[法律服務](/zh-hant/services/criminal)；諮詢地址為103 臺北市大同區承德路一段35號7樓之2。
 
 ## 參考資料
 

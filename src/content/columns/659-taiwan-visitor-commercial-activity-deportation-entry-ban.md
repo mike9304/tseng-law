@@ -10,7 +10,7 @@ categories: ["대만 법률정보"]
 topic: "visa"
 tags: ["visitor-status", "entry-ban", "administrative-appeal"]
 featured_image: "../images/659-taiwan-visitor-commercial-activity-deportation-entry-ban/featured-01.webp"
-featured_image_alt: "가상의 장면"
+featured_image_alt: "대기실 의자 앞에 놓인 검은 여행가방과 갈색 서류 봉투."
 faq:
   - q: "목적 외 활동으로 출국하면 무조건 5년 동안 못 들어오나요?"
     a: "목적과 맞지 않는 활동으로 강제퇴거·출국명령을 받은 경우의 일반 기준은 3~5년이며, 불법취업은 3년입니다. 같은 행위가 여러 규정에 걸리면 무거운 기준을 적용합니다. 가족관계에 따른 감면 등은 별도 요건을 확인해야 합니다."

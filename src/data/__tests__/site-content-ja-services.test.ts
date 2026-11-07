@@ -53,7 +53,7 @@ describe('Japanese services-list copy', () => {
       '/ja/services#ip',
     ]);
     expect(japaneseServices.items.map((item) => item.details?.length)).toEqual([
-      6, 5, 5, 4, 4, 4,
+      7, 5, 5, 4, 4, 4,
     ]);
 
     const japaneseRelatedSlugs = japaneseServices.items.map((item) =>
@@ -73,7 +73,7 @@ describe('Japanese services-list copy', () => {
       '台湾における投資、訴訟、法務顧問業務を総合的に支援します。',
     );
     expect(japaneseServices.items.map((item) => item.description)).toEqual([
-      '日本企業をはじめ外国企業の台湾進出に際し、台湾子会社・台湾支店・代表者事務所等の組織形態の選定から、必要に応じた経済部投資審議司への投資申請、投資資金の送金・投資額審定、銀行口座の開設、営業場所の適法性確認まで一貫して支援します。化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可、解散・清算等による残余財産・投資資金回収の法的手続についてもご案内します。',
+      '日本企業をはじめ外国企業の台湾進出に際し、組織形態を選んだあと会社名の事前確認・予約を経て、必要に応じて経済部投資審議司への投資申請を支援します。承認後は設立準備口座の開設、送金、資本金査定、会社登記、営業場所の適法性確認まで手続をご案内します。化粧品の製品登録と製品情報ファイル（PIF）の作成・保存義務、自動車貨物運送業等の許認可、解散・清算による資金回収についても対応します。',
       '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。留学生のジム負傷事故では、一審で勝訴し、その後、控訴審で和解により終結した事例があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
       '離婚、財産分与、親権、相続などの家事事件に対応します。台湾を含む国際結婚に伴う協議離婚・調停離婚・裁判離婚の手続、外国人配偶者に関する戸政手続、法定相続順位および残余財産差額分配請求について、戦略的に支援します。',
       '台湾法上の解雇、退職金（資遣費）、労働契約をめぐる紛争に対応します。退職金（資遣費）の算定（新制では勤続1年につき平均賃金0.5か月分、上限6か月分）、雇用主の違法行為等を理由に労働者側から契約を終了した場合の請求可否、最低勤務期間条項の有効性について、実務に即して助言します。',
@@ -83,10 +83,11 @@ describe('Japanese services-list copy', () => {
     expect(japaneseServices.items.map((item) => item.details)).toEqual([
       [
         '台湾子会社（有限公司・股份有限公司）、台湾支店、代表者事務所の比較',
-        '経済部投資審議司への投資申請・投資額審定（該当する場合）',
-        '投資資金の送金、会社設立準備口座の開設・正式口座への切替え',
+        '会社名の事前確認・予約（投資審査の前）',
+        '経済部投資審議司への投資申請支援（該当する場合）',
+        '会社設立準備口座の開設、投資資金の送金、資本金査定',
         '事業所の土地使用分区・用途適合性の事前確認',
-        '化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可',
+        '化粧品の製品登録と製品情報ファイル（PIF）の作成・保存、自動車貨物運送業等の業種別許認可',
         '解散・清算、減資等による残余財産・投資資金回収の法的手続',
       ],
       [
@@ -191,7 +192,7 @@ describe('Japanese services-list copy', () => {
 
   it('preserves representative Korean, Traditional Chinese, and English copy', () => {
     expect(siteContent.ko.services.description).toBe(
-      '대만 내 투자, 소송, 자문 전반을 구조화하여 제공합니다.',
+      '대만 투자·회사 설립, 소송, 자문 업무를 안내합니다.',
     );
     // zh-hant reordered for Taiwanese readers (2026-10-01 operator direction): disputes first, investment after.
     expect(siteContent['zh-hant'].services.description).toBe(
@@ -204,13 +205,16 @@ describe('Japanese services-list copy', () => {
       '한국 기업의 대만 진출',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).toContain(
-      '協助外國投資人（含韓國企業）在台設立營運據點',
+      '從公司型態選擇（子公司、分公司、代表處）',
+    );
+    expect(siteContent['zh-hant'].services.items[0]?.description).toContain(
+      '經濟部投資審議司',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).not.toContain(
       '全程協助韓國企業落地台灣',
     );
     expect(siteContent.en.services.items[0]?.description).toBe(
-      'End-to-end support from entity structuring to approvals, banking, permits, and launch.',
+      'For Taiwan market entry we compare entity types (subsidiary, branch, representative office), reserve the company name, and apply for foreign investment approval when required. A preparatory bank account is opened before capital is remitted, followed when applicable by capital verification, company registration, and business-premises confirmation. Cosmetics product compliance—including PIF creation and retention—regulatory requirements for logistics activities, and lawful capital recovery via dissolution or liquidation are also covered.',
     );
   });
 });

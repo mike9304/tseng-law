@@ -19,7 +19,7 @@ featured_image_caption: "Fictional scene"
 
 # Theft From Your Taiwan Hotel Room or a Fall on the Stairs: What the Innkeeper Owes
 
-Six months from discovery: that is how long Taiwan's Civil Code (art. 606) gives a guest to claim against a hotel or guesthouse for belongings lost from a room. The claim also lapses six months after the guest leaves the premises ([Civil Code art. 611](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=611)).
+Six months from discovery: that is how long Taiwan's Civil Code (art. 611) gives a guest to claim against a hotel or guesthouse for belongings lost from a room. The claim also lapses six months after the guest leaves the premises ([Civil Code art. 611](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=611)).
 
 A traveller staying two nights at a minsu (民宿, a licensed guesthouse) in Tainan returns from dinner to find the laptop and NT$20,000 in cash gone. Next morning, the traveller slips on a freshly mopped staircase and breaks a wrist (an invented example).
 

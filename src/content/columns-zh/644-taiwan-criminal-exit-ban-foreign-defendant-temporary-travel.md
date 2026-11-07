@@ -64,8 +64,6 @@ author: "legal-ai-assistant"
 
 法院的裁定，送達後10日內可以抗告（[第404條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=404)第1項第2款、[第406條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=406)）。檢察官的處分，依[第416條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=416)在10日內聲請法院撤銷或變更。抗告不停止執行（[第409條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=409)）。受不起訴、緩起訴處分或無罪、緩刑等判決時，限制出境視為撤銷；上訴期間或上訴中，必要時仍可繼續限制（[第93條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-4)）。
 
-被告8月30日返臺後，桃園地院於9月30日准予發還具保人的8萬元及實收利息。
-
 被帶進警局後最初24小時的程序，見[外籍家人被帶進警局後，24小時不是倒數放人的保證](/zh-hant/columns/taken-taiwan-police-station-first-24-hours-not-release)。昊鼎國際法律事務所的聯絡信箱是[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，台中事務所在40453 臺中市北區館前路19號6樓之1。
 
 ## 參考的官方資料

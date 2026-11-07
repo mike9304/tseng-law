@@ -46,7 +46,13 @@ author: "legal-ai-assistant"
 
 ## 母公司在國外發的薪水
 
-外派人員由母公司在境外發薪，這筆報酬不在扣繳範圍內，要由員工自己申報（[稅務入口網外僑說明](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-individual-income-tax/15r2N1n)）。住滿183天的居住者，在次年5月1日至31日的結算申報一併申報（[所得稅法第71條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)）；年度中廢止在台住所或居所離境的，應在離境前辦理當年度結算申報，配偶仍是居住者並留在台灣的，由配偶合併申報（[第71條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71-1)）。2026年（115年度）所得適用的金額，財政部已在[2025年11月27日公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=34b463dc8f1b49f29d440d92a6fd5139)：免稅額每人101,000元，薪資所得特別扣除額227,000元。累進稅率分5%至40%五級，40%級距從綜合所得淨額5,190,001元起算。超過90天未滿183天的人，離境前（申報期間仍在台者，於申報期間內）依同類所得的扣繳率申報納稅（[施行細則第60條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340004&flno=60)）。中區國稅局在[2026年5月8日新聞稿](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=8131a49d2aa34b3a9fa9e5b51f58d63c)提醒，未辦結算申報而被查到應稅所得，除補稅外，處所漏稅額3倍以下罰鍰。
+外派人員由母公司在境外發薪，這筆報酬不在扣繳範圍內，要由員工自己申報（[稅務入口網外僑說明](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-individual-income-tax/15r2N1n)）。住滿183天的居住者，在次年5月1日至31日的結算申報一併申報（[所得稅法第71條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71)）；年度中廢止在台住所或居所離境的，應在離境前辦理當年度結算申報，配偶仍是居住者並留在台灣的，由配偶合併申報（[第71條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=71-1)）。
+
+2026年（115年度）所得適用的金額，財政部已在[2025年11月27日公告](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=34b463dc8f1b49f29d440d92a6fd5139)：免稅額每人101,000元，薪資所得特別扣除額227,000元。累進稅率分5%至40%五級，40%級距從綜合所得淨額5,190,001元起算。
+
+超過90天未滿183天的人，離境前（申報期間仍在台者，於申報期間內）依同類所得的扣繳率申報納稅（[施行細則第60條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340004&flno=60)）。
+
+中區國稅局在[2026年5月8日新聞稿](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=8131a49d2aa34b3a9fa9e5b51f58d63c)提醒，未辦結算申報而被查到應稅所得，除補稅外，處所漏稅額3倍以下罰鍰。
 
 從日本、韓國或越南派來、屬於當地居住者的短期派駐人員，可以看租稅協定第15條。三個條件要同時符合：在台居留不超過183天；由非我國居住者的雇主給付或代為給付；不由雇主在我國的常設機構或固定處所負擔。183天的算法各不相同，日本協定以相關曆年度、韓國協定以相關會計年度中開始或結束的任何12個月計算，越南協定以一曆年度計算（[日本](https://www.mof.gov.tw/download/10422)、[韓國](https://www.mof.gov.tw/download/ea19d023141d4d3dbfbd122d99081c86)、[越南](https://www.mof.gov.tw/download/6b9255566aab4b9084c085ddc921138e)協定中文本）。減免要在申報時檢附對方稅務機關的居住者證明等文件申請（[適用所得稅協定查核準則第26條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340125&flno=26)）。至於美國，截至2026年10月，[財政部所得稅協定一覽表](https://www.mof.gov.tw/singlehtml/191?cntId=63930)上沒有臺美全面性所得稅協定。
 

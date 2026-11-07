@@ -91,7 +91,7 @@ Việc cư trú ban đầu của vợ chồng, con vị thành niên và con th�
 
 Bạn đang xin loại giấy phép nào? Hồ sơ nên xếp theo đúng loại giấy phép: công việc trước, sau đó là điều kiện thành viên gia đình hoặc người được chăm sóc, quan hệ thân nhân và cư trú của chủ thuê, cuối cùng là hướng dẫn, kế hoạch chăm lo đời sống và hợp đồng song ngữ. Có con nhỏ chỉ trả lời một phần điều kiện mới để thuê người giúp việc.
 
-Khi phát sinh vướng mắc tại Đài Loan, luật sư có thể kiểm tra loại giấy phép, điều kiện của chủ thuê và người được chăm sóc, đối chiếu hợp đồng với bảng lương, hoặc hỗ trợ xử lý tranh chấp và nghĩa vụ thông báo khi chấm dứt việc làm. Bạn có thể xem [hướng dẫn về quyền làm việc khi mang thai của người chăm sóc tại nhà](/vi/columns/issues/taiwan-pregnant-migrant-caregiver-dismissal-protection) và [dịch vụ tư vấn lao động](/vi/services). Để trao đổi hồ sơ, hãy gửi email đến [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ tư vấn: 台北市大同区承徳路一段35号7F-2.
+Khi phát sinh vướng mắc tại Đài Loan, luật sư có thể kiểm tra loại giấy phép, điều kiện của chủ thuê và người được chăm sóc, đối chiếu hợp đồng với bảng lương, hoặc hỗ trợ xử lý tranh chấp và nghĩa vụ thông báo khi chấm dứt việc làm. Bạn có thể xem [hướng dẫn về quyền làm việc khi mang thai của người chăm sóc tại nhà](/vi/columns/issues/taiwan-pregnant-migrant-caregiver-dismissal-protection) và [dịch vụ tư vấn lao động](/vi/services). Để trao đổi hồ sơ, hãy gửi email đến [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103).
 
 ## Nguồn tham khảo
 

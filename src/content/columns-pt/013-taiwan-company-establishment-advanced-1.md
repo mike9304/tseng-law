@@ -121,8 +121,6 @@ Se se tratar de um escritório comercial ordinário, a inscrição da sociedade 
 
 Por exemplo, se se tratar de ramos de atividade possíveis num escritório comercial ordinário, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num escritório comercial ordinário. A adequação do local deve confirmar-se antes da conclusão do contrato de arrendamento.
 
-Essa confirmação tem de estar feita antes da celebração do contrato.
-
 *Se for preciso tratar uma questão de direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
 
 ---

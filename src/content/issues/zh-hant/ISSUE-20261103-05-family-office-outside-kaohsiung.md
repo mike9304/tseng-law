@@ -45,7 +45,7 @@ author: legal-ai-assistant
 
 適用台灣法時，[民法第1187條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1187)允許以遺囑處分遺產，但仍受特留分限制。[信託法第4條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020024&flno=4)要求應登記或註冊的財產權辦理信託登記，才能對抗第三人；股票或公司債券還須通知發行公司，才能對抗該公司。
 
-本文說明契約與法律程序，不是投資建議。可委託台灣律師核對銀行顧問契約、第三方責任及遺囑、信託文件；[繼承諮詢](/zh-hant/services/family)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是台北市大同区承徳路一段35号7F-2。人在海外時，可參考[委任台灣律師的文件準備](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)，把已簽署文件和待辦事項分開交付核對。
+本文說明契約與法律程序，不是投資建議。可委託台灣律師核對銀行顧問契約、第三方責任及遺囑、信託文件；[繼承諮詢](/zh-hant/services/family)信箱為 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)，地址是103 臺北市大同區承德路一段35號7樓之2。人在海外時，可參考[委任台灣律師的文件準備](/zh-hant/columns/hire-taiwan-lawyer-from-abroad)，把已簽署文件和待辦事項分開交付核對。
 
 ## 參考資料
 

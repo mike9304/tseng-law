@@ -41,7 +41,7 @@ Với di chúc chịu sự điều chỉnh của luật Đài Loan, [Điều 118
 
 [Điều 4 Luật Tín thác](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020024&flno=4) yêu cầu đăng ký tín thác đối với quyền tài sản thuộc diện phải đăng ký, để có thể viện dẫn tín thác đối với người thứ ba. Với cổ phiếu hoặc trái phiếu công ty, phải thông báo cho công ty phát hành để có hiệu lực đối kháng với công ty đó. Biên bản họp gia đình chưa chứng minh các việc này đã hoàn thành.
 
-Đây là thông tin về hợp đồng và thủ tục pháp lý, không phải khuyến nghị đầu tư. Luật sư tại Đài Loan có thể kiểm tra hợp đồng ngân hàng, phần việc của đơn vị hợp tác và hồ sơ di chúc, tín thác. Bạn có thể [tư vấn thừa kế](/vi/services) qua [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 台北市大同区承徳路一段35号7F-2. Bài về [thừa kế và gia đình còn lại tại Đài Loan](/vi/columns/taiwan-inheritance-custody-analysis) giải thích thêm các vấn đề của gia đình; khi gửi hồ sơ, nên phân biệt bản đã ký với bản đang được đề xuất.
+Đây là thông tin về hợp đồng và thủ tục pháp lý, không phải khuyến nghị đầu tư. Luật sư tại Đài Loan có thể kiểm tra hợp đồng ngân hàng, phần việc của đơn vị hợp tác và hồ sơ di chúc, tín thác. Bạn có thể [tư vấn thừa kế](/vi/services) qua [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 103 臺北市大同區承德路一段35號7樓之2. Bài về [thừa kế và gia đình còn lại tại Đài Loan](/vi/columns/taiwan-inheritance-custody-analysis) giải thích thêm các vấn đề của gia đình; khi gửi hồ sơ, nên phân biệt bản đã ký với bản đang được đề xuất.
 
 ## Nguồn tham khảo
 

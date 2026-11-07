@@ -63,9 +63,9 @@ author: "legal-ai-assistant"
 
 会社が廃業する前に賃金額を争う場合については、[労働局の調解と裁判所の労働調解](/ja/columns/taiwan-labor-dispute-mediation-bureau-vs-court)で説明しています。
 
-雇用契約の相手と、廃業かどうかを契約書と賃金台帳で見分けたいときは、昊鼎国際法律事務所のメール [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) へ送ってください。
-
 清算を理由とする立替申請には、未払いの賃金・退休金・資遣費の債権を証明する書類に加え、清算人に債権を申告したことを示す書類も必要です（[管理弁法第9条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030005&flno=9)）。
+
+雇用契約の相手と、廃業かどうかを契約書と賃金台帳で見分けたいときは、昊鼎国際法律事務所のメール [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) へ送ってください。
 
 ## 参考にした公的資料
 

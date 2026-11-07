@@ -61,19 +61,11 @@ Herr Lin hielt diese Sanktion für sehr ungerecht und beantragte eine Verfassung
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-In Taiwan
+In Taiwan bestehen für sehbehinderte Personen in Wachstum, Alltag, Lernen und Bildung zahlreiche Hürden, und die Berufe, die sie ausüben können, sind sehr begrenzt.
 
-bestehen für sehbehinderte Personen in Wachstum, Alltag, Lernen und Bildung zahlreiche Hürden,
+Deshalb schuf der damalige Gesetzgeber zum Schutz sehbehinderter Personen in schwächerer Lage ein Gesetz, das Arbeitsplätze und das Existenzrecht (生存權) sehbehinderter Personen schützte.
 
-und die Berufe, die sie ausüben können, sind sehr begrenzt.
-
-Deshalb schuf der damalige Gesetzgeber zum Schutz sehbehinderter Personen in schwächerer Lage
-
-ein Gesetz, das Arbeitsplätze und das Existenzrecht (生存權) sehbehinderter Personen schützte.
-
-Mit dem Wandel der Zeit und der Ausweitung des Verbrauchermarktes
-
-wurde jedoch zunehmend die Auffassung vertreten, dass der alleinige Schutz der Rechte sehbehinderter Personen die Berufsrechte nicht sehbehinderter Personen übermäßig beschränke.
+Mit dem Wandel der Zeit und der Ausweitung des Verbrauchermarktes wurde jedoch zunehmend die Auffassung vertreten, dass der alleinige Schutz der Rechte sehbehinderter Personen die Berufsrechte nicht sehbehinderter Personen übermäßig beschränke.
 
 In der Debatte über die Berufsrechte sehbehinderter und nicht sehbehinderter Personen wurden viele Gegenstimmen laut.
 

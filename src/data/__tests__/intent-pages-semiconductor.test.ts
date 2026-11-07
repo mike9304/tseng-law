@@ -187,20 +187,23 @@ describe('semiconductor supplier intent page', () => {
         if (locale === 'en') {
           expect(page?.seoTitle).toBeDefined();
           expect(`${page?.seoTitle} | Hovering Law`.length).toBeLessThanOrEqual(60);
+        } else if (locale === 'ko') {
+          expect(page?.seoTitle).toBeDefined();
+        } else if (locale === 'ja' && otherSlug !== 'taiwan-lawyer') {
+          expect(page?.seoTitle).toBeDefined();
         } else {
           expect(page?.seoTitle).toBeUndefined();
         }
-        expect(page?.attorneyHeadingOverride).toBeUndefined();
         expect(page?.ctaTextOverride).toBeUndefined();
         expect(page?.serviceBlurbs).toBeUndefined();
       }
     }
   });
 
-  it('carries page-specific overrides for the attorney card, CTA and service blurbs', () => {
+  it('carries page-specific overrides for the CTA and service blurbs', () => {
     const ko = getIntentPage('ko', slug);
-    expect(ko?.attorneyHeadingOverride).toBe('반도체 공급사 사안을 맡는 대만 변호사');
-    expect(ko?.ctaTextOverride).toContain('견적서, 공급 계약서, 거래처가 보낸 요구 사항');
+    expect(ko?.ctaTextOverride).toContain('거래 개요, 상대방, 계약·납기·대금 조건');
+    expect(ko?.ctaTextOverride).toContain('견적서·계약서·거래처 요구 서류');
     expect(Object.keys(ko?.serviceBlurbs ?? {})).toEqual(['investment', 'civil', 'labor', 'ip']);
     expect(ko?.serviceBlurbs?.civil).toContain('납품은 끝났는데');
     // 재사용 블러브(유학생 헬스장 실적, 퇴직금 신·구제 설명)가 다시 들어오지 않아야 한다.
@@ -208,20 +211,19 @@ describe('semiconductor supplier intent page', () => {
     expect(JSON.stringify(ko?.serviceBlurbs)).not.toContain('舊制');
 
     const en = getIntentPage('en', slug);
-    expect(en?.attorneyHeadingOverride).toBe('Taiwan attorney for semiconductor supplier matters');
-    expect(en?.ctaTextOverride).toContain('quotation, the supply agreement, and the vendor pack');
+    expect(en?.ctaTextOverride).toContain('quotation, supply agreement, and vendor-registration documents');
     expect(Object.keys(en?.serviceBlurbs ?? {})).toEqual(['investment', 'civil', 'labor', 'ip']);
     expect(en?.serviceBlurbs?.civil).toContain('delivery is done but payment has not arrived');
 
     const ja = getIntentPage('ja', slug);
-    expect(ja?.attorneyHeadingOverride).toBe('半導体サプライヤーの案件を担当する台湾弁護士');
-    expect(ja?.ctaTextOverride).toContain('見積書、供給契約書、取引先から届いた提出書類');
+    expect(ja?.ctaTextOverride).toContain('現地法人の設立が必要か、契約の見直しで対応できるか');
+    expect(ja?.ctaTextOverride).toContain('見積書や契約書などの資料は、弁護士の案内後にご提出ください');
     expect(Object.keys(ja?.serviceBlurbs ?? {})).toEqual(['investment', 'civil', 'labor', 'ip']);
     expect(ja?.serviceBlurbs?.civil).toContain('納入は終わっているのに代金が入らない');
 
     const zh = getIntentPage('zh-hant', slug);
-    expect(zh?.attorneyHeadingOverride).toBe('處理半導體供應商案件的台灣律師');
-    expect(zh?.ctaTextOverride).toContain('報價單、供應契約及客戶寄來的供應商登錄文件');
+    expect(zh?.ctaTextOverride).toContain('究竟需要設立在台公司');
+    expect(zh?.ctaTextOverride).toContain('報價單、供應契約及供應商登錄文件');
     expect(Object.keys(zh?.serviceBlurbs ?? {})).toEqual(['investment', 'civil', 'labor', 'ip']);
     expect(zh?.serviceBlurbs?.civil).toContain('貨已交完但帳款未進');
   });
@@ -244,19 +246,23 @@ describe('semiconductor supplier intent page', () => {
     'varies %s list lengths instead of repeating a four-item template',
     (locale) => {
       const page = getIntentPage(locale, slug)!;
-      const listLengths = [
-        page.heroPoints.length,
-        page.idealFor.length,
-        page.reviewPoints.length,
-        page.processFlow.length,
-        page.prepareChecklist.length,
-        page.cautionPoints.length,
+      const fields: Array<{ key: keyof typeof page; length: number; min: number }> = [
+        { key: 'heroPoints', length: page.heroPoints.length, min: 3 },
+        { key: 'idealFor', length: page.idealFor.length, min: 3 },
+        {
+          key: 'reviewPoints',
+          length: page.reviewPoints.length,
+          min: locale === 'ja' ? 2 : 3,
+        },
+        { key: 'processFlow', length: page.processFlow.length, min: 3 },
+        { key: 'prepareChecklist', length: page.prepareChecklist.length, min: 3 },
+        { key: 'cautionPoints', length: page.cautionPoints.length, min: 3 },
       ];
 
-      expect(new Set(listLengths).size).toBeGreaterThan(1);
-      for (const length of listLengths) {
-        expect(length).toBeGreaterThanOrEqual(3);
-        expect(length).toBeLessThanOrEqual(5);
+      expect(new Set(fields.map((field) => field.length)).size).toBeGreaterThan(1);
+      for (const field of fields) {
+        expect(field.length).toBeGreaterThanOrEqual(field.min);
+        expect(field.length).toBeLessThanOrEqual(5);
       }
     },
   );

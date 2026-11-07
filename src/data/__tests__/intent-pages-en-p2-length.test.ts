@@ -17,9 +17,9 @@ describe('P2-1 EN litigation landing description length', () => {
     expect(description).toMatch(/civil claims/i);
   });
 
-  it('does not change Korean, Traditional Chinese, or Japanese litigation descriptions', () => {
+  it('pins Korean, Traditional Chinese, and Japanese litigation descriptions', () => {
     expect(intentPages.ko['taiwan-litigation-lawyer'].description).toBe(
-      '대만 민사소송, 손해배상, 형사 대응, 가사 분쟁에서 한국 고객이 먼저 확인해야 할 포인트를 정리한 안내입니다.',
+      '대만에서 민사·손해배상·형사·가사 분쟁이 생겼을 때 한국 고객이 먼저 확인할 관할, 증거, 일정을 정리합니다.',
     );
     expect(intentPages['zh-hant']['taiwan-litigation-lawyer'].description).toBe(
       '整理韓國客戶面對台灣民事訴訟、損害賠償、刑事程序與家事爭議時，應先確認的重點。',

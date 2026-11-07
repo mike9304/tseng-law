@@ -37,8 +37,6 @@ export type IntentPageContent = {
    * 없는 키는 공용 서비스 소개(`service-details`)를 그대로 쓴다.
    */
   serviceBlurbs?: Record<string, string>;
-  /** 사이드바 변호사 카드 제목의 페이지별 문구. 없으면 로케일 공용 문구. */
-  attorneyHeadingOverride?: string;
   /** 하단 CTA 본문의 페이지별 문구. 없으면 로케일 공용 문구. */
   ctaTextOverride?: string;
   columnSlugs: string[];
@@ -52,26 +50,27 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
       label: '상담 안내',
-      title: '대만변호사 | 한국어 상담·소송·법인설립 지원',
-      description: '한국 고객이 찾는 대만변호사의 한국어 상담, 소송, 대만 법인설립 지원 범위와 진행 방식, 관련 서비스와 칼럼을 정리한 안내 페이지입니다.',
+      title: '한국어로 상담하는 대만 변호사',
+      seoTitle: '대만변호사 | 한국어 상담·소송·법인설립 지원',
+      description:
+        '대만 회사 설립·투자와 민사·형사·가사 분쟁을 한국어로 상담합니다.',
       keywords: ['대만변호사', '증준외 변호사', '한국어 가능한 대만 변호사', '대만 소송 변호사', '대만 회사설립 변호사', '대만법인설립'],
       searchTerms: ['대만변호사', '증준외 변호사', '한국어 가능한 대만 변호사', '대만법인설립'],
       heroPoints: [
-        '한국 고객의 대만 법인설립(회사설립), 투자, 민사·형사·가사 분쟁을 한국어로 연결합니다.',
-        '초기 사실관계 정리부터 문서 검토, 절차 설계, 소송 대응까지 한 흐름으로 검토합니다.',
-        '증준외 대만 변호사 프로필, 공개 칼럼, YouTube·블로그 채널까지 함께 확인할 수 있습니다.',
+        '초기 사실관계 정리, 문서 검토, 절차 설계, 소송 대응까지 이어서 검토합니다.',
+        '상담은 한국어·중국어·일본어·영어로 진행합니다.',
       ],
       idealFor: [
         '대만 법률문제를 한국어로 설명받고 싶은 경우',
         '대만 변호사와 바로 연결해야 하는 회사설립·투자 이슈',
         '민사소송, 손해배상, 교통사고, 이혼·상속 등 분쟁 사건',
-        '초기 상담 전에 준비 자료와 절차를 먼저 확인하고 싶은 경우',
+        '절차와 준비 자료를 정리한 뒤 연락하려는 경우',
       ],
       reviewPoints: [
         '사건 유형에 따라 관할, 일정, 증거 확보 방식이 달라집니다.',
         '한국 본사 구조와 대만 현지 절차를 함께 맞춰야 하는 경우가 많습니다.',
         '외국인 사건은 통역, 위임장, 송달, 출입국 이슈까지 함께 점검해야 합니다.',
-        '법률자문과 실제 집행 가능성은 한 번에 같이 봐야 합니다.',
+        '법률 검토와 함께 실제 집행 가능성도 확인해야 합니다.',
       ],
       processFlow: [
         '사건 또는 사업 목적을 먼저 정리하고, 관련 계약서·증거가 어느 정도 있는지 1차로 확인합니다.',
@@ -106,21 +105,22 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '대만변호사 상담 전에는 어떤 자료를 준비하면 좋나요?',
           answer:
-            '계약서, 견적서, 상대방 정보, 사건 발생일, 현재 진행 상태, 사진·영상·진단서 같은 핵심 증거를 먼저 정리하면 상담 정확도가 올라갑니다.',
+            '계약서와 견적서, 상대방 정보, 사건 발생일과 현재 진행 상태를 정리해 주세요. 사진·영상·진단서 등 관련 증거도 준비해 주세요.',
         },
       ],
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
       label: '상담 안내',
-      title: '대만 법인설립·회사설립 변호사 | 절차·비용·기간',
-      description: '대만 법인설립(회사설립)의 절차, 비용, 기간과 투자 승인, 지사·자회사 선택, 인허가 및 운영 리스크까지 검토하는 대만 변호사 상담 안내입니다.',
+      title: '한국 기업의 대만 법인 설립 상담',
+      seoTitle: '대만 법인설립·회사설립 변호사 | 절차·비용·기간',
+      description:
+        '자회사·지사·연락사무소 중 대만 진출에 맞는 형태를 정하고 회사명 예비심사, 필요한 외국인 투자 승인과 등기·인허가 절차를 검토합니다. 설립 후 운영에 관한 법률 문제도 한국어로 상담할 수 있습니다.',
       keywords: ['대만 회사설립 변호사', '대만 법인설립 변호사', '대만 투자 변호사', '증준외 변호사', '대만 자회사 지사', '대만법인설립'],
       searchTerms: ['대만 회사설립 변호사', '대만 법인설립 변호사', '대만 투자 변호사', '대만법인설립'],
       heroPoints: [
-        '법인 형태 선택, 투자 승인, 자본금 송금, 등기, 인허가를 한 흐름으로 검토합니다.',
-        '자회사·지사·연락사무소 구조 차이와 업종별 규제를 한국 고객 관점에서 정리합니다.',
-        '법인설립(회사설립) 이후 비자, 상표, 계약, 고용 리스크까지 이어서 볼 수 있습니다.',
+        '자회사·지사·연락사무소 선택과 업종별 규제를 한국 본사 구조에 맞춰 검토합니다.',
+        '설립 후 필요한 비자·상표·고용·계약 문제도 상담할 수 있습니다.',
       ],
       idealFor: [
         '한국 본사 기준으로 대만 법인 구조를 결정해야 하는 경우',
@@ -129,15 +129,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '설립 이후 비자, 상표, 근로계약까지 같이 검토하고 싶은 경우',
       ],
       reviewPoints: [
-        '투자 승인과 자본금 송금 단계는 일정과 서류 누락에 민감합니다.',
+        '외국인 투자 승인과 자본금 송금 단계는 서류·일정이 어긋나기 쉬워 초기에 맞춰 두는 편이 좋습니다.',
         '영업 주소, 업종 코드, 실질 운영 구조가 맞지 않으면 후속 절차가 지연될 수 있습니다.',
-        '특수 업종은 회사설립만으로 끝나지 않고 별도 허가가 필요합니다.',
-        '회사설립 후 계약·노무·상표 전략까지 같이 설계해야 운영 리스크가 줄어듭니다.',
+        '영업 내용에 따라 회사등기 외에 인허가·등록 등 추가 절차가 필요할 수 있습니다.',
       ],
       processFlow: [
         '진출 목적과 매출 구조를 기준으로 자회사·지사·연락사무소 중 어떤 형태가 맞는지 먼저 비교합니다.',
-        '투자 승인 필요 여부, 자본금 규모, 주주 구조, 영업 주소를 정리해 설립 전제조건을 확정합니다.',
-        '등기 이후 은행, 세무, 비자, 상표, 고용계약까지 이어지는 일정을 한 번에 설계합니다.',
+        '회사명 예비심사(예약) 후 외국인 투자 승인이 필요한 경우 승인을 신청하고, 설립준비 명의 예비 계좌를 개설한 뒤 자본금을 송금합니다.',
+        '투자자본 심사·회사 등기를 마친 후 정식 계좌·세무·비자·상표·고용계약 일정을 이어서 잡습니다.',
       ],
       prepareChecklist: [
         '한국 본사 등기서류, 주주구조, 대표자 정보',
@@ -149,7 +148,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '업종 코드와 실제 사업 내용이 다르면 허가 단계에서 지연될 수 있습니다.',
         '은행 계좌 개설은 설립 완료와 별개로 시간이 더 걸릴 수 있습니다.',
         '화장품·물류·식품·플랫폼 업종은 추가 규제가 붙을 수 있습니다.',
-        '비자와 노동계약을 나중에 따로 보면 일정이 늘어집니다.',
+        '비자나 현지 근로가 필요한 경우, 설립과 별도로 검토 일정을 잡아 두는 편이 도움이 될 수 있습니다.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
       columnSlugs: [
@@ -162,48 +161,49 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '대만 회사설립은 보통 얼마나 걸리나요?',
           answer:
-            '일반적으로 약 3개월 전후를 예상하지만, 투자 승인 대상 여부, 자본금 송금 시점, 업종별 허가 필요성에 따라 달라질 수 있습니다.',
+            '보통 약 3개월 전후를 잡지만, 회사명 예비심사·외국인 투자 승인 필요 여부, 자본금 송금 시점, 업종별 허가에 따라 달라집니다.',
         },
         {
-          question: '지사와 자회사 중 어느 쪽이 더 많이 선택되나요?',
+          question: '지사와 자회사는 어떤 기준으로 선택하나요?',
           answer:
             '책임 구조, 세무, 향후 투자 계획에 따라 달라집니다. 독립 운영과 현지 확장을 고려하면 자회사를, 본사 직결 구조를 원하면 지사를 검토하는 경우가 많습니다.',
         },
         {
           question: '회사설립만 맡기면 끝나는 건가요?',
           answer:
-            '실무상은 그렇지 않습니다. 법인등기 이후 은행, 세무, 비자, 상표, 근로계약, 업종별 인허가까지 이어지는 경우가 많아 초기 설계부터 함께 보는 편이 효율적입니다.',
+            '법인등기 외에도 은행·세무 업무나 비자, 상표, 근로계약, 업종별 인허가를 검토해야 할 수 있습니다. 사업 계획에 따라 필요한 절차와 일정을 함께 확인합니다.',
         },
       ],
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
       label: '상담 안내',
-      title: '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
-      description: '대만 민사소송, 손해배상, 형사 대응, 가사 분쟁에서 한국 고객이 먼저 확인해야 할 포인트를 정리한 안내입니다.',
+      title: '대만 소송·분쟁 한국어 상담',
+      seoTitle: '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
+      description:
+        '대만에서 민사·손해배상·형사·가사 분쟁이 생겼을 때 한국 고객이 먼저 확인할 관할, 증거, 일정을 정리합니다.',
       keywords: ['대만 소송 변호사', '대만 민사소송 변호사', '대만 손해배상 변호사', '대만 형사소송 변호사', '증준외 변호사'],
       searchTerms: ['대만 소송 변호사', '대만 민사소송 변호사', '대만 손해배상 변호사'],
       heroPoints: [
         '민사소송, 손해배상, 교통사고, 형사 절차, 이혼·상속 분쟁까지 사건 유형별 대응 흐름을 정리합니다.',
         '외국인 사건은 증거 확보, 번역, 송달, 출입국 이슈를 함께 봐야 합니다.',
-        '증준외 대만 변호사의 관련 사례와 칼럼을 함께 연결해 실제 판단 기준을 확인할 수 있습니다.',
       ],
       idealFor: [
         '대만에서 사고, 손해, 계약 분쟁이 발생한 경우',
         '형사 고소 또는 경찰 조사 대응이 필요한 경우',
         '국제이혼, 친권, 상속처럼 한국과 대만 법이 함께 얽히는 경우',
-        '소송 전에 합의 가능성과 증거 방향을 먼저 점검하고 싶은 경우',
+        '소송 전에 합의 가능성과 증거 확보 방법을 점검하고 싶은 경우',
       ],
       reviewPoints: [
-        '초기 사실관계 정리와 증거 확보 속도가 결과에 큰 영향을 줍니다.',
-        '형사 절차와 민사 손해배상을 같이 설계하면 전략이 달라질 수 있습니다.',
-        '외국인 사건은 언어와 문서 번역보다도 절차 일정 관리가 더 중요할 때가 많습니다.',
+        '초기에 사건 경위를 정리하고, 필요한 증거의 확보 방법과 시점을 확인합니다.',
+        '형사 절차와 민사 손해배상을 함께 검토하면 대응 순서가 달라질 수 있습니다.',
+        '외국인 사건은 통역·번역 준비와 절차별 기한을 함께 확인해야 합니다.',
         '합의 여부를 판단하기 전 손해 산정과 책임 구조를 먼저 확인해야 합니다.',
       ],
       processFlow: [
-        '사실관계, 상대방, 손해 범위를 먼저 시간순으로 정리해 사건 구조를 잡습니다.',
+        '사건 경위를 시간순으로 정리하고, 상대방 정보와 손해 범위를 확인합니다.',
         '민사·형사·가사 중 어떤 절차를 병행해야 하는지 구분하고 우선순위를 정합니다.',
-        '합의 가능성, 증거 부족 부분, 출석 필요 단계까지 함께 검토해 대응 전략을 나눕니다.',
+        '합의 가능성, 부족한 증거, 출석이 필요한 단계를 검토해 대응 방안을 정합니다.',
       ],
       prepareChecklist: [
         '사건 경위서, 계약서, 통화·메신저 기록',
@@ -212,10 +212,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '현재 진행 중인 조사·재판·합의 여부',
       ],
       cautionPoints: [
-        '초기 진술과 제출 자료가 뒤집히면 신뢰도가 크게 떨어집니다.',
         '형사 고소만 하고 민사 손해 산정을 늦추는 경우가 많습니다.',
         '외국인 사건은 송달과 일정 관리가 생각보다 오래 걸릴 수 있습니다.',
-        '감정적으로 대응하면 합의와 소송 전략이 모두 흔들릴 수 있습니다.',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
       columnSlugs: [
@@ -233,7 +231,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '형사와 민사를 같이 검토해야 하는 경우가 있나요?',
           answer:
-            '교통사고, 상해, 사기, 횡령처럼 사실관계가 겹치는 사건은 형사 절차와 민사 손해배상 전략을 함께 짜는 편이 많습니다.',
+            '교통사고, 상해, 사기, 횡령처럼 사실관계가 겹치는 사건은 형사 절차와 민사 손해배상 문제를 함께 검토하는 경우가 많습니다.',
         },
         {
           question: '소송 전에 합의가 가능한지도 같이 봐주나요?',
@@ -261,9 +259,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '대만 반도체 공급사 법인설립',
         '대만 장비 공급사 계약',
       ],
-      attorneyHeadingOverride: '반도체 공급사 사안을 맡는 대만 변호사',
       ctaTextOverride:
-        '현지 법인이 정말 필요한지, 계약서만 손보면 되는지는 거래처 요구와 거래 규모, 앞으로의 물량 계획에 따라 답이 다릅니다. 견적서, 공급 계약서, 거래처가 보낸 요구 사항을 보내주시면 증준외 대만 변호사가 먼저 방향을 잡아 드립니다.',
+        '거래 개요, 상대방, 계약·납기·대금 조건을 먼저 간단히 보내 주세요. 필요하면 견적서·계약서·거래처 요구 서류를 변호사 안내 후 추가로 받습니다.',
       heroPoints: [
         // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
         '대만 팹이나 OSAT(후공정 패키징·테스트) 업체가 벤더 등록을 요구하면서 현지 법인을 함께 요청하는 경우가 있습니다. 법인이 실제로 필요한 요구인지, 지사나 기존 대리점 구조로도 납품이 이어지는지를 거래처가 보낸 서식을 놓고 확인합니다.',
@@ -287,7 +284,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
         '장비 공급은 검수 기준과 인수 시점을 어디에 두느냐에 따라 대금 청구와 하자 대응 순서가 달라지므로 계약서 문언부터 짚습니다.',
         // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
-        '한국 기술자의 체류 준비와 현지 채용은 설립 일정과 붙여 봐야 실제로 라인 대응이 가능한 시점이 나옵니다.',
+        '한국 기술자의 체류 준비와 현지 채용 일정을 설립 일정과 함께 검토해, 라인 대응을 시작할 수 있는 시점을 확인합니다.',
       ],
       processFlow: [
         // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
@@ -312,7 +309,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
       serviceBlurbs: {
         investment:
-          '대만 팹·패키징 거래처와 직접 계약하려면 자회사·지사·연락사무소 중 어떤 형태가 맞는지, 투자 승인과 등기 일정이 어떻게 잡히는지 확인합니다.',
+          '대만 팹·패키징 거래처와 직접 계약하려면 자회사·지사·연락사무소 중 어떤 형태가 맞는지, 필요 시 외국인 투자 승인과 등기 일정이 어떻게 잡히는지 확인합니다.',
         civil:
           '납품은 끝났는데 대금이 들어오지 않거나 납기와 검수를 두고 다툼이 생겼을 때 협상부터 소송까지 대응합니다.',
         // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
@@ -376,13 +373,12 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         '具備韓國、台灣跨境實務經驗，協助韓國客戶處理在台公司設立、投資、民事、刑事與家事爭議。',
         '可一併檢視初步事實整理、文件審閱、程序規劃及訴訟階段的相關事項。',
-        '可同時查看曾雋崴律師簡介、公開專欄與 YouTube／部落格內容。',
       ],
       idealFor: [
         '希望借重台韓跨境實務經驗，釐清台灣法律問題的人',
         '需要直接找台灣在地律師處理投資或公司設立事項的人',
         '涉及民事訴訟、損害賠償、車禍、離婚或繼承爭議的人',
-        '想先了解諮詢前應準備哪些資料、流程如何進行的人',
+        '想先整理諮詢所需資料與流程的人',
       ],
       reviewPoints: [
         '不同案件類型的管轄、時程與證據保全方式都不同。',
@@ -448,13 +444,13 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       reviewPoints: [
         '投資核准與資本匯入常是最容易延誤的環節。',
         '營業地址、行業別與實際營運模式若不一致，後續流程可能受阻。',
-        '特殊產業不是完成登記就結束，還有額外許可要同步處理。',
+        '公司登記之外，應依實際營業項目確認許可、登錄等程序，以及開業前須完成的事項。',
         '設立階段宜一併考慮契約、勞動與商標。',
       ],
       processFlow: [
         '先依進入台灣市場的目的與營收結構，比較子公司、分公司與辦事處。',
-        '確認投資核准、資本額、股東結構與營業地址後，再安排設立順序。',
-        '把登記後的銀行、稅務、簽證、商標與勞動流程一起排進時程表。',
+        '完成公司名稱預查（保留）後，若屬外國投資核准事項再申請核准；並整理資本額、股東結構與營業地址。',
+        '開立籌備處帳戶後匯入資本，完成適用的投資資本審定與公司登記，再辦理正式帳戶、稅籍、簽證、商標與勞動等後續事項。',
       ],
       prepareChecklist: [
         '韓國母公司的登記文件、股權結構、代表人資訊',
@@ -479,7 +475,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '台灣公司設立通常需要多久？',
           answer:
-            '一般約需 3 個月，但仍須視投資審查、資本匯入時間與產業許可需求而定。',
+            '一般約需 3 個月，但仍須視公司名稱預查、外國投資核准與否、資本匯入時間與產業許可需求而定。',
         },
         {
           question: '分公司與子公司，該如何選擇？',
@@ -489,7 +485,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '只處理公司登記就夠了嗎？',
           answer:
-            '通常不夠。完成登記後，銀行、稅務、簽證、商標、勞動契約與產業許可常需要接續處理，因此建議一開始就整體規劃。',
+            '還須依營業內容確認銀行帳戶、稅籍、簽證、商標與勞動契約等事項。部分產業許可須在公司登記前取得，其他開業程序則須依適用規定安排，因此宜在設立前一併確認時程。',
         },
       ],
     },
@@ -503,7 +499,6 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         '涵蓋民事訴訟、損害賠償、車禍、刑事程序與離婚、繼承等家事爭議。',
         '外國人案件需要把證據保全、翻譯、送達與入出境問題一起處理。',
-        '可直接查看曾雋崴律師的相關案例與實務專欄。',
       ],
       idealFor: [
         '在台灣發生事故、損害或契約爭議的人',
@@ -514,11 +509,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       reviewPoints: [
         '初期事實整理與證據保全宜及早進行。',
         '刑事程序與民事損害賠償若併行，整體策略會不同。',
-        '外國人案件中，程序時程控管往往比單純翻譯更重要。',
+        '安排送達與文件提出期限時，也要預留翻譯所需時間。',
         '在判斷是否和解前，應先確認損害範圍與責任歸屬。',
       ],
       processFlow: [
-        '先按時間順序整理事實、對方資訊與損害範圍，建立案件骨架。',
+        '先按時間順序整理案件經過，確認對方資訊與損害範圍。',
         '區分民事、刑事、家事中哪些程序需要同時推進，哪些可分開處理。',
         '一併評估和解可能性、證據缺口，以及是否須親自到庭。',
       ],
@@ -578,9 +573,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '台灣半導體供應商公司設立',
         '台灣設備供應商契約',
       ],
-      attorneyHeadingOverride: '處理半導體供應商案件的台灣律師',
       ctaTextOverride:
-        '究竟需要設立在台公司，還是調整契約即可，須依客戶要求、交易規模與日後出貨量判斷。請將報價單、供應契約及客戶寄來的供應商登錄文件寄給我們，曾雋崴律師會先協助您釐清方向。',
+        '究竟需要設立在台公司，還是調整契約即可，須依客戶要求、交易規模與日後出貨量判斷。請先簡述交易內容、與台灣的關聯、希望時程或期限，以及聯絡方式。我們會先確認是否適合承接及有無利益衝突，再說明服務範圍與費用；報價單、供應契約及供應商登錄文件，請待律師指示後再提供。',
       heroPoints: [
         // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
         '台灣晶圓廠或 OSAT（後段封裝測試）要求供應商登錄時，有時會一併要求設立在地公司。我們會依對方寄來的表格，確認是否非設立法人不可，或以分公司、既有代理商架構仍可繼續供貨。',
@@ -609,7 +603,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       processFlow: [
         // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
         '先閱讀客戶寄來的供應商登錄表格與採購條件，確認不設台灣公司，是否仍能繼續供貨。',
-        '若需要設立，再以稅務處理、簽約主體、在地聘僱計畫三個標準，比較子公司、分公司與辦事處。',
+        '若需在台設立據點，再以稅務處理、簽約主體、在地聘僱計畫三個標準，比較子公司、分公司與辦事處。',
         '以預定完成登記的日期往回推，把供應契約簽署、技術人員出差、在地員工到職排成同一張時程表。',
       ],
       prepareChecklist: [
@@ -629,7 +623,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
       serviceBlurbs: {
         investment:
-          '若要與台灣晶圓廠、封裝廠直接簽約，我們會確認子公司、分公司、辦事處哪一種較合適，以及經濟部投資審議司的審查時程與登記時程如何安排。',
+          '與台灣晶圓廠、封裝測試廠直接交易前，會先確認是否需要在台設立據點。若有需要，再比較子公司、分公司與辦事處，並確認適用的投資審查及登記時程。',
         civil:
           '貨已交完但帳款未進，或交期、驗收發生爭議時，可以從協商談起，必要時再評估訴訟。',
         // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
@@ -685,7 +679,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
   en: {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: 'SEARCH GUIDE',
+      label: 'Legal consultation',
       title: 'Taiwan Lawyer for Litigation, Company Setup & Business Advice',
       seoTitle: 'Taiwan Lawyer for Litigation & Company Setup',
       description:
@@ -693,12 +687,9 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'English speaking lawyer Taipei'],
       heroPoints: [
-        'This page connects overseas and international clients to Taiwan legal support for company setup, investment, and disputes.',
+        'Taiwan company setup, investment, and civil, criminal, and family disputes for overseas clients.',
         'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video.',
-        'The firm assists with Taiwan company formation, litigation across practice areas, residence-permit procedures, and tax-accounting assistance.',
-        'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
-        'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
-        'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
+        'The firm also assists with residence-permit procedures and tax-accounting matters connected to a Taiwan matter.',
       ],
       idealFor: [
         'Clients who want Taiwan legal issues explained in English or another working language',
@@ -719,8 +710,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       processFlow: [
         'Start with a brief first email: the issue or business goal, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional.',
-        'Separate jurisdiction, procedure, timing, and appearance requirements under Taiwan practice before the first action is taken.',
-        'After consultation, split the matter into items that can move immediately and items that still require fact or document confirmation.',
+        'We review the relevant Taiwan procedures, deadlines, and whether in-person attendance is needed.',
+        'After the consultation, we explain which steps can proceed and what further information is needed.',
       ],
       prepareChecklist: [
         'Brief initial summary: the issue or business model, the Taiwan connection, key dates or a deadline, preferred language, and how we can reach you',
@@ -742,7 +733,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What should I check first when looking for a Taiwan lawyer?',
           answer:
-            'Start with the case type and the lawyer’s language and procedural fit. For overseas and international clients, English or multilingual communication, Taiwan local procedure experience, and document-handling capability all matter.',
+            'Check whether the lawyer handles your type of matter, can communicate in your preferred language, and has experience with the relevant Taiwan procedures and documents.',
         },
         {
           question: 'Can consultation begin while I am still outside Taiwan?',
@@ -787,8 +778,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch', 'Taiwan branch vs subsidiary', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
       searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Taiwan branch vs subsidiary'],
       heroPoints: [
-        'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one Taiwan-law process.',
-        'This page explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
+        'We review entity choice, investment approval, capital remittance, registration, and operating contracts together under Taiwan law.',
+        'We compare subsidiaries, branches, and representative offices for overseas parent companies and investors entering Taiwan.',
         'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video. Initial review can start remotely.',
         'After registration, the firm can assist with residence-permit procedures and tax-accounting assistance for the Taiwan operation.',
         'Official government pages are linked as reference destinations; they do not decide eligibility on their own.',
@@ -809,9 +800,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       processFlow: [
         'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow of the overseas parent or investor.',
-        'Confirm investment review needs, capital amount, shareholder structure, and business address before filing.',
-        'Map the sequence after registration as well, including banking, tax-accounting assistance, residence-permit assistance, trademarks, and employment documents.',
-        'Initial review can start by email or video from outside Taiwan; local filings are mapped after the first consultation.',
+        'Reserve the company name first, then apply for foreign investment approval when required; align capital amount, shareholder structure, and business address.',
+        'Open the preparatory bank account, remit capital, complete the applicable capital verification, and register the company. Plan the operating account and any tax, visa, trademark or employment steps alongside this work.',
       ],
       prepareChecklist: [
         'Brief initial summary: the planned Taiwan business model, the overseas parent or investor, the Taiwan connection, key dates or a deadline, preferred language, and contact details',
@@ -841,14 +831,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
             'A common planning assumption is around three months, but the timeline depends on investment review, capital timing, and sector-specific permits.',
         },
         {
-          question: 'Which is more common: branch or subsidiary?',
+          question: 'How should we choose between a branch and a subsidiary?',
           answer:
             'That depends on liability structure, tax considerations, and expansion plans. Subsidiaries are common for independent local operations, while branches can fit direct parent-company control.',
         },
         {
           question: 'Is company registration alone enough?',
           answer:
-            'Usually not. Banking, tax-accounting assistance, residence-permit assistance, trademarks, labor arrangements, and industry permits often follow immediately after registration.',
+            'Registration is one part of the setup. Banking, tax and accounting arrangements, residence permits, trademarks, employment matters and industry permits may also need attention, depending on the business. We review the required steps and timing together.',
         },
         {
           question: 'Can company setup review start while the parent is still outside Taiwan?',
@@ -867,7 +857,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         },
         {
           question: 'Where can I see current company-setup fees?',
-          answer: 'See the Service Fees page for the current consultation and company-setup fee structure.',
+          answer:
+            'A general legal consultation is NT$3,000 per hour, in person or by video; standard Taiwan company setup starts from NT$50,000. The Service Fees page lists the current structure.',
         },
       ],
     },
@@ -896,14 +887,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       reviewPoints: [
         'Early fact development and evidence preservation can materially affect the outcome.',
         'Civil damages and criminal procedure sometimes need to be designed together.',
-        'For foreign clients, timeline control is often as important as translation.',
+        'For foreign clients, we review procedural deadlines alongside translation needs.',
         'Settlement should be evaluated only after liability and damages are analyzed.',
         'The first email should identify the Taiwan counterparty or other Taiwan connection and any deadline.',
       ],
       processFlow: [
         'Send a brief first email covering the contract or claim issue, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional.',
-        'Then determine which parts belong in civil, criminal, or family procedure and whether any of them should move together.',
-        'Review settlement potential, evidence gaps, and attendance requirements before choosing the first procedural step.',
+        'We assess whether civil, criminal, or family proceedings are appropriate and whether they should be coordinated.',
+        'We review settlement options, gaps in the evidence, and attendance requirements before recommending the first procedural step.',
       ],
       prepareChecklist: [
         'Brief initial summary: the contract or claim issue, the Taiwan connection, key dates or a deadline, preferred language, and contact details',
@@ -913,10 +904,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Organize for later: photos, videos, receipts, police materials, and any existing investigation, court case, or settlement discussion; medical or bank records only after the attorney asks for them',
       ],
       cautionPoints: [
-        'If the first narrative changes later, credibility can drop quickly.',
         'Clients often focus on the criminal complaint first and delay civil damage calculation.',
-        'For foreign-national matters, service and calendar control can take longer than expected.',
-        'Emotional reactions often distort both settlement judgment and litigation strategy.',
+        'In matters involving foreign nationals, serving documents and scheduling procedural steps can take longer than expected.',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
       columnSlugs: [
@@ -967,7 +956,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
-      label: 'SEARCH GUIDE',
+      label: 'Semiconductor suppliers',
       title: 'Taiwan Legal Counsel for Semiconductor Suppliers',
       seoTitle: 'Taiwan Semiconductor Supplier Legal Support',
       description:
@@ -984,9 +973,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'semiconductor supplier company setup Taiwan',
         'Taiwan equipment supplier contracts',
       ],
-      attorneyHeadingOverride: 'Taiwan attorney for semiconductor supplier matters',
       ctaTextOverride:
-        'Whether you actually need a Taiwan entity, or whether a contract review is enough, depends on what the customer is asking for, the size of the account, and the volume you expect next. Send the quotation, the supply agreement, and the vendor pack the customer sent, and Attorney Wei Tseng will outline a direction first.',
+        'Whether you need a Taiwan entity or a contract review depends on the customer’s requirements, the size of the account, and expected future business. Start with a brief summary of those points. The quotation, supply agreement, and vendor-registration documents can follow after attorney instructions.',
       heroPoints: [
         // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
         'Taiwan fabs and OSAT (backend packaging and test) houses sometimes ask for vendor registration together with a local entity. We sit with the forms they sent and check whether that is a genuine entity requirement, or whether supply can continue through a branch or the current distributor.',
@@ -1006,9 +994,9 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       reviewPoints: [
         // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
-        'What vendor registration actually requires differs from form to form. It is faster to read the pack and the emails from purchasing together.',
+        'Vendor-registration requirements vary. We review the documents alongside emails from the customer’s purchasing team.',
         // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
-        'On equipment supply, where you put the inspection standard and the acceptance date changes the order of invoicing and defect response, so we start from the contract wording.',
+        'For equipment supply, the contract’s inspection requirements and acceptance date affect invoicing and the response to defects, so we review those terms together.',
         // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
         'Home-country technician stays and local hiring have to be lined up with the incorporation calendar, or the date you can actually staff the production floor will slip.',
       ],
@@ -1030,7 +1018,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Translating a home-country template and using it as-is can leave the warranty scope or late-delivery clauses out of step with the Taiwan customer purchasing terms.',
         'Opening a bank account takes extra time after registration is done, and the first payment can land later than planned.',
         // REVIEW: 변호사 검수 필요 — 기술자 출장·체류 준비 일정에 관한 서술
-        'If you only notice late that technician travel will be frequent, stay preparations get squeezed.',
+        'If repeated technician visits are planned late, there may be too little time to arrange their stay.',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
       serviceBlurbs: {
@@ -1054,13 +1042,13 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: 'The customer wants a local entity for vendor registration. Will a branch do?',
           // REVIEW: 변호사 검수 필요 — 벤더 등록 요건을 지사가 충족하는지에 대한 검토 절차 서술
           answer:
-            'It depends on the file. We first check whether the vendor pack is asking for a Taiwan business registration number, invoices issued in Taiwan, or staff on the ground. We then put a subsidiary and a branch side by side on tax, contracting party, and hiring scope, and look with you at which one meets that request.',
+            'It depends on the customer’s requirements. We first check whether the vendor pack is asking for a Taiwan business registration number, invoices issued in Taiwan, or staff on the ground. We then put a subsidiary and a branch side by side on tax, contracting party, and hiring scope, and look with you at which one meets that request.',
         },
         {
           question: 'What should we prepare when equipment technicians will stay only a short time?',
           // REVIEW: 변호사 검수 필요 — 체류 자격·절차 준비를 언급(구체 요건은 단정하지 않음)
           answer:
-            'The procedure to prepare changes with the length of stay, the work they will do on site, and where payroll is paid. Share the travel dates, the scope of work on the floor, and who the contracting party is, and we will confirm which steps to take.',
+            'The required procedures depend on the length of stay, the work on site, and where payroll is paid. Share the travel dates, the scope of work on the floor, and who the contracting party is, and we will confirm which steps to take.',
         },
         {
           question: 'Can we keep using our home-country NDA and supply agreement as they are?',
@@ -1077,7 +1065,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What timeline and cost should we plan for company setup?',
           answer:
-            'Taiwan company setup is commonly planned around three months, but it moves with whether investment review applies, when capital is remitted, and how the business scope is stated. A standard Taiwan company setup starts from NT$50,000, and a general legal consultation is NT$3,000 per hour in person or by video. Engagement fees for a matter are quoted separately after we have seen the documents.',
+            'Taiwan company setup is commonly planned around three months, but the timing depends on whether investment review applies, when capital is remitted, and how the business scope is stated. A standard Taiwan company setup starts from NT$50,000, and a general legal consultation is NT$3,000 per hour in person or by video. Engagement fees for a matter are quoted separately after we have seen the documents.',
         },
         {
           question: 'Delivery is finished, but payment keeps slipping. What happens next?',
@@ -1111,12 +1099,12 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '案件の類型によって管轄、スケジュール、証拠確保の方法が異なります。',
         '日本本社の構造と台湾現地の手続きをあわせて調整する必要があるケースが少なくありません。',
         '外国人案件は通訳、委任状、送達、出入国の問題まであわせて確認する必要があります。',
-        '法律上の助言と実際の執行可能性は一度に確認すべきです。',
+        '法的な検討とあわせて、実際の執行可能性も確認します。',
       ],
       processFlow: [
-        '案件または事業の目的を先に整理し、関連契約書・証拠がどの程度あるかを一次確認します。',
-        '台湾基準の管轄、手続き、予想スケジュール、現地出席の要否を分けて相談の優先順位を決めます。',
-        '相談後すぐに進められる段階と追加確認が必要な段階に分けて、実際の実行順序をご提案します。',
+        'ご相談の目的を伺い、関連する契約書や証拠の有無を確認します。',
+        '台湾での管轄や手続、見込まれる期間、出席の要否を確認し、優先して対応すべき事項を決めます。',
+        'すぐに進められる手続と追加確認が必要な事項を分け、対応の順序をご提案します。',
       ],
       prepareChecklist: [
         '初回の簡潔な概要：争点または事業モデル、台湾との接点、重要な日付・期限、希望言語、連絡先',
@@ -1126,7 +1114,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       cautionPoints: [
         '日本で一般的な方法が台湾の手続きと異なる場合があります。',
-        '翻訳だけ合わせて書類の形式や委任状の要件を見落としがちです。',
+        '翻訳の内容だけでなく、書類の形式や委任状の要件も確認してください。',
         '初期の連絡記録を整理しないと、その後の立証が難しくなることがあります。',
         'ビザ・在留の状態が案件対応のスケジュールに影響する場合があります。',
       ],
@@ -1150,31 +1138,30 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
       label: '相談案内',
-      title: '台湾会社設立・法人設立の弁護士｜手続き・費用・期間',
-      description: '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
+      title: '台湾での会社設立のご相談',
+      seoTitle: '台湾会社設立・法人設立の弁護士｜手続き・費用・期間',
+      description: '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査、銀行口座、就業許可など必要な手続きについて日本語で相談できます。',
       keywords: ['台湾会社設立弁護士', '台湾法人設立弁護士', '台湾投資弁護士', '曾雋崴弁護士', '台湾子会社 支店', '台湾法人設立'],
       searchTerms: ['台湾会社設立弁護士', '台湾法人設立弁護士', '台湾投資弁護士', '台湾法人設立'],
       heroPoints: [
-        '法人形態の選択、投資承認、資本金送金、登記、許認可を一つの流れで検討します。',
-        '子会社・支店・代表者事務所の構造の違いと業種別規制を日本のクライアントの視点で整理します。',
-        '法人設立（会社設立）後のビザ、商標、契約、雇用リスクまで引き続きご検討いただけます。',
+        '法人形態の選択、投資承認の要否、資本金送金、登記、業種別許認可まで、案件ごとに確認すべき点を整理します。',
+        '設立後のビザ、商標、契約、雇用についてもご相談いただけます。',
       ],
       idealFor: [
         '日本本社基準で台湾法人の構造を決める必要がある場合',
         '支店と子会社のどちらの形態が適切か比較が必要な場合',
-        '化粧品・物流など業種別の許認可を並行する必要がある場合',
+        '会社設立と並行して、化粧品・物流などの業種別の許認可を確認する必要がある場合',
         '設立後のビザ、商標、労働契約まであわせて検討したい場合',
       ],
       reviewPoints: [
-        '投資承認と資本金送金の段階はスケジュールと書類の漏れに敏感です。',
+        '投資承認と資本金送金の段階は、必要書類とスケジュールの確認が早めに必要です。',
         '営業住所、業種コード、実質的な運営構造が合わないと後続手続きが遅れることがあります。',
-        '特殊業種は会社設立だけで終わらず、別途許可が必要です。',
-        '会社設立後の契約・労務・商標戦略まであわせて設計すると運営リスクが減ります。',
+        '会社登記とは別に、事業内容に応じた許認可や登録などの手続が必要になる場合があります。',
       ],
       processFlow: [
         '進出目的と売上構造を基準に、子会社・支店・代表者事務所のどの形態が適切か先に比較します。',
-        '投資承認の要否、資本金規模、株主構成、営業住所を整理して設立の前提条件を確定します。',
-        '登記後の銀行、税務、ビザ、商標、雇用契約まで続くスケジュールを一度に設計します。',
+        '会社名の事前審査・予約の後、外国投資承認が必要な事業であれば承認を申請し、資本金規模・株主構成・営業住所を整理します。',
+        '会社設立準備用の銀行口座を開設して資本金を送金し、送金後の資本金査定（投資額の確認）を経て会社登記を申請します。登記後は正式な銀行口座・税務・ビザ・商標・雇用契約など、案件に応じた後続手続きをあわせて整理します。',
       ],
       prepareChecklist: [
         '初回の簡潔な概要：予定している台湾の事業モデル、海外の親会社または投資者、重要な日付・期限、希望言語、連絡先',
@@ -1186,7 +1173,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '業種コードと実際の事業内容が異なると許可段階で遅れることがあります。',
         '銀行口座の開設は設立完了とは別にさらに時間がかかることがあります。',
         '化粧品・物流・食品・プラットフォーム業種は追加規制が付くことがあります。',
-        'ビザと労働契約を後で別に検討するとスケジュールが長くなります。',
+        'ビザや現地雇用が必要な場合は、設立手続きと別に日程を見ておくと整理しやすくなります。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
       columnSlugs: [
@@ -1199,52 +1186,48 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '台湾の会社設立は通常どのくらいかかりますか？',
           answer:
-            '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種別許可の必要性によって変わることがあります。',
+            '投資承認の要否、送金・銀行審査、業種別許可により大きく異なります。就業許可・居留は会社設立とは別手続きで、時期の目安も案件ごとに変わります。詳細は台湾法人設立総合ガイドもご参照ください。',
         },
         {
-          question: '支店と子会社のどちらが多く選ばれますか？',
+          question: '支店と子会社はどの基準で選びますか？',
           answer:
             '責任構造、税務、今後の投資計画によって異なります。独立運営と現地拡張を考える場合は子会社を、本社直結の構造を希望する場合は支店を検討するケースが多いです。',
         },
         {
-          question: '会社設立だけ依頼すれば終わりですか？',
+          question: '会社登記のほかに、どのような手続が必要ですか？',
           answer:
-            '実務上はそうではありません。法人登記後に銀行、税務、ビザ、商標、労働契約、業種別許認可まで続く場合が多く、初期設計からあわせて検討する方が効率的です。',
-        },
-        {
-          question: '設立にはどのくらいかかりますか？',
-          answer: '会社設立自体はおおむね3か月、その後の就業許可・居留証に約1か月が目安です（詳細は台湾法人設立総合ガイドをご覧ください）。',
+            '事業内容に応じて、銀行口座、税務、ビザ、商標、雇用契約などの準備が必要になります。業種別の許認可には登記前に必要なものもあるため、設立段階から全体の日程を確認します。',
         },
       ],
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
       label: '相談案内',
-      title: '台湾訴訟弁護士｜民事・労働・家事 日本語対応',
+      title: '台湾での訴訟・紛争のご相談',
+      seoTitle: '台湾訴訟弁護士｜民事・労働・家事 日本語対応',
       description: '台湾での契約紛争・未払い請求、民事訴訟、損害賠償、労働紛争、刑事対応、離婚・相続について、日本企業・在台日本人の方が最初に確認すべきポイントをまとめました。日本語で直接ご相談いただけます。',
       keywords: ['台湾訴訟弁護士', '台湾民事訴訟弁護士', '台湾損害賠償弁護士', '台湾刑事訴訟弁護士', '曾雋崴弁護士'],
       searchTerms: ['台湾訴訟弁護士', '台湾民事訴訟弁護士', '台湾損害賠償弁護士'],
       heroPoints: [
-        '台湾の契約紛争・未払い請求のほか、民事訴訟、損害賠償、交通事故、刑事手続き、離婚・相続紛争まで、案件類型別の対応の流れを整理します。',
+        '台湾の契約紛争・未払い請求、民事訴訟、損害賠償、交通事故、刑事手続き、離婚・相続紛争について、案件類型ごとに管轄・証拠・手続きの確認ポイントを整理します。',
         '外国人案件は証拠確保、翻訳、送達、出入国の問題をあわせて検討する必要があります。',
-        '曾雋崴台湾弁護士の関連事例とコラムをあわせてつなぎ、実際の判断基準をご確認いただけます。',
       ],
       idealFor: [
         '台湾で事故、損害、契約紛争が発生した場合',
         '刑事告訴または警察捜査への対応が必要な場合',
         '国際離婚、親権、相続のように日本と台湾の法があわせて絡む場合',
-        '訴訟前に示談の可能性と証拠の方向を先に確認したい場合',
+        '訴訟前に示談の可能性と必要な証拠を確認したい場合',
       ],
       reviewPoints: [
         '初期の事実関係の整理と証拠確保のスピードが結果に大きく影響します。',
         '刑事手続きと民事損害賠償をあわせて設計すると戦略が変わることがあります。',
-        '外国人案件は言語や文書翻訳よりも手続きスケジュールの管理がより重要な場合が多いです。',
+        '翻訳に必要な時間も含め、送達や提出期限を確認します。',
         '示談の可否を判断する前に損害の算定と責任構造を先に確認する必要があります。',
       ],
       processFlow: [
-        '事実関係、相手方、損害の範囲をまず時系列で整理して案件の構造を固めます。',
-        '民事・刑事・家事のうちどの手続きを並行すべきかを分けて優先順位を決めます。',
-        '示談の可能性、証拠の不足部分、出席が必要な段階まであわせて検討し、対応戦略を分けます。',
+        '出来事を時系列で整理し、相手方と損害の範囲を確認します。',
+        '必要な民事・刑事・家事の手続を確認し、並行して進めるか、どれを先に進めるかを検討します。',
+        '示談の可能性、追加で必要な証拠、出席の要否を踏まえ、対応方針をご提案します。',
       ],
       prepareChecklist: [
         '初回の簡潔な概要：契約または請求の争点、台湾との接点、重要な日付・期限、希望言語、連絡先',
@@ -1255,7 +1238,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '初期の陳述と提出資料が覆ると信頼性が大きく下がります。',
         '刑事告訴だけ先に行い、民事損害の算定を遅らせるケースが多いです。',
-        '外国人案件は送達とスケジュール管理が思ったより長くかかることがあります。',
+        '国外への送達が必要な場合は、その期間も見込んで手続の日程を検討します。',
         '感情的に対応すると示談と訴訟戦略の両方が揺らぐことがあります。',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
@@ -1289,11 +1272,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
-      label: '検索ガイド',
+      label: '相談案内',
       title: '台湾の半導体材料・装置サプライヤー向け法務案内',
       seoTitle: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
       description:
-        '台湾のファブやパッケージング先へ材料・装置を納入する日本のサプライヤーが、現地法人、供給契約、技術者の滞在、代金回収をどう準備するかを整理した案内です。相談は日本語・中国語・英語・韓国語で行います。',
+        '台湾のファブやパッケージング・テスト企業へ材料・装置を納入する日本のサプライヤーが、現地法人、供給契約、技術者の滞在、代金回収をどう準備するかを整理した案内です。相談は日本語・中国語・英語・韓国語で行います。',
       keywords: [
         '台湾 半導体 素材 装置',
         '台湾 半導体 サプライヤー 法務',
@@ -1306,12 +1289,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '台湾 半導体サプライヤー 会社設立',
         '台湾 装置サプライヤー 契約',
       ],
-      attorneyHeadingOverride: '半導体サプライヤーの案件を担当する台湾弁護士',
       ctaTextOverride:
-        '現地法人が本当に必要か、契約書の手直しだけで足りるかは、取引先の要望と取引規模、今後の数量計画によって異なります。見積書、供給契約書、取引先から届いた提出書類をお送りいただければ、曾雋崴台湾弁護士が先に方針を整理いたします。',
+        '現地法人の設立が必要か、契約の見直しで対応できるかは、取引先の条件、取引規模、今後の数量計画によって異なります。まずは取引の概要、台湾との関係、希望時期・期限、連絡先をお知らせください。受任可否と利益相反を確認したうえで、相談範囲と費用をご案内します。見積書や契約書などの資料は、弁護士の案内後にご提出ください。',
       heroPoints: [
         // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
-        '台湾のファブやOSAT（後工程のパッケージング・テスト）がベンダー登録とあわせて現地法人を求めることがあります。法人が実際に必要な求めなのか、支店や既存の代理店のまま納入が続くのかを、先方から届いた書式を手元に置き確認します。',
+        '台湾のファブやOSAT（後工程のパッケージング・テスト）がベンダー登録とあわせて現地法人を求めることがあります。現地法人の設立が必須なのか、支店や既存の代理店を通じた納入でも条件を満たせるのか、先方の書式を確認します。',
         // REVIEW: 변호사 검수 필요 — 품질보증·납기 지연·리콜 비용 분담 조항의 검토 범위를 언급
         '材料は定期納入、装置は設置と現場対応まで続くことが多いため、契約書で見る条項が変わります。品質保証の範囲、納期が遅れたときの処理、リコール時の費用負担を、契約書の文言どおりに確認します。',
         // REVIEW: 변호사 검수 필요 — 기술자 체류 절차와 법인 형태 선택의 연계를 서술
@@ -1327,8 +1309,6 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '納入と検収は終わっているのに、代金が何か月も入ってこない場合',
       ],
       reviewPoints: [
-        // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
-        '取引先のベンダー登録の求めが何を指すかは書式ごとに違います。購買担当から届いた書式とメールを一緒に見る方が早いです。',
         // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
         '装置の供給では、検収基準と引渡し時点をどこに置くかで請求と不具合対応の順序が変わるため、契約書の文言から確認します。',
         // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
@@ -1337,7 +1317,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       processFlow: [
         // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
         '取引先から届いたベンダー登録の書式と購買条件を先に読み、現地法人なしでも納入を続けられるかを確認します。',
-        '法人が必要であれば、子会社・支店・代表者事務所（いわゆる駐在員事務所）を、税務、契約の締結主体、現地採用計画の三つの基準で比較します。',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
+        '台湾に拠点を設ける場合は、子会社・支店・代表者事務所（いわゆる駐在員事務所）を、税務、契約の締結主体、現地採用計画の三つの基準で比較します。',
         '登記完了の予定日を起点に、供給契約の署名、技術者の出張、現地社員の採用時期を逆算し、一つの日程表に合わせます。',
       ],
       prepareChecklist: [
@@ -1352,12 +1333,12 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '日本本社の書式を翻訳しただけで使うと、品質保証の範囲や納期遅延の処理が、台湾の取引先の購買条件と噛み合わないことがあります。',
         '銀行口座の開設は登記完了とは別に時間がかかり、最初の入金日程が後ろにずれることもあります。',
         // REVIEW: 변호사 검수 필요 — 기술자 출장·체류 준비 일정에 관한 서술
-        '技術者の出張が増えることに遅く気づくと、滞在の準備期間が足りなくなります。',
+        '技術者の出張が増える見込みがある場合は、滞在に必要な手続の準備期間を確保してください。',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
       serviceBlurbs: {
         investment:
-          '台湾のファブ・パッケージング先と直接契約するには、子会社・支店・代表者事務所のどれが合うか、投資承認と登記の日程がどう組まれるかを確認します。',
+          '台湾のファブやパッケージング・テスト企業との直接取引に向け、台湾拠点の要否を確認します。拠点を設ける場合は、子会社・支店・代表者事務所の違いと、必要な投資承認・登記の日程を検討します。',
         civil:
           '納入は終わっているのに代金が入らないとき、納期や検収を巡って争いになったときは、交渉から訴訟まで対応します。',
         // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
@@ -1391,15 +1372,15 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
             'そのまま使う前に、準拠法と紛争解決条項、品質保証の範囲、納期遅延とリコール費用の分担、技術資料の提供範囲を、取引先の購買条件と並べて見ます。本社書式と先方から届いた購買条件を一緒にいただければ、どこを直すべきかお示しします。',
         },
         {
-          question: '台湾の代理店経由だった数量を直接契約に切り替えるとき、何を見ますか？',
+          question: '台湾の代理店経由の取引を直接契約に切り替えるとき、何を確認しますか？',
           // REVIEW: 변호사 검수 필요 — 기존 대리점 계약의 기간·해지·독점 조항 검토를 언급
           answer:
             '既存の代理店契約の期間、解除条件、独占の有無を先に確認し、直接契約に変えたときに台湾で誰が請求書を発行し、保守を担うかを整理します。代理店契約書と直近の取引経緯を見ながら順序を決めます。',
         },
         {
-          question: '設立の期間と費用はどの程度で見ますか？',
+          question: '設立にかかる期間と費用はどのくらいですか？',
           answer:
-            '台湾の会社設立はよく約3か月を目安にしますが、投資承認の対象かどうか、資本金の送金時期、業種の記載によって変わります。通常の台湾会社設立は50,000新台湾ドル（NT$）から、一般法律相談は対面またはビデオで1時間NT$3,000です。事件の委任費用は資料を確認したうえで別途ご案内します。',
+            '台湾の会社設立は約3か月を目安としますが、投資承認の対象かどうか、資本金の送金時期、業種の記載によって変わります。通常の台湾会社設立は50,000新台湾ドル（NT$）から、一般法律相談は対面またはビデオで1時間NT$3,000です。事件の委任費用は資料を確認したうえで別途ご案内します。',
         },
         {
           question: '納入は終わっているのに代金が入りません。どうしますか？',

@@ -19,7 +19,9 @@ describe('English intent pages audience', () => {
     expect(page?.keywords).toContain('Taiwan lawyer for overseas clients');
     expect(page?.keywords).not.toContain('Taiwan lawyer for Korean clients');
     expect(page?.searchTerms).not.toContain('Taiwan lawyer for Korean clients');
-    expect(page?.heroPoints[0]).toMatch(/overseas and international clients/i);
+    expect(page?.heroPoints[0]).toMatch(/overseas clients/i);
+    expect(page?.heroPoints[0]).not.toMatch(/overseas and international/i);
+    expect(page?.seoTitle).toBe('Taiwan Lawyer for Litigation & Company Setup');
   });
 
   it('scopes company setup to overseas businesses, entity work, and operating contracts', () => {
@@ -61,14 +63,19 @@ describe('English intent pages audience', () => {
     );
   });
 
-  it('keeps Korean and Traditional Chinese titles unchanged', () => {
-    expect(getIntentPage('ko', 'taiwan-lawyer')?.title).toBe(
+  it('keeps Korean human titles and SEO title contracts separate', () => {
+    expect(getIntentPage('ko', 'taiwan-lawyer')?.title).toBe('한국어로 상담하는 대만 변호사');
+    expect(getIntentPage('ko', 'taiwan-lawyer')?.seoTitle).toBe(
       '대만변호사 | 한국어 상담·소송·법인설립 지원',
     );
     expect(getIntentPage('ko', 'taiwan-company-setup-lawyer')?.title).toBe(
+      '한국 기업의 대만 법인 설립 상담',
+    );
+    expect(getIntentPage('ko', 'taiwan-company-setup-lawyer')?.seoTitle).toBe(
       '대만 법인설립·회사설립 변호사 | 절차·비용·기간',
     );
-    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.title).toBe(
+    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.title).toBe('대만 소송·분쟁 한국어 상담');
+    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.seoTitle).toBe(
       '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
     );
     expect(getIntentPage('zh-hant', 'taiwan-lawyer')?.title).toBe('台灣律師指南');

@@ -9,7 +9,6 @@ import {
 
 const cardLabels = {
   ko: {
-    eyebrow: '담당 변호사',
     heading: '담당 변호사',
     practice: '주요 대응 분야',
     channels: '공개 프로필 및 채널',
@@ -17,7 +16,6 @@ const cardLabels = {
     contact: '상담 문의',
   },
   'zh-hant': {
-    eyebrow: '承辦律師',
     heading: '承辦律師',
     practice: '主要服務領域',
     channels: '公開簡介與頻道',
@@ -25,7 +23,6 @@ const cardLabels = {
     contact: '電子郵件諮詢',
   },
   en: {
-    eyebrow: 'Lead Attorney',
     heading: 'Lead Attorney',
     practice: 'Core Practice Areas',
     channels: 'Public Profiles and Channels',
@@ -33,7 +30,6 @@ const cardLabels = {
     contact: 'Email about a consultation',
   },
   ja: {
-    eyebrow: '担当弁護士',
     heading: '担当弁護士',
     practice: '主な対応分野',
     channels: '公開プロフィールとチャンネル',
@@ -59,14 +55,14 @@ export default function AttorneyAuthorityCard({
   }
 
   const labels = cardLabels[locale];
+  const resolvedHeading = heading ?? labels.heading;
   const practiceAreas = profile.practiceAreas.slice(0, 4);
   const channels = profile.externalProfiles.slice(0, 3);
   const profileHref = getAttorneyProfilePath(locale, profile.slug);
 
   return (
     <section className="authority-card">
-      <div className="authority-card-eyebrow">{labels.eyebrow}</div>
-      <div className="authority-card-heading">{heading ?? labels.heading}</div>
+      <div className="authority-card-heading">{resolvedHeading}</div>
       <div className="authority-card-top">
         <div className="authority-card-photo">
           <Image

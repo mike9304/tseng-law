@@ -43,9 +43,7 @@ describe('Japanese intent landing pages', () => {
     } else {
       expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);
     }
-    // WO-JA-1 added one Japanese-only FAQ to both the company-setup and litigation pages.
-    const jaOnlyFaqCount =
-      slug === 'taiwan-company-setup-lawyer' || slug === 'taiwan-litigation-lawyer' ? 1 : 0;
+    const jaOnlyFaqCount = slug === 'taiwan-litigation-lawyer' ? 1 : 0;
     expect(ko).toBeDefined();
     expect(ja?.faq).toHaveLength(ko!.faq.length + jaOnlyFaqCount);
   });
@@ -54,17 +52,15 @@ describe('Japanese intent landing pages', () => {
     const page = getIntentPage('ja', 'taiwan-company-setup-lawyer');
 
     expect(page?.description).toBe(
-      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
+      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査、銀行口座、就業許可など必要な手続きについて日本語で相談できます。',
     );
+    expect(page?.seoTitle).toBe('台湾会社設立・法人設立の弁護士｜手続き・費用・期間');
+    expect(page?.title).toBe('台湾での会社設立のご相談');
+    expect(page?.faq).toHaveLength(3);
     expect(page?.faq[0]).toEqual({
       question: '台湾の会社設立は通常どのくらいかかりますか？',
       answer:
-        '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種別許可の必要性によって変わることがあります。',
-    });
-    expect(page?.faq[3]).toEqual({
-      question: '設立にはどのくらいかかりますか？',
-      answer:
-        '会社設立自体はおおむね3か月、その後の就業許可・居留証に約1か月が目安です（詳細は台湾法人設立総合ガイドをご覧ください）。',
+        '投資承認の要否、送金・銀行審査、業種別許可により大きく異なります。就業許可・居留は会社設立とは別手続きで、時期の目安も案件ごとに変わります。詳細は台湾法人設立総合ガイドもご参照ください。',
     });
   });
 
@@ -86,14 +82,19 @@ describe('Japanese intent landing pages', () => {
     expect(metadata.alternates?.languages?.en).toBe(`https://tseng-law.com/en/${slug}`);
   });
 
-  it('keeps the Korean source content untouched', () => {
-    expect(getIntentPage('ko', 'taiwan-lawyer')?.title).toBe(
+  it('keeps Korean human titles and SEO title contracts alongside approved copy', () => {
+    expect(getIntentPage('ko', 'taiwan-lawyer')?.title).toBe('한국어로 상담하는 대만 변호사');
+    expect(getIntentPage('ko', 'taiwan-lawyer')?.seoTitle).toBe(
       '대만변호사 | 한국어 상담·소송·법인설립 지원',
     );
     expect(getIntentPage('ko', 'taiwan-company-setup-lawyer')?.title).toBe(
+      '한국 기업의 대만 법인 설립 상담',
+    );
+    expect(getIntentPage('ko', 'taiwan-company-setup-lawyer')?.seoTitle).toBe(
       '대만 법인설립·회사설립 변호사 | 절차·비용·기간',
     );
-    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.title).toBe(
+    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.title).toBe('대만 소송·분쟁 한국어 상담');
+    expect(getIntentPage('ko', 'taiwan-litigation-lawyer')?.seoTitle).toBe(
       '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
     );
   });

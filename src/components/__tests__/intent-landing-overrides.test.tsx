@@ -13,19 +13,31 @@ function renderLanding(locale: SiteLocale, slug: IntentPageSlug): string {
   return renderToStaticMarkup(<IntentLandingPage locale={locale} slug={slug} />);
 }
 
-// 공용 로케일 문구(덮어쓰기가 없을 때 그대로 나와야 하는 값).
-const koSharedAttorneyHeading = '이 검색어와 가장 가까운 담당 대만 변호사';
+function authorityCardHeadings(html: string): string[] {
+  return [...html.matchAll(/authority-card-heading">([^<]+)</g)].map((match) => match[1] as string);
+}
+
+// Shared locale chrome (IntentLandingPage labels + AttorneyAuthorityCard default heading).
+const koSharedAttorneyHeading = '담당 변호사';
 const koSharedCtaText =
-  '회사설립, 투자, 소송, 가족 분쟁은 초기 검토 방식이 다릅니다. 먼저 사건 개요, 대만과의 관련성, 기한, 연락처를 간단히 알려 주세요. 적합성·이해충돌을 확인한 뒤 업무 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.';
+  '사건 개요, 대만과의 관련성, 기한과 연락처를 간단히 보내 주세요. 업무를 맡을 수 있는지와 이해충돌 여부를 확인한 뒤 상담 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.';
+const obsoleteKoSearchAttorneyHeading = '이 검색어와 가장 가까운 담당 대만 변호사';
+
+const sharedAttorneyHeadingByLocale = {
+  'zh-hant': '承辦律師',
+  en: 'Lead Attorney',
+  ja: '担当弁護士',
+} as const;
 
 describe('intent landing page-level overrides', () => {
   it('renders the semiconductor Korean overrides instead of the shared strings', () => {
     const html = renderLanding('ko', semiconductorSlug);
     const page = getIntentPage('ko', semiconductorSlug)!;
 
-    expect(html).toContain(page.attorneyHeadingOverride!);
-    expect(html).toContain('현지 법인이 정말 필요한지, 계약서만 손보면 되는지');
-    expect(html).not.toContain(koSharedAttorneyHeading);
+    expect(html).toContain(page.ctaTextOverride!);
+    expect(html).toContain('법인이 실제로 필요한 요구인지');
+    expect(authorityCardHeadings(html)).toEqual([koSharedAttorneyHeading]);
+    expect(html).not.toContain(obsoleteKoSearchAttorneyHeading);
     expect(html).not.toContain(koSharedCtaText);
   });
 
@@ -64,7 +76,8 @@ describe('intent landing page-level overrides', () => {
     (slug) => {
       const html = renderLanding('ko', slug);
 
-      expect(html).toContain(koSharedAttorneyHeading);
+      expect(authorityCardHeadings(html)).toEqual([koSharedAttorneyHeading]);
+      expect(html).not.toContain(obsoleteKoSearchAttorneyHeading);
       expect(html).toContain(koSharedCtaText);
     },
   );
@@ -74,13 +87,13 @@ describe('intent landing page-level overrides', () => {
     (locale) => {
       const html = renderLanding(locale, semiconductorSlug);
       const page = getIntentPage(locale, semiconductorSlug)!;
+      const sharedHeading = sharedAttorneyHeadingByLocale[locale];
 
-      expect(page.attorneyHeadingOverride).toBeDefined();
       expect(page.ctaTextOverride).toBeDefined();
       expect(page.serviceBlurbs).toBeDefined();
       expect(html).toContain(page.title);
-      expect(html).toContain(page.attorneyHeadingOverride!);
       expect(html).toContain(page.ctaTextOverride!);
+      expect(authorityCardHeadings(html)).toEqual([sharedHeading]);
       expect(html).not.toContain(page.seoTitle!);
 
       for (const [serviceSlug, blurb] of Object.entries(page.serviceBlurbs ?? {})) {
@@ -103,11 +116,10 @@ describe('intent landing page-level overrides', () => {
   );
 
   it.each(['zh-hant', 'en', 'ja'] as const)(
-    'leaves the other %s intent pages on the shared locale strings',
+    'leaves the other %s intent pages without semiconductor-only overrides',
     (locale) => {
       for (const otherSlug of intentPageSlugs.filter((item) => item !== semiconductorSlug)) {
         const page = getIntentPage(locale, otherSlug)!;
-        expect(page.attorneyHeadingOverride).toBeUndefined();
         expect(page.ctaTextOverride).toBeUndefined();
         expect(page.serviceBlurbs).toBeUndefined();
       }

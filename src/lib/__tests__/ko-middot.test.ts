@@ -11,7 +11,7 @@ const textOf = (markup: string) => markup.replace(/<[^>]+>/g, '');
 describe('Korean middle-dot title typesetting', () => {
   it('keeps each middle dot on the line of the character before it', () => {
     expect(html('ko', '자회사·지점·대표사무소')).toBe(
-      '<h1>자회<span style="white-space:nowrap">사·</span>지<span style="white-space:nowrap">점·</span>대표사무소</h1>',
+      '<h1>자회<span data-title-typeset="nowrap" style="white-space:nowrap;font-weight:inherit">사·</span>지<span data-title-typeset="nowrap" style="white-space:nowrap;font-weight:inherit">점·</span>대표사무소</h1>',
     );
   });
 
@@ -35,8 +35,8 @@ describe('Traditional Chinese closing punctuation', () => {
     const title = '綠燈撞上闖紅燈行人，為什麼駕駛仍有過失？先讓過兩人，卻漏看第三人';
     const markup = html('zh-hant', title);
     expect(textOf(markup)).toBe(title);
-    expect(markup).toContain('<span style="white-space:nowrap">人，</span>');
-    expect(markup).toContain('<span style="white-space:nowrap">失？</span>');
+    expect(markup).toContain('<span data-title-typeset="nowrap" style="white-space:nowrap;font-weight:inherit">人，</span>');
+    expect(markup).toContain('<span data-title-typeset="nowrap" style="white-space:nowrap;font-weight:inherit">失？</span>');
     expect(textOf(html('zh-hant', '注意：先停，再看！'))).toBe('注意：先停，再看！');
   });
 

@@ -23,7 +23,15 @@ export function typesetTitle(locale: string, text: string): ReactNode {
     let end = 0;
     for (const match of text.matchAll(punctuation)) {
       if (match.index > end) parts.push(text.slice(end, match.index));
-      parts.push(<span key={match.index} style={{ whiteSpace: 'nowrap' }}>{match[0]}</span>);
+      parts.push(
+        <span
+          key={match.index}
+          data-title-typeset="nowrap"
+          style={{ whiteSpace: 'nowrap', fontWeight: 'inherit' }}
+        >
+          {match[0]}
+        </span>,
+      );
       end = match.index + match[0].length;
     }
     if (end < text.length) parts.push(text.slice(end));
@@ -37,7 +45,11 @@ export function typesetTitle(locale: string, text: string): ReactNode {
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > last) out.push(text.slice(last, match.index));
     out.push(
-      <span key={match.index} style={{ whiteSpace: 'nowrap' }}>
+      <span
+        key={match.index}
+        data-title-typeset="nowrap"
+        style={{ whiteSpace: 'nowrap', fontWeight: 'inherit' }}
+      >
         {match[1]}·
       </span>,
     );

@@ -54,8 +54,8 @@ describe('reviewed case translations published October26', () => {
     const slugs = CASES.map(({ slug }) => slug);
     // Existing October26 ARC files lead the same-day batch by their lower column numbers.
     const expectedLead = SAME_DAY_ARC_LOCALES.includes(locale) ? [...ARC_SLUGS, ...slugs] : slugs;
-    expect(posts.filter(post => post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
-    expect(visible.filter(post => post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(posts.filter(post => typeof post.publicationDate === 'string' && post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(visible.filter(post => typeof post.publicationDate === 'string' && post.publicationDate <= '2026-10-26').slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
     expect(archiveLeadSlugsFor(locale).filter(slug => archiveLeadPublicationDate(slug, locale) <= '2026-10-26').slice(0, expectedLead.length)).toEqual(expectedLead);
     expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
     if (SAME_DAY_ARC_LOCALES.includes(locale) || PRIOR_DAY_ARC_LOCALES.includes(locale) || ORIGINAL_DAY_ARC_LOCALES.includes(locale)) {
@@ -83,9 +83,13 @@ describe('reviewed case translations published October26', () => {
     const originals = CASES.filter(item => item.source === locale);
     const expectedCases = [...translated, ...originals].map(({ slug }) => slug);
     expect(posts.slice(0, 6)).toHaveLength(6);
-    expect(posts.slice(0, 6).every(post => post.publicationDate > '2026-10-26')).toBe(true);
+    expect(posts.slice(0, 6).every(post => typeof post.publicationDate === 'string' && post.publicationDate > '2026-10-26')).toBe(true);
     expect(visible.slice(0, 6).map(({ slug }) => slug)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
-    expect(archiveLeadSlugsFor(locale).slice(0, 6)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
+    // The independent archive registry is a snapshot through November 5;
+    // later published country columns still lead the live corpus checked above.
+    const snapshotPosts = posts.filter(post => typeof post.publicationDate === 'string' && post.publicationDate <= '2026-11-05');
+    expect(snapshotPosts.slice(0, 6)).toHaveLength(6);
+    expect(archiveLeadSlugsFor(locale).slice(0, 6)).toEqual(snapshotPosts.slice(0, 6).map(({ slug }) => slug));
     for (const ordered of [posts.map(({ slug }) => slug), visible.map(({ slug }) => slug), archiveLeadSlugsFor(locale)]) {
       expect(ordered.filter(slug => slugs.includes(slug as typeof slugs[number]))).toEqual(expectedCases);
     }

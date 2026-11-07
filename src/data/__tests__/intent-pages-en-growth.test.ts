@@ -10,15 +10,17 @@ const KOREAN_LITIGATION_COLUMNS = [
 ] as const;
 
 describe('EN intent pages growth copy', () => {
-  it('preserves other locales and Korean case column links', () => {
-    expect(intentPages.ko['taiwan-lawyer'].title).toBe(
+  it('preserves locale audiences, SEO titles, and Korean case column links', () => {
+    expect(intentPages.ko['taiwan-lawyer'].title).toBe('한국어로 상담하는 대만 변호사');
+    expect(intentPages.ko['taiwan-lawyer'].seoTitle).toBe(
       '대만변호사 | 한국어 상담·소송·법인설립 지원',
     );
     expect(intentPages['zh-hant']['taiwan-lawyer'].title).toBe('台灣律師指南');
     expect(intentPages.ja['taiwan-lawyer'].title).toBe(
       '台湾弁護士｜日本語で相談できる台北の法律事務所',
     );
-    expect(intentPages.ko['taiwan-lawyer'].heroPoints[0]).toContain('한국 고객');
+    expect(intentPages.ko['taiwan-lawyer'].description).toContain('한국어로 상담합니다');
+    expect(intentPages.ko['taiwan-lawyer'].heroPoints.join(' ')).toContain('한국어·중국어·일본어·영어');
     expect(intentPages.ko['taiwan-litigation-lawyer'].columnSlugs).toEqual([
       ...KOREAN_LITIGATION_COLUMNS,
     ]);

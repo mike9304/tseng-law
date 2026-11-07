@@ -46,13 +46,18 @@ describe('intent landing top Q-A summary (P1-7②)', () => {
       const relatedIndex = html.indexOf('Related Services');
       expect(relatedIndex).toBeGreaterThan(-1);
 
-      const overviewIndex = html.indexOf('What to review first on this page');
+      const overviewIndex = html.indexOf('What we cover');
       expect(overviewIndex).toBeGreaterThan(-1);
       expect(overviewIndex).toBeLessThan(relatedIndex);
 
-      // Visible summary sits after the overview heading and before Related Services.
-      // FAQPage JSON-LD is emitted earlier in the document with the same strings.
-      const summaryHtml = html.slice(overviewIndex, relatedIndex);
+      const firstQuestion = topFaqs[0]!.question;
+      const firstFaqIndex = html.indexOf(firstQuestion, overviewIndex);
+      expect(firstFaqIndex).toBeGreaterThan(-1);
+      expect(firstFaqIndex).toBeGreaterThan(overviewIndex);
+      expect(firstFaqIndex).toBeLessThan(relatedIndex);
+
+      // Visible top-FAQ block precedes Related Services; JSON-LD uses the same strings earlier.
+      const summaryHtml = html.slice(firstFaqIndex, relatedIndex);
       const faqPage = parseFaqPage(html);
 
       for (const item of topFaqs) {

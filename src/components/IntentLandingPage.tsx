@@ -3,7 +3,6 @@ import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import FAQAccordion from '@/components/FAQAccordion';
 import PageHeader from '@/components/PageHeader';
-import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import CorporateAdvisorySection from '@/components/CorporateAdvisorySection';
@@ -40,105 +39,89 @@ function summarize(text: string, maxLength = 180) {
 
 const labels = {
   ko: {
-    terms: '관련 검색어',
-    overview: '이 페이지에서 먼저 확인할 내용',
-    fit: '이런 경우 상담이 맞습니다',
+    terms: '관련 주제',
+    overview: '상담 범위',
+    fit: '상담이 필요한 경우',
     points: '우선 검토 포인트',
     detailLabel: '진행 절차',
     detailTitle: '진행 흐름과 준비 자료',
-    process: '상담 진행 흐름',
+    process: '진행 절차',
     prepare: '미리 준비하면 좋은 자료',
     caution: '놓치기 쉬운 포인트',
-    servicesLabel: '관련 서비스',
     servicesTitle: '관련 서비스',
     serviceButton: '서비스 보기',
-    columnsLabel: '관련 칼럼',
     columnsTitle: '관련 칼럼',
     readMore: '자세히 읽기 →',
     resourcesLabel: '관련 안내',
     resourcesTitle: '함께 보면 좋은 안내',
-    attorneyHeading: '이 검색어와 가장 가까운 담당 대만 변호사',
-    ctaLabel: '다음 단계',
-    ctaTitle: '사안에 맞는 방향을 바로 정리하려면',
-    ctaText: '회사설립, 투자, 소송, 가족 분쟁은 초기 검토 방식이 다릅니다. 먼저 사건 개요, 대만과의 관련성, 기한, 연락처를 간단히 알려 주세요. 적합성·이해충돌을 확인한 뒤 업무 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.',
+    ctaTitle: '상담 문의',
+    ctaText: '사건 개요, 대만과의 관련성, 기한과 연락처를 간단히 보내 주세요. 업무를 맡을 수 있는지와 이해충돌 여부를 확인한 뒤 상담 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.',
     contact: '상담 문의',
     profile: '증준외 대만 변호사 프로필 보기',
     pricing: '비용안내 보기',
   },
   'zh-hant': {
-    terms: '相關搜尋詞',
-    overview: '先看這些重點',
-    fit: '以下情況建議先諮詢',
+    terms: '相關主題',
+    overview: '諮詢範圍',
+    fit: '常見情況',
     points: '優先確認事項',
     detailLabel: '流程',
     detailTitle: '流程與準備資料',
     process: '諮詢流程',
     prepare: '建議先準備的資料',
     caution: '容易忽略的重點',
-    servicesLabel: '相關服務',
     servicesTitle: '相關服務',
     serviceButton: '查看服務',
-    columnsLabel: '相關專欄',
     columnsTitle: '相關專欄',
     readMore: '閱讀全文 →',
     resourcesLabel: '相關指南',
     resourcesTitle: '延伸閱讀',
-    attorneyHeading: '承辦此類案件的律師',
-    ctaLabel: '下一步',
-    ctaTitle: '想先釐清處理方向？',
+    ctaTitle: '電子郵件諮詢',
     ctaText: '請先簡述案情、與台灣的關聯、期限及聯絡方式；我們會先確認是否適合承接及有無利益衝突，再說明服務範圍與費用。敏感文件請待律師指示後再提供。',
     contact: '電子郵件諮詢',
     profile: '查看曾雋崴律師簡介',
     pricing: '收費標準',
   },
   en: {
-    terms: 'Related Searches',
-    overview: 'What to review first on this page',
-    fit: 'Good fit for consultation when',
+    terms: 'Related topics',
+    overview: 'What we cover',
+    fit: 'Common situations',
     points: 'Priority review points',
     detailLabel: 'PROCESS',
     detailTitle: 'Workflow and Preparation',
     process: 'Consultation flow',
     prepare: 'Initial summary and documents to organize later',
     caution: 'Points that are often missed',
-    servicesLabel: 'RELATED SERVICES',
     servicesTitle: 'Related Services',
     serviceButton: 'View Service',
-    columnsLabel: 'RELATED COLUMNS',
     columnsTitle: 'Related Columns',
     readMore: 'Read full article →',
-    resourcesLabel: 'RELATED GUIDES',
+    resourcesLabel: 'Guides',
     resourcesTitle: 'Related Guidance',
-    attorneyHeading: 'Lead attorney most relevant to this search',
-    ctaLabel: 'NEXT STEP',
-    ctaTitle: 'If you want the direction clarified quickly',
-    ctaText: 'Company setup, litigation, residence-permit assistance, and tax-accounting assistance are reviewed as Taiwan-law matters. Send a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. Other documents can follow after attorney instructions. Use Fees and scope for the current consultation structure.',
+    ctaTitle: 'Email about your Taiwan matter',
+    ctaText: 'Send a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. We will confirm whether we can take the matter and whether any conflict exists, then explain scope and fees. Other documents can follow after attorney instructions. For consultation fees, see Fees and scope.',
     contact: 'Email about your Taiwan matter',
-    profile: 'View Wei Tseng Profile',
+    profile: 'View Wei Tseng’s profile',
     pricing: 'Fees and scope',
   },
   ja: {
-    terms: '関連検索キーワード',
-    overview: 'このページでまず確認する内容',
-    fit: 'このような場合はご相談ください',
+    terms: '関連テーマ',
+    overview: '相談の範囲',
+    fit: 'よくある相談',
     points: '優先的に確認するポイント',
     detailLabel: '手続きの流れ',
     detailTitle: '進め方と準備資料',
     process: '相談・手続きの進め方',
     prepare: '初回の概要と、後ほど整理する資料',
     caution: '見落としやすいポイント',
-    servicesLabel: '関連サービス',
     servicesTitle: '関連サービス',
     serviceButton: 'サービスを見る',
-    columnsLabel: '関連コラム',
     columnsTitle: '関連コラム',
     readMore: '記事を読む →',
     resourcesLabel: '関連ガイド',
     resourcesTitle: 'あわせて読みたいガイド',
-    attorneyHeading: 'この検索テーマに最も近い担当台湾弁護士',
-    ctaLabel: '次のステップ',
-    ctaTitle: '案件に合った方向性をすぐ整理したい場合',
-    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。まずは案件の簡潔な概要、期限、連絡先をお送りください。その他の資料は弁護士の案内後にご提出ください。',
+    ctaTitle: 'メールで相談',
+    ctaText: 'まずは案件の概要、台湾との関連、期限と連絡先をお送りください。受任可否と利益相反の有無を確認したうえで、相談範囲と費用をご案内します。その他の資料は弁護士の案内後にご提出ください。',
     contact: '台湾の法律問題をメールで相談',
     profile: '曾雋崴台湾弁護士のプロフィールを見る',
     pricing: '費用・対応範囲',
@@ -179,10 +162,10 @@ const relatedResources: Record<
     {
       href: 'taiwan-company-setup-lawyer',
       label: {
-        ko: '대만 법인설립·회사설립 변호사 안내',
+        ko: '대만 회사설립 상담',
         'zh-hant': '台灣公司設立法律諮詢',
         en: 'Taiwan company setup lawyer guide',
-        ja: '台湾会社設立弁護士ガイド',
+        ja: '台湾での会社設立のご相談',
       },
     },
     {
@@ -191,7 +174,7 @@ const relatedResources: Record<
         ko: '대만 소송 변호사 안내',
         'zh-hant': '台灣訴訟法律諮詢',
         en: 'Taiwan litigation lawyer guide',
-        ja: '台湾訴訟弁護士ガイド',
+        ja: '台湾での訴訟・紛争のご相談',
       },
     },
     {
@@ -244,10 +227,10 @@ const relatedResources: Record<
     {
       href: 'taiwan-lawyer',
       label: {
-        ko: '대만 변호사 검색 가이드',
+        ko: '대만 법률상담 안내',
         'zh-hant': '台灣律師指南',
         en: 'Taiwan lawyer search guide',
-        ja: '台湾弁護士の探し方ガイド',
+        ja: '台湾の法律相談について',
       },
     },
   ],
@@ -264,10 +247,10 @@ const relatedResources: Record<
     {
       href: 'taiwan-lawyer',
       label: {
-        ko: '대만 변호사 검색 가이드',
+        ko: '대만 법률상담 안내',
         'zh-hant': '台灣律師指南',
         en: 'Taiwan lawyer search guide',
-        ja: '台湾弁護士の探し方ガイド',
+        ja: '台湾の法律相談について',
       },
     },
     {
@@ -302,10 +285,10 @@ const relatedResources: Record<
     {
       href: 'taiwan-company-setup-lawyer',
       label: {
-        ko: '대만 법인설립·회사설립 변호사 안내',
+        ko: '대만 회사설립 상담',
         'zh-hant': '台灣公司設立律師指南',
         en: 'Taiwan company setup lawyer guide',
-        ja: '台湾会社設立弁護士ガイド',
+        ja: '台湾での会社設立のご相談',
       },
     },
     {
@@ -314,7 +297,7 @@ const relatedResources: Record<
         ko: '대만 소송 변호사 안내',
         'zh-hant': '台灣訴訟律師指南',
         en: 'Taiwan litigation lawyer guide',
-        ja: '台湾訴訟弁護士ガイド',
+        ja: '台湾での訴訟・紛争のご相談',
       },
     },
     {
@@ -489,7 +472,6 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
-  const attorneyHeading = page.attorneyHeadingOverride ?? l.attorneyHeading;
   const ctaText = page.ctaTextOverride ?? l.ctaText;
   const topFaqs = getIntentTopFaqs(page);
   const ai = getAiIntakeDiscovery(locale);
@@ -642,15 +624,7 @@ export default function IntentLandingPage({
             </div>
             <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
           </div>
-        ) : (
-          <div className="intent-chip-wrap" aria-label={l.terms}>
-            {page.searchTerms.map((term) => (
-              <span key={term} className="intent-chip">
-                {term}
-              </span>
-            ))}
-          </div>
-        )}
+        ) : null}
       </PageHeader>
 
       {slug === 'taiwan-lawyer' ? <ForeignMatterRouter locale={locale} /> : null}
@@ -689,7 +663,7 @@ export default function IntentLandingPage({
           </div>
 
           <aside className={`intent-sidebar ${styles.sidebar}`}>
-            <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+            <AttorneyAuthorityCard locale={locale} />
           </aside>
         </div>
       </section>
@@ -717,7 +691,6 @@ export default function IntentLandingPage({
 
       <section className={`section section--gray ${styles.root}`}>
         <div className="container">
-          <SectionLabel>{l.detailLabel}</SectionLabel>
           <h2 className="section-title">{l.detailTitle}</h2>
           <OrnamentDivider />
           <div className={`intent-triple-grid ${styles.triple}`}>
@@ -756,7 +729,6 @@ export default function IntentLandingPage({
 
       <section className={`section section--gray ${styles.root}`}>
         <div className="container">
-          <SectionLabel>{l.servicesLabel}</SectionLabel>
           <h2 className="section-title">{l.servicesTitle}</h2>
           <OrnamentDivider />
           <div className="grid-bento contact-grid">
@@ -778,7 +750,6 @@ export default function IntentLandingPage({
       {columns.length > 0 ? (
         <section className={`section section--light ${styles.root}`}>
           <div className="container">
-            <SectionLabel>{l.columnsLabel}</SectionLabel>
             <h2 className="section-title">{l.columnsTitle}</h2>
             <OrnamentDivider />
             <div className={`svc-columns-grid ${styles.columnsGrid}`}>
@@ -805,7 +776,6 @@ export default function IntentLandingPage({
 
       <section className={`section section--light ${styles.root}`}>
         <div className="container">
-          <SectionLabel>{l.resourcesLabel}</SectionLabel>
           <h2 className="section-title">{l.resourcesTitle}</h2>
           <OrnamentDivider />
           <article className={`intent-panel ${styles.resources}`}>
@@ -837,7 +807,6 @@ export default function IntentLandingPage({
       <section className={`section section--light ${styles.root}`}>
         <div className="container">
           <div className={`intent-cta-card ${styles.ctaCard}`}>
-            <SectionLabel>{l.ctaLabel}</SectionLabel>
             <h2 className="section-title">{l.ctaTitle}</h2>
             <p className="section-lede">{ctaText}</p>
             {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
@@ -873,9 +842,6 @@ export default function IntentLandingPage({
                 </Link>
               ) : null}
             </div>
-            {isDirectContactLocale(locale) ? (
-              <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
-            ) : null}
           </div>
         </div>
       </section>

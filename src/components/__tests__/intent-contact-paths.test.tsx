@@ -86,7 +86,9 @@ describe('intent landing EN/JA contact paths', () => {
       expect(html).toContain('旅券番号、身分証番号、銀行口座情報');
       expect(cta).toContain(`href="${mailto}"`);
       expect(cta).toContain('href="/ja/pricing"');
-      expect(cta).toContain('簡潔な概要、期限、連絡先をお送りください');
+      expect(cta).toContain('まずは案件の概要、台湾との関連、期限と連絡先をお送りください。');
+      expect(cta).toContain('受任可否と利益相反の有無を確認したうえで、相談範囲と費用をご案内します。');
+      expect(cta).toContain('その他の資料は弁護士の案内後にご提出ください。');
       expect(cta).not.toMatch(/Book Consultation|予約完了|送信済み/);
     },
   );
@@ -94,13 +96,13 @@ describe('intent landing EN/JA contact paths', () => {
   // ko joined the Apple system on 2026-10-06: its header carries the same email pill and pricing link as zh-hant,
   // with the ko landing labels (상담 문의 / 비용안내 보기); the EN/JA header block stays out.
   it.each(generalIntentPageSlugs)(
-    'gives the ko %s header the ko email action and keyword chips, not the EN/JA header block',
+    'gives the ko %s header the ko email action and pricing link without keyword chips, not the EN/JA header block',
     (slug) => {
       const html = renderLanding('ko', slug);
       const header = pageHeaderHtml(html);
 
       expect(html).toContain('id="ko-intent"');
-      expect(header).toContain('intent-chip');
+      expect(header).not.toContain('intent-chip');
       expect(header).toContain(`href="${htmlHref(getConsultationPublicMailto('ko'))}"`);
       expect(header).toContain('>상담 문의</a>');
       expect(header).toContain('href="/ko/pricing"');
@@ -113,13 +115,13 @@ describe('intent landing EN/JA contact paths', () => {
   // zh-hant Apple pass (2026-10-03): the zh header carries its own email pill and 收費標準 link
   // (ZhHantIntentHeaderActions, existing labels), like the other zh pages; the EN/JA block stays out.
   it.each(generalIntentPageSlugs)(
-    'gives the zh-hant %s header the zh email action and keyword chips, not the EN/JA header block',
+    'gives the zh-hant %s header the zh email action and pricing link without keyword chips, not the EN/JA header block',
     (slug) => {
       const html = renderLanding('zh-hant', slug);
       const header = pageHeaderHtml(html);
 
       expect(html).toContain('id="zh-hant-intent"');
-      expect(header).toContain('intent-chip');
+      expect(header).not.toContain('intent-chip');
       expect(header).toContain(`href="${htmlHref(getConsultationPublicMailto('zh-hant'))}"`);
       expect(header).toContain('>電子郵件諮詢</a>');
       expect(header).toContain('href="/zh-hant/pricing"');

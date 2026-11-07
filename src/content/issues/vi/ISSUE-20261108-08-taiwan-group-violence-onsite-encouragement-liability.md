@@ -32,7 +32,7 @@ Có mặt trong một vụ đánh nhau tập thể nhưng không trực tiếp r
 
 ## Người ra tay và người trợ thế
 
-[Điều 150 Bộ luật Hình sự Đài Loan (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=150) áp dụng khi từ ba người tụ tập tại nơi công cộng hoặc nơi công chúng được ra vào và dùng bạo lực, đe dọa. Điều luật tách người chủ mưu, người trực tiếp thực hiện với người trợ thế tại chỗ, tức người có mặt để cổ vũ, tiếp sức cho bạo lực.
+[Điều 150 Bộ luật Hình sự Đài Loan (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=150) áp dụng khi từ ba người tụ tập tại nơi công cộng hoặc nơi công chúng được ra vào và dùng bạo lực, đe dọa. Điều luật phân biệt người chủ mưu và người trực tiếp thực hiện với người trợ thế tại chỗ, tức người có mặt để cổ vũ, tiếp sức cho bạo lực.
 
 Mức phạt khác nhau. Người trợ thế có thể bị phạt tù đến một năm, giam ngắn hạn hoặc phạt tiền đến 100.000 Đài tệ. Khung tù từ sáu tháng đến năm năm dành cho người chủ mưu và người trực tiếp thực hiện.
 
@@ -42,7 +42,7 @@ Khoản 2 còn cho phép tăng hình phạt đến một nửa nếu mang hung k
 
 Với vụ đánh nhau tập thể làm người khác chết hoặc bị thương nặng, [Điều 283](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=283) quy định hình phạt đối với người trợ thế tại hiện trường. Mức phạt tù có thể đến năm năm. Quy định này trực tiếp nhắc đến người trợ thế, nên việc không tự tay gây thương tích chưa loại trừ mọi trách nhiệm hình sự.
 
-Dù vậy, cùng ăn uống hoặc cùng làm một công ty chưa chứng minh hành vi trợ thế. Cần xác định người đó đã làm gì khi xung đột xảy ra. Việc đứng xem, can ngăn hay tham gia cổ vũ phải được phân biệt bằng chứng cứ cụ thể.
+Dù vậy, cùng ăn uống hoặc cùng làm việc tại một công ty chưa chứng minh hành vi trợ thế. Cần xác định người đó đã làm gì khi xung đột xảy ra. Việc đứng xem, can ngăn hay tham gia cổ vũ phải được phân biệt bằng chứng cứ cụ thể.
 
 ## Hành vi và ý thức của từng người
 

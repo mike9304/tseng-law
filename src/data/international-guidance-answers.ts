@@ -223,7 +223,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Senden Sie über das Kontaktformular eine kurze Zusammenfassung Ihres Anliegens.',
+        'Schreiben Sie über den E-Mail-Link auf dieser Seite eine kurze Zusammenfassung Ihres Anliegens.',
       sources: ['/de/faq', '/de/pricing'],
     },
     faq: {
@@ -255,7 +255,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envíe por el formulario una breve solicitud con los datos esenciales de su caso.',
+        'Envíe un breve resumen de su asunto utilizando el enlace de correo electrónico de esta página.',
       sources: ['/es/faq', '/es/pricing'],
     },
     faq: {
@@ -287,7 +287,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envoyez par le formulaire de contact un bref résumé de votre situation.',
+        'Envoyez-nous un bref résumé de votre situation par le lien d’e-mail ci-dessous.',
       sources: ['/fr/faq', '/fr/pricing'],
     },
     faq: {
@@ -319,7 +319,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Envie pelo formulário de contacto um breve resumo do seu pedido.',
+        'Envie-nos um breve resumo da sua situação através do link de e-mail abaixo.',
       sources: ['/pt/faq', '/pt/pricing'],
     },
     faq: {
@@ -415,7 +415,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Отправьте через контактную форму краткое изложение сути обращения.',
+        'Кратко опишите свою ситуацию в письме, воспользовавшись ссылкой электронной почты ниже.',
       sources: ['/ru/faq', '/ru/pricing'],
     },
     faq: {
@@ -447,7 +447,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Durumunuzu iletişim formunda kısaca anlatabilirsiniz.',
+        'Aşağıdaki e-posta bağlantısını kullanarak durumunuzu kısaca anlatabilirsiniz.',
       sources: ['/tr/faq', '/tr/pricing'],
     },
     faq: {

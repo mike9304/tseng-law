@@ -249,8 +249,12 @@ export function InternationalInquiryNotice({
       {guidanceOnly ? null : (
         <>
           <p className={styles.noticeText}>{copy.consultationNotice}</p>
-          <p className={styles.noticeText}>{copy.methodConfirmationNotice}</p>
-          <p className={styles.noticeText}>{copy.preparationNotice}</p>
+          {!IS_STATIC_SITE ? (
+            <>
+              <p className={styles.noticeText}>{copy.methodConfirmationNotice}</p>
+              <p className={styles.noticeText}>{copy.preparationNotice}</p>
+            </>
+          ) : null}
         </>
       )}
       {showContactLink ? (

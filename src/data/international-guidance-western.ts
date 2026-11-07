@@ -265,15 +265,15 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Wie Sie die Kanzlei erreichen',
       description:
-        'So erreichen Sie die Kanzlei per Formular — Beratungssprachen, erste Nachricht und Ablauf nach dem Absenden.',
+        'Kontakt zur Kanzlei bei rechtlichen Fragen zu Taiwan.',
       intro:
         'Kennen Sie eine Frist, nennen Sie sie gleich in der ersten Nachricht.',
       sections: [
         {
           heading: 'Beratungssprachen und Kommunikation',
           paragraphs: [
-            'Die Beratung mit einer Anwältin oder einem Anwalt erfolgt auf Englisch, Chinesisch (中文), Japanisch und Koreanisch. Ihre Zusammenfassung können Sie in Ihrer eigenen Sprache verfassen; der Originaltext wird unverändert gespeichert und nicht automatisch übersetzt.',
-            'Sprechen Sie keine dieser Sprachen, wählen Sie im Formular „Kommunikationsweise muss bestätigt werden“. Ob ein praktikabler Kommunikationsweg möglich ist, prüfen wir im Einzelfall. Dolmetschleistungen, Beratung in anderen Sprachen oder die Übernahme des Falls können wir dabei nicht zusagen.',
+            'Die Beratung mit einer Anwältin oder einem Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch. Ihre erste Nachricht können Sie in Ihrer eigenen Sprache schreiben.',
+            'Sprechen Sie keine dieser Sprachen, sagen Sie das in der E-Mail. Wir prüfen dann, ob ein praktikabler Kommunikationsweg möglich ist. Dolmetschleistungen, Beratung in anderen Sprachen oder die Übernahme des Falls können wir dabei nicht zusagen.',
           ],
         },
         {
@@ -284,9 +284,9 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Nach Ihrer Anfrage',
+          heading: 'Nach Ihrer E-Mail',
           paragraphs: [
-            'Ihre Nachricht wird zur Prüfung gespeichert. Damit sind noch keine Rechtsberatung, Terminbestätigung oder Mandatsübernahme verbunden. Eine feste Antwortfrist oder die Betreuung durch eine bestimmte Anwältin oder einen bestimmten Anwalt können wir nicht zusagen. Falls Sie nach einiger Zeit keine Rückmeldung erhalten, schreiben Sie bitte an die auf der Kontaktseite angegebene E-Mail-Adresse.',
+            'Mit dem Versand Ihrer Anfrage erhalten Sie noch keine Rechtsberatung. Auch ein Termin oder ein Mandat ist damit nicht bestätigt. Eine feste Antwortfrist oder die Betreuung durch eine bestimmte Anwältin oder einen bestimmten Anwalt können wir nicht zusagen. Falls Sie nach einiger Zeit keine Rückmeldung erhalten, nutzen Sie den E-Mail-Link auf dieser Seite erneut.',
           ],
         },
       ],
@@ -742,15 +742,15 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'CONTACTO',
       title: 'Cómo contactar con el despacho',
       description:
-        'Cómo escribir al despacho por el formulario: primer mensaje y qué ocurre después de enviar la solicitud.',
+        'Contacto con el despacho para asuntos jurídicos relacionados con Taiwán.',
       intro:
         'Si conoce un plazo, indíquelo en el primer mensaje.',
       sections: [
         {
           heading: 'Idiomas de consulta y comunicación',
           paragraphs: [
-            'La consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano. Puede redactar el resumen en su idioma; el texto original se guarda tal cual y no se traduce de forma automática.',
-            'Si no puede usar ninguno de esos idiomas, elija en el formulario «Hace falta confirmar la forma de comunicarse». Entonces comprobamos si existe una forma viable de comunicarnos; no se promete intérprete, servicio en otro idioma ni la aceptación de todos los asuntos.',
+            'La consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano. Puede redactar el primer mensaje en su idioma.',
+            'Si no puede usar ninguno de esos idiomas, indíquelo en el correo. Entonces comprobamos si existe una forma viable de comunicarnos; no se promete intérprete, servicio en otro idioma ni la aceptación de su asunto.',
           ],
         },
         {
@@ -761,9 +761,9 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Después de enviar la solicitud',
+          heading: 'Después de enviar el correo',
           paragraphs: [
-            'Guardamos su mensaje para que lo revise un abogado. El envío no constituye asesoramiento jurídico, no confirma una cita ni crea una relación entre abogado y cliente. No podemos garantizar un plazo de respuesta ni la asignación de un abogado concreto. Si pasa un tiempo sin recibir respuesta, puede escribir de nuevo al correo indicado en la página de contacto.',
+            'Enviar un correo al despacho no equivale a recibir asesoramiento jurídico ni confirma una cita o la aceptación del encargo. No podemos garantizar un plazo de respuesta ni la asignación de un abogado concreto. Si pasa un tiempo sin recibir respuesta, puede usar de nuevo el enlace de correo de esta página.',
           ],
         },
       ],
@@ -1218,15 +1218,15 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'CONTACT',
       title: 'Comment joindre le cabinet',
       description:
-        'Comment joindre le cabinet par le formulaire : préparation du message et suite après l’envoi.',
+        'Contactez le cabinet pour une question juridique liée à Taïwan.',
       intro:
         'Si vous connaissez un délai, indiquez-le dès le premier message.',
       sections: [
         {
           heading: 'Langues de consultation et communication',
           paragraphs: [
-            'La consultation avec l’avocate ou l’avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen. Vous pouvez rédiger le résumé dans votre langue ; le texte original est conservé tel quel et n’est pas traduit automatiquement.',
-            'Si vous ne pouvez communiquer dans aucune de ces langues, choisissez dans le formulaire « La manière de communiquer doit être confirmée ». Nous examinerons alors les possibilités de communication. Cela ne garantit ni un service d’interprétation, ni une consultation dans une autre langue, ni la prise en charge de votre dossier.',
+            'Les consultations juridiques se déroulent seulement en anglais, en chinois (中文), en japonais et en coréen. Vous pouvez rédiger le premier message dans votre langue.',
+            'Si vous ne pouvez communiquer dans aucune de ces langues, indiquez-le dans votre e-mail. Nous vérifierons quels moyens de communication sont possibles. Nous ne pouvons pas promettre de service d’interprétation, de consultation dans une autre langue ni de prise en charge de votre dossier.',
           ],
         },
         {
@@ -1237,9 +1237,9 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Après l’envoi de votre demande',
+          heading: 'Après l’envoi de votre e-mail',
           paragraphs: [
-            'Votre message est conservé en vue de son examen par un avocat. Son envoi ne vaut pas avis juridique, ne confirme pas un rendez-vous et ne crée pas de relation avocat-client. Aucun délai de réponse ni avocat en particulier n’est garanti. Si vous restez sans réponse après un certain temps, vous pouvez écrire de nouveau à l’adresse indiquée sur la page de contact.',
+            'L’envoi d’un e-mail ne constitue ni un avis juridique ni une confirmation de rendez-vous ou d’acceptation du dossier. Nous ne pouvons pas nous engager sur un délai de réponse ni sur l’intervention d’un avocat en particulier. En l’absence de réponse après un certain temps, vous pouvez nous relancer par e-mail.',
           ],
         },
       ],
@@ -1694,28 +1694,28 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'CONTACTO',
       title: 'Como contactar o escritório',
       description:
-        'Como contactar o escritório pelo formulário: primeira mensagem e o que acontece depois do envio.',
+        'Contacte o escritório por e-mail para questões jurídicas relacionadas com Taiwan.',
       intro:
         'Se conhecer um prazo, indique-o já na primeira mensagem.',
       sections: [
         {
           heading: 'Línguas de consulta e comunicação',
           paragraphs: [
-            'A consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano. Pode escrever o resumo na sua língua; o texto original guarda-se tal qual e não é traduzido automaticamente.',
-            'Se não puder usar nenhuma dessas línguas, escolha no formulário «É preciso confirmar a forma de comunicar». Verificamos então se existe uma forma prática de comunicar; não se promete serviço de interpretação, prestação noutra língua nem a aceitação de todos os assuntos.',
+            'A consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano. Pode escrever a primeira mensagem na sua língua.',
+            'Se não puder usar nenhuma dessas línguas, indique-o no e-mail. Avaliamos então as possibilidades de comunicação. Não podemos assegurar um serviço de interpretação, uma consulta noutra língua ou a aceitação do seu caso.',
           ],
         },
         {
           heading: 'O que convém escrever na primeira mensagem',
           paragraphs: [
-            'Indique o que ocorreu, que ajuda precisa e que relação tem o assunto com Taiwan. Se já recebeu um escrito de um tribunal ou de uma autoridade, indique a data desse escrito.',
+            'Indique o que ocorreu, de que ajuda precisa e que relação tem o assunto com Taiwan. Se já recebeu um escrito de um tribunal ou de uma autoridade, indique a data desse escrito.',
             'Nesta primeira fase ainda não precisa de enviar número de passaporte, número de identidade, dados bancários, historial clínico nem o processo completo de provas. Espere as indicações da advogada ou do advogado e envie então o material sensível por um meio seguro.',
           ],
         },
         {
-          heading: 'Depois de enviar o pedido',
+          heading: 'Depois de enviar a mensagem',
           paragraphs: [
-            'Guardamos o seu pedido para análise por uma advogada ou um advogado. O envio não constitui aconselhamento jurídico, não confirma uma marcação nem estabelece uma relação entre advogado e cliente. Não podemos garantir um prazo de resposta nem a atribuição do caso a um advogado específico. Se não receber resposta após algum tempo, pode escrever novamente para o endereço indicado na página de contacto.',
+            'O envio da mensagem não equivale à prestação de aconselhamento jurídico nem confirma uma marcação ou a aceitação do caso. Não podemos assegurar um prazo de resposta ou o acompanhamento por um advogado específico. Se não receber resposta após algum tempo, pode voltar a contactar-nos por e-mail.',
           ],
         },
       ],
@@ -2170,28 +2170,28 @@ export const russianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'КОНТАКТЫ',
       title: 'Как связаться с фирмой',
       description:
-        'Как написать фирме через форму: первая заявка и что происходит после отправки.',
+        'Свяжитесь с нами по вопросам, связанным с правом Тайваня.',
       intro:
-        'Если Вы знаете срок, укажите его уже в первом сообщении.',
+        'Если Вам известен срок по Вашему делу, укажите его в первом письме.',
       sections: [
         {
           heading: 'Языки консультации и связь',
           paragraphs: [
-            'Консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках. Краткое изложение можете написать на своём языке; исходный текст сохраняется без изменений и автоматически не переводится.',
-            'Если Вы не владеете ни одним из этих языков, выберите в форме «Способ связи должен быть подтверждён». Мы проверим, каким способом можно общаться. Услуги переводчика, консультация на другом языке и принятие дела в работу не гарантируются.',
+            'Консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках. Первое сообщение можете написать на своём языке.',
+            'Если Вы не владеете ни одним из этих языков, укажите это в письме. Мы проверим, каким способом можно общаться. Услуги переводчика, консультация на другом языке и принятие дела в работу не гарантируются.',
           ],
         },
         {
           heading: 'Что должно быть в первом сообщении',
           paragraphs: [
-            'Опишите, что произошло, какая помощь Вам нужна и какое отношение дело имеет к Тайваню. Если Вы уже получили письмо суда или органа, укажите дату письма.',
-            'На начальном этапе ещё не нужно отправлять номер паспорта, номер удостоверения, данные счёта, медицинскую карту или все доказательства. Дождитесь указаний адвоката и затем отправьте чувствительные документы безопасным путём.',
+            'Опишите, что произошло, какая помощь Вам нужна и какое отношение дело имеет к Тайваню. Если Вы уже получили документ из суда или государственного органа, укажите его дату.',
+            'На начальном этапе ещё не нужно отправлять номер паспорта, номер удостоверения личности, банковские реквизиты, медицинскую карту или все доказательства. Дождитесь указаний адвоката и затем отправьте документы с конфиденциальными данными по безопасному каналу.',
           ],
         },
         {
-          heading: 'После отправки запроса',
+          heading: 'После отправки письма',
           paragraphs: [
-            'Ваше обращение сохраняется для рассмотрения адвокатом. Его отправка не является юридической консультацией, не подтверждает запись на приём и не создаёт отношений между адвокатом и доверителем. Мы не можем гарантировать срок ответа или участие определённого адвоката. Если спустя некоторое время ответа нет, можно повторно написать на адрес электронной почты, указанный на странице контактов.',
+            'Отправка письма сама по себе не означает, что Вы получили юридическую консультацию, записаны на приём или заключили соглашение с адвокатом. Мы не можем обещать определённый срок ответа или участие конкретного адвоката. Если ответа долго нет, можно написать нам повторно.',
           ],
         },
       ],
@@ -2646,28 +2646,28 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'İLETİŞİM',
       title: 'Büroya nasıl ulaşırsınız',
       description:
-        'Form üzerinden büroya yazma: ilk ileti ve gönderimden sonra ne olur.',
+        'Tayvan hukukuyla ilgili konularda büromuza e-posta ile ulaşabilirsiniz.',
       intro:
-        'Süreyi biliyorsanız, ilk iletinizde belirtin.',
+        'Bildiğiniz bir son tarih varsa ilk mesajınızda belirtin.',
       sections: [
         {
           heading: 'Görüşme dilleri ve iletişim',
           paragraphs: [
-            'Avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır. Özeti kendi dilinizde yazabilirsiniz; metin olduğu gibi saklanır ve otomatik çevrilmez.',
-            'Bu dillerden hiçbirini kullanamıyorsanız formda “İletişim yolunun doğrulanması gerekir” seçeneğini işaretleyin. Uygun bir iletişim yolu olup olmadığını değerlendiririz. Tercüman sağlanması, bu dört dil dışında hizmet verilmesi veya her başvurunun kabul edilmesi garanti edilmez.',
+            'Avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır. İlk iletiyi kendi dilinizde yazabilirsiniz.',
+            'Bu dillerden hiçbirini kullanamıyorsanız bunu e-postada belirtin. Uygun bir iletişim yolu olup olmadığını değerlendiririz. Tercüman sağlanması, bu dört dil dışında hizmet verilmesi veya başvurunuzun kabul edilmesi garanti edilmez.',
           ],
         },
         {
-          heading: 'İlk iletide neler olmalıdır',
+          heading: 'İlk mesajınızda belirtmeniz gerekenler',
           paragraphs: [
-            'Ne olduğunu, hangi konuda yardıma ihtiyaç duyduğunuzu ve işin Tayvan ile ilişkisini belirtin. Mahkemeden veya bir idareden yazı aldıysanız, yazıdaki tarihi belirtin.',
+            'Ne olduğunu, hangi konuda yardıma ihtiyaç duyduğunuzu ve konunun Tayvan ile ilişkisini belirtin. Mahkemeden veya bir idareden yazı aldıysanız, yazıdaki tarihi belirtin.',
             'İlk aşamada henüz pasaport numarası, kimlik numarası, hesap bilgisi, sağlık kaydı veya tüm kanıtları göndermeniz gerekmez. Avukatın yönlendirmesini bekleyin ve hassas belgeleri o zaman güvenli bir yolla gönderin.',
           ],
         },
         {
-          heading: 'Talebi gönderdikten sonra',
+          heading: 'E-postayı gönderdikten sonra',
           paragraphs: [
-            'Gönderdiğiniz mesaj, bir avukatın incelemesi için kaydedilir. Formu göndermek hukuki görüş aldığınız, randevunuzun onaylandığı veya avukat ile müvekkil ilişkisinin kurulduğu anlamına gelmez. Yanıt süresi veya belirli bir avukatın görevlendirilmesi konusunda taahhütte bulunulmaz. Bir süre yanıt alamazsanız iletişim sayfasındaki e-posta adresine yeniden yazabilirsiniz.',
+            'E-posta göndermek, hukuki görüş verildiği, randevu oluşturulduğu veya avukatlık hizmeti için anlaşma yapıldığı anlamına gelmez. Belirli bir yanıt süresi ya da belirli bir avukatla çalışma sözü veremeyiz. Bir süre yanıt alamazsanız bize yeniden e-posta gönderebilirsiniz.',
           ],
         },
       ],

@@ -25,7 +25,7 @@ author: "legal-ai-assistant"
 
 Một buổi sáng thẻ của bạn bị từ chối ở cửa hàng tiện lợi. Ngân hàng cho biết tài khoản đã bị đưa vào diện cảnh báo (警示), mọi giao dịch bị dừng. Vài ngày sau, đồn cảnh sát gửi giấy mời (通知書) gọi bạn đến lấy lời khai (詢問). Bạn nhớ ra ba tháng trước mình đã đưa thẻ ATM hoặc mật khẩu ngân hàng điện tử cho một người "chỉ để nhận tiền", hoặc để nhận một "việc làm thêm" trên mạng hứa trả hoa hồng.
 
-Chuyện này xảy ra với lao động, du học sinh hay người đã lập gia đình ở Đài Loan. Dưới đây là những gì luật quy định và quyền của bạn.
+Chuyện này xảy ra với lao động, du học sinh hay người đã lập gia đình ở Đài Loan.
 
 ## Vì sao giao tài khoản cho người khác bị coi là tiếp tay cho lừa đảo
 
@@ -77,7 +77,7 @@ Nếu bạn vừa nhận ra mình đã đưa thẻ cho người lạ: gọi ngâ
 
 Đừng phớt lờ giấy 通知書. Theo Điều 71-1 Bộ luật Tố tụng hình sự, không đến mà không có lý do chính đáng thì cảnh sát có thể đề nghị viện kiểm sát cấp lệnh dẫn giải. Đọc kỹ số vụ, lý do, ngày giờ, địa điểm; chụp ảnh giấy. Nếu giờ hẹn trùng ca làm hoặc cần phiên dịch, hãy liên hệ đơn vị gửi sớm. Trước khi đi, gom tin nhắn Zalo, LINE, Facebook với người đã nhờ bạn, sao kê, chứng từ nếu có nhận tiền, thẻ ARC, hộ chiếu. Không xóa tin nhắn, không bàn bạc lời khai với người kia.
 
-Khi bị hỏi, theo [Điều 95 Bộ luật Tố tụng hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95), người hỏi phải báo trước bạn bị tình nghi tội gì, bạn có quyền im lặng, không phải nói trái ý mình, có quyền chọn luật sư và yêu cầu điều tra chứng cứ có lợi. Điều 100-2 áp dụng các quy định này cả khi cảnh sát lấy lời khai. Theo Điều 27, bạn có thể mời luật sư ngay từ lúc cảnh sát hỏi. Theo Điều 99, người không thông thạo tiếng phải có phiên dịch. Bạn có quyền yêu cầu đọc lại biên bản (筆錄) và yêu cầu sửa, bổ sung trước khi ký (Điều 41); đừng ký khi chưa hiểu từng câu.
+Khi bị hỏi, theo [Điều 95 Bộ luật Tố tụng hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95), người hỏi phải báo trước bạn bị tình nghi tội gì, bạn có quyền im lặng, không phải nói trái ý mình, có quyền chọn luật sư và yêu cầu điều tra chứng cứ có lợi. Điều 100-2 áp dụng các quy định này cả khi cảnh sát lấy lời khai. Theo Điều 27, bạn có thể mời luật sư ngay từ lúc cảnh sát hỏi. Điều 99 quy định người không thông thạo tiếng phải có phiên dịch. Bạn có quyền yêu cầu đọc lại biên bản (筆錄) và yêu cầu sửa, bổ sung trước khi ký (Điều 41); đừng ký khi chưa hiểu từng câu.
 
 Dịch vụ luật sư miễn phí đi cùng khi lấy lời khai lần đầu của [Quỹ Trợ giúp pháp lý (法律扶助基金會)](https://www.laf.org.tw/service-project-detail/19) chỉ dành cho tội có mức phạt tù tối thiểu từ 3 năm, người dân tộc nguyên trú (原住民) hoặc người khuyết tật không tự trình bày đầy đủ được, nên vụ cho mượn tài khoản thông thường ít khi thuộc diện này. Người nước ngoài cư trú hợp pháp, thu nhập thấp vẫn có thể xin Quỹ cử luật sư (申請法扶律師) cho giai đoạn điều tra hoặc xét xử; Quỹ xét cả tài chính lẫn nội dung vụ việc.
 

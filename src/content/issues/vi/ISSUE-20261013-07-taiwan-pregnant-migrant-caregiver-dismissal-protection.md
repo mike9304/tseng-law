@@ -26,19 +26,19 @@ author: "legal-ai-assistant"
 
 # Đài Loan: quyền làm việc của người chăm sóc tại nhà khi mang thai
 
-Ngày 12/10, [PTS đưa tin](https://news.pts.org.tw/article/831032) về kiến nghị của phía hiệp hội dịch vụ việc làm, đề nghị khôi phục xét nghiệm thai đối với lao động nước ngoài trước và sau khi nhập cảnh. Bộ Lao động Đài Loan cho biết việc thay đổi chính sách còn phải lấy ý kiến các bên. Bản tin phản ánh một đề xuất, không phải thông báo ban hành quy định mới.
+Ngày 12/10, [PTS đưa tin](https://news.pts.org.tw/article/831032) về kiến nghị của phía hiệp hội dịch vụ việc làm, đề nghị khôi phục xét nghiệm thai đối với lao động nước ngoài trước và sau khi nhập cảnh. Bộ Lao động Đài Loan cho biết việc thay đổi chính sách còn phải lấy ý kiến các bên. Bản tin phản ánh đề xuất của hiệp hội. Chưa phải thông báo ban hành quy định mới.
 
 Với người Việt đang được một hộ gia đình thuê để chăm sóc người bệnh hoặc người cao tuổi, việc mang thai không phải căn cứ để chủ sử dụng lao động cho nghỉ việc. Quyền này được quy định trong [Điều 11 Luật Bình đẳng giới trong việc làm (性別平等工作法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=11).
 
 ## Điều khoản buộc nghỉ việc khi mang thai không có hiệu lực
 
-Điều 11 cấm quy chế làm việc, hợp đồng lao động hoặc thỏa ước tập thể quy định người lao động phải nghỉ việc hay nghỉ không lương khi kết hôn, mang thai, sinh con hoặc nuôi con. Chủ sử dụng lao động cũng không được lấy những việc đó làm lý do sa thải. Điều khoản trái quy định này vô hiệu; việc chấm dứt hợp đồng trên căn cứ đó không có hiệu lực.
+Điều 11 cấm quy chế làm việc, hợp đồng lao động hoặc thỏa ước tập thể quy định người lao động phải nghỉ việc hay nghỉ không lương khi kết hôn, mang thai, sinh con hoặc nuôi con, đồng thời cấm chủ sử dụng lao động lấy những việc đó làm lý do sa thải. Điều khoản trái quy định này vô hiệu. Chấm dứt hợp đồng vì các lý do đó không có hiệu lực.
 
 Vì vậy, chữ ký trong một hợp đồng có sẵn điều khoản “mang thai phải nghỉ” không làm điều khoản đó trở thành hợp pháp. Nếu chủ nhà đưa giấy chấm dứt hợp đồng sau khi biết người lao động có thai, nội dung trao đổi và lý do chấm dứt cần được xem cùng với giấy đã ký. Tên gọi “tự nguyện nghỉ việc” trên mẫu giấy chưa giải đáp được việc người lao động có thực sự đồng ý hay không.
 
 ## Quyền nghỉ sinh và tiền lương là hai vấn đề riêng
 
-Người chăm sóc do hộ gia đình trực tiếp thuê không thuộc phạm vi Luật Tiêu chuẩn lao động. Tuy nhiên, [hướng dẫn bảo vệ lao động nữ nước ngoài của Bộ Lao động, trang 6–7](https://fw.wda.gov.tw/wda-employer/home/download-file/2c95efb3943b2c9501943e3f511305d1.pdf), vẫn xác nhận quyền nghỉ sinh của nhóm này theo [Điều 15 Luật Bình đẳng giới trong việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=15): tổng cộng 8 tuần trước và sau khi sinh. Tiền lương trong thời gian nghỉ sinh của lao động làm việc gia đình được xử lý theo hợp đồng. Không thể từ việc không áp dụng Luật Tiêu chuẩn lao động mà kết luận người chăm sóc không có quyền nghỉ sinh.
+Người chăm sóc do hộ gia đình trực tiếp thuê không thuộc phạm vi Luật Tiêu chuẩn lao động. Tuy nhiên, [hướng dẫn bảo vệ lao động nữ nước ngoài của Bộ Lao động, trang 6–7](https://fw.wda.gov.tw/wda-employer/home/download-file/2c95efb3943b2c9501943e3f511305d1.pdf), vẫn xác nhận quyền nghỉ sinh của nhóm này theo [Điều 15 Luật Bình đẳng giới trong việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=15): tổng cộng 8 tuần trước và sau khi sinh. Tiền lương trong thời gian nghỉ sinh của lao động làm việc gia đình được xử lý theo hợp đồng. Không thể vì không áp dụng Luật Tiêu chuẩn lao động mà kết luận người chăm sóc không có quyền nghỉ sinh.
 
 ## Khi lý do chấm dứt hợp đồng bị tranh cãi
 
@@ -47,5 +47,3 @@ Tin nhắn yêu cầu về nước vì mang thai, thông báo cho nghỉ việc 
 Theo [Điều 34](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=34), người lao động có thể khiếu nại việc vi phạm Điều 11 đến cơ quan có thẩm quyền ở địa phương. [Điều 36](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=36) cấm chủ sử dụng lao động sa thải, điều chuyển hoặc có hành vi bất lợi khác vì người lao động khiếu nại theo luật này hoặc hỗ trợ người khác khiếu nại. Việc xem xét một tranh chấp cụ thể vẫn cần hồ sơ và hoàn cảnh chấm dứt hợp đồng.
 
 Ngày kiểm tra nguồn: 13/10/2026. Bài viết cung cấp thông tin chung về pháp luật Đài Loan, không thay thế tư vấn theo hồ sơ cụ thể.
-
-Cảnh hư cấu

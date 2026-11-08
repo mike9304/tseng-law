@@ -21,7 +21,7 @@ Apabila terjadi kecelakaan lalu lintas (交通事故) di Taiwan, amankan keselam
 
 Dalam kecelakaan yang menimbulkan luka atau kematian, pengemudi wajib segera melakukan tindakan pertolongan (救護措施), memberitahukan polisi, serta mengamankan kendaraan dan bukti di lokasi kejadian (保全現場). Persetujuan tidak resmi dari pihak lain atau sekadar rekaman video tidak dapat dipandang membolehkan Anda meninggalkan lokasi tanpa menyelesaikan tindakan yang diwajibkan.
 
-Namun, dalam kecelakaan dengan korban luka, apabila semua pihak menyetujuinya, kendaraan dapat dipindahkan ke tempat yang tidak menghalangi lalu lintas setelah posisi kendaraan dan bekas-bekas di lokasi ditandai terlebih dahulu. Hal ini tidak berarti menggantikan tindakan yang diwajibkan seperti pertolongan dan pelaporan.
+Bila ada korban luka dan semua pihak menyetujuinya, kendaraan dapat dipindahkan ke tempat yang tidak menghalangi lalu lintas setelah posisi kendaraan dan bekas-bekas di lokasi ditandai terlebih dahulu. Hal ini tidak menggantikan kewajiban pertolongan dan pelaporan.
 
 Apabila yang terjadi hanya kerugian harta benda dan kendaraan masih dapat digerakkan, pada asasnya posisi kendaraan dan bekas di lokasi ditandai serta didokumentasikan dengan foto atau video, kemudian kendaraan segera dipindahkan ke tempat yang aman. Meninggalkan lokasi tanpa melakukan tindakan yang diwajibkan dapat berakibat sanksi administratif (行政處罰).
 
@@ -31,7 +31,7 @@ Pasal 185-4 Kitab Undang-Undang Hukum Pidana Taiwan (刑法) mengatur tanggung j
 
 Amankan lebih dahulu keselamatan pribadi dan pasang tanda peringatan, lalu gunakan nomor darurat yang berlaku di Taiwan — bukan nomor darurat negara Anda: 119 untuk ambulans dan pemadam kebakaran apabila ada korban luka atau diperlukan penyelamatan, 110 untuk polisi pada tindak pidana atau keadaan keamanan yang mendesak, serta 112 dari telepon genggam. Lakukan pula pelaporan kepada polisi sesuai dengan keadaan kecelakaan lalu lintas tersebut.
 
-Setelah keselamatan terjamin, ambillah foto bersudut lebar sekaligus foto jarak dekat untuk merekam posisi kendaraan dan kerusakannya, marka jalan, lampu isyarat, serta cuaca. Sebaiknya Anda juga tidak melewatkan nomor kontak saksi, permohonan pengamanan rekaman CCTV (監視器影像) dan kamera dasbor (行車紀錄器), data para pihak, kendaraan, dan asuransi, serta rekam medis (病歷). Dokumentasi pribadi memang berguna, tetapi tidak menggantikan penanganan polisi yang diwajibkan pada kecelakaan dengan korban luka atau meninggal.
+Setelah keselamatan terjamin, ambillah foto bersudut lebar sekaligus foto jarak dekat untuk merekam posisi kendaraan dan kerusakannya, marka jalan, lampu isyarat, serta cuaca. Sebaiknya Anda juga tidak melewatkan nomor kontak saksi, permohonan pengamanan rekaman CCTV (監視器影像) dan kamera dasbor (行車紀錄器), data para pihak, kendaraan, dan asuransi, serta rekam medis (病歷). Dokumentasi pribadi memang berguna. Pada kecelakaan dengan korban luka atau meninggal, dokumentasi itu tidak menggantikan penanganan polisi yang diwajibkan.
 
 Mengenai dokumen kepolisian, di lokasi kecelakaan Anda dapat menerima slip pendaftaran pihak kecelakaan lalu lintas (道路交通事故當事人登記聯單). Setelah lewat 7 hari sejak tanggal kecelakaan, Anda dapat mengajukan permohonan denah lokasi dan foto lokasi (現場圖 / 現場照片); setelah lewat 30 hari sejak tanggal kecelakaan, Anda dapat mengajukan permohonan laporan analisis awal kecelakaan (道路交通事故初步分析研判表). Waktu penerbitan dan persyaratan permohonan sebaiknya Anda tanyakan kembali kepada instansi kepolisian yang berwenang.
 
@@ -41,7 +41,7 @@ Pasal 284 Kitab Undang-Undang Hukum Pidana mengatur perbuatan melukai karena kel
 
 Untuk ganti rugi perdata (損害賠償), menurut Pasal 197 Kitab Undang-Undang Hukum Perdata Taiwan (民法) tuntutan tidak dapat lagi diajukan apabila telah lewat 2 tahun sejak hari diketahuinya kerugian dan pihak yang wajib mengganti, atau 10 tahun sejak hari terjadinya perbuatan melawan hukum. Fakta mana yang berpengaruh terhadap daluwarsa (消滅時效) harus dikaji secara tersendiri.
 
-Orang yang dirugikan oleh suatu tindak pidana dapat mengajukan gugatan perdata yang digabung dalam perkara pidana (刑事附帶民事訴訟) berdasarkan Pasal 487 Kitab Undang-Undang Hukum Acara Pidana. Selama pemeriksaan perkara pidana masih berlangsung, gugatan itu dapat diajukan paling lambat sebelum penutupan persidangan lisan (言詞辯論終結) tingkat banding sebagaimana ditentukan Pasal 488 Kitab Undang-Undang Hukum Acara Pidana, tetapi tidak dapat diajukan setelah penutupan persidangan lisan tingkat pertama dan sebelum banding diajukan. Pada umumnya cara ini dapat menghindarkan pembayaran biaya perkara (裁判費) tersendiri, tetapi tidak semua hasilnya berakhir tanpa biaya. Misalnya, apabila perkara pidana ditolak dan atas permohonan penggugat perkara dilimpahkan ke pengadilan perdata, berdasarkan Pasal 503 Kitab Undang-Undang Hukum Acara Pidana biaya perkara dapat dibebankan kepada Anda, dan ketentuan mengenai pelimpahan serta prosedur dalam Pasal 504 juga perlu diperiksa bersamaan.
+Orang yang dirugikan oleh suatu tindak pidana dapat mengajukan gugatan perdata yang digabung dalam perkara pidana (刑事附帶民事訴訟) berdasarkan Pasal 487 Kitab Undang-Undang Hukum Acara Pidana. Selama pemeriksaan perkara pidana masih berlangsung, gugatan itu dapat diajukan paling lambat sebelum penutupan persidangan lisan (言詞辯論終結) tingkat banding sebagaimana ditentukan Pasal 488 Kitab Undang-Undang Hukum Acara Pidana, tetapi tidak dapat diajukan setelah penutupan persidangan lisan tingkat pertama dan sebelum banding diajukan. Pada umumnya cara ini dapat menghindarkan pembayaran biaya perkara (裁判費) tersendiri. Tidak semua hasilnya berakhir tanpa biaya. Misalnya, apabila perkara pidana ditolak dan atas permohonan penggugat perkara dilimpahkan ke pengadilan perdata, berdasarkan Pasal 503 Kitab Undang-Undang Hukum Acara Pidana biaya perkara dapat dibebankan kepada Anda, dan ketentuan mengenai pelimpahan serta prosedur dalam Pasal 504 juga perlu diperiksa bersamaan.
 
 Pilihan yang tepat berbeda-beda menurut ada tidaknya terputusnya daluwarsa (時效中斷), lingkup pihak tergugat, bukti, asuransi, dan kewenangan mengadili. Karena itu tidak ada satu prosedur yang paling sesuai untuk semua perkara.
 
@@ -59,7 +59,7 @@ Dalam akta perdamaian (和解書) sebaiknya ditentukan secara spesifik waktu dan
 
 Perdamaian (和解) menurut Pasal 736 Kitab Undang-Undang Hukum Perdata adalah perjanjian yang di dalamnya para pihak saling mengalah untuk mengakhiri atau mencegah sengketa. Menurut Pasal 737 Kitab Undang-Undang Hukum Perdata, ruang lingkup hapusnya hak pun hanya dinilai sebatas hak yang dilepaskan dalam akta perdamaian itu. Karena itu, tanpa memeriksa rumusan katanya, tidak dapat disimpulkan begitu saja bahwa seluruh tuntutan pada masa mendatang menjadi hapus.
 
-Apabila perkaranya merupakan delik aduan, menurut Pasal 238 Kitab Undang-Undang Hukum Acara Pidana pengaduan dapat dicabut sampai sebelum penutupan persidangan lisan tingkat pertama, dan setelah dicabut pengaduan tidak dapat diajukan kembali. Namun, pada delik yang bukan delik aduan, penuntutan tidak serta-merta berakhir hanya karena adanya perdamaian secara pribadi, dan adanya perdamaian tidak selalu mewajibkan pencabutan pengaduan.
+Delik aduan memungkinkan pencabutan pengaduan: menurut Pasal 238 Kitab Undang-Undang Hukum Acara Pidana, pengaduan dapat dicabut sampai sebelum penutupan persidangan lisan tingkat pertama, dan setelah dicabut pengaduan tidak dapat diajukan kembali. Namun, pada delik yang bukan delik aduan, penuntutan tidak serta-merta berakhir hanya karena adanya perdamaian secara pribadi, dan adanya perdamaian tidak selalu mewajibkan pencabutan pengaduan.
 
 ### Dasar Resmi Q1–Q5
 
@@ -83,7 +83,7 @@ Apabila perkaranya merupakan delik aduan, menurut Pasal 238 Kitab Undang-Undang 
 
 ## Q6. Bagaimana tanggung jawab atas kecelakaan ditetapkan?
 
-Laporan analisis awal kecelakaan lalu lintas jalan raya yang dibuat polisi merupakan analisis pendahuluan yang disusun berdasarkan bahan-bahan di lokasi kejadian. Laporan itu bukan putusan pengadilan, tidak mengikat pengadilan, dan tidak pula menetapkan proporsi kelalaian (過失比例). Karena bahan yang diperlukan dan ruang lingkup sengketa berbeda pada setiap kecelakaan, laporan ini, penilaian ahli menurut undang-undang, dan peninjauan ulang (覆議) bukan merupakan prosedur otomatis maupun tahapan yang wajib.
+Analisis pendahuluan polisi atas kecelakaan lalu lintas jalan raya disusun dari bahan di lokasi kejadian. Dokumen itu bukan putusan pengadilan, tidak mengikat pengadilan, dan tidak pula menetapkan proporsi kelalaian (過失比例). Karena bahan yang diperlukan dan ruang lingkup sengketa berbeda pada setiap kecelakaan, laporan ini, penilaian ahli menurut undang-undang, dan peninjauan ulang (覆議) bukan merupakan prosedur otomatis maupun tahapan yang wajib.
 
 Menurut ketentuan yang berlaku, pihak yang memenuhi syarat dapat mengajukan permohonan penilaian ahli atas kecelakaan kendaraan (車輛行車事故鑑定), instansi yang menangani dapat melimpahkan perkaranya, dan lembaga peradilan pun dapat memintakannya. Permohonan oleh pihak yang bersangkutan umumnya diajukan dalam waktu 6 bulan sejak tanggal kecelakaan, sedangkan untuk perkara yang sudah dalam penyidikan atau pemeriksaan pengadilan, penilaian ahli berjalan melalui permintaan lembaga peradilan dan bukan melalui permohonan langsung yang baru.
 
@@ -95,7 +95,7 @@ Tuntutan berdasarkan Pasal 184 Kitab Undang-Undang Hukum Perdata mensyaratkan ad
 
 - Luka: Menurut Pasal 193 Kitab Undang-Undang Hukum Perdata dapat dikaji biaya pengobatan (醫療費用) yang diperlukan, biaya tambahan yang timbul dalam kehidupan seperti biaya perawatan (看護費用), biaya transportasi berobat (就醫交通費), dan alat bantu, serta kehilangan penghasilan (收入損失) akibat ketidakmampuan bekerja secara nyata dan penurunan kemampuan bekerja (勞動能力減損). Menurut Pasal 195 Kitab Undang-Undang Hukum Perdata, kerugian immateriil juga dapat dikaji.
 - Kematian: Menurut Pasal 192 Kitab Undang-Undang Hukum Perdata, apabila memenuhi syarat dapat dikaji biaya pengobatan sebelum meninggal dan biaya kebutuhan hidup yang bertambah, biaya pemakaman (殯葬費), serta kehilangan nafkah (扶養利益損失) bagi orang yang secara hukum berhak menerima nafkah. Menurut Pasal 194 Kitab Undang-Undang Hukum Perdata, kerugian immateriil bagi kerabat tertentu juga dapat dikaji.
-- Harta benda: Menurut Pasal 196 Kitab Undang-Undang Hukum Perdata, pemilik dapat menuntut penurunan nilai kendaraan yang disebabkan oleh kerusakan; biaya perbaikan hanya menjadi tolok ukur sebatas yang diperlukan, dan penyusutan dapat dikurangkan apabila suku cadang baru menggantikan suku cadang lama.
+- Harta benda: Menurut Pasal 196 Kitab Undang-Undang Hukum Perdata, pemilik dapat menuntut penurunan nilai kendaraan yang disebabkan oleh kerusakan. Biaya perbaikan hanya menjadi tolok ukur sebatas yang diperlukan. Penyusutan dapat dikurangkan apabila suku cadang baru menggantikan suku cadang lama.
 
 ## Q8. Bagaimana cara mengajukan data biaya pengobatan apabila perawatan masih berlanjut?
 
@@ -115,7 +115,7 @@ Sekalipun perawatan benar-benar diberikan oleh kerabat tanpa imbalan, dalam perk
 
 Biaya transportasi disusun berdasarkan keterkaitan antara catatan perawatan dan luka yang berhubungan dengan kecelakaan. Rute, jumlah kunjungan, tanggal kunjungan, sarana transportasi, tarif, serta kebutuhan dan kewajaran penggunaan sarana itu dapat menjadi hal yang penting dalam penilaian.
 
-Kuitansi, catatan tarif, catatan rute, dan data perawatan merupakan bukti yang mungkin diajukan. Kuitansi taksi bukan satu-satunya cara pembuktian, dan pengajuannya pun tidak dengan sendirinya dianggap memadai.
+Kuitansi, catatan tarif, catatan rute, dan data perawatan merupakan bukti yang mungkin diajukan. Untuk taksi, kuitansi bukan satu-satunya cara pembuktian. Pengajuannya pun tidak dengan sendirinya dianggap memadai.
 
 ### Dasar Resmi Q6–Q10
 
@@ -141,7 +141,7 @@ Kehilangan penghasilan harus dibuktikan dengan data bahwa karena luka yang berhu
 
 Sebaiknya Anda menyusun sekaligus rekam medis, catatan kehadiran atau cuti, data gaji dan pajak, serta konfirmasi dari pemberi kerja. Pekerja mandiri dapat mengajukan data yang sesuai dengan bentuk usahanya sendiri, seperti data penjualan, catatan transaksi, dan data pelaporan pajak.
 
-Keadaan bahwa Anda tetap bekerja atau tetap menerima gaji tanpa perubahan memang berkaitan dengan penilaian kehilangan penghasilan selama masa pemulihan, tetapi kenyataan itu saja tidak dapat dipandang secara otomatis menentukan persoalan kerugian akibat penurunan kemampuan bekerja. Keadaan tersebut juga bukan dasar untuk menilai kerugian akibat penurunan kemampuan bekerja secara tersendiri. Kerugian akibat penurunan kemampuan bekerja dikaji terpisah pada Q12.
+Keadaan bahwa Anda tetap bekerja atau tetap menerima gaji tanpa perubahan memang berkaitan dengan penilaian kehilangan penghasilan selama masa pemulihan, tetapi kenyataan itu saja tidak dapat dipandang secara otomatis menentukan persoalan kerugian akibat penurunan kemampuan bekerja. Status bekerja atau gaji itu juga bukan dasar untuk menilai kerugian akibat penurunan kemampuan bekerja secara tersendiri. Kerugian akibat penurunan kemampuan bekerja dikaji terpisah pada Q12.
 
 ## Q12. Bagaimana membuktikan kerugian akibat penurunan kemampuan bekerja?
 
@@ -155,7 +155,7 @@ Apabila perhitungan dilakukan dalam bentuk pembayaran sekaligus, pemotongan bung
 
 ## Q13. Bagaimana ganti rugi immateriil (慰撫金) atas kerugian non-materiil dinilai?
 
-Ganti rugi immateriil atas kerugian non-materiil dinilai dengan cara menetapkan jumlah yang patut, apabila terdapat pelanggaran melawan hukum terhadap tubuh atau kesehatan sebagaimana ditentukan Pasal 195 Kitab Undang-Undang Hukum Perdata.
+Ganti rugi immateriil atas kerugian non-materiil dinilai dengan cara menetapkan jumlah yang patut. Penilaian itu berlaku apabila terdapat pelanggaran melawan hukum terhadap tubuh atau kesehatan sebagaimana ditentukan Pasal 195 Kitab Undang-Undang Hukum Perdata.
 
 Pengadilan mempertimbangkan keadaan masing-masing perkara dengan menilai secara menyeluruh isi luka dan perawatannya, dampak yang berkelanjutan, penderitaan dan pengaruhnya terhadap kehidupan, usia dan kedudukan, keadaan sosial dan ekonomi, serta bukti yang diajukan para pihak. Karena itu sulit memastikan hasilnya lebih dahulu hanya berdasarkan rentang jumlah yang baku.
 
@@ -167,17 +167,17 @@ Pemberi kerja dapat mengajukan pembelaan bahwa ia telah menjalankan kehati-hatia
 
 Apabila pemberi kerja membuktikan syarat pembebasan tersebut sehingga pihak yang dirugikan tidak memperoleh ganti rugi menurut ayat (1), maka menurut Pasal 188 ayat (2) Kitab Undang-Undang Hukum Perdata, apabila pihak yang dirugikan mengajukan permohonan, pengadilan dapat, dengan mempertimbangkan keadaan ekonomi pemberi kerja dan pihak yang dirugikan, memerintahkan pemberi kerja membayar ganti rugi seluruhnya atau sebagian.
 
-Persoalan menentukan pihak yang dituntut secara perdata harus dibedakan dari tanggung jawab pidana. Tanggung jawab pidana menurut Pasal 284 Kitab Undang-Undang Hukum Pidana dinilai berdasarkan pelanggaran kewajiban berhati-hati oleh masing-masing orang perseorangan dan hubungan sebab akibat dari pelanggaran itu.
+Pihak yang dituntut secara perdata dan tanggung jawab pidana harus dibedakan. Menurut Pasal 284 Kitab Undang-Undang Hukum Pidana, tanggung jawab pidana dinilai dari pelanggaran kewajiban berhati-hati oleh masing-masing orang perseorangan dan hubungan sebab akibat pelanggaran itu.
 
 ## Q15. Manfaat dan perlindungan asuransi kendaraan apa yang harus diperiksa?
 
 Kewajiban mengikuti asuransi menurut Pasal 6 Undang-Undang Asuransi Tanggung Jawab Kendaraan Bermotor Wajib (強制汽車責任保險法) pada asasnya berada pada pemilik kendaraan, dan dalam hal-hal yang ditentukan juga pada pengguna atau pengelola kendaraan tersebut. Sistem ini menyediakan struktur perlindungan tanpa kesalahan (無過失給付制度) bagi orang yang luka atau meninggal karena kecelakaan kendaraan bermotor, tetapi lingkup penumpang atau pihak ketiga di luar kendaraan yang ditentukan undang-undang harus diperiksa. Penanggung tidak membayar manfaat apabila orang yang luka atau pihak lain yang berhak menuntut menyebabkan kecelakaan itu dengan sengaja atau pada saat melakukan tindak pidana (Pasal 28).
 
-Dalam kecelakaan yang melibatkan satu kendaraan, pengemudi kendaraan itu pada umumnya bukan penerima manfaat asuransi wajib kendaraan tersebut. Namun, dalam kecelakaan yang melibatkan beberapa kendaraan, terdapat keadaan ketika pengemudi dapat menuntut manfaat kepada penanggung asuransi wajib dari kendaraan lain yang terlibat.
+Dalam kecelakaan yang melibatkan satu kendaraan, pengemudi kendaraan itu pada umumnya bukan penerima manfaat asuransi wajib kendaraan tersebut. Jika beberapa kendaraan terlibat, pengemudi dalam keadaan tertentu dapat menuntut manfaat kepada penanggung asuransi wajib dari kendaraan lain yang ikut serta.
 
 Standar manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 berlaku bagi kecelakaan yang terjadi sejak 1 Juli 2026. Batas biaya pengobatan yang wajar dan diperlukan untuk luka adalah 200.000 dolar baru Taiwan, manfaat kecacatan (失能) berkisar TWD 80.000–3.000.000 menurut 15 tingkat yang ditentukan undang-undang, manfaat kematian adalah TWD 3.000.000, dan jumlah maksimum gabungan kematian, kecacatan, serta biaya pengobatan bagi 1 korban dan 1 kecelakaan adalah TWD 3.200.000. Bagi kecelakaan sebelum tanggal itu dapat berlaku standar yang lama.
 
-Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kecelakaan diri pengemudi (駕駛人傷害險), dan asuransi kerugian kendaraan sendiri (車體損失險) merupakan produk pilihan yang bersifat kontraktual. Perlindungan yang sesungguhnya berbeda menurut pihak tertanggung, batas pertanggungan, risiko sendiri (自負額), pengecualian, kelalaian, dan syarat lainnya dalam polis, sehingga polis asuransi dan syarat-syaratnya harus diperiksa satu per satu.
+Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kecelakaan diri pengemudi (駕駛人傷害險), dan asuransi kerugian kendaraan sendiri (車體損失險) merupakan produk pilihan yang bersifat kontraktual. Perlindungan yang sesungguhnya berbeda menurut pihak tertanggung, batas pertanggungan, risiko sendiri (自負額), pengecualian, kelalaian, dan syarat lainnya dalam polis. Polis dan syarat-syaratnya harus diperiksa satu per satu.
 
 ### Dasar Resmi Q11–Q15
 
@@ -195,7 +195,7 @@ Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kec
 - [Standar manfaat Asuransi Tanggung Jawab Kendaraan Bermotor Wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Kontrak baku asuransi kendaraan bermotor pribadi Komisi Pengawas Keuangan (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Pertanyaan 16. Setelah terjadi kecelakaan, dapatkah semuanya diserahkan kepada perusahaan asuransi?
+## Q16. Setelah terjadi kecelakaan, dapatkah semuanya diserahkan kepada perusahaan asuransi?
 
 ​
 
@@ -211,7 +211,7 @@ Bagi perusahaan asuransi, mengeluarkan tambahan TWD 500.000 atau TWD 1.000.000 u
 
 ​
 
-Persoalan benturan kepentingan antara perusahaan asuransi dan pihak yang bersangkutan juga dapat timbul, dan karena perusahaan asuransi harus menangani banyak perkara, sulit bagi mereka menyediakan waktu yang cukup untuk setiap perkara.
+Benturan kepentingan antara perusahaan asuransi dan pihak yang bersangkutan pun dapat timbul, dan karena perusahaan asuransi menangani banyak perkara, sulit menyediakan waktu yang cukup untuk setiap perkara.
 
 ​
 
@@ -231,11 +231,11 @@ Apabila Anda menyerahkannya kepada perusahaan asuransi, Anda harus terus-menerus
 
 ​
 
-Pertanyaan 17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian bagi pihak yang bersalah dalam kecelakaan lalu lintas?
+## Q17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian bagi pihak yang bersalah dalam kecelakaan lalu lintas?
 
 ​
 
-Dalam perkara melukai karena kelalaian, pidana pada banyak putusan berada di kisaran sekitar 3 bulan. Kisaran itu bukan hasil yang dapat dijanjikan untuk perkara Anda.
+Dalam perkara melukai karena kelalaian, pidana pada banyak putusan berada di kisaran sekitar 3 bulan. Kisaran ini tidak dapat dijanjikan untuk perkara Anda.
 
 ​
 
@@ -255,19 +255,19 @@ Untuk luka berat karena kelalaian, pidana pada banyak putusan berada di kisaran 
 
 ​
 
-Pertanyaan 18. Apabila berdamai dengan pihak lain, dapatkah pengaduan pidana dicabut?
+## Q18. Apabila berdamai dengan pihak lain, dapatkah pengaduan pidana dicabut?
 
 ​
 
-Melukai karena kelalaian dan melukai berat karena kelalaian termasuk delik aduan (告訴乃論之罪), sehingga pengaduan pidana dapat dicabut.
+Melukai karena kelalaian dan melukai berat karena kelalaian termasuk delik aduan (告訴乃論之罪). Pengaduan pidana dapat dicabut.
 
 ​
 
-Untuk kematian karena kelalaian, pencabutan pengaduan tidak dimungkinkan, tetapi apabila Anda berdamai dengan keluarga pihak lain, pengadilan dapat meringankan pidananya.
+Untuk kematian karena kelalaian, pencabutan pengaduan tidak dimungkinkan. Apabila Anda berdamai dengan keluarga pihak lain, pengadilan dapat meringankan pidananya.
 
 ​
 
-Dalam sebagian perkara, pidana bersyarat (緩刑) dapat dipertimbangkan sehingga pidana penjara tidak dijalankan; hal itu bukan suatu janji.
+Dalam sebagian perkara, pidana bersyarat (緩刑) dapat dipertimbangkan sehingga pidana penjara tidak dijalankan. Hal itu bukan suatu janji.
 
 ​
 
@@ -275,7 +275,7 @@ Dalam sebagian perkara, pidana bersyarat (緩刑) dapat dipertimbangkan sehingga
 
 ​
 
-Pertanyaan 19. Apabila meninggalkan lokasi setelah kecelakaan, apakah tindak pidana tabrak lari selalu terpenuhi?
+## Q19. Apabila meninggalkan lokasi setelah kecelakaan, apakah tindak pidana tabrak lari selalu terpenuhi?
 
 ​
 
@@ -295,7 +295,7 @@ Apabila yang terjadi hanya kerusakan kendaraan, hal itu tidak dipandang sebagai 
 
 ​
 
-Pertanyaan 20. Bagaimana cara mencari advokat untuk perkara kecelakaan lalu lintas?
+## Q20. Bagaimana cara mencari advokat untuk perkara kecelakaan lalu lintas?
 
 ​
 
@@ -339,7 +339,7 @@ Karena luka atau meninggalnya korban, korban sendiri maupun keluarganya mengalam
 
 ​
 
-Pihak yang bersalah sering kali tidak memedulikan untuk menanyakan kabar korban melalui telepon atau menjenguknya, dan banyak di antara mereka menganggap perusahaan asuransi akan mengurus semuanya sehingga mereka sendiri tidak pernah muncul. Dalam keadaan seperti itu, penyesalan dan itikad baik tidak dirasakan oleh korban.
+Pihak yang bersalah sering kali tidak memedulikan untuk menanyakan kabar korban melalui telepon atau menjenguknya, dan banyak di antara mereka menganggap perusahaan asuransi akan mengurus semuanya sehingga mereka sendiri tidak pernah muncul. Dalam keadaan seperti itu, penyesalan dan itikad baik tidak dirasakan korban.
 
 ​
 
@@ -347,7 +347,7 @@ Pihak yang bersalah sering kali tidak memedulikan untuk menanyakan kabar korban 
 
 ​
 
-Akibatnya korban merasa sangat terluka dan marah, sehingga banyak yang tidak mau mengalah pada jumlah yang dirundingkan, atau mengajukan sita jaminan (假扣押) dan menyita harta pihak lain sampai tuntas.
+Akibatnya korban merasa sangat terluka dan marah. Banyak yang tidak mau mengalah pada jumlah yang dirundingkan, atau mengajukan sita jaminan (假扣押) dan menyita harta pihak lain sampai tuntas.
 
 ​
 
@@ -359,7 +359,7 @@ Karena itu hal ini sama sekali tidak boleh diabaikan, dan sebaiknya Anda berundi
 
 ​
 
-Apabila Anda memiliki pertanyaan tambahan, gunakanlah halaman Kontak.
+Pertanyaan tambahan dapat disampaikan melalui halaman Kontak.
 
 ​
 

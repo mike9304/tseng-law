@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "Composer2.5 original independent session 8e8b56fe-c2a7-4be3-87e0-47711abab498; resumed R43",
+  "entries": [
+    {
+      "source_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+      "paragraphs_sha256": "ff66362947c497bab87cd71f95f93e5b8e8d4e2a25502869618d0e3cc8ee7d35",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "independent-review.json",
+      "sha256": "25367f597c2e495ab2792df3c37f57d539007bc20f6d41c9baec00d039b5406c"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "author-adjudication.json",
+      "sha256": "2cbc7d209420e8723762f2ed8cccf5168ca42ff487289f233bae037cd68a879b"
+    }
+  ]
+}

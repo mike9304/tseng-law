@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "round": "r43",
+  "reviewer_role": "independent_composer_2_5_boundary_reapproval",
+  "session_note": "Resumed original boundary session; prior row-16 rejection withdrawn after verifying frozen variety_metrics.unlink behavior.",
+  "bindings": {
+    "draft_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+    "adjudicated_map_sha256": "4c7e53baa03776e219a90849eb35b2b9c2aacd6927d968961acb4314d1288df5",
+    "paragraphs_array_sha256": "ff66362947c497bab87cd71f95f93e5b8e8d4e2a25502869618d0e3cc8ee7d35",
+    "original_review_sha256": "4186cce7e39a9fa8c181edf1b44cd8e47bce76a34272cd2e6da146ca4d202a86",
+    "author_adjudication_sha256": "2cbc7d209420e8723762f2ed8cccf5168ca42ff487289f233bae037cd68a879b"
+  },
+  "evidence_read": [
+    "segments-adjudicated-r43.json (full)",
+    "boundary-adjudication-r43.json (full)",
+    "draft.md (for row-to-prose alignment)",
+    "variety_metrics.py unlink and body_blocks (lines 47–73)"
+  ],
+  "verification_independent": {
+    "draft_bytes_sha256_matches_binding": true,
+    "adjudicated_map_file_sha256_matches_binding": true,
+    "paragraphs_array_sha256_matches_adjudicated_map_field": true,
+    "body_blocks_extracted_count": 20,
+    "all_map_texts_match_unlink_extraction": true,
+    "all_rows_sentence_join_equals_text": true,
+    "unlink_row_16_artifact": "ดูเว็บไซต์ของกระทรวงแรงงานไต้หวัน (勞動部): <",
+    "unlink_mechanism": "re.sub(r'https?://\\S+', '', p) removes URL only; leading '<' from angle-bracket URL form remains (variety_metrics.unlink lines 69–73)."
+  },
+  "all_20_rows_read": true,
+  "paragraphs_reviewed": 20,
+  "row_index_range": "0–19",
+  "verdict": "APPROVE",
+  "unresolved_boundaries": [],
+  "findings": [],
+  "prior_finding_withdrawn": {
+    "row": 16,
+    "prior_interpretation": "Trailing '<' treated as map reconstruction error.",
+    "correction": "Faithful post-unlink measured text; not an editorial prose defect. Published draft URL remains intact on line 74."
+  },
+  "independent_row_decisions": [
+    { "row": 0, "sentence_slices": 1, "decision": "accept", "note": "Series cross-read intro; single natural sentence after link unlink." },
+    { "row": 1, "sentence_slices": 1, "decision": "accept", "note": "FAQ 1 bank visit requirement." },
+    { "row": 2, "sentence_slices": 1, "decision": "accept", "note": "Prohibition on internet/relative transfer." },
+    { "row": 3, "sentence_slices": 2, "decision": "accept", "note": "Split before หากมิได้ยื่นรายงาน — consequence clause boundary." },
+    { "row": 4, "sentence_slices": 2, "decision": "accept", "note": "Split after ประเทศ before ก่อนโอน — general rule vs advisory sentence." },
+    { "row": 5, "sentence_slices": 1, "decision": "accept", "note": "TWD source-of-funds answer." },
+    { "row": 6, "sentence_slices": 1, "decision": "accept", "note": "Salary withholding example." },
+    { "row": 7, "sentence_slices": 1, "decision": "accept", "note": "Dividend withholding example." },
+    { "row": 8, "sentence_slices": 1, "decision": "accept", "note": "Korea transfer exception." },
+    { "row": 9, "sentence_slices": 1, "decision": "accept", "note": "Registration timing answer." },
+    { "row": 10, "sentence_slices": 1, "decision": "accept", "note": "Responsible person bank conversion." },
+    { "row": 11, "sentence_slices": 1, "decision": "accept", "note": "Urgent-use bank inquiry caveat." },
+    {
+      "row": 12,
+      "sentence_slices": 2,
+      "decision": "accept",
+      "note": "Independent: split before แต่โดยทั่วไป is natural (variability vs minimum mobile requirement); not arbitrary mid-clause.",
+      "aligns_with_author_adjudication": true,
+      "not_deferred_to_author_alone": true
+    },
+    { "row": 13, "sentence_slices": 1, "decision": "accept", "note": "Six-month account rule example." },
+    {
+      "row": 14,
+      "sentence_slices": 3,
+      "decision": "accept",
+      "note": "Independent: (1) job category, (2) ข. criteria exception bound to หลักเกณฑ์ phrase, (3) personal/employer conditions with ข้อ 38–39; no orphaned qualifiers.",
+      "aligns_with_author_adjudication": true,
+      "not_deferred_to_author_alone": true
+    },
+    { "row": 15, "sentence_slices": 1, "decision": "accept", "note": "Item ข. single complex sentence." },
+    {
+      "row": 16,
+      "sentence_slices": 1,
+      "decision": "accept",
+      "note": "Independent: text ends with '<' matching unlink output; measurement fidelity, not sentence-grammar boundary ambiguity.",
+      "aligns_with_author_adjudication": true,
+      "not_deferred_to_author_alone": true
+    },
+    { "row": 17, "sentence_slices": 2, "decision": "accept", "note": "Split at ทั้งนี้ — contact vs no reply-time guarantee." },
+    { "row": 18, "sentence_slices": 1, "decision": "accept", "note": "Structural '---' paragraph matches body_blocks extraction; no internal slice ambiguity." },
+    { "row": 19, "sentence_slices": 1, "decision": "accept", "note": "Footer read-more block merged per line join; single slice matches unlinked paragraph text." }
+  ],
+  "limitations": [
+    "Does not create or alter approval manifest, draft, or segment map files.",
+    "Does not run variety_metrics check or claim article-level metric PASS or publication approval.",
+    "No primary-law or full editorial re-review in this artifact."
+  ]
+}

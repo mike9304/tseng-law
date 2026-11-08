@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "round": "r43",
+  "original_chat_id": "3dd3dd41-ebb0-4e93-aea3-4a4f160b7dd3",
+  "workspace": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2",
+  "source_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+  "draft_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+  "segments_proposal_sha256": "239da5779f143ba181d8bd25bc67a2963215383b210833e239f870b0ae2eff17",
+  "segments_adjudicated_sha256": "4c7e53baa03776e219a90849eb35b2b9c2aacd6927d968961acb4314d1288df5",
+  "independent_review_approved": false,
+  "metric_pass_claimed": false,
+  "independent_reviewer_feedback": {
+    "accepted_paragraph_indices": [
+      12,
+      14
+    ],
+    "accepted_choices": {
+      "12": "split_before_แต่โดยทั่วไป",
+      "14": "three_sentences_as_proposed"
+    },
+    "flagged_paragraph_indices": [
+      16
+    ],
+    "flag_reason": "trailing < interpreted as reconstruction error"
+  },
+  "author_adjudications": [
+    {
+      "paragraph_index": 12,
+      "alternatives_considered": [
+        "single_sentence_paragraph",
+        "split_before_แต่โดยทั่วไป"
+      ],
+      "chosen": "split_before_แต่โดยทั่วไป",
+      "retain_or_revise": "retain",
+      "linguistic_reason": "First clause states bank-to-bank variability as a complete proposition; second clause, opened with แต่โดยทั่วไป, states a general minimum requirement (mobile number). Independent reviewer accepted this split.",
+      "dependent_clause_safeguard": "Neither slice isolates a subordinate legal condition; both are FAQ answer cadence, not statutory enumeration."
+    },
+    {
+      "paragraph_index": 14,
+      "alternatives_considered": [
+        "single_sentence_paragraph",
+        "two_sentences_merge_items_2_and_3",
+        "three_sentences_as_proposed"
+      ],
+      "chosen": "three_sentences_as_proposed",
+      "retain_or_revise": "retain",
+      "linguistic_reason": "Item ก. has three communicative moves: (1) job category label and statute reference, (2) exception that ข. specialized-work criteria do not apply, (3) retained personal and employer conditions. Each is a natural Thai sentence.",
+      "dependent_clause_safeguard": "ข้อ 38 และข้อ 39 remain attached in sentence 3 with ได้แก่ ทุนจดทะเบียนและยอดขาย; not split across sentences. Exception ไม่นำมาใช้ stays bound to the หลักเกณฑ์…งานเชี่ยวชาญ phrase in sentence 2."
+    },
+    {
+      "paragraph_index": 16,
+      "alternatives_considered": [
+        "remove_trailing_angle_bracket",
+        "retain_post_unlink_text_including_lt"
+      ],
+      "chosen": "retain_post_unlink_text_including_lt",
+      "retain_or_revise": "retain (defend measurement fidelity)",
+      "linguistic_reason": "Draft line uses angle-bracket URL form; frozen unlink strips https:// URL and leaves colon-space-less opener \"<\". Map text must match measured paragraph bytes after unlink, not restored URL prose.",
+      "dependent_clause_safeguard": "N/A; structural measurement fidelity, not sentence grammar."
+    }
+  ],
+  "full_row_coverage": [
+    {
+      "paragraph_index": 0,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 1,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 2,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 3,
+      "sentence_count": 2,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 4,
+      "sentence_count": 2,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 5,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 6,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 7,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 8,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 9,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 10,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 11,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 12,
+      "sentence_count": 2,
+      "adjudication_status": "resolved",
+      "chosen_alternative": "split_before_แต่โดยทั่วไป"
+    },
+    {
+      "paragraph_index": 13,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 14,
+      "sentence_count": 3,
+      "adjudication_status": "resolved",
+      "chosen_alternative": "three_sentences_with_dependent_clause_safeguard"
+    },
+    {
+      "paragraph_index": 15,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 16,
+      "sentence_count": 1,
+      "adjudication_status": "resolved",
+      "chosen_alternative": "retain_unlink_angle_bracket_artifact"
+    },
+    {
+      "paragraph_index": 17,
+      "sentence_count": 2,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 18,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    },
+    {
+      "paragraph_index": 19,
+      "sentence_count": 1,
+      "adjudication_status": "resolved"
+    }
+  ],
+  "unresolved_boundaries": [],
+  "verification": {
+    "extracted_paragraph_count": 20,
+    "normalized_join_check_all_rows": true,
+    "variety_unlink_pipeline": "variety_metrics.unlink via extract-thai / body_blocks"
+  }
+}

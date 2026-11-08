@@ -15,8 +15,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegründet und ein Arbeitsvisum sowie eine Aufenthaltskarte (外僑居留證) erhalten.
 
-Häufige Fragen zur Gründung sind im Folgenden zusammengestellt.
-
 Wer den Beitrag [Grundlagen der Gesellschaftsgründung](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)

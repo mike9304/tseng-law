@@ -7,6 +7,7 @@ read_time: "約6分鐘閱讀"
 categories: ["法律資訊"]
 topic: "litigation"
 featured_image: "../images/051-taiwan-left-turn-vs-straight-motorcycle/featured-01.webp"
+featured_image_caption: "虛構情境"
 author: "legal-ai-assistant"
 audience: ["zh-hant"]
 diagram: "left-turn-hypothetical"
@@ -15,7 +16,6 @@ diagram_after: "左轉車要讓直行車先行"
 
 # 左轉汽車與直行機車事故：70%、60%與50%的過失認定
 
-虛構情境
 
 左轉汽車在路口遇上對向直行機車，應讓機車先行。若發生事故，這項讓車義務不代表民事賠償一律由汽車駕駛負全責。三件民事案件中，法院依機車速度、車前狀況及事故證據，認定左轉方分別負70%、60%與50%的過失。
 

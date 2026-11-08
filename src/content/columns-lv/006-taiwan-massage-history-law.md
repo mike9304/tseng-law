@@ -33,9 +33,7 @@ Un šie saloni taivāniešu stilā daudzām personām Taivānā paliek īpaša k
 
 ​
 
-Tā vai citādi, kad runa ir par masāžu (按摩),
-
-Taivānā ir arī daudz masāžas ielu.
+Tā vai citādi, kad runa ir par masāžu (按摩), Taivānā ir arī daudz masāžas ielu.
 
 Tur tiek iekārtotas visdažādākās masāžas vietas.
 
@@ -45,15 +43,11 @@ Būtībā ikviens var izvēlēties masāžu pēc paša gaumes, lai atbrīvotu sa
 
 Un iemesls, kāpēc šodien ir tik daudz masāžas vietu, var būt tieši tas pieteikums konstitucionālajai iztulkošanai (釋憲).
 
-Kad Taivāna 1980. gadā izsludināja Likumu par personu ar invaliditāti labklājību (殘障福利法) un tas stājās spēkā,
-
-patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masiera profesiju (按摩業).
+Kad Taivāna 1980. gadā izsludināja Likumu par personu ar invaliditāti labklājību (殘障福利法) un tas stājās spēkā, patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masiera profesiju (按摩業).
 
 Šīs profesijas veikšana personai bez redzes traucējumiem (非視障者) bija pretlikumīga.
 
-Šis ierobežojums bija spēkā, līdz tas 2011. gada 31. oktobrī zaudēja spēku; šajā laikposmā, 2003. gadā, Lin kungs, kurš vadīja frizētavu,
-
-nodarbināja divus darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
+Šis ierobežojums bija spēkā, līdz tas 2011. gada 31. oktobrī zaudēja spēku; šajā laikposmā, 2003. gadā, Lin kungs, kurš vadīja frizētavu, nodarbināja divus darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
 
 Saskaņā ar tolaik spēkā esošajām tiesībām Taipejas pilsētas Sociālo lietu birojs (臺北市社會局) uzlika Lin kungam administratīvo naudas sodu (罰鍰) TWD 40.000 (新臺幣), bet diviem darbiniekiem attiecīgi TWD 10.000 un TWD 20.000.
 
@@ -61,43 +55,25 @@ Lin kungs uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstituc
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Taivānā
+Taivānā personas ar redzes traucējumiem saskaras ar daudziem šķēršļiem izaugsmē, aktivitātē, mācībās un izglītībā, cita starpā, un profesijas, ko viņi var veikt, ir ļoti ierobežotas.
 
-personas ar redzes traucējumiem saskaras ar daudziem šķēršļiem izaugsmē, aktivitātē, mācībās un izglītībā, cita starpā,
+Tāpēc tolaik likumdevējs, lai aizsargātu personas ar redzes traucējumiem, kuras atradās vājākā stāvoklī, izstrādāja likumu, kas aizsargāja personu ar redzes traucējumiem nodarbinātību un tiesības uz pastāvēšanu (生存權).
 
-un profesijas, ko viņi var veikt, ir ļoti ierobežotas.
-
-Tāpēc tolaik likumdevējs, lai aizsargātu personas ar redzes traucējumiem, kuras atradās vājākā stāvoklī,
-
-izstrādāja likumu, kas aizsargāja personu ar redzes traucējumiem nodarbinātību un tiesības uz pastāvēšanu (生存權).
-
-Tomēr laika gaitā un līdz ar patēriņa tirgus paplašināšanos
-
-parādījās viedoklis, ka tikai personu ar redzes traucējumiem tiesību aizsardzība pārāk ierobežo personu bez redzes traucējumiem tiesības uz darbu.
+Tomēr laika gaitā un līdz ar patēriņa tirgus paplašināšanos parādījās viedoklis, ka tikai personu ar redzes traucējumiem tiesību aizsardzība pārāk ierobežo personu bez redzes traucējumiem tiesības uz darbu.
 
 Debatē par personu ar redzes traucējumiem un bez tiem profesionālajām tiesībām parādījās daudz pretēju viedokļu.
 
-Piemēram, tika jautāts, vai rakstītā norma, kas ļāva tikai personām ar redzes traucējumiem veikt masāžu, nav diskriminācija pret personām bez redzes traucējumiem,
-
-un tika apšaubīts, vai šī norma patiešām sekmēja personu ar redzes traucējumiem nodarbinātības un pastāvēšanas aizsardzību.
+Piemēram, tika jautāts, vai rakstītā norma, kas ļāva tikai personām ar redzes traucējumiem veikt masāžu, nav diskriminācija pret personām bez redzes traucējumiem, un tika apšaubīts, vai šī norma patiešām sekmēja personu ar redzes traucējumiem nodarbinātības un pastāvēšanas aizsardzību.
 
 Visbeidzot konstitucionālie tiesneši (大法官) 2008. gada 31. oktobra Tieslietu juaņa (司法院) iztulkojumā Nr. 649 (釋字第649號) par pretkonstitucionālu (違憲) atzina normu, kas ļāva tikai personām ar redzes traucējumiem veikt masiera profesiju, un šī norma zaudēja spēku 2011. gada 31. oktobrī, kad beidzās iztulkojuma noteiktais 3 gadu pārejas periods.
 
 ​
 
-Līdzīgi Korejā, kur daudzas personas ar redzes traucējumiem pelna iztiku ar masāžu,
+Līdzīgi Korejā, kur daudzas personas ar redzes traucējumiem pelna iztiku ar masāžu, principā tikai personas ar redzes traucējumiem, kuras ieguvušas kvalifikācijas apliecību, var veikt masiera profesiju.
 
-principā tikai personas ar redzes traucējumiem, kuras ieguvušas kvalifikācijas apliecību, var veikt masiera profesiju.
+Savulaik Korejas valdība sāka izsniegt masāžas apliecības arī personām bez redzes traucējumiem, un daudzas personas ar redzes traucējumiem, baidoties zaudēt iztikas līdzekli, rīkoja intensīvus protestus.
 
-Savulaik Korejas valdība sāka izsniegt masāžas apliecības arī personām bez redzes traucējumiem,
-
-un daudzas personas ar redzes traucējumiem, baidoties zaudēt iztikas līdzekli, rīkoja intensīvus protestus.
-
-Pašlaik Koreja joprojām ļauj tikai personām ar redzes traucējumiem ar kvalifikāciju veikt masiera profesiju,
-
-un, ja kāds no citas personas iekasē atlīdzību par masāžu bez šīs kvalifikācijas,
-
-saskaņā ar Korejas Medicīnisko pakalpojumu likumu var piespriest brīvības atņemšanu uz laiku līdz 3 gadiem.
+Pašlaik Koreja joprojām ļauj tikai personām ar redzes traucējumiem ar kvalifikāciju veikt masiera profesiju, un, ja kāds no citas personas iekasē atlīdzību par masāžu bez šīs kvalifikācijas, saskaņā ar Korejas Medicīnisko pakalpojumu likumu var piespriest brīvības atņemšanu uz laiku līdz 3 gadiem.
 
 Ja kāds bez redzes traucējumiem vada masāžas darbību, var piespriest brīvības atņemšanu uz laiku līdz 5 gadiem.
 
@@ -105,24 +81,14 @@ Ja kāds bez redzes traucējumiem vada masāžas darbību, var piespriest brīv�
 
 Tas rāda, ka katra valsts pieņem atšķirīgas pieejas dažādu grupu tiesību un interešu aizsardzībai.
 
-Katras grupas tiesību un interešu aizsardzība mainās nepārtraukti līdz ar laiku,
-
-un likumdevējs cenšas atrast relatīvi līdzsvarotu risinājumu interešu sadursmei.
+Katras grupas tiesību un interešu aizsardzība mainās nepārtraukti līdz ar laiku, un likumdevējs cenšas atrast relatīvi līdzsvarotu risinājumu interešu sadursmei.
 
 ​
 
-Šodien daudzas personas izvēlas masāžu, lai atbrīvotu saspringumu,
+Šodien daudzas personas izvēlas masāžu, lai atbrīvotu saspringumu, tomēr šajā procesā joprojām notiek seksuālas uzmākšanās (性騷擾) vai neķītru darbību (猥褻) gadījumi.
 
-tomēr šajā procesā joprojām notiek seksuālas uzmākšanās (性騷擾) vai neķītru darbību (猥褻) gadījumi.
+Tas, kam sākotnēji vajadzēja būt tikai masāžas saņemšanai saspringuma atbrīvošanai, var kļūt par traumu visai dzīvei, ja nākas ciest no seksuālas uzmākšanās.
 
-Tas, kam sākotnēji vajadzēja būt tikai masāžas saņemšanai saspringuma atbrīvošanai,
+Ja masāžas laikā Taivānā jūtat diskomfortu vai kaut ko īpatnēju, nekavējoties to paziņojiet vai lūdziet pārtraukt, lai sevi aizsargātu.
 
-var kļūt par traumu visai dzīvei, ja nākas ciest no seksuālas uzmākšanās.
-
-Ja masāžas laikā Taivānā jūtat diskomfortu vai kaut ko īpatnēju,
-
-nekavējoties to paziņojiet vai lūdziet pārtraukt, lai sevi aizsargātu.
-
-Ja uzskatāt, ka esat cietis(-usi) no seksuālas uzmākšanās,
-
-dodieties uz policijas iecirkni kopā ar uzticamu draugu vai ar advokātu Taivānā (律師), lai iesniegtu ziņojumu.
+Ja uzskatāt, ka esat cietis(-usi) no seksuālas uzmākšanās, dodieties uz policijas iecirkni kopā ar uzticamu draugu vai ar advokātu Taivānā (律師), lai iesniegtu ziņojumu.

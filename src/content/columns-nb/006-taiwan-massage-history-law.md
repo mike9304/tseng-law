@@ -33,9 +33,7 @@ Og slike frisørsalonger i taiwansk stil er fortsatt et særpreget kulturminne f
 
 ​
 
-Uansett hvordan det henger sammen: når det er snakk om massasje (按摩),
-
-finnes det også i Taiwan mange massasjegater.
+Uansett hvordan det henger sammen: når det er snakk om massasje (按摩), finnes det også i Taiwan mange massasjegater.
 
 Massasjesteder av alle slag ligger side om side.
 
@@ -45,15 +43,11 @@ I prinsippet kan hver enkelt velge den massasjen som passer egen smak, for å l�
 
 Og grunnen til at det i dag finnes så mange massasjesteder, kan henge sammen med denne ene anmodningen om grunnlovstolkning (釋憲).
 
-Da Taiwan i 1980 vedtok og satte i kraft loven om velferd for personer med funksjonsnedsettelse (殘障福利法),
-
-var det i praksis bare personer med synshemming (視障者) som fikk utøve massasjeyrket (按摩業).
+Da Taiwan i 1980 vedtok og satte i kraft loven om velferd for personer med funksjonsnedsettelse (殘障福利法), var det i praksis bare personer med synshemming (視障者) som fikk utøve massasjeyrket (按摩業).
 
 At noen uten synshemming (非視障者) utøvde dette yrket, var ulovlig.
 
-Denne begrensningen sto ved lag til 31. oktober 2011; i 2003, innenfor denne perioden, ansatte herr Lin, som drev en frisørsalong,
-
-medarbeidere uten synshemming til hårvask og massasje, og politiet slo ned på det.
+Denne begrensningen sto ved lag til 31. oktober 2011; i 2003, innenfor denne perioden, ansatte herr Lin, som drev en frisørsalong, medarbeidere uten synshemming til hårvask og massasje, og politiet slo ned på det.
 
 Etter datidens regler ilagde Taipei bys sosialavdeling (臺北市社會局) herr Lin en administrativ bot (罰鍰) på 40.000 TWD, og de to medarbeiderne administrative bøter på henholdsvis 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
@@ -63,37 +57,23 @@ Herr Lin mente sanksjonen var svært urettferdig og ba om en grunnlovstolkning.
 
 I Taiwan møter personer med synshemming mange hindringer i oppvekst, aktivitet, læring og utdanning, og yrkene de kan utøve, er sterkt begrenset.
 
-Derfor vedtok datidens lovgiver, for å verne personer med synshemming, som sto i en svakere stilling,
+Derfor vedtok datidens lovgiver, for å verne personer med synshemming, som sto i en svakere stilling, en lov som vernet arbeidet og eksistensretten (生存權) til personer med synshemming.
 
-en lov som vernet arbeidet og eksistensretten (生存權) til personer med synshemming.
-
-Etter hvert som tiden gikk og forbrukermarkedet vokste,
-
-kom likevel den oppfatningen at vernet av rettighetene til personer med synshemming grep uforholdsmessig inn i yrkesfriheten til personer uten synshemming.
+Etter hvert som tiden gikk og forbrukermarkedet vokste, kom likevel den oppfatningen at vernet av rettighetene til personer med synshemming grep uforholdsmessig inn i yrkesfriheten til personer uten synshemming.
 
 I debatten om yrkesrettighetene til personer med og uten synshemming kom det mange motstridende syn.
 
-Det ble for eksempel spurt om regelen, som bare tillot personer med synshemming å gi massasje, innebar forskjellsbehandling av personer uten synshemming,
-
-og det ble stilt spørsmål ved om regelen virkelig hadde bidratt til å verne arbeidet og livsgrunnlaget for personer med synshemming.
+Det ble for eksempel spurt om regelen, som bare tillot personer med synshemming å gi massasje, innebar forskjellsbehandling av personer uten synshemming, og det ble stilt spørsmål ved om regelen virkelig hadde bidratt til å verne arbeidet og livsgrunnlaget for personer med synshemming.
 
 Til slutt erklærte forfatningsdomstolens dommere (大法官) i tolkning nr. 649 (司法院釋字第649號) av 31. oktober 2008 bestemmelsen som bare tillot personer med synshemming å utøve massasjeyrket, grunnlovsstridig (違憲), og bestemmelsen opphørte å ha virkning 31. oktober 2011, da den overgangsperioden på 3 år som tolkningen ga, utløp.
 
 ​
 
-Til sammenligning: i Korea, der mange personer med synshemming lever av massasje,
+Til sammenligning: i Korea, der mange personer med synshemming lever av massasje, kan som regel bare personer med synshemming som har oppnådd et kompetansebevis, utøve massasjeyrket.
 
-kan som regel bare personer med synshemming som har oppnådd et kompetansebevis, utøve massasjeyrket.
+Riktignok har Koreas regjering på et tidspunkt også utstedt massasjediplomer til personer uten synshemming, og mange personer med synshemming har, i frykt for å miste livsgrunnlaget sitt, gjennomført kraftige protester.
 
-Riktignok har Koreas regjering på et tidspunkt også utstedt massasjediplomer til personer uten synshemming,
-
-og mange personer med synshemming har, i frykt for å miste livsgrunnlaget sitt, gjennomført kraftige protester.
-
-I dag tillater Korea fortsatt bare personer med synshemming som har kvalifikasjonen, å utøve massasjeyrket,
-
-og hvis noen uten denne kvalifikasjonen tar betalt for massasje,
-
-kan det ifølge den koreanske loven om medisinsk behandling (醫療法) idømmes fengsel i inntil 3 år.
+I dag tillater Korea fortsatt bare personer med synshemming som har kvalifikasjonen, å utøve massasjeyrket, og hvis noen uten denne kvalifikasjonen tar betalt for massasje, kan det ifølge den koreanske loven om medisinsk behandling (醫療法) idømmes fengsel i inntil 3 år.
 
 Hvis noen uten synshemming driver en massasjevirksomhet, kan det idømmes fengsel i inntil 5 år.
 
@@ -101,24 +81,14 @@ Hvis noen uten synshemming driver en massasjevirksomhet, kan det idømmes fengse
 
 Dette viser hvordan hvert land velger ulike måter å verne ulike gruppers rettigheter og interesser på.
 
-Vernet av den enkelte gruppes rettigheter og interesser endrer seg stadig med tiden,
-
-og lovgiveren søker en rimelig balansert løsning på interessekonflikten.
+Vernet av den enkelte gruppes rettigheter og interesser endrer seg stadig med tiden, og lovgiveren søker en rimelig balansert løsning på interessekonflikten.
 
 ​
 
-I dag velger mange massasje for å løse opp spenninger,
+I dag velger mange massasje for å løse opp spenninger, men underveis forekommer det stadig tilfeller av seksuell trakassering (性騷擾) og usømmelige handlinger (猥褻).
 
-men underveis forekommer det stadig tilfeller av seksuell trakassering (性騷擾) og usømmelige handlinger (猥褻).
+Det som i utgangspunktet bare var en massasje for å løse opp spenninger, kan bli et traume for livet hvis man blir utsatt for seksuell trakassering.
 
-Det som i utgangspunktet bare var en massasje for å løse opp spenninger,
+Hvis du under en massasje i Taiwan merker ubehag eller noe fremmed, si fra med en gang, eller be om at massasjen (按摩) stanses, slik at du verner deg selv.
 
-kan bli et traume for livet hvis man blir utsatt for seksuell trakassering.
-
-Hvis du under en massasje i Taiwan merker ubehag eller noe fremmed,
-
-si fra med en gang, eller be om at massasjen (按摩) stanses, slik at du verner deg selv.
-
-Hvis du mener å ha vært utsatt for seksuell trakassering,
-
-bør du gå til politiet sammen med en du stoler på, eller med en advokat i Taiwan (律師), og anmelde forholdet.
+Hvis du mener å ha vært utsatt for seksuell trakassering, bør du gå til politiet sammen med en du stoler på, eller med en advokat i Taiwan (律師), og anmelde forholdet.

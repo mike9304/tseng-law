@@ -33,9 +33,7 @@ Og sådanne frisørsaloner i taiwansk stil forbliver for mange mennesker i Taiwa
 
 ​
 
-Hvordan det end forholder sig, når der tales om massage (按摩),
-
-findes der i Taiwan også mange gader med massagesteder.
+Hvordan det end forholder sig, når der tales om massage (按摩), findes der i Taiwan også mange gader med massagesteder.
 
 Massagesteder af enhver art ligger side om side.
 
@@ -45,15 +43,11 @@ I princippet kan enhver vælge den massage, der passer til den personlige smag, 
 
 Og grunden til, at der i dag findes så mange massageindretninger, kan hænge sammen med denne anmodning om forfatningsfortolkning (釋憲).
 
-Da Taiwan i 1980 udstedte og satte loven om velfærd for personer med handicap (殘障福利法) i kraft,
-
-måtte i virkeligheden kun personer med synshandicap (視障者) udøve massageerhvervet (按摩業).
+Da Taiwan i 1980 udstedte og satte loven om velfærd for personer med handicap (殘障福利法) i kraft, måtte i virkeligheden kun personer med synshandicap (視障者) udøve massageerhvervet (按摩業).
 
 At nogen uden synshandicap (非視障者) udøvede dette erhverv, var ulovligt.
 
-Denne begrænsning var i kraft indtil den 31. oktober 2011; i 2003, inden for denne periode, ansatte hr. Lin, der drev en frisørforretning,
-
-medarbejdere uden synshandicap til hårvask- og massageydelser, og politiet konstaterede det.
+Denne begrænsning var i kraft indtil den 31. oktober 2011; i 2003, inden for denne periode, ansatte hr. Lin, der drev en frisørforretning, medarbejdere uden synshandicap til hårvask- og massageydelser, og politiet konstaterede det.
 
 Ifølge den daværende ret pålagde Taipei Bys socialforvaltning (臺北市社會局) hr. Lin en administrativ bøde (罰鍰) på 40.000 TWD og de to medarbejdere administrative bøder på henholdsvis 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
@@ -61,43 +55,25 @@ Hr. Lin fandt denne sanktion meget uretfærdig og anmodede om en forfatningsfort
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-I Taiwan
+I Taiwan møder personer med synshandicap talrige hindringer ved vækst, aktivitet, læring og uddannelse, blandt andet, og de erhverv, de kan udøve, er meget begrænsede.
 
-møder personer med synshandicap talrige hindringer ved vækst, aktivitet, læring og uddannelse, blandt andet,
+Derfor fastsatte den daværende lovgiver, til beskyttelse af personer med synshandicap, der befandt sig i en svagere stilling, en lov, der beskyttede arbejdet og eksistensretten (生存權) for personer med synshandicap.
 
-og de erhverv, de kan udøve, er meget begrænsede.
-
-Derfor fastsatte den daværende lovgiver, til beskyttelse af personer med synshandicap, der befandt sig i en svagere stilling,
-
-en lov, der beskyttede arbejdet og eksistensretten (生存權) for personer med synshandicap.
-
-Med tidens gang og udvidelsen af forbrugsmarkedet
-
-lød imidlertid den opfattelse, hvorefter den blotte beskyttelse af rettighederne hos personer med synshandicap indskrænkede arbejdsretten hos personer uden synshandicap overdrevent.
+Med tidens gang og udvidelsen af forbrugsmarkedet lød imidlertid den opfattelse, hvorefter den blotte beskyttelse af rettighederne hos personer med synshandicap indskrænkede arbejdsretten hos personer uden synshandicap overdrevent.
 
 I debatten om erhvervsrettighederne for personer med og uden synshandicap fremkom talrige modstående meninger.
 
-Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med synshandicap massage, ikke var forskelsbehandling over for personer uden synshandicap,
-
-og der blev tvivlet på, om denne regel virkelig havde bidraget til beskyttelsen af arbejdet og eksistensen for personer med synshandicap.
+Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med synshandicap massage, ikke var forskelsbehandling over for personer uden synshandicap, og der blev tvivlet på, om denne regel virkelig havde bidraget til beskyttelsen af arbejdet og eksistensen for personer med synshandicap.
 
 Til sidst erklærede forfatningsdomstolens dommere (大法官) i fortolkning nr. 649 (司法院釋字第649號) af den 31. oktober 2008 bestemmelsen, der kun tillod personer med synshandicap at udøve massageerhvervet, for grundlovsstridig (違憲), og bestemmelsen ophørte med at have virkning den 31. oktober 2011, da den overgangsperiode på 3 år, som fortolkningen gav, udløb.
 
 ​
 
-På tilsvarende vis må i Korea, hvor talrige personer med synshandicap tjener til livets ophold med massage,
+På tilsvarende vis må i Korea, hvor talrige personer med synshandicap tjener til livets ophold med massage, som regel kun personer med synshandicap, der har opnået et kompetencebevis, udøve massageerhvervet.
 
-som regel kun personer med synshandicap, der har opnået et kompetencebevis, udøve massageerhvervet.
+Rigtignok har Koreas regering på et tidspunkt også udstedt bevillinger til massageerhvervet til personer uden synshandicap, og talrige personer med synshandicap har, af frygt for at miste deres eksistensgrundlag, organiseret intense protester.
 
-Rigtignok har Koreas regering på et tidspunkt også udstedt bevillinger til massageerhvervet til personer uden synshandicap,
-
-og talrige personer med synshandicap har, af frygt for at miste deres eksistensgrundlag, organiseret intense protester.
-
-På nuværende tidspunkt tillader Korea stadig kun personer med synshandicap, der besidder kvalifikationen, at udøve massageerhvervet,
-
-og hvis nogen uden den kvalifikation modtager et massagevederlag fra en anden,
-
-kan der ifølge den koreanske lov om lægelige ydelser (醫療法) idømmes fængsel indtil 3 år.
+På nuværende tidspunkt tillader Korea stadig kun personer med synshandicap, der besidder kvalifikationen, at udøve massageerhvervet, og hvis nogen uden den kvalifikation modtager et massagevederlag fra en anden, kan der ifølge den koreanske lov om lægelige ydelser (醫療法) idømmes fængsel indtil 3 år.
 
 Hvis nogen uden synshandicap driver en massagevirksomhed, kan der idømmes fængsel indtil 5 år.
 
@@ -105,24 +81,14 @@ Hvis nogen uden synshandicap driver en massagevirksomhed, kan der idømmes fæng
 
 Dette viser, hvordan hvert land vælger forskellige tilgange til beskyttelse af de forskellige gruppers rettigheder og interesser.
 
-Beskyttelsen af hver gruppes rettigheder og interesser ændrer sig stadig med tiden,
-
-og lovgiveren søger en relativt afbalanceret løsning til afklaring af interessekonflikten.
+Beskyttelsen af hver gruppes rettigheder og interesser ændrer sig stadig med tiden, og lovgiveren søger en relativt afbalanceret løsning til afklaring af interessekonflikten.
 
 ​
 
-I dag vælger talrige mennesker massage for at lette spænding,
+I dag vælger talrige mennesker massage for at lette spænding, men i den proces bliver tilfælde af seksuel chikane (性騷擾) eller usædelige handlinger (猥褻) ved med at forekomme.
 
-men i den proces bliver tilfælde af seksuel chikane (性騷擾) eller usædelige handlinger (猥褻) ved med at forekomme.
+Hvad der oprindeligt kun var modtagelse af massage med henblik på lempelse af spænding, kan blive et traume for livet, hvis man udsættes for seksuel chikane.
 
-Hvad der oprindeligt kun var modtagelse af massage med henblik på lempelse af spænding,
+Mærker du under en massage i Taiwan ubehag eller noget upassende, så sig det straks, eller bed om at få behandlingen standset, så du beskytter dig selv.
 
-kan blive et traume for livet, hvis man udsættes for seksuel chikane.
-
-Mærker du under en massage i Taiwan ubehag eller noget upassende,
-
-så sig det straks, eller bed om at få behandlingen standset, så du beskytter dig selv.
-
-Mener du at have været udsat for seksuel chikane,
-
-så tag en person, du har tillid til, eller en advokat i Taiwan (律師) med på politistationen og anmeld det.
+Mener du at have været udsat for seksuel chikane, så tag en person, du har tillid til, eller en advokat i Taiwan (律師) med på politistationen og anmeld det.

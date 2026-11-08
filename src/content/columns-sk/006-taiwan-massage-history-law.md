@@ -33,9 +33,7 @@ Dnes už sa salóny v tejto podobe takmer nevyskytujú.
 
 ​
 
-Tak či onak, keď je reč o masáži (按摩),
-
-aj na Taiwane je mnoho masážnych ulíc.
+Tak či onak, keď je reč o masáži (按摩), aj na Taiwane je mnoho masážnych ulíc.
 
 Lemujú ich masážne prevádzkarne všetkého druhu.
 
@@ -45,15 +43,11 @@ V podstate si každý môže zvoliť masáž zodpovedajúcu vlastnému vkusu, ab
 
 A dôvodom, prečo dnes existuje toľko masážnych prevádzkarní, môže byť práve tá žiadosť o ústavný výklad (釋憲).
 
-Keď Taiwan v roku 1980 vyhlásil a uviedol do platnosti zákon o blahobyte osôb so zdravotným postihnutím (殘障福利法),
-
-skutočne len osoby so zrakovým postihnutím (視障者) mohli vykonávať povolanie maséra (按摩業).
+Keď Taiwan v roku 1980 vyhlásil a uviedol do platnosti zákon o blahobyte osôb so zdravotným postihnutím (殘障福利法), skutočne len osoby so zrakovým postihnutím (視障者) mohli vykonávať povolanie maséra (按摩業).
 
 Výkon tohto povolania osobou bez zrakového postihnutia (非視障者) bol nezákonný.
 
-Toto obmedzenie platilo do 31. októbra 2011; v roku 2003, teda v tomto období, pán Lin, ktorý viedol kaderníctvo,
-
-zamestnal dvoch pracovníkov bez zrakového postihnutia na služby umývania vlasov a masáže, a polícia to zistila.
+Toto obmedzenie platilo do 31. októbra 2011; v roku 2003, teda v tomto období, pán Lin, ktorý viedol kaderníctvo, zamestnal dvoch pracovníkov bez zrakového postihnutia na služby umývania vlasov a masáže, a polícia to zistila.
 
 Podľa vtedajšieho práva uložil Odbor sociálnych vecí mesta Taipej (臺北市社會局) pánovi Linovi správnu pokutu (罰鍰) 40.000 TWD a dvom pracovníkom 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
 
@@ -63,37 +57,23 @@ Pán Lin považoval túto sankciu za veľmi nespravodlivú a požiadal o ústavn
 
 Na Taiwane osoby so zrakovým postihnutím narážajú na početné prekážky v raste, aktivite, učení a vzdelávaní, okrem iného, a povolania, ktoré môžu vykonávať, sú veľmi obmedzené.
 
-Preto vtedajší zákonodarca, aby chránil osoby so zrakovým postihnutím, ktoré sa nachádzali v slabšom postavení,
+Preto vtedajší zákonodarca, aby chránil osoby so zrakovým postihnutím, ktoré sa nachádzali v slabšom postavení, vypracoval zákon, ktorý chránil zamestnanie a právo na existenciu (生存權) osôb so zrakovým postihnutím.
 
-vypracoval zákon, ktorý chránil zamestnanie a právo na existenciu (生存權) osôb so zrakovým postihnutím.
-
-Avšak časom a rozšírením spotrebného trhu
-
-sa objavil názor, že ochrana výhradne práv osôb so zrakovým postihnutím príliš obmedzuje právo na prácu osôb bez zrakového postihnutia.
+Avšak časom a rozšírením spotrebného trhu sa objavil názor, že ochrana výhradne práv osôb so zrakovým postihnutím príliš obmedzuje právo na prácu osôb bez zrakového postihnutia.
 
 V debate o profesijných právach osôb so zrakovým postihnutím a bez neho sa objavilo mnoho protichodných názorov.
 
-Nastolila sa napríklad otázka, či písané ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať masáž, nepredstavuje diskrimináciu voči osobám bez zrakového postihnutia,
-
-a spochybňovalo sa, či toto ustanovenie skutočne prispelo k ochrane zamestnania a existencie osôb so zrakovým postihnutím.
+Nastolila sa napríklad otázka, či písané ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať masáž, nepredstavuje diskrimináciu voči osobám bez zrakového postihnutia, a spochybňovalo sa, či toto ustanovenie skutočne prispelo k ochrane zamestnania a existencie osôb so zrakovým postihnutím.
 
 Nakoniec sudcovia Súdneho jüanu (大法官) vo výklade č. 649 (司法院釋字第649號) z 31. októbra 2008 vyhlásili za protiústavné (違憲) ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať povolanie maséra, a ustanovenie stratilo účinnosť 31. októbra 2011 uplynutím prechodnej lehoty 3 rokov, ktorú výklad poskytol.
 
 ​
 
-Podobne v Kórei, kde sa mnoho osôb so zrakovým postihnutím živí masážou,
+Podobne v Kórei, kde sa mnoho osôb so zrakovým postihnutím živí masážou, povolanie maséra spravidla môžu vykonávať len osoby so zrakovým postihnutím, ktoré získali osvedčenie o odbornej spôsobilosti.
 
-povolanie maséra spravidla môžu vykonávať len osoby so zrakovým postihnutím, ktoré získali osvedčenie o odbornej spôsobilosti.
+Kórejská vláda istý čas vydávala osvedčenia o odbornej spôsobilosti maséra aj osobám bez zrakového postihnutia, a mnoho osôb so zrakovým postihnutím, obávajúcich sa straty prostriedku obživy, usporiadalo intenzívne protesty.
 
-Kórejská vláda istý čas vydávala osvedčenia o odbornej spôsobilosti maséra aj osobám bez zrakového postihnutia,
-
-a mnoho osôb so zrakovým postihnutím, obávajúcich sa straty prostriedku obživy, usporiadalo intenzívne protesty.
-
-V súčasnosti Kórea stále dovoluje výhradne osobám so zrakovým postihnutím s kvalifikáciou vykonávať povolanie maséra,
-
-a ak niekto vyberá od inej osoby odmenu za masáž bez tejto kvalifikácie,
-
-podľa kórejského zákona o zdravotných službách (醫療法) môže byť uložený trest odňatia slobody do 3 rokov.
+V súčasnosti Kórea stále dovoluje výhradne osobám so zrakovým postihnutím s kvalifikáciou vykonávať povolanie maséra, a ak niekto vyberá od inej osoby odmenu za masáž bez tejto kvalifikácie, podľa kórejského zákona o zdravotných službách (醫療法) môže byť uložený trest odňatia slobody do 3 rokov.
 
 Ak niekto bez zrakového postihnutia prevádzkuje masážnu činnosť, môže byť uložený trest odňatia slobody do 5 rokov.
 
@@ -101,24 +81,14 @@ Ak niekto bez zrakového postihnutia prevádzkuje masážnu činnosť, môže by
 
 Ukazuje to, že každý štát prijíma odlišné prístupy k ochrane práv a záujmov rôznych skupín.
 
-Ochrana práv a záujmov každej skupiny sa mení priebežne s časom,
-
-a zákonodarca sa snaží nájsť relatívne vyvážené riešenie stretu záujmov.
+Ochrana práv a záujmov každej skupiny sa mení priebežne s časom, a zákonodarca sa snaží nájsť relatívne vyvážené riešenie stretu záujmov.
 
 ​
 
-Dnes mnoho osôb volí masáž, aby uvoľnilo napätie,
+Dnes mnoho osôb volí masáž, aby uvoľnilo napätie, avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (性騷擾) alebo obscénneho konania (猥褻).
 
-avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (性騷擾) alebo obscénneho konania (猥褻).
+To, čo pôvodne malo byť len masážou na uvoľnenie napätia, sa môže stať traumou na celý život, ak človek zažije sexuálne obťažovanie.
 
-To, čo pôvodne malo byť len masážou na uvoľnenie napätia,
+Ak pociťujete počas masáže na Taiwane nepohodlie alebo niečo osobitné, oznámte to ihneď alebo požiadajte o prerušenie, aby ste sa chránili.
 
-sa môže stať traumou na celý život, ak človek zažije sexuálne obťažovanie.
-
-Ak pociťujete počas masáže na Taiwane nepohodlie alebo niečo osobitné,
-
-oznámte to ihneď alebo požiadajte o prerušenie, aby ste sa chránili.
-
-Ak máte za to, že ste boli sexuálne obťažovaní,
-
-choďte na policajnú stanicu s dôveryhodným priateľom alebo s advokátkou či advokátom na Taiwane (律師), aby ste podali oznámenie.
+Ak máte za to, že ste boli sexuálne obťažovaní, choďte na policajnú stanicu s dôveryhodným priateľom alebo s advokátkou či advokátom na Taiwane (律師), aby ste podali oznámenie.

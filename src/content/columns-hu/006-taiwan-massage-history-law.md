@@ -33,9 +33,7 @@ Ezek a tajvani stílusú szalonok pedig sok tajvani ember számára külön kult
 
 ​
 
-Akárhogy is, ha masszázsról (按摩) van szó,
-
-Tajvanon sok masszázs utca is van.
+Akárhogy is, ha masszázsról (按摩) van szó, Tajvanon sok masszázs utca is van.
 
 Mindenféle masszázsüzlet sorakozik ott.
 
@@ -45,15 +43,11 @@ Lényegében mindenki a saját ízlésének megfelelő masszázst választhatja 
 
 És az, hogy ma ennyi masszázsüzlet létezik, éppen ehhez az alkotmányértelmezési kérelemhez (釋憲) köthető.
 
-Amikor Tajvan 1980-ban kihirdette és hatályba léptette a fogyatékosok jólétéről szóló törvényt (殘障福利法),
-
-ténylegesen csak látássérült személyek (視障者) végezhették a masszőri foglalkozást (按摩業).
+Amikor Tajvan 1980-ban kihirdette és hatályba léptette a fogyatékosok jólétéről szóló törvényt (殘障福利法), ténylegesen csak látássérült személyek (視障者) végezhették a masszőri foglalkozást (按摩業).
 
 Ép látású személy (非視障者) nem gyakorolhatta jogszerűen ezt a foglalkozást.
 
-Ez a korlátozás 2011. október 31-ig maradt hatályban; ezen időszakon belül, 2003-ban Lin úr, aki fodrászszalont üzemeltetett,
-
-két ép látású munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
+Ez a korlátozás 2011. október 31-ig maradt hatályban; ezen időszakon belül, 2003-ban Lin úr, aki fodrászszalont üzemeltetett, két ép látású munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
 
 Az akkori jog szerint Tajpej város Szociális Ügyek Hivatala (臺北市社會局) 40.000 TWD (新臺幣) közigazgatási bírságot (罰鍰) szabott ki Lin úrra, a két munkavállalóra pedig rendre 10.000 és 20.000 TWD összegű közigazgatási bírságot.
 
@@ -61,43 +55,25 @@ Lin úr e szankciót nagyon igazságtalannak tartotta, és alkotmányértelmezé
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Tajvanon
+Tajvanon a látássérült személyek növekedésükben, tevékenységükben, tanulásukban és oktatásukban, többek között, számos akadályba ütköznek, és a foglalkozások, amelyeket végezhetnek, nagyon korlátozottak.
 
-a látássérült személyek növekedésükben, tevékenységükben, tanulásukban és oktatásukban, többek között, számos akadályba ütköznek,
+Ezért az akkori jogalkotó, hogy a gyengébb helyzetben lévő látássérült személyeket védje, olyan törvényt alkotott, amely a látássérült személyek foglalkoztatását és létfenntartáshoz való jogát (生存權) védte.
 
-és a foglalkozások, amelyeket végezhetnek, nagyon korlátozottak.
-
-Ezért az akkori jogalkotó, hogy a gyengébb helyzetben lévő látássérült személyeket védje,
-
-olyan törvényt alkotott, amely a látássérült személyek foglalkoztatását és létfenntartáshoz való jogát (生存權) védte.
-
-Az idő múlásával és a fogyasztói piac bővülésével azonban
-
-az a vélemény jelent meg, hogy csupán a látássérült személyek jogainak védelme túlságosan korlátozza az ép látású személyek munkához való jogát.
+Az idő múlásával és a fogyasztói piac bővülésével azonban az a vélemény jelent meg, hogy csupán a látássérült személyek jogainak védelme túlságosan korlátozza az ép látású személyek munkához való jogát.
 
 A látássérült és az ép látású személyek foglalkozási jogairól szóló vitában sok ellentétes vélemény hangzott el.
 
-Például azt kérdezték, hogy az írott szabály, amely kizárólag látássérült személyeknek engedte a masszázs gyakorlását, nem diszkrimináció-e az ép látású személyekkel szemben,
-
-és kétségbe vonták, hogy e szabály ténylegesen hozzájárult-e a látássérült személyek foglalkoztatásának és létfenntartásának védelméhez.
+Például azt kérdezték, hogy az írott szabály, amely kizárólag látássérült személyeknek engedte a masszázs gyakorlását, nem diszkrimináció-e az ép látású személyekkel szemben, és kétségbe vonták, hogy e szabály ténylegesen hozzájárult-e a látássérült személyek foglalkoztatásának és létfenntartásának védelméhez.
 
 Végül 2008. október 31-én, a Bírósági Yuan (司法院) 649. sz. értelmezésében (釋字第649號) az alkotmánybírák (大法官) alkotmányellenesnek (違憲) nyilvánították azt a rendelkezést, amely kizárólag látássérült személyeknek engedte a masszőri foglalkozás gyakorlását, és a rendelkezés 2011. október 31-én, az értelmezés által engedett 3 éves türelmi idő végén hatályát vesztette.
 
 ​
 
-Összehasonlításképpen Koreában – ez csak egy megjelölt külföldi példa –, ahol sok látássérült személy masszázsból tartja fenn magát,
+Összehasonlításképpen Koreában – ez csak egy megjelölt külföldi példa –, ahol sok látássérült személy masszázsból tartja fenn magát, elvben csak a képesítési igazolást szerzett látássérült személyek végezhetik a masszőri foglalkozást.
 
-elvben csak a képesítési igazolást szerzett látássérült személyek végezhetik a masszőri foglalkozást.
+Igaz, hogy Korea kormánya masszázs-igazolványokat ép látású személyeknek is kiadott, és sok látássérült személy, attól tartva, hogy elveszíti a megélhetését, heves tiltakozásokat szervezett.
 
-Igaz, hogy Korea kormánya masszázs-igazolványokat ép látású személyeknek is kiadott,
-
-és sok látássérült személy, attól tartva, hogy elveszíti a megélhetését, heves tiltakozásokat szervezett.
-
-Jelenleg Korea továbbra is csak a képesítéssel rendelkező látássérült személyeknek engedi a masszőri foglalkozást,
-
-és ha valaki e képesítés nélkül más személytől masszázsdíjat szed,
-
-a koreai orvosi törvény szerint 3 évig terjedő szabadságvesztés szabható ki.
+Jelenleg Korea továbbra is csak a képesítéssel rendelkező látássérült személyeknek engedi a masszőri foglalkozást, és ha valaki e képesítés nélkül más személytől masszázsdíjat szed, a koreai orvosi törvény szerint 3 évig terjedő szabadságvesztés szabható ki.
 
 Ha ép látású személy masszázstevékenységet üzemeltet, 5 évig terjedő szabadságvesztés szabható ki.
 
@@ -105,24 +81,14 @@ Ha ép látású személy masszázstevékenységet üzemeltet, 5 évig terjedő 
 
 Ez mutatja, hogy minden állam eltérő megközelítéseket alkalmaz a különféle csoportok jogainak és érdekeinek védelmére.
 
-Minden csoport jogainak és érdekeinek védelme folyamatosan változik az idővel,
-
-és a jogalkotó igyekszik viszonylag kiegyensúlyozott megoldást találni az érdekek összeütközésének rendezésére.
+Minden csoport jogainak és érdekeinek védelme folyamatosan változik az idővel, és a jogalkotó igyekszik viszonylag kiegyensúlyozott megoldást találni az érdekek összeütközésének rendezésére.
 
 ​
 
-Ma sokan a feszültség oldására választják a masszázst,
+Ma sokan a feszültség oldására választják a masszázst, ám e folyamatban továbbra is előfordulnak szexuális zaklatási (性騷擾) vagy szeméremsértő (猥褻) esetek.
 
-ám e folyamatban továbbra is előfordulnak szexuális zaklatási (性騷擾) vagy szeméremsértő (猥褻) esetek.
+Ami eredetileg csupán masszázs igénybevétele lett volna a feszültség oldására, élethosszig tartó traumává válhat, ha szexuális zaklatás éri az embert.
 
-Ami eredetileg csupán masszázs igénybevétele lett volna a feszültség oldására,
+Ha tajvani masszázs során kényelmetlenséget vagy valami szokatlant érez, jelezze ezt haladéktalanul, vagy kérje a kezelés megszakítását, hogy megvédje magát.
 
-élethosszig tartó traumává válhat, ha szexuális zaklatás éri az embert.
-
-Ha tajvani masszázs során kényelmetlenséget vagy valami szokatlant érez,
-
-jelezze ezt haladéktalanul, vagy kérje a kezelés megszakítását, hogy megvédje magát.
-
-Ha úgy ítéli meg, hogy szexuális zaklatás érte,
-
-menjen a rendőrőrsre megbízható ismerőssel vagy tajvani ügyvéddel (律師), és tegyen feljelentést.
+Ha úgy ítéli meg, hogy szexuális zaklatás érte, menjen a rendőrőrsre megbízható ismerőssel vagy tajvani ügyvéddel (律師), és tegyen feljelentést.

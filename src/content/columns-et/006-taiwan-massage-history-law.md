@@ -33,9 +33,7 @@ Ja sellised taiwanipärased juuksurisalongid jäävad paljudele Taiwanis elavate
 
 ​
 
-Igal juhul, kui rääkida massaažist (按摩),
-
-on Taiwanis ka palju massaažitänavaid.
+Igal juhul, kui rääkida massaažist (按摩), on Taiwanis ka palju massaažitänavaid.
 
 Igasugused massaažikohad seisavad seal kõrvuti.
 
@@ -45,15 +43,11 @@ Põhimõtteliselt võib igaüks valida massaaži, mis sobib isikliku maitsega, p
 
 Ja põhjus, miks tänapäeval on nii palju massaažikohti, võib olla seotud selle ühe põhiseaduse tõlgendamise taotlusega (釋憲).
 
-Kui Taiwan võttis 1980. aastal vastu puuetega inimeste heaoluseaduse (殘障福利法) ja jõustas selle,
-
-võisid massaažialal (按摩業) tegelikult tegutseda ainult nägemispuudega isikud (視障者).
+Kui Taiwan võttis 1980. aastal vastu puuetega inimeste heaoluseaduse (殘障福利法) ja jõustas selle, võisid massaažialal (按摩業) tegelikult tegutseda ainult nägemispuudega isikud (視障者).
 
 See, et keegi ilma nägemispuudeta (非視障者) seda ala harrastas, oli ebaseaduslik.
 
-See piirang kehtis kuni kuupäevani 31. oktoober 2011; sel ajavahemikul, 2003. aastal, härra Lin, kes pidas juuksurisalongi,
-
-palkas töötajaid ilma nägemispuudeta juuksepesu- ja massaažiteenusteks ning politsei selle tuvastas.
+See piirang kehtis kuni kuupäevani 31. oktoober 2011; sel ajavahemikul, 2003. aastal, härra Lin, kes pidas juuksurisalongi, palkas töötajaid ilma nägemispuudeta juuksepesu- ja massaažiteenusteks ning politsei selle tuvastas.
 
 Tollase õiguse järgi määras Taipei linna sotsiaalamet (臺北市社會局) härra Linile haldustrahvi (罰鍰) TWD 40.000 (新臺幣) ning kahele töötajale vastavalt TWD 10.000 ja TWD 20.000.
 
@@ -69,27 +63,17 @@ Aja kulgemise ja tarbijaturu laienemisega tõusis siiski seisukoht, et pelgalt n
 
 Vaidluses nägemispuudega isikute ja ilma nägemispuudeta isikute kutseõiguste üle esitati palju vastandlikke arvamusi.
 
-Küsiti näiteks, kas kirjalik reegel, mis lubas massaaži ainult nägemispuudega isikutele, ei olnud diskrimineerimine ilma nägemispuudeta isikute suhtes,
-
-ja kaheldi, kas see reegel oli tegelikult edendanud nägemispuudega isikute töö ja toimetuleku kaitset.
+Küsiti näiteks, kas kirjalik reegel, mis lubas massaaži ainult nägemispuudega isikutele, ei olnud diskrimineerimine ilma nägemispuudeta isikute suhtes, ja kaheldi, kas see reegel oli tegelikult edendanud nägemispuudega isikute töö ja toimetuleku kaitset.
 
 Lõpuks kuulutasid põhiseaduskohtu kohtunikud (大法官) 31. oktoober 2008. aasta Justiitsjuuani (司法院) tõlgenduses nr 649 (釋字第649號) sätte, mis lubas ainult nägemispuudega isikutel massaažialal tegutseda, põhiseadusvastaseks (違憲) ning säte kaotas kehtivuse kuupäeval 31. oktoober 2011, tõlgenduse lubatud 3-aastase üleminekuaja lõpus.
 
 ​
 
-Võrdluseks: Koreas, kus paljud nägemispuudega isikud teenivad elatist massaažiga,
+Võrdluseks: Koreas, kus paljud nägemispuudega isikud teenivad elatist massaažiga, võivad massaažialal tavaliselt tegutseda ainult nägemispuudega isikud, kes on saanud kvalifikatsioonitunnistuse.
 
-võivad massaažialal tavaliselt tegutseda ainult nägemispuudega isikud, kes on saanud kvalifikatsioonitunnistuse.
+Tõsi, Korea valitsus on mingil hetkel andnud massaažidiplomeid ka ilma nägemispuudeta isikutele, ning paljud nägemispuudega isikud on, kartes elatise kaotamist, korraldanud tugevaid meeleavaldusi.
 
-Tõsi, Korea valitsus on mingil hetkel andnud massaažidiplomeid ka ilma nägemispuudeta isikutele,
-
-ning paljud nägemispuudega isikud on, kartes elatise kaotamist, korraldanud tugevaid meeleavaldusi.
-
-Tänapäeval lubab Korea endiselt ainult kvalifikatsiooniga nägemispuudega isikutel massaažialal tegutseda,
-
-ja kui keegi ilma selle kvalifikatsioonita võtab teiselt massaažitasu,
-
-võib Korea tervishoiuteenuste seaduse (醫療法) järgi mõista vangistust kuni 3 aastat.
+Tänapäeval lubab Korea endiselt ainult kvalifikatsiooniga nägemispuudega isikutel massaažialal tegutseda, ja kui keegi ilma selle kvalifikatsioonita võtab teiselt massaažitasu, võib Korea tervishoiuteenuste seaduse (醫療法) järgi mõista vangistust kuni 3 aastat.
 
 Kui keegi ilma nägemispuudeta peab massaažiäri, võib mõista vangistust kuni 5 aastat.
 
@@ -97,24 +81,14 @@ Kui keegi ilma nägemispuudeta peab massaažiäri, võib mõista vangistust kuni
 
 See näitab, kuidas iga riik valib erinevaid viise eri rühmade õiguste ja huvide kaitsmiseks.
 
-Iga rühma õiguste ja huvide kaitse muutub ajaga üha edasi,
-
-ja seadusandja otsib suhteliselt tasakaalustatud lahendust huvide konflikti selgitamiseks.
+Iga rühma õiguste ja huvide kaitse muutub ajaga üha edasi, ja seadusandja otsib suhteliselt tasakaalustatud lahendust huvide konflikti selgitamiseks.
 
 ​
 
-Tänapäeval valivad paljud inimesed massaaži pinge leevendamiseks,
+Tänapäeval valivad paljud inimesed massaaži pinge leevendamiseks, kuid selles protsessis esineb endiselt seksuaalse ahistamise (性騷擾) või sündsusetute tegude (猥褻) juhtumeid.
 
-kuid selles protsessis esineb endiselt seksuaalse ahistamise (性騷擾) või sündsusetute tegude (猥褻) juhtumeid.
+See, mis algselt oli vaid massaaži vastuvõtmine pinge leevendamiseks, võib jääda eluaegseks traumaks, kui satutakse seksuaalse ahistamise ohvriks.
 
-See, mis algselt oli vaid massaaži vastuvõtmine pinge leevendamiseks,
+Kui tunnete Taiwanis massaaži ajal ebamugavust või midagi võõrast, teatage sellest viivitamata või paluge katkestust, et ennast kaitsta.
 
-võib jääda eluaegseks traumaks, kui satutakse seksuaalse ahistamise ohvriks.
-
-Kui tunnete Taiwanis massaaži ajal ebamugavust või midagi võõrast,
-
-teatage sellest viivitamata või paluge katkestust, et ennast kaitsta.
-
-Kui leiate, et olete sattunud seksuaalse ahistamise ohvriks,
-
-minge usaldusväärse sõbra või Taiwani advokaadiga (律師) politseijaoskonda sellest teatama.
+Kui leiate, et olete sattunud seksuaalse ahistamise ohvriks, minge usaldusväärse sõbra või Taiwani advokaadiga (律師) politseijaoskonda sellest teatama.

@@ -45,15 +45,11 @@ Pada dasarnya, setiap orang boleh memilih urutan yang sesuai dengan seleranya un
 
 Dan sebab terdapat begitu banyak perniagaan urutan hari ini boleh terletak pada permohonan tafsiran perlembagaan (釋憲) itu.
 
-Apabila Taiwan mengisytiharkan dan menguatkuasakan, pada 1980, undang-undang kebajikan orang kurang upaya (殘障福利法),
-
-hanya orang kurang upaya penglihatan (視障者) yang benar-benar boleh menjalankan pekerjaan urutan (按摩業).
+Apabila Taiwan mengisytiharkan dan menguatkuasakan, pada 1980, undang-undang kebajikan orang kurang upaya (殘障福利法), hanya orang kurang upaya penglihatan (視障者) yang benar-benar boleh menjalankan pekerjaan urutan (按摩業).
 
 Individu tanpa kurang upaya penglihatan (非視障者) yang menjalankan pekerjaan ini adalah dilarang.
 
-Sekatan ini kekal berkuat kuasa hingga 31 Oktober 2011; pada tahun 2003, dalam tempoh itu, Encik Lin, yang mengurus salun gunting rambut,
-
-menggaji dua pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
+Sekatan ini kekal berkuat kuasa hingga 31 Oktober 2011; pada tahun 2003, dalam tempoh itu, Encik Lin, yang mengurus salun gunting rambut, menggaji dua pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
 
 Menurut undang-undang masa itu, Biro Hal Ehwal Sosial Bandar Taipei (臺北市社會局) mengenakan denda pentadbiran (罰鍰) sebanyak 40,000 dolar baharu Taiwan (新臺幣) ke atas Encik Lin, manakala dua pekerja itu masing-masing 10,000 dan 20,000 dolar baharu Taiwan.
 
@@ -61,43 +57,25 @@ Encik Lin menganggap sanksi ini sangat tidak adil dan memohon tafsiran perlembag
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Di Taiwan,
+Di Taiwan, orang kurang upaya penglihatan menghadapi banyak halangan dalam pertumbuhan, aktiviti, pembelajaran dan pendidikan, antara lain, dan pekerjaan yang boleh mereka jalankan sangat terhad.
 
-orang kurang upaya penglihatan menghadapi banyak halangan dalam pertumbuhan, aktiviti, pembelajaran dan pendidikan, antara lain,
+Itulah sebabnya penggubal undang-undang masa itu, untuk melindungi orang kurang upaya penglihatan, yang berada dalam kedudukan lemah, menyediakan undang-undang yang melindungi pekerjaan dan hak sara hidup (生存權) orang kurang upaya penglihatan.
 
-dan pekerjaan yang boleh mereka jalankan sangat terhad.
-
-Itulah sebabnya penggubal undang-undang masa itu, untuk melindungi orang kurang upaya penglihatan, yang berada dalam kedudukan lemah,
-
-menyediakan undang-undang yang melindungi pekerjaan dan hak sara hidup (生存權) orang kurang upaya penglihatan.
-
-Namun, dengan berlalunya masa dan perluasan pasaran pengguna,
-
-timbul pendapat bahawa melindungi hanya hak orang kurang upaya penglihatan terlalu menyekat hak kerja orang tanpa kurang upaya penglihatan.
+Namun, dengan berlalunya masa dan perluasan pasaran pengguna, timbul pendapat bahawa melindungi hanya hak orang kurang upaya penglihatan terlalu menyekat hak kerja orang tanpa kurang upaya penglihatan.
 
 Dalam perbahasan mengenai hak profesional orang dengan dan tanpa kurang upaya penglihatan, banyak pendapat bertentangan muncul.
 
-Ditanyakan contohnya sama ada peraturan bertulis yang hanya membenarkan orang kurang upaya penglihatan menjalankan urutan bukan diskriminasi terhadap orang tanpa kurang upaya penglihatan,
-
-dan diragui sama ada peraturan ini benar-benar menyumbang untuk melindungi pekerjaan dan sara hidup orang kurang upaya penglihatan.
+Ditanyakan contohnya sama ada peraturan bertulis yang hanya membenarkan orang kurang upaya penglihatan menjalankan urutan bukan diskriminasi terhadap orang tanpa kurang upaya penglihatan, dan diragui sama ada peraturan ini benar-benar menyumbang untuk melindungi pekerjaan dan sara hidup orang kurang upaya penglihatan.
 
 Akhirnya, dalam Tafsiran Yuan Kehakiman No. 649 (釋字第649號) bertarikh 31 Oktober 2008, hakim perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan, dan peruntukan itu tidak lagi berkuat kuasa pada 31 Oktober 2011, iaitu pada akhir tempoh tangguh tiga tahun yang dibenarkan oleh tafsiran itu.
 
 ​
 
-Sebagai perbandingan: di Korea, di mana ramai orang kurang upaya penglihatan mencari nafkah melalui urutan,
+Sebagai perbandingan: di Korea, di mana ramai orang kurang upaya penglihatan mencari nafkah melalui urutan, pada umumnya hanya orang kurang upaya penglihatan yang memperoleh sijil kelayakan boleh menjalankan pekerjaan urutan.
 
-pada umumnya hanya orang kurang upaya penglihatan yang memperoleh sijil kelayakan boleh menjalankan pekerjaan urutan.
+Benar bahawa kerajaan Korea sampai mengeluarkan sijil urutan juga kepada orang tanpa kurang upaya penglihatan, dan ramai orang kurang upaya penglihatan, bimbang kehilangan cara hidup, mengatur bantahan yang kuat.
 
-Benar bahawa kerajaan Korea sampai mengeluarkan sijil urutan juga kepada orang tanpa kurang upaya penglihatan,
-
-dan ramai orang kurang upaya penglihatan, bimbang kehilangan cara hidup, mengatur bantahan yang kuat.
-
-Pada masa ini, Korea terus hanya membenarkan orang kurang upaya penglihatan yang memiliki kelayakan menjalankan pekerjaan urutan,
-
-dan jika seseorang menerima upah urutan daripada orang lain tanpa kelayakan itu,
-
-menurut undang-undang Korea mengenai perkhidmatan perubatan (醫療法) hukuman penjara sehingga 3 tahun boleh dijatuhkan.
+Pada masa ini, Korea terus hanya membenarkan orang kurang upaya penglihatan yang memiliki kelayakan menjalankan pekerjaan urutan, dan jika seseorang menerima upah urutan daripada orang lain tanpa kelayakan itu, menurut undang-undang Korea mengenai perkhidmatan perubatan (醫療法) hukuman penjara sehingga 3 tahun boleh dijatuhkan.
 
 Jika seseorang tanpa kurang upaya penglihatan mengendalikan perniagaan urutan, hukuman penjara sehingga 5 tahun boleh dijatuhkan.
 
@@ -105,24 +83,14 @@ Jika seseorang tanpa kurang upaya penglihatan mengendalikan perniagaan urutan, h
 
 Ini menunjukkan bahawa setiap negara mengambil pendekatan tersendiri untuk melindungi hak dan kepentingan pelbagai kumpulan.
 
-Perlindungan hak dan kepentingan setiap kumpulan berubah secara berterusan dengan masa,
-
-dan penggubal undang-undang berusaha mencari penyelesaian yang agak seimbang untuk menyelesaikan konflik kepentingan.
+Perlindungan hak dan kepentingan setiap kumpulan berubah secara berterusan dengan masa, dan penggubal undang-undang berusaha mencari penyelesaian yang agak seimbang untuk menyelesaikan konflik kepentingan.
 
 ​
 
-Hari ini, ramai orang memilih urutan untuk melepaskan ketegangan,
+Hari ini, ramai orang memilih urutan untuk melepaskan ketegangan, tetapi, dalam proses ini, kes gangguan seksual (性騷擾) atau perbuatan tidak senonoh (猥褻) tidak berhenti berlaku.
 
-tetapi, dalam proses ini, kes gangguan seksual (性騷擾) atau perbuatan tidak senonoh (猥褻) tidak berhenti berlaku.
+Apa yang asalnya hanya menerima urutan untuk melepaskan ketegangan boleh menjadi trauma seumur hidup jika seseorang mengalami gangguan seksual.
 
-Apa yang asalnya hanya menerima urutan untuk melepaskan ketegangan
+Jika, semasa urutan di Taiwan, anda merasakan ketidakselesaan atau sesuatu yang ganjil, sampaikan segera atau minta supaya dihentikan, agar anda melindungi diri.
 
-boleh menjadi trauma seumur hidup jika seseorang mengalami gangguan seksual.
-
-Jika, semasa urutan di Taiwan, anda merasakan ketidakselesaan atau sesuatu yang ganjil,
-
-sampaikan segera atau minta supaya dihentikan, agar anda melindungi diri.
-
-Jika anda menganggap telah mengalami gangguan seksual,
-
-pergilah ke balai polis bersama rakan yang dipercayai atau bersama peguam Taiwan (律師) untuk membuat aduan.
+Jika anda menganggap telah mengalami gangguan seksual, pergilah ke balai polis bersama rakan yang dipercayai atau bersama peguam Taiwan (律師) untuk membuat aduan.

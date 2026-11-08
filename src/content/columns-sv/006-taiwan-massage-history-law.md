@@ -33,9 +33,7 @@ Och dessa salonger i taiwansk stil är ett säreget kulturminne för många män
 
 ​
 
-Hur som helst, när man talar om massage (按摩),
-
-finns det också i Taiwan gott om massagestråk.
+Hur som helst, när man talar om massage (按摩), finns det också i Taiwan gott om massagestråk.
 
 Massageinrättningar av alla slag ligger där i rad.
 
@@ -45,15 +43,11 @@ I grunden kan var och en välja den massage som passar smaken för att släppa p
 
 Och orsaken till att det i dag finns så många massageinrättningar kan hänga samman med denna ansökan om konstitutionell tolkning (釋憲).
 
-När Taiwan år 1980 utfärdade och satte i kraft lagen om välfärd för personer med funktionsnedsättning (殘障福利法),
-
-kunde i praktiken endast personer med synnedsättning (視障者) utöva massageyrket (按摩業).
+När Taiwan år 1980 utfärdade och satte i kraft lagen om välfärd för personer med funktionsnedsättning (殘障福利法), kunde i praktiken endast personer med synnedsättning (視障者) utöva massageyrket (按摩業).
 
 Att en individ utan synnedsättning (非視障者) utövade yrket var olagligt.
 
-Denna begränsning gällde till och med den 31 oktober 2011; år 2003, alltså inom denna period, anställde herr Lin, som drev en frisersalong,
-
-anställda utan synnedsättning för hårtvätt och massage, och polisen upptäckte det.
+Denna begränsning gällde till och med den 31 oktober 2011; år 2003, alltså inom denna period, anställde herr Lin, som drev en frisersalong, anställda utan synnedsättning för hårtvätt och massage, och polisen upptäckte det.
 
 Enligt den dåvarande rätten påförde Taipei stads socialförvaltning (臺北市社會局) herr Lin en administrativ sanktionsavgift (罰鍰) på TWD 40.000 och de två anställda administrativa sanktionsavgifter på TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
 
@@ -61,43 +55,25 @@ Herr Lin ansåg sanktionen orimlig och begärde en konstitutionell tolkning.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-I Taiwan
+I Taiwan möter personer med synnedsättning många hinder i tillväxt, verksamhet, lärande och utbildning, bland annat, och de yrken de kan utöva är mycket begränsade.
 
-möter personer med synnedsättning många hinder i tillväxt, verksamhet, lärande och utbildning, bland annat,
+Därför utarbetade den dåvarande lagstiftaren, för att skydda personer med synnedsättning, som befann sig i en svagare ställning, en lag som skyddade anställning och rätten till existens (生存權) för personer med synnedsättning.
 
-och de yrken de kan utöva är mycket begränsade.
-
-Därför utarbetade den dåvarande lagstiftaren, för att skydda personer med synnedsättning, som befann sig i en svagare ställning,
-
-en lag som skyddade anställning och rätten till existens (生存權) för personer med synnedsättning.
-
-Med tidens gång och utvidgningen av konsumtionsmarknaden
-
-växte dock uppfattningen fram att ett alltför starkt skydd av enbart rättigheterna för personer med synnedsättning begränsade rätten till arbete för personer utan synnedsättning.
+Med tidens gång och utvidgningen av konsumtionsmarknaden växte dock uppfattningen fram att ett alltför starkt skydd av enbart rättigheterna för personer med synnedsättning begränsade rätten till arbete för personer utan synnedsättning.
 
 I debatten om yrkesrättigheterna för personer med och utan synnedsättning framträdde många motstående meningar.
 
-Man frågade sig till exempel om den skrivna regeln som endast tillät personer med synnedsättning att utöva massage inte var diskriminering mot personer utan synnedsättning,
-
-och man tvivlade på att denna regel verkligen hade bidragit till att skydda anställning och existens för personer med synnedsättning.
+Man frågade sig till exempel om den skrivna regeln som endast tillät personer med synnedsättning att utöva massage inte var diskriminering mot personer utan synnedsättning, och man tvivlade på att denna regel verkligen hade bidragit till att skydda anställning och existens för personer med synnedsättning.
 
 Slutligen förklarade justitieråden vid Justitieyuanen (大法官) i tolkning nr 649 (司法院釋字第649號) av den 31 oktober 2008 den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲), och bestämmelsen upphörde att gälla den 31 oktober 2011, när den övergångstid på 3 år som tolkningen medgav löpte ut.
 
 ​
 
-På liknande sätt får i Korea, där många personer med synnedsättning försörjer sig genom massage,
+På liknande sätt får i Korea, där många personer med synnedsättning försörjer sig genom massage, i allmänhet endast personer med synnedsättning som har erhållit kvalifikationsbevis utöva massageyrket.
 
-i allmänhet endast personer med synnedsättning som har erhållit kvalifikationsbevis utöva massageyrket.
+Det är sant att Koreas regering vid ett tillfälle också utfärdade massagebevis till personer utan synnedsättning, och många personer med synnedsättning, som fruktade att förlora sin försörjning, anordnade intensiva protester.
 
-Det är sant att Koreas regering vid ett tillfälle också utfärdade massagebevis till personer utan synnedsättning,
-
-och många personer med synnedsättning, som fruktade att förlora sin försörjning, anordnade intensiva protester.
-
-För närvarande fortsätter Korea att endast tillåta personer med synnedsättning som innehar kvalifikationen att utöva massageyrket,
-
-och om någon tar emot ersättning för massage från andra utan denna kvalifikation,
-
-kan enligt Koreas lag om medicinska tjänster (醫療法) fängelse i högst 3 år utdömas.
+För närvarande fortsätter Korea att endast tillåta personer med synnedsättning som innehar kvalifikationen att utöva massageyrket, och om någon tar emot ersättning för massage från andra utan denna kvalifikation, kan enligt Koreas lag om medicinska tjänster (醫療法) fängelse i högst 3 år utdömas.
 
 Om någon utan synnedsättning driver en massagerörelse kan fängelse i högst 5 år utdömas.
 
@@ -105,24 +81,14 @@ Om någon utan synnedsättning driver en massagerörelse kan fängelse i högst 
 
 Detta visar att varje land väljer skilda angreppssätt för att skydda olika gruppers rättigheter och intressen.
 
-Skyddet av varje grupps rättigheter och intressen förändras fortlöpande med tiden,
-
-och lagstiftaren strävar efter att finna en relativt balanserad lösning för att lösa intressekonflikten.
+Skyddet av varje grupps rättigheter och intressen förändras fortlöpande med tiden, och lagstiftaren strävar efter att finna en relativt balanserad lösning för att lösa intressekonflikten.
 
 ​
 
-I dag väljer många massage för att släppa på spänningen,
+I dag väljer många massage för att släppa på spänningen, men i samband med det uppstår återkommande fall av sexuella trakasserier (性騷擾) eller otuktiga handlingar (猥褻).
 
-men i samband med det uppstår återkommande fall av sexuella trakasserier (性騷擾) eller otuktiga handlingar (猥褻).
+Det som ursprungligen bara var att ta emot massage för att släppa på spänningen kan bli ett trauma för livet om man utsätts för sexuella trakasserier.
 
-Det som ursprungligen bara var att ta emot massage för att släppa på spänningen
+Om du under en massage i Taiwan känner obehag eller att något är fel, säg genast till eller be om att behandlingen avbryts, för att skydda dig.
 
-kan bli ett trauma för livet om man utsätts för sexuella trakasserier.
-
-Om du under en massage i Taiwan känner obehag eller att något är fel,
-
-säg genast till eller be om att behandlingen avbryts, för att skydda dig.
-
-Om du anser att du har utsatts för sexuella trakasserier,
-
-gå till polisstationen tillsammans med en betrodd vän eller med en advokat i Taiwan (律師) för att göra anmälan.
+Om du anser att du har utsatts för sexuella trakasserier, gå till polisstationen tillsammans med en betrodd vän eller med en advokat i Taiwan (律師) för att göra anmälan.

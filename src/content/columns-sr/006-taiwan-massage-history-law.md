@@ -33,9 +33,7 @@ A ti saloni u tajvanskom stilu ostaju osobena kulturna uspomena za mnoge ljude n
 
 ​
 
-U svakom slučaju, kada govorim o masaži (按摩),
-
-na Tajvanu postoji i mnogo ulica masaže.
+U svakom slučaju, kada govorim o masaži (按摩), na Tajvanu postoji i mnogo ulica masaže.
 
 Tu se nižu maserski objekti svake vrste.
 
@@ -45,15 +43,11 @@ U suštini svako može da izabere masažu prema sopstvenom ukusu, da rastereti n
 
 A razlog zbog kojeg danas postoji toliko maserskih objekata može biti baš taj zahtev za ustavno tumačenje (釋憲).
 
-Kada je Tajvan 1980. proglasio i stavio na snagu zakon o dobrobiti lica s invaliditetom (殘障福利法),
-
-zaista su samo lica s oštećenjem vida (視障者) mogla da obavljaju zanimanje masera (按摩業).
+Kada je Tajvan 1980. proglasio i stavio na snagu zakon o dobrobiti lica s invaliditetom (殘障福利法), zaista su samo lica s oštećenjem vida (視障者) mogla da obavljaju zanimanje masera (按摩業).
 
 Obavljanje tog zanimanja od lica bez oštećenja vida (非視障者) bilo je nezakonito.
 
-To ograničenje je važilo do 31. oktobra 2011. godine; 2003. godine, u tom periodu, g. Lin, koji je vodio frizerski salon,
-
-zaposlio radnike bez oštećenja vida za usluge pranja kose i masaže, i policija je to utvrdila.
+To ograničenje je važilo do 31. oktobra 2011. godine; 2003. godine, u tom periodu, g. Lin, koji je vodio frizerski salon, zaposlio radnike bez oštećenja vida za usluge pranja kose i masaže, i policija je to utvrdila.
 
 Prema tadašnjem pravu Biro za socijalne poslove grada Tajpeja (臺北市社會局) izrekao je upravne novčane kazne (罰鍰): g. Linu u visini od 40.000, a dvoma radnicima redom u visini od 10.000 i 20.000 novih tajvanskih dolara (新臺幣).
 
@@ -61,43 +55,25 @@ G. Lin je smatrao tu sankciju veoma nepravednom i zatražio je ustavno tumačenj
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Na Tajvanu
+Na Tajvanu lica s oštećenjem vida naiđu na brojne prepreke u rastu, delatnosti, učenju i obrazovanju, između ostalog, a zanimanja koja mogu da obavljaju veoma su ograničena.
 
-lica s oštećenjem vida naiđu na brojne prepreke u rastu, delatnosti, učenju i obrazovanju, između ostalog,
+Zato je tadašnji zakonodavac, da zaštiti lica s oštećenjem vida, koja su se nalazila u slabijem položaju, sastavio zakon koji je štitio zaposlenje i pravo na opstanak (生存權) lica s oštećenjem vida.
 
-a zanimanja koja mogu da obavljaju veoma su ograničena.
-
-Zato je tadašnji zakonodavac, da zaštiti lica s oštećenjem vida, koja su se nalazila u slabijem položaju,
-
-sastavio zakon koji je štitio zaposlenje i pravo na opstanak (生存權) lica s oštećenjem vida.
-
-Međutim, s protokom vremena i širenjem potrošačkog tržišta
-
-pojavilo se mišljenje da zaštita isključivo prava lica s oštećenjem vida preterano ograničava pravo na rad lica bez oštećenja vida.
+Međutim, s protokom vremena i širenjem potrošačkog tržišta pojavilo se mišljenje da zaštita isključivo prava lica s oštećenjem vida preterano ograničava pravo na rad lica bez oštećenja vida.
 
 U raspravi o profesionalnim pravima lica s oštećenjem vida i bez njega pojavilo se mnogo suprotstavljenih mišljenja.
 
-Pitalo se, na primer, da li pisana odredba, koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju masažu, ne predstavlja diskriminaciju prema licima bez oštećenja vida,
-
-i osporavalo se da li je ta odredba zaista doprinela zaštiti zaposlenja i opstanka lica s oštećenjem vida.
+Pitalo se, na primer, da li pisana odredba, koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju masažu, ne predstavlja diskriminaciju prema licima bez oštećenja vida, i osporavalo se da li je ta odredba zaista doprinela zaštiti zaposlenja i opstanka lica s oštećenjem vida.
 
 Na kraju su sudije Sudskog juana (大法官) u Tumačenju br. 649 (釋字第649號) od 31. oktobra 2008. godine tu odredbu, koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera, proglasile protivustavnom (違憲), a odredba je prestala da važi 31. oktobra 2011. godine, po isteku prelaznog roka od 3 godine koji je tumačenje dozvolilo.
 
 ​
 
-Slično, u nekim državama, uključujući Koreju, gde se mnoga lica s oštećenjem vida izdržavaju masažom,
+Slično, u nekim državama, uključujući Koreju, gde se mnoga lica s oštećenjem vida izdržavaju masažom, načelno samo lica s oštećenjem vida koja su stekla uverenje o osposobljenosti mogu da obavljaju zanimanje masera.
 
-načelno samo lica s oštećenjem vida koja su stekla uverenje o osposobljenosti mogu da obavljaju zanimanje masera.
+Vlada Koreje je u jednom periodu izdavala uverenja o masaži i licima bez oštećenja vida, a mnoga lica s oštećenjem vida, plašeći se gubitka sredstva za život, organizovala su intenzivne proteste.
 
-Vlada Koreje je u jednom periodu izdavala uverenja o masaži i licima bez oštećenja vida,
-
-a mnoga lica s oštećenjem vida, plašeći se gubitka sredstva za život, organizovala su intenzivne proteste.
-
-Trenutno Koreja i dalje dozvoljava isključivo licima s oštećenjem vida s osposobljenošću da obavljaju zanimanje masera,
-
-a ako neko od drugog lica naplaćuje naknadu za masažu bez te osposobljenosti,
-
-prema korejskom zakonu o zdravstvenim uslugama (醫療法) može se izreći kazna zatvora do 3 godine.
+Trenutno Koreja i dalje dozvoljava isključivo licima s oštećenjem vida s osposobljenošću da obavljaju zanimanje masera, a ako neko od drugog lica naplaćuje naknadu za masažu bez te osposobljenosti, prema korejskom zakonu o zdravstvenim uslugama (醫療法) može se izreći kazna zatvora do 3 godine.
 
 Ako lice bez oštećenja vida vodi masersku delatnost, može se izreći kazna zatvora do 5 godina.
 
@@ -105,25 +81,15 @@ Ako lice bez oštećenja vida vodi masersku delatnost, može se izreći kazna za
 
 To pokazuje da svaka država primenjuje različite pristupe zaštiti prava i interesa raznih grupa.
 
-Zaštita prava i interesa svake grupe menja se neprekidno s vremenom,
-
-a zakonodavac nastoji da nađe relativno uravnoteženo rešenje sukoba interesa.
+Zaštita prava i interesa svake grupe menja se neprekidno s vremenom, a zakonodavac nastoji da nađe relativno uravnoteženo rešenje sukoba interesa.
 
 ​
 
-Danas mnogi ljudi biraju masažu da rasterete napetost,
+Danas mnogi ljudi biraju masažu da rasterete napetost, ali u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili opscenih radnji (猥褻).
 
-ali u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili opscenih radnji (猥褻).
+Ono što je prvobitno trebalo da bude puko primanje masaže radi rasterećenja napetosti može postati trauma za ceo život, ako se pretrpi seksualno uznemiravanje.
 
-Ono što je prvobitno trebalo da bude puko primanje masaže radi rasterećenja napetosti
+Ako tokom masaže na Tajvanu osetite nelagodnost ili nešto neobično, odmah to saopštite ili zatražite prekid, da biste se zaštitili.
 
-može postati trauma za ceo život, ako se pretrpi seksualno uznemiravanje.
-
-Ako tokom masaže na Tajvanu osetite nelagodnost ili nešto neobično,
-
-odmah to saopštite ili zatražite prekid, da biste se zaštitili.
-
-Ako smatrate da ste pretrpeli seksualno uznemiravanje,
-
-idite na policijsku stanicu s pouzdanim prijateljem ili s advokatom na Tajvanu (律師), da podnesete prijavu.
+Ako smatrate da ste pretrpeli seksualno uznemiravanje, idite na policijsku stanicu s pouzdanim prijateljem ili s advokatom na Tajvanu (律師), da podnesete prijavu.
 Advokatkinja Wei Tseng (曾雋崴)

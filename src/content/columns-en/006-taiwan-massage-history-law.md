@@ -46,9 +46,7 @@ Basically, anyone can choose a massage that suits their preferences and helps re
 
 The large number of massage shops in Taiwan today may be linked to a single petition for constitutional interpretation.
 
-When Taiwan enacted and put its disability welfare law into effect in 1980,
-
-only people with visual impairments were in fact allowed to work in the massage industry.
+When Taiwan enacted and put its disability welfare law into effect in 1980, only people with visual impairments were in fact allowed to work in the massage industry.
 
 It was illegal for people without visual impairments to work in this occupation.
 
@@ -64,33 +62,21 @@ In Taiwan, people with visual impairments face barriers in many aspects of life,
 
 Therefore, to protect people with visual impairments, who were in a socially vulnerable position, the legislators at the time enacted a law safeguarding their employment opportunities and right to a livelihood.
 
-But with the passage of time and the expansion of the consumer market,
-
-concerns gradually emerged that protecting only the rights of people with visual impairments excessively restricted the occupational rights of people without visual impairments.
+But with the passage of time and the expansion of the consumer market, concerns gradually emerged that protecting only the rights of people with visual impairments excessively restricted the occupational rights of people without visual impairments.
 
 In the course of the debate over the occupational rights of people with and without visual impairments, many opposing views emerged.
 
-For example, some felt that a provision expressly allowing only people with visual impairments to engage in the massage business might constitute discrimination against people without visual impairments,
-
-and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.
+For example, some felt that a provision expressly allowing only people with visual impairments to engage in the massage business might constitute discrimination against people without visual impairments, and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.
 
 In the end, in Judicial Yuan Interpretation No. 649 of October 31, 2008, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional, and the provision ceased to have effect on October 31, 2011, at the end of the three-year grace period the interpretation allowed.
 
 
 
-Similarly, in Korea, where many people with visual impairments earn a living through massage,
+Similarly, in Korea, where many people with visual impairments earn a living through massage, ordinarily only people with visual impairments who have obtained a license may work in the massage business.
 
-ordinarily only people with visual impairments who have obtained a license may work in the massage business.
+At one point, the Korean government also issued massage licenses to people without visual impairments, and many people with visual impairments, worried about losing their livelihoods, staged fierce protests.
 
-At one point, the Korean government also issued massage licenses to people without visual impairments,
-
-and many people with visual impairments, worried about losing their livelihoods, staged fierce protests.
-
-Today, Korea still allows only licensed people with visual impairments to work in the massage business,
-
-and anyone who charges others for massage services without a license
-
-may face imprisonment for up to three years under Korea’s Medical Service Act.
+Today, Korea still allows only licensed people with visual impairments to work in the massage business, and anyone who charges others for massage services without a license may face imprisonment for up to three years under Korea’s Medical Service Act.
 
 A person without a visual impairment who operates a massage business may face imprisonment for up to five years.
 
@@ -98,9 +84,7 @@ A person without a visual impairment who operates a massage business may face im
 
 This shows that different countries take different approaches to protecting the rights and interests of various groups.
 
-The protection of each group’s rights and interests continually changes with the times,
-
-and legislators strive to find relatively balanced solutions that reconcile competing interests.
+The protection of each group’s rights and interests continually changes with the times, and legislators strive to find relatively balanced solutions that reconcile competing interests.
 
 
 
@@ -108,10 +92,6 @@ Today, many people choose massage to relieve stress, but incidents of sexual har
 
 What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.
 
-If anything makes you uncomfortable or seems unusual during a massage in Taiwan,
+If anything makes you uncomfortable or seems unusual during a massage in Taiwan, you should speak up immediately or ask the practitioner to stop in order to protect yourself.
 
-you should speak up immediately or ask the practitioner to stop in order to protect yourself.
-
-If you feel you have been sexually harassed,
-
-you should go to a police station with a trusted friend or a lawyer in Taiwan and file a report.
+If you feel you have been sexually harassed, you should go to a police station with a trusted friend or a lawyer in Taiwan and file a report.

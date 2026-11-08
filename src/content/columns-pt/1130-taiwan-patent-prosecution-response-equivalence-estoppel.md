@@ -1,7 +1,7 @@
 ---
 title: "Uma resposta ao exame da patente pode limitar a alegação de equivalência em Taiwan?"
 seoTitle: "Patentes em Taiwan: resposta ao exame e limites da equivalência"
-summary: "Num caso de chips táteis divulgado pelo TIPO em outubro de 2026, a argumentação apresentada para obter a patente restringiu a posterior alegação de equivalência. O exame do histórico do pedido alcançou uma resposta que não alterara as reivindicações."
+summary: "Num caso de chips táteis divulgado pelo TIPO em outubro de 2026, a argumentação apresentada para obter a patente restringiu a posterior alegação de equivalência. O exame do histórico do pedido incidiu numa resposta que não alterara as reivindicações."
 published: "2026-11-06"
 lastmod: "2026-11-06"
 date_display: "6 de novembro de 2026"

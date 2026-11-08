@@ -25,7 +25,7 @@ faq:
 
 Institutional care, pangingisda malapit sa baybayin at sa loob ng teritoryo ng Taiwan (近海及境內漁撈工), at agrikultura, kagubatan, paghahayupan at aquaculture ang mga kategoryang tahasang idinagdag sa bagong direktang-hiring MOU ng Taiwan at Pilipinas. Ayon sa [Ministry of Labor](https://www.mol.gov.tw/1607/1632/1633/100056/), nilagdaan ang na-update na kasunduan noong hapon ng 5 Nobyembre 2026, sa pagitan ng TECO sa Pilipinas at MECO sa Taiwan.
 
-Kasama rin sa pahayag ang teknikal na paggawa, upang makatulong sa kakulangan ng tao sa accommodation at iba pang industriya. Para sa Pilipinong tumitingin sa bagong alok, ang dapat itugma ay ang aktuwal na trabaho, uri ng employer at rutang ginagamit sa pagkuha. Iba ang caregiver sa tahanan.
+Kasama rin sa pahayag ang teknikal na paggawa, upang matugunan ang kakulangan ng manggagawa sa accommodation at iba pang industriya. Para sa Pilipinong tumitingin sa bagong alok, ang dapat itugma ay ang aktuwal na trabaho, uri ng employer at rutang ginagamit sa pagkuha. Iba ang caregiver sa tahanan.
 
 ## Ang pagbabago ay nasa saklaw ng kasunduan
 

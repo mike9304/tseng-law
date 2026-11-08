@@ -59,7 +59,7 @@ A review file can pair the Taiwan entity’s license with the provider contract,
 
 Collection and use still need a lawful basis, with notice obligations assessed under [PDPA Articles 8, 19 and 20](https://law.pdpc.gov.tw/LawContentHistory.aspx?hid=1&id=FL010627). Consent cannot override this transfer restriction. Medical records and other data listed in [Article 6](https://law.pdpc.gov.tw/LawContentHistory.aspx?hid=1&id=FL010627) need separate analysis before entering a shared recruitment file.
 
-Contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), at 103 臺北市大同區承德路一段35號7樓之2, with the system description before sending candidate records. If an incident has already occurred, see the separate guide to [personal-data notice and reporting at a Taiwan operation](/en/columns/taiwan-foreign-company-cyber-incident-personal-data-scope).
+Send the system description to [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) before sending candidate records. The office address is 103 臺北市大同區承德路一段35號7樓之2. If an incident has already occurred, see the separate guide to [personal-data notice and reporting at a Taiwan operation](/en/columns/taiwan-foreign-company-cyber-incident-personal-data-scope).
 
 ## Official sources
 

@@ -31,7 +31,7 @@ Le nuove istruzioni indirizzano la domanda a [mdctp.fda.gov.tw](https://mdctp.fd
 
 Nel [testo delle istruzioni, pagine 1–3](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639269599181213153), domanda e sintesi cinese del protocollo sono compilate direttamente sulla piattaforma. Restano richiesti gli altri documenti pertinenti: il protocollo deve riportare versione e data e recare le firme del promotore e dello sperimentatore responsabile; il consenso informato richiede versione, data e firma dello sperimentatore. Servono allegati ricercabili in ODF o PDF.
 
-Per un produttore italiano che collabora con un centro taiwanese, questo richiede una versione concordata dei documenti prima dell’invio. Un file scansionato senza testo ricercabile non soddisfa la caratteristica indicata nelle istruzioni. Lingua, versione e firme restano verificabili anche quando scompare la spedizione cartacea.
+Per un produttore italiano che collabora con un centro taiwanese, questo richiede una versione concordata dei documenti prima dell’invio. Un file scansionato senza testo ricercabile non soddisfa il requisito indicato nelle istruzioni. Lingua, versione e firme restano verificabili anche quando scompare la spedizione cartacea.
 
 ## I trenta giorni riguardano un passaggio successivo
 

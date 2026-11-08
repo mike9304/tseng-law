@@ -190,6 +190,8 @@
 }
 .root:global(:is(#zh-hant-column, #ko-column)) :global(.column-markdown a:hover),
 .root:global(:is(#zh-hant-column, #ko-column)) :global(.column-faq a:hover) { text-decoration-color: currentColor; }
+/* Inline prose links keep the surrounding text weight; colour and underline identify the link. */
+.root:global(:is(#zh-hant-column, #ko-column)) :global(.column-markdown :is(.blog-paragraph, li) a.link-underline) { font-weight: inherit; }
 .root:global(:is(#zh-hant-column, #ko-column)) :global(.blog-body) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; border-radius: 4px; }
 
 /* Contents: a gray tile */

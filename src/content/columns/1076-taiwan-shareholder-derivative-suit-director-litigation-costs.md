@@ -51,7 +51,7 @@ faq:
 
 ## 확인한 공식 자료
 
-- [회사법 제214조 — 제소 요건, 담보, 회사 손해, 재판수수료과 변호사 선임](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=214)
+- [회사법 제214조 — 제소 요건, 담보, 회사 손해, 재판수수료와 변호사 선임](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=214)
 - [회사법 제215조 — 기초 사실의 허구·진실과 이사·주주 간 손해배상](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=215)
 
 자료 확인일: 2026년 11월 6일. 감사가 있는 대만 주식회사의 일반적인 제214조 대표소송을 설명합니다. 유한회사나 공개발행사의 감사위원회 관련 특례, 개별 사건의 소송비용 확정·회수 절차는 별도로 검토해야 합니다.

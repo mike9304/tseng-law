@@ -18,7 +18,7 @@ faq:
   - q: "Công ty đã thông báo cho cả xưởng thì tôi phải chấp nhận giảm lương sao?"
     a: "Thông báo chung không thay cho sự đồng ý của từng người. Hướng dẫn Bộ Lao động yêu cầu thỏa thuận bằng văn bản với cá nhân người lao động khi tạm giảm giờ và lương vì tình hình kinh doanh. Nếu chưa có thỏa thuận, công ty vẫn phải trả lương theo hợp đồng, không được tự cắt."
   - q: "Lương tháng có thể giảm theo đúng tỷ lệ số ngày nhà máy cho nghỉ không?"
-    a: "Với người làm toàn thời gian hưởng lương tháng trong diện giảm giờ tạm thời này, dù giảm bao nhiêu giờ, lương tháng vẫn không được thấp hơn mức tối thiểu; năm 2026 là 29.500 Đài tệ. Việc giảm mức lương đã thỏa thuận còn cần sự đồng ý, nên trả đủ mức sàn chưa tự làm cho việc công ty đơn phương giảm lương trở thành hợp pháp."
+    a: "Với người làm toàn thời gian hưởng lương tháng trong diện giảm giờ tạm thời này, dù giảm bao nhiêu giờ, lương tháng vẫn không được thấp hơn mức tối thiểu; năm 2026 là 29.500 Đài tệ. Việc giảm mức lương đã thỏa thuận còn cần sự đồng ý; việc chỉ trả đủ mức sàn không tự biến việc công ty đơn phương giảm lương thành hợp pháp."
   - q: "Thỏa thuận hết hạn mà công ty chưa có đơn hàng thì tự kéo dài được không?"
     a: "Không. Thời gian thực hiện theo nguyên tắc không quá ba tháng; muốn kéo dài phải lấy lại sự đồng ý của người lao động và lập thỏa thuận bằng văn bản, đồng thời thông báo theo hướng dẫn. Khi hoạt động trở lại bình thường hoặc thời hạn đã thỏa thuận kết thúc, phải khôi phục điều kiện lao động ban đầu."
 ---

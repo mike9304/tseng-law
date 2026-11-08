@@ -31,11 +31,11 @@ Thuyền viên thuộc [điểm 7 khoản 1 Điều 46 Luật Dịch vụ việc
 
 ## Chủ thuê nhận giấy chẩn đoán vào ngày nào?
 
-Theo [Điều 10 Quy định quản lý khám sức khỏe người nước ngoài được thuê làm việc](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0050018), khi khám sức khỏe xác nhận lao phổi, lao màng phổi hoặc bệnh Hansen, chủ thuê phải xin dịch vụ điều trị có giám sát trực tiếp, gọi là 都治 hoặc DOTS. Hạn nộp là 15 ngày. Thời hạn tính từ ngày kế tiếp ngày chủ nhận giấy chẩn đoán.
+Theo [Điều 10 Quy định quản lý khám sức khỏe người nước ngoài được thuê làm việc](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0050018), khi khám sức khỏe xác nhận lao phổi, lao màng phổi hoặc bệnh Hansen, chủ thuê phải xin dịch vụ điều trị có giám sát trực tiếp, gọi là 都治 hoặc DOTS. Hạn nộp là 15 ngày. Thời hạn tính từ ngày kế tiếp ngày chủ thuê nhận giấy chẩn đoán.
 
 Hồ sơ nộp cho cơ quan y tế thành phố hoặc huyện gồm giấy chẩn đoán và giấy người lao động đồng ý tiếp nhận dịch vụ do cơ quan y tế sắp xếp. Chỉ đặt lịch tái khám chưa thay cho việc nộp hồ sơ này. [Hỏi đáp hiện hành của CDC](https://www.cdc.gov.tw/Category/QAPage/BkHLWrXuMJmE8CEjIdxw4w) cũng nêu đường xin điều trị khi được chẩn đoán qua việc đi khám vì bệnh, không chỉ qua đợt kiểm tra định kỳ.
 
-Có thể giữ bản sao và ghi riêng ngày khám, ngày cấp giấy, ngày chủ nhận và ngày nộp đơn, kèm tin nhắn hoặc biên nhận tương ứng. Nếu chủ thuê chưa nộp đúng hạn, hãy liên hệ cơ quan y tế địa phương ngay để kiểm tra; CDC hướng dẫn đơn vị y tế chủ động thông báo cho cơ quan lao động, giải thích quyền điều trị và hỗ trợ chủ làm thủ tục khi chủ chưa nộp trong hạn.
+Có thể giữ bản sao và ghi riêng ngày khám, ngày cấp giấy, ngày chủ thuê nhận giấy và ngày nộp đơn, kèm tin nhắn hoặc biên nhận tương ứng. Nếu chủ thuê chưa nộp đúng hạn, hãy liên hệ cơ quan y tế địa phương ngay để kiểm tra; CDC hướng dẫn đơn vị y tế chủ động thông báo cho cơ quan lao động, giải thích quyền điều trị và hỗ trợ chủ làm thủ tục khi chủ chưa nộp trong hạn.
 
 ## Đồng ý điều trị còn gắn với lịch phối hợp thực tế
 
@@ -53,7 +53,7 @@ Hạn trên giấy phép vẫn cần theo dõi. CDC giải thích người đư�
 
 Khi chủ thuê yêu cầu nghỉ việc chỉ vì mắc bệnh, cần lưu nguyên văn thông báo. [Điều 12 Luật Phòng chống bệnh truyền nhiễm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0050001&flno=12) cấm từ chối việc làm, chỗ ở hoặc đối xử bất công với người mắc bệnh truyền nhiễm, nhưng có ngoại lệ đối với hạn chế của cơ quan có thẩm quyền vì nhu cầu phòng dịch. Không nên gộp quyết định phòng dịch và quyết định đơn phương của chủ thành một việc.
 
-Nếu có tranh chấp về ngày chủ nhận chẩn đoán hoặc thông báo chấm dứt việc làm, có thể gửi tóm tắt cùng thông báo và bằng chứng ngày nhận đến [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 103 臺北市大同區承德路一段35號7樓之2 để luật sư tại Đài Loan xem xét hồ sơ. Về giấy tờ lao động bị giữ, xem [quyền nhận lại hộ chiếu và ARC](/vi/columns/taiwan-employer-broker-passport-arc-return).
+Nếu có tranh chấp về ngày chủ thuê nhận giấy chẩn đoán hoặc thông báo chấm dứt việc làm, có thể gửi tóm tắt cùng thông báo và bằng chứng ngày nhận đến [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), địa chỉ 103 臺北市大同區承德路一段35號7樓之2 để luật sư tại Đài Loan xem xét hồ sơ. Về giấy tờ lao động bị giữ, xem [quyền nhận lại hộ chiếu và ARC](/vi/columns/taiwan-employer-broker-passport-arc-return).
 
 ## Nguồn chính thức
 

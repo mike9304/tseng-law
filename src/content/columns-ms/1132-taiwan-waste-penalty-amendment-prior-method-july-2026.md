@@ -35,11 +35,11 @@ Adakah kewajipan, skop perbuatan yang boleh dihukum dan julat denda berkanun mas
 
 Tarikh kuat kuasa juga menentukan semakan. [Rekod rasmi pindaan Undang-Undang Pelupusan Sisa](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0050001) menunjukkan bahawa sebahagian peruntukan Julai mempunyai tarikh kuat kuasa kemudian, termasuk peruntukan tertentu mengenai penggunaan semula yang dijadualkan pada 15 Julai 2028. Tarikh pengumuman tidak menjadikan semua pindaan beroperasi serentak.
 
-## Kaedah lama masih perlu diuji terhadap undang-undang
+## Kesesuaian kaedah lama dengan undang-undang
 
 Kuasa menetapkan kaedah denda di bawah Perkara 63-1(1) tidak berubah melalui pindaan tersebut, menurut kementerian; oleh itu, [kaedah penetapan amaun denda bagi pelanggaran undang-undang sisa](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0050090) tidak hilang keseluruhan asasnya hanya kerana beberapa peruntukan akta dipinda.
 
-[Perkara 158 Undang-Undang Tatacara Pentadbiran](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030055&flno=158) antara lain menjadikan peraturan yang bercanggah dengan undang-undang tidak sah; setiap baris jadual masih perlu diuji terhadap ketetapan ini. Surat Oktober meminta pemeriksaan terhadap kewajipan, asas hukuman, julat denda dan faktor pengiraan supaya penggunaan kaedah lama serasi dengan undang-undang yang dipinda.
+[Perkara 158 Undang-Undang Tatacara Pentadbiran](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030055&flno=158) antara lain menjadikan peraturan yang bercanggah dengan undang-undang tidak sah; setiap baris jadual masih perlu disemak sama ada ia bercanggah dengan undang-undang. Surat Oktober meminta pemeriksaan terhadap kewajipan, asas hukuman, julat denda dan faktor pengiraan supaya penggunaan kaedah lama serasi dengan undang-undang yang dipinda.
 
 Jika nombor rujukan dalam lampiran belum dikemas kini, tujuan dan isi sebenar peruntukan itu perlu diperiksa. Kementerian pada masa yang sama melarang penggunaan analogi atau tafsiran meluas untuk memasukkan jenis pelanggaran yang sebelumnya tidak diliputi. 
 

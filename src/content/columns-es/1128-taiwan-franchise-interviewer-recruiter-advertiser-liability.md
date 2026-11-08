@@ -25,7 +25,7 @@ faq:
 
 Una empresa que difundía vídeos sobre una franquicia de figuras impresas en 3D recibió una multa de NT$200.000, y la empresa de la franquicia, otra de NT$600.000. La [resolución 115067 de la Comisión de Comercio Justo de Taiwán (FTC)](https://www.ftc.gov.tw/uploadDecision/55c003de-cab7-4255-a1c6-abde7a1aaccf.pdf), fechada el 29 de octubre de 2026, examinó anuncios que atribuían a la venta de un solo tipo de figura ingresos mensuales de un millón de dólares taiwaneses.
 
-La participación de la promotora alcanzaba la producción de vídeos, su publicación en canales propios, la captación de interesados y el cobro de comisiones. Esas actuaciones explican por qué la FTC la trató como anunciante. El formato de entrevista no resolvía quién respondía por el mensaje.
+La participación de la promotora comprendía la producción de vídeos, su publicación en canales propios, la captación de interesados y el cobro de comisiones. Esas actuaciones explican por qué la FTC la trató como anunciante. El formato de entrevista no resolvía quién respondía por el mensaje.
 
 ## Dos vídeos, distinta atribución
 

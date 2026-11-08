@@ -43,7 +43,7 @@ Theo Điều 17, thu nhập công việc khác trong tháng vượt mức lươn
 
 Phần vượt bị trừ từ trợ cấp. Tuy nhiên, điều luật không cho trừ khi tổng thấp hơn lương tối thiểu; [công văn ngày 17 tháng 10 năm 2003](https://www.bli.gov.tw/0021138.html) còn làm rõ tổng sau khấu trừ cũng phải giữ ở mức không thấp hơn lương tối thiểu.
 
-Mức dùng cho tháng trong năm 2026 là [29.500 Đài tệ mỗi tháng](https://english.mol.gov.tw/21004/21015/21016/21033/21231/), có hiệu lực từ ngày 1 tháng 1. Các quy định còn dùng từ 基本工資 được áp dụng theo lương tối thiểu nhờ [Điều 18 Luật Lương tối thiểu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030028).
+Mức dùng cho tháng trong năm 2026 là [29.500 Đài tệ mỗi tháng](https://english.mol.gov.tw/21004/21015/21016/21033/21231/), có hiệu lực từ ngày 1 tháng 1. Các quy định còn dùng thuật ngữ lương cơ bản (基本工資) được áp dụng theo lương tối thiểu nhờ [Điều 18 Luật Lương tối thiểu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030028).
 
 Tính 80% của mức nào? [Điều 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050021&flno=16) dùng bình quân lương tháng đóng bảo hiểm trong sáu tháng trước, tính từ tháng nghỉ việc và chấm dứt bảo hiểm, để tính trợ cấp cơ bản ở mức 60%.
 

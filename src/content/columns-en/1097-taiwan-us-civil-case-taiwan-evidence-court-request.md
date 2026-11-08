@@ -39,9 +39,9 @@ The [State Department's Taiwan guidance](https://travel.state.gov/content/travel
 
 Article 6 calls for more than a witness's job title. Its required particulars include the person's name, nationality and domicile, residence, office or business address, together with the parties' names, evidence type and matters to be investigated. An old corporate email address alone may not establish where a former employee can be reached.
 
-The factual questions need similar care. If the disputed issue is whether a factory accepted a specification change, identify the relevant order, dates and communications, then connect each proposed question to the witness's involvement. This is a preparation method. The statute does not prescribe the same questions for every supply dispute.
+The factual questions need similar care. If the disputed issue is whether a factory accepted a specification change, identify the relevant order, dates and communications, then connect each proposed question to the witness's involvement. The statute does not prescribe the same questions for every supply dispute.
 
-According to the State Department's guidance for the letters-rogatory route, the court uses written questions and does not permit attorneys to conduct the examination. This is the procedure described in that dated country guide; it is not a general statutory ban on attorney questioning in every Taiwan proceeding. It also advises expressly requesting the full Chinese transcript. Request the transcript expressly when using that procedure. A plan built only around counsel's live follow-up questioning may not supply what the receiving court needs.
+According to the State Department's guidance for the letters-rogatory route, the court uses written questions and does not permit attorneys to conduct the examination. This is the procedure described in that dated country guide; it is not a general statutory ban on attorney questioning in every Taiwan proceeding. It also advises expressly requesting the full Chinese transcript when using that procedure. A plan built only around counsel's live follow-up questioning may not supply what the receiving court needs.
 
 ## The Chinese version carries the substance of the request
 
@@ -57,7 +57,7 @@ Voluntary depositions are addressed separately in the same dated guide, which de
 
 Where the underlying lawsuit is in Taiwan instead, a request for the opponent's records falls under a different procedure, discussed in [document production in Taiwan civil litigation](/en/columns/taiwan-civil-us-company-opponent-document-production). Identifying which court is handling the main case prevents the two applications from being mixed together.
 
-A Taiwan lawyer can review the proposed request against the local procedure, help identify the witness and evidence, and check the Chinese questions and supporting documents with U.S. counsel. Contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), at 103 臺北市大同區承德路一段35號7樓之2. For the first review, send the court and case details, the evidence sought and the witness's known location; those facts determine which arrangements need to be examined.
+A Taiwan lawyer can review the proposed request against the local procedure, help identify the witness and evidence, and check the Chinese questions and supporting documents with U.S. counsel. Contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); the office is at 103 臺北市大同區承德路一段35號7樓之2. For the first review, send the court and case details, the evidence sought and the witness's known location; those facts determine which arrangements need to be examined.
 
 ## Official sources
 

@@ -54,7 +54,7 @@ L’annonce s’appuie sur l’[article 8-1 des règles d’application de la lo
 
 Cette seule modification ne permet donc pas de calculer les taxes de l’envoi ou de conclure à une dispense d’autorisation. Ces points doivent être vérifiés pour le produit et l’opération. En cas de doute sur le classement tarifaire avant importation, l’[article 21 de la loi douanière](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0350001&flno=21) permet au redevable ou à son représentant de demander un examen préalable aux douanes, avec une réponse écrite.
 
-Un avocat à Taïwan peut rapprocher l’annonce des documents techniques et contractuels, examiner la répartition des démarches entre fournisseur et importateur et préparer une demande ou une réponse à l’administration avec les éléments du produit. Les consultations se reçoivent à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 昊鼎國際法律事務所, 103 臺北市大同區承德路一段35號7樓之2. La version datée de la fiche technique et le code communiqué au déclarant constituent le point de départ de cet examen.
+Un avocat à Taïwan peut rapprocher l’annonce des documents techniques et contractuels, examiner la répartition des démarches entre fournisseur et importateur et préparer une demande ou une réponse à l’administration avec les éléments du produit. Pour une consultation, écrivez à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), 昊鼎國際法律事務所, 103 臺北市大同區承德路一段35號7樓之2. La version datée de la fiche technique et le code communiqué au déclarant constituent le point de départ de cet examen.
 
 Sources consultées le 6 novembre 2026. La scène illustrée est fictive ; elle ne représente aucun appareil dont le classement aurait été confirmé.
 

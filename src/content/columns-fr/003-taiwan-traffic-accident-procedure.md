@@ -15,13 +15,13 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Image d’exemple enregistrant la position des véhicules et les traces sur la chaussée sur les lieux d’un accident de la circulation](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Si un accident de la circulation (交通事故) survient à Taïwan, vous devez d’abord assurer la sécurité, procéder au signalement et à la conservation des preuves, puis examiner dans l’ordre le délai de réclamation, la faute (過失) et l’étendue de la transaction (和解). Ce qui suit est un ordre général d’action fondé sur la réglementation de Taïwan et sur les indications des organismes publics ; la responsabilité et la procédure concrètes peuvent varier selon les circonstances de chaque accident.
+Si un accident de la circulation (交通事故) survient à Taïwan, assurez d’abord la sécurité, signalez l’accident et conservez les preuves, puis vérifiez les délais de réclamation, la faute (過失) et les conditions d’une transaction (和解). Les réponses ci-dessous s’appuient sur la réglementation taïwanaise et sur les indications des organismes publics ; la responsabilité et la procédure concrètes varient selon les circonstances de chaque accident.
 
 ## Q1. Peut-on quitter les lieux après l’accident ?
 
 Dans un accident avec blessures ou décès, le conducteur doit adopter immédiatement des mesures de secours (救護措施), aviser la police et conserver le véhicule et les preuves des lieux (保全現場). Le consentement informel de l’autre partie ou un simple enregistrement ne permettent pas de considérer que l’on peut quitter les lieux sans avoir achevé les mesures exigées.
 
-Toutefois, dans un accident avec blessures, si toutes les parties sont d’accord, le véhicule peut être déplacé vers un endroit qui n’entrave pas la circulation après marquage de la position du véhicule et des traces des lieux. Cela ne signifie pas que ces marques se substituent aux mesures exigées, telles que le secours et le signalement.
+Toutefois, dans un accident avec blessures, si toutes les parties sont d’accord, le véhicule peut être déplacé vers un endroit qui n’entrave pas la circulation après marquage de la position du véhicule et des traces des lieux. Cela ne signifie pas que ces marques se substituent aux mesures exigées, telles que les secours et le signalement à la police.
 
 S’il n’y a que des dommages patrimoniaux et que le véhicule peut être déplacé, la règle est de marquer la position du véhicule et les traces des lieux, de les documenter par photos ou vidéo et de transférer le véhicule rapidement vers un endroit sûr. Quitter les lieux sans les mesures exigées peut entraîner une sanction administrative (行政處罰).
 
@@ -29,19 +29,19 @@ L’article 185-4 du Code pénal de Taïwan (刑法) régit la responsabilité p
 
 ## Q2. Quelles preuves faut-il conserver en premier ?
 
-Assurez d’abord la sécurité personnelle et les signaux d’avertissement ; s’il y a des blessés ou un besoin de sauvetage, appelez à Taïwan le 119 (secours et pompiers) et, s’il y a une infraction ou une situation de sécurité urgente, le 110 (police) ou, depuis un mobile, le 112. Effectuez aussi le signalement à la police selon les circonstances de l’accident de la circulation.
+Assurez d’abord votre sécurité et la signalisation. S’il y a des blessés ou un besoin de sauvetage, appelez à Taïwan le 119 (secours et pompiers) et, s’il y a une infraction ou une situation de sécurité urgente, le 110 (police) ou, depuis un mobile, le 112. Effectuez aussi le signalement à la police selon les circonstances de l’accident de la circulation.
 
-Une fois la sécurité assurée, prenez des photographies d’ensemble et de détail pour enregistrer la position et les dommages des véhicules, les marques routières, les feux et les conditions météorologiques. Il convient de ne pas omettre les coordonnées des témoins, la demande de conservation des images de vidéosurveillance (監視器影像) et de la caméra de bord (行車紀錄器), les données des parties, du véhicule et de l’assurance, et le dossier médical (病歷). Les photos personnelles sont utiles, mais elles ne se substituent pas à l’intervention policière exigée en cas d’accident avec blessures ou décès.
+Une fois la sécurité assurée, prenez des photographies d’ensemble et de détail pour enregistrer la position et les dommages des véhicules, les marques routières, les feux et les conditions météorologiques. N’omettez pas les coordonnées des témoins, la demande de conservation des images de vidéosurveillance (監視器影像) et de la caméra de bord (行車紀錄器), les données des parties, du véhicule et de l’assurance, ni le dossier médical (病歷). Les photos personnelles sont utiles, mais elles ne se substituent pas à l’intervention policière exigée en cas d’accident avec blessures ou décès.
 
 Quant aux documents de police, sur les lieux de l’accident vous pouvez recevoir le talon d’enregistrement des parties à l’accident de la circulation (道路交通事故當事人登記聯單). Passés 7 jours à compter de la date de l’accident, le croquis et les photos des lieux (現場圖 / 現場照片) peuvent être demandés ; passés 30 jours à compter de la date de l’accident, le tableau d’analyse préliminaire de l’accident de la circulation (道路交通事故初步分析研判表) peut être demandé. Le moment de délivrance et les conditions de demande doivent être confirmés de nouveau auprès de l’autorité de police compétente.
 
 ## Q3. En cas de blessures, quelles réclamations et quels délais faut-il vérifier ?
 
-L’article 284 du Code pénal régit les blessures involontaires (過失傷害) et les blessures involontaires graves (過失致重傷). Comme, selon l’article 287 du Code pénal, il s’agit d’une infraction poursuivie sur plainte (告訴乃論之罪), conformément à l’article 237 du Code de procédure pénale de Taïwan (刑事訴訟法) la plainte doit en principe être déposée dans les 6 mois suivant le jour où l’auteur a été connu.
+L’article 284 du Code pénal régit les blessures involontaires (過失傷害) et les blessures involontaires graves (過失致重傷). Ces faits constituent des infractions poursuivies sur plainte (告訴乃論之罪) selon l’article 287 du Code pénal ; en vertu de l’article 237 du Code de procédure pénale de Taïwan (刑事訴訟法), la plainte doit en principe être déposée dans les 6 mois suivant le jour où l’auteur a été connu.
 
 En matière d’indemnisation civile des dommages (損害賠償), selon l’article 197 du Code civil de Taïwan (民法) la réclamation n’est plus possible une fois écoulés 2 ans à compter du jour où le dommage et le débiteur de l’indemnisation ont été connus, ou 10 ans à compter du jour de l’acte illicite. Il faut examiner séparément si certains faits interrompent la prescription (消滅時效) ou l’affectent autrement.
 
-Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats en deuxième instance (言詞辯論終結), selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats en première instance et avant l’interjection du recours. En général, le paiement de frais de justice (裁判費) distincts peut être évité, mais tous les résultats ne s’achèvent pas sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
+Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats en deuxième instance (言詞辯論終結), selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats en première instance et avant l’interjection du recours. En règle générale, l’action accessoire permet d’éviter un paiement distinct de frais de justice (裁判費), sans pour autant garantir une issue sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
 
 Le choix varie selon l’interruption de la prescription (時效中斷), le cercle des défendeurs, les preuves, l’assurance et la compétence. Il n’existe donc pas de procédure qui convienne le mieux à toutes les affaires.
 
@@ -51,11 +51,11 @@ La responsabilité pénale ne peut être retenue que lorsque sont reconnus le ma
 
 Sur le plan civil, selon l’article 217 du Code civil, si la personne lésée a une faute qui a contribué à causer ou à aggraver le dommage (與有過失), le tribunal peut réduire l’indemnisation ou exonérer la personne responsable. Par exemple, si le dommage reconnu en nouveaux dollars de Taïwan (新臺幣, TWD) est TWD 1.000.000 et que la faute de la personne lésée est évaluée à 50 %, le montant peut être réduit à TWD 500.000 avant d’autres ajustements.
 
-L’expertise (鑑定) ou le tableau d’analyse préliminaire peuvent être des pièces importantes, mais elles ne lient pas le tribunal mécaniquement. Le tribunal examine l’ensemble des preuves, y compris les déclarations, les images et l’état des véhicules.
+L’expertise (鑑定) ou le tableau d’analyse préliminaire peuvent constituer des pièces importantes. Elles ne lient pas mécaniquement le tribunal. Le tribunal examine l’ensemble des preuves, y compris les déclarations, les images et l’état des véhicules.
 
 ## Q5. Que faut-il inclure dans l’acte de transaction ?
 
-Dans l’acte de transaction (和解書), il convient d’individualiser la date, le lieu et les parties de l’accident, et de consigner le montant et le moment du paiement, le traitement des prestations d’assurance, les réclamations incluses et celles qui sont réservées. Il faut aussi fixer clairement le traitement futur, les lésions découvertes plus tard, la remise de documents tels que le certificat médical (診斷證明書) et le rapport entre le paiement et le désistement de la plainte.
+Dans l’acte de transaction (和解書), indiquez la date, le lieu et les parties de l’accident, et consignez le montant et le moment du paiement, le traitement des prestations d’assurance, les réclamations incluses et celles qui sont réservées. Il faut aussi fixer clairement le traitement futur, les lésions découvertes plus tard, la remise de documents tels que le certificat médical (診斷證明書) et le rapport entre le paiement et le désistement de la plainte.
 
 La transaction (和解) de l’article 736 du Code civil est un contrat dans lequel les parties cèdent réciproquement pour mettre fin à un litige ou l’éviter. Selon l’article 737 du Code civil, l’étendue dans laquelle les droits s’éteignent s’apprécie aussi seulement dans les limites de ce qui a été abandonné dans l’acte de transaction. On ne doit donc pas affirmer, sans examiner le texte, que toutes les réclamations futures disparaissent.
 
@@ -83,11 +83,11 @@ S’il s’agit d’une infraction poursuivie sur plainte, selon l’article 238
 
 ## Q6. Comment la responsabilité de l’accident est-elle déterminée ?
 
-Le tableau d’analyse préliminaire de l’accident de la circulation établi par la police est une analyse préalable fondée sur les pièces des lieux. Ce n’est pas un jugement, il ne lie pas le tribunal et il ne fixe pas la proportion de faute (過失比例). Comme les pièces nécessaires et l’étendue de la controverse varient selon l’accident, ce tableau, l’expertise légale et le réexamen (覆議) ne sont ni une procédure automatique ni une étape obligatoire.
+Le tableau d’analyse préliminaire de l’accident de la circulation établi par la police est une analyse préalable fondée sur les pièces des lieux. Ce n’est pas un jugement : il ne lie pas le tribunal et ne fixe pas la proportion de faute (過失比例). Selon l’accident, les pièces utiles et l’étendue du litige diffèrent ; le tableau, l’expertise légale et le réexamen (覆議) ne sont donc ni automatiques ni obligatoires.
 
-Selon les règles applicables, la partie qui y a qualité peut demander une expertise d’accident de véhicules (車輛行車事故鑑定) ; l’organe qui instruit l’affaire peut la transmettre et l’autorité judiciaire peut la commander. La demande de la partie se présente, en général, dans les 6 mois suivant la date de l’accident ; dans les affaires déjà en enquête ou en jugement, l’expertise se déroule par commande de l’autorité judiciaire et non par une nouvelle demande directe.
+La partie ayant qualité pour agir peut demander une expertise d’accident de véhicules (車輛行車事故鑑定), dans les conditions prévues par les règles applicables ; l’organe qui instruit l’affaire peut la transmettre et l’autorité judiciaire peut la commander. La demande de la partie se présente, en général, dans les 6 mois suivant la date de l’accident ; dans les affaires déjà en enquête ou en jugement, l’expertise se déroule par commande de l’autorité judiciaire et non par une nouvelle demande directe.
 
-En cas de désaccord avec l’avis d’expertise, un réexamen peut être demandé, mais le réexamen se limite à une unique fois. L’avis d’expertise et celui de réexamen sont une preuve ou une pièce de référence, et le tribunal apprécie de façon indépendante l’ensemble du dossier, y compris les déclarations, les images et les procès-verbaux des lieux.
+En cas de désaccord avec l’avis d’expertise, un réexamen peut être demandé. Un seul réexamen est possible. L’avis d’expertise et celui de réexamen sont une preuve ou une pièce de référence, et le tribunal apprécie de façon indépendante l’ensemble du dossier, y compris les déclarations, les images et les procès-verbaux des lieux.
 
 ## Q7. Quels dommages peuvent être réclamés après l’accident ?
 
@@ -107,7 +107,7 @@ Toutefois, selon l’article 504 du Code de procédure pénale, une fois l’aff
 
 ## Q9. Par quoi prouve-t-on les frais de soins professionnels et ceux de soins par des proches ?
 
-Le certificat médical ou l’avis médical sont utiles pour montrer la nécessité de soins, mais ils ne sont pas à eux seuls un fondement décisif. Il faut expliquer par des pièces le lien de causalité avec l’accident, la nécessité de soins, s’ils ont été effectivement fournis, la durée et un montant raisonnable.
+Le certificat médical ou l’avis médical sont utiles pour montrer la nécessité de soins. Ils ne sont pas décisifs à eux seuls. Il faut expliquer par des pièces le lien de causalité avec l’accident, la nécessité de soins, s’ils ont été effectivement fournis, la durée et un montant raisonnable.
 
 Même si un proche a effectivement fourni les soins sans rémunération, dans l’affaire appropriée cela peut être évalué comme un dommage. Toutefois, la seule circonstance que les soins soient fournis par un proche n’implique pas leur reconnaissance automatique ; le contenu et la durée des soins ainsi que le niveau habituel de coût sont aussi examinés.
 
@@ -137,11 +137,11 @@ Les reçus, les registres de tarif, les registres d’itinéraire et les pièces
 
 ## Q11. Comment prouve-t-on la perte de revenus pendant la période de traitement et de rétablissement ?
 
-La perte de revenus doit être prouvée par des pièces établissant que, en raison de lésions liées à l’accident, le travail a été totalement ou partiellement impossible pendant la période de rétablissement et que, par suite, il y a eu une réduction réelle de revenus. Le certificat médical ou la recommandation de repos sont un point de départ important, mais à eux seuls ils ne suffisent pas pour que la réclamation soit reconnue.
+La perte de revenus doit être prouvée. Les pièces doivent établir que les lésions liées à l’accident ont rendu le travail totalement ou partiellement impossible pendant la période de rétablissement et ont ainsi entraîné une réduction réelle de revenus. Le certificat médical ou la recommandation de repos sont un point de départ important, mais à eux seuls ils ne suffisent pas pour que la réclamation soit reconnue.
 
-Il convient d’organiser ensemble le dossier médical, les registres de présence ou de congé, les données de salaire et d’impôts et la confirmation de l’employeur. Le travailleur indépendant peut présenter des données accordées à la forme de son activité, telles que des données de ventes, des registres d’opérations et des déclarations fiscales.
+Il convient d’organiser ensemble le dossier médical, les registres de présence ou de congé, les données de salaire et d’impôts et la confirmation de l’employeur. Le travailleur indépendant peut présenter des justificatifs adaptés à son activité, tels que des données de ventes, des registres d’opérations et des déclarations fiscales.
 
-La circonstance d’avoir continué à travailler ou d’avoir perçu le salaire sans variation est pertinente pour apprécier la perte de revenus de la période de rétablissement, mais ce fait à lui seul ne tranche pas automatiquement la question du dommage par diminution de la capacité de travail. Cette circonstance n’est pas non plus un fondement autonome pour apprécier le dommage par diminution de la capacité de travail. Le dommage par diminution de la capacité de travail s’examine séparément à la Q12.
+La circonstance d’avoir continué à travailler ou d’avoir perçu le salaire sans variation est pertinente pour apprécier la perte de revenus de la période de rétablissement, mais elle ne tranche pas à elle seule la question du dommage par diminution de la capacité de travail, qui s’examine séparément à la Q12.
 
 ## Q12. Comment prouve-t-on le dommage par diminution de la capacité de travail ?
 
@@ -149,9 +149,9 @@ Le dommage par diminution de la capacité de travail se distingue des revenus r�
 
 Le fait que le salaire actuel se maintienne sans variation n’exclut pas automatiquement la réclamation. À l’inverse, le montant du dommage ne se fixe pas non plus mécaniquement seulement avec le pourcentage d’invalidité ou avec le salaire actuel.
 
-Si le trouble fonctionnel persistant est contesté de façon substantielle, une expertise médicale peut être utile, mais elle n’est pas obligatoire dans toutes les affaires. S’examinent aussi la compensation des fautes de l’article 217 du Code civil et d’autres motifs d’ajustement.
+En cas de contestation substantielle du trouble fonctionnel persistant, une expertise médicale peut être utile. Elle n’est pas systématiquement obligatoire. S’examinent aussi la compensation des fautes de l’article 217 du Code civil et d’autres motifs d’ajustement.
 
-Lorsque le calcul se fait en un capital unique, la déduction des intérêts intercalaires (中間利息扣除) peut être envisagée. Le calculateur Hoffmann (霍夫曼) du Yuan judiciaire n’est qu’un outil de calcul, non une méthode légalement obligatoire, et il ne promet pas le résultat. Selon l’article 193 du Code civil, à la demande de la partie le tribunal peut aussi ordonner le paiement en rente périodique sous condition d’une sûreté.
+Lorsque le calcul se fait en un capital unique, la déduction des intérêts intercalaires (中間利息扣除) peut être envisagée. Le calculateur Hoffmann (霍夫曼) du Yuan judiciaire est uniquement un outil de calcul. La méthode de calcul qu’il applique n’est pas légalement obligatoire. Il ne garantit pas le résultat. Selon l’article 193 du Code civil, à la demande de la partie le tribunal peut aussi ordonner le paiement en rente périodique sous condition d’une sûreté.
 
 ## Q13. Comment s’apprécie l’indemnité pour préjudice moral (慰撫金) au titre des dommages non patrimoniaux ?
 
@@ -167,7 +167,7 @@ L’employeur peut alléguer qu’il a observé la diligence due dans la sélect
 
 Si l’employeur prouve ces conditions d’exonération et que la personne lésée n’obtient pas l’indemnisation de l’alinéa 1, l’article 188, alinéa 2, du Code civil prévoit que, si la personne lésée en fait la demande, le tribunal peut, en tenant compte de la situation économique de l’employeur et de la personne lésée, ordonner à l’employeur de verser tout ou partie de l’indemnisation.
 
-La question de savoir contre qui s’oriente la réclamation civile doit être distinguée de la responsabilité pénale. La responsabilité pénale de l’article 284 du Code pénal s’apprécie selon le manquement au devoir de prudence de chaque personne physique et le lien de causalité de ce manquement.
+Le choix des personnes visées par la réclamation civile doit être distingué de la responsabilité pénale. Au pénal, la responsabilité prévue à l’article 284 du Code pénal s’apprécie selon le manquement au devoir de prudence de chaque personne physique et le lien de causalité de ce manquement.
 
 ## Q15. Quelles prestations et quelles couvertures de l’assurance automobile faut-il vérifier ?
 
@@ -175,7 +175,7 @@ L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obli
 
 Dans un accident d’un seul véhicule, le conducteur de ce véhicule n’est, en général, pas destinataire des prestations de l’assurance obligatoire de ce véhicule. Toutefois, dans un accident où interviennent plusieurs véhicules, il existe des cas dans lesquels le conducteur peut réclamer des prestations à l’assureur obligatoire d’un autre véhicule impliqué.
 
-Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveaux dollars de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux par 1 victime et par 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
+Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Pour les blessures, le plafond des frais médicaux raisonnables et nécessaires est de TWD 200.000 en nouveaux dollars de Taïwan. La prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux. En cas de décès, la prestation est de TWD 3.000.000. Le maximum cumulé des prestations pour décès, invalidité et frais médicaux est de TWD 3.200.000 par 1 victime et par 1 accident. Aux accidents antérieurs peut s’appliquer le barème précédent.
 
 L’assurance de responsabilité civile envers les tiers (第三人責任險), l’assurance accidents du conducteur (駕駛人傷害險) et l’assurance dommages au véhicule propre (車體損失險) sont des produits facultatifs de caractère contractuel. La couverture réelle varie selon l’assuré, le plafond, la franchise (自負額), les exclusions, la faute et les autres conditions de la police, de sorte que la police et les conditions doivent être vérifiées cas par cas.
 
@@ -195,173 +195,55 @@ L’assurance de responsabilité civile envers les tiers (第三人責任險), l
 - [Barème de prestations de l’assurance obligatoire de responsabilité civile automobile](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contrat type d’assurance automobile d’usage particulier de la Commission de supervision financière (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Après l’accident, peut-on tout laisser entre les mains de l’assureur ?
+## Q16. Après l’accident, peut-on tout laisser entre les mains de l’assureur ?
 
-​
+Les assureurs ne traitent souvent pas assez l’aspect émotionnel des parties à l’accident, et peuvent négliger pour l’autre partie des éléments importants, tels que les excuses et les marques de réconfort.
 
-Les assureurs ne traitent souvent pas de façon suffisante l’aspect émotionnel des parties à l’accident.
+Pour l’assureur, dépenser TWD 500.000 ou TWD 1.000.000 supplémentaires dans une affaire concrète n’influe pas de façon importante sur le bénéfice global de l’assureur, mais pour la partie à l’accident cette somme peut déterminer s’il y a ou non des antécédents pénaux (前科). Un conflit d’intérêts entre l’assureur et la partie peut aussi surgir, et comme l’assureur doit instruire de nombreuses affaires, il lui est difficile de consacrer un temps suffisant à chacune.
 
-​
+Je ne recommande donc pas de confier l’ensemble du litige à l’assureur. Si vous déléguez malgré tout le dossier, suivez l’instruction en continu et relisez attentivement les documents des deux parties.
 
-Ils peuvent négliger des parties importantes qui concernent les sentiments de l’autre partie, telles que les excuses et les marques de réconfort.
-
-​
-
-Pour l’assureur, dépenser TWD 500.000 ou TWD 1.000.000 supplémentaires dans une affaire concrète n’influe pas de façon importante sur le bénéfice global de l’assureur, mais pour la partie à l’accident cette somme peut déterminer s’il y a ou non des antécédents pénaux (前科).
-
-​
-
-Un conflit d’intérêts entre l’assureur et la partie peut aussi surgir, et comme l’assureur doit instruire de nombreuses affaires, il lui est difficile de consacrer un temps suffisant à chacune.
-
-​
-
-​
-
-​
-
-Je ne recommande donc pas de confier l’ensemble du litige à l’assureur.
-
-​
-
-Si l’on confie le dossier à l’assureur, il faut suivre de façon continue le processus d’instruction et examiner avec soin les documents des deux parties.
-
-​
-
-​
-
-​
-
-Q17. Quelle est la responsabilité pénale pour blessures involontaires de l’auteur d’un accident de la circulation ?
-
-​
+## Q17. Quelle est la responsabilité pénale pour blessures involontaires de l’auteur d’un accident de la circulation ?
 
 En cas de blessures involontaires, les tribunaux prononcent actuellement, en général, une peine d’environ 3 mois d’emprisonnement. Ce n’est pas un résultat promis pour votre affaire.
 
-​
-
 Si elle est convertie en amende (易科罰金), l’article 41, alinéa 1, du Code pénal fixe la conversion à TWD 1.000, TWD 2.000 ou TWD 3.000 par jour ; calculé à TWD 1.000 par jour, une peine de 3 mois équivaut à 3 × 30 × TWD 1.000 = TWD 90.000.
-
-​
-
-​
-
-​
 
 Les blessures involontaires graves sont en général punies d’environ 4 mois d’emprisonnement, et l’homicide involontaire (過失致死) d’environ 6 mois d’emprisonnement ; là non plus, ce n’est pas un résultat promis.
 
-​
+## Q18. Si l’on transige avec l’autre partie, peut-on se désister de la plainte pénale ?
 
-​
-
-​
-
-Q18. Si l’on transige avec l’autre partie, peut-on se désister de la plainte pénale ?
-
-​
-
-Les blessures involontaires et les blessures involontaires graves sont une infraction poursuivie sur plainte (告訴乃論之罪), de sorte que l’on peut se désister de la plainte pénale.
-
-​
+En matière de blessures involontaires ou de blessures involontaires graves, les infractions sont poursuivies sur plainte (告訴乃論之罪), de sorte que l’on peut se désister de la plainte pénale.
 
 Dans l’homicide involontaire, le désistement de la plainte n’est pas possible ; toutefois, si l’on transige avec la famille de l’autre partie, le tribunal peut alléger la peine.
 
-​
+Un sursis (緩刑) peut être prononcé dans certains cas. La peine d’emprisonnement n’est alors pas exécutée. Ce n’est pas un résultat assuré pour votre affaire.
 
-Dans certains cas, un sursis (緩刑) peut être prononcé, et la peine d’emprisonnement n’est alors pas exécutée. Ce n’est pas un résultat assuré pour votre affaire.
-
-​
-
-​
-
-​
-
-Q19. Si l’on quitte les lieux après l’accident, le délit pénal de fuite est-il toujours constitué ?
-
-​
+## Q19. Si l’on quitte les lieux après l’accident, le délit pénal de fuite est-il toujours constitué ?
 
 Pas nécessairement.
 
-​
+La condition préalable de la fuite du lieu de l’accident (肇事逃逸) est que quelqu’un ait été blessé ou soit décédé. S’il n’y a que des dommages au véhicule, cela n’est pas considéré comme une fuite.
 
-La condition préalable de la fuite du lieu de l’accident (肇事逃逸) est que quelqu’un ait été blessé ou soit décédé.
+## Q20. Comment cherche-t-on un avocat pour un accident de la circulation ?
 
-​
+Les accidents de la circulation sont très fréquents ; un avocat qui pratique le contentieux de façon générale et qui a quelques années d’expérience peut en traiter un. Le critère décisif est alors le soin et l’honnêteté de l’avocat.
 
-S’il n’y a que des dommages au véhicule, cela n’est pas considéré comme une fuite.
+L’avocat doit examiner chaque poste de la réclamation et ne demander que l’indemnisation que les faits et les preuves permettent de soutenir. Il doit aussi exposer clairement votre situation et signaler les risques prévisibles si vous ne transigez pas.
 
-​
-
-​
-
-​
-
-Q20. Comment cherche-t-on un avocat pour un accident de la circulation ?
-
-​
-
-Comme les accidents de la circulation sont des affaires très fréquentes, un avocat ayant une pratique générale du contentieux et quelques années d’expérience peut instruire une affaire d’accident de la circulation.
-
-​
-
-L’important alors est le soin et l’honnêteté de l’avocat.
-
-​
-
-Il importe que l’avocat examine avec attention tous les postes de la réclamation et s’emploie à demander l’indemnisation que les faits et les preuves permettent de soutenir.
-
-​
-
-En outre, l’avocat doit expliquer clairement la situation de la partie et avertir clairement des risques prévisibles si l’on ne transige pas.
-
-​
-
-Il faut se méfier de l’avocat qui gonfle l’affaire et soutient qu’il ne faut pas transiger et qu’il faut plaider jusqu’au bout sur le plan civil et pénal, seulement pour accepter le mandat.
-
-​
-
-​
-
-​
+Méfiez-vous de l’avocat qui gonfle l’affaire et soutient qu’il ne faut pas transiger et qu’il faut plaider jusqu’au bout sur le plan civil et pénal, seulement pour accepter le mandat.
 
 Les questions et réponses sur les accidents de la circulation s’arrêtent ici.
 
-​
+Après de nombreux dossiers d’accidents de la circulation, un point revient souvent.
 
-​
+Blessures ou décès : la victime ou sa famille endure une douleur physique et psychique. L’auteur ne prend souvent pas la peine d’appeler la victime ni de lui rendre visite ; beaucoup estiment que l’assureur règlera tout et ne se montrent plus. La victime n’y voit alors ni repentir ni sincérité.
 
-​
+Elle reste blessée, s’irrite, et refuse souvent de céder sur le montant en négociation. La victime peut aussi demander une saisie conservatoire (假扣押) et poursuivre jusqu’au bout la saisie des biens de l’autre partie.
 
-Après avoir instruit de nombreux accidents de la circulation, je souhaite signaler un point important.
-
-​
-
-Du fait des blessures ou du décès de la victime, celle-ci ou sa famille subit une douleur physique et psychique.
-
-​
-
-L’auteur ne se préoccupe souvent pas d’appeler pour prendre des nouvelles de la victime ni de lui rendre visite, et de nombreux auteurs pensent que l’assureur réglera tout et ils n’apparaissent pas. Dans ces cas, la victime n’y perçoit ni repentir ni sincérité.
-
-​
-
-​
-
-​
-
-La victime reste ainsi très blessée et se met en colère, de sorte qu’elle ne cède souvent pas sur le montant de la négociation, ou demande une saisie conservatoire (假扣押) et poursuit la saisie des biens de l’autre partie jusqu’au bout.
-
-​
-
-Ce point ne doit donc absolument pas être négligé, et il convient de consulter une avocate ou un avocat selon les circonstances.
-
-​
-
-​
-
-​
+Ne négligez pas cet aspect humain ; consultez une avocate ou un avocat selon les circonstances.
 
 Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact. Aucun délai de réponse n’est promis.
-
-​
 
 Wei Tseng (曾雋崴), avocate de Taïwan.
 

@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-08T08:02:33.948125+00:00",
+  "reviewer": "root",
+  "decision": "ACCEPT_BOUNDARY_MAPS_FOR_ACTUAL_MEASUREMENT",
+  "independent_review": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r45-thai-final-map-review.json",
+  "independent_review_sha256": "dbdbe8b49f68345968155b93d5000f4740f0f8ee70055c0a2d4c616fca5dd803",
+  "basis": "Read native boundary review summary and all5 verdict/hash bindings; whole-source/map/author bytes independently hash-verified. Prior root-approved native exact proposals unchanged. Full 190-row native linguistic read delegated to named independent reviewer.",
+  "limitations": [
+    "Frozen structural rows remain in all maps and are disclosed rather than silently excluded or invented as prose.",
+    "This checks complete propositions and legal-condition attachment. Thai compound/coordinated units and contextually licensed omitted subjects do not require arbitrary splitting; this is not a claim that each grouping is the only possible Thai sentence segmentation.",
+    "Full original drafts were read in the immediately preceding R44 review. The four unchanged drafts are byte-identical to those read versions; all current extracted text/sentence arrays were read again. TH005 changed draft was read in full again.",
+    "Initial truncated display windows were followed by smaller overlapping reads for the affected text; truncated windows alone were not counted as completed reading.",
+    "Author self-approval, sentence counts and metric outcomes were not used to reach linguistic acceptance."
+  ],
+  "auxiliary_notes_disposition": "TH005 self-file SHA is not used; use externally computed independent-review binding. old14 remap label inaccurate but actual array correction verified. Retain report unchanged and disclose these2 notes. Neither blocks actual boundary approval.",
+  "hash_serialization": "Preserve author-map exactbytes and author insertion-order SHA; draft.sentences.json/approval entry must use actual variety_multilingual.paragraphs_sha256 sorted-key algorithm. Distinguish both values.",
+  "publication_approved": false
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "adjudication_round": "r45",
+  "original_session_uuid": "3dd3dd41-ebb0-4e93-aea3-4a4f160b7dd3",
+  "article": "th005",
+  "status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+  "metric_pass_claimed": false,
+  "independent_review_approved": false,
+  "full_read_ranges": [
+    {
+      "path": "input-r45.json",
+      "lines_total": 20,
+      "ranges": [
+        "1-20"
+      ],
+      "eof_included": true
+    },
+    {
+      "path": "boundary-feedback-r45.json",
+      "lines_total": 42,
+      "ranges": [
+        "1-42"
+      ],
+      "eof_included": true
+    },
+    {
+      "path": "segments-input-r45.json",
+      "lines_total": 145,
+      "ranges": [
+        "1-145"
+      ],
+      "eof_included": true
+    },
+    {
+      "path": "draft-r45.md",
+      "lines_total": 83,
+      "ranges": [
+        "1-83"
+      ],
+      "eof_included": true
+    }
+  ],
+  "sha_bindings": {
+    "old_source_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+    "new_source_sha256": "e454f2d4e0b3c8d06535a1e15863ce7888555c7696aee656e31a911c7f3d7d5e",
+    "input_map_sha256": "4c7e53baa03776e219a90849eb35b2b9c2aacd6927d968961acb4314d1288df5",
+    "boundary_feedback_sha256": "f69813c569ed88521b67400fd5d30d951fa0c9f1ce39cf5a331d6c7328cb3e92",
+    "final_segments_adjudicated_r45_sha256": "890de702e4a89e441f43c8d0390fa46eef7068960e01796f1a759b823a473cf4",
+    "canonical_paragraphs_array_sha256": "539d0f2df974a9ec7032bce3cbca359dc6f49420de3abcfeeea655290ee205fb",
+    "expected_paragraphs_sha256_input": "539d0f2df974a9ec7032bce3cbca359dc6f49420de3abcfeeea655290ee205fb",
+    "boundary_adjudication_r45_sha256": "e5fbfac9c6718c82a40d0456e8c12ef0fb53b69f7c2e0d40e50247058606eb41"
+  },
+  "operations_order": [
+    "apply_old_row_14_proposed_sentences_on_20_row_map",
+    "merge_old_rows_9_and_10_into_one_row_with_cross_row_complete_sentence"
+  ],
+  "accepted_findings": [
+    {
+      "feedback_row_zero_based": 14,
+      "kind": "NOMINAL_TOPIC_LABEL_SEPARATED",
+      "old_sentences": [
+        "ก. พนักงานคนแรก: งานผู้บริหารของกิจการลงทุนทั่วไปของชาวจีนโพ้นทะเลและคนต่างชาติ (一般僑外投資事業主管工作)",
+        "หลักเกณฑ์ “งานเชี่ยวชาญเฉพาะทางหรืองานเทคนิค” (專門性或技術性工作) ตามข้อ ข. ข้างล่างไม่นำมาใช้",
+        "แต่ยังคงต้องเป็นไปตามเงื่อนไขด้านตัวบุคคล (เช่น ผู้จัดการ (經理人) ของบริษัทที่ชาวจีนโพ้นทะเลหรือคนต่างชาติถือหุ้นเกินหนึ่งในสาม) และเงื่อนไขด้านผลประกอบการของนายจ้าง ได้แก่ ทุนจดทะเบียนและยอดขาย (ข้อ 38 และข้อ 39 ของหลักเกณฑ์การพิจารณา)"
+      ],
+      "new_sentences": [
+        "ก. พนักงานคนแรก: งานผู้บริหารของกิจการลงทุนทั่วไปของชาวจีนโพ้นทะเลและคนต่างชาติ (一般僑外投資事業主管工作) หลักเกณฑ์ “งานเชี่ยวชาญเฉพาะทางหรืองานเทคนิค” (專門性或技術性工作) ตามข้อ ข. ข้างล่างไม่นำมาใช้",
+        "แต่ยังคงต้องเป็นไปตามเงื่อนไขด้านตัวบุคคล (เช่น ผู้จัดการ (經理人) ของบริษัทที่ชาวจีนโพ้นทะเลหรือคนต่างชาติถือหุ้นเกินหนึ่งในสาม) และเงื่อนไขด้านผลประกอบการของนายจ้าง ได้แก่ ทุนจดทะเบียนและยอดขาย (ข้อ 38 และข้อ 39 ของหลักเกณฑ์การพิจารณา)"
+      ],
+      "paragraph_text_unchanged": true,
+      "rationale": "The first segment is a nominal list/topic label (ก. พนักงานคนแรก: งานผู้บริหาร…), not an independent prose sentence. Attach it to the immediately following applicability statement; keep the remaining qualification intact.",
+      "old_to_new_index": {
+        "old_row_14": "new_row_13"
+      },
+      "linguistic_attachment": "Nominal list label ก. พนักงานคนแรก: งานผู้บริหาร… is attached to the following applicability statement หลักเกณฑ์…ไม่นำมาใช้; qualification sentence แต่ยังคงต้องเป็นไปตามเงื่อนไข… retains personal and employer conditions including ข้อ 38 และข้อ 39."
+    },
+    {
+      "feedback_row_zero_based": 9,
+      "continued_by_row_zero_based": 10,
+      "kind": "SOURCE_PARAGRAPH_FRAGMENT",
+      "old_row_9_sentences": [
+        "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว"
+      ],
+      "old_row_10_sentences": [
+        "ผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้"
+      ],
+      "new_row_9_text": "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว ผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้",
+      "new_row_9_sentences": [
+        "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว ผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้"
+      ],
+      "cross_row_complete_sentence_applied": "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว ผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้",
+      "map_only_repair_possible": false,
+      "rationale": "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว is only a temporal frame. Its main clause is row10. The original draft itself contains a blank paragraph separator. Retain both frozen rows and disclose the continuation; do not call row9 a complete standalone sentence or remove it from the frozen inventory. A source join would require a new source SHA and re-extraction with the unchanged parser.",
+      "old_to_new_index": {
+        "old_rows_9_10": "new_row_9",
+        "rows_removed": 1,
+        "total_rows": 19
+      },
+      "linguistic_attachment": "Temporal frame โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว supplies predicate timing for main clause about ผู้รับผิดชอบของบริษัท (公司負責人) switching accounts; single sentence after source join in draft-r45.md."
+    }
+  ],
+  "unflagged_rows_preserved": {
+    "policy": "All sentence arrays identical to segments-input-r45.json except accepted rows; texts match frozen extractor except merged row 9.",
+    "preserved_old_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "new_index_for_preserved_after_shift": "old 11-13 -> new 10-12; old 15-19 -> new 14-18"
+  },
+  "th005_index_remap_table": [
+    {
+      "old_row": 0,
+      "new_row": 0,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 1,
+      "new_row": 1,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 2,
+      "new_row": 2,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 3,
+      "new_row": 3,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 4,
+      "new_row": 4,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 5,
+      "new_row": 5,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 6,
+      "new_row": 6,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 7,
+      "new_row": 7,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 8,
+      "new_row": 8,
+      "change": "unchanged"
+    },
+    {
+      "old_row": 9,
+      "new_row": 9,
+      "change": "merged_with_old_row_10",
+      "old_rows_merged": [
+        9,
+        10
+      ]
+    },
+    {
+      "old_row": 10,
+      "new_row": null,
+      "change": "absorbed_into_new_row_9"
+    },
+    {
+      "old_row": 11,
+      "new_row": 10,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 12,
+      "new_row": 11,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 13,
+      "new_row": 12,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 14,
+      "new_row": 13,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 15,
+      "new_row": 14,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 16,
+      "new_row": 15,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 17,
+      "new_row": 16,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 18,
+      "new_row": 17,
+      "change": "unchanged_shifted"
+    },
+    {
+      "old_row": 19,
+      "new_row": 18,
+      "change": "unchanged_shifted"
+    }
+  ],
+  "extraction_verification": {
+    "frozen_extractor": "variety_metrics.strip_fm / body_blocks(lang=th) / unlink",
+    "sys_dont_write_bytecode": true,
+    "metrics_executed": false,
+    "extracted_row_count": 19,
+    "all_row_texts_match_extractor": true,
+    "all_sentence_joins_match_row_text_whitespace_normalized": true,
+    "url_stripping_row_preserved": "new_row_15 (old_row_16) retains trailing \"<\" after unlink"
+  },
+  "input_immutability_verification": {
+    "hashes_before_write": {
+      "input-r45.json": "fdbe9a566a2f81686ffffbff575bdf093f263471ef1eba2f0934880239068feb",
+      "segments-input-r45.json": "4c7e53baa03776e219a90849eb35b2b9c2aacd6927d968961acb4314d1288df5",
+      "boundary-feedback-r45.json": "f69813c569ed88521b67400fd5d30d951fa0c9f1ce39cf5a331d6c7328cb3e92",
+      "draft-r45.md": "e454f2d4e0b3c8d06535a1e15863ce7888555c7696aee656e31a911c7f3d7d5e"
+    },
+    "hashes_after_write": {
+      "input-r45.json": "fdbe9a566a2f81686ffffbff575bdf093f263471ef1eba2f0934880239068feb",
+      "segments-input-r45.json": "4c7e53baa03776e219a90849eb35b2b9c2aacd6927d968961acb4314d1288df5",
+      "boundary-feedback-r45.json": "f69813c569ed88521b67400fd5d30d951fa0c9f1ce39cf5a331d6c7328cb3e92",
+      "draft-r45.md": "e454f2d4e0b3c8d06535a1e15863ce7888555c7696aee656e31a911c7f3d7d5e"
+    }
+  }
+}

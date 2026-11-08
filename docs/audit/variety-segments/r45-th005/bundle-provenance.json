@@ -1,0 +1,36 @@
+{
+  "article": "th005",
+  "created_at": "2026-11-08T08:04:57.893811+00:00",
+  "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/draft-r45.md",
+  "source_sha256": "e454f2d4e0b3c8d06535a1e15863ce7888555c7696aee656e31a911c7f3d7d5e",
+  "original_author_map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/segments-adjudicated-r45.json",
+  "author_map_sha256": "890de702e4a89e441f43c8d0390fa46eef7068960e01796f1a759b823a473cf4",
+  "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/boundary-adjudication-r45.json",
+  "author_adjudication_sha256_external": "e73e92ae51f2830da71c39a7e536b95b6329c597e367ba6878933598605308a3",
+  "independent_review_sha256": "dbdbe8b49f68345968155b93d5000f4740f0f8ee70055c0a2d4c616fca5dd803",
+  "root_authorization_sha256": "3bf04c4f95691704ecd3751ceb82c2c2e58e66d601b637bb8866b2190edb3f64",
+  "row_count": 19,
+  "author_insertion_order_paragraphs_sha256": "539d0f2df974a9ec7032bce3cbca359dc6f49420de3abcfeeea655290ee205fb",
+  "tool_sorted_key_paragraphs_sha256": "4e0c67b1daaad5357ffeef89cc76461a9435e0255918cc631dee4b00e9be14f8",
+  "paragraphs_array_values_unchanged": true,
+  "strict_normalized_join_all_rows": true,
+  "schema_preflight_passed_without_metric_execution": true,
+  "auxiliary_notes": [
+    {
+      "article": "th005",
+      "path": "sha_bindings.boundary_adjudication_r45_sha256",
+      "reported": "e5fbfac9c6718c82a40d0456e8c12ef0fb53b69f7c2e0d40e50247058606eb41",
+      "actual_external_file_sha256": "e73e92ae51f2830da71c39a7e536b95b6329c597e367ba6878933598605308a3",
+      "issue": "Stale/self-referential author-report self-hash; not used as the authoritative binding. Use this independent external hash."
+    },
+    {
+      "article": "th005",
+      "path": "th005_index_remap_table[14].change",
+      "reported": "unchanged_shifted",
+      "actual": "boundary_repaired_and_shifted (old14 -> new13)",
+      "issue": "Label incorrectly says unchanged_shifted although the accepted boundary repair is present. Accepted findings and actual arrays are correct."
+    }
+  ],
+  "approval_scope": "BOUNDARIES_ONLY",
+  "publication_approved": false
+}

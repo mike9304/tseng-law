@@ -1,0 +1,1679 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/heading_anchor_review",
+  "reviewer_type": "AI independent reviewer; not a human/native-speaker certification",
+  "at": "2026-11-08T08:01:49.822057+00:00",
+  "scope": "Independent R45 whole-map Thai proposition/dependency/condition attachment review after different original Composer authors applied the R44 proposals. No source/map/parser/manifest/product writes. No law recertification or publication approval.",
+  "verdict": "ACCEPT_ALL_FIVE_BOUNDARY_MAPS_WITH_STRUCTURAL_LIMITATIONS",
+  "unresolved_boundary_findings": [],
+  "unresolved_evidence_metadata_notes": [
+    {
+      "article": "th005",
+      "path": "sha_bindings.boundary_adjudication_r45_sha256",
+      "reported": "e5fbfac9c6718c82a40d0456e8c12ef0fb53b69f7c2e0d40e50247058606eb41",
+      "actual_external_file_sha256": "e73e92ae51f2830da71c39a7e536b95b6329c597e367ba6878933598605308a3",
+      "issue": "Stale/self-referential author-report self-hash; not used as the authoritative binding. Use this independent external hash."
+    },
+    {
+      "article": "th005",
+      "path": "th005_index_remap_table[14].change",
+      "reported": "unchanged_shifted",
+      "actual": "boundary_repaired_and_shifted (old14 -> new13)",
+      "issue": "Label incorrectly says unchanged_shifted although the accepted boundary repair is present. Accepted findings and actual arrays are correct."
+    }
+  ],
+  "metrics_read_or_executed": false,
+  "metric_pass_claimed": false,
+  "publication_approved": false,
+  "review_basis": {
+    "central_verification_path": "/Users/son7/tseng-site-copy-audit-20261107/central-qa/thai-r45-verification.json",
+    "central_verification_sha256": "e99297e70b585f6c12a469114663860c077644c4c0ae11f0b1966c89cd0f087a",
+    "checks_recomputed_independently": true,
+    "canonical_serialization": "json.dumps(paragraphs, ensure_ascii=False, separators=(',',':')).encode('utf-8'); preserve object key insertion order",
+    "extractor": "variety_metrics.strip_fm -> body_blocks(lang=th)[0] -> unlink; no check/measure call",
+    "parser_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+    "helper_sha256": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b"
+  },
+  "limitations": [
+    "Frozen structural rows remain in all maps and are disclosed rather than silently excluded or invented as prose.",
+    "This checks complete propositions and legal-condition attachment. Thai compound/coordinated units and contextually licensed omitted subjects do not require arbitrary splitting; this is not a claim that each grouping is the only possible Thai sentence segmentation.",
+    "Full original drafts were read in the immediately preceding R44 review. The four unchanged drafts are byte-identical to those read versions; all current extracted text/sentence arrays were read again. TH005 changed draft was read in full again.",
+    "Initial truncated display windows were followed by smaller overlapping reads for the affected text; truncated windows alone were not counted as completed reading.",
+    "Author self-approval, sentence counts and metric outcomes were not used to reach linguistic acceptance."
+  ],
+  "items": {
+    "th003": {
+      "verdict": "ACCEPT_BOUNDARY_MAP_WITH_STRUCTURAL_LIMITATIONS",
+      "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-003-taiwan-traffic-accident-procedure/draft.md",
+      "source_sha256": "6a3ec3baca5668e67f9f38aacc49d51530bed94c2246772f9a5aeeb6ad8b2b31",
+      "map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-003-taiwan-traffic-accident-procedure/segments-adjudicated-r45.json",
+      "map_sha256": "b9843679742ec34b39b1cd082e695f8d7e7c6199b1b215f00a0be9ac6592a4a1",
+      "canonical_paragraphs_sha256": "cf8a422e631d458e55abd34d32ff20c5ccf3f23618ed1293000a7adaabc04024",
+      "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-003-taiwan-traffic-accident-procedure/boundary-adjudication-r45.json",
+      "author_adjudication_sha256": "74ee71f0da62c4adf75fedf069573423f876439773a5f870985d2137d6824319",
+      "original_author_session": "0053ccd0-09c6-4c29-a101-b4cfd1eadab6",
+      "prior_independent_review_path": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r44-thai-map-independent-rootcheck.json",
+      "prior_independent_review_sha256": "e47ad57e1d9b4007a476d7f1fbecd5bba686f760743cf917bad8441d1d20515b",
+      "prior_source_sha256": "6a3ec3baca5668e67f9f38aacc49d51530bed94c2246772f9a5aeeb6ad8b2b31",
+      "prior_map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-003-taiwan-traffic-accident-procedure/segments-adjudicated-r44.json",
+      "prior_map_sha256": "fbfb94358f34a7063b7e4d2e413d434022305f49573074cf4061f2fa18519e61",
+      "frozen_rows_retained": 66,
+      "actual_read": {
+        "current_map_all_sentence_arrays_and_metadata": true,
+        "current_map_zero_based_row_chunks": [
+          [
+            0,
+            17
+          ],
+          [
+            18,
+            35
+          ],
+          [
+            36,
+            52
+          ],
+          [
+            53,
+            65
+          ]
+        ],
+        "current_map_duplicate_text_fields_verified_against_source": true,
+        "current_author_adjudication_full_file": true,
+        "current_author_adjudication_line_range": [
+          1,
+          202
+        ],
+        "source_full_read_basis": "Full draft read in preceding R44 review; same bytes verified now, all current extracted prose re-read.",
+        "source_line_count": 248
+      },
+      "independent_checks": {
+        "source_sha_matches": true,
+        "map_sha_matches": true,
+        "adjudication_sha_matches": true,
+        "canonical_matches": true,
+        "entire_map_equals_expected_R44_native_proposal_arrays": true,
+        "source_exact_prior_or_single_TH005_join": true,
+        "frozen_extraction_text_exact_all_rows": true,
+        "sentence_join_text_exact_nonwhitespace_all_rows": true
+      },
+      "accepted_exact_repairs": [
+        {
+          "old_row_zero_based": 32,
+          "new_row_zero_based": 32,
+          "sentences_exact": [
+            "ความเสียหายจากการสูญเสียความสามารถในการทำงาน แยกต่างหากจากรายได้ที่ลดลงจริงในระหว่างการฟื้นตัวตาม Q11",
+            "ตามมาตรา 193 และมาตรา 216 ประมวลกฎหมายแพ่ง ต้องพิเคราะห์ประกอบกันทั้งความสัมพันธ์เป็นเหตุเป็นผลกับอุบัติเหตุ ความบกพร่องในการทำหน้าที่ของร่างกายที่คงอยู่ต่อเนื่อง (持續功能障礙) อาชีพและความสามารถของผู้เสียหาย รายได้ที่พึงคาดหมายได้ตามปกติ ตลอดจนเหตุผลและการพิสูจน์เกี่ยวกับระยะเวลาที่ยังทำงานได้"
+          ],
+          "rationale": "ตามมาตรา… introduces the following ต้องพิเคราะห์ proof/evaluation duty. End the distinction sentence at Q11. Keeping the citation on the prior distinction misassigns the preposed legal anchor."
+        },
+        {
+          "old_row_zero_based": 60,
+          "new_row_zero_based": 60,
+          "sentences_exact": [
+            "เมื่อผู้เสียหายได้รับบาดเจ็บหรือถึงแก่ความตาย ทั้งตัวผู้เสียหายเองและครอบครัวย่อมต้องทนทุกข์ทั้งทางร่างกายและจิตใจ ขั้นตอนทางกฎหมายและการประกันภัยยังดำเนินต่อไป",
+            "แต่หากผู้ก่ออุบัติเหตุมิได้โทรถามอาการ ไปเยี่ยม หรือแสดงความสำนึกผิดอย่างจริงใจ เพียงคิดว่าบริษัทประกันภัยจะจัดการให้และไม่ปรากฏตัวด้วยตนเอง อีกฝ่ายย่อมไม่รู้สึกถึงความจริงใจ",
+            "ผู้เสียหายจึงได้รับความกระทบกระเทือนอย่างมากและเกิดความโกรธ จนไม่ยอมผ่อนปรนในจำนวนเงินที่เจรจากัน หรือยื่นขออายัดทรัพย์ชั่วคราว (假扣押) และบังคับยึดทรัพย์สินของอีกฝ่ายจนถึงที่สุด ซึ่งพบได้บ่อย"
+          ],
+          "rationale": "หรือยื่นขออายัด… is the second coordinated consequence of the same subject ผู้เสียหาย under จน…. Keep it with ไม่ยอมผ่อนปรน…; the alternative verb phrase cannot stand as a separate complete sentence here."
+        }
+      ],
+      "whole_map_linguistic_notes": [
+        "Row32 ends the distinction at Q11 and attaches มาตรา 193/216 to ต้องพิเคราะห์.",
+        "Row60 keeps the หรือยื่นขออายัด alternative under the same victim/consequence construction."
+      ],
+      "structural_rows_retained": [
+        {
+          "row_zero_based": 63,
+          "text": "ที่กล่าวมาข้างต้นคือข้อมูลจากทนายความ Wei Tseng",
+          "limitation": "Closing attribution, not ordinary narrative body prose."
+        },
+        {
+          "row_zero_based": 64,
+          "text": "---",
+          "limitation": "Markdown horizontal rule, not a prose sentence."
+        },
+        {
+          "row_zero_based": 65,
+          "text": "> อ่านเพิ่มเติม: > - การกำหนดขอบเขตงานและค่าใช้จ่าย > - ทีมงานระหว่างประเทศ Hovering > - เกี่ยวกับ Hovering International Law Firm",
+          "limitation": "Further-reading navigation block, not a prose sentence."
+        }
+      ],
+      "row_review": [
+        {
+          "row_zero_based": 0,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 1,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 2,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 3,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 4,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 5,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 6,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 7,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 8,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 9,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 10,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 11,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 12,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 13,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 14,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 15,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 16,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 17,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 18,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 19,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 20,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 21,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 22,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 23,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 24,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 25,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 26,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 27,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 28,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 29,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 30,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 31,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 32,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 33,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 34,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 35,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 36,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 37,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 38,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 39,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 40,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 41,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 42,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 43,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 44,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 45,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 46,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 47,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 48,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 49,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 50,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 51,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 52,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 53,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 54,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 55,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 56,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 57,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 58,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 59,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 60,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 61,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 62,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 63,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 64,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 65,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        }
+      ],
+      "unresolved_boundary_findings": [],
+      "initial_failed_metadata_evidence": {
+        "initial_map_path": "/Users/son7/tseng-site-copy-audit-20261107/central-qa/thai-r45-th003-initial-segments-adjudicated-r45.json",
+        "initial_map_sha256": "585f38334bbcc3c8c366e1e028a9021d2bc5f6a6b7ba79c1a9a8cfea6905ec40",
+        "initial_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/central-qa/thai-r45-th003-initial-boundary-adjudication-r45.json",
+        "initial_adjudication_sha256": "af7b0c5d35dfc0e8d5f595918e7e0e1b061d10638f6eb408bf648d2a745ce925",
+        "initial_incorrect_paragraphs_sha256": "af86adb8488845d58e1a3385e0fa6e33693cf669a96a29d0ebb9d16d093a3ffc",
+        "only_map_field_changed": [
+          "paragraphs_sha256"
+        ],
+        "paragraph_arrays_identical_before_after": true,
+        "current_metadata_correct": true,
+        "initial_attempt_not_counted_as_valid": true
+      }
+    },
+    "th011": {
+      "verdict": "ACCEPT_BOUNDARY_MAP_WITH_STRUCTURAL_LIMITATIONS",
+      "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/draft.md",
+      "source_sha256": "fd533d8b0731071be855c0c48c15acab0fdd05d007dc79c56ad339e87efee79b",
+      "map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/segments-adjudicated-r45.json",
+      "map_sha256": "0810ba20c81266e0bcbaaa062b53493480dbaec833dec628153d3c60a396ffea",
+      "canonical_paragraphs_sha256": "baaf2f72476fe39ff973ce41cdb6cc4f828a25c732c449d1df3687b238cfb99f",
+      "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/boundary-adjudication-r45.json",
+      "author_adjudication_sha256": "3d098a865fa870a2cb3d29c6635f468b7da490917248cd377046e63f6258e175",
+      "original_author_session": "4b4dcd2b-91e8-4011-89f4-6d075ab35cfd",
+      "prior_independent_review_path": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r44-thai-map-independent-rootcheck.json",
+      "prior_independent_review_sha256": "e47ad57e1d9b4007a476d7f1fbecd5bba686f760743cf917bad8441d1d20515b",
+      "prior_source_sha256": "fd533d8b0731071be855c0c48c15acab0fdd05d007dc79c56ad339e87efee79b",
+      "prior_map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/segments-adjudicated-r44.json",
+      "prior_map_sha256": "1553d368b8dcaf508c51e39eac23db5a4635bb65023691e2a6b4440f60e7e031",
+      "frozen_rows_retained": 32,
+      "actual_read": {
+        "current_map_all_sentence_arrays_and_metadata": true,
+        "current_map_zero_based_row_chunks": [
+          [
+            0,
+            11
+          ],
+          [
+            12,
+            23
+          ],
+          [
+            24,
+            31
+          ]
+        ],
+        "current_map_duplicate_text_fields_verified_against_source": true,
+        "current_author_adjudication_full_file": true,
+        "current_author_adjudication_line_range": [
+          1,
+          287
+        ],
+        "source_full_read_basis": "Full draft read in preceding R44 review; same bytes verified now, all current extracted prose re-read.",
+        "source_line_count": 134
+      },
+      "independent_checks": {
+        "source_sha_matches": true,
+        "map_sha_matches": true,
+        "adjudication_sha_matches": true,
+        "canonical_matches": true,
+        "entire_map_equals_expected_R44_native_proposal_arrays": true,
+        "source_exact_prior_or_single_TH005_join": true,
+        "frozen_extraction_text_exact_all_rows": true,
+        "sentence_join_text_exact_nonwhitespace_all_rows": true
+      },
+      "accepted_exact_repairs": [
+        {
+          "old_row_zero_based": 5,
+          "new_row_zero_based": 5,
+          "sentences_exact": [
+            "ในสัญญาเป็นการเหมาะสมที่จะกำหนดโดยละเอียดถึงขอบเขตการใช้ทรัพย์สินทางปัญญา (智慧財產) เช่น เครื่องหมายการค้า (商標) และภาพ วิธีการส่งมอบ แปล และเพิ่มเติมเอกสารของผู้ผลิตต้นทางที่จำเป็นต่อการขึ้นทะเบียนผลิตภัณฑ์และ PIF การบริหารจัดการเอกสารฉบับล่าสุด และการส่งมอบงานเมื่อสัญญาสิ้นสุดลง",
+            "นอกจากนี้ยังอาจรวมถึงอำนาจในการตรวจสอบและแก้ไขโฆษณาก่อนเผยแพร่ การส่งต่อข้อมูลด้านความปลอดภัย เช่น เรื่องร้องเรียนและอาการไม่พึงประสงค์ การให้ความร่วมมือในการเรียกคืนผลิตภัณฑ์เมื่อจำเป็น และการรับภาระค่าใช้จ่ายในการทดสอบ การแปล และการเก็บรักษา",
+            "เพื่อมิให้เอกสารคงเหลืออยู่กับคู่สัญญาฝ่ายใดฝ่ายหนึ่งเพียงฝ่ายเดียว จึงจำเป็นต้องกำหนดขอบเขตและกำหนดเวลาของการส่งคืนหรือการมอบสำเนาไว้ล่วงหน้าด้วย"
+          ],
+          "rationale": "เพื่อมิให้… is a purpose clause and จึงจำเป็น… supplies its main clause. The purpose must not be an independent sentence."
+        },
+        {
+          "old_row_zero_based": 6,
+          "new_row_zero_based": 6,
+          "sentences_exact": [
+            "บริษัทลูกในไต้หวันกับสาขาของบริษัทต่างชาติมิใช่องค์กรเดียวกัน",
+            "บริษัทลูกเป็นนิติบุคคลแยกต่างหากที่จัดตั้งขึ้นตามกฎหมายไต้หวัน ในขณะที่สาขาจดทะเบียนในฐานะส่วนหนึ่งของสำนักงานใหญ่ของบริษัทต่างชาติ และมิใช่นิติบุคคลแยกต่างหาก",
+            "เนื่องจากสภาพนิติบุคคล ความรับผิดของสำนักงานใหญ่ การจัดทำบัญชีและภาษี การโอนกำไร อำนาจผู้แทน และวิธีการควบคุมภายในแตกต่างกัน จึงไม่ควรเลือกรูปแบบองค์กรโดยพิจารณาเพียงอำนาจในการควบคุมการจำหน่าย"
+          ],
+          "rationale": "Three discourse sentences: separate-organizations assertion; subsidiary/branch contrast, keeping ในขณะที่… with the contrast; and เนื่องจาก…จึง… causal recommendation. R44 repairs the R43 detached cause/result by overmerging the entire paragraph. Split only at these two complete thought boundaries; keep the causal pair joined. This is a map boundary recommendation, not an underlying prose grammar defect."
+        },
+        {
+          "old_row_zero_based": 10,
+          "new_row_zero_based": 10,
+          "sentences_exact": [
+            "การขึ้นทะเบียนผลิตภัณฑ์เครื่องสำอางดำเนินการผ่านแพลตฟอร์มการขึ้นทะเบียนผลิตภัณฑ์เครื่องสำอางของ TFDA",
+            "ผู้ผลิตหรือผู้นำเข้าเครื่องสำอางต้องดำเนินการขึ้นทะเบียนผลิตภัณฑ์ที่อยู่ในข่ายบังคับให้แล้วเสร็จ ก่อนที่จะนำผลิตภัณฑ์ออกสู่ตลาด จำหน่าย ให้เปล่า จัดแสดงต่อสาธารณะ หรือมอบให้ผู้บริโภคทดลองใช้",
+            "การเตรียมการไม่ควรยึดเฉพาะการจำหน่ายที่มีค่าตอบแทนเป็นเกณฑ์",
+            "กำหนดการแจกของสมนาคุณเพื่อส่งเสริมการขายหรือการมอบให้ผู้บริโภคทดลองใช้ ก็ต้องบริหารจัดการควบคู่ไปกับช่วงเวลาของการขึ้นทะเบียนด้วย"
+          ],
+          "rationale": "ก่อนที่จะนำผลิตภัณฑ์… is the timing condition on ต้องดำเนินการขึ้นทะเบียน…ให้แล้วเสร็จ. It is not an independent sentence."
+        },
+        {
+          "old_row_zero_based": 13,
+          "new_row_zero_based": 13,
+          "sentences_exact": [
+            "PIF คือชุดเอกสารที่จัดทำขึ้นเพื่อให้สามารถอธิบายคุณภาพและความปลอดภัยของผลิตภัณฑ์ได้อย่างต่อเนื่อง",
+            "นอกเหนือจากคุณภาพ ความปลอดภัย ส่วนประกอบ สรรพคุณที่กล่าวอ้าง วิธีการผลิต ผลการทดสอบ และการประเมินความปลอดภัยแล้ว ยังต้องจัดระเบียบเอกสารประกอบเป็นรายผลิตภัณฑ์ เช่น ข้อมูลพื้นฐานเกี่ยวกับผลิตภัณฑ์และผู้ผลิต และฉลาก",
+            "เนื่องจากระเบียบว่าด้วยการจัดการแฟ้มข้อมูลผลิตภัณฑ์เครื่องสำอาง (化粧品產品資訊檔案管理辦法) จัดแบ่งเอกสารที่จำเป็นออกเป็น 16 หมวด จึงต้องตรวจสอบเอกสารของแต่ละหมวด ตลอดจนข้อกำหนดเรื่องการลงนามและคุณสมบัติ ตามประเภทของผลิตภัณฑ์"
+          ],
+          "rationale": "นอกเหนือจาก…แล้ว is a fronted prepositional/list frame; ยังต้องจัดระเบียบ… is its predicate. Preserve them together."
+        },
+        {
+          "old_row_zero_based": 16,
+          "new_row_zero_based": 16,
+          "sentences_exact": [
+            "หากวัตถุดิบหรือสูตร วิธีการผลิตหรือสถานที่ผลิต การแสดงฉลากซึ่งรวมถึงตัวฉลาก สรรพคุณที่กล่าวอ้าง หรือข้อมูลด้านความปลอดภัยเปลี่ยนแปลงไป ต้องตรวจสอบและปรับปรุงเอกสาร PIF ส่วนที่ได้รับผลกระทบ",
+            "และเนื่องจากต้องพิจารณาด้วยว่าเรื่องร้องเรียนของผู้บริโภค อาการไม่พึงประสงค์ และผลการทดสอบใหม่ ส่งผลต่อการประเมินเดิมหรือไม่ จึงจำเป็นต้องมีกระบวนการบริหารการเปลี่ยนแปลงแม้ภายหลังการจัดทำครั้งแรกแล้ว"
+          ],
+          "rationale": "และเนื่องจาก… is the causal subordinate clause; จึงจำเป็น… supplies the main conclusion. Joining preserves the source of the change-management duty."
+        },
+        {
+          "old_row_zero_based": 18,
+          "new_row_zero_based": 18,
+          "sentences_exact": [
+            "แม้ผู้ผลิตต้นทางจะเป็นผู้เก็บรักษาต้นฉบับ หรือมีการใช้ที่จัดเก็บข้อมูลอิเล็กทรอนิกส์หรือคลาวด์ที่ปลอดภัย ผู้ผลิตหรือผู้นำเข้าก็ต้องสามารถเข้าถึงเอกสารฉบับสมบูรณ์ได้",
+            "ต้องกำหนดสิทธิในการเข้าถึง การสำรองข้อมูล การบริหารเวอร์ชัน รูปแบบไฟล์ และผู้รับผิดชอบ เพื่อให้สามารถค้นหาและนำเสนอเอกสารได้อย่างรวดเร็วเมื่อหน่วยงานผู้มีอำนาจกำกับดูแลเรียกให้แสดง",
+            "และเป็นเรื่องสำคัญที่จะกำหนดไว้ในสัญญาถึงสิ่งที่ต้องส่งมอบ วิธีการส่งมอบ และการคงอยู่ของสิทธิในการเข้าถึง เพื่อให้เอกสารยังคงอยู่ตลอดระยะเวลาการเก็บรักษาตามกฎหมาย แม้ภายหลังสัญญากับคู่ค้าที่รับหน้าที่จำหน่ายหรือผู้ให้บริการสิ้นสุดลงแล้ว"
+          ],
+          "rationale": "Three complete units: แม้…ก็… concession; ต้องกำหนด…เพื่อให้… access-purpose duty; contract terms…เพื่อให้…แม้… continuing-retention purpose/condition. R44 separately counts dependent concession/purpose clauses."
+        },
+        {
+          "old_row_zero_based": 22,
+          "new_row_zero_based": 22,
+          "sentences_exact": [
+            "การโฆษณาถูกวินิจฉัยจากการแสดงออกโดยรวม มิใช่เพียงถ้อยคำ แต่รวมถึงชื่อผลิตภัณฑ์ ตัวอักษร ภาพ เครื่องหมาย และเสียงด้วย",
+            "การแสดงออกอันเป็นเท็จหรือเกินจริง และการอ้างสรรพคุณทางการแพทย์เป็นสิ่งต้องห้าม โดยต้องระมัดระวังเป็นพิเศษกับถ้อยคำทางการแพทย์ เช่น การรักษาสิว การต้านการอักเสบ หรือการฆ่าเชื้อ",
+            "ค่าปรับทางปกครองสำหรับโฆษณาเป็นเท็จหรือเกินจริงอยู่ที่ 40,000 ถึง 200,000 ดอลลาร์ไต้หวันใหม่ (TWD) และสำหรับการอ้างสรรพคุณทางการแพทย์อยู่ที่ 600,000 ถึง 5,000,000 ดอลลาร์ไต้หวันใหม่ (TWD)",
+            "โพสต์ของผู้มีอิทธิพลทางสื่อออนไลน์ (網紅) และบุคคลอื่น หากโดยเนื้อแท้แล้วเป็นการโฆษณา ก็ต้องตรวจสอบตามมาตรฐานเดียวกัน"
+          ],
+          "rationale": "Move the boundary to after the total-expression standard (เสียงด้วย). The prohibition statement must retain its โดยต้อง… qualifier/examples. Do not leave โดยต้อง… as a detached manner/qualification clause."
+        },
+        {
+          "old_row_zero_based": 23,
+          "new_row_zero_based": 23,
+          "sentences_exact": [
+            "การวินิจฉัยว่าการแสดงฉลาก การประชาสัมพันธ์ หรือการโฆษณาเป็นเท็จหรือเกินจริง หรืออ้างสรรพคุณทางการแพทย์ (醫療效能) หรือไม่ มิได้พิจารณาจากคำใดคำหนึ่งเป็นการเฉพาะ แต่พิจารณาประกอบกันทั้งชื่อสินค้า ข้อความ ภาพ เครื่องหมาย เสียง บริบทก่อนหลัง และความประทับใจโดยรวมที่ผู้บริโภคได้รับ",
+            "ความประทับใจที่เกิดจากการแสดงออกหลักของโฆษณา มิได้หมดสิ้นไปโดยปริยายเพียงเพราะมีข้อความจำกัดหรือข้อความหมายเหตุด้วยตัวอักษรขนาดเล็ก จึงต้องตรวจสอบทั้งข้อความแต่ละส่วนและชิ้นงานฉบับสุดท้าย"
+          ],
+          "rationale": "การวินิจฉัยว่า…หรือไม่ is the nominal subject. มิได้พิจารณา…แต่พิจารณา… is its predicate; splitting creates a subject fragment."
+        },
+        {
+          "old_row_zero_based": 24,
+          "new_row_zero_based": 24,
+          "sentences_exact": [
+            "ตัวอย่างเช่น การแสดงว่าเครื่องสำอางรักษาสิว มีสรรพคุณต้านการอักเสบ หรือมีฤทธิ์ฆ่าเชื้อ อาจเข้าข่ายการอ้างสรรพคุณทางการแพทย์",
+            "วิธีการนำชื่อโรคมาเชื่อมโยงกับผลิตภัณฑ์ ภาพก่อนและหลังการใช้ การนำเสนอที่ทำให้นึกถึงบุคลากรทางการแพทย์ ตลอดจนบริบทที่เชื่อมโยงคำอธิบายส่วนประกอบเข้ากับผลในการรักษาของผลิตภัณฑ์ ก็ต้องตรวจสอบประกอบกันด้วย"
+          ],
+          "rationale": "การแสดงว่า… is a nominal subject followed by อาจเข้าข่าย…; วิธีการ…ตลอดจนบริบท… is the next coordinated nominal subject followed by ก็ต้องตรวจสอบ…. Both subject/predicate pairs must stay joined."
+        },
+        {
+          "old_row_zero_based": 25,
+          "new_row_zero_based": 25,
+          "sentences_exact": [
+            "ค่าปรับทางปกครองสำหรับโฆษณาเป็นเท็จหรือเกินจริงอยู่ที่ 40,000 ถึง 200,000 ดอลลาร์ไต้หวันใหม่ (TWD)",
+            "และค่าปรับทางปกครองสำหรับการอ้างสรรพคุณทางการแพทย์อยู่ที่ 600,000 ถึง 5,000,000 ดอลลาร์ไต้หวันใหม่ (TWD)",
+            "เนื่องจากช่วงของค่าปรับแตกต่างกันไปตามประเภทของการฝ่าฝืน ก่อนเผยแพร่จึงต้องนำการแสดงออกโดยรวมของโฆษณามาเทียบกับเอกสารหลักฐานประกอบ"
+          ],
+          "rationale": "เนื่องจากช่วงของค่าปรับ… is causal subordination; ก่อนเผยแพร่จึงต้อง… is its conclusion. Keep the reason and legal-check instruction in one complete sentence."
+        },
+        {
+          "old_row_zero_based": 26,
+          "new_row_zero_based": 26,
+          "sentences_exact": [
+            "โพสต์ของผู้มีอิทธิพลทางสื่อออนไลน์ ผู้เขียนรีวิว หรือคู่ค้าที่รับหน้าที่จำหน่าย ก็อาจถูกวินิจฉัยว่าโดยเนื้อแท้แล้วเป็นการโฆษณา ตามเนื้อหาและบริบททางการค้า",
+            "การจ่ายค่าตอบแทน การมอบผลิตภัณฑ์ ลิงก์สำหรับการจำหน่าย คำสั่งของแบรนด์ให้เผยแพร่ และการร่วมงานกันซ้ำหลายครั้ง ล้วนเป็นปัจจัยที่นำมาพิจารณาในการวินิจฉัยดังกล่าว",
+            "ในทางกลับกัน มิใช่ว่าโพสต์ส่วนบุคคลทุกโพสต์จะกลายเป็นโฆษณาของแบรนด์โดยอัตโนมัติ จึงต้องตรวจสอบความสัมพันธ์ระหว่างผู้เผยแพร่กับแบรนด์ เนื้อหาที่เป็นรูปธรรม และระดับที่แบรนด์เข้าไปเกี่ยวข้อง"
+          ],
+          "rationale": "ตามเนื้อหาและบริบททางการค้า qualifies อาจถูกวินิจฉัยว่า…เป็นการโฆษณา in the preceding sentence. The following sentence starts the factor list การจ่ายค่าตอบแทน…ล้วนเป็นปัจจัย…. Move this basis phrase to the judgment it qualifies, rather than attaching it to the next list."
+        },
+        {
+          "old_row_zero_based": 27,
+          "new_row_zero_based": 27,
+          "sentences_exact": [
+            "ในสัญญาความร่วมมือและแนวปฏิบัติในการดำเนินงาน สามารถกำหนดขอบเขตของการแสดงออกที่ใช้ได้และเอกสารหลักฐานประกอบ การตรวจสอบก่อนเผยแพร่ ตลอดจนกระบวนการแก้ไขและลบการแสดงออกที่ฝ่าฝืน",
+            "และเป็นการเหมาะสมที่จะรวมการแสดงออกที่ถูกเพิ่มในช่องความคิดเห็น คำอธิบายด้วยวาจาในการถ่ายทอดสดหรือวิดีโอสั้น ตลอดจนความไม่สอดคล้องกันระหว่างหน้าจำหน่ายสินค้ากับฉลาก ไว้ในขอบเขตของการบริหารจัดการด้วย",
+            "ฉบับที่ผ่านการตรวจ บันทึกการอนุมัติ คำขอให้แก้ไข และเนื้อหาที่เผยแพร่ฉบับสุดท้าย ต้องเก็บรักษาไว้เพื่อให้สามารถตรวจสอบข้อเท็จจริงได้ในภายหลัง"
+          ],
+          "rationale": "ตลอดจนกระบวนการแก้ไขและลบ… is the final coordinated object/list member under สามารถกำหนด…. It has no separate predicate and belongs with segment0."
+        }
+      ],
+      "whole_map_linguistic_notes": [
+        "Row6 now has a separate identity statement, subsidiary/branch contrast and complete เนื่องจาก…จึง… cause/result sentence. This is natural; it does not blindly restore the R43 two-slice map.",
+        "Row7 keeps ซึ่งเป็นหน่วยงานผู้รับผิดชอบในปัจจุบัน attached to the named agency.",
+        "All twelve accepted repairs retain the subject/predicate, purpose/result, concessive and temporal attachments."
+      ],
+      "structural_rows_retained": [
+        {
+          "row_zero_based": 31,
+          "text": "ทนายความ Wei Tseng (曾雋崴)",
+          "limitation": "Lawyer-name byline, not a prose sentence."
+        }
+      ],
+      "row_review": [
+        {
+          "row_zero_based": 0,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 1,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 2,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 3,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 4,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 5,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 6,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 7,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 8,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 9,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 10,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 11,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 12,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 13,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 14,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 15,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 16,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 17,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 18,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 19,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 20,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 21,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 22,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 23,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 24,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 25,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 26,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 27,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 28,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 29,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 30,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 31,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        }
+      ],
+      "unresolved_boundary_findings": []
+    },
+    "th005": {
+      "verdict": "ACCEPT_BOUNDARY_MAP_WITH_STRUCTURAL_LIMITATIONS",
+      "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/draft-r45.md",
+      "source_sha256": "e454f2d4e0b3c8d06535a1e15863ce7888555c7696aee656e31a911c7f3d7d5e",
+      "map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/segments-adjudicated-r45.json",
+      "map_sha256": "890de702e4a89e441f43c8d0390fa46eef7068960e01796f1a759b823a473cf4",
+      "canonical_paragraphs_sha256": "539d0f2df974a9ec7032bce3cbca359dc6f49420de3abcfeeea655290ee205fb",
+      "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-005-taiwan-company-establishment-advanced-2/boundary-adjudication-r45.json",
+      "author_adjudication_sha256": "e73e92ae51f2830da71c39a7e536b95b6329c597e367ba6878933598605308a3",
+      "original_author_session": "3dd3dd41-ebb0-4e93-aea3-4a4f160b7dd3",
+      "prior_independent_review_path": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r44-thai-other3-map-audit.json",
+      "prior_independent_review_sha256": "3220aede94e9eafea2e220e6b9996a5329d06dbdf595b3755829cb29a4d630e9",
+      "prior_source_sha256": "db91b358a7f9a8660520a88330d610a04dc27d9e0a98c65118336916b8e0af18",
+      "prior_map_path": "/Users/son7/tseng-site-copy-audit-20261107/thai-boundary-approved-r43/th005/draft.sentences.json",
+      "prior_map_sha256": "1cfc2680984146f8120f162b8a40b49f435a753e2d0859a63c6128da0c2ef60a",
+      "frozen_rows_retained": 19,
+      "actual_read": {
+        "current_map_all_sentence_arrays_and_metadata": true,
+        "current_map_zero_based_row_chunks": [
+          [
+            0,
+            18
+          ]
+        ],
+        "current_map_duplicate_text_fields_verified_against_source": true,
+        "current_author_adjudication_full_file": true,
+        "current_author_adjudication_line_range": [
+          1,
+          254
+        ],
+        "source_full_read_basis": "Current draft-r45.md full reading, including frontmatter and headings.",
+        "source_line_count": 83
+      },
+      "independent_checks": {
+        "source_sha_matches": true,
+        "map_sha_matches": true,
+        "adjudication_sha_matches": true,
+        "canonical_matches": true,
+        "entire_map_equals_expected_R44_native_proposal_arrays": true,
+        "source_exact_prior_or_single_TH005_join": true,
+        "frozen_extraction_text_exact_all_rows": true,
+        "sentence_join_text_exact_nonwhitespace_all_rows": true
+      },
+      "accepted_exact_repairs": [
+        {
+          "old_row_zero_based": 14,
+          "new_row_zero_based": 13,
+          "sentences_exact": [
+            "ก. พนักงานคนแรก: งานผู้บริหารของกิจการลงทุนทั่วไปของชาวจีนโพ้นทะเลและคนต่างชาติ (一般僑外投資事業主管工作) หลักเกณฑ์ “งานเชี่ยวชาญเฉพาะทางหรืองานเทคนิค” (專門性或技術性工作) ตามข้อ ข. ข้างล่างไม่นำมาใช้",
+            "แต่ยังคงต้องเป็นไปตามเงื่อนไขด้านตัวบุคคล (เช่น ผู้จัดการ (經理人) ของบริษัทที่ชาวจีนโพ้นทะเลหรือคนต่างชาติถือหุ้นเกินหนึ่งในสาม) และเงื่อนไขด้านผลประกอบการของนายจ้าง ได้แก่ ทุนจดทะเบียนและยอดขาย (ข้อ 38 และข้อ 39 ของหลักเกณฑ์การพิจารณา)"
+          ],
+          "rationale": "The first segment is a nominal list/topic label (ก. พนักงานคนแรก: งานผู้บริหาร…), not an independent prose sentence. Attach it to the immediately following applicability statement; keep the remaining qualification intact."
+        }
+      ],
+      "whole_map_linguistic_notes": [
+        "New row9 combines the timing-only frame with its main clause; exact original word sequence is retained.",
+        "New row13 (old14) attaches the nominal first-worker label to its applicability statement; the remaining qualification is preserved.",
+        "All other old rows are identical after index remapping; no row was removed to change the measurement population."
+      ],
+      "structural_rows_retained": [
+        {
+          "row_zero_based": 15,
+          "text": "ดูเว็บไซต์ของกระทรวงแรงงานไต้หวัน (勞動部): <",
+          "limitation": "Source-navigation label; trailing < is frozen unlink output, not a prose sentence."
+        },
+        {
+          "row_zero_based": 17,
+          "text": "---",
+          "limitation": "Markdown horizontal rule, not a prose sentence."
+        },
+        {
+          "row_zero_based": 18,
+          "text": "> อ่านเพิ่มเติม: > - สาขางานที่ให้บริการ > - ทีมงานระหว่างประเทศ Hovering > - วิธีติดต่อสำนักงาน",
+          "limitation": "Further-reading navigation block, not a prose sentence."
+        }
+      ],
+      "row_review": [
+        {
+          "row_zero_based": 0,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 1,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 2,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 3,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 4,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 5,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 6,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 7,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 8,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 9,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 10,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 11,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 12,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 13,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 14,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 15,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 16,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 17,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 18,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        }
+      ],
+      "unresolved_boundary_findings": [],
+      "source_join_and_remap": {
+        "old_rows": [
+          9,
+          10
+        ],
+        "new_row": 9,
+        "exact_from": "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว\n\nผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้",
+        "exact_to": "โดยทั่วไป ภายหลังได้รับเอกสารการจดทะเบียนนิติบุคคลแล้ว ผู้รับผิดชอบของบริษัท (公司負責人) สามารถไปที่ธนาคารเพื่อเปลี่ยนบัญชีสำนักงานเตรียมการจัดตั้งบริษัทเป็นบัญชีบริษัทอย่างเป็นทางการ (正式公司帳戶) ได้",
+        "only_one_blank_paragraph_separator_replaced_by_ASCII_space": true,
+        "all_other_source_bytes_identical": true,
+        "old_row14_is_new13_boundary_modified": true,
+        "index_remap": [
+          {
+            "old_row": 0,
+            "new_row": 0,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 1,
+            "new_row": 1,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 2,
+            "new_row": 2,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 3,
+            "new_row": 3,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 4,
+            "new_row": 4,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 5,
+            "new_row": 5,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 6,
+            "new_row": 6,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 7,
+            "new_row": 7,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 8,
+            "new_row": 8,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 9,
+            "new_row": 9,
+            "change": "merged_to9"
+          },
+          {
+            "old_row": 10,
+            "new_row": 9,
+            "change": "merged_to9"
+          },
+          {
+            "old_row": 11,
+            "new_row": 10,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 12,
+            "new_row": 11,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 13,
+            "new_row": 12,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 14,
+            "new_row": 13,
+            "change": "boundary_repaired"
+          },
+          {
+            "old_row": 15,
+            "new_row": 14,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 16,
+            "new_row": 15,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 17,
+            "new_row": 16,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 18,
+            "new_row": 17,
+            "change": "unchanged"
+          },
+          {
+            "old_row": 19,
+            "new_row": 18,
+            "change": "unchanged"
+          }
+        ]
+      },
+      "author_evidence_metadata_notes": [
+        {
+          "path": "sha_bindings.boundary_adjudication_r45_sha256",
+          "reported": "e5fbfac9c6718c82a40d0456e8c12ef0fb53b69f7c2e0d40e50247058606eb41",
+          "actual_external_file_sha256": "e73e92ae51f2830da71c39a7e536b95b6329c597e367ba6878933598605308a3",
+          "issue": "Stale/self-referential author-report self-hash; not used as the authoritative binding. Use this independent external hash."
+        },
+        {
+          "path": "th005_index_remap_table[14].change",
+          "reported": "unchanged_shifted",
+          "actual": "boundary_repaired_and_shifted (old14 -> new13)",
+          "issue": "Label incorrectly says unchanged_shifted although the accepted boundary repair is present. Accepted findings and actual arrays are correct."
+        }
+      ]
+    },
+    "th016": {
+      "verdict": "ACCEPT_BOUNDARY_MAP_WITH_STRUCTURAL_LIMITATIONS",
+      "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-016-taiwan-inheritance-custody-analysis/draft.md",
+      "source_sha256": "1243d89afcd6abba18a0835d7b7bb02d6a2f4571ea7d4200f5b68ab8950ba392",
+      "map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-016-taiwan-inheritance-custody-analysis/segments-adjudicated-r45.json",
+      "map_sha256": "7dbcb48d0e59d4585934c0a87081f17289d97d3e1c710f7ae7cf95c7412bcf77",
+      "canonical_paragraphs_sha256": "beb86bb5a2f3f9345a71c3f21b98073c564ee8d376666a3d201bbaa8adfbaf9d",
+      "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-016-taiwan-inheritance-custody-analysis/boundary-adjudication-r45.json",
+      "author_adjudication_sha256": "c355f14f7c5d24ee399df92e9bbe687671e4f5d50054df54b14aa2f5030bd300",
+      "original_author_session": "b6ae2a1a-c85a-45e0-beb7-5dd935bcb94e",
+      "prior_independent_review_path": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r44-thai-other3-map-audit.json",
+      "prior_independent_review_sha256": "3220aede94e9eafea2e220e6b9996a5329d06dbdf595b3755829cb29a4d630e9",
+      "prior_source_sha256": "1243d89afcd6abba18a0835d7b7bb02d6a2f4571ea7d4200f5b68ab8950ba392",
+      "prior_map_path": "/Users/son7/tseng-site-copy-audit-20261107/thai-boundary-approved-r43/th016/draft.sentences.json",
+      "prior_map_sha256": "65987d68ce9ef817d62c2bfca65ffd68e17efe853f54e7c5af7d95cf1fd44a7f",
+      "frozen_rows_retained": 46,
+      "actual_read": {
+        "current_map_all_sentence_arrays_and_metadata": true,
+        "current_map_zero_based_row_chunks": [
+          [
+            0,
+            5
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            10,
+            15
+          ],
+          [
+            16,
+            22
+          ],
+          [
+            23,
+            34
+          ],
+          [
+            35,
+            45
+          ]
+        ],
+        "current_map_duplicate_text_fields_verified_against_source": true,
+        "current_author_adjudication_full_file": true,
+        "current_author_adjudication_line_range": [
+          1,
+          313
+        ],
+        "source_full_read_basis": "Full draft read in preceding R44 review; same bytes verified now, all current extracted prose re-read.",
+        "source_line_count": 154
+      },
+      "independent_checks": {
+        "source_sha_matches": true,
+        "map_sha_matches": true,
+        "adjudication_sha_matches": true,
+        "canonical_matches": true,
+        "entire_map_equals_expected_R44_native_proposal_arrays": true,
+        "source_exact_prior_or_single_TH005_join": true,
+        "frozen_extraction_text_exact_all_rows": true,
+        "sentence_join_text_exact_nonwhitespace_all_rows": true
+      },
+      "accepted_exact_repairs": [
+        {
+          "old_row_zero_based": 26,
+          "new_row_zero_based": 26,
+          "sentences_exact": [
+            "ญาติและผู้มีสิทธิยื่นคำร้องอื่นตามที่กฎหมายกำหนด อาจร้องขอต่อศาลให้ตั้งหรือเปลี่ยนผู้ปกครอง หรือให้มีคำสั่งอื่นที่จำเป็นได้ หากมีเหตุตามกฎหมาย",
+            "ข้อนี้มิได้หมายความว่าผู้ใดผู้หนึ่งจะเป็นผู้ปกครองโดยปริยายเพียงเพราะมีความสัมพันธ์ทางครอบครัว ผู้ปกครองมิได้อยู่ในฐานะเดียวกันกับบิดาหรือมารดาที่ใช้อำนาจปกครองบุตร และอาจมีหน้าที่ต่างหากในเรื่องขอบเขตของอำนาจ การจัดทำบัญชีทรัพย์สิน การรายงาน และการอยู่ภายใต้การกำกับดูแลของศาล"
+          ],
+          "rationale": "หากมีเหตุตามกฎหมาย is the legal-ground condition on the preceding ability to petition for appointment/replacement/necessary orders. It must not migrate to ข้อนี้มิได้หมายความว่า… (the following non-automatic-guardianship clarification). Move only this preposed/postposed condition to the request it limits."
+        }
+      ],
+      "whole_map_linguistic_notes": [
+        "Row26 keeps หากมีเหตุตามกฎหมาย with the court-petition authority it limits; the following nonautomatic-guardianship clarification starts separately."
+      ],
+      "structural_rows_retained": [
+        {
+          "row_zero_based": 43,
+          "text": "---",
+          "limitation": "Markdown horizontal rule, not a prose sentence."
+        },
+        {
+          "row_zero_based": 45,
+          "text": "ทนายความ Wei Tseng (曾雋崴)",
+          "limitation": "Lawyer-name byline, not a prose sentence."
+        }
+      ],
+      "row_review": [
+        {
+          "row_zero_based": 0,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 1,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 2,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 3,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 4,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 5,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 6,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 7,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 8,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 9,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 10,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 11,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 12,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 13,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 14,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 15,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 16,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 17,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 18,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 19,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 20,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 21,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 22,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 23,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 24,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 25,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 26,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 27,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 28,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 29,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 30,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 31,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 32,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 33,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 34,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 35,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 36,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 37,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 38,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 39,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 40,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 41,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 42,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 43,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 44,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 45,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        }
+      ],
+      "unresolved_boundary_findings": []
+    },
+    "th018": {
+      "verdict": "ACCEPT_BOUNDARY_MAP_WITH_STRUCTURAL_LIMITATIONS",
+      "source_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-018-taiwan-semiconductor-market-entry/draft.md",
+      "source_sha256": "7419301198edeb5cd4fc6926c170c29b2be472f126dd8b8bc55d5720e631caa2",
+      "map_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-018-taiwan-semiconductor-market-entry/segments-adjudicated-r45.json",
+      "map_sha256": "ccfc7faf0b4d833ee389d829ad3f24c31935050e9527c12ee9d7509c9f183c42",
+      "canonical_paragraphs_sha256": "38eb04fffb77d1c2341530a0d656499f2f202d520ba389e1f92b5318f1fc3e86",
+      "author_adjudication_path": "/Users/son7/tseng-site-copy-audit-20261107/isolated-workers/reader-r41-th-018-taiwan-semiconductor-market-entry/boundary-adjudication-r45.json",
+      "author_adjudication_sha256": "34aa09af30278df500dd9107bca6a8d393b619cda800776f1ee9614818880cc4",
+      "original_author_session": "8d869a27-6f6d-41df-8d2e-6545c5b63a91",
+      "prior_independent_review_path": "/Users/son7/tseng-site-copy-audit-20261107/reviews/r44-thai-other3-map-audit.json",
+      "prior_independent_review_sha256": "3220aede94e9eafea2e220e6b9996a5329d06dbdf595b3755829cb29a4d630e9",
+      "prior_source_sha256": "7419301198edeb5cd4fc6926c170c29b2be472f126dd8b8bc55d5720e631caa2",
+      "prior_map_path": "/Users/son7/tseng-site-copy-audit-20261107/thai-boundary-approved-r43/th018/draft.sentences.json",
+      "prior_map_sha256": "22bad9d98193b3676513f6f177930d42e95d0409d99a159f96538780875b6d7b",
+      "frozen_rows_retained": 27,
+      "actual_read": {
+        "current_map_all_sentence_arrays_and_metadata": true,
+        "current_map_zero_based_row_chunks": [
+          [
+            0,
+            13
+          ],
+          [
+            14,
+            26
+          ]
+        ],
+        "current_map_duplicate_text_fields_verified_against_source": true,
+        "current_author_adjudication_full_file": true,
+        "current_author_adjudication_line_range": [
+          1,
+          89
+        ],
+        "source_full_read_basis": "Full draft read in preceding R44 review; same bytes verified now, all current extracted prose re-read.",
+        "source_line_count": 118
+      },
+      "independent_checks": {
+        "source_sha_matches": true,
+        "map_sha_matches": true,
+        "adjudication_sha_matches": true,
+        "canonical_matches": true,
+        "entire_map_equals_expected_R44_native_proposal_arrays": true,
+        "source_exact_prior_or_single_TH005_join": true,
+        "frozen_extraction_text_exact_all_rows": true,
+        "sentence_join_text_exact_nonwhitespace_all_rows": true
+      },
+      "accepted_exact_repairs": [
+        {
+          "old_row_zero_based": 25,
+          "new_row_zero_based": 25,
+          "sentences_exact": [
+            "หากวางแผนจะขาย จัดการสินค้าคงคลัง ให้การสนับสนุนการติดตั้ง หรือจ้างงานในไต้หวัน กรุณาแยกให้ชัดก่อนว่าสำนักงานใหญ่จะทำงานใดด้วยตนเอง และองค์กรในไต้หวันจะรับผิดชอบงานใด",
+            "สำนักงานจะยืนยันประเด็นปรึกษาและผลประโยชน์ทับซ้อน แล้วอธิบายเอกสารที่ต้องใช้และขอบเขตบริการที่ให้ได้"
+          ],
+          "rationale": "หากวางแผน… is a conditional frame requiring the following กรุณาแยกให้ชัด… directive. Join them, then place the boundary at the new independent office-action subject สำนักงานจะยืนยัน…. No condition, list item or service limit changes."
+        }
+      ],
+      "whole_map_linguistic_notes": [
+        "Row25 joins หากวางแผน… to its กรุณาแยกให้ชัด… directive, then starts a new unit at สำนักงานจะยืนยัน…."
+      ],
+      "structural_rows_retained": [
+        {
+          "row_zero_based": 26,
+          "text": "ตัวอย่างหัวข้อ: ปรึกษาโครงสร้างบริษัทเซมิคอนดักเตอร์เข้าสู่ตลาดไต้หวัน ในการติดต่อครั้งแรกกรุณาให้ชื่อบริษัท ประเทศของสำนักงานใหญ่ ผลิตภัณฑ์หรือบริการที่วางไว้ แผนดำเนินงานในไต้หวัน และภาษาที่ต้องการใช้ปรึกษา ข้อมูลการออกแบบที่เป็นความลับและสัญญาฉบับสมบูรณ์ โปรดส่งหลังจากได้รับคำชี้แจงเพิ่มเติม ภาษาที่สามารถให้คำปรึกษาได้จริง และขอบเขตการรับงาน ต้องยืนยันเมื่อติดต่อ",
+          "limitation": "Segment0 is an example inquiry subject label (ตัวอย่างหัวข้อ:), not narrative prose. Other segments retain their directives and qualification."
+        }
+      ],
+      "row_review": [
+        {
+          "row_zero_based": 0,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 1,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 2,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 3,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 4,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 5,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 6,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 7,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 8,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 9,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 10,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 11,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 12,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 13,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 14,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 15,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 16,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 17,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 18,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 19,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 20,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 21,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 22,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 23,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 24,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 25,
+          "result": "complete_proposition_or_coherent_compound_no_unresolved_dependency",
+          "text_preserved": true
+        },
+        {
+          "row_zero_based": 26,
+          "result": "retained_structural_limitation",
+          "text_preserved": true
+        }
+      ],
+      "unresolved_boundary_findings": []
+    }
+  },
+  "total_current_frozen_rows_actually_read": 190,
+  "mutations": {
+    "only_files_written": [
+      "/Users/son7/tseng-site-copy-audit-20261107/reviews/r45-thai-final-map-review.json",
+      "/Users/son7/tseng-site-copy-audit-20261107/reviews/r45-thai-final-map-review.md"
+    ],
+    "source_maps_rules_manifests_product_untouched": true
+  }
+}

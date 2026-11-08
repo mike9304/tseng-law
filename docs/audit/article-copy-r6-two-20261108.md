@@ -1,0 +1,14 @@
+# Two scoped prose corrections, 2026-11-08
+
+This change removes repetitive wording and improves clause flow in the German company-establishment Q&A and the Japanese vaccination eligibility article. It does not change publication dates, frontmatter, thresholds, eligibility, source links, or the site's rendering code.
+
+- `src/content/columns-de/013-taiwan-company-establishment-advanced-1.md`: removes a generic Q&A introduction and a duplicate instruction to check the premises before signing the lease. Existing sentences now use direct grammatical subjects and ordinary planning language. The old investment-review commission name is updated to the current department name, checked against the Ministry of Economic Affairs' Department of Investment Review and its organizational history: https://www.moea.gov.tw/Mns/dir_e/home/Home.aspx and https://www.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879. The approximate timelines and all qualifications remain. This is not a fresh endorsement of unchanged legacy assertions.
+- `src/content/issues/ja/ISSUE-20261103-11-taiwan-flu-covid-vaccine-foreign-residents-nhi.md`: removes an adjacent repetition of same-day vaccination availability, joins the two related eligibility explanations, and separates the employed and non-employed insurance enrollment timing clauses. Both eligibility explanations and their conditions remain.
+
+Composer 2.5 produced the candidates and a separate Composer process reviewed complete candidate and baseline texts. The parent reviewed every changed line, separately reconciled the previously unpublished baseline changes with current main, and checked the exact candidate hashes after the isolated Composer copy worker applied them. AI review is not represented as human, native-speaker, or lawyer certification.
+
+Section 5 self-check: no invented example, experience, new certainty, orphan fragment, decorative bold, or added short duplicate survives these changes. Existing openings introduce their actual subjects; the generic German follow-up introduction was removed. The latest three articles in each relevant locale/board were compared using actual publication dates; these changes do not impose a repeated opening or closing template. Exact comparison extracts are in `article-r6-two-release/same-locale-comparison.json` within the local audit package.
+
+Validation before commit: exact candidate SHA checks, byte-identical frontmatter against main, both actual variety checks with zero FAIL, and `git diff --check`. Japanese retains a non-blocking です・ます ending warning, consistent with the required register. Static build, browser inspection, and public readback are recorded separately in the release artifact; this pre-publication note does not claim them complete.
+
+Evidence: `/Users/son7/tseng-site-copy-audit-20261107/reviews/r6-baseline-provenance/root-approval.json`, `reviews/natural-r6-root-decisions.json`, and `article-r6-two-release/source-verification.json`.

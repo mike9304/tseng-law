@@ -15,11 +15,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegründet und ein Arbeitsvisum sowie eine Aufenthaltskarte (外僑居留證) erhalten.
 
-Die Fragen, die bei der Gründung häufig gestellt werden, sind im Folgenden zusammengestellt.
+Häufige Fragen zur Gründung sind im Folgenden zusammengestellt.
 
 Wer den Beitrag [Grundlagen der Gesellschaftsgründung](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
-
-Die folgenden Fragen und Antworten sollen Personen helfen, die eine Gesellschaftsgründung in Taiwan erwägen.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -39,7 +37,7 @@ Eine Mitarbeiterin oder ein Mitarbeiter einer taiwanesischen Bank hat die streng
 
 In jüngerer Zeit tauchen viele Ausländerinnen und Ausländer nach der Kontoeröffnung unter, weshalb die Kontoeröffnung zunehmend strenger gehandhabt wird.
 
-Bereits in der Grundlagenfassung wurde angemerkt, dass die Kontoeröffnung der schwierigste Schritt sei; dieser Einschätzung ist zuzustimmen.
+Bereits im Grundlagenbeitrag wird die Kontoeröffnung als schwierigster Schritt beschrieben – zu Recht.
 
 Weil es in Taiwan sehr viele Fälle von Geldwäsche (洗錢) gibt, wird die Eröffnung von Bankkonten zunehmend strenger.
 
@@ -61,25 +59,25 @@ Es bleibt ausreichend Zeit, bei der Bank das Vorbereitungskonto zu eröffnen und
 
 Das ist möglich.
 
-Die Bank verlangt in der Regel eine doppelte Identitätsprüfung.
+Für die Kontoeröffnung verlangt die Bank in der Regel eine doppelte Identitätsprüfung.
 
 Ohne Aufenthaltskarte können Sie bei der taiwanesischen Einwanderungsbehörde das „Grunddatenblatt zur einheitlichen Identifikationsnummer“ (統一證號基本資料表) beantragen.
 
 Die Ausstellung ist am selben Tag möglich.
 
-Die Einwanderungsbehörde (移民署) ist jedoch sehr überlaufen, daher sollten Sie früh erscheinen und eine Wartenummer ziehen.
+An der Einwanderungsbehörde (移民署) herrscht jedoch oft starkes Gedränge; daher sollten Sie früh erscheinen und eine Wartenummer ziehen.
 
 ​
 
 3. Ich habe gehört, dass bei der Prüfung des Investitionsplans Ausbildung und Berufserfahrung anzugeben sind, und sorge mich, dass meine Ausbildung und Berufserfahrung nicht zur Branche der zu gründenden Gesellschaft passen.
 
-Die Prüfungskommission des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors.
+Die Abteilung für Investitionsprüfung des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors.
 
-Die Prüfung ist jedoch nicht übermäßig streng; jeder Antrag wird anhand der Unterlagen beurteilt.
+Jedoch ist die Prüfung nicht übermäßig streng; jeder Antrag wird anhand der Unterlagen beurteilt.
 
 Sie können vielfältige Berufserfahrungen einschließlich Aushilfstätigkeiten anführen.
 
-Sie können sie so ausführlich erläutern, dass die prüfenden Personen überzeugt werden können.
+Ausführliche Erläuterungen können die prüfenden Personen überzeugen.
 
 Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem taiwanesischen Anwalt eingehend austauschen.
 
@@ -87,7 +85,7 @@ Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem t
 
 4. Worauf ist zu achten, wenn die Eintragungsadresse der Gesellschaft (zum Beispiel ein Restaurantlokal) gemietet wird?
 
-Die Gesellschaftsgründung dauert etwa 3 Monate, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte zusätzlich etwa 1 Monat.
+Für die Gesellschaftsgründung sind etwa 3 Monate einzuplanen, für Arbeitserlaubnis (工作許可) und Aufenthaltskarte zusätzlich etwa 1 Monat.
 
 Daher sollten Sie den Vertragsbeginn möglichst spät ansetzen.
 
@@ -120,8 +118,6 @@ Außerdem verlangt die Stadtverwaltung (市政府) bei der endgültigen Gesellsc
 Bei einem gewerblichen Büroraum ist die Gesellschaftseintragung (公司登記) dann nicht möglich.
 
 Zum Beispiel: Handelt es sich um Geschäftszweige, die in gewerblichen Büroräumen möglich sind, etwa Werbung oder Großhandel, kann die Gesellschaft in einem gewerblichen Büroraum gegründet werden. Vor Abschluss des Mietvertrags ist dies zu prüfen.
-
-Sie sollten dies vorab prüfen.
 
 *Wenn Sie eine Frage zum taiwanesischen Recht haben, schreiben Sie über die Seite „Kontakt“ auf Englisch, Chinesisch (中文), Japanisch oder Koreanisch; eine Antwortfrist wird nicht zugesagt.*
 

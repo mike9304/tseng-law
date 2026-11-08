@@ -19,7 +19,7 @@ faq:
 
 ![Foto editoriale per valutare la struttura di ingresso a Taiwan di un’impresa di semiconduttori](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Quando le operazioni con clienti taiwanesi cominciano, la sede all’estero può ricevere diverse esigenze: trattare preventivi e contratti a Taiwan, detenere una scorta di sostituzione d’urgenza o assegnare personale di installazione e di manutenzione. È allora facile chiedere prima: «Basta costituire una società a Taiwan per risolverlo?»
+Quando le operazioni con clienti taiwanesi cominciano, la sede all’estero può ricevere diverse esigenze: trattare preventivi e contratti a Taiwan, detenere una scorta di sostituzione d’urgenza o assegnare personale di installazione e di manutenzione. È allora facile chiedersi subito: «Basta costituire una società a Taiwan per risolverlo?»
 
 Ciò che conviene chiarire prima è chi si occupa di che cosa a Taiwan. La struttura da valutare cambia secondo che la sede straniera continui a firmare i contratti di vendita, una società taiwanese compri e rivenda, o il personale locale fornisca solo il sostegno tecnico.
 
@@ -27,7 +27,7 @@ Questo testo è una spiegazione generale per le imprese straniere di materiali, 
 
 ## 1. Chiarire la divisione delle vendite e delle operazioni prima di scegliere la forma di iscrizione
 
-Si supponga che un fabbricante straniero di componenti di precisione venda a clienti taiwanesi. All’inizio la sede spedisce direttamente, ma il cliente chiede di stoccare pezzi di ricambio a Taiwan e un sostegno di ingegneri sul posto. Un indirizzo non basta: serve un soggetto che possa vendere, importare, stoccare, assumere, fornire un sostegno tecnico e assumere la responsabilità.
+Si supponga che un fabbricante straniero di componenti di precisione venda a clienti taiwanesi. All’inizio la sede spedisce direttamente, ma il cliente chiede di stoccare pezzi di ricambio a Taiwan e un sostegno di ingegneri sul posto. Un indirizzo non basta. Serve un soggetto che possa vendere, importare, stoccare, assumere, fornire un sostegno tecnico e assumere la responsabilità.
 
 Prima di decidere la struttura di ingresso, la sede può chiarire internamente:
 
@@ -47,7 +47,7 @@ Soprattutto se il venditore del contratto di vendita non è l’impresa che forn
 
 Nel pianificare l’ingresso, l’impresa di semiconduttori deve separare quale presenza si stabilisce a Taiwan e come si organizzano le vendite e il servizio. Il primo punto concerne la personalità giuridica, le esigenze di iscrizione e il campo di attività; il secondo, il modo di operare, le facoltà e la ripartizione di responsabilità.
 
-La differenza principale tra una società controllata taiwanese e una succursale taiwanese di una società straniera è se la presenza a Taiwan ha una personalità giuridica distinta dalla società madre o dalla sede. La distribuzione e l’agenzia sono schemi contrattuali, e non vanno confuse con la forma societaria.
+La differenza principale tra una società controllata taiwanese e una succursale taiwanese di una società straniera è se la presenza a Taiwan ha una personalità giuridica distinta dalla società madre o dalla sede. Distribuzione e agenzia restano schemi contrattuali. Non vanno confusi con la forma societaria.
 
 | Struttura | Distinzione di base | Ciò che conviene confermare prima |
 |---|---|---|
@@ -69,19 +69,19 @@ Il capitale si divide in azioni. In linea di principio sono richiesti 2 promotor
 
 ## 4. Le procedure di succursale e di società controllata differiscono; solo la società controllata passa per l’esame del Dipartimento per l’esame degli investimenti
 
-Quando una società straniera costituisce una società controllata taiwanese, il nome si verifica in linea di principio in anticipo e un’autorizzazione di investimento è chiesta al Dipartimento per l’esame degli investimenti del Ministero dell’Economia (經濟部投資審議司). Dopo l’approvazione, i fondi sono trasferiti, l’importo dell’investimento è determinato e un commercialista (會計師) verifica il capitale, poi la costituzione e la registrazione fiscale si concludono. Dopo aver presentato la domanda di registrazione della costituzione, la società deve partecipare ai corsi sui diritti dei lavoratori (勞動權益講習) organizzati da autorità pubbliche di qualsiasi livello o da organizzazioni senza scopo di lucro da esse designate (articolo 387-1 della legge taiwanese sulle società, 公司法, in vigore da giugno del 2026).
+Quando una società straniera costituisce una società controllata taiwanese, il nome si verifica in linea di principio in anticipo e un’autorizzazione di investimento è chiesta al Dipartimento per l’esame degli investimenti del Ministero dell’Economia (經濟部投資審議司). Dopo l’approvazione, i fondi sono trasferiti, l’importo dell’investimento è determinato e un commercialista (會計師) verifica il capitale, poi la costituzione e la registrazione fiscale si concludono. Presentata la domanda di registrazione della costituzione, la società deve partecipare ai corsi sui diritti dei lavoratori (勞動權益講習) organizzati da autorità pubbliche di qualsiasi livello o da organizzazioni senza scopo di lucro da esse designate (articolo 387-1 della legge taiwanese sulle società, 公司法, in vigore da giugno del 2026).
 
-Per contro, per costituire una succursale taiwanese di una società straniera ordinaria, un’autorizzazione di investimento del Dipartimento per l’esame degli investimenti non è in linea di principio richiesta; il Dipartimento del commercio del Ministero dell’Economia (經濟部商業發展署) tratta la registrazione di succursale e la determinazione di capitale connessa. Restano necessari la verifica preventiva del nome, il trasferimento del capitale di esercizio, la verifica del capitale e la registrazione fiscale; il calendario è in generale più breve.
+Per contro, per costituire una succursale taiwanese di una società straniera ordinaria, un’autorizzazione di investimento del Dipartimento per l’esame degli investimenti non è in linea di principio richiesta; il Dipartimento del commercio del Ministero dell’Economia (經濟部商業發展署) tratta la registrazione di succursale e la determinazione di capitale connessa. Restano necessari la verifica preventiva del nome, il trasferimento del capitale di esercizio, la verifica del capitale e la registrazione fiscale. Il calendario è di solito più breve.
 
-Quanto precede è un consiglio sulla struttura del contratto. Il solo fatto di aver scelto una forma determinata non rende l’operazione lecita e non evita le controversie.
+Quanto precede riguarda in linea generale la scelta tra succursale e società controllata e le relative procedure di iscrizione. Il solo fatto di aver scelto una forma determinata non rende l’operazione lecita e non evita le controversie.
 
 ## 5. L’iscrizione societaria e il lavoro lecito di un ingegnere non sono la stessa cosa
 
-Concludere l’iscrizione a Taiwan non implica che il personale della sede straniera possa lavorare automaticamente a Taiwan. Uno straniero che lavora a Taiwan ha bisogno di un’autorizzazione di lavoro lecita e, per un soggiorno più lungo, di un titolo di soggiorno. In linea di principio il datore di lavoro chiede l’autorizzazione di lavoro del dipendente straniero, e lo straniero stesso chiede all’Amministrazione dell’immigrazione del Ministero dell’Interno (內政部移民署) il titolo di soggiorno corrispondente.
+Concludere l’iscrizione a Taiwan non implica che il personale della sede straniera possa lavorare automaticamente a Taiwan. Uno straniero che lavora a Taiwan ha bisogno di un’autorizzazione di lavoro lecita. Per un soggiorno più lungo serve anche un titolo di soggiorno. In linea di principio il datore di lavoro chiede l’autorizzazione di lavoro del dipendente straniero, e lo straniero stesso chiede all’Amministrazione dell’immigrazione del Ministero dell’Interno (內政部移民署) il titolo di soggiorno corrispondente.
 
-È relativamente più facile ottenere l’autorizzazione di lavoro per un dirigente della società controllata (società con investimento autorizzato in cui gli stranieri detengono più di un terzo (1/3) delle azioni) o della succursale taiwanese di una società straniera. Anche nell’assumere il primo straniero, tuttavia, il datore di lavoro deve soddisfare uno dei criteri dell’articolo 39 delle Norme di qualificazione e di esame per il lavoro degli stranieri. Per una società con meno di 1 anno, i criteri comprendono un capitale versato (per una succursale, i fondi di esercizio a Taiwan) di almeno 500.000 TWD o un volume d’affari di almeno 3.000.000 TWD; per una società con 1 anno o più, comprendono un volume d’affari medio dell’ultimo anno o degli ultimi 3 anni di almeno 3.000.000 TWD. Se il datore di lavoro assume 2 o più stranieri dello stesso tipo, tali stranieri e il datore di lavoro devono soddisfare le norme generali del capitolo 2 (articolo 38, comma 2). Se si prevede che personale straniero lavori a Taiwan, deve confermarsi prima di costituire la società se il capitale previsto raggiunge la soglia applicabile.
+È relativamente più facile ottenere l’autorizzazione di lavoro per un dirigente della società controllata (società con investimento autorizzato in cui gli stranieri detengono più di un terzo (1/3) delle azioni) o della succursale taiwanese di una società straniera. Anche nell’assumere il primo straniero, tuttavia, il datore di lavoro deve soddisfare uno dei criteri dell’articolo 39 delle Norme di qualificazione e di esame per il lavoro degli stranieri. Per una società con meno di 1 anno, i criteri comprendono un capitale versato (per una succursale, i fondi di esercizio a Taiwan) di almeno 500.000 TWD o un volume d’affari di almeno 3.000.000 TWD; per una società con 1 anno o più, comprendono un volume d’affari medio dell’ultimo anno o degli ultimi 3 anni di almeno 3.000.000 TWD. Se il datore di lavoro assume 2 o più stranieri dello stesso tipo, tali stranieri e il datore di lavoro devono soddisfare le norme generali del capitolo 2 (articolo 38, comma 2). Quando si prevede che personale straniero lavori a Taiwan, deve confermarsi prima di costituire la società se il capitale previsto raggiunge la soglia applicabile.
 
-## 7. Strutture che possono convenire secondo la fase di sviluppo dell’attività
+## 6. Strutture che possono convenire secondo la fase di sviluppo dell’attività
 
 Gli scenari seguenti sono ipotetici per aiutare a riflettere; non stabiliscono che un modo sia lecito o preferibile.
 
@@ -89,9 +89,9 @@ Imprese straniere centrate sull’esportazione iniziale. Se non vi sono ancora n
 
 Imprese straniere che allargano le vendite e il sostegno tecnico a Taiwan. Se si prevede di assumere a Taiwan e continuare a gestire scorte, incassi e sostegno al cliente, conviene confrontare in concreto società controllata e succursale, e rivedere anche la responsabilità contrattuale, il modo di operare della sede, le imposte e il personale.
 
-Imprese straniere in fase di studio di mercato. Se, prima di un’organizzazione di vendite, si vogliono solo funzioni di informazione e di collegamento, un ufficio di rappresentanza può valutarsi. Se il piano reale include la vendita di scorte o il lavoro sul posto, deve confermarsi separatamente se queste attività sono permesse.
+Imprese straniere in fase di studio di mercato. Se, prima di un’organizzazione di vendite, si vogliono solo funzioni di informazione e di collegamento, un ufficio di rappresentanza può valutarsi. Quando il piano reale include la vendita di scorte o il lavoro sul posto, deve confermarsi separatamente se queste attività sono permesse.
 
-## 8. Per il primo colloquio, un panorama operativo basta; non è necessario consegnare subito tutti i documenti riservati
+## 7. Per il primo colloquio, un panorama operativo basta; non è necessario consegnare subito tutti i documenti riservati
 
 Nel primo colloquio, possono riunirsi i dati di base della sede e di chi fa conferimenti, una descrizione generale del prodotto o del servizio, il flusso di operazioni previsto, i piani di personale e di impianti a Taiwan, e le condizioni di contratto e di sostegno che i clienti chiedono. Ciò che non è ancora deciso può marcarsi come «in attesa».
 

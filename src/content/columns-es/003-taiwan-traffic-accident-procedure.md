@@ -19,9 +19,9 @@ Si ocurre un accidente de tráfico (交通事故) en Taiwán, debe asegurarse pr
 
 ## Q1. ¿Puede abandonarse el lugar después del accidente?
 
-En un accidente con lesiones o muerte, el conductor debe adoptar de inmediato medidas de socorro (救護措施), avisar a la policía y conservar el vehículo y las pruebas del lugar (保全現場). El consentimiento informal de la otra parte o una simple grabación no permiten considerar que se puede abandonar el lugar sin haber completado las medidas exigidas.
+En un accidente con lesiones o muerte, el conductor debe adoptar de inmediato medidas de socorro (救護措施), avisar a la policía y conservar el vehículo y las pruebas del lugar (保全現場). El consentimiento informal de la otra parte o una simple grabación no sustituyen el socorro, la denuncia ni la conservación del lugar antes de marcharse.
 
-No obstante, en un accidente con lesiones, si todas las partes están de acuerdo, el vehículo puede desplazarse a un sitio que no obstaculice el tráfico después de marcar la posición del vehículo y las huellas del lugar. Ello no significa que esas marcas sustituyan las medidas exigidas, como el socorro y la denuncia.
+Cuando hay lesiones y todas las partes están de acuerdo, el vehículo puede desplazarse a un sitio que no obstaculice el tráfico después de marcar la posición del vehículo y las huellas del lugar. Ello no significa que esas marcas sustituyan las medidas exigidas, como el socorro y la denuncia.
 
 Si solo hay daños patrimoniales y el vehículo puede moverse, la regla es marcar la posición del vehículo y las huellas del lugar, documentarlas con fotos o vídeo y trasladar el vehículo con rapidez a un sitio seguro. Abandonar el lugar sin las medidas exigidas puede acarrear una sanción administrativa (行政處罰).
 
@@ -31,35 +31,33 @@ El artículo 185-4 del Código Penal de Taiwán (刑法) regula la responsabilid
 
 Asegure primero la seguridad personal y las señales de advertencia; si hay heridos o se necesita rescate, llame en Taiwán al 119 (ambulancia y bomberos) y, si hay un delito o una situación de seguridad urgente, al 110 (policía) o al 112 desde un teléfono móvil. Haga también la denuncia policial según las circunstancias del accidente de tráfico.
 
-Una vez asegurada la seguridad, tome fotografías de conjunto y de detalle para registrar la posición y los daños de los vehículos, las marcas viales, los semáforos y el tiempo atmosférico. Conviene no omitir los datos de contacto de testigos, la solicitud de conservación de imágenes de CCTV (監視器影像) y de la cámara de a bordo (行車紀錄器), los datos de las partes, del vehículo y del seguro, y la historia clínica (病歷). Las fotos personales son útiles, pero no sustituyen la actuación policial exigida en accidentes con lesiones o muerte.
+Una vez asegurada la seguridad, tome fotografías de conjunto y de detalle para registrar la posición y los daños de los vehículos, las marcas viales, los semáforos y el tiempo atmosférico. Conviene no omitir los datos de contacto de testigos, la solicitud de conservación de imágenes de CCTV (監視器影像) y de la cámara de a bordo (行車紀錄器), los datos de las partes, del vehículo y del seguro, y la historia clínica (病歷). Las fotos personales pueden documentar daños, pero en accidentes con lesiones o muerte no sustituyen la actuación policial exigida.
 
-En cuanto a los documentos policiales, en el lugar del accidente puede recibirse el talón de registro de las partes del accidente de tráfico (道路交通事故當事人登記聯單). Transcurridos 7 días desde la fecha del accidente puede solicitarse el croquis y las fotos del lugar (現場圖 / 現場照片); transcurridos 30 días desde la fecha del accidente puede solicitarse la tabla de análisis preliminar del accidente de tráfico (道路交通事故初步分析研判表). El momento de expedición y los requisitos de solicitud deben confirmarse de nuevo ante la autoridad policial competente.
+En el lugar del accidente puede recibirse el talón de registro de las partes del accidente de tráfico (道路交通事故當事人登記聯單). Transcurridos 7 días desde la fecha del accidente puede solicitarse el croquis y las fotos del lugar (現場圖 / 現場照片); transcurridos 30 días desde la fecha del accidente puede solicitarse la tabla de análisis preliminar del accidente de tráfico (道路交通事故初步分析研判表). El momento de expedición y los requisitos de solicitud deben confirmarse de nuevo ante la autoridad policial competente.
 
 ## Q3. Si ha sufrido lesiones, ¿qué reclamaciones y plazos deben comprobarse?
 
-El artículo 284 del Código Penal regula las lesiones por imprudencia (過失傷害) y las lesiones graves por imprudencia (過失致重傷). Como, según el artículo 287 del Código Penal, se trata de un delito perseguible a instancia de parte (告訴乃論之罪), de conformidad con el artículo 237 de la Ley de Enjuiciamiento Criminal de Taiwán (刑事訴訟法) la querella debe presentarse, en principio, dentro de los 6 meses siguientes al día en que se conoció al autor.
+Según el artículo 284 del Código Penal, las lesiones por imprudencia (過失傷害) y las lesiones graves por imprudencia (過失致重傷) quedan tipificadas como delito. Como, según el artículo 287 del Código Penal, se trata de un delito perseguible a instancia de parte (告訴乃論之罪), de conformidad con el artículo 237 de la Ley de Enjuiciamiento Criminal de Taiwán (刑事訴訟法) la querella debe presentarse, en principio, dentro de los 6 meses siguientes al día en que se conoció al autor. En materia de indemnización civil por daños (損害賠償), según el artículo 197 del Código Civil de Taiwán (民法) no puede reclamarse una vez transcurridos 2 años desde el día en que se conocieron el daño y el obligado a indemnizar, o 10 años desde el día del acto ilícito. Qué hechos influyen en la prescripción (消滅時效) debe examinarse aparte en cada asunto.
 
-En materia de indemnización civil por daños (損害賠償), según el artículo 197 del Código Civil de Taiwán (民法) no puede reclamarse una vez transcurridos 2 años desde el día en que se conocieron el daño y el obligado a indemnizar, o 10 años desde el día del acto ilícito. Qué hechos influyen en la prescripción (消滅時效) debe examinarse por separado.
-
-Quien sufre un daño por un delito puede, según el artículo 487 de la Ley de Enjuiciamiento Criminal, interponer una acción civil acumulada al proceso penal (刑事附帶民事訴訟). Mientras el proceso penal sigue en trámite, esa acción puede interponerse hasta antes de la conclusión de los alegatos orales (言詞辯論終結) de la segunda instancia, según el artículo 488 de la Ley de Enjuiciamiento Criminal, pero no puede interponerse después de la conclusión de los alegatos orales de la primera instancia y antes de interponer el recurso. Por lo general puede evitarse el pago de una tasa judicial (裁判費) independiente, pero no todos los resultados concluyen sin coste. Por ejemplo, si el asunto penal se desestima y, a petición del demandante, se remite al tribunal civil, según el artículo 503 de la Ley de Enjuiciamiento Criminal puede imponerse la tasa judicial, y deben comprobarse también las normas de remisión y procedimiento del artículo 504.
+Quien sufre un daño por un delito puede, según el artículo 487 de la Ley de Enjuiciamiento Criminal, interponer una acción civil acumulada al proceso penal (刑事附帶民事訴訟). Mientras el proceso penal sigue en trámite, esa acción puede interponerse hasta antes de la conclusión de los alegatos orales (言詞辯論終結) de la segunda instancia, según el artículo 488 de la Ley de Enjuiciamiento Criminal, pero no puede interponerse después de la conclusión de los alegatos orales de la primera instancia y antes de interponer el recurso. Por lo general puede evitarse el pago de una tasa judicial (裁判費) independiente, pero no todos los resultados concluyen sin coste. Si el asunto penal se desestima y, a petición del demandante, se remite al tribunal civil, según el artículo 503 de la Ley de Enjuiciamiento Criminal puede imponerse la tasa judicial, y deben comprobarse también las normas de remisión y procedimiento del artículo 504.
 
 La elección varía según la interrupción de la prescripción (時效中斷), el círculo de demandados, las pruebas, el seguro y la competencia. Por ello no hay un procedimiento que sea el más adecuado para todos los asuntos.
 
 ## Q4. Si hay culpa en ambas partes, ¿cómo se valoran las responsabilidades penal y civil?
 
-La responsabilidad penal solo puede apreciarse cuando se reconoce la infracción del deber de cuidado de cada uno y el nexo causal entre esa infracción y las lesiones de la otra parte. El mero hecho de que ambas partes hayan tenido culpa no hace nacer automáticamente la responsabilidad por lesiones por imprudencia.
+La responsabilidad penal solo puede apreciarse cuando se reconoce la infracción del deber de cuidado de cada uno y el nexo causal entre esa infracción y las lesiones de la otra parte. Que ambas partes hayan tenido culpa no basta, por sí solo, para tipificar lesiones por imprudencia.
 
-En el ámbito civil, según el artículo 217 del Código Civil, si el perjudicado tiene culpa que contribuyó a causar o agravar el daño (與有過失), el tribunal puede reducir o eximir la indemnización. Por ejemplo, si el daño reconocido en dólares de Taiwán (新臺幣, TWD) es TWD 1.000.000 y la culpa del perjudicado se valora en 50 %, el importe puede reducirse a TWD 500.000 antes de otros ajustes.
+En sede civil, según el artículo 217 del Código Civil, si el perjudicado tiene culpa que contribuyó a causar o agravar el daño (與有過失), el tribunal puede reducir o eximir la indemnización. Por ejemplo, si el daño reconocido en dólares de Taiwán (新臺幣, TWD) es TWD 1.000.000 y la culpa del perjudicado se valora en 50 %, el importe puede reducirse a TWD 500.000 antes de otros ajustes.
 
-El peritaje (鑑定) o la tabla de análisis preliminar pueden ser materiales importantes, pero no vinculan al tribunal de forma mecánica. El tribunal examina el conjunto de las pruebas, incluidas declaraciones, imágenes y el estado de los vehículos.
+El peritaje (鑑定) o la tabla de análisis preliminar pueden ser materiales importantes, pero no vinculan al tribunal de forma mecánica. Para decidir el caso, el tribunal examina el conjunto de las pruebas, incluidas declaraciones, imágenes y el estado de los vehículos.
 
 ## Q5. ¿Qué debe incluirse en el documento de transacción?
 
-En el documento de transacción (和解書) conviene individualizar la fecha, el lugar y las partes del accidente, y consignar el importe y el momento del pago, el tratamiento de las prestaciones del seguro, las reclamaciones incluidas y las que se reservan. También deben fijarse con claridad el tratamiento futuro, las lesiones descubiertas más tarde, la entrega de documentos como el certificado médico (診斷證明書) y la relación entre el pago y el desistimiento de la querella.
+Al redactar el documento de transacción (和解書) conviene individualizar la fecha, el lugar y las partes del accidente, y consignar el importe y el momento del pago, el tratamiento de las prestaciones del seguro, las reclamaciones incluidas y las que se reservan. También deben fijarse con claridad el tratamiento futuro, las lesiones descubiertas más tarde, la entrega de documentos como el certificado médico (診斷證明書) y la relación entre el pago y el desistimiento de la querella.
 
 La transacción (和解) del artículo 736 del Código Civil es un contrato en el que las partes se hacen concesiones recíprocas para poner fin a un litigio o evitarlo. Según el artículo 737 del Código Civil, el alcance en que se extinguen derechos también se valora solo dentro de lo que se renunció en el documento de transacción. Por ello no debe afirmarse, sin examinar el texto, que desaparecen todas las reclamaciones futuras.
 
-Si se trata de un delito perseguible a instancia de parte, según el artículo 238 de la Ley de Enjuiciamiento Criminal la querella puede desistirse hasta antes de la conclusión de los alegatos orales de la primera instancia, y una vez desistida no puede presentarse de nuevo. Sin embargo, en un delito que no es perseguible a instancia de parte, la acusación no termina automáticamente por una transacción privada, y el haber transigido no obliga siempre a desistir de la querella.
+Si se trata de un delito perseguible a instancia de parte, según el artículo 238 de la Ley de Enjuiciamiento Criminal la querella puede desistirse hasta antes de la conclusión de los alegatos orales de la primera instancia. Una vez desistida, no puede presentarse de nuevo. Sin embargo, en un delito que no es perseguible a instancia de parte, la acusación no termina automáticamente por una transacción privada. Transigir no obliga siempre a desistir de la querella.
 
 ### Fundamento oficial de Q1–Q5
 
@@ -85,13 +83,13 @@ Si se trata de un delito perseguible a instancia de parte, según el artículo 2
 
 La tabla de análisis preliminar del accidente de tráfico que elabora la policía es un análisis previo basado en los materiales del lugar. No es una sentencia, no vincula al tribunal y no fija la proporción de culpa (過失比例). Como los materiales necesarios y el alcance de la controversia varían en cada accidente, esa tabla, el peritaje legal y la revisión (覆議) no son un procedimiento automático ni una etapa obligatoria.
 
-Según las normas aplicables, la parte legitimada puede solicitar un peritaje de accidente de vehículos (車輛行車事故鑑定); el órgano que tramita el asunto puede remitirlo y la autoridad judicial puede encargarlo. La solicitud de la parte se presenta, por lo general, dentro de los 6 meses siguientes a la fecha del accidente; en asuntos ya en investigación o en juicio, el peritaje se tramita mediante encargo de la autoridad judicial y no mediante una nueva solicitud directa.
+Según las normas aplicables, la parte legitimada puede solicitar un peritaje de accidente de vehículos (車輛行車事故鑑定); el órgano que tramita el asunto puede remitirlo y la autoridad judicial puede encargarlo. La solicitud de la parte se presenta, por lo general, dentro de los 6 meses siguientes a la fecha del accidente; en asuntos ya en investigación o en juicio, el peritaje se tramita mediante encargo de la autoridad judicial. No procede entonces una solicitud directa.
 
-Si hay discrepancia con el dictamen pericial, puede pedirse una revisión, pero la revisión se limita a una vez. El dictamen pericial y el de revisión son prueba o material de referencia, y el tribunal valora de forma independiente el conjunto del expediente, incluidas declaraciones, imágenes y actas del lugar.
+Quien discrepe del dictamen pericial puede pedir revisión. La revisión queda limitada a una vez. El dictamen pericial y el de revisión sirven de prueba o material de referencia. Después el tribunal valora, de forma independiente, el conjunto del expediente, incluidas declaraciones, imágenes y actas del lugar.
 
 ## Q7. ¿Qué daños pueden reclamarse después del accidente?
 
-La reclamación basada en el artículo 184 del Código Civil presupone una lesión ilícita de un derecho, el nexo causal con el accidente y la prueba del daño. El mero hecho de que haya ocurrido un accidente no implica que se reconozcan todos los conceptos siguientes. El artículo 216 del Código Civil es el criterio para determinar el alcance del daño efectivo y del lucro cesante (所失利益).
+La reclamación basada en el artículo 184 del Código Civil presupone una lesión ilícita de un derecho, el nexo causal con el accidente y la prueba del daño. El mero hecho de que haya ocurrido un accidente no implica que se reconozcan todos los conceptos siguientes. Para el daño efectivo y el lucro cesante (所失利益), el artículo 216 del Código Civil es el criterio que determina el alcance.
 
 - Lesiones: Según el artículo 193 del Código Civil pueden examinarse los gastos médicos (醫療費用) necesarios, los gastos adicionales de la vida diaria como los de cuidados (看護費用), de transporte para tratamiento (就醫交通費) y de ayudas técnicas, así como la pérdida de ingresos (收入損失) por incapacidad laboral real y la disminución de la capacidad laboral (勞動能力減損). Según el artículo 195 del Código Civil también puede examinarse el daño moral.
 - Muerte: Según el artículo 192 del Código Civil, cuando proceda, pueden examinarse los gastos médicos anteriores al fallecimiento y los gastos de necesidades vitales incrementadas, los gastos funerarios (殯葬費) y la pérdida de alimentos (扶養利益損失) de quien tenía derecho legal a alimentos. Según el artículo 194 del Código Civil también puede examinarse el daño moral de determinados parientes.
@@ -109,7 +107,7 @@ Sin embargo, según el artículo 504 de la Ley de Enjuiciamiento Criminal, una v
 
 El certificado médico o el dictamen médico son útiles para mostrar la necesidad de cuidados, pero no son por sí solos un fundamento decisivo. Deben explicarse con datos el nexo causal con el accidente, la necesidad de cuidados, si se prestaron de hecho, el período y un importe razonable.
 
-Aunque un pariente haya prestado de hecho los cuidados sin retribución, en el asunto adecuado ello puede valorarse como daño. Sin embargo, la sola circunstancia de que los cuidados los preste un pariente no implica su reconocimiento automático; se examinan también el contenido y la duración de los cuidados y el nivel habitual de coste.
+Aunque un pariente haya prestado de hecho los cuidados sin retribución, en el asunto adecuado ello puede valorarse como daño. La sola circunstancia de que los cuidados los preste un pariente no implica su reconocimiento automático; se examinan también el contenido y la duración de los cuidados y el nivel habitual de coste.
 
 ## Q10. ¿Con qué se prueban los gastos de desplazamiento para el tratamiento?
 
@@ -141,11 +139,11 @@ La pérdida de ingresos debe probarse con datos de que, por lesiones relacionada
 
 Conviene organizar en conjunto la historia clínica, los registros de asistencia o de permiso, los datos de salario e impuestos y la confirmación del empleador. El trabajador autónomo puede presentar datos acordes con la forma de su actividad, como datos de ventas, registros de operaciones y declaraciones fiscales.
 
-La circunstancia de haber seguido trabajando o de haber percibido el salario sin variación es relevante para valorar la pérdida de ingresos del período de recuperación, pero ese hecho por sí solo no decide automáticamente la cuestión del daño por disminución de la capacidad laboral. Esa circunstancia tampoco es fundamento autónomo para valorar el daño por disminución de la capacidad laboral. El daño por disminución de la capacidad laboral se examina por separado en la Q12.
+La circunstancia de haber seguido trabajando o de haber percibido el salario sin variación es relevante para valorar la pérdida de ingresos del período de recuperación, pero ese hecho por sí solo no decide automáticamente la cuestión del daño por disminución de la capacidad laboral. Esa circunstancia tampoco es fundamento autónomo para valorar el daño por disminución de la capacidad laboral. Sobre el daño por disminución, véase la Q12.
 
 ## Q12. ¿Cómo se prueba el daño por disminución de la capacidad laboral?
 
-El daño por disminución de la capacidad laboral se distingue de los ingresos realmente reducidos durante el período de recuperación de la Q11. Según los artículos 193 y 216 del Código Civil se examinan en conjunto el nexo causal con el accidente, el menoscabo funcional persistente (持續功能障礙), la profesión y las aptitudes del perjudicado, los ingresos que habitualmente pueden esperarse y el fundamento y la prueba relativos al período de capacidad laboral.
+El daño por disminución de la capacidad laboral se distingue de la pérdida de ingresos del período de recuperación analizada en la Q11. Según los artículos 193 y 216 del Código Civil se examinan en conjunto el nexo causal con el accidente, el menoscabo funcional persistente (持續功能障礙), la profesión y las aptitudes del perjudicado, los ingresos que habitualmente pueden esperarse y el fundamento y la prueba relativos al período de capacidad laboral.
 
 El que el salario actual se mantenga sin variación no excluye automáticamente la reclamación. A la inversa, el importe del daño tampoco se fija de forma mecánica solo con el porcentaje de discapacidad o con el salario actual.
 
@@ -157,25 +155,25 @@ Cuando el cálculo se hace en un capital único, puede considerarse la deducció
 
 La indemnización por daño moral por perjuicios no patrimoniales se valora fijando un importe adecuado cuando existe una lesión ilícita del cuerpo o de la salud, según el artículo 195 del Código Civil.
 
-El tribunal examina las circunstancias de cada asunto valorando en conjunto el contenido de las lesiones y del tratamiento, los efectos persistentes, el sufrimiento y la repercusión en la vida, la edad y la condición, las circunstancias socioeconómicas y las pruebas de las partes. Por ello ningún intervalo fijo determina el resultado.
+En cada asunto el tribunal valora en conjunto las lesiones y el tratamiento, los efectos persistentes, el sufrimiento y la repercusión en la vida, la edad y la condición, las circunstancias socioeconómicas y las pruebas de las partes. Ningún baremo numérico fijo sustituye esa valoración.
 
 ## Q14. Si el accidente ocurre durante el trabajo, ¿puede exigirse también responsabilidad civil al empleador?
 
-El artículo 188 del Código Civil regula el caso en que el empleado causa un daño ilícito a otro mientras desempeña sus funciones. La conexión con las funciones no se reconoce automáticamente solo por el horario de trabajo, de modo que debe comprobarse el vínculo entre el trabajo real y el accidente.
+En responsabilidad del empleador, el artículo 188 del Código Civil regula el caso en que el empleado causa un daño ilícito a otro mientras desempeña sus funciones. La conexión con las funciones no se reconoce automáticamente solo por el horario de trabajo, de modo que debe comprobarse el vínculo entre el trabajo real y el accidente.
 
 El empleador puede alegar que observó la diligencia debida en la selección y supervisión del empleado, o que el daño no habría podido evitarse aun observando esa diligencia. Puede considerarse reclamar la indemnización de forma conjunta contra el empleador y el empleado. Después de indemnizar, el empleador puede repetir contra el empleado.
 
 Si el empleador prueba esos requisitos de exención y el perjudicado no obtiene la indemnización del apartado 1, el artículo 188, apartado 2, del Código Civil dispone que, a solicitud del perjudicado, el tribunal puede, teniendo en cuenta la situación económica del empleador y del perjudicado, ordenar al empleador que pague la indemnización total o parcialmente.
 
-La cuestión de a quién se dirige la reclamación civil debe distinguirse de la responsabilidad penal. La responsabilidad penal del artículo 284 del Código Penal se valora según la infracción del deber de cuidado de cada persona física y el nexo causal de esa infracción.
+La cuestión de a quién se dirige la reclamación civil debe distinguirse de la responsabilidad penal. En sede penal, el artículo 284 del Código Penal se valora según la infracción del deber de cuidado de cada persona física y el nexo causal de esa infracción.
 
 ## Q15. ¿Qué prestaciones y coberturas del seguro de automóviles deben comprobarse?
 
-La obligación de contratar según el artículo 6 de la Ley del seguro obligatorio de responsabilidad civil de automóviles (強制汽車責任保險法) recae, en principio, sobre el propietario del vehículo y, en los casos previstos, también sobre el usuario o el administrador de ese vehículo. Este régimen establece una estructura de cobertura sin culpa (無過失給付制度) para quien resulta lesionado o fallece por un accidente de automóvil, pero debe comprobarse el alcance de los pasajeros o de un tercero (第三人) ajeno al vehículo que fija la ley. La aseguradora no paga las prestaciones cuando la persona lesionada u otro reclamante causó el accidente intencionadamente o mientras cometía un delito (artículo 28).
+Según el artículo 6 de la Ley del seguro obligatorio de responsabilidad civil de automóviles (強制汽車責任保險法), la obligación de contratar recae, en principio, sobre el propietario del vehículo y, en los casos previstos, también sobre el usuario o el administrador de ese vehículo. Este régimen establece una estructura de cobertura sin culpa (無過失給付制度) para quien resulta lesionado o fallece por un accidente de automóvil, pero debe comprobarse el alcance de los pasajeros o de un tercero (第三人) ajeno al vehículo que fija la ley. La aseguradora no paga las prestaciones cuando la persona lesionada u otro reclamante causó el accidente intencionadamente o mientras cometía un delito (artículo 28).
 
-En un accidente de un solo vehículo, el conductor de ese vehículo no es, por lo general, destinatario de las prestaciones del seguro obligatorio de ese vehículo. Sin embargo, en un accidente en el que intervienen varios vehículos, hay casos en que el conductor puede reclamar prestaciones al asegurador obligatorio de otro vehículo implicado.
+Cuando solo interviene un vehículo, su conductor no es, por lo general, destinatario de las prestaciones del seguro obligatorio de ese vehículo. En accidentes con varios vehículos, hay casos en que el conductor puede reclamar prestaciones al asegurador obligatorio de otro vehículo implicado.
 
-El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es de 200.000 dólares de Taiwán (TWD); la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por cada 1 víctima y cada 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
+El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. Para lesiones, el límite de los gastos médicos razonables y necesarios es de 200.000 dólares de Taiwán (TWD); la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por cada 1 víctima y cada 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
 
 El seguro de responsabilidad civil frente a terceros (第三人責任險), el seguro de lesiones del conductor (駕駛人傷害險) y el seguro de daños del vehículo propio (車體損失險) son productos voluntarios de carácter contractual. La cobertura real varía según el asegurado, el límite, la franquicia (自負額), las exclusiones, la culpa y las demás condiciones de la póliza, de modo que la póliza y las condiciones deben comprobarse caso por caso.
 
@@ -195,7 +193,7 @@ El seguro de responsabilidad civil frente a terceros (第三人責任險), el se
 - [Baremo de prestaciones del seguro obligatorio de responsabilidad civil de automóviles](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contrato tipo de seguro de automóvil de uso particular de la Comisión de Supervisión Financiera (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Después del accidente, ¿puede dejarse todo en manos de la aseguradora?
+## Q16. Después del accidente, ¿puede dejarse todo en manos de la aseguradora?
 
 ​
 
@@ -219,7 +217,7 @@ También puede surgir un conflicto de intereses entre la aseguradora y la parte,
 
 ​
 
-Por ello no conviene encomendar todo el litigio a la aseguradora.
+No conviene encomendar todo el litigio a la aseguradora.
 
 ​
 
@@ -231,7 +229,7 @@ Si se encomienda a la aseguradora, debe seguirse de forma continua el proceso de
 
 ​
 
-Q17. ¿Cuál es la responsabilidad penal por lesiones por imprudencia del causante de un accidente de tráfico?
+## Q17. ¿Cuál es la responsabilidad penal por lesiones por imprudencia del causante de un accidente de tráfico?
 
 ​
 
@@ -255,7 +253,7 @@ En algunas sentencias por lesiones graves por imprudencia se ha impuesto una pen
 
 ​
 
-Q18. Si se transige con la otra parte, ¿puede desistirse de la querella penal?
+## Q18. Si se transige con la otra parte, ¿puede desistirse de la querella penal?
 
 ​
 
@@ -267,7 +265,7 @@ En la muerte por imprudencia no es posible desistir de la querella; no obstante,
 
 ​
 
-En algunos casos el tribunal puede acordar la suspensión de la pena (緩刑); no es una promesa de evitar la prisión.
+Aun así, en algunos casos el tribunal puede acordar la suspensión de la pena (緩刑), pero no puede darse por segura.
 
 ​
 
@@ -275,7 +273,7 @@ En algunos casos el tribunal puede acordar la suspensión de la pena (緩刑); n
 
 ​
 
-Q19. Si se abandona el lugar después del accidente, ¿se configura siempre el delito penal de fuga?
+## Q19. Si se abandona el lugar después del accidente, ¿se configura siempre el delito penal de fuga?
 
 ​
 
@@ -283,7 +281,7 @@ No necesariamente.
 
 ​
 
-El presupuesto de la fuga del lugar del accidente (肇事逃逸) es que alguien haya resultado lesionado o muerto.
+Un requisito de la fuga del lugar del accidente (肇事逃逸) es que alguien haya resultado lesionado o muerto.
 
 ​
 
@@ -295,7 +293,7 @@ Si solo hay daños en el vehículo, no se considera fuga.
 
 ​
 
-Q20. ¿Cómo se busca un abogado para un accidente de tráfico?
+## Q20. ¿Cómo se busca un abogado para un accidente de tráfico?
 
 ​
 
@@ -303,7 +301,7 @@ Como los accidentes de tráfico son asuntos muy frecuentes, un abogado litigante
 
 ​
 
-Lo importante entonces es la minuciosidad y la honestidad del abogado.
+Importan la minuciosidad y la honestidad del abogado.
 
 ​
 
@@ -359,7 +357,7 @@ Por ello este punto no debe pasarse por alto en absoluto, y conviene consultar c
 
 ​
 
-Para otras preguntas, utilice la página Contacto; no se promete un plazo de respuesta.
+Para otras preguntas, utilice la página Contacto. No se promete un plazo de respuesta.
 
 ​
 

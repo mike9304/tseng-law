@@ -21,7 +21,7 @@ Se si verifica un incidente stradale (交通事故) a Taiwan, si deve prima assi
 
 In un incidente con ferite o morte, il conducente deve adottare subito misure di soccorso (救護措施), avvisare la polizia e conservare il veicolo e le prove del posto (保全現場). Il consenso informale dell’altra parte o una semplice registrazione non permettono di considerare che si possa abbandonare il posto senza aver concluso le misure esigite.
 
-Tuttavia, in un incidente con ferite, se tutte le parti sono d’accordo, il veicolo può essere spostato in un sito che non ostacoli la circolazione dopo aver marcato la posizione del veicolo e le tracce del posto. Ciò non significa che tali marche sostituiscano le misure esigite, quali il soccorso e la comunicazione.
+In un incidente con ferite, se tutte le parti sono d’accordo, il veicolo può essere spostato in un sito che non ostacoli la circolazione dopo aver marcato posizione e tracce del posto. Le marche non sostituiscono soccorso e comunicazione.
 
 Se vi sono solo danni patrimoniali e il veicolo può essere spostato, la regola è marcare la posizione del veicolo e le tracce del posto, documentarli con fotografie o video e trasferire il veicolo rapidamente in un sito sicuro. Abbandonare il posto senza le misure esigite può comportare una sanzione amministrativa (行政處罰).
 
@@ -43,7 +43,7 @@ In materia di risarcimento civile dei danni (損害賠償), secondo l’articolo
 
 Chi subisce un danno in virtù di un reato può, secondo l’articolo 487 del Codice di procedura penale, formare un’azione civile accessoria al procedimento penale (刑事附帶民事訴訟). Mentre il procedimento penale è in corso, questa azione può essere formata fino a prima della chiusura del dibattimento orale (言詞辯論終結) del grado 2, secondo l’articolo 488 del Codice di procedura penale, ma non può essere formata dopo la chiusura del dibattimento orale del primo grado e prima della proposizione dell’impugnazione. In generale, il pagamento di spese giudiziarie (裁判費) distinte può essere evitato, ma non tutti i risultati si concludono senza costo. Per esempio, se il procedimento penale viene respinto e, a domanda dell’attore, rimesso al tribunale civile, secondo l’articolo 503 del Codice di procedura penale le spese possono essere imposte, e devono anche verificarsi le regole di rinvio e di procedura dell’articolo 504.
 
-La scelta varia secondo l’interruzione della prescrizione (時效中斷), la cerchia dei convenuti, le prove, l’assicurazione e la competenza. Non esiste quindi una procedura che convenga a tutti i casi.
+La scelta varia secondo l’interruzione della prescrizione (時效中斷), la cerchia dei convenuti, le prove, l’assicurazione e la competenza. Non esiste una procedura unica.
 
 ## Q4. Se vi è colpa da parte a parte, come si valutano le responsabilità penale e civile?
 
@@ -57,9 +57,9 @@ La perizia (鑑定) o il quadro di analisi preliminare possono essere documenti 
 
 Nell’atto di transazione (和解書), conviene individualizzare la data, il luogo e le parti dell’incidente, e annotare l’importo e il momento del pagamento, il trattamento delle prestazioni di assicurazione, le pretese incluse e quelle che restano riservate. Si deve anche fissare chiaramente il trattamento futuro, le lesioni scoperte più tardi, la consegna di documenti quali il certificato medico (診斷證明書) e il rapporto tra il pagamento e la rinuncia alla querela.
 
-La transazione (和解) dell’articolo 736 del Codice civile è un contratto nel quale le parti cedono reciprocamente per porre fine a una lite o evitarla. Secondo l’articolo 737 del Codice civile, l’estensione nella quale i diritti si estinguono si valuta anche solo nei limiti di ciò che è stato abbandonato nell’atto di transazione. Non si deve quindi affermare, senza esaminare il testo, che tutte le pretese future scompaiono.
+Secondo l’articolo 736 del Codice civile, la transazione (和解) è un contratto nel quale le parti cedono reciprocamente per porre fine a una lite o evitarla. L’articolo 737 del Codice civile fissa che l’estensione nella quale i diritti si estinguono si valuta anche solo nei limiti di ciò che è stato abbandonato nell’atto di transazione. Non si deve quindi affermare, senza esaminare il testo, che tutte le pretese future scompaiono.
 
-Se si tratta di un reato perseguibile a querela, secondo l’articolo 238 del Codice di procedura penale la querela può essere ritirata fino a prima della chiusura del dibattimento orale del primo grado, e una volta ritirata non può essere presentata di nuovo. Tuttavia, in un reato che non è perseguibile a querela, l’accusa non termina automaticamente per una transazione privata, e il fatto di avere transatto non obbliga sempre a rinunciare alla querela.
+Se si tratta di un reato perseguibile a querela, secondo l’articolo 238 del Codice di procedura penale la querela può essere ritirata fino a prima della chiusura del dibattimento orale del primo grado, e una volta ritirata non può essere presentata di nuovo. Nei reati non perseguibili a querela, una transazione privata non chiude automaticamente l’accusa; aver transatto non obbliga sempre a rinunciare alla querela.
 
 ### Fondamenti ufficiali di Q1–Q5
 
@@ -83,11 +83,11 @@ Se si tratta di un reato perseguibile a querela, secondo l’articolo 238 del Co
 
 ## Q6. Come è determinata la responsabilità dell’incidente?
 
-Il quadro di analisi preliminare dell’incidente stradale stabilito dalla polizia è un’analisi previa fondata sui documenti del posto. Non è un giudizio, non vincola il tribunale e non fissa la proporzione di colpa (過失比例). Poiché i documenti necessari e l’estensione della controversia variano secondo l’incidente, questo quadro, la perizia legale e il riesame (覆議) non sono né una procedura automatica né una tappa obbligatoria.
+La polizia redige un quadro di analisi preliminare dell’incidente stradale, analisi previa fondata sui documenti del posto. Non è un giudizio. Essa non vincola il tribunale e non fissa la proporzione di colpa (過失比例). Documenti richiesti e portata della lite cambiano con l’incidente: quadro, perizia legale e riesame (覆議) non sono né automatici né obbligatori.
 
-Secondo le regole applicabili, la parte legittimata può chiedere una perizia di incidente di veicoli (車輛行車事故鑑定); l’organo che tratta il caso può trasmetterla e l’autorità giudiziaria può ordinarla. La domanda della parte si presenta, di regola, nei 6 mesi successivi alla data dell’incidente; nei casi già sottoposti a inchiesta o a giudizio, la perizia si svolge per ordine dell’autorità giudiziaria e non per una nuova domanda diretta.
+Chi è legittimato può, secondo le regole applicabili, chiedere una perizia di incidente di veicoli (車輛行車事故鑑定); l’organo che tratta il caso può trasmetterla e l’autorità giudiziaria può ordinarla. La domanda della parte si presenta, di regola, nei 6 mesi successivi alla data dell’incidente; nei casi già sottoposti a inchiesta o a giudizio, la perizia si svolge per ordine dell’autorità giudiziaria e non per una nuova domanda diretta.
 
-In caso di disaccordo con il parere di perizia, un riesame può essere chiesto, ma il riesame si limita a una sola volta. Il parere di perizia e quello di riesame sono una prova o un pezzo di riferimento, e il tribunale valuta in modo indipendente l’insieme del processo, comprese dichiarazioni, immagini e verbali del posto.
+In caso di disaccordo con il parere di perizia, un riesame può essere chiesto una sola volta. Ciascun parere di perizia o di riesame è una prova o un pezzo di riferimento, e il tribunale valuta in modo indipendente l’insieme del processo, comprese dichiarazioni, immagini e verbali del posto.
 
 ## Q7. Quali danni si possono pretendere dopo l’incidente?
 
@@ -109,7 +109,7 @@ Tuttavia, secondo l’articolo 504 del Codice di procedura penale, una volta rim
 
 Il certificato medico o il parere medico sono utili per mostrare la necessità di assistenza, ma non sono da soli un fondamento decisivo. Si deve spiegare con documenti il nesso di causalità con l’incidente, la necessità di assistenza, se è stata effettivamente prestata, la durata e un importo ragionevole.
 
-Anche se un familiare ha effettivamente prestato l’assistenza senza remunerazione, nel caso appropriato ciò può essere valutato come un danno. Tuttavia, la sola circostanza che l’assistenza sia prestata da un familiare non implica il suo riconoscimento automatico; il contenuto e la durata dell’assistenza, nonché il livello abituale di costo, sono esaminati anch’essi.
+Anche se un familiare ha prestato assistenza senza remunerazione, nel caso appropriato ciò può contare come danno. L’assistenza familiare non viene riconosciuta automaticamente: si esaminano contenuto, durata e livello abituale di costo.
 
 ## Q10. Perché si provano le spese di spostamento per il trattamento?
 
@@ -137,15 +137,15 @@ Le ricevute, i registri di tariffa, i registri di itinerario e i documenti clini
 
 ## Q11. Come si prova la perdita di redditi durante il periodo di trattamento e di ristabilimento?
 
-La perdita di redditi deve essere provata con documenti che stabiliscano che, in ragione di lesioni legate all’incidente, il lavoro è stato totale o parzialmente impossibile durante il periodo di ristabilimento e che, in conseguenza, vi è stata una riduzione reale di redditi. Il certificato medico o la raccomandazione di riposo sono un punto di partenza importante, ma da soli non bastano perché la pretesa sia riconosciuta.
+Chi chiede il risarcimento deve provare la perdita di redditi con documenti che stabiliscano che, in ragione di lesioni legate all’incidente, il lavoro è stato totale o parzialmente impossibile durante il periodo di ristabilimento e che, in conseguenza, vi è stata una riduzione reale di redditi. Il certificato medico o la raccomandazione di riposo sono un punto di partenza importante, ma da soli non bastano perché la pretesa sia riconosciuta.
 
 Conviene organizzare insieme il fascicolo clinico, i registri di presenza o di licenza, i dati di salario e di imposte e la conferma del datore di lavoro. Il lavoratore indipendente può presentare dati accordati alla forma della sua attività, quali dati di vendite, registri di operazioni e dichiarazioni fiscali.
 
-La circostanza di aver continuato a lavorare o di aver percepito il salario senza variazione è pertinente per valutare la perdita di redditi del periodo di ristabilimento, ma questo fatto da solo non decide automaticamente la questione del danno per diminuzione della capacità di lavoro. Questa circostanza non è neppure un fondamento autonomo per valutare il danno per diminuzione della capacità di lavoro. Il danno per diminuzione della capacità di lavoro si esamina separatamente nella Q12.
+La circostanza di aver continuato a lavorare o di aver percepito il salario senza variazione è pertinente per valutare la perdita di redditi del periodo di ristabilimento, ma questo fatto da solo non decide automaticamente la questione del danno per diminuzione della capacità di lavoro. Questa circostanza non è neppure un fondamento autonomo per valutare il danno per diminuzione della capacità di lavoro. La diminuzione della capacità di lavoro si esamina separatamente nella Q12.
 
 ## Q12. Come si prova il danno per diminuzione della capacità di lavoro?
 
-Il danno per diminuzione della capacità di lavoro si distingue dai redditi realmente ridotti durante il periodo di ristabilimento della Q11. Secondo gli articoli 193 e 216 del Codice civile si esaminano insieme il nesso di causalità con l’incidente, il disturbo funzionale persistente (持續功能障礙), la professione e le attitudini della persona lesa, i redditi che si possono abitualmente attendere e il fondamento e la prova relativi al periodo di capacità di lavoro.
+Anche il danno da diminuzione della capacità di lavoro si distingue dai redditi realmente ridotti durante il periodo di ristabilimento della Q11. Secondo gli articoli 193 e 216 del Codice civile si esaminano insieme il nesso di causalità con l’incidente, il disturbo funzionale persistente (持續功能障礙), la professione e le attitudini della persona lesa, i redditi che si possono abitualmente attendere e il fondamento e la prova relativi al periodo di capacità di lavoro.
 
 Il fatto che il salario attuale si mantenga senza variazione non esclude automaticamente la pretesa. Al contrario, l’importo del danno non si fissa neppure in modo meccanico solo con la percentuale di invalidità o con il salario attuale.
 
@@ -163,7 +163,7 @@ Il tribunale esamina le circostanze di ciascun caso valutando nel loro insieme i
 
 L’articolo 188 del Codice civile disciplina il caso nel quale il dipendente causa un danno illecito ad altri durante l’esercizio delle sue funzioni. Il nesso con le funzioni non è riconosciuto automaticamente per il solo fatto dell’orario di lavoro, sicché si deve verificare il nesso tra il lavoro reale e l’incidente.
 
-Il datore di lavoro può allegare di aver osservato la diligenza dovuta nella selezione e nella vigilanza del dipendente, o che il danno non avrebbe potuto essere evitato anche osservando tale diligenza. Si può valutare di chiedere il risarcimento in modo congiunto contro il datore di lavoro e il dipendente. Dopo aver risarcito, il datore di lavoro può esercitare un regresso contro il dipendente.
+Quanto al datore di lavoro, esso può allegare di aver osservato la diligenza dovuta nella selezione e nella vigilanza del dipendente, o che il danno non avrebbe potuto essere evitato anche osservando tale diligenza. Si può valutare di chiedere il risarcimento in modo congiunto contro il datore di lavoro e il dipendente. Dopo aver risarcito, il datore di lavoro può esercitare un regresso contro il dipendente.
 
 Se il datore di lavoro prova queste condizioni di esenzione e la persona lesa non ottiene il risarcimento del comma 1, l’articolo 188, comma 2, del Codice civile prevede che, se la persona lesa ne fa richiesta, il tribunale possa, tenendo conto della situazione economica del datore di lavoro e della persona lesa, ordinare al datore di lavoro di pagare il risarcimento in tutto o in parte.
 
@@ -173,7 +173,7 @@ Contro chi si dirige la domanda civile di risarcimento deve distinguersi dalla r
 
 L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicurazione obbligatoria di responsabilità civile automobilistica (強制汽車責任保險法) ricade, di regola, sul proprietario del veicolo e, nei casi previsti, anche sull’utilizzatore o l’amministratore di quel veicolo. Questo regime stabilisce una struttura di copertura senza colpa (無過失給付制度) per la persona ferita o deceduta in virtù di un incidente di automobile, ma si deve verificare l’estensione dei passeggeri o di un terzo (第三人) estraneo al veicolo che la legge fissa. L’assicuratore non paga le prestazioni quando la persona ferita o un altro avente diritto ha causato l’incidente intenzionalmente o commettendo un reato (articolo 28).
 
-In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Tuttavia, in un incidente in cui intervengono più veicoli, esistono casi nei quali il conducente può chiedere le prestazioni all’assicuratore obbligatorio di un altro veicolo implicato.
+In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Se sono coinvolti più veicoli, in alcuni casi il conducente può chiedere prestazioni all’assicuratore obbligatorio di un altro veicolo coinvolto.
 
 La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti verificatisi a decorrere dal 1 luglio 2026. Il tetto delle spese mediche ragionevoli e necessarie per le ferite è di 200.000 nuovi dollari taiwanesi (TWD); la prestazione per invalidità (失能) va da 80.000 a 3.000.000 TWD secondo 15 gradi legali; la prestazione per morte è 3.000.000 TWD, e il massimo congiunto di morte, di invalidità e delle spese mediche per ogni vittima e ogni incidente è 3.200.000 TWD. Agli incidenti anteriori può applicarsi la tabella precedente.
 
@@ -195,173 +195,35 @@ L’assicurazione di responsabilità civile verso terzi (第三人責任險), l�
 - [Tabella di prestazioni dell’assicurazione obbligatoria di responsabilità civile automobilistica](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contratto-tipo di assicurazione automobilistica di uso particolare della Commissione di vigilanza finanziaria (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Dopo l’incidente, si può lasciare tutto nelle mani dell’assicuratore?
+## Q16. Dopo l’incidente, si può lasciare tutto nelle mani dell’assicuratore?
 
-​
+Gli assicuratori trattano spesso con fretta gli aspetti emotivi del sinistro e possono trascurare gesti utili verso l’altra parte, come scuse o segni di conforto. Per l’assicuratore, aggiungere 500.000 o 1.000.000 TWD in un singolo fascicolo pesa poco sull’utile complessivo; ma per la parte nell’incidente quella somma può determinare se vi sono o no precedenti penali (前科).
 
-Gli assicuratori non trattano frequentemente in modo sufficiente l’aspetto emotivo delle parti nell’incidente.
+Può sorgere anche un conflitto di interessi: l’assicuratore gestisce molte pratiche e difficilmente dedica a ciascuna il tempo che la parte vorrebbe. Non raccomando quindi di affidare l’insieme della lite all’assicuratore. Se si affida il processo all’assicuratore, si deve seguire in modo continuo il processo di istruzione ed esaminare con cura i documenti delle 2 parti.
 
-​
+## Q17. Qual è la responsabilità penale per lesioni colpose dell’autore di un incidente stradale?
 
-Possono trascurare parti importanti che concernono i sentimenti dell’altra parte, quali le scuse e i segni di conforto.
+In caso di lesioni colpose, alcune sentenze hanno inflitto circa tre mesi di pena. Non esiste un esito tipico né garantito. Se la pena detentiva è convertita in multa (易科罰金), l’articolo 41, comma 1, del Codice penale fissa 1.000, 2.000 o 3.000 TWD al giorno: a 1.000 TWD al giorno, tre mesi equivalgono a 90.000 TWD. Per le lesioni colpose gravi compaiono in giurisprudenza pene di 4 mesi; per l’omicidio colposo (過失致死) di 6 mesi.
 
-​
+## Q18. Se si transige con l’altra parte, si può rinunciare alla querela penale?
 
-Per l’assicuratore, spendere 500.000 o 1.000.000 TWD supplementari in un caso concreto non influisce in modo importante sull’utile globale dell’assicuratore, ma per la parte nell’incidente quella somma può determinare se vi sono o no precedenti penali (前科).
+Lesioni colpose e lesioni colpose gravi sono reati perseguibili a querela (告訴乃論之罪). La querela può essere rinunciata. Nell’omicidio colposo la rinuncia non è ammessa. Una transazione con la famiglia può tuttavia spingere il tribunale ad alleggerire la pena. In alcuni casi si può ottenere la sospensione condizionale della pena (緩刑): non è promessa né automatica.
 
-​
+## Q19. Se si abbandona il posto dopo l’incidente, il reato di fuga è sempre costituito?
 
-Un conflitto di interessi tra l’assicuratore e la parte può anche sorgere, e poiché l’assicuratore deve gestire numerose pratiche, gli è difficile dedicare un tempo sufficiente a ciascuno.
+Non necessariamente. La fuga dal posto dell’incidente (肇事逃逸) presuppone feriti o un decesso. Solo danni al veicolo non integrano quella fuga.
 
-​
-
-​
-
-​
-
-Non raccomando quindi di affidare l’insieme della lite all’assicuratore.
-
-​
-
-Se si affida il processo all’assicuratore, si deve seguire in modo continuo il processo di istruzione ed esaminare con cura i documenti delle 2 parti.
-
-​
-
-​
-
-​
-
-Q17. Qual è la responsabilità penale per lesioni colpose dell’autore di un incidente stradale?
-
-​
-
-In caso di lesioni colpose, in alcune sentenze è stata inflitta una pena di circa 3 mesi; non esiste un esito tipico né garantito.
-
-​
-
-Se la pena detentiva è convertita in multa (易科罰金), l’articolo 41, comma 1, del Codice penale fissa la conversione in 1.000 TWD, 2.000 o 3.000 TWD per giorno; calcolato a 1.000 TWD per giorno, una pena di 3 mesi equivale a 3 × 30 × 1.000 TWD = 90.000 TWD.
-
-​
-
-​
-
-​
-
-Per le lesioni colpose gravi, in alcune sentenze è stata inflitta una pena di 4 mesi, e per l’omicidio colposo (過失致死) in alcune sentenze è stata inflitta una pena di 6 mesi.
-
-​
-
-​
-
-​
-
-Q18. Se si transige con l’altra parte, si può rinunciare alla querela penale?
-
-​
-
-Le lesioni colpose e le lesioni colpose gravi sono un reato perseguibile a querela (告訴乃論之罪), sicché si può rinunciare alla querela penale.
-
-​
-
-Nell’omicidio colposo, la rinuncia alla querela non è possibile; tuttavia, se si transige con la famiglia dell’altra parte, il tribunale può alleggerire la pena.
-
-​
-
-In alcuni casi può essere concessa la sospensione condizionale della pena (緩刑); non è una promessa e non è un esito assicurato.
-
-​
-
-​
-
-​
-
-Q19. Se si abbandona il posto dopo l’incidente, il reato di fuga è sempre costituito?
-
-​
-
-Non necessariamente.
-
-​
-
-La condizione previa della fuga dal posto dell’incidente (肇事逃逸) è che qualcuno sia stato ferito o sia deceduto.
-
-​
-
-Se vi sono solo danni sul veicolo, ciò non è considerato una fuga.
-
-​
-
-​
-
-​
-
-Q20. Come si cerca un’avvocata o un avvocato per un incidente stradale?
-
-​
+## Q20. Come si cerca un’avvocata o un avvocato per un incidente stradale?
 
 Poiché gli incidenti stradali sono eventi molto frequenti, un’avvocata o un avvocato che tratta abitualmente il contenzioso e ha accumulato alcuni anni di esperienza pratica può seguire un caso di incidente stradale.
 
-​
-
 L’importante allora è la cura e l’onestà dell’avvocato.
 
-​
+Serve una valutazione realistica di ogni voce di danno, una spiegazione chiara della situazione e un avvertimento sui rischi se non si transige. Diffidate di chi gonfia il caso e invita a litigare su tutti i fronti solo per accettare il mandato.
 
-È importante che l’avvocata o l’avvocato esamini con attenzione tutte le voci del danno e spieghi in modo realistico che cosa si può chiedere.
-
-​
-
-Inoltre, l’avvocato deve spiegare chiaramente la situazione della parte e avvertire chiaramente dei rischi prevedibili se non si transige.
-
-​
-
-Si deve diffidare dell’avvocato che gonfia il caso e sostiene che non si deve transigere e che si deve litigare fino alla fine sul piano civile e penale, solo per accettare il mandato.
-
-​
-
-​
-
-​
-
-Qui si chiudono le domande e risposte sugli incidenti stradali.
-
-​
-
-​
-
-​
-
-Dopo aver seguito numerosi incidenti stradali, desidero segnalare un punto importante.
-
-​
-
-In virtù delle ferite o della morte della vittima, questa o la sua famiglia subisce un dolore fisico e psichico.
-
-​
-
-L’autore non si preoccupa frequentemente di telefonare per prendere notizie della vittima né di visitarla, e numerosi autori pensano che l’assicuratore regolerà tutto e non appaiono. In questi casi la vittima non vi percepisce né pentimento né sincerità.
-
-​
-
-​
-
-​
-
-La vittima resta così molto ferita ed entra in collera, sicché frequentemente non cede sull’importo della negoziazione, o chiede un sequestro conservativo (假扣押) e prosegue il sequestro dei beni dell’altra parte fino alla fine.
-
-​
-
-Questo punto non deve quindi assolutamente essere trascurato, e conviene consultare un’avvocata o un avvocato secondo le circostanze.
-
-​
-
-​
-
-​
+Qui si chiudono le domande e risposte sugli incidenti stradali. Dopo aver seguito numerosi incidenti stradali, desidero segnalare un punto importante. In virtù delle ferite o della morte della vittima, questa o la sua famiglia subisce un dolore fisico e psichico. L’autore non si preoccupa frequentemente di telefonare per prendere notizie della vittima né di visitarla, e numerosi autori pensano che l’assicuratore regolerà tutto e non appaiono; in questi casi la vittima non vi percepisce né pentimento né sincerità. La vittima resta così molto ferita ed entra in collera, sicché frequentemente non cede sull’importo della negoziazione, o chiede un sequestro conservativo (假扣押) e prosegue il sequestro dei beni dell’altra parte fino alla fine. Questo punto non deve quindi assolutamente essere trascurato, e conviene consultare un’avvocata o un avvocato secondo le circostanze.
 
 Per altre domande utilizzi la pagina dei contatti e indichi la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.
-
-​
 
 Wei Tseng (曾雋崴), avvocata a Taiwan.
 

@@ -21,15 +21,15 @@ faq:
 
 Quando as operações com clientes taiwaneses começam, a sede no estrangeiro pode receber diversas exigências: tratar orçamentos e contratos em Taiwan, deter um stock de substituição de urgência ou afetar pessoal de instalação e de manutenção. É então fácil perguntar primeiro: «Basta constituir uma sociedade em Taiwan para o resolver?»
 
-O que convém esclarecer primeiro é quem se ocupa de quê em Taiwan. A estrutura a avaliar muda segundo a sede estrangeira continuar a assinar os contratos de venda, uma sociedade taiwanesa comprar e revender, ou o pessoal local fornecer só o apoio técnico.
+Antes convém esclarecer quem faz o quê em Taiwan. A estrutura a avaliar muda segundo a sede estrangeira continuar a assinar os contratos de venda, uma sociedade taiwanesa comprar e revender, ou o pessoal local fornecer só o apoio técnico.
 
 Este texto é uma explicação geral para as empresas estrangeiras de materiais, de componentes e de equipamentos de semicondutores que concebem a estrutura de entrada em Taiwan. Os cenários e pontos de controlo seguintes são exemplos hipotéticos e propostas de avaliação, não um mandato real de uma empresa concreta nem uma exigência de constituição uniforme. Impostos, controlo das exportações, autorizações por produto e classificação do investidor exigem ainda uma análise em separado.
 
 ## 1. Esclarecer a divisão das operações e do comércio antes de escolher a forma de inscrição
 
-Suponha-se que um fabricante estrangeiro de componentes de precisão vende a clientes taiwaneses. No início a sede expede diretamente, mas o cliente pede armazenar peças de substituição em Taiwan e um apoio de engenheiros no local. Um endereço não basta: precisa-se de alguém que possa vender, importar, armazenar, contratar, fornecer um apoio técnico e assumir a responsabilidade.
+Suponha-se que um fabricante estrangeiro de componentes de precisão vende a clientes taiwaneses. No início a sede expede diretamente, mas o cliente pede armazenar peças de substituição em Taiwan e um apoio de engenheiros no local. Um endereço não basta. Precisa-se de alguém que possa vender, importar, armazenar, contratar, fornecer um apoio técnico e assumir a responsabilidade.
 
-Antes de decidir a estrutura de entrada, a sede pode esclarecer internamente:
+A sede pode esclarecer internamente, antes de decidir a estrutura de entrada:
 
 | Ponto operacional | Perguntas a esclarecer primeiro |
 |---|---|
@@ -45,9 +45,9 @@ Sobretudo se o vendedor do contrato de venda não for a empresa que fornece o ap
 
 ## 2. Distinção entre subsidiária, sucursal e escritório de representação de uma sociedade estrangeira em Taiwan
 
-Ao planear a entrada, a empresa de semicondutores deve separar que presença se estabelece em Taiwan e como se organizam as vendas e o serviço. O primeiro ponto concerne a personalidade jurídica, as exigências de inscrição e o campo de atividade; o segundo, o modo de operar, as faculdades e a partilha de responsabilidade.
+Ao planear a entrada, a empresa de semicondutores deve separar que presença se estabelece em Taiwan e como se organizam as vendas e o serviço. No plano jurídico entram personalidade jurídica, as exigências de inscrição e o campo de atividade; no plano operativo, modo de operar, faculdades e repartição de responsabilidades.
 
-A diferença principal entre uma subsidiária taiwanesa e uma sucursal taiwanesa de uma sociedade estrangeira é saber se tem uma personalidade jurídica distinta da sociedade-mãe ou da sede. A distribuição e a agência são modalidades contratuais, e não devem confundir-se com a forma societária.
+Entre subsidiária taiwanesa e sucursal de sociedade estrangeira, a linha passa por ter ou não personalidade jurídica distinta da sociedade-mãe ou da sede. Por sua vez, a distribuição e a agência são modalidades contratuais que não devem confundir-se com a forma societária.
 
 | Estrutura | Distinção de base | O que convém confirmar primeiro |
 |---|---|---|
@@ -69,29 +69,29 @@ O capital divide-se em ações. Em princípio exigem-se 2 promotores (發起人)
 
 ## 4. Os procedimentos de sucursal e de subsidiária diferem; só a subsidiária passa pelo exame do Departamento de Revisão dos Investimentos
 
-Quando uma sociedade estrangeira constitui uma subsidiária taiwanesa, o nome verifica-se em princípio de antemão e uma autorização de investimento é pedida ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司). Depois da aprovação, os fundos são transferidos, o montante do investimento é determinado e um perito contabilista (會計師) verifica o capital, depois a constituição e o registo fiscal concluem-se. Depois de pedir o registo da constituição, a sociedade deve participar nos cursos sobre direitos laborais (勞動權益講習) organizados por autoridades públicas de qualquer nível ou pelas organizações sem fins lucrativos por elas designadas (artigo 387-1 da lei taiwanesa sobre as sociedades, 公司法, em vigor desde junho de 2026).
+Quando uma sociedade estrangeira constitui uma subsidiária taiwanesa, o nome verifica-se em princípio de antemão e uma autorização de investimento é pedida ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司). Depois da aprovação, os fundos são transferidos, o montante do investimento é determinado e um perito contabilista (會計師) verifica o capital, depois a constituição e o registo fiscal concluem-se. Após o pedido de registo da constituição, a sociedade deve participar nos cursos sobre direitos laborais (勞動權益講習) organizados por autoridades públicas de qualquer nível ou pelas organizações sem fins lucrativos por elas designadas (artigo 387-1 da lei taiwanesa sobre as sociedades, 公司法, em vigor desde junho de 2026).
 
-Em contrapartida, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento do Departamento de Revisão dos Investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Continuam a ser necessárias a verificação prévia do nome, a transferência do capital de exploração e a verificação do capital, bem como o registo fiscal; o calendário é em geral mais curto.
+Em contrapartida, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento do Departamento de Revisão dos Investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Continuam a ser necessárias a verificação prévia do nome, a transferência do capital de exploração e a verificação do capital, bem como o registo fiscal. O calendário é em geral mais curto.
 
-O que precede é uma proposta de conceção contratual. Dispor de uma forma concreta não torna a operação lícita e não evita os litígios.
+Aquilo que precede é uma proposta de conceção contratual. Dispor de uma forma concreta não torna a operação lícita e não evita os litígios.
 
 ## 5. A inscrição societária e o trabalho lícito de um engenheiro não são a mesma coisa
 
 Concluir a inscrição em Taiwan não implica que o pessoal da sede estrangeira possa trabalhar automaticamente em Taiwan. Um estrangeiro que trabalha em Taiwan precisa de uma autorização de trabalho lícita e, para uma estadia mais longa, de um título de residência. Em princípio o empregador pede a autorização de trabalho do trabalhador estrangeiro, e o próprio estrangeiro pede à Administração da imigração do Ministério do Interior (內政部移民署) o título de residência correspondente.
 
-É relativamente mais fácil obter a autorização de trabalho para um gerente da subsidiária (sociedade com investimento autorizado em que os estrangeiros detêm mais de um terço das ações) ou da sucursal taiwanesa de uma sociedade estrangeira. Mesmo ao contratar o primeiro estrangeiro, o empregador deve contudo cumprir um dos critérios do artigo 39 das Normas de qualificação e de apreciação do trabalho de estrangeiros. Para uma sociedade com menos de 1 ano, os critérios incluem um capital realizado (no caso de uma sucursal, fundos de exploração em Taiwan) de pelo menos TWD 500.000 ou um volume de negócios de pelo menos TWD 3.000.000; para uma sociedade com 1 ano ou mais, incluem um volume de negócios médio do último ano ou dos últimos 3 anos de pelo menos TWD 3.000.000. Se o empregador contratar 2 ou mais estrangeiros do mesmo tipo, esses estrangeiros e o empregador devem cumprir as normas gerais do capítulo 2 (artigo 38, alínea 2). Se se prever que pessoal estrangeiro trabalhe em Taiwan, deve confirmar-se antes de constituir a sociedade se o capital previsto atinge o limiar aplicável.
+É relativamente mais fácil obter a autorização de trabalho para um gerente da subsidiária (sociedade com investimento autorizado em que os estrangeiros detêm mais de um terço das ações) ou da sucursal taiwanesa de uma sociedade estrangeira. Mesmo ao contratar o primeiro estrangeiro, o empregador deve contudo cumprir um dos critérios do artigo 39 das Normas de qualificação e de apreciação do trabalho de estrangeiros. Para uma sociedade com menos de 1 ano, os critérios incluem um capital realizado (no caso de uma sucursal, fundos de exploração em Taiwan) de pelo menos TWD 500.000 ou um volume de negócios de pelo menos TWD 3.000.000; para uma sociedade com 1 ano ou mais, incluem um volume de negócios médio do último ano ou dos últimos 3 anos de pelo menos TWD 3.000.000. Se o empregador contratar 2 ou mais estrangeiros do mesmo tipo, esses estrangeiros e o empregador devem cumprir as normas gerais do capítulo 2 (artigo 38, alínea 2). Quando se prever que pessoal estrangeiro trabalhe em Taiwan, deve confirmar-se antes de constituir a sociedade se o capital previsto atinge o limiar aplicável.
 
-## 7. Estruturas que podem convir segundo a etapa do comércio
+## 6. Estruturas que podem convir segundo a etapa do comércio
 
-Os cenários seguintes são hipotéticos e servem só para orientar a análise; não estabelecem que um modo seja lícito ou preferível.
+Os cenários seguintes são hipotéticos. Servem só para orientar a análise; não estabelecem que um modo seja lícito ou preferível.
 
 Empresas estrangeiras centradas na exportação inicial. Se ainda não houver nem assalariados nem stocks em Taiwan e se se quiser verificar a procura por um distribuidor independente, pode examinar-se primeiro o fornecimento, a relação de distribuição e o campo de atividade em Taiwan. Um contrato de distribuição por si só não elimina todas as questões de regulação em Taiwan.
 
 Empresas estrangeiras que alargam as vendas e o apoio técnico em Taiwan. Se se prever contratar em Taiwan e continuar a gerir stocks, cobranças e apoio ao cliente, convém comparar de forma concreta subsidiária e sucursal, e rever também a responsabilidade contratual, o modo de operar da sede, os impostos e o pessoal.
 
-Empresas estrangeiras em fase de estudo de mercado. Se, antes de uma organização de vendas, se quiserem só funções de informação e de ligação, um escritório de representação pode avaliar-se. Se o plano real incluir a venda de stocks ou o trabalho no local, deve confirmar-se em separado se estas atividades são permitidas.
+Empresas estrangeiras em fase de estudo de mercado. Se, antes de uma organização de vendas, se quiserem só funções de informação e de ligação, um escritório de representação pode avaliar-se. Caso o plano real inclua a venda de stocks ou o trabalho no local, deve confirmar-se em separado se estas atividades são permitidas.
 
-## 8. Para a primeira consulta, um panorama operacional basta; não é necessário entregar à partida todas as peças confidenciais
+## 7. Para a primeira consulta, um panorama operacional basta; não é necessário entregar à partida todas as peças confidenciais
 
 Na primeira consulta, podem reunir-se os dados de base da sede e dos investidores, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «por decidir».
 

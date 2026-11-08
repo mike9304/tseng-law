@@ -23,7 +23,7 @@ Selain menyediakan jasa potong rambut, tersedia pula berbagai layanan lain seper
 
 Yang tidak kalah penting, pelanggan dapat tetap duduk sambil dicuci rambutnya dan pada saat yang sama menerima pijat kulit kepala serta bahu dan leher.
 
-Sekali potong rambut, pelanggan sudah dapat menikmati layanan istimewa seperti itu, sehingga nilai yang diperoleh dibandingkan harganya sangat baik.
+Sekali potong rambut, pelanggan sudah dapat menikmati layanan istimewa seperti itu. Nilai yang diperoleh dibandingkan harganya sangat baik.
 
 Suasananya sangat mirip dengan jasa keramas ala Vietnam yang ada sekarang.
 
@@ -47,7 +47,7 @@ Dan alasan mengapa pada hari ini terdapat begitu banyak tempat pijat boleh jadi 
 
 Pada tahun 1980, Taiwan menetapkan dan memberlakukan Undang-Undang Kesejahteraan Penyandang Disabilitas Taiwan (殘障福利法).
 
-Pada waktu itu, sesungguhnya hanya penyandang disabilitas netra (視障者) yang boleh bekerja di bidang usaha pijat (按摩業).
+Sesungguhnya, pada waktu itu hanya penyandang disabilitas netra (視障者) yang boleh bekerja di bidang usaha pijat (按摩業).
 
 Bagi orang yang bukan penyandang disabilitas netra (非視障者), bekerja di bidang usaha ini merupakan perbuatan yang melanggar hukum.
 
@@ -57,7 +57,7 @@ Ia mempekerjakan dua karyawan yang bukan penyandang disabilitas netra untuk memb
 
 Menurut hukum yang berlaku pada waktu itu, Biro Urusan Sosial Kota Taipei (臺北市社會局) mengenakan denda administratif (罰鍰) sebesar 40.000 dolar baru Taiwan (新臺幣, TWD) kepada Tuan Lin, dan masing-masing 10.000 serta 20.000 dolar baru Taiwan kepada kedua karyawannya.
 
-Tuan Lin menilai sanksi tersebut sangat tidak wajar, sehingga ia mengajukan permohonan penafsiran konstitusi.
+Tuan Lin menilai sanksi tersebut sangat tidak wajar. Karena itu, ia mengajukan permohonan penafsiran konstitusi.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
@@ -119,10 +119,6 @@ Apa yang semula sekadar niat untuk melepas penat dengan berpijat tidak selalu be
 
 Pijat itu justru dapat berakhir menjadi trauma seumur hidup karena mengalami pelecehan seksual.
 
-Apabila Anda merasakan ketidaknyamanan atau hal yang janggal selama proses pijat di Taiwan,
+Apabila Anda merasakan ketidaknyamanan atau hal yang janggal selama proses pijat di Taiwan, Anda harus segera menyampaikannya atau meminta agar pijat dihentikan demi melindungi diri sendiri.
 
-Anda harus segera menyampaikannya atau meminta agar pijat dihentikan demi melindungi diri sendiri.
-
-Apabila Anda merasa telah mengalami pelecehan seksual,
-
-Anda harus pergi ke kantor polisi bersama teman yang Anda percayai atau bersama advokat di Taiwan (律師) untuk membuat laporan polisi.
+Apabila Anda merasa telah mengalami pelecehan seksual, Anda harus pergi ke kantor polisi bersama teman yang Anda percayai atau bersama advokat di Taiwan (律師) untuk membuat laporan polisi.

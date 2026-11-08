@@ -23,7 +23,7 @@ Además del corte, había diversos servicios como el afeitado y el cuidado facia
 
 Y lo importante era que, sentado, podía recibirse el lavado del cabello junto con un masaje del cuero cabelludo, los hombros y el cuello.
 
-Con un solo corte se disfrutaba de ese servicio de alto nivel, de modo que la relación calidad-precio era excelente.
+Con un solo corte se disfrutaba de ese servicio de alto nivel. La relación calidad-precio era excelente.
 
 Se parecía mucho al lavado de cabello al estilo vietnamita de hoy.
 
@@ -35,11 +35,11 @@ Y esas barberías de estilo taiwanés siguen siendo un recuerdo cultural distint
 
 En cualquier caso, hablando de masaje.
 
-En Taiwán hay también muchas calles de masaje.
+Taiwán tiene también muchas calles de masaje.
 
 Hay hileras de establecimientos de masaje de todo tipo.
 
-Hay masaje por personas con discapacidad visual (視障按摩), masaje de pies, masaje con aceite, masaje tailandés y otros tipos.
+Se ofrece masaje por personas con discapacidad visual (視障按摩), masaje de pies, masaje con aceite, masaje tailandés y otros tipos.
 
 En lo esencial, cualquiera puede elegir el masaje que se ajuste a su gusto para aliviar el estrés.
 
@@ -57,11 +57,11 @@ Empleó a dos trabajadores sin discapacidad visual para prestar servicios de lav
 
 Según la ley de entonces, la Oficina de Asuntos Sociales de la ciudad de Taipéi (臺北市政府社會局) impuso una multa administrativa (罰鍰) de 40.000 dólares de Taiwán (新臺幣, TWD) al señor Lin y de 10.000 y 20.000 dólares de Taiwán a los dos trabajadores, respectivamente.
 
-El señor Lin consideró esa sanción muy injusta y solicitó una interpretación constitucional.
+El señor Lin consideró esa sanción muy injusta. Solicitó una interpretación constitucional.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-En Taiwán, las personas con discapacidad visual viven una restricción marcada.
+Las personas con discapacidad visual en Taiwán viven una restricción marcada.
 
 Enfrentan muchos obstáculos en el crecimiento, la actividad, el aprendizaje y la educación, entre otros ámbitos.
 
@@ -81,7 +81,7 @@ Por ejemplo, se pensó si la norma escrita que solo permitía a las personas con
 
 También se cuestionó si esa norma había contribuido realmente a proteger el empleo y la subsistencia de las personas con discapacidad visual.
 
-Al final, en la Interpretación n.º 649 (釋字第649號) del Yuan Judicial (司法院), de 31 de octubre de 2008, los Grandes Jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje, y el precepto dejó de tener efecto el 31 de octubre de 2011, al terminar el plazo de gracia de 3 años que la interpretación concedió.
+Al final, en la Interpretación n.º 649 (釋字第649號) del Yuan Judicial (司法院), de 31 de octubre de 2008, los Grandes Jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje. La interpretación concedió un plazo de gracia de 3 años. El precepto dejó de tener efecto el 31 de octubre de 2011 al terminar ese plazo.
 
 ​
 
@@ -93,11 +93,9 @@ Cierto es que el Gobierno de Corea llegó a expedir certificados de masaje tambi
 
 Muchas personas con discapacidad visual, temiendo perder su medio de vida, organizaron protestas intensas.
 
-En la actualidad, Corea sigue permitiendo que solo las personas con discapacidad visual que han obtenido la cualificación se dediquen al oficio de masaje.
+Corea sigue permitiendo en la actualidad que solo las personas con discapacidad visual que han obtenido la cualificación se dediquen al oficio de masaje.
 
-Si alguien cobra una tarifa de masaje a otra persona sin esa cualificación,
-
-puede imponérsele, según la Ley de servicios médicos de Corea (醫療法), una pena de prisión de hasta 3 años.
+Si alguien cobra una tarifa de masaje a otra persona sin esa cualificación, puede imponérsele, según la Ley de servicios médicos de Corea (醫療法), una pena de prisión de hasta 3 años.
 
 Si una persona sin discapacidad visual explota un negocio de masaje, puede imponérsele una pena de prisión de hasta 5 años.
 

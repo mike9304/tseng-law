@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Beispielbild zur Aufzeichnung der Fahrzeugposition und der Straßenspuren am Unfallort](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Nach einem Verkehrsunfall (交通事故) in Taiwan müssen Sie zuerst die Sicherheit sichern, Meldung und Beweissicherung vornehmen und danach nacheinander Klagefristen, Fahrlässigkeit (過失) und den Umfang eines Vergleichs prüfen. Das Folgende ist eine allgemeine Reihenfolge auf Grundlage taiwanesischer Vorschriften und Hinweise öffentlicher Stellen; konkrete Haftung und Verfahren können nach dem Unfallhergang abweichen.
+Nach einem Verkehrsunfall (交通事故) in Taiwan müssen Sie zuerst für Sicherheit sorgen, Meldung und Beweissicherung vornehmen und danach nacheinander Klagefristen, Fahrlässigkeit (過失) und den Umfang eines Vergleichs prüfen. Das Folgende ist eine allgemeine Reihenfolge auf Grundlage taiwanesischer Vorschriften und Hinweise öffentlicher Stellen; konkrete Haftung und Verfahren können nach dem Unfallhergang abweichen.
 
 ## Q1. Darf man den Unfallort nach dem Unfall verlassen?
 
@@ -31,7 +31,7 @@ Artikel 185-4 des Strafgesetzbuchs (刑法) behandelt die strafrechtliche Verant
 
 Sichern Sie zuerst die persönliche Sicherheit und Warnzeichen; in Taiwan rufen Sie bei Verletzung oder Rettungsbedarf 119 (Rettung und Feuerwehr), bei einer Straftat oder eiliger Sicherheitslage 110 (Polizei) und vom Mobiltelefon 112. Melden Sie den Verkehrsunfall auch der Polizei, soweit die Lage es erfordert.
 
-Ist die Sicherheit gewährleistet, fertigen Sie Übersichts- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von Überwachungsaufnahmen (CCTV, 監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich, ersetzen aber bei Verletzungs- oder Todesunfällen nicht die erforderliche Polizeibearbeitung.
+Ist die Sicherheit gewährleistet, fertigen Sie Übersichts- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von Überwachungsaufnahmen (CCTV, 監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich. Bei Verletzungs- oder Todesunfällen ersetzen sie nicht die erforderliche Polizeibearbeitung.
 
 Polizeiunterlagen: am Unfallort können Sie den Registrierungs-Kontaktzettel der Verkehrsunfallparteien (道路交通事故當事人登記聯單) erhalten. Nach 7 Tagen ab Unfalltag können Lageplan und Unfallfotos (現場圖 / 現場照片) beantragt werden; nach 30 Tagen ab Unfalltag kann die vorläufige Analysebewertung des Straßenverkehrsunfalls (道路交通事故初步分析研判表) beantragt werden. Ausstellungszeitpunkt und Antragsvoraussetzungen prüfen Sie bitte erneut bei der zuständigen Polizeibehörde.
 
@@ -51,7 +51,7 @@ Strafrechtliche Haftung kann erst beurteilt werden, wenn Verletzung der Sorgfalt
 
 Zivilrechtlich kann das Gericht nach Artikel 217 des Zivilgesetzbuchs (民法) den Schadensersatz mindern oder erlassen, wenn der verletzten Person Fahrlässigkeit zur Entstehung oder Vergrößerung des Schadens (與有過失) zuzurechnen ist. Wurden beispielsweise anerkannte Schäden von TWD 1.000.000 (新臺幣) und die Fahrlässigkeit der verletzten Person mit 50 % bewertet, kann der Betrag vor anderen Anpassungen auf TWD 500.000 sinken.
 
-Gutachten (鑑定) oder die vorläufige Analysebewertung können wichtige Unterlagen sein, binden das Gericht aber nicht mechanisch. Das Gericht betrachtet Aussagen, Aufnahmen, Fahrzeugzustand und die gesamten Beweise gemeinsam.
+Gutachten (鑑定) oder die vorläufige Analysebewertung können wichtige Unterlagen sein. Sie binden das Gericht aber nicht mechanisch. Das Gericht betrachtet Aussagen, Aufnahmen, Fahrzeugzustand und die gesamten Beweise gemeinsam.
 
 ## Q5. Was gehört in die Vergleichsurkunde?
 
@@ -59,7 +59,7 @@ In die Vergleichsurkunde (和解書) sollten Unfallzeit, -ort und Parteien besti
 
 Der Vergleich (和解) nach Artikel 736 des Zivilgesetzbuchs (民法) ist ein Vertrag, in dem die Parteien durch gegenseitiges Nachgeben den Streit beenden oder verhindern. Nach Artikel 737 des Zivilgesetzbuchs beurteilt sich der Umfang des Rechtsverlusts nur nach dem in der Urkunde aufgegebenen Umfang. Deshalb darf nicht ohne Prüfung des Wortlauts festgestellt werden, dass alle künftigen Ansprüche erlöschen.
 
-Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bis zum Schluss der mündlichen Verhandlung der ersten Instanz zurückgenommen werden; nach Rücknahme kann nicht erneut angezeigt werden. Bei Nichtantragsdelikten endet die öffentliche Klage nicht automatisch allein durch privaten Vergleich, und ein Vergleich verpflichtet nicht unbedingt zur Rücknahme der Anzeige.
+Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bis zum Schluss der mündlichen Verhandlung der ersten Instanz zurückgenommen werden; nach Rücknahme kann nicht erneut angezeigt werden. Für Delikte ohne Antragserfordernis endet die öffentliche Klage nicht automatisch allein durch privaten Vergleich, und ein Vergleich verpflichtet nicht unbedingt zur Rücknahme der Anzeige.
 
 ### Amtliche Grundlagen Q1–Q5
 
@@ -85,7 +85,7 @@ Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bi
 
 Die vorläufige Analysebewertung des Straßenverkehrsunfalls durch die Polizei ist eine Voranalyse anhand der Unterlagen am Unfallort. Sie ist kein Gerichtsurteil, bindet das Gericht nicht und legt auch nicht den Fahrlässigkeitsanteil (過失比例) fest. Weil benötigte Unterlagen und Streitumfang je Unfall abweichen, sind diese Tabelle, gesetzliches Gutachten (鑑定) und Nachprüfung (覆議) weder automatisches Verfahren noch zwingende Stufe.
 
-Nach den einschlägigen Vorschriften können berechtigte Parteien ein Fahrzeuggutachten (車輛行車事故鑑定) beantragen, die Bearbeitungsstelle die Sache weiterleiten oder Justizorgane es in Auftrag geben. Der Antrag der Partei erfolgt üblicherweise innerhalb von 6 Monaten ab Unfalltag; bei bereits in Ermittlung oder Gerichtsverfahren befindlichen Sachen läuft das Gutachten über den Auftrag der Justizorgane, nicht über einen neuen direkten Antrag.
+Nach den einschlägigen Vorschriften können berechtigte Parteien ein Fahrzeuggutachten (車輛行車事故鑑定) beantragen. Die Bearbeitungsstelle kann die Sache weiterleiten, oder Justizorgane können es in Auftrag geben. Der Antrag der Partei erfolgt üblicherweise innerhalb von 6 Monaten ab Unfalltag; bei bereits in Ermittlung oder Gerichtsverfahren befindlichen Sachen läuft das Gutachten über den Auftrag der Justizorgane, nicht über einen neuen direkten Antrag.
 
 Gegen die Gutachtenmeinung kann Nachprüfung beantragt werden, jedoch nur einmal. Gutachten- und Nachprüfungsmeinungen sind Beweis- oder Referenzunterlagen; das Gericht bewertet den gesamten Vorgang einschließlich Aussagen, Aufnahmen und Unfallortaufzeichnungen selbstständig.
 
@@ -103,7 +103,7 @@ Bewahren Sie Belege (收據), Atteste und Krankenakten und ordnen Sie die medizi
 
 Das Hinzufügen medizinischer Unterlagen und die Änderung oder Erhöhung des Anspruchsbetrags sind zu unterscheiden. Nach Erhebung einer dem Strafverfahren beigeordneten Zivilklage entstehen Gerichtsgebühren nicht automatisch allein deshalb, weil weitere Heilbehandlungsbelege eingereicht werden.
 
-Nach Artikel 504 der Strafprozessordnung können jedoch, nachdem die Sache an die Zivilabteilung verwiesen wurde, Änderung, Hinzufügung oder Erweiterung des Anspruchs über den Umfang vor der Verweisung hinaus Kostenfragen für den überschießenden Teil auslösen. Verweisungsstufe, Einreichungszeitpunkt und Anspruchsumfang sind fallweise zu prüfen.
+Artikel 504 der Strafprozessordnung regelt hingegen, dass nach Verweisung an die Zivilabteilung Änderung, Hinzufügung oder Erweiterung des Anspruchs über den Umfang vor der Verweisung hinaus Kostenfragen für den überschießenden Teil auslösen kann. Verweisungsstufe, Einreichungszeitpunkt und Anspruchsumfang sind fallweise zu prüfen.
 
 ## Q9. Womit werden professionelle Pflege und familiäre Pflegekosten nachgewiesen?
 
@@ -115,7 +115,7 @@ Auch wenn Verwandte unentgeltlich tatsächlich gepflegt haben, kann dies in geei
 
 Fahrtkosten werden anhand der Verbindung von Behandlungsaufzeichnungen und unfallbezogener Verletzung geordnet. Route, Besuchszahl, Besuchstage, Verkehrsmittel, Tarif sowie Notwendigkeit und Angemessenheit der Nutzung können für die Beurteilung wichtig sein.
 
-Belege, Tarifaufzeichnungen, Routenaufzeichnungen und Behandlungsunterlagen sind mögliche Beweise. Taxibelege sind nicht die einzige Nachweismethode, und ihre Einreichung ist auch nicht automatisch ausreichend.
+Belege, Tarifaufzeichnungen, Routenaufzeichnungen und Behandlungsunterlagen sind mögliche Beweise. Taxibelege sind nicht die einzige Nachweismethode. Ihre Einreichung ist auch nicht automatisch ausreichend.
 
 ### Amtliche Grundlagen Q6–Q10
 
@@ -137,7 +137,7 @@ Belege, Tarifaufzeichnungen, Routenaufzeichnungen und Behandlungsunterlagen sind
 
 ## Q11. Wie wird der Verdienstausfall in der Behandlungs- und Erholungszeit nachgewiesen?
 
-Verdienstausfall ist anhand von Unterlagen nachzuweisen, dass wegen unfallbezogener Verletzung in der Erholungszeit ganz oder teilweise nicht gearbeitet werden konnte und dadurch tatsächlich Einkommen gemindert wurde. Attest oder Ruheempfehlung sind wichtiger Ausgangspunkt, machen den Anspruch aber allein nicht anerkannt.
+Der Verdienstausfall ist durch Unterlagen nachzuweisen, aus denen hervorgeht, dass wegen unfallbezogener Verletzung in der Erholungszeit ganz oder teilweise nicht gearbeitet werden konnte und dadurch tatsächlich Einkommen gemindert wurde. Ein Attest oder eine Ruheempfehlung ist ein wichtiger Ausgangspunkt, reicht aber allein nicht aus, damit der Anspruch anerkannt wird.
 
 Krankenakten, Anwesenheits- oder Urlaubsaufzeichnungen, Gehalts- und Steuerunterlagen sowie Bestätigung des Arbeitgebers sollten gemeinsam geordnet werden. Selbstständige können zu ihrer Tätigkeitsform passende Unterlagen wie Umsatzdaten, Geschäftsvorgänge und Steuererklärungen einreichen.
 
@@ -167,13 +167,13 @@ Der Arbeitgeber kann einwenden, bei Auswahl und Aufsicht der beschäftigten Pers
 
 Beweist der Arbeitgeber die vorgenannten Befreiungsvoraussetzungen, sodass die verletzte Person keinen Schadensersatz nach Absatz 1 erhält, kann das Gericht nach Artikel 188 Absatz 2 des Zivilgesetzbuchs (民法) auf Antrag der verletzten Person unter Berücksichtigung der wirtschaftlichen Lage von Arbeitgeber und verletzter Person den Arbeitgeber zum vollen oder teilweisen Ersatz verpflichten.
 
-Die Bestimmung der zivilrechtlichen Anspruchsgegner und die strafrechtliche Haftung sind zu unterscheiden. Die strafrechtliche Haftung nach Artikel 284 des Strafgesetzbuchs (刑法) beurteilt sich nach Verletzung der Sorgfaltspflicht jeder natürlichen Person und dem Kausalzusammenhang dieser Verletzung.
+Zivilrechtliche Anspruchsgegner und strafrechtliche Haftung sind zu unterscheiden. Strafrechtlich beurteilt sich die Haftung nach Artikel 284 des Strafgesetzbuchs (刑法) nach Verletzung der Sorgfaltspflicht jeder natürlichen Person und dem Kausalzusammenhang dieser Verletzung.
 
 ## Q15. Welche Leistungen und Deckungen der Kraftfahrtversicherung sind zu prüfen?
 
-Die Versicherungspflicht nach Artikel 6 des Gesetzes über die obligatorische Kraftfahrzeughaftpflichtversicherung (強制汽車責任保險法) trifft grundsätzlich den Fahrzeugeigentümer und in bestimmten Fällen auch Nutzer oder Verwalter des Fahrzeugs. Dieses System sieht eine verschuldensunabhängige Leistungsstruktur (無過失給付制度) für bei Kraftfahrzeugunfällen Verletzte oder Getötete vor; der gesetzlich bestimmte Kreis der Fahrgäste oder Dritter außerhalb des Fahrzeugs ist zu prüfen. Der Versicherer leistet nicht, wenn die verletzte Person oder ein anderer Anspruchsberechtigter den Unfall vorsätzlich oder bei der Begehung einer Straftat verursacht hat (Artikel 28).
+Artikel 6 des Gesetzes über die obligatorische Kraftfahrzeughaftpflichtversicherung (強制汽車責任保險法) begründet die Versicherungspflicht grundsätzlich beim Fahrzeugeigentümer und in bestimmten Fällen auch beim Nutzer oder Verwalter des Fahrzeugs. Dieses System sieht eine verschuldensunabhängige Leistungsstruktur (無過失給付制度) für bei Kraftfahrzeugunfällen Verletzte oder Getötete vor; der gesetzlich bestimmte Kreis der Fahrgäste oder Dritter außerhalb des Fahrzeugs ist zu prüfen. Der Versicherer leistet nicht, wenn die verletzte Person oder ein anderer Anspruchsberechtigter den Unfall vorsätzlich oder bei der Begehung einer Straftat verursacht hat (Artikel 28).
 
-Bei Alleinunfällen eines Fahrzeugs ist dessen Fahrer in der Regel nicht Leistungsempfänger der obligatorischen Versicherung dieses Fahrzeugs. Bei Unfällen mit mehreren Fahrzeugen kann der Fahrer jedoch Leistungen beim obligatorischen Versicherer eines anderen beteiligten Fahrzeugs verlangen.
+Bei Alleinunfällen eines Fahrzeugs ist dessen Fahrer in der Regel nicht Leistungsempfänger der obligatorischen Versicherung dieses Fahrzeugs. Sind mehrere Fahrzeuge beteiligt, kann der Fahrer jedoch Leistungen beim obligatorischen Versicherer eines anderen beteiligten Fahrzeugs verlangen.
 
 Der am 29. Mai 2026 geänderte Leistungsmaßstab (強制汽車責任保險給付標準) gilt für Unfälle ab dem 1. Juli 2026. Die Obergrenze erforderlicher angemessener Heilbehandlungskosten bei Verletzung beträgt TWD 200.000, Invaliditätsleistungen (失能) nach den gesetzlichen 15 Stufen TWD 80.000–3.000.000, die Todesleistung TWD 3.000.000, und der Höchstbetrag aus Tod, Invalidität und Heilbehandlungskosten je verletzter Person und je Unfall (eine Person und 1 Unfall) beträgt TWD 3.200.000. Für frühere Unfälle kann der frühere Maßstab gelten.
 
@@ -195,7 +195,7 @@ Haftpflichtversicherung gegenüber Dritten (第三人責任險), Fahrerunfallver
 - [Leistungsmaßstab der obligatorischen Kraftfahrzeughaftpflichtversicherung](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardvertrag der Finanzaufsichtskommission (金融監督管理委員會) für private Kraftfahrtversicherung](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Kann nach dem Unfall alles der Versicherungsgesellschaft überlassen werden?
+## Q16. Kann nach dem Unfall alles der Versicherungsgesellschaft überlassen werden?
 
 ​
 
@@ -211,7 +211,7 @@ Für die Versicherungsgesellschaft beeinflusst eine zusätzliche Ausgabe von TWD
 
 ​
 
-Es kann auch Interessenkonflikte zwischen Versicherungsgesellschaft und Partei geben, und weil die Versicherungsgesellschaft viele Fälle bearbeiten muss, fällt es ihr schwer, jedem Fall ausreichend Zeit zu widmen.
+Interessenkonflikte zwischen Versicherungsgesellschaft und Partei sind möglich, und weil die Versicherungsgesellschaft viele Fälle bearbeiten muss, fällt es ihr schwer, jedem Fall ausreichend Zeit zu widmen.
 
 ​
 
@@ -231,7 +231,7 @@ Es ist nicht ratsam, den gesamten Prozess der Versicherungsgesellschaft zu über
 
 ​
 
-Q17. Was ist die strafrechtliche Verantwortung des Verursachers wegen fahrlässiger Körperverletzung?
+## Q17. Was ist die strafrechtliche Verantwortung des Verursachers wegen fahrlässiger Körperverletzung?
 
 ​
 
@@ -239,7 +239,7 @@ Bei fahrlässiger Körperverletzung (過失傷害) ist in manchen Urteilen etwa 
 
 ​
 
-Bei Umwandlung in Geldstrafe bestimmt Artikel 41 Absatz 1 des Strafgesetzbuchs (刑法) die Umrechnung von TWD 1.000, TWD 2.000 oder TWD 3.000 (新臺幣) je Tag; berechnet man auf Grundlage von TWD 1.000 pro Tag, ergibt eine Strafe von 3 Monaten 3 × 30 × 1.000 = TWD 90.000.
+Wird die Freiheitsstrafe in Geld umgewandelt, bestimmt Artikel 41 Absatz 1 des Strafgesetzbuchs (刑法) die Umrechnung von TWD 1.000, TWD 2.000 oder TWD 3.000 (新臺幣) je Tag; berechnet man auf Grundlage von TWD 1.000 pro Tag, ergibt eine Strafe von 3 Monaten 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -255,7 +255,7 @@ In manchen Urteilen ist fahrlässige schwere Körperverletzung mit 4 Monaten und
 
 ​
 
-Q18. Kann die strafrechtliche Anzeige zurückgenommen werden, wenn man sich mit der Gegenseite vergleicht?
+## Q18. Kann die strafrechtliche Anzeige zurückgenommen werden, wenn man sich mit der Gegenseite vergleicht?
 
 ​
 
@@ -263,7 +263,7 @@ Fahrlässige Körperverletzung und fahrlässige schwere Körperverletzung sind A
 
 ​
 
-Fahrlässige Tötung lässt die Anzeigerücknahme nicht zu; vergleicht man sich jedoch mit der Familie der Gegenseite, kann das Gericht die Strafe mildern.
+Bei fahrlässiger Tötung lässt sich die Anzeige nicht zurücknehmen; vergleicht man sich jedoch mit der Familie der Gegenseite, kann das Gericht die Strafe mildern.
 
 ​
 
@@ -275,7 +275,7 @@ In manchen Fällen kann Strafaussetzung zur Bewährung (緩刑) in Betracht komm
 
 ​
 
-Q19. Ist bei Verlassen des Unfallorts stets die strafbare Unfallflucht erfüllt?
+## Q19. Ist bei Verlassen des Unfallorts stets die strafbare Unfallflucht erfüllt?
 
 ​
 
@@ -295,7 +295,7 @@ Bei bloßem Fahrzeugschaden gilt das nicht als Unfallflucht.
 
 ​
 
-Q20. Wie findet man einen Anwalt für Verkehrsunfälle?
+## Q20. Wie findet man einen Anwalt für Verkehrsunfälle?
 
 ​
 

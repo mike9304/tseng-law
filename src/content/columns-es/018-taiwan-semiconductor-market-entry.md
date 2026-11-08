@@ -21,7 +21,7 @@ faq:
 
 Cuando empiezan las operaciones con clientes taiwaneses, la sede en el extranjero puede recibir diversas exigencias: tramitar presupuestos y contratos en Taiwán, tener inventario de recambio de emergencia o destinar personal de instalación y mantenimiento. Entonces es fácil preguntar primero: «¿Basta constituir una sociedad en Taiwán para resolverlo?»
 
-Lo que debe aclararse primero es quién se ocupa de qué en Taiwán. La estructura a evaluar cambia según si la sede extranjera sigue firmando contratos de venta, una sociedad taiwanesa compra y revende, o el personal local solo presta apoyo técnico.
+Antes de elegir forma jurídica hay que aclarar quién hace qué en Taiwán. La estructura a evaluar cambia según si la sede extranjera sigue firmando contratos de venta, una sociedad taiwanesa compra y revende, o el personal local solo presta apoyo técnico.
 
 Este texto es una explicación general para empresas de materiales, componentes y equipos de semiconductores que diseñan la estructura de entrada en Taiwán. Los escenarios y puntos de control siguientes son ejemplos hipotéticos y propuestas de evaluación, no un encargo real de una empresa concreta ni un requisito de constitución uniforme. Impuestos, control de exportaciones, autorizaciones por producto y la clasificación del inversor siguen exigiendo un análisis aparte.
 
@@ -47,7 +47,7 @@ Sobre todo si el vendedor del contrato de compraventa no es la empresa que prest
 
 Al planificar la entrada, la empresa de semiconductores debe separar qué presencia se establece en Taiwán y cómo se organizan las ventas y el servicio. Lo primero atiende a la personalidad jurídica, los requisitos de registro y el ámbito de negocio; lo segundo, al modo de operar, las facultades y el reparto de responsabilidad.
 
-La diferencia principal entre una filial taiwanesa y una sucursal taiwanesa de una sociedad extranjera es si tiene personalidad jurídica distinta de la matriz o de la sede. La distribución y la agencia son modalidades contractuales, y no deben confundirse con la forma societaria.
+La diferencia principal entre una filial taiwanesa y una sucursal taiwanesa de una sociedad extranjera es si tiene personalidad jurídica distinta de la matriz o de la sede. Por su parte, la distribución y la agencia son modalidades contractuales. No deben confundirse con la forma societaria.
 
 | Estructura | Distinción básica | Qué confirmar primero |
 |---|---|---|
@@ -69,7 +69,7 @@ El capital se divide en acciones. En principio se requieren dos o más promotore
 
 ## 4. Los procedimientos de sucursal y de filial difieren; solo la filial pasa por la revisión del Departamento de Revisión de Inversiones
 
-Cuando una sociedad extranjera constituye una filial taiwanesa, en principio se reserva previamente el nombre y se solicita autorización de inversión al Departamento de Revisión de Inversiones del Ministerio de Economía (經濟部投資審議司). Tras la aprobación se remiten fondos, se determina el importe de la inversión y se verifica el capital mediante la atestación de un auditor de cuentas (會計師), y luego se completa la constitución y el registro fiscal. Tras solicitar la inscripción de la constitución, la sociedad debe participar en los cursos de derechos laborales (勞動權益講習) impartidos por organismos públicos de cualquier nivel o por las organizaciones sin ánimo de lucro que estos designen (artículo 387-1 de la Ley de Sociedades de Taiwán, 公司法, en vigor desde junio de 2026).
+Cuando una sociedad extranjera constituye una filial taiwanesa, en principio se reserva previamente el nombre y se solicita autorización de inversión al Departamento de Revisión de Inversiones del Ministerio de Economía (經濟部投資審議司). Tras la aprobación se remiten fondos, se determina el importe de la inversión y se verifica el capital mediante la atestación de un auditor de cuentas (會計師), y luego se completa la constitución y el registro fiscal. Después de solicitar la inscripción de la constitución, la sociedad debe participar en los cursos de derechos laborales (勞動權益講習) impartidos por organismos públicos de cualquier nivel o por las organizaciones sin ánimo de lucro que estos designen (artículo 387-1 de la Ley de Sociedades de Taiwán, 公司法, en vigor desde junio de 2026).
 
 En cambio, al constituir una sucursal taiwanesa de una sociedad extranjera ordinaria, en principio no se exige autorización de inversión del Departamento de Revisión de Inversiones; el Departamento de Comercio del Ministerio de Economía tramita el registro de sucursal y la determinación de capital conexa. Siguen siendo necesarios la reserva previa del nombre, la remesa de capital de explotación, la verificación de capital y el registro fiscal; el calendario suele ser más corto.
 
@@ -81,9 +81,9 @@ Completar el registro en Taiwán no implica que el personal de la sede extranjer
 
 Para el gerente de la filial (sociedad con inversión autorizada en la que los extranjeros poseen más de un tercio de las acciones) o sucursal taiwanesa de una sociedad extranjera, obtener el permiso de trabajo es, en términos relativos, más sencillo; esto no es una promesa de concesión. Aun al contratar al primer extranjero, el empleador debe cumplir uno de los criterios del artículo 39 de las Normas de Cualificación y Revisión del trabajo de extranjeros. Para una sociedad con menos de 1 año, los criterios incluyen un capital desembolsado (en el caso de una sucursal, fondos de explotación en Taiwán) de al menos 500.000 dólares taiwaneses o unos ingresos de al menos 3 millones de dólares taiwaneses; para una sociedad con 1 año o más, incluyen unos ingresos medios del último año o de los últimos 3 años de al menos 3 millones de dólares taiwaneses. Si el empleador contrata a 2 o más extranjeros del mismo tipo, esos extranjeros y el empleador deben cumplir los criterios generales del capítulo 2 (artículo 38, apartado 2). Si se prevé que personal extranjero trabaje en Taiwán, hay que confirmar antes de constituir la sociedad si el capital previsto alcanza el umbral aplicable.
 
-## 7. Estructuras que pueden encajar según la etapa del negocio
+## 6. Estructuras que pueden encajar según la etapa del negocio
 
-Los siguientes escenarios son hipotéticos y solo sirven para orientar el análisis; no garantizan que un modo sea lícito o preferible.
+Los escenarios siguientes son hipotéticos y solo orientan el análisis; no garantizan que un modo sea lícito o preferible.
 
 Empresas centradas en la exportación inicial. Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución, por sí solo, no dispensa del cumplimiento de la normativa taiwanesa.
 
@@ -91,7 +91,7 @@ Empresas que amplían ventas y apoyo técnico en Taiwán. Si se planea contratar
 
 Empresas en fase de estudio de mercado. Si, antes de una organización de ventas, solo se quieren funciones de información y enlace, puede evaluarse una oficina de representación. Si el plan real incluye venta de inventario o trabajo in situ, hay que confirmar por separado si esas actividades están permitidas.
 
-## 8. En la primera consulta basta un panorama operativo; no hace falta entregar toda la información confidencial de entrada
+## 7. En la primera consulta basta un panorama operativo; no hace falta entregar toda la información confidencial de entrada
 
 En la primera consulta pueden reunirse datos básicos de la sede y los aportantes, una descripción general del producto o servicio, el flujo de operaciones previsto, planes de personal e instalaciones en Taiwán, y las condiciones de contrato y apoyo que piden los clientes. Lo no decidido puede marcarse como «pendiente».
 

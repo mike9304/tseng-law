@@ -1,7 +1,7 @@
 ---
 title: "Keeping a Taiwan plant operating while its air permit renewal is pending"
 seoTitle: "Taiwan air permits: operating during renewal review"
-summary: "Taiwan's current air-permit rules allow limited continuation after expiry when a timely renewal remains undecided because of agency review. A November 9 proposal report raises a different question from a late or missing application."
+summary: "Taiwan's current air-permit rules allow limited continuation after expiry when a timely renewal remains undecided because of agency review. A proposal reported on November 9 would cap that continuation at two months; a late or missing application is a separate problem under the current text."
 published: "2026-11-10"
 lastmod: "2026-11-10"
 date_display: "November 10, 2026"
@@ -19,7 +19,7 @@ faq:
   - q: "What if the renewal application was submitted late?"
     a: "If the filing was outside the statutory window and the authority has not decided by expiry, the covered activity must stop from that date. If no renewal was sought before expiry, the permit loses effect and continued activity requires a new permit application."
   - q: "Has a two-month limit already replaced the current continuation rule?"
-    a: "The November 9 ministry release describes a proposal scheduled for legislative negotiations on November 10. The law checked on the morning of November 10 still contains Article 30's continuation rule; this article does not report an outcome of those negotiations."
+    a: "The November 9 ministry release describes a proposal scheduled for legislative negotiations on November 10. As of the morning of November 10, Article 30 still contains the continuation rule; the outcome of those negotiations is not covered here."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 Does a pending air-permit renewal let a Taiwan supplier continue production after the permit expires? [CNA reported on November 9](https://www.cna.com.tw/news/afe/202611090283.aspx) that proposed changes to the Air Pollution Control Act were scheduled for legislative negotiations the following day. For an overseas buyer relying on that supplier, the answer affects the production schedule as well as the permit file.
 
-In its [November 9 release](https://www.ida.gov.tw/ctlr?PRO=information.rwdInformationNewsView&id=43431), the Ministry of Economic Affairs described a proposal that would limit continued operation during delayed agency review to two months after expiry. That was a proposed change. The current law checked on the morning of November 10 retains a conditional continuation rule, without that two-month limit.
+In its [November 9 release](https://www.ida.gov.tw/ctlr?PRO=information.rwdInformationNewsView&id=43431), the Ministry of Economic Affairs described a proposal that would limit continued operation during delayed agency review to two months after expiry. That was a proposed change. As of the morning of November 10, the law in force retains a conditional continuation rule. No two-month limit applies.
 
 ## The filing window and the reason for delay
 
@@ -42,7 +42,7 @@ The continuation provision preserves the original permitted scope. [Article 24](
 
 Outside the renewal window, Article 30 requires the covered activity to stop from the expiry date if the authority has not yet made its decision. Filing before the final day therefore does not, by itself, preserve the same continuation protection as filing within the statutory window.
 
-No application before expiry has a further consequence. The permit loses effect. Continued activity then requires a new permit application. Article 30 also directs the authority to reject a renewal before expiry when the documents fail the requirements or the deficiencies have not been corrected. Timely filing is not a guarantee of approval.
+Where no renewal application is made before expiry at all, the consequence goes further: the permit loses effect from the expiry date, and continued activity requires a new permit application. Article 30 also directs the authority to reject a renewal before expiry when the documents fail the requirements or the deficiencies have not been corrected. Timely filing is not a guarantee of approval.
 
 An interruption can affect more than next week's shipments. If a covered activity must stop, a customer's inventory plan may need to account for interrupted production even while the supplier is pursuing renewal. That commercial exposure depends on the supply arrangement; Article 30 itself does not decide delivery deadlines or remedies under the customer's contract.
 

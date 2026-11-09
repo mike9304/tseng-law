@@ -307,7 +307,7 @@ function InternationalInquiryFormFields({
   const searchParams = useSearchParams();
   const topicPrefill = inquiryTopicOriginalTextPrefill(
     locale,
-    parseInquiryUrlTopic(searchParams.get('topic')),
+    parseInquiryUrlTopic(searchParams?.get('topic')),
   );
   const copy = internationalInquiryCopy[locale];
   const statusRef = useRef<HTMLDivElement>(null);

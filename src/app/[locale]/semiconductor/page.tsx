@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SemiconductorGuidePublic from '@/components/semiconductor-drafts/SemiconductorGuidePublic';
+import { parseSemiconductorSubtopic } from '@/lib/semiconductor-board';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import { SEMICONDUCTOR_GUIDE_PATH, semiconductorGuideCopy } from '@/lib/semiconductor-public';
 import { buildSeoMetadata } from '@/lib/seo';
@@ -32,8 +33,11 @@ export async function generateMetadata(props: {
 
 export default async function SemiconductorGuidePage(props: {
   params: Promise<{ locale: SiteLocale }>;
+  searchParams?: Promise<{ subtopic?: string | string[] }>;
 }) {
   const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
-  return <SemiconductorGuidePublic locale={locale} />;
+  const searchParams = await props.searchParams;
+  const subtopic = parseSemiconductorSubtopic(searchParams?.subtopic);
+  return <SemiconductorGuidePublic locale={locale} subtopic={subtopic} />;
 }

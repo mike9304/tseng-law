@@ -72,7 +72,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '반도체 기업 실무가이드',
     title: '대만과 거래하는 반도체 기업을 위한 법무 안내',
     description:
-      '대만에 진출하려는 소재·부품·장비 기업을 위한 실무가이드입니다. 대만 반도체 산업과 거래하는 기업의 법률·사업 문제를 다루며, 일부 칼럼은 공개 자료를 바탕으로 작성했습니다.',
+      '대만에 진출하려는 소재·부품·장비 기업을 위한 실무가이드입니다. TSMC 공급망, 영업비밀, 수출통제, 엔지니어 이직·경업금지, 회사 설립, IP·특허, 계약·대금 등 대만 반도체 산업과 거래할 때 자주 나오는 법률·사업 주제를 짧은 칼럼으로 정리했습니다.',
     columnsHeading: '공개 칼럼',
     topicLabel: '대만 진출·인력',
     readMore: '칼럼 보기 →',
@@ -89,7 +89,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '半導體企業實務指南',
     title: '與台灣交易的半導體企業法務指引',
     description:
-      '寫給規劃進入台灣市場的材料、零組件及設備企業。本頁專欄討論台灣半導體供應鏈企業面臨的法律與經營問題，部分文章依公開資料撰寫。',
+      '寫給規劃進入台灣市場的材料、零組件及設備企業。內容涵蓋 TSMC 供應鏈、營業秘密、出口管制、工程師轉職與競業、公司設立、IP 與專利、契約與款項等台灣半導體供應鏈常見法律與經營議題。',
     columnsHeading: '公開專欄',
     topicLabel: '進入台灣市場與人力配置',
     readMore: '閱讀專欄 →',
@@ -105,7 +105,7 @@ export const semiconductorGuideCopy: Record<
     kicker: 'Semiconductor practice guide',
     title: 'Legal guidance for semiconductor companies dealing with Taiwan',
     description:
-      "A practice guide for materials, components, and equipment companies planning Taiwan entry. Its columns cover legal and business issues for companies in Taiwan's semiconductor ecosystem; some are prepared from public sources.",
+      'A practice guide for materials, components, and equipment companies planning Taiwan entry. Columns touch TSMC supply chains, trade secrets, export controls, engineer moves and non-competes, company setup, IP and patents, and contract payment issues.',
     columnsHeading: 'Published columns',
     topicLabel: 'Taiwan entry and staffing',
     readMore: 'Open column →',
@@ -122,7 +122,7 @@ export const semiconductorGuideCopy: Record<
     kicker: '半導体企業実務ガイド',
     title: '台湾と取引する半導体企業向けの法務案内',
     description:
-      '台湾進出を検討する材料・部品・装置企業向けの実務ガイドです。台湾の半導体産業と取引する企業の法務・事業上の課題を取り上げており、一部のコラムは公開情報をもとに作成しています。',
+      '台湾進出を検討する材料・部品・装置企業向けの実務ガイドです。TSMC サプライチェーン、営業秘密、輸出規制、技術者の転職・競業、会社設立、IP・特許、契約・代金など、台湾半導体サプライチェーンでよく出る法務・事業テーマを取り上げます。',
     columnsHeading: '公開コラム',
     topicLabel: '台湾進出・人材',
     readMore: 'コラムを読む →',

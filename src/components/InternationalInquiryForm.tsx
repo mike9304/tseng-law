@@ -8,6 +8,7 @@ import {
   type FormEvent,
 } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { z } from 'zod';
 import {
   internationalInquiryCopy,
@@ -22,6 +23,10 @@ import {
   getConsultationPublicEmail,
 } from '@/lib/consultation/public-contact';
 import { IS_STATIC_SITE } from '@/lib/static-site';
+import {
+  inquiryTopicOriginalTextPrefill,
+  parseInquiryUrlTopic,
+} from '@/lib/international-inquiry-topic-prefill';
 import styles from './InternationalInquiryForm.module.css';
 
 const PREFERRED_CONSULTATION_VALUES = [
@@ -299,6 +304,11 @@ function InternationalInquiryFormFields({
   locale: InquiryCopyLocale;
 }) {
   const uid = useId();
+  const searchParams = useSearchParams();
+  const topicPrefill = inquiryTopicOriginalTextPrefill(
+    locale,
+    parseInquiryUrlTopic(searchParams.get('topic')),
+  );
   const copy = internationalInquiryCopy[locale];
   const statusRef = useRef<HTMLDivElement>(null);
   const requestIdRef = useRef<string | null>(null);
@@ -310,9 +320,17 @@ function InternationalInquiryFormFields({
   const hideOriginalLanguage = pageLanguage !== undefined;
   const consultationLanguageOptions =
     CONSULTATION_LANGUAGE_ORDER[locale] ?? CONSULTATION_LANGUAGES;
-  const [values, setValues] = useState<FormValues>(() =>
-    pageLanguage ? { ...EMPTY_VALUES, originalLanguage: pageLanguage } : EMPTY_VALUES,
-  );
+  const [values, setValues] = useState<FormValues>(() => {
+    const base = pageLanguage ? { ...EMPTY_VALUES, originalLanguage: pageLanguage } : EMPTY_VALUES;
+    return topicPrefill ? { ...base, originalText: topicPrefill } : base;
+  });
+  useEffect(() => {
+    if (!topicPrefill) return;
+    setValues((current) => {
+      if (current.originalText.trim().length > 0) return current;
+      return { ...current, originalText: topicPrefill };
+    });
+  }, [topicPrefill]);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<FormStatus>({

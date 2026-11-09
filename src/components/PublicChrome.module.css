@@ -702,6 +702,72 @@
   font-family: var(--font-display);
 }
 
+.drawerNavItem {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.drawerNavParent {
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  border-bottom: 1px solid var(--divider, #e4e8e4);
+}
+
+.drawerNavParent :global(.drawer-nav-link) {
+  flex: 1 1 auto;
+  min-width: 0;
+  border-bottom: none;
+}
+
+.drawerNavExpand {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--divider, #e4e8e4);
+  background: transparent;
+  color: #1c241f;
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.drawerNavExpand:focus-visible {
+  outline: 2px solid var(--accent-purple, #6b4ce6);
+  outline-offset: -2px;
+}
+
+.drawerNavGroup {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  border-bottom: 1px solid var(--divider, #e4e8e4);
+  padding-left: 1rem;
+}
+
+.drawerNavGroup[hidden] {
+  display: none !important;
+}
+
+.drawerNavSublink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 3.6vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .drawer :global(.drawer-footer) :global(.button),
 .drawer :global(.drawer-member-nav) a,
 .drawer :global(.drawer-member-nav) button,

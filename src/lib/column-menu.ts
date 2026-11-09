@@ -1,5 +1,5 @@
 import { CRIMINAL_BOARD_LOCALES, CRIMINAL_BOARD_PATH, isCriminalBoardLocale } from '@/lib/criminal-litigation-board';
-import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { guidancePublicPath, isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { TAX_ACCOUNTING_BOARD_PATH } from '@/lib/tax-accounting-board';
 
@@ -136,6 +136,15 @@ function categoryHref(locale: PublicLocale8, id: ColumnMenuCategoryId): string {
     default:
       return `${base}/columns`;
   }
+}
+
+/** Primary nav item that opens the columns index (not issues or a single article). */
+export function isPrimaryColumnsNavHref(href: string, locale: PublicLocale8): boolean {
+  if (isGuidanceLocale4(locale)) {
+    return href === guidancePublicPath(locale, 'columns');
+  }
+  const pathOnly = href.split('#')[0] ?? href;
+  return pathOnly === `/${locale}/columns`;
 }
 
 /** Column category links for header mega menu, mobile drawer, and footer. */

@@ -10,6 +10,7 @@ vi.mock('next/navigation', () => ({
 }));
 
 import Header from '@/components/Header';
+import MobileNavDrawer from '@/components/MobileNavDrawer';
 import { getColumnMenuMegaLinks } from '@/lib/column-menu';
 
 describe('consolidated columns navigation', () => {
@@ -31,6 +32,27 @@ describe('consolidated columns navigation', () => {
       for (const link of getColumnMenuMegaLinks(locale)) {
         expect(html).toContain(`href="${link.href}"`);
       }
+    },
+  );
+
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'nests column category links under the %s columns item in the mobile drawer',
+    (locale) => {
+      navigationState.pathname = `/${locale}/columns`;
+      const html = renderToStaticMarkup(
+        <MobileNavDrawer open onClose={() => {}} locale={locale} onSearch={() => {}} />,
+      );
+      expect(html).toContain('drawer-nav-group');
+      expect(html).toContain(`id="drawer-column-submenu-${locale}"`);
+      expect(html).toContain('aria-expanded="true"');
+      for (const link of getColumnMenuMegaLinks(locale)) {
+        expect(html).toContain(`href="${link.href}"`);
+      }
+      const subnavStart = html.indexOf(`id="drawer-column-submenu-${locale}"`);
+      const directionsIdx = html.indexOf('/contact');
+      expect(subnavStart).toBeGreaterThan(-1);
+      expect(directionsIdx).toBeGreaterThan(-1);
+      expect(subnavStart).toBeLessThan(directionsIdx);
     },
   );
 });

@@ -12,7 +12,10 @@ import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
-import { getColumnMenuLinks } from '@/lib/column-menu';
+import {
+  getColumnMenuMegaLinks,
+  isPrimaryColumnsNavHref,
+} from '@/lib/column-menu';
 
 type MemberNavState = {
   status: 'loading' | 'signed-out' | 'signed-in';
@@ -49,9 +52,10 @@ export default function MobileNavDrawer({
   const panelRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const [languagePickerOpen, setLanguagePickerOpen] = useState(false);
+  const [columnsSubnavOpen, setColumnsSubnavOpen] = useState(true);
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
-  const columnMenuLinks = getColumnMenuLinks(locale);
+  const columnSubLinks = getColumnMenuMegaLinks(locale);
   const columnSubnavLabel =
     locale === 'ko'
       ? '칼럼 주제'
@@ -128,8 +132,32 @@ export default function MobileNavDrawer({
   }, [open, onClose]);
 
   useEffect(() => {
-    if (open) setLanguagePickerOpen(false);
+    if (open) {
+      setLanguagePickerOpen(false);
+      setColumnsSubnavOpen(true);
+    }
   }, [open]);
+
+  const columnsToggleLabel =
+    locale === 'ko'
+      ? columnsSubnavOpen
+        ? '칼럼 주제 접기'
+        : '칼럼 주제 펼치기'
+      : locale === 'zh-hant'
+        ? columnsSubnavOpen
+          ? '收合專欄主題'
+          : '展開專欄主題'
+        : locale === 'ja'
+          ? columnsSubnavOpen
+            ? 'コラムのテーマを閉じる'
+            : 'コラムのテーマを開く'
+          : locale === 'vi'
+            ? columnsSubnavOpen
+              ? 'Thu gọn chủ đề chuyên mục'
+              : 'Mở rộng chủ đề chuyên mục'
+            : columnsSubnavOpen
+              ? 'Collapse column topics'
+              : 'Expand column topics';
 
   if (!open && !languagePickerOpen) return null;
 
@@ -238,20 +266,54 @@ export default function MobileNavDrawer({
           />
         </div>
         <nav className="drawer-nav" aria-label={navLabel}>
-          {content.nav.primary.map((item) => (
-            <Link key={item.href} href={item.href} className="drawer-nav-link" onClick={onClose}>
-              {item.label}
-            </Link>
-          ))}
-          {columnMenuLinks.length > 0 ? (
-            <div className="drawer-nav-group" aria-label={columnSubnavLabel}>
-              {columnMenuLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="drawer-nav-link drawer-nav-sublink" onClick={onClose}>
-                  {link.label}
+          {content.nav.primary.map((item) => {
+            const showColumnSubnav =
+              columnSubLinks.length > 0 && isPrimaryColumnsNavHref(item.href, locale);
+            if (!showColumnSubnav) {
+              return (
+                <Link key={item.href} href={item.href} className="drawer-nav-link" onClick={onClose}>
+                  {item.label}
                 </Link>
-              ))}
-            </div>
-          ) : null}
+              );
+            }
+            const subnavId = `drawer-column-submenu-${locale}`;
+            return (
+              <div key={item.href} className={`drawer-nav-item ${styles.drawerNavItem}`}>
+                <div className={`drawer-nav-parent ${styles.drawerNavParent}`}>
+                  <Link href={item.href} className="drawer-nav-link" onClick={onClose}>
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    className={`drawer-nav-expand ${styles.drawerNavExpand}`}
+                    aria-expanded={columnsSubnavOpen}
+                    aria-controls={subnavId}
+                    aria-label={columnsToggleLabel}
+                    onClick={() => setColumnsSubnavOpen((prev) => !prev)}
+                  >
+                    <span aria-hidden="true">{columnsSubnavOpen ? '−' : '+'}</span>
+                  </button>
+                </div>
+                <div
+                  id={subnavId}
+                  className={`drawer-nav-group ${styles.drawerNavGroup}`}
+                  aria-label={columnSubnavLabel}
+                  hidden={!columnsSubnavOpen}
+                >
+                  {columnSubLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`drawer-nav-link drawer-nav-sublink ${styles.drawerNavSublink}`}
+                      onClick={onClose}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </nav>
         <div className="drawer-footer">
           {isGuidance || IS_STATIC_SITE ? null : (

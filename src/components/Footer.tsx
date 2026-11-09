@@ -14,6 +14,7 @@ import {
   publicSiteContent,
 } from '@/lib/public-site-chrome';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
+import { getColumnMenuFooterColumn } from '@/lib/column-menu';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
@@ -91,6 +92,7 @@ export default function Footer({
   const chromeLocale = chromeSiteLocale(locale);
   const footerContent = content.footer;
   const publishedBaseColumns = getPublishedBaseFooterColumns(footerContent.columns);
+  const columnMenuColumn = getColumnMenuFooterColumn(locale);
   const brandName =
     locale === 'ko'
       ? '법무법인 호정'
@@ -255,7 +257,7 @@ export default function Footer({
                 </div>
               </div>
             </div>
-            {[...publishedBaseColumns, ...extraColumns].map((column) => (
+            {[...publishedBaseColumns, ...(columnMenuColumn ? [columnMenuColumn] : []), ...extraColumns].map((column) => (
               <nav key={column.title} className="footer-link-column" aria-label={column.title}>
                 <p className="footer-link-title">{column.title}</p>
                 <div className="footer-link-list">

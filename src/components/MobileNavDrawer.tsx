@@ -11,10 +11,8 @@ import { IS_STATIC_SITE } from '@/lib/static-site';
 import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
 import styles from './PublicChrome.module.css';
-import { isSiteLocale } from '@/lib/locales';
 import { isAppleDesignLocale } from '@/lib/apple-design-locales';
-
-const trafficLabel = { ko: '교통사고', 'zh-hant': '交通事故', en: 'Traffic accidents', ja: '交通事故' };
+import { getColumnMenuLinks } from '@/lib/column-menu';
 
 type MemberNavState = {
   status: 'loading' | 'signed-out' | 'signed-in';
@@ -53,6 +51,17 @@ export default function MobileNavDrawer({
   const [languagePickerOpen, setLanguagePickerOpen] = useState(false);
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
+  const columnMenuLinks = getColumnMenuLinks(locale);
+  const columnSubnavLabel =
+    locale === 'ko'
+      ? '칼럼 주제'
+      : locale === 'zh-hant'
+        ? '專欄主題'
+        : locale === 'ja'
+          ? 'コラムのテーマ'
+          : locale === 'vi'
+            ? 'Chủ đề chuyên mục'
+            : 'Column topics';
   const pathname = usePathname();
   const current = pathname ?? '';
 
@@ -234,10 +243,14 @@ export default function MobileNavDrawer({
               {item.label}
             </Link>
           ))}
-          {isSiteLocale(locale) ? (
-            <Link href={`/${locale}/traffic-accidents`} className="drawer-nav-link" onClick={onClose}>
-              {trafficLabel[locale]}
-            </Link>
+          {columnMenuLinks.length > 0 ? (
+            <div className="drawer-nav-group" aria-label={columnSubnavLabel}>
+              {columnMenuLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="drawer-nav-link drawer-nav-sublink" onClick={onClose}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           ) : null}
         </nav>
         <div className="drawer-footer">

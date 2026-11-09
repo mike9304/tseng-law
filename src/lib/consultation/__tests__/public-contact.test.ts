@@ -65,6 +65,22 @@ describe('public consultation contact single source of truth', () => {
     expect(LAWYER_NAME_ZH).toBe('曾雋崴律師');
   });
 
+  it('leaves the default mailto unchanged when subjectPrefix is omitted', () => {
+    for (const locale of siteLocales) {
+      expect(getConsultationPublicMailto(locale)).toBe(getConsultationPublicMailto(locale, {}));
+    }
+  });
+
+  it('prepends subjectPrefix without changing the body template', () => {
+    const locale = 'ko' as const;
+    const baseline = getConsultationPublicMailto(locale);
+    const withPrefix = getConsultationPublicMailto(locale, { subjectPrefix: '[test] ' });
+    const baseUrl = new URL(baseline);
+    const prefixedUrl = new URL(withPrefix);
+    expect(prefixedUrl.searchParams.get('body')).toBe(baseUrl.searchParams.get('body'));
+    expect(prefixedUrl.searchParams.get('subject')).toBe(`[test] ${baseUrl.searchParams.get('subject')}`);
+  });
+
   it('builds locale-specific mailto links with encoded subject and body', () => {
     for (const locale of siteLocales) {
       const template = getConsultationEmailTemplate(locale);

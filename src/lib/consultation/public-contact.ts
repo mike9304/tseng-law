@@ -84,9 +84,20 @@ export function getConsultationEmailTemplate(locale: SiteLocale = 'ko'): Consult
   return CONSULTATION_EMAIL_TEMPLATES[locale];
 }
 
-export function getConsultationPublicMailto(locale: SiteLocale = 'ko'): string {
+export type ConsultationPublicMailtoOptions = {
+  /** Prepended verbatim to the locale default subject (body unchanged). */
+  subjectPrefix?: string;
+};
+
+export function getConsultationPublicMailto(
+  locale: SiteLocale = 'ko',
+  options?: ConsultationPublicMailtoOptions,
+): string {
   const template = getConsultationEmailTemplate(locale);
-  return `mailto:${getConsultationPublicEmail()}?subject=${encodeURIComponent(template.subject)}&body=${encodeURIComponent(template.body)}`;
+  const subject = options?.subjectPrefix
+    ? `${options.subjectPrefix}${template.subject}`
+    : template.subject;
+  return `mailto:${getConsultationPublicEmail()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(template.body)}`;
 }
 
 export function getConsultationCtaLabel(locale: SiteLocale): string {

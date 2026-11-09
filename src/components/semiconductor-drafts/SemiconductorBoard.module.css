@@ -40,6 +40,11 @@
   font-size: 0.8125rem;
   color: #5c6b61;
 }
+.resultCount {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: #4b5b50;
+}
 .consultCta {
   display: flex;
   flex-wrap: wrap;

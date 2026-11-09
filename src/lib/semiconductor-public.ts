@@ -20,7 +20,7 @@ export const UNPUBLISHED_SEMICONDUCTOR_COLUMN_SLUGS = [
 export const SEMICONDUCTOR_BOARD_COLUMN_SLUGS: Readonly<Partial<Record<SiteLocale, readonly string[]>>> =
   semiconductorBoardColumns;
 
-export const SEMICONDUCTOR_GUIDE_PATH = '/semiconductor';
+export { SEMICONDUCTOR_GUIDE_PATH } from '@/lib/semiconductor-board-client';
 
 /**
  * Board slugs for the locale (JSON order), then the lawyer-reviewed slugs.

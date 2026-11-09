@@ -20,7 +20,7 @@ const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2],
   ja: [3, 4],
   en: [5, 6],
-  vi: [7, 8],
+  vi: [7, 8, 41, 42, 43],
 };
 
 function issueFiles(locale: IssueBoardLocale): string[] {

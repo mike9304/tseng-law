@@ -1372,3 +1372,4 @@
 - 11-11 00:46 대기: 00:36 이후 변화는 HANDOFF-air 시각(마지막 항목 10-26 03:47)뿐이다. STATUS·FACTS·Astra·Bot에는 새 항목이 없다. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16은 변경 없고(sha 6307f818…, VERDICT 없음) S4 시작은 손빗·사용자 결정. 새 브리지 없음.
 - 11-11 00:56 대기: 00:46 이후 변화는 HANDOFF-air 시각(마지막 항목 10-26 03:47)뿐이다. STATUS·FACTS·Astra·Bot에는 새 항목이 없다. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16은 변경 없고(sha 6307f818…, VERDICT 없음) S4 시작은 손빗·사용자 결정. 새 브리지 없음.
 - 11-11 01:06 대기: 00:56 이후 변화는 HANDOFF-air 시각(마지막 항목 10-26 03:47)과 grok NOTES 00:58 대기 줄뿐이다. STATUS·FACTS·Astra·Bot에는 새 항목이 없다. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16은 변경 없고(sha 6307f818…, VERDICT 없음) S4 시작은 손빗·사용자 결정. 새 브리지 없음.
+- 11-11 01:16 대기: 01:06 이후 변화는 HANDOFF-air 시각(마지막 항목 10-26 03:47)뿐이다. STATUS·FACTS·Astra·Bot에는 새 항목이 없다. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16은 변경 없고(sha 6307f818…, VERDICT 없음) S4 시작은 손빗·사용자 결정. 새 브리지 없음.

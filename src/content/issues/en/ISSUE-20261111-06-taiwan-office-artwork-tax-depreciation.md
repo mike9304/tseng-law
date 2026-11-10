@@ -9,7 +9,6 @@ read_time: "3 min read"
 categories:
   - "Taiwan Legal Information"
 topic: "tax"
-tags: ["tax-accounting"]
 featured_image: "../images/ISSUE-20261111-06-taiwan-office-artwork-tax-depreciation/featured-01.webp"
 featured_image_alt: "A framed abstract painting in blue, ochre and cream above a wooden bench, with a potted plant beside an office window."
 featured_image_caption: "Editorial illustration of a fictional office and artwork, not a photograph of the business or artworks in the tax bureau's example."
@@ -27,7 +26,7 @@ author: "legal-ai-assistant"
 
 # Collectible art in a Taiwan office: the depreciation limit
 
-NT$500,000 in claimed depreciation was disallowed in the tax audit described by the National Taxation Bureau of Taipei on November 9. The company had bought paintings and sculptures and treated them as depreciable fixed assets. The [bureau's release](https://www.ntbt.gov.tw/singlehtml/41ae3594197f4f69b47753ce08188516?cntId=3d618a979ed240ddb89d3fa486fae45e) says the works had collectible value and did not qualify. Additional tax followed.
+NT$500,000 in claimed depreciation was disallowed in the tax audit described by the National Taxation Bureau of Taipei on November 9. The company had bought paintings and sculptures and treated them as depreciable fixed assets. It had booked NT$2 million for the works and used a four-year depreciation schedule. The [bureau's release](https://www.ntbt.gov.tw/singlehtml/41ae3594197f4f69b47753ce08188516?cntId=3d618a979ed240ddb89d3fa486fae45e) says the works had collectible value and did not qualify. Additional tax followed.
 
 For a foreign-owned business furnishing a Taiwan office, the issue begins with the asset's nature. The bureau's explanation covers antiques and artwork displayed as decoration in offices or business premises. It says their value does not necessarily decline with use or time and may increase. An office location does not resolve the tax classification.
 
@@ -37,7 +36,7 @@ For a foreign-owned business furnishing a Taiwan office, the issue begins with t
 
 The bureau applies that distinction to collectible art. Business use alone did not make the collectible artworks in the reported audit depreciable. A company may have paid for an item, recorded it in its asset register and displayed it for clients, yet still face the classification question identified in the release.
 
-Would spreading the cost over a different number of years solve the problem? No change of schedule answers the underlying issue. In the reported audit, the bureau rejected depreciation because the artworks lacked the required depreciable character. This is existing tax treatment.
+Would spreading the cost over a different number of years solve the problem? No change of schedule answers the underlying issue. In the reported audit, the bureau rejected depreciation because the artworks lacked the required depreciable character.
 
 ## The purchase cost answers a different question
 

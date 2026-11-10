@@ -19,7 +19,7 @@ import { COLUMN_TOPICS } from '@/lib/column-topics';
  * so validate every present file without requiring the other queue entries. */
 const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
   ko: [1, 2],
-  ja: [3, 4],
+  ja: [3, 4, 41, 42, 43],
   en: [5, 6],
   vi: [7, 8],
 };

@@ -729,6 +729,19 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Japanese-only gap columns published 2026-11-10 (ja-1110: inheritance, criminal, tax, company). */
+export const JA_GAP_COLUMN_FILES_20261110: Readonly<Record<string, readonly string[]>> = {
+  ja: [
+    '1331-taiwan-will-excludes-japanese-spouse-reserved-share.md',
+    '1332-taiwan-estate-division-heirs-in-taiwan-and-japan.md',
+    '1333-taiwanese-father-unmarried-child-acknowledgment-inheritance.md',
+    '1334-taiwan-line-facebook-group-insult-defamation-complaint.md',
+    '1335-taiwan-traffic-accident-leaving-scene-hit-and-run.md',
+    '1336-taiwan-parent-gift-tax-child-living-in-japan.md',
+    '1337-taiwan-limited-company-japanese-partner-exit-capital-transfer.md',
+  ],
+};
+
 /** Reviewed backlog published on 2026-11-05; translations can have later dates than their originals. */
 export const BACKLOG_COLUMN_FILES_20261105: Readonly<Record<string, readonly string[]>> = {
   "en": [
@@ -1877,6 +1890,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 /** Registered locale-specific batches through 2026-11-05, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
+    ...(JA_GAP_COLUMN_FILES_20261110[locale] ?? []),
     ...(BACKLOG_COLUMN_FILES_20261105[locale] ?? []),
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -2128,6 +2142,7 @@ export function allNativeFiles(locale: string): string[] {
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
+    ...Object.values(JA_GAP_COLUMN_FILES_20261110),
     ...Object.values(BACKLOG_COLUMN_FILES_20261105),
     ...Object.values(EXPERTISE_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20260930),

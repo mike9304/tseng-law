@@ -729,6 +729,27 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Locale-specific expansion columns published 2026-11-11 (cols-1111: investment, crypto, labor, family). */
+export const COLS_EXPANSION_FILES_20261111: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1341-taiwan-crypto-custodian-shutdown-virtual-asset-act-not-in-force.md',
+    '1345-taiwan-prenup-marital-property-agreement-court-registration.md',
+  ],
+  'ja': [
+    '1346-taiwan-broker-us-stocks-corporate-action-notice-missed.md',
+  ],
+  'ko': [
+    '1338-taiwan-resident-us-korean-stocks-overseas-income-basic-tax.md',
+    '1343-taiwan-employee-quits-without-notice-final-pay-deductions.md',
+  ],
+  'vi': [
+    '1340-taiwan-usdt-p2p-seller-bank-account-frozen-money-laundering.md',
+  ],
+  'zh-hant': [
+    '1342-taiwan-guaranteed-monthly-return-illegal-deposit-taking-recovery.md',
+  ],
+};
+
 /** Japanese-only gap columns published 2026-11-10 (ja-1110: inheritance, criminal, tax, company). */
 export const JA_GAP_COLUMN_FILES_20261110: Readonly<Record<string, readonly string[]>> = {
   ja: [
@@ -1890,6 +1911,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 /** Registered locale-specific batches through 2026-11-05, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
+    ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
     ...(JA_GAP_COLUMN_FILES_20261110[locale] ?? []),
     ...(BACKLOG_COLUMN_FILES_20261105[locale] ?? []),
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -2142,6 +2164,7 @@ export function allNativeFiles(locale: string): string[] {
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
+    ...Object.values(COLS_EXPANSION_FILES_20261111),
     ...Object.values(JA_GAP_COLUMN_FILES_20261110),
     ...Object.values(BACKLOG_COLUMN_FILES_20261105),
     ...Object.values(EXPERTISE_COLUMN_FILES_20260930),

@@ -34,10 +34,10 @@ describe('column category parity with English', () => {
     // Four criminal-procedure columns share the English/Korean/Vietnamese cluster.
     // ARC/visa 704–706 add three shared legal-information articles on 2026-10-24.
     // The six case translations now join the current 216 shared columns.
-    expect(english.size).toBe(222);
+    expect(english.size).toBe(233);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 212, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 223, case: 1 });
   });
 
   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(

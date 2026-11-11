@@ -3809,6 +3809,30 @@
     {
       "locale": "zh-hant",
       "slug": "home-childcare-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-pedestrian-defendant-negligent-injury-accident"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-pedestrian-defendant-negligent-injury-accident"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-pedestrian-defendant-negligent-injury-accident"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-traffic-accident-delayed-death-causation-negligent-homicide"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-traffic-accident-delayed-death-causation-negligent-homicide"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-traffic-accident-delayed-death-causation-negligent-homicide"
     }
   ]
 }

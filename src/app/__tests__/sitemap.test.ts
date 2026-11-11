@@ -50,6 +50,9 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   BACKLOG_COLUMN_FILES_20261105,
   EXPERT_COLUMN_FILES_20261103,
   TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B,
+  COLS_EXPANSION_FILES_20261111,
+  COLS_GAP_FILES_20261110,
+  TRAFFIC_JUDGMENT_COLUMN_FILES_20261111,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 import { TAX_ACCOUNTING_COLUMN_FILES } from '@/lib/__tests__/tax-accounting-column-files';
 import { CRIMINAL_COLUMN_FILES_20261008 } from '@/lib/__tests__/criminal-coverage-column-files';
@@ -411,6 +414,9 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
+          + Object.values(COLS_EXPANSION_FILES_20261111).flat().length
+          + Object.values(COLS_GAP_FILES_20261110).flat().length
+          + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         520 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
@@ -489,6 +495,9 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
+          + Object.values(COLS_EXPANSION_FILES_20261111).flat().length
+          + Object.values(COLS_GAP_FILES_20261110).flat().length
+          + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

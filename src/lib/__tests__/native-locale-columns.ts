@@ -750,6 +750,20 @@ export const COLS_EXPANSION_FILES_20261111: Readonly<Record<string, readonly str
   ],
 };
 
+/** Traffic judgment columns published 2026-11-11 (T14 pedestrian defendant, T15 delayed-death causation). */
+export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261111 = {
+  ko: ['1347-taiwan-pedestrian-defendant-negligent-injury-accident.md', '1348-taiwan-traffic-accident-delayed-death-causation-negligent-homicide.md'],
+  'zh-hant': ['1347-taiwan-pedestrian-defendant-negligent-injury-accident.md', '1348-taiwan-traffic-accident-delayed-death-causation-negligent-homicide.md'],
+  en: ['1347-taiwan-pedestrian-defendant-negligent-injury-accident.md', '1348-taiwan-traffic-accident-delayed-death-causation-negligent-homicide.md'],
+} as const;
+
+/** Locale-specific columns published 2026-11-10 that sit outside JA_GAP_COLUMN_FILES_20261110. */
+export const COLS_GAP_FILES_20261110: Readonly<Record<string, readonly string[]>> = {
+  ko: ['1317-taiwan-employee-stock-award-tax-deferral-korean-engineers-2027.md'],
+  en: ['1316-taiwan-engineer-employee-invention-ownership-chip-companies.md'],
+  ja: ['1316-taiwan-engineer-employee-invention-ownership-chip-companies.md'],
+} as const;
+
 /** Japanese-only gap columns published 2026-11-10 (ja-1110: inheritance, criminal, tax, company). */
 export const JA_GAP_COLUMN_FILES_20261110: Readonly<Record<string, readonly string[]>> = {
   ja: [
@@ -1912,7 +1926,9 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
+    ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261111 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(JA_GAP_COLUMN_FILES_20261110[locale] ?? []),
+    ...(COLS_GAP_FILES_20261110[locale] ?? []),
     ...(BACKLOG_COLUMN_FILES_20261105[locale] ?? []),
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -2088,6 +2104,8 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if ([...Object.values(COLS_EXPANSION_FILES_20261111), ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111)].flat().map(slugOf).includes(slug)) return '2026-11-11';
+  if ([...Object.values(JA_GAP_COLUMN_FILES_20261110), ...Object.values(COLS_GAP_FILES_20261110)].flat().map(slugOf).includes(slug)) return '2026-11-10';
   if (BACKLOG_COLUMN_FILES_20261105[locale]?.map(slugOf).includes(slug)) return '2026-11-05';
   if ([...Object.values(COUNTRY_COLUMN_FILES_20261030), ...Object.values(taxAccountingFilesPublishedOn('2026-10-30')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf).includes(slug)) return '2026-10-30';
   if (Object.values(COUNTRY_COLUMN_FILES_20261029).flat().map(slugOf).includes(slug)) return '2026-10-29';
@@ -2165,7 +2183,9 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(COLS_EXPANSION_FILES_20261111),
+    ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111),
     ...Object.values(JA_GAP_COLUMN_FILES_20261110),
+    ...Object.values(COLS_GAP_FILES_20261110),
     ...Object.values(BACKLOG_COLUMN_FILES_20261105),
     ...Object.values(EXPERTISE_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20260930),

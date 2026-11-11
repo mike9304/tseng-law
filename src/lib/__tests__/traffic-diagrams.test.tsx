@@ -79,6 +79,16 @@ describe('animated traffic diagrams', () => {
   it('labels every locale as a hypothetical example', () => {
     const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      if (diagram.id === 'pedestrian-roadway-hypothetical') {
+        expect(diagram.kind).toBe('still');
+        expect(diagram.copy.ko?.caption).toBe('가상의 장면');
+        expect(diagram.copy['zh-hant']?.caption).toBe('虛構情境');
+        expect(diagram.copy.en?.caption).toBe('Fictional scene');
+        expect(diagram.copy.ko?.assumption).toBe('');
+        expect(diagram.copy['zh-hant']?.assumption).toBe('');
+        expect(diagram.copy.en?.assumption).toBe('');
+        continue;
+      }
       if (diagram.id === 'stop-dialogue-timeline') {
         expect(diagram.kind).toBe('still');
         expect(Object.keys(diagram.copy)).toEqual(['zh-hant']);

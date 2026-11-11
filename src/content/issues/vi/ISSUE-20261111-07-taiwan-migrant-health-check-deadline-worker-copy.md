@@ -1,6 +1,6 @@
 ---
-title: "Khám sức khỏe thứ Bảy tuần 2 và 4 hằng tháng ở Gia Nghĩa: hạn khám và giấy kết quả"
-seoTitle: "Đài Loan: hạn khám sức khỏe định kỳ và giấy kết quả của lao động nước ngoài"
+title: "Khám thứ Bảy ở Gia Nghĩa có làm lùi hạn khám sức khỏe không?"
+seoTitle: "Lao động nhóm 2 ở Đài Loan phải khám khi nào, ai giữ giấy chứng nhận?"
 summary: "Bệnh viện tại Gia Nghĩa bổ sung lịch khám sáng thứ Bảy tuần thứ hai và thứ tư hằng tháng cho lao động nước ngoài. Với người thuộc nhóm 2 theo quy định Đài Loan, lịch hẹn vẫn phải phù hợp với kỳ khám; chủ thuê phải giao giấy chứng nhận cho người lao động sau khi nhận từ bệnh viện."
 published: "2026-11-11"
 lastmod: "2026-11-11"
@@ -24,9 +24,9 @@ audience: ["vi"]
 author: "legal-ai-assistant"
 ---
 
-# Khám sức khỏe thứ Bảy tuần 2 và 4 hằng tháng ở Gia Nghĩa: hạn khám và giấy kết quả
+# Khám thứ Bảy ở Gia Nghĩa có làm lùi hạn khám sức khỏe không?
 
-Chi nhánh Gia Nghĩa của Bệnh viện Đa khoa Vinh dân Đài Trung đã bổ sung lịch khám sức khỏe cho lao động nước ngoài vào sáng thứ Bảy của tuần thứ hai và tuần thứ tư hằng tháng, từ 8 giờ đến 11 giờ. [Thanh niên Nhật báo (青年日報) ngày 9 tháng 11](https://www.ydn.com.tw/tw/news/ugC_News_Detail.aspx?ID=649858) cho biết dịch vụ bắt đầu trong tháng này, đồng thời có bảng hướng dẫn và biểu mẫu bằng tiếng Việt. Lịch cuối tuần giúp người lao động đỡ trùng giờ làm.
+Chi nhánh Gia Nghĩa của Bệnh viện Đa khoa Vinh dân Đài Trung đã bổ sung lịch khám sức khỏe buổi sáng thứ Bảy cho lao động nước ngoài. Các buổi khám diễn ra vào tuần thứ hai và tuần thứ tư hằng tháng. Giờ khám là từ 8 giờ đến 11 giờ. [Thanh niên Nhật báo (青年日報) ngày 9 tháng 11](https://www.ydn.com.tw/tw/news/ugC_News_Detail.aspx?ID=649858) cho biết dịch vụ bắt đầu trong tháng này, đồng thời có bảng hướng dẫn và biểu mẫu bằng tiếng Việt. Lịch cuối tuần giúp người lao động đỡ trùng giờ làm.
 
 Chờ đến buổi thứ Bảy thì hạn khám có được lùi không? Lịch hẹn không kéo dài hạn khám. Quy định Đài Loan xác định kỳ khám theo hồ sơ tuyển dụng hoặc nhập cảnh, còn lịch phục vụ cho biết khi nào bệnh viện tiếp nhận.
 

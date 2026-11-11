@@ -1,7 +1,7 @@
 ---
 title: "Hỗ trợ chăm sóc con tại doanh nghiệp Đài Loan: khi nào nhân viên được nhận tiền?"
 seoTitle: "Đài Loan: biện pháp chăm sóc trẻ và trợ cấp cho doanh nghiệp"
-summary: "Chủ thuê từ 100 lao động phải có phòng cho con bú hoặc vắt sữa, đồng thời có cơ sở hay biện pháp chăm sóc trẻ phù hợp. Tiền hỗ trợ của Nhà nước cho doanh nghiệp không tự tạo một khoản tiền cố định mà mọi cha mẹ đang làm việc đều được nhận."
+summary: "Chủ thuê sử dụng từ 100 lao động trở lên phải có phòng cho con bú hoặc vắt sữa, đồng thời có cơ sở hay biện pháp chăm sóc trẻ phù hợp. Tiền hỗ trợ của Nhà nước cho doanh nghiệp không tự tạo một khoản tiền cố định mà mọi cha mẹ đang làm việc đều được nhận."
 published: "2026-11-11"
 lastmod: "2026-11-11"
 date_display: "Ngày 11 tháng 11 năm 2026"
@@ -15,7 +15,7 @@ featured_image_caption: "Hình minh họa một không gian nghỉ hư cấu, kh
 social_image: "../images/ISSUE-20261111-08-taiwan-employer-childcare-measures-subsidy-not-cash-entitlement/featured-01.jpg"
 faq:
   - q: "Doanh nghiệp từ 100 lao động đều phải tự mở nhà trẻ sao?"
-    a: "Điều 23 Luật Bình đẳng giới trong việc làm yêu cầu phòng cho con bú hoặc vắt sữa, đồng thời có cơ sở chăm sóc trẻ hoặc biện pháp phù hợp. Các biện pháp được công nhận còn gồm hợp đồng với cơ sở chăm sóc trẻ, bố trí người chăm sóc tại địa điểm do chủ thuê thiết lập, hoặc trợ cấp nuôi con cho nhân viên."
+    a: "Điều 23 Luật Bình đẳng giới trong việc làm yêu cầu phòng cho con bú hoặc vắt sữa, đồng thời có cơ sở chăm sóc trẻ hoặc biện pháp phù hợp. Các biện pháp được công nhận còn gồm hợp đồng với cơ sở chăm sóc trẻ đã được cơ quan có thẩm quyền tại địa phương cấp phép thành lập, bố trí người chăm sóc tại địa điểm do chủ thuê thiết lập, hoặc trợ cấp nuôi con cho nhân viên."
   - q: "Công ty được Nhà nước hỗ trợ thì mỗi nhân viên có quyền nhận một khoản tiền như nhau không?"
     a: "Các quy định này không đặt ra một khoản tiền mặt cố định cho mọi nhân viên có con. Tiền trợ cấp nuôi con chỉ là một trong các biện pháp chủ thuê có thể chọn. Quyền lợi cụ thể còn gắn với chương trình và điều kiện áp dụng tại doanh nghiệp."
   - q: "Quy định nói đến con của người lao động ở độ tuổi nào?"
@@ -36,7 +36,7 @@ Với cha mẹ người Việt trực tiếp làm việc và nhận lương tạ
 
 Khái niệm người lao động tại [Điều 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=3) dựa vào quan hệ được thuê làm việc và nhận lương, không đặt điều kiện phải mang quốc tịch Đài Loan. Ngưỡng của điều luật là số lao động chủ thuê sử dụng, không phải số nhân viên nữ hoặc số người đang có con.
 
-Biện pháp nào được công nhận? [Điều 2 quy định về phòng cho con bú, cơ sở và biện pháp chăm sóc trẻ cùng hỗ trợ kinh phí](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0040007&flno=2) cho phép chủ thuê ký hợp đồng với cơ sở chăm sóc trẻ. Chủ thuê cũng có thể bố trí người chăm sóc tại địa điểm do mình thiết lập, hoặc trả trợ cấp nuôi con cho nhân viên. Cơ sở và biện pháp này dành cho con dưới 12 tuổi của người lao động.
+Biện pháp nào được công nhận? [Điều 2 quy định về phòng cho con bú, cơ sở và biện pháp chăm sóc trẻ cùng hỗ trợ kinh phí](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0040007&flno=2) cho phép chủ thuê ký hợp đồng với cơ sở chăm sóc trẻ đã được cơ quan có thẩm quyền tại địa phương cấp phép thành lập. Chủ thuê cũng có thể bố trí người chăm sóc tại địa điểm do mình thiết lập, hoặc trả trợ cấp nuôi con cho nhân viên. Cơ sở và biện pháp này dành cho con dưới 12 tuổi của người lao động.
 
 Tự mở nhà trẻ chỉ là một cách. Nhân viên không đương nhiên có quyền yêu cầu đổi dịch vụ chăm sóc trẻ thành tiền mặt. Cách thực hiện cụ thể vẫn phải thuộc những hình thức được pháp luật công nhận.
 

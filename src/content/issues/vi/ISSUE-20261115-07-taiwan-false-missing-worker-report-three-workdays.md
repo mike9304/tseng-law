@@ -11,7 +11,7 @@ categories:
 topic: "labor"
 featured_image: "../images/ISSUE-20261115-07-taiwan-false-missing-worker-report-three-workdays/featured-01.webp"
 featured_image_alt: "Áo làm việc treo trong tủ mở, mũ bảo hộ và điện thoại úp mặt trên ghế trong phòng thay đồ trống."
-featured_image_caption: "Hình minh họa do AI tạo, không phải nơi làm việc hay đồ dùng của người lao động trong một vụ việc thực tế."
+featured_image_caption: "Hình minh họa một phòng thay đồ hư cấu, không phải nơi làm việc hay đồ dùng của người lao động trong một vụ việc thực tế."
 social_image: "../images/ISSUE-20261115-07-taiwan-false-missing-worker-report-three-workdays/featured-01.jpg"
 faq:
   - q: "Ba ngày nghỉ liên tiếp có bị tính là ba ngày vắng mặt không?"
@@ -26,25 +26,25 @@ author: "legal-ai-assistant"
 
 # Bị báo mất liên lạc ở Đài Loan: khi thông báo của chủ thuê không đúng sự thật
 
-[Cơ quan Phát triển nguồn nhân lực Đài Loan ngày 10 tháng 11](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb3a1805cd601a18678b4df24ed) nhắc chủ thuê về việc tìm người lao động mất liên lạc và thông báo theo luật. Có thể yêu cầu tìm người sớm. Việc này được thực hiện trước khi đủ thời gian làm thông báo chính thức.
+Theo [hướng dẫn ngày 10 tháng 11 của Cơ quan Phát triển nguồn nhân lực Đài Loan](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb3a1805cd601a18678b4df24ed), trong ba ngày đầu kể từ khi mất liên lạc, chủ thuê có thể nhờ hỗ trợ tìm người qua nền tảng thông báo trực tuyến của Bộ Lao động. Quá ba ngày mà chưa tìm được thì chủ thuê phải làm thông báo mất liên lạc theo luật.
 
-Thông báo sai có thể ảnh hưởng đến giấy phép và việc ở lại Đài Loan của người lao động Việt Nam. [Khoản 3 Điều 73 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73) quy định việc vắng mặt ba ngày liên tiếp và mất liên lạc là căn cứ thu hồi giấy phép thuê lao động.
+Thông báo sai có thể ảnh hưởng đến giấy phép và việc ở lại Đài Loan của người lao động Việt Nam. [Điểm 3 Điều 73 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73) quy định việc vắng mặt ba ngày liên tiếp và mất liên lạc là căn cứ thu hồi giấy phép thuê lao động.
 
 ## Ba ngày phải là ngày làm việc
 
-[Điều 56](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=56) yêu cầu chủ thuê thông báo bằng văn bản trong ba ngày khi người lao động nước ngoài vắng mặt ba ngày liên tiếp và mất liên lạc. Cơ quan địa phương, cơ quan quản lý xuất nhập cảnh và cảnh sát là các nơi nhận thông báo.
+Thông báo phải bằng văn bản. [Điều 56](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=56) yêu cầu chủ thuê thông báo trong ba ngày khi người lao động nước ngoài vắng mặt ba ngày liên tiếp và mất liên lạc. Cơ quan địa phương, cơ quan quản lý xuất nhập cảnh và cảnh sát là các nơi nhận thông báo.
 
-Theo [tiêu chuẩn nhận định của cơ quan lao động](https://fw.wda.gov.tw/wda-employer/home/download-file/2c95efb3882b4eb201882d403147023b.pdf), quan hệ thuê lao động phải còn tồn tại. Người lao động không có lý do chính đáng và vắng mặt trong ba ngày liên tiếp thực tế phải đi làm. Ngày nghỉ không tự thành ngày vắng.
+Theo [tiêu chuẩn nhận định của cơ quan lao động](https://fw.wda.gov.tw/wda-employer/home/download-file/2c95efb3882b4eb201882d403147023b.pdf), quan hệ thuê lao động phải còn tồn tại. Người lao động không có lý do chính đáng và vắng mặt trong ba ngày liên tiếp thực tế phải đi làm. Ngày nghỉ không tự động bị tính là ngày vắng mặt.
 
-Còn mất liên lạc được xác định thế nào? Tiêu chuẩn xét cả việc rời nơi làm việc và nơi ở, cùng khả năng xác minh chỗ ở hoặc cách liên hệ. Tin nhắn cần rõ người gửi. Một lời nhắn không cho biết nơi ở, thời gian ở và cách liên lạc có thể kiểm chứng chưa bảo đảm rằng người lao động vẫn được coi là có liên lạc.
+Mất liên lạc được xác định thế nào? Tiêu chuẩn xét cả việc rời nơi làm việc và nơi ở, cùng khả năng xác minh chỗ ở hoặc cách liên hệ. Tin nhắn cần rõ người gửi. Một lời nhắn không cho biết nơi ở, thời gian ở và cách liên lạc có thể kiểm chứng chưa bảo đảm rằng người lao động vẫn được coi là có liên lạc.
 
 ## Khi đã liên hệ cơ quan để cầu cứu
 
 Điểm 4 của tiêu chuẩn nêu trường hợp người lao động khiếu nại hoặc cầu cứu trong ba ngày kể từ khi rời nơi làm việc và nơi ở. Nơi tiếp nhận phải là cơ quan lao động trung ương, cơ quan địa phương, đơn vị bố trí chỗ ở đã được cơ quan trung ương ghi nhận, hoặc văn phòng đại diện nước mình tại Đài Loan.
 
-Nếu đã cung cấp rõ nơi ở, thời gian ở và cách liên lạc, hoặc có hồ sơ bố trí chỗ ở, và được xác minh là đúng, người lao động không thuộc trường hợp mất liên lạc. Điều kiện xác minh vẫn còn.
+Nếu đã cung cấp rõ nơi ở, thời gian ở và cách liên lạc, hoặc có hồ sơ bố trí chỗ ở, và được xác minh là đúng, người lao động không thuộc trường hợp mất liên lạc.
 
-Điểm 6 còn áp dụng khi chuyển chủ, khi đã có yêu cầu xuất cảnh trong thời hạn theo luật nhưng chưa rời Đài Loan, hoặc khi hai bên thỏa thuận tạm ngừng làm việc do tranh chấp. Nếu người lao động mất liên lạc ba ngày liên tiếp trong các trường hợp này, chủ thuê phải cung cấp chứng cứ liên quan để thông báo.
+Điểm 6 còn áp dụng trong một số giai đoạn, chẳng hạn khi chuyển chủ, khi đã có yêu cầu xuất cảnh trong thời hạn theo luật nhưng chưa rời Đài Loan, hoặc khi hai bên thỏa thuận tạm ngừng làm việc do tranh chấp. Nếu người lao động mất liên lạc ba ngày liên tiếp trong các trường hợp này, chủ thuê phải cung cấp chứng cứ liên quan để thông báo.
 
 ## Quyền khiếu nại thông báo sai
 

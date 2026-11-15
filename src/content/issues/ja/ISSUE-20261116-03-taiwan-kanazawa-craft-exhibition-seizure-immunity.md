@@ -32,19 +32,19 @@ author: "legal-ai-assistant"
 
 ## 保護される作品と期間
 
-[文化芸術助成・促進条例第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170006&flno=33)は、認可を受けた外国等の文物・美術品・標本を、運送・保管・展示の期間中、差押えや強制執行などの対象としないと定めています。保護の対象は物です。貸主や主催者のあらゆる責任を免除したり、その作品の所有権を確定したりする規定ではありません。
+[文化芸術助成・促進条例第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170006&flno=33)は、認可を受けた外国等の文物・美術品・標本を、運送・保管・展示の期間中、司法上の訴追、差押え、強制執行の対象としないと定めています。保護の対象は物です。貸主や主催者のあらゆる責任を免除したり、その作品の所有権を確定したりする規定ではありません。
 
 日本で作られた作品なら、それだけで対象になるのでしょうか？ 文化部の[来台展示品認可規則第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=2)は、文化・芸術・教育上の意義を持ち、外国など台湾外に長期保管されていることを求めています。所有者は、中華民国国籍も台湾地区人民の身分も持たないことが条件です。
 
 さらに、輸入が台湾の関係法令に違反せず、展示終了後には対象の品をすべて再輸出する必要があります。これらは併せて満たす条件です。作者の出身地だけでなく、誰の所有で、普段どこに保管され、展示後どこへ戻る作品なのかが問題になります。
 
-## 開幕日より先に来る申請の時点
+## 開幕日ではなく輸入日で決まる申請期限
 
 認可規則[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=3)は、同条例にいう文化芸術事業を申請主体としています。申請者が博物館の場合には、所管官庁を通じて文化部に申請する経路を取ります。
 
-申請は輸入日の1か月前までです。[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=4)は、期限後の申請を原則として受理しないとし、正当な理由がある場合には例外を認めています。開幕に間に合う輸送日程でも、認可の申請時点を過ぎていることはあり得ます。
+申請は輸入日の1か月前までです。[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=4)は、期限後の申請を原則として受理しないとし、正当な理由がある場合には例外を認めています。開幕に間に合う輸送日程でも、認可の申請期限を過ぎていることはあり得ます。
 
-提出資料には、申請書や展覧会の計画書、契約書、作品一覧が含まれます。作品名だけでは足りません。同条は、材質、寸法、年代、所蔵機関または所有者、保管場所、写真データなどを一覧に記載するよう求めています。中国語以外の資料には中国語訳を添え、申請内容に変更があれば書面で文化部に知らせます。
+提出資料には、申請書や展覧会の計画書、契約書、作品一覧が含まれます。作品名だけでは足りません。第4条は、材質、寸法、年代、所蔵機関または所有者、保管場所、写真データなどを一覧に記載するよう求めています。中国語以外の資料には中国語訳を添え、申請内容に変更があれば書面で文化部に知らせます。
 
 貸出の契約日と作品の発送日だけが決まっていても、申請用の所有者情報や写真がそろっているとは限りません。日本側の作品一覧と台湾側の輸入予定日を対応させると、どの作品について、いつまでに認可を申請するのかが具体的になります。
 
@@ -54,5 +54,5 @@ author: "legal-ai-assistant"
 
 - [中央社、台湾と金沢の工芸展、2026年11月15日](https://www.cna.com.tw/news/acul/202611150169.aspx)。
 - [国家文化芸術基金会、台湾・金沢工芸展の会期と会場](https://www.ncafroc.org.tw/event_detail.html?sid=6847)。
-- 文化芸術助成・促進条例：[第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170006&flno=33)、[改正沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0170006)。
-- 文化部の来台展示品認可規則：[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=2)、[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=3)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=4)、[制定沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0170530)。
+- 文化芸術助成・促進条例（文化藝術獎助及促進條例）：[第33条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170006&flno=33)、[改正沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0170006)。
+- 文化部の来台展示品認可規則（文化部受理來臺展出之文物藝術品或標本不受司法追訴扣押或作為強制執行標的申請認可辦法）：[第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=2)、[第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=3)、[第4条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=H0170530&flno=4)、[制定沿革](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=H0170530)。

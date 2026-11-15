@@ -11,7 +11,7 @@ categories:
 topic: "other"
 featured_image: "../images/ISSUE-20261115-08-taiwan-nationality-discrimination-complaint-language-deadline/featured-01.webp"
 featured_image_alt: "Các hàng ghế trống hướng về màn chiếu trắng trong một phòng chiếu nhỏ có ánh sáng dịu."
-featured_image_caption: "Hình minh họa do AI tạo, không phải ảnh triển lãm hay địa điểm tổ chức sự kiện được dẫn trong bài."
+featured_image_caption: "Hình minh họa một phòng chiếu hư cấu, không phải ảnh triển lãm hay địa điểm tổ chức sự kiện được dẫn trong bài."
 social_image: "../images/ISSUE-20261115-08-taiwan-nationality-discrimination-complaint-language-deadline/featured-01.jpg"
 faq:
   - q: "Quyền khiếu nại này chỉ dành cho người có quốc tịch Đài Loan?"
@@ -26,13 +26,13 @@ author: "legal-ai-assistant"
 
 # Bị phân biệt đối xử vì quốc tịch ở Đài Loan: hồ sơ tiếng Việt và thời hạn khiếu nại
 
-Người bị phân biệt đối xử vì quốc tịch có thể trình bày sự việc bằng tiếng Việt không? [Yes News ngày 10 tháng 11](https://n.yam.com/Article/20261110555651) đưa tin về triển lãm phim ngắn chống phân biệt chủng tộc do Cơ quan Di dân Đài Loan tổ chức. [Thông cáo của cơ quan này](https://www.immigration.gov.tw/5385/7229/7238/420835/cp_news) công bố lịch triển lãm tại Huashan vào ngày 14–15 tháng 11. Quyền khiếu nại đã có trong luật.
+Người bị phân biệt đối xử vì quốc tịch có thể trình bày sự việc bằng tiếng Việt không? [Yes News ngày 10 tháng 11](https://n.yam.com/Article/20261110555651) đưa tin về triển lãm phim ngắn chống phân biệt chủng tộc do Cơ quan Di dân Đài Loan tổ chức. [Thông cáo của cơ quan này](https://www.immigration.gov.tw/5385/7229/7238/420835/cp_news) công bố lịch triển lãm tại Huashan vào ngày 14–15 tháng 11. Bản tin không nhắc đến thủ tục khiếu nại. Quyền này đã có sẵn trong luật.
 
 [Điều 62 Luật Xuất nhập cảnh và di dân](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=62) cấm phân biệt đối xử với người cư trú tại Đài Loan vì quốc tịch, chủng tộc, màu da, giai cấp, nơi sinh và các yếu tố tương tự. Khi hành vi ấy xâm phạm trái pháp luật đến quyền, người bị ảnh hưởng được khiếu nại với cơ quan có thẩm quyền theo tình huống. Luật khác có quy định riêng thì áp dụng quy định đó.
 
 ## Bản dịch có thể được yêu cầu
 
-Theo [Điều 5 của quy định về khiếu nại phân biệt đối xử](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080166&flno=5), nếu đơn và tài liệu không bằng tiếng Hoa, cơ quan có thể yêu cầu bản dịch khi thấy cần thiết. Không có yêu cầu dịch ngay cho mọi hồ sơ. Với tài liệu tiếng Việt, thông báo bổ sung của cơ quan tiếp nhận sẽ cho biết có cần nộp bản dịch hay không.
+Theo [Điều 5 của quy định về khiếu nại phân biệt đối xử](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080166&flno=5), nếu đơn và tài liệu không bằng tiếng Hoa, cơ quan có thể yêu cầu bản dịch khi thấy cần thiết. Không có yêu cầu dịch ngay cho mọi hồ sơ. Với tài liệu tiếng Việt, thông báo của cơ quan tiếp nhận sẽ cho biết có cần nộp bản dịch hay không.
 
 Hình thức của đơn vẫn phải đáp ứng [Điều 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080166&flno=4). Đơn có chữ ký hoặc con dấu của người khiếu nại hay người đại diện, nêu thông tin các bên, yêu cầu giải quyết, sự việc, lý do và ngày nộp. Chứng cứ được đính kèm; nếu không thể cung cấp thì được miễn đính kèm. Phần mô tả sự việc vẫn cần rõ.
 

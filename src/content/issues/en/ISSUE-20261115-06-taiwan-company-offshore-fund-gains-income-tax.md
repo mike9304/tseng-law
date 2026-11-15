@@ -11,7 +11,7 @@ categories:
 topic: "tax"
 featured_image: "../images/ISSUE-20261115-06-taiwan-company-offshore-fund-gains-income-tax/featured-01.webp"
 featured_image_alt: "A closed laptop, plain folders, blank paper and a pen on an office desk beside a window."
-featured_image_caption: "AI-generated editorial illustration of a fictional finance desk, not the company or records described by the tax bureau."
+featured_image_caption: "Editorial illustration of a fictional finance desk, not the company or records described by the tax bureau."
 social_image: "../images/ISSUE-20261115-06-taiwan-company-offshore-fund-gains-income-tax/featured-01.jpg"
 faq:
   - q: "Are all fund disposal gains exempt from Taiwan enterprise income tax?"
@@ -26,9 +26,9 @@ author: "legal-ai-assistant"
 
 # Offshore fund gains in a Taiwan company's tax return
 
-Does a Taiwan company's profit from selling a fund qualify for the securities-income tax exemption? The fund's name alone cannot answer that question. [Economic Daily reported on November 13](https://money.udn.com/money/story/6710/9875301) that the Northern Area National Taxation Bureau had drawn a distinction between domestic and offshore funds. Its [November 11 release](https://www.ntbna.gov.tw/singlehtml/374fe8c4b18e48c691a6806ac02b9984?cntId=643a7971e9274028aea01b511bdc4bb6) treats offshore fund disposal gains as taxable foreign property-transaction income.
+Does a Taiwan company's profit from selling a fund qualify for the suspension of income tax on securities gains? The fund's name alone cannot answer that question. [Economic Daily reported on November 13](https://money.udn.com/money/story/6710/9875301) that the Northern Area National Taxation Bureau had drawn a distinction between domestic and offshore funds. Its [November 11 release](https://www.ntbna.gov.tw/singlehtml/374fe8c4b18e48c691a6806ac02b9984?cntId=643a7971e9274028aea01b511bdc4bb6) treats offshore fund disposal gains as taxable foreign property-transaction income.
 
-For an international group's Taiwan subsidiary investing its own cash, the taxpayer's identity comes first. [Income Tax Act Article 3(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=3) taxes an enterprise with its head office in Taiwan on its combined domestic and foreign business income. A shareholder's overseas location does not change that statutory test. This discussion concerns the Taiwan enterprise's portfolio, not the US parent's or an employee's personal investments.
+For an international group's Taiwan subsidiary investing its own cash, the taxpayer's identity comes first. [Income Tax Act Article 3(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=3) taxes an enterprise with its head office in Taiwan on its combined domestic and foreign business income. A shareholder's overseas location does not change that statutory test. This discussion concerns the Taiwan enterprise's portfolio, not a foreign parent's or an employee's personal investments.
 
 ## Where the fund was issued
 

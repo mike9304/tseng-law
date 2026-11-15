@@ -11,11 +11,11 @@ categories:
 topic: other
 featured_image: "../images/ISSUE-20261115-03-taiwan-flight-fuel-surcharge-filing-ticket-conditions/featured-01.webp"
 featured_image_alt: "人のいない空港の待合席と、窓の向こうに駐機する白い旅客機"
-featured_image_caption: "AIで生成した説明用の空港風景です。実際の航空会社や今回の報道現場を撮影したものではありません。"
+featured_image_caption: "航空券の説明用に作成した架空の空港風景です。実際の航空会社や今回の報道現場を撮影したものではありません。"
 social_image: "../images/ISSUE-20261115-03-taiwan-flight-fuel-surcharge-filing-ticket-conditions/featured-01.jpg"
 faq:
   - q: "11月の燃油サーチャージは搭乗日で決まりますか？"
-    a: "エバー航空の11月2日の案内は、11月8日以降に発券する台湾発の旅程を対象としています。短距離は一区間40米ドル、長距離は104米ドルです。この案内だけで、日本発の旅程や他社の適用条件までは決まりません。"
+    a: "エバー航空の今回の案内では、搭乗日ではなく発券日と旅程の出発地が基準です。11月2日の案内は、11月8日以降に発券する台湾発の旅程を対象としています。短距離は一区間40米ドル、長距離は104米ドルです。この案内だけで、日本発の旅程や他社の適用条件までは決まりません。"
   - q: "法令の七日間は、航空券を買った日から数えますか？"
     a: "航空旅客・貨物運賃管理規則第3条の附加費に関する七日目の起点は、民航局が航空会社の届出を受け取った日です。旅客の購入日から数える期間ではありません。"
   - q: "値上げされたら無料で払い戻せますか？"
@@ -32,11 +32,11 @@ author: "legal-ai-assistant"
 
 ## 航空会社の届出から適用まで
 
-台湾の[民用航空法第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=55)は、国際定期路線の運賃を、民航局を通じて交通部へ届け出る仕組みを定めています。変更も同様です。[航空旅客・貨物運賃管理規則第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090055&flno=2)による運賃には、各種の附加費も含まれます。
+台湾の[民用航空法第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=55)は、国際定期路線の運賃を、民航局を通じて交通部へ届け出る仕組みを定めています。変更も同様です。
 
-[同規則第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090055&flno=2)が定める附加費は、特定の費用が大きく変動したことに対応して、一定の期間、運賃などに加えて徴収する費用です。国内定期路線については、[民用航空法第55条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=55)が運賃の上限・下限の認可を求めています。
+[航空旅客・貨物運賃管理規則第2条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090055&flno=2)による運賃には、燃油サーチャージのような各種の付加料金（条文上の「附加費」）も含まれます。附加費は、特定の費用が大きく変動したことに対応して、一定の期間、運賃などに加えて徴収する費用です。
 
-附加費は、[同規則第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090055&flno=3)により、届出日から数えて七日目に効力が生じ、変更にも同じ日数が適用されます。起点は民航局の受付日です。旅客の購入日ではありません。購入後に七日間自由に取り消せる、という制度でもありません。
+附加費は、[同規則第3条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090055&flno=3)により、届出日を基準とする七日目から効力が生じ、変更にも同じ日数が適用されます。起点は民航局の受付日です。旅客の購入日ではありません。購入後に七日間自由に取り消せる、という制度でもありません。
 
 附加費以外の運賃や利用条件は、同じ条文により届出日の翌日から効力が生じます。
 

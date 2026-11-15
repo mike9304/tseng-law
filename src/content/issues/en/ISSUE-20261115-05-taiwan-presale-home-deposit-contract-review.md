@@ -11,7 +11,7 @@ categories:
 topic: "other"
 featured_image: "../images/ISSUE-20261115-05-taiwan-presale-home-deposit-contract-review/featured-01.webp"
 featured_image_alt: "A residential building model, blank paper and a closed folder on a table in an empty apartment sales office."
-featured_image_caption: "AI-generated editorial illustration of a fictional sales office, not the development or contract discussed in the report."
+featured_image_caption: "Editorial illustration of a fictional sales office, not the development or contract discussed in the report."
 social_image: "../images/ISSUE-20261115-05-taiwan-presale-home-deposit-contract-review/featured-01.jpg"
 faq:
   - q: "Can a sales office require a deposit before letting a buyer take the contract away?"
@@ -42,7 +42,7 @@ If the business fails to provide the required review opportunity, Article 11-1 s
 
 ## A usable copy and the payment record
 
-Paper is not the only option. The FTC announcement says sample copies, photocopies and electronic files are among the ways a contract may be supplied. An electronic copy can make it easier for a buyer abroad or an adviser outside the showroom to read the same text. The announcement does not promise an English translation or require one particular delivery format.
+Paper is not the only option. The FTC announcement says sample copies, photocopies, optical discs and electronic files are among the ways a contract may be supplied. An electronic copy can make it easier for a buyer abroad or an adviser outside the showroom to read the same text. The announcement does not promise an English translation or require one particular delivery format.
 
 Where money has already been paid, the fine does not settle the buyer's individual refund claim. A reservation document, receipt and subsequent sales agreement may record different stages of the transaction. Messages requesting the full contract, the response imposing a payment condition and the version eventually supplied can help establish the sequence.
 

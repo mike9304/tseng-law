@@ -1,3 +1,6 @@
+import type { ReactElement } from 'react';
+import { isSeaBusinessLocale } from '@/lib/sea-business-routes';
+import SeaBusinessLinks from '@/components/SeaBusinessLinks';
 import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
 import { isSiteLocale, normalizeSiteLocale, toBuilderLocale, type Locale, type SiteLocale } from '@/lib/locales';
@@ -32,6 +35,10 @@ import {
 import { buildAbsoluteUrl, DEFAULT_SOCIAL_IMAGE_PATH, getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
+
+function withSeaBusinessLinks(locale: string, content: ReactElement) {
+  return isSeaBusinessLocale(locale) ? <>{content}<SeaBusinessLinks locale={locale} /></> : content;
+}
 
 function resolveSlugPath(slug?: string[]): string {
   return slug?.join('/') || '';
@@ -156,8 +163,10 @@ export default async function MainSiteCatchAllPage(
     }
     if (params.locale === 'vi') {
       return classified.pageKey === 'home'
-        ? <ViHomeBody posts={getAllColumnPosts('vi')} />
-        : <ViPageBody pageKey={classified.pageKey} />;
+        ? withSeaBusinessLinks('vi', <ViHomeBody posts={getAllColumnPosts('vi')} />)
+        : classified.pageKey === 'services'
+          ? withSeaBusinessLinks('vi', <ViPageBody pageKey={classified.pageKey} />)
+          : <ViPageBody pageKey={classified.pageKey} />;
     }
     if (classified.pageKey === 'home') {
       // Same section sequence as the English home. Columns come from the
@@ -167,9 +176,10 @@ export default async function MainSiteCatchAllPage(
       const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
         filterMarketBoardColumns(source, getAllColumnPosts(source)),
       );
-      return <GuidanceHomeBody locale={params.locale} columns={columns} />;
+      return withSeaBusinessLinks(params.locale, <GuidanceHomeBody locale={params.locale} columns={columns} />);
     }
-    return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
+    const body = <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
+    return classified.pageKey === 'services' ? withSeaBusinessLinks(params.locale, body) : body;
   }
 
   const locale = resolvePublicLocale(params.locale);

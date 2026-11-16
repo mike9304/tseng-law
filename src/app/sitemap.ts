@@ -1,3 +1,4 @@
+import { SEA_BUSINESS_LOCALES, SEA_BUSINESS_PAGES } from '@/lib/sea-business-routes';
 import type { MetadataRoute } from 'next';
 import { primaryAttorneySlug } from '@/data/attorney-profiles';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
@@ -344,6 +345,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         xDefaultWithinCluster: true,
       }),
     );
+  }
+
+  for (const locale of SEA_BUSINESS_LOCALES) {
+    for (const key of SEA_BUSINESS_PAGES) {
+      pages.push(createEntry(locale, `/${key}`, {
+        lastModified: lastmod.forFile('src/data/sea-business-guidance.ts'),
+        alternateLocales: SEA_BUSINESS_LOCALES, xDefaultWithinCluster: true,
+      }));
+    }
   }
 
   for (const archive of getColumnTopicArchives()) {

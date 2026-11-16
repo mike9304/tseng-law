@@ -201,6 +201,21 @@ describe('sitemap column lastModified', () => {
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
   });
 
+  it('adds only the eight SEA business pages with reciprocal four-language clusters', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = (await sitemap()).filter(entry => /\/(company-setup|debt-collection)$/.test(entry.url));
+    const expected = ['vi', 'id', 'th', 'fil'].flatMap(locale => ['company-setup', 'debt-collection'].map(key => `https://tseng-law.com/${locale}/${key}`));
+    expect(entries.map(entry => entry.url).sort()).toEqual(expected.sort());
+    for (const entry of entries) {
+      const key = entry.url.split('/').at(-1);
+      expect(entry.alternates?.languages).toEqual({
+        vi: `https://tseng-law.com/vi/${key}`, id: `https://tseng-law.com/id/${key}`,
+        th: `https://tseng-law.com/th/${key}`, fil: `https://tseng-law.com/fil/${key}`,
+        'x-default': `https://tseng-law.com/vi/${key}`,
+      });
+    }
+  });
+
   it('lists only nonempty topic archives with reciprocal existing language URLs', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = (await sitemap()).filter((entry) => entry.url.includes('/columns/topics/'));
@@ -380,7 +395,7 @@ describe('sitemap column lastModified', () => {
       // Country-release core files add 40 and the separate JA gap fixture adds 7.
       // VI expansion files are already included in guidanceTranslatedColumnCount.
       beforeFiltering:
-        529 + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        529 + 8 /* SEA4 × two business pages */ + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -465,7 +480,7 @@ describe('sitemap column lastModified', () => {
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        520 + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + 8 /* SEA4 × two business pages */ + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length

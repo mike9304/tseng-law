@@ -502,6 +502,11 @@ export function buildLocaleLlmsTxt(locale: SiteLocale): string {
   };
 
   const intentEntries = buildLocalizedEntries(locale, intentPaths, copy.intentEntries);
+  if (locale === 'zh-hant') intentEntries.push({
+    title: '台北會說韓文的台灣律師',
+    path: '/zh-hant/korean-lawyer-in-taiwan',
+    annotation: '曾雋崴律師的韓文諮詢、語言資格資料、服務範圍與聯絡方式。',
+  });
 
   const sections: LlmsSection[] = [
     { heading: copy.sectionHeadings.firm, entries: firmEntries },

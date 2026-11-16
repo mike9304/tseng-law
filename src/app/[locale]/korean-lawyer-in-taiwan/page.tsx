@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import AttorneyCredentialCard from '@/components/AttorneyCredentialCard';
+import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { zhAttorneyLanguageCredentials } from '@/data/attorney-credentials';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
-import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLegalServiceJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { LANDING_SLUG, landingContent } from './content';
 import styles from './landing.module.css';
 
@@ -36,6 +39,20 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
   const path = `/${locale}/${SLUG_PATH}`;
 
   const faqJsonLd = buildFaqJsonLd(c.faq, locale);
+  const attorney = locale === 'zh-hant' ? getAttorneyProfile(locale, primaryAttorneySlug) : null;
+  const personJsonLd = attorney ? {
+    ...buildPersonJsonLd({
+      locale,
+      path: '/zh-hant/lawyers/wei-tseng',
+      name: attorney.name,
+      description: c.lead[0],
+      image: attorney.image,
+      jobTitle: attorney.role,
+      knowsLanguage: ['ko', 'zh-Hant', 'ja'],
+      sameAs: attorney.sameAs,
+    }),
+    hasCredential: zhAttorneyLanguageCredentials,
+  } : null;
   const legalServiceJsonLd = buildLegalServiceJsonLd(locale, {
     description: c.description,
     path: SLUG_PATH,
@@ -55,6 +72,7 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
         ])}
       />
       <JsonLd data={legalServiceJsonLd} />
+      {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
 
       <section className={styles.page}>
@@ -74,6 +92,8 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
                 ))}
               </ul>
             </section>
+
+            {locale === 'zh-hant' ? <AttorneyCredentialCard profileLink /> : null}
 
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.servicesHeading}</h2>

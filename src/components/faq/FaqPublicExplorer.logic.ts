@@ -74,3 +74,10 @@ export function filterFaqItems(
     ].some((value) => value.toLowerCase().includes(normalizedQuery));
   });
 }
+
+export function hasKoreanConsultationRelatedLink(locale: SiteLocale, item: BuilderFaqItem): boolean {
+  return locale === 'zh-hant' && (
+    (item.faqId === 'seed-zh-hant-9' && item.question === '韓國人在台灣離婚需要什麼程序？') ||
+    (item.faqId === 'seed-zh-hant-12' && item.question === '有哪些諮詢方式？')
+  );
+}

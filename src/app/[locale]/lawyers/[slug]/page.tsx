@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
+import AttorneyCredentialCard from '@/components/AttorneyCredentialCard';
 import PageHeader from '@/components/PageHeader';
 import FAQAccordion from '@/components/FAQAccordion';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
@@ -340,6 +341,8 @@ export default async function LawyerProfilePage(
                   </a>
                 </div>
               </div>
+
+              {locale === 'zh-hant' && profile.slug === primaryAttorneySlug ? <AttorneyCredentialCard /> : null}
 
               <div className={`profile-proof-grid ${styles.proofGrid}`}>
                 {profile.proofPoints.map((item) => (

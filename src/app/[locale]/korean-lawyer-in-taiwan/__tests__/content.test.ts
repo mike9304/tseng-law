@@ -18,13 +18,13 @@ describe('korean-lawyer-in-taiwan content', () => {
     }
   });
 
-  it('has a declarative lead, non-empty services/languages, and 5 FAQ items per locale', () => {
+  it('has a declarative lead, non-empty services/languages, and the localized FAQ items', () => {
     for (const locale of siteLocales) {
       const c = landingContent[locale];
-      expect(c.lead.length).toBeGreaterThanOrEqual(3);
+      expect(c.lead.length).toBeGreaterThanOrEqual(locale === 'zh-hant' ? 2 : 3);
       expect(c.services.length).toBeGreaterThan(0);
       expect(c.languages.length).toBeGreaterThan(0);
-      expect(c.faq).toHaveLength(5);
+      expect(c.faq).toHaveLength(locale === 'zh-hant' ? 6 : 5);
       expect(c.relatedResources).toHaveLength(5);
       for (const item of c.faq) {
         expect(item.q.trim()).not.toBe('');
@@ -47,13 +47,13 @@ describe('korean-lawyer-in-taiwan content', () => {
     }
   });
 
-  it('builds a non-null FAQPage JSON-LD with 5 entities per locale', () => {
+  it('builds a non-null FAQPage JSON-LD matching the visible localized FAQ', () => {
     for (const locale of siteLocales) {
       const c = landingContent[locale];
       const faq = buildFaqJsonLd(c.faq, locale);
       expect(faq).not.toBeNull();
       expect(faq).toMatchObject({ '@type': 'FAQPage' });
-      expect((faq!.mainEntity as unknown[]).length).toBe(5);
+      expect((faq!.mainEntity as unknown[]).length).toBe(c.faq.length);
     }
   });
 

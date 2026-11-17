@@ -729,6 +729,34 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Locale-specific expansion columns published 2026-11-17 (cols-1117: foreign judgments, company, contracts, gift tax, visas, investor protection, medical consent, criminal procedure, plus 1339-ja and 1344-vi held from cols-1111). */
+export const COLS_EXPANSION_FILES_20261117: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1349-taiwan-us-judgment-oem-factory-return-molds-tooling.md',
+    '1353-taiwan-digital-nomad-visa-taiwan-client-work.md',
+    '1355-taiwan-surgery-consent-form-chinese-informed-consent-explanation.md',
+  ],
+  'es': [
+    '1357-taiwan-dismissed-manager-company-seals-bank-token-return.md',
+  ],
+  'fr': [
+    '1358-taiwan-contract-company-seal-signer-without-authority-binding.md',
+  ],
+  'ja': [
+    '1339-taiwan-futures-forced-liquidation-negative-balance-claim.md',
+    '1350-taiwan-subsidiary-shareholders-meeting-notice-missing-resolution-revocation.md',
+    '1354-taiwan-securities-broker-insolvency-investor-protection-fund.md',
+  ],
+  'ko': [
+    '1351-taiwan-purchase-order-vs-quotation-conflicting-terms-contract.md',
+    '1352-taiwan-gift-tax-exemption-2027-increase-gift-timing.md',
+    '1356-taiwan-police-phone-unlock-consent-search.md',
+  ],
+  'vi': [
+    '1344-taiwan-employer-withholds-wages-deposit-migrant-worker.md',
+  ],
+};
+
 /** Locale-specific expansion columns published 2026-11-11 (cols-1111: investment, crypto, labor, family). */
 export const COLS_EXPANSION_FILES_20261111: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -1925,6 +1953,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 /** Registered locale-specific batches through 2026-11-05, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
+    ...(COLS_EXPANSION_FILES_20261117[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261111 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(JA_GAP_COLUMN_FILES_20261110[locale] ?? []),
@@ -2104,6 +2133,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if (Object.values(COLS_EXPANSION_FILES_20261117).flat().map(slugOf).includes(slug)) return '2026-11-17';
   if ([...Object.values(COLS_EXPANSION_FILES_20261111), ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111)].flat().map(slugOf).includes(slug)) return '2026-11-11';
   if ([...Object.values(JA_GAP_COLUMN_FILES_20261110), ...Object.values(COLS_GAP_FILES_20261110)].flat().map(slugOf).includes(slug)) return '2026-11-10';
   if (BACKLOG_COLUMN_FILES_20261105[locale]?.map(slugOf).includes(slug)) return '2026-11-05';
@@ -2182,6 +2212,7 @@ export function allNativeFiles(locale: string): string[] {
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
+    ...Object.values(COLS_EXPANSION_FILES_20261117),
     ...Object.values(COLS_EXPANSION_FILES_20261111),
     ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111),
     ...Object.values(JA_GAP_COLUMN_FILES_20261110),

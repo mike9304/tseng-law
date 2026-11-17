@@ -70,5 +70,6 @@ describe('column topic taxonomy (topic-grouped column index)', () => {
     expect(resolveColumnTopic('unknown-slug', undefined, 'case')).toBe('litigation');
     expect(resolveColumnTopic('unknown-slug', 'nonsense', 'legal')).toBe('other');
     expect(resolveColumnTopic('taiwan-divorce-lawsuit-qna', 'tax')).toBe('tax');
+    expect(resolveColumnTopic('any-slug', 'entertainment')).toBe('entertainment');
   });
 });

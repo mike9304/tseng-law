@@ -14,6 +14,7 @@ export const COLUMN_MENU_CATEGORY_ORDER = [
   'tax',
   'semiconductor',
   'company',
+  'entertainment',
   'issues',
   'all',
 ] as const;
@@ -41,6 +42,7 @@ const COLUMN_MENU_LABELS: Record<
     tax: '세무·회계',
     semiconductor: '반도체',
     company: '회사설립·투자',
+    entertainment: '연예 법률 이슈',
     issues: '이슈 칼럼',
     all: '전체 칼럼',
   },
@@ -53,6 +55,7 @@ const COLUMN_MENU_LABELS: Record<
     tax: '稅務會計',
     semiconductor: '半導體',
     company: '公司設立・投資',
+    entertainment: '娛樂法律話題',
     issues: '議題專欄',
     all: '全部專欄',
   },
@@ -65,6 +68,7 @@ const COLUMN_MENU_LABELS: Record<
     tax: 'Tax and accounting',
     semiconductor: 'Semiconductors',
     company: 'Company setup and investment',
+    entertainment: 'Entertainment & the law',
     issues: 'Issue columns',
     all: 'All columns',
   },
@@ -77,6 +81,7 @@ const COLUMN_MENU_LABELS: Record<
     tax: '税務・会計',
     semiconductor: '半導体',
     company: '会社設立・投資',
+    entertainment: 'エンタメと法律',
     issues: '注目コラム',
     all: 'すべてのコラム',
   },
@@ -107,6 +112,9 @@ function categoryAvailable(locale: PublicLocale8, id: ColumnMenuCategoryId): boo
   if (id === 'issues') {
     return localeHasIssueBoard(locale);
   }
+  if (id === 'entertainment') {
+    return locale === 'zh-hant';
+  }
   return true;
 }
 
@@ -129,6 +137,8 @@ function categoryHref(locale: PublicLocale8, id: ColumnMenuCategoryId): string {
       return `${base}${SEMICONDUCTOR_GUIDE_PATH}`;
     case 'company':
       return `${base}/columns?topic=company`;
+    case 'entertainment':
+      return `${base}/columns/topics/entertainment`;
     case 'issues':
       return `${base}/columns/issues`;
     case 'all':

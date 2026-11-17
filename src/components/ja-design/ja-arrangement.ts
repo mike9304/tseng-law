@@ -27,6 +27,7 @@ export const JA_COLUMN_TOPIC_ORDER: readonly ColumnTopic[] = [
   'visa',
   'tax',
   'lawyer',
+  'entertainment',
   'other',
 ];
 

@@ -20,6 +20,7 @@ export const COLUMN_TOPICS = [
   'litigation',
   'labor',
   'lawyer',
+  'entertainment',
   'other',
 ] as const;
 
@@ -87,6 +88,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     litigation: '소송·분쟁',
     labor: '노동·고용',
     lawyer: '대만 변호사 선임',
+    entertainment: '연예 법률 이슈',
     other: '기타 법률정보',
   },
   'zh-hant': {
@@ -99,6 +101,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     litigation: '訴訟與糾紛',
     labor: '勞動與僱傭',
     lawyer: '委任台灣律師',
+    entertainment: '娛樂法律話題',
     other: '其他法律資訊',
   },
   en: {
@@ -111,6 +114,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     litigation: 'Litigation & disputes',
     labor: 'Employment',
     lawyer: 'Working with a Taiwan lawyer',
+    entertainment: 'Entertainment & the law',
     other: 'Other legal topics',
   },
   ja: {
@@ -123,6 +127,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     litigation: '訴訟・紛争',
     labor: '労働・雇用',
     lawyer: '台湾の弁護士に依頼する',
+    entertainment: 'エンタメと法律',
     other: 'その他の法律情報',
   },
 };

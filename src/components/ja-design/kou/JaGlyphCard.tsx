@@ -14,6 +14,7 @@ export const JA_GLYPH_BY_TOPIC: Record<ColumnTopic, string> = {
   visa: '留',
   tax: '税',
   lawyer: '弁',
+  entertainment: '芸',
   other: '法',
 };
 

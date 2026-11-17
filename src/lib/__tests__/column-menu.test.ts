@@ -47,4 +47,19 @@ describe('column menu categories', () => {
     expect(slugs.length).toBeGreaterThan(0);
     expect(getColumnMenuMegaLinks('ko').some((link) => slugs.some((slug) => link.href.includes(slug)))).toBe(false);
   });
+
+  it('zh-hant exposes the entertainment-law topic archive in the column menu', () => {
+    const links = getColumnMenuLinks('zh-hant');
+    const entertainment = links.find((link) => link.id === 'entertainment');
+    expect(entertainment?.label).toBe('娛樂法律話題');
+    expect(entertainment?.href).toBe('/zh-hant/columns/topics/entertainment');
+  });
+
+  it.each(['ko', 'en', 'ja', 'vi', 'es', 'fr', 'id', 'th', 'fil'] as const)(
+    '%s omits entertainment from the column menu',
+    (locale) => {
+      const links = getColumnMenuLinks(locale);
+      expect(links.some((link) => link.id === 'entertainment')).toBe(false);
+    },
+  );
 });

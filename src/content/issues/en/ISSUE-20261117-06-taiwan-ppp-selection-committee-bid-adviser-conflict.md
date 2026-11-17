@@ -19,24 +19,24 @@ faq:
   - q: "Does ending an adviser relationship remove every recusal issue?"
     a: "No. Article 9 includes employment, mandate or agency relationships that currently exist or existed within the preceding three years. This ground covers a member or spouse's relationship with the applicant or its responsible person. Other specified conflicts can also require immediate recusal."
   - q: "Do these provisions govern every Taiwan government purchase?"
-    a: "No. These provisions concern selection committees for projects under the Act for Promotion of Private Participation in Infrastructure Projects. Whether a project is being selected under that Act is part of identifying the applicable framework."
+    a: "No. These provisions concern selection committees for projects under the Act for Promotion of Private Participation in Infrastructure Projects. The first question is whether the project is being selected under that Act."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
 # Taiwan infrastructure bids: when a panel member helps an applicant
 
-An applicant for a Taiwan private-participation infrastructure project can lose eligibility for first or second place through a selection-committee member's prohibited assistance. [Article 12 of the selection-committee regulations](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070064&flno=12) sets that consequence. It is an existing rule. [CNA reported on November 16](https://www.cna.com.tw/news/afe/202611160192.aspx) that the Ministry of Finance planned further committee reforms, including a ban on current elected representatives serving as members.
+An applicant for a Taiwan private-participation infrastructure project can lose eligibility for first or second place through a selection-committee member's prohibited assistance. [Article 12 of the selection-committee regulations](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070064&flno=12) sets that consequence. It is an existing rule. [CNA reported on November 16](https://www.cna.com.tw/news/afe/202611160192.aspx) that the Ministry of Finance planned to amend the committee regulations, including a ban on current elected representatives serving as members.
 
-CNA described changes scheduled for November 17; its report did not establish completed promulgation. For an overseas sponsor assembling a Taiwan bid team, the existing rules already raise a concrete question: does an adviser also sit on the committee evaluating the same project? The answer can affect the applicant as well as the individual member.
+CNA said the amended regulation was due to be issued on November 17. Its report does not confirm that the amendment has been promulgated. For an overseas sponsor assembling a Taiwan bid team, the existing rules already raise a concrete question: does an adviser also sit on the committee evaluating the same project? The answer can affect the applicant as well as the individual member.
 
 ## Who must step aside
 
-[Article 44 of the Act for Promotion of Private Participation in Infrastructure Projects](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070062&flno=44) requires the responsible authority to form a selection committee. It must evaluate the submitted materials fairly and impartially against criteria determined for the project's purpose. Those criteria must be announced with the invitation for private participation. This is the framework for projects under that Act, not a rule governing every government purchase.
+[Article 44 of the Act for Promotion of Private Participation in Infrastructure Projects](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070062&flno=44) requires the authority-in-charge to form a selection committee. It must evaluate the submitted materials fairly and impartially against criteria determined for the project's purpose. Those criteria must be announced with the invitation for private participation. This is the framework for projects under that Act, not a rule governing every government purchase.
 
-Immediate recusal is required under [Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070064&flno=9) when a member or spouse has, or within the preceding three years had, an employment, mandate or agency relationship with the applicant or its responsible person. Ending the engagement does not erase that period.
+Immediate recusal is required under [Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070064&flno=9) when a member or spouse has, or within the preceding three years had, an employment, mandate or agency relationship with the applicant or its responsible person. Ending the engagement does not take the relationship outside that three-year window.
 
-Other grounds include interests in the application involving the member, spouse, relatives within the second degree or cohabiting family members. Concrete evidence that impartial performance is at risk is also a ground, as is the member's or responsible authority's own assessment of that risk. A consultancy's name alone will not resolve these questions. The parties, relationship and dates matter.
+Other grounds include interests in the application involving the member, spouse, relatives within the second degree or cohabiting family members. Concrete evidence that impartial performance is at risk is also a ground, as is the member's or authority-in-charge's own assessment of that risk. A consultancy's name alone will not resolve these questions. The parties, relationship and dates matter.
 
 ## Assistance after the member receives selection materials
 
@@ -44,7 +44,7 @@ Article 12 uses a specific trigger: receipt of selection materials. From that po
 
 Eligibility is at stake. Recusal addresses the member's participation in the committee; the assistance provision also addresses what the member has done for an application. The two inquiries can therefore involve different records and different dates.
 
-Engagement letters may describe an assignment broadly, while emails and delivered work show what assistance actually occurred and committee correspondence may establish when the member received selection materials. Reading those records together allows the conduct to be assessed against Article 12's trigger and prohibited activity. A general conflict declaration cannot establish that no prohibited assistance occurred.
+Engagement letters may describe an assignment broadly, while emails and delivered work show what assistance actually occurred and committee correspondence may establish when the member received selection materials. Read together, those records show whether the member helped with the application and whether that help came after the selection materials arrived. A general conflict declaration cannot establish that no prohibited assistance occurred.
 
 ## The adviser role in an international bid team
 

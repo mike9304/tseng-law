@@ -80,6 +80,7 @@ describe('ColumnsGrid topic grouping', () => {
     expect(opening.match(/class="columns-card"/g)).toHaveLength(3);
     expect(html).toContain('data-columns-topic-section="family"');
     expect(html).toContain('data-columns-topic-more="family"');
+    expect(html).toMatch(/<a href="\/ko\/columns\/topics\/family"[^>]+data-columns-topic-more="family"/);
   });
   it('renders one section per topic in canonical order, previewing at most 3 cards each', () => {
     nav.params = new URLSearchParams();
@@ -109,6 +110,13 @@ describe('ColumnsGrid topic grouping', () => {
     const html = renderToStaticMarkup(<ColumnsGrid locale="id" posts={posts} />);
     const sections = [...html.matchAll(/data-columns-topic-section="([a-z]+)"/g)].map((m) => m[1]);
     expect(sections).toEqual(['formation', 'legal', 'case']);
+  });
+
+  it('does not invent expert-topic URLs for the separate issue board', () => {
+    nav.params = new URLSearchParams();
+    const html = renderToStaticMarkup(<ColumnsGrid locale="ko" posts={posts} hrefBase="/ko/columns/issues" />);
+    expect(html).toContain('data-columns-topic-more="family"');
+    expect(html).not.toContain('/columns/issues/topics/');
   });
 
   it('uses Vietnamese topic names for filtering and search controls', () => {

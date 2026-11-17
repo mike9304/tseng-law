@@ -1,3 +1,4 @@
+import { isSeaBusinessLocale, isSeaBusinessPage } from '@/lib/sea-business-routes';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 
@@ -525,7 +526,8 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
   // File routes own `/columns` and `/columns/[slug]` so translations can
   // render (or 404) without the catch-all folding unknown locales into KO.
   const firstSegment = slugPath.split('/')[0] ?? '';
-  if (firstSegment === 'columns' || (locale === 'vi' && slugPath === 'criminal-litigation')) {
+  if (firstSegment === 'columns' || (locale === 'vi' && slugPath === 'criminal-litigation')
+    || (isSeaBusinessLocale(locale) && isSeaBusinessPage(slugPath))) {
     return null;
   }
 
@@ -672,6 +674,13 @@ export function resolvePublicLanguageSwitchTarget(
 
   if (currentLocale === targetLocale) {
     return { status: 'available', href: visible || `/${targetLocale}`, fallback: 'exact' };
+  }
+
+  // SEA business pages have only four real editions; never manufacture core-language paths.
+  if (currentLocale && isSeaBusinessLocale(currentLocale) && isSeaBusinessPage(slugPath)) {
+    return isSeaBusinessLocale(targetLocale)
+      ? { status: 'available', href: `/${targetLocale}/${slugPath}`, fallback: 'exact' }
+      : { status: 'available', href: `/${targetLocale}`, fallback: 'home' };
   }
 
   const columnHref = columnArticleFromSlugPath(slugPath)

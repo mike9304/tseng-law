@@ -49,7 +49,7 @@ type ControlProps = {
   onChange?: (event: { target: { value: string } }) => void;
   onSubmit?: (event: { preventDefault: () => void }) => void;
   onNavigate?: (event: { preventDefault: () => void }) => void;
-  onClick?: () => void;
+  onClick?: (event?: { button: number; metaKey?: boolean; ctrlKey?: boolean; shiftKey?: boolean; altKey?: boolean; preventDefault: () => void }) => void;
   [key: string]: unknown;
 };
 
@@ -129,6 +129,21 @@ beforeEach(() => {
 });
 
 describe('public columns filter recovery', () => {
+  it('keeps ordinary topic clicks in-place while modified clicks use the real archive href', async () => {
+    navigation.params = new URLSearchParams('campaign=public-guide');
+    const archive = Array.from({ length: 7 }, (_, i) => ({ ...posts[0], slug: `company-${i}` }));
+    const screen = await mountColumns('en', archive);
+    const link = screen.control('data-columns-topic-more', 'company');
+    expect(link.href).toBe('/en/columns/topics/company');
+    const modified = vi.fn();
+    await act(async () => link.onClick?.({ button: 0, ctrlKey: true, preventDefault: modified }));
+    expect(modified).not.toHaveBeenCalled();
+    expect(screen.url.searchParams.has('topic')).toBe(false);
+    const ordinary = vi.fn();
+    await act(async () => link.onClick?.({ button: 0, preventDefault: ordinary }));
+    expect(ordinary).toHaveBeenCalledOnce();
+    expect(Object.fromEntries(screen.url.searchParams)).toEqual({ campaign: 'public-guide', topic: 'company' });
+  });
   it.each(['ko', 'en', 'ja', 'zh-hant'] as const)(
     'recovers all 17 %s cards when reset precedes the submitted query hook commit',
     async (locale) => {

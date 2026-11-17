@@ -21,6 +21,7 @@ import {
   isPublicLocale8,
 } from '@/lib/public-guidance';
 import { COLUMN_CONTENT_DIR_BY_LOCALE } from '@/lib/column-locales';
+import { COUNTRY_RELEASE_CORE_FILES_20261106 } from '@/lib/__tests__/country-release-column-files-20261106';
 import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_COLUMN_FILES_20261004,
   COUNTRY_COLUMN_FILES_20261005,
   COUNTRY_COLUMN_FILES_20261006,
@@ -52,6 +53,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B,
   COLS_EXPANSION_FILES_20261111,
   COLS_GAP_FILES_20261110,
+  JA_GAP_COLUMN_FILES_20261110,
   TRAFFIC_JUDGMENT_COLUMN_FILES_20261111,
   ROAD_RAGE_COLUMN_FILES_20261003, NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 import { TAX_ACCOUNTING_COLUMN_FILES } from '@/lib/__tests__/tax-accounting-column-files';
@@ -64,6 +66,15 @@ import {
 } from '../sitemap-lastmod';
 
 const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());
+
+// Derive the expected public route set from published content, independently of
+// the topic-archive generator. Unsupported and empty language/topic pairs have no route.
+function expectedTopicArchiveUrls() {
+  return (['ko', 'zh-hant', 'en', 'ja', 'vi'] as const).flatMap((locale) =>
+    [...new Set(getAllColumnPosts(locale).map((post) => post.topic))]
+      .map((topic) => `https://tseng-law.com/${locale}/columns/topics/${topic}`),
+  );
+}
 
 vi.mock('node:child_process', async (importOriginal) => {
   const childProcess = await importOriginal<typeof import('node:child_process')>();
@@ -188,6 +199,50 @@ describe('sitemap column lastModified', () => {
     sourceMocks.readServiceAreaSourceRecords.mockClear();
     sourceMocks.collectAllBuilderSitemapEntries.mockReset();
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
+  });
+
+  it('adds only the eight SEA business pages with reciprocal four-language clusters', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = (await sitemap()).filter(entry => /\/(company-setup|debt-collection)$/.test(entry.url));
+    const expected = ['vi', 'id', 'th', 'fil'].flatMap(locale => ['company-setup', 'debt-collection'].map(key => `https://tseng-law.com/${locale}/${key}`));
+    expect(entries.map(entry => entry.url).sort()).toEqual(expected.sort());
+    for (const entry of entries) {
+      const key = entry.url.split('/').at(-1);
+      expect(entry.alternates?.languages).toEqual({
+        vi: `https://tseng-law.com/vi/${key}`, id: `https://tseng-law.com/id/${key}`,
+        th: `https://tseng-law.com/th/${key}`, fil: `https://tseng-law.com/fil/${key}`,
+        'x-default': `https://tseng-law.com/vi/${key}`,
+      });
+    }
+  });
+
+  it('lists only nonempty topic archives with reciprocal existing language URLs', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = (await sitemap()).filter((entry) => entry.url.includes('/columns/topics/'));
+    const urls = new Set(entries.map((entry) => entry.url));
+    expect([...urls].sort()).toEqual(expectedTopicArchiveUrls().sort());
+    expect(entries).toHaveLength(urls.size);
+    for (const entry of entries) {
+      for (const alternate of Object.values(entry.alternates?.languages ?? {})) {
+        expect(urls.has(String(alternate)), `${entry.url} -> ${alternate}`).toBe(true);
+      }
+    }
+    expect(entries.some((entry) => entry.url.includes('/de/columns/topics/'))).toBe(false);
+  });
+
+  it('includes every previously omitted country/JA-gap URL and emits the VI expansion URL once', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const urls = (await sitemap()).map((entry) => entry.url);
+    for (const batch of [COUNTRY_RELEASE_CORE_FILES_20261106, JA_GAP_COLUMN_FILES_20261110]) {
+      for (const [locale, files] of Object.entries(batch)) {
+        for (const file of files) {
+          const slug = file.replace(/^\d+-/, '').replace(/\.md$/, '');
+          const url = `https://tseng-law.com/${locale}/columns/${slug}`;
+          expect(urls.filter((entry) => entry === url), file).toHaveLength(1);
+        }
+      }
+    }
+    expect(urls.filter((url) => url === 'https://tseng-law.com/vi/columns/taiwan-usdt-p2p-seller-bank-account-frozen-money-laundering')).toHaveLength(1);
   });
 
   it('lists an issue board only once the locale has a published piece (fr yes, es not before its first)', async () => {
@@ -337,8 +392,10 @@ describe('sitemap column lastModified', () => {
       // Case translations add 18 core URLs (ko 6, ja 6, en 4, zh-hant 2); guidance translations are counted from disk.
       // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
+      // Country-release core files add 40 and the separate JA gap fixture adds 7.
+      // VI expansion files are already included in guidanceTranslatedColumnCount.
       beforeFiltering:
-        529 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        529 + 8 /* SEA4 × two business pages */ + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -414,12 +471,16 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
-          + Object.values(COLS_EXPANSION_FILES_20261111).flat().length
+          + Object.entries(COLS_EXPANSION_FILES_20261111)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
+          + Object.values(COUNTRY_RELEASE_CORE_FILES_20261106).flat().length
+          + Object.values(JA_GAP_COLUMN_FILES_20261110).flat().length
           + Object.values(COLS_GAP_FILES_20261110).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        520 + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        520 + 8 /* SEA4 × two business pages */ + expectedTopicArchiveUrls().length + Object.values(AIR_COLUMN_FILES_20261011).flat().length + Object.values(NEXT_TOPIC_COLUMN_FILES_20261010).flat().length + Object.values(GAP_COLUMN_FILES_20261010).flat().length + Object.values(SINGAPORE_COLUMN_FILES_20261010).flat().length + Object.values(AI_SEMICONDUCTOR_COLUMN_FILES_20261009).flat().length + Object.entries(CRIMINAL_COLUMN_FILES_20261008).filter(([locale]) => locale !== 'vi').flatMap(([, files]) => files).length + Object.values(TAX_ACCOUNTING_COLUMN_FILES).flat().length + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + COUNTRY_COLUMN_FILES_20261002.ja.length
           + COUNTRY_COLUMN_FILES_20261002['zh-hant'].length
           + Object.values(COUNTRY_COLUMN_FILES_20261003).flat().length
@@ -495,7 +556,11 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + Object.values(EXPERT_COLUMN_FILES_20261103).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().length
-          + Object.values(COLS_EXPANSION_FILES_20261111).flat().length
+          + Object.entries(COLS_EXPANSION_FILES_20261111)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
+          + Object.values(COUNTRY_RELEASE_CORE_FILES_20261106).flat().length
+          + Object.values(JA_GAP_COLUMN_FILES_20261110).flat().length
           + Object.values(COLS_GAP_FILES_20261110).flat().length
           + Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111).flat().length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,

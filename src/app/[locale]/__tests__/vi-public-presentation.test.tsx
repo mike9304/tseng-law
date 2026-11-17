@@ -1,4 +1,5 @@
-import type { ReactElement } from 'react';
+import { Children, type ReactElement } from 'react';
+import SeaBusinessLinks from '@/components/SeaBusinessLinks';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -48,23 +49,38 @@ describe('Vietnamese public presentation dispatch', () => {
 
   it('selects the Vietnamese home and every core page without changing the builder locale union', async () => {
     const home = await CatchAllPage({ params: Promise.resolve({ locale: 'vi' }) });
-    expect(home.type).toBe(ViHomeBody);
-    expect((home as ReactElement<{ posts: { slug: string }[] }>).props.posts.map(({ slug }) => slug))
+    const homeChildren = Children.toArray(home.props.children) as ReactElement[];
+    expect(homeChildren[0].type).toBe(ViHomeBody);
+    expect(homeChildren[1].type).toBe(SeaBusinessLinks);
+    expect((homeChildren[0] as ReactElement<{ posts: { slug: string }[] }>).props.posts.map(({ slug }) => slug))
       .toEqual(getAllColumnPosts('vi').map(({ slug }) => slug));
 
     for (const pageKey of ['services', 'lawyers', 'faq', 'contact', 'about', 'pricing', 'privacy', 'disclaimer']) {
       const page = await CatchAllPage({ params: Promise.resolve({ locale: 'vi', slug: [pageKey] }) });
-      expect(page.type).toBe(ViPageBody);
-      expect(page.props).toMatchObject({ pageKey });
+      const body = pageKey === 'services' ? (Children.toArray(page.props.children)[0] as ReactElement) : page;
+      expect(body.type).toBe(ViPageBody);
+      expect(body.props).toMatchObject({ pageKey });
     }
     const rewritten = await CatchAllPage({ params: Promise.resolve({ locale: 'vi', slug: ['__public-guidance', 'services'] }) });
-    expect(rewritten.type).toBe(ViPageBody);
+    expect((Children.toArray(rewritten.props.children)[0] as ReactElement).type).toBe(ViPageBody);
     const indonesian = await CatchAllPage({ params: Promise.resolve({ locale: 'id', slug: ['services'] }) });
-    expect(indonesian.type).toBe(GuidancePageBody);
+    expect((Children.toArray(indonesian.props.children)[0] as ReactElement).type).toBe(GuidancePageBody);
     expect(isApplePresentationLocale('vi')).toBe(true);
     expect(isAppleDesignLocale('vi')).toBe(false);
     expect(isApplePresentationLocale('en')).toBe(false);
     expect(isApplePresentationLocale('id')).toBe(false);
+  });
+
+  it.each(['vi', 'id', 'th', 'fil'])('%s home and services expose both real business guidance links', async (locale) => {
+    for (const slug of [undefined, ['services']]) {
+      const page = await CatchAllPage({ params: Promise.resolve({ locale, slug }) });
+      const children = Children.toArray(page.props.children) as ReactElement[];
+      const links = children.find(child => child.type === SeaBusinessLinks);
+      expect(links).toBeDefined();
+      const html = renderToStaticMarkup(links!);
+      expect(html).toContain(`href="/${locale}/company-setup"`);
+      expect(html).toContain(`href="/${locale}/debt-collection"`);
+    }
   });
 
   it('retains Vietnamese core SEO and hreflang during the presentation change', async () => {

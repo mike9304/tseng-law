@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { SiteLocale } from '@/lib/locales';
@@ -10,6 +11,7 @@ import {
   decodeHash,
   faqPublicExplorerCopy,
   filterFaqItems,
+  hasKoreanConsultationRelatedLink,
 } from './FaqPublicExplorer.logic';
 import styles from './FaqPublicExplorer.module.css';
 import ZhHantMonoIcon from '@/components/zh-hant-icons/ZhHantMonoIcon';
@@ -256,6 +258,11 @@ export default function FaqPublicExplorer({
                   hidden={!isOpen}
                 >
                   <p>{item.answer}</p>
+                  {hasKoreanConsultationRelatedLink(locale, item) ? (
+                    <p data-faq-related-link="true">
+                      <Link href="/zh-hant/korean-lawyer-in-taiwan">韓文法律諮詢：律師資格與聯絡方式</Link>
+                    </p>
+                  ) : null}
                 </div>
                 {index < filteredItems.length - 1 ? <span className={styles.divider} /> : null}
               </article>

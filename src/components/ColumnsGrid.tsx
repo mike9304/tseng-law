@@ -872,16 +872,27 @@ export default function ColumnsGrid({
                   </header>
                   <div className="columns-grid">{preview.map(renderCard)}</div>
                   {topicMode && group.posts.length > preview.length ? (
-                    <button
-                      type="button"
-                      className="columns-topic-more link-underline"
-                      onClick={() => selectTopic(group.key as ColumnTopic, 'push')}
-                      data-columns-topic-more={group.key}
-                    >
-                      {topicCopy.viewAll(groupLabel(group.key), group.posts.length)}
-                      {/* ja 昊 V2: the chevron is drawn in CSS instead of the arrow glyph */}
-                      {locale === 'ja' ? null : locale === 'zh-hant' ? <ZhHantTrail /> : ' →'}
-                    </button>
+                    listHref === `/${locale}/columns` ? (
+                      <a
+                        href={`${listHref}/topics/${group.key}`}
+                        className="columns-topic-more link-underline"
+                        onClick={(event) => {
+                          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                          event.preventDefault();
+                          selectTopic(group.key as ColumnTopic, 'push');
+                        }}
+                        data-columns-topic-more={group.key}
+                      >
+                        {topicCopy.viewAll(groupLabel(group.key), group.posts.length)}
+                        {locale === 'ja' ? null : locale === 'zh-hant' ? <ZhHantTrail /> : ' →'}
+                      </a>
+                    ) : (
+                      <button type="button" className="columns-topic-more link-underline"
+                        onClick={() => selectTopic(group.key as ColumnTopic, 'push')} data-columns-topic-more={group.key}>
+                        {topicCopy.viewAll(groupLabel(group.key), group.posts.length)}
+                        {locale === 'ja' ? null : locale === 'zh-hant' ? <ZhHantTrail /> : ' →'}
+                      </button>
+                    )
                   ) : null}
                 </section>
               );

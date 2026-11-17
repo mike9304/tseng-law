@@ -1,3 +1,4 @@
+import { SEA_BUSINESS_LOCALES, SEA_BUSINESS_PAGES } from '@/lib/sea-business-routes';
 import type { MetadataRoute } from 'next';
 import { primaryAttorneySlug } from '@/data/attorney-profiles';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
@@ -5,6 +6,7 @@ import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
+import { getColumnTopicArchives } from '@/lib/column-topic-archives';
 import { locales } from '@/lib/locales';
 import { CRIMINAL_BOARD_LOCALES, CRIMINAL_BOARD_PATH } from '@/lib/criminal-litigation-board';
 import {
@@ -343,6 +345,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         xDefaultWithinCluster: true,
       }),
     );
+  }
+
+  for (const locale of SEA_BUSINESS_LOCALES) {
+    for (const key of SEA_BUSINESS_PAGES) {
+      pages.push(createEntry(locale, `/${key}`, {
+        lastModified: lastmod.forFile('src/data/sea-business-guidance.ts'),
+        alternateLocales: SEA_BUSINESS_LOCALES, xDefaultWithinCluster: true,
+      }));
+    }
+  }
+
+  for (const archive of getColumnTopicArchives()) {
+    pages.push(createEntry(archive.locale, archive.path, {
+      priority: 0.6,
+      lastModified: archive.posts.map((post) => post.date).filter(Boolean).sort().at(-1),
+      alternateLocales: archive.alternateLocales,
+      xDefaultWithinCluster: true,
+    }));
   }
 
   // Issue board (이슈 칼럼, /[locale]/columns/issues): list pages cluster across

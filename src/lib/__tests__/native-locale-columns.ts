@@ -751,15 +751,19 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
-/** Locale-specific expansion columns published 2026-11-17 (cols-1117: foreign judgments, company, contracts, gift tax, visas, investor protection, medical consent, criminal procedure, plus 1339-ja and 1344-vi held from cols-1111). */
+/** Locale-specific expansion columns published 2026-11-17 (cols-1117: foreign judgments, company, contracts, gift tax, visas, investor protection, medical consent, criminal procedure, plus 1339-ja and 1344-vi held from cols-1111; cols-1117b: cross-border divorce and acknowledgment, labor, gold card, lawyer fees, guarantees and receivables, crypto recovery, rental scooter damage). */
 export const COLS_EXPANSION_FILES_20261117: Readonly<Record<string, readonly string[]>> = {
   'en': [
     '1349-taiwan-us-judgment-oem-factory-return-molds-tooling.md',
     '1353-taiwan-digital-nomad-visa-taiwan-client-work.md',
     '1355-taiwan-surgery-consent-form-chinese-informed-consent-explanation.md',
+    '1361-taiwan-cram-school-teacher-one-year-contract-non-renewal-severance.md',
+    '1363-taiwan-gold-card-work-outside-approved-field.md',
+    '1367-taiwan-usdt-sent-to-wrong-exchange-account-recovery.md',
   ],
   'es': [
     '1357-taiwan-dismissed-manager-company-seals-bank-token-return.md',
+    '1368-taiwan-rental-scooter-accident-repair-loss-of-use-claim.md',
   ],
   'fr': [
     '1358-taiwan-contract-company-seal-signer-without-authority-binding.md',
@@ -768,11 +772,17 @@ export const COLS_EXPANSION_FILES_20261117: Readonly<Record<string, readonly str
     '1339-taiwan-futures-forced-liquidation-negative-balance-claim.md',
     '1350-taiwan-subsidiary-shareholders-meeting-notice-missing-resolution-revocation.md',
     '1354-taiwan-securities-broker-insolvency-investor-protection-fund.md',
+    '1360-taiwanese-father-acknowledgment-child-support-lawsuit-japanese-mother.md',
+    '1362-taiwan-work-injury-treatment-period-dismissal-prohibited.md',
+    '1365-taiwan-parent-company-guarantee-subsidiary-debt-company-act.md',
   ],
   'ko': [
     '1351-taiwan-purchase-order-vs-quotation-conflicting-terms-contract.md',
     '1352-taiwan-gift-tax-exemption-2027-increase-gift-timing.md',
     '1356-taiwan-police-phone-unlock-consent-search.md',
+    '1359-taiwan-korean-couple-divorce-taiwan-court-jurisdiction-korean-law.md',
+    '1364-taiwan-lawyer-contingency-fee-settlement-early-termination.md',
+    '1366-taiwan-debtor-company-new-company-owner-liability-veil-piercing.md',
   ],
   'vi': [
     '1344-taiwan-employer-withholds-wages-deposit-migrant-worker.md',

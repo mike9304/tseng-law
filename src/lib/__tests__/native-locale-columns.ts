@@ -729,6 +729,28 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Native WORLD audience columns published 2026-11-06 (world-columns-20261106: one article per locale 1149–1166, no English twin). */
+export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly string[]>> = {
+  bg: ['1158-taiwan-police-custody-camera-memory-card-destruction.md'], // world-columns-20261106
+  bn: ['1149-taiwan-labor-insurance-benefit-protected-account-attachment.md'], // world-columns-20261106
+  ca: ['1165-taiwan-comic-mechanism-experiment-video-copyright.md'], // world-columns-20261106
+  et: ['1164-taiwan-ev-charging-kwh-meter-verification.md'], // world-columns-20261106
+  fa: ['1151-taiwan-drunk-driving-prior-record-pretrial-detention-risk.md'], // world-columns-20261106
+  hr: ['1159-taiwan-xturn-cashback-shopping-multilevel-marketing-report.md'], // world-columns-20261106
+  is: ['1166-taiwan-tex-ray-investor-claim-registration-purchase-windows.md'], // world-columns-20261106
+  km: ['1155-taiwan-departing-principal-contractor-safety-coordination.md'], // world-columns-20261106
+  lt: ['1162-taiwan-inherited-readjusted-land-first-transfer-tax-relief.md'], // world-columns-20261106
+  lv: ['1163-taiwan-serious-illness-certificate-vehicle-license-tax-exemption.md'], // world-columns-20261106
+  mn: ['1156-taiwan-unlisted-stock-seller-repurchase-transaction-tax-refund.md'], // world-columns-20261106
+  my: ['1152-taiwan-personal-use-mosquito-repellent-online-resale.md'], // world-columns-20261106
+  ne: ['1154-taiwan-forfeited-property-sale-deposit-other-income-tax.md'], // world-columns-20261106
+  sk: ['1157-taiwan-utility-model-numeric-range-disclaimer.md'], // world-columns-20261106
+  sl: ['1161-taiwan-avoided-wastewater-treatment-cost-recovery.md'], // world-columns-20261106
+  sr: ['1160-taiwan-unauthorized-phone-forged-message-document-offenses.md'], // world-columns-20261106
+  ta: ['1153-taiwan-construction-method-promotion-advertising-service-trademark-use.md'], // world-columns-20261106
+  ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
+};
+
 /** Locale-specific expansion columns published 2026-11-17 (cols-1117: foreign judgments, company, contracts, gift tax, visas, investor protection, medical consent, criminal procedure, plus 1339-ja and 1344-vi held from cols-1111). */
 export const COLS_EXPANSION_FILES_20261117: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -1953,6 +1975,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 /** Registered locale-specific batches through 2026-11-05, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
+    ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261117[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261111 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -2133,6 +2156,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
   if (Object.values(COLS_EXPANSION_FILES_20261117).flat().map(slugOf).includes(slug)) return '2026-11-17';
   if ([...Object.values(COLS_EXPANSION_FILES_20261111), ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111)].flat().map(slugOf).includes(slug)) return '2026-11-11';
   if ([...Object.values(JA_GAP_COLUMN_FILES_20261110), ...Object.values(COLS_GAP_FILES_20261110)].flat().map(slugOf).includes(slug)) return '2026-11-10';
@@ -2212,6 +2236,7 @@ export function allNativeFiles(locale: string): string[] {
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
+    ...Object.values(WORLD_COLUMN_FILES_20261106),
     ...Object.values(COLS_EXPANSION_FILES_20261117),
     ...Object.values(COLS_EXPANSION_FILES_20261111),
     ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111),

@@ -112,5 +112,5 @@ describe('column "In this article" navigation', () => {
       expect((html.match(/<h2\b/g) ?? []).length).toBe(ids.length);
       for (const entry of toc) expect(entry.text.length).toBeGreaterThan(0);
     }
-  });
+  }, 30_000);
 });

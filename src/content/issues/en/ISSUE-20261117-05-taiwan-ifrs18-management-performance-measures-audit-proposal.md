@@ -37,7 +37,7 @@ Revised [Article 15, item 26](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pco
 
 That reconciliation connects the chosen measure to the reported figures. An earnings label alone cannot show which amounts management included or excluded; the calculation and accompanying explanation give readers a basis for understanding that choice.
 
-Does every performance indicator qualify? The [IFRS Foundation's explanation](https://www.ifrs.org/supporting-implementation/supporting-materials-by-ifrs-standards/ifrs-18/key-terms/) limits the definition to subtotals of income and expenses used in public communications outside the financial statements. It must also communicate management's view of an aspect of the financial performance of the entity as a whole. Subtotals listed in IFRS 18 or specifically required by IFRS Accounting Standards fall outside this definition.
+Does every performance indicator qualify? The [IFRS Foundation's explanation](https://www.ifrs.org/supporting-implementation/supporting-materials-by-ifrs-standards/ifrs-18/key-terms/) limits the definition to subtotals of income and expenses used in public communications outside the financial statements. Such a subtotal must also communicate management's view of an aspect of the financial performance of the entity as a whole. Subtotals listed in IFRS 18 or specifically required by IFRS Accounting Standards fall outside this definition.
 
 Management commentary, press releases and investor presentations are the examples the IFRS Foundation gives. Spoken remarks, transcripts of those remarks and posts on social media do not count as public communications for this purpose. Format matters alongside substance. Calling a number an adjusted result does not settle whether it qualifies.
 

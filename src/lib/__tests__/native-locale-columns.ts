@@ -751,6 +751,13 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
+/** Locale-specific expansion columns published 2026-11-18 (ent-1118: first zh-hant entertainment-law column). */
+export const COLS_EXPANSION_FILES_20261118: Readonly<Record<string, readonly string[]>> = {
+  'zh-hant': [
+    '1369-korean-actor-drunk-driving-drinking-after-crash-taiwan-law.md',
+  ],
+};
+
 /** Locale-specific expansion columns published 2026-11-17 (cols-1117: foreign judgments, company, contracts, gift tax, visas, investor protection, medical consent, criminal procedure, plus 1339-ja and 1344-vi held from cols-1111; cols-1117b: cross-border divorce and acknowledgment, labor, gold card, lawyer fees, guarantees and receivables, crypto recovery, rental scooter damage). */
 export const COLS_EXPANSION_FILES_20261117: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -1986,6 +1993,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
+    ...(COLS_EXPANSION_FILES_20261118[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261117[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261111 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -2167,6 +2175,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
+  if (Object.values(COLS_EXPANSION_FILES_20261118).flat().map(slugOf).includes(slug)) return '2026-11-18';
   if (Object.values(COLS_EXPANSION_FILES_20261117).flat().map(slugOf).includes(slug)) return '2026-11-17';
   if ([...Object.values(COLS_EXPANSION_FILES_20261111), ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111)].flat().map(slugOf).includes(slug)) return '2026-11-11';
   if ([...Object.values(JA_GAP_COLUMN_FILES_20261110), ...Object.values(COLS_GAP_FILES_20261110)].flat().map(slugOf).includes(slug)) return '2026-11-10';
@@ -2247,6 +2256,7 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(WORLD_COLUMN_FILES_20261106),
+    ...Object.values(COLS_EXPANSION_FILES_20261118),
     ...Object.values(COLS_EXPANSION_FILES_20261117),
     ...Object.values(COLS_EXPANSION_FILES_20261111),
     ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111),

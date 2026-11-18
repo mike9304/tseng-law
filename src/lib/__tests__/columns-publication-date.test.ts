@@ -902,6 +902,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '1366': '2026-11-17',
   '1367': '2026-11-17',
   '1368': '2026-11-17',
+  '1369': '2026-11-18',
 };
 
 /**
@@ -962,13 +963,14 @@ const REVIEWED_MAIN_COLUMN_SLUGS_20261106: Record<string, readonly string[]> = {
 function archiveLeadWithReviewedNov6(locale: string): string[] {
   const reviewedNov6 = REVIEWED_MAIN_COLUMN_SLUGS_20261106[locale] ?? [];
   const lead = archiveLeadSlugsFor(locale);
+  const nov18 = lead.filter((slug) => archiveLeadPublicationDate(slug, locale) === '2026-11-18');
   const nov17 = lead.filter((slug) => archiveLeadPublicationDate(slug, locale) === '2026-11-17');
   const nov11 = lead.filter((slug) => archiveLeadPublicationDate(slug, locale) === '2026-11-11');
   const nov10 = lead.filter((slug) => archiveLeadPublicationDate(slug, locale) === '2026-11-10');
   const rest = lead.filter(
-    (slug) => !nov17.includes(slug) && !nov11.includes(slug) && !nov10.includes(slug) && !reviewedNov6.includes(slug),
+    (slug) => !nov18.includes(slug) && !nov17.includes(slug) && !nov11.includes(slug) && !nov10.includes(slug) && !reviewedNov6.includes(slug),
   );
-  return [...nov17, ...nov11, ...nov10, ...reviewedNov6, ...rest];
+  return [...nov18, ...nov17, ...nov11, ...nov10, ...reviewedNov6, ...rest];
 }
 
 function expectedArchiveLeadPublicationDate(slug: string, locale: string): string {

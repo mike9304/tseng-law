@@ -751,8 +751,28 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
-/** Locale-specific expansion columns published 2026-11-18 (ent-1118: first zh-hant entertainment-law column). */
+/** Locale-specific expansion columns published 2026-11-18 (ent-1118: first zh-hant entertainment-law column; cols-1118: crypto wages, structured notes, short-swing profit, underground remittance, rooftop additions, nonresident rental tax, stepchild ARC, subsidiary embezzlement, emergency-room deposits, gym cancellation). */
 export const COLS_EXPANSION_FILES_20261118: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1369-taiwan-employer-pays-salary-in-usdt-wage-rules-tax.md',
+    '1371-taiwan-short-swing-profit-six-months-disgorgement-officer.md',
+    '1375-taiwan-stepchild-arc-without-adoption-foreign-parent-remarriage.md',
+  ],
+  'es': [
+    '1378-taiwan-gym-membership-early-termination-fee-refund.md',
+  ],
+  'ja': [
+    '1370-taiwan-bank-structured-note-loss-suitability-explanation-claim.md',
+    '1374-taiwan-nonresident-landlord-rental-income-tax-japan-owner.md',
+  ],
+  'ko': [
+    '1372-taiwan-underground-money-changer-remittance-korea-loss-liability.md',
+    '1373-taiwan-resale-home-unregistered-rooftop-addition-rescission.md',
+    '1376-taiwan-subsidiary-accountant-embezzlement-complaint-provisional-attachment.md',
+  ],
+  'vi': [
+    '1377-taiwan-emergency-room-deposit-before-treatment-refusal.md',
+  ],
   'zh-hant': [
     '1379-korean-actor-drunk-driving-drinking-after-crash-taiwan-law.md',
   ],

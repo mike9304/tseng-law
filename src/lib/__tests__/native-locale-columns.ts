@@ -754,7 +754,7 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
 /** Locale-specific expansion columns published 2026-11-18 (ent-1118: first zh-hant entertainment-law column). */
 export const COLS_EXPANSION_FILES_20261118: Readonly<Record<string, readonly string[]>> = {
   'zh-hant': [
-    '1369-korean-actor-drunk-driving-drinking-after-crash-taiwan-law.md',
+    '1379-korean-actor-drunk-driving-drinking-after-crash-taiwan-law.md',
   ],
 };
 

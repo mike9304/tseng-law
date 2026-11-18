@@ -21,6 +21,10 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { usePublicColumnLanguageLinks } from '@/components/PublicColumnLanguageLinksContext';
+import {
+  columnTopicArchiveExistsIn,
+  parseColumnTopicArchiveSlugPath,
+} from '@/lib/column-topics';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 import styles from './LocaleFlagSwitcher.module.css';
 
@@ -93,6 +97,12 @@ export function localeFlagHref(
   const familyList = restrictedPublicFamilyListPath(pathWithoutLocale);
   if (familyList) {
     return `/${targetLocale}${familyList}`;
+  }
+
+  const slugPath = pathWithoutLocale.replace(/^\//, '');
+  const topicArchive = parseColumnTopicArchiveSlugPath(slugPath);
+  if (topicArchive && !columnTopicArchiveExistsIn(topicArchive, targetLocale)) {
+    return switchTarget.href;
   }
 
   if (targetLocale === 'ja') {

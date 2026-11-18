@@ -460,6 +460,34 @@ describe('language switch targets', () => {
     });
   });
 
+  it('degrades locale-specific topic archives to the target columns index', () => {
+    expect(resolvePublicLanguageSwitchTarget('/zh-hant/columns/topics/entertainment', 'ko')).toEqual({
+      status: 'available',
+      href: '/ko/columns',
+      fallback: 'columns-list',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/zh-hant/columns/topics/entertainment', 'en')).toEqual({
+      status: 'available',
+      href: '/en/columns',
+      fallback: 'columns-list',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/zh-hant/columns/topics/entertainment', 'ja')).toEqual({
+      status: 'available',
+      href: '/ja/columns',
+      fallback: 'columns-list',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/zh-hant/columns/topics/entertainment', 'zh-hant')).toEqual({
+      status: 'available',
+      href: '/zh-hant/columns/topics/entertainment',
+      fallback: 'exact',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/ko/columns/topics/family', 'en')).toEqual({
+      status: 'available',
+      href: '/en/columns/topics/family',
+      fallback: 'exact',
+    });
+  });
+
   it('preserves existing-four same-path and family-list restrictions', () => {
     expect(resolvePublicLanguageSwitchTarget('/ko/about', 'zh-hant')).toEqual({
       status: 'available',

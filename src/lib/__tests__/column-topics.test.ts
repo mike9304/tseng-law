@@ -5,10 +5,13 @@ import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
 import {
   COLUMN_TOPICS,
+  COLUMN_TOPIC_ARCHIVE_ONLY_LOCALES,
   COLUMN_TOPIC_LABELS,
   LEGACY_COLUMN_TOPIC_BY_SLUG,
+  columnTopicArchiveExistsIn,
   groupColumnsByTopic,
   isColumnTopic,
+  parseColumnTopicArchiveSlugPath,
   resolveColumnTopic,
 } from '@/lib/column-topics';
 
@@ -63,6 +66,16 @@ describe('column topic taxonomy (topic-grouped column index)', () => {
     expect(groups.reduce((n, group) => n + group.posts.length, 0)).toBe(getAllColumnPosts('ko').length);
     // Keep the newly published criminal board visible at the start of the topic index.
     expect(order[0]).toBe('criminal');
+  });
+
+  it('knows locale-restricted topic archives for language switchers', () => {
+    expect(COLUMN_TOPIC_ARCHIVE_ONLY_LOCALES.entertainment).toEqual(['zh-hant']);
+    expect(columnTopicArchiveExistsIn('entertainment', 'zh-hant')).toBe(true);
+    expect(columnTopicArchiveExistsIn('entertainment', 'ko')).toBe(false);
+    expect(columnTopicArchiveExistsIn('family', 'en')).toBe(true);
+    expect(parseColumnTopicArchiveSlugPath('columns/topics/entertainment')).toBe('entertainment');
+    expect(parseColumnTopicArchiveSlugPath('columns/topics/family')).toBe('family');
+    expect(parseColumnTopicArchiveSlugPath('columns/taiwan-investment')).toBeNull();
   });
 
   it('falls back from legacy category when a column has no topic', () => {

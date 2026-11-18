@@ -141,6 +141,15 @@ describe('public module locale family switching', () => {
     }
   });
 
+  it('falls back to the columns index when a topic archive is missing in the target locale', () => {
+    const pathname = '/zh-hant/columns/topics/entertainment';
+    expect(localeFlagHref(pathname, 'ko')).toBe('/ko/columns');
+    expect(localeFlagHref(pathname, 'en')).toBe('/en/columns');
+    expect(localeFlagHref(pathname, 'ja')).toBe('/ja/columns');
+    expect(localeFlagHref(pathname, 'zh-hant')).toBe(pathname);
+    expect(localeFlagHref('/ko/columns/topics/family', 'en')).toBe('/en/columns/topics/family');
+  });
+
   it('does not treat services or unsafe fragments as restricted families', () => {
     expect(restrictedPublicFamilyListPath('services/investment')).toBeNull();
     expect(restrictedPublicFamilyListPath('store/checkout')).toBeNull();

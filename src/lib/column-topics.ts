@@ -30,6 +30,30 @@ export function isColumnTopic(value: unknown): value is ColumnTopic {
   return typeof value === 'string' && (COLUMN_TOPICS as readonly string[]).includes(value);
 }
 
+/**
+ * Topic archives that exist only in the listed locales (no mirrored archive page
+ * in the other core languages). Used by language switchers to avoid linking to
+ * missing `/{locale}/columns/topics/...` pages.
+ */
+export const COLUMN_TOPIC_ARCHIVE_ONLY_LOCALES: Partial<Record<ColumnTopic, readonly string[]>> = {
+  entertainment: ['zh-hant'],
+};
+
+export function columnTopicArchiveExistsIn(topic: ColumnTopic, locale: string): boolean {
+  const onlyLocales = COLUMN_TOPIC_ARCHIVE_ONLY_LOCALES[topic];
+  if (!onlyLocales) return true;
+  return onlyLocales.includes(locale);
+}
+
+const COLUMN_TOPIC_ARCHIVE_PATH = /^columns\/topics\/([^/?#]+)$/;
+
+export function parseColumnTopicArchiveSlugPath(slugPath: string): ColumnTopic | null {
+  const match = COLUMN_TOPIC_ARCHIVE_PATH.exec(slugPath);
+  if (!match) return null;
+  const topic = match[1];
+  return isColumnTopic(topic) ? topic : null;
+}
+
 /** Topics of the columns that predate the `topic` frontmatter field. */
 export const LEGACY_COLUMN_TOPIC_BY_SLUG: Readonly<Record<string, ColumnTopic>> = {
   'taiwan-company-establishment-basics': 'company',

@@ -1,3 +1,7 @@
+import {
+  columnTopicArchiveExistsIn,
+  parseColumnTopicArchiveSlugPath,
+} from '@/lib/column-topics';
 import { isSeaBusinessLocale, isSeaBusinessPage } from '@/lib/sea-business-routes';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
@@ -715,6 +719,15 @@ export function resolvePublicLanguageSwitchTarget(
       status: 'available',
       href: guidancePublicPath(targetLocale, 'home'),
       fallback: 'home',
+    };
+  }
+
+  const topicArchive = parseColumnTopicArchiveSlugPath(slugPath);
+  if (topicArchive && !columnTopicArchiveExistsIn(topicArchive, targetLocale)) {
+    return {
+      status: 'available',
+      href: `/${targetLocale}/columns`,
+      fallback: 'columns-list',
     };
   }
 

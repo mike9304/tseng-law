@@ -20,7 +20,7 @@ faq:
   - q: "Can a foreign-owned Taiwan company choose cash accounting for the award?"
     a: "Article 22 requires company-form businesses to use accrual accounting. Its conditional cash-basis option concerns non-company businesses. A parent company's preference does not give its Taiwan subsidiary a separate election."
   - q: "Is an omitted award always subject to a fixed percentage penalty?"
-    a: "No fixed percentage follows from the bureau's example. For a taxpayer that files a required return but omits or understates taxable income, Article 110, paragraph 1 sets a fine of up to twice the omitted tax. That is a ceiling, not an automatic amount for every omission. Where losses or incentive-based tax exemptions leave no tax due even after the omitted income is added, paragraph 3 applies a separate calculation, with a NT$4,500 minimum and a NT$90,000 maximum."
+    a: "No fixed percentage follows from the bureau's example. For a taxpayer that files a required return but omits or understates taxable income, Article 110, paragraph 1 sets a fine of up to twice the omitted tax. That is a ceiling, not an automatic amount for every omission. Where operating losses or incentive-based tax exemptions leave no tax due even after the omitted income is added, paragraph 3 applies a separate calculation, with a NT$4,500 minimum and a NT$90,000 maximum."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -41,11 +41,11 @@ Applying these provisions, the bureau's [November 18 release](https://www.mof.go
 
 ## Income from a judgment final in 2023, missing from that year's return
 
-The bureau's account begins in 2019, with another company's infringement and a civil damages suit. The judgment became final in 2023. Damages and interest exceeded NT$10 million. According to the bureau, the company should have included that income in its 2023 return but failed to do so. The bureau assessed more than NT$2 million in additional tax and a penalty of more than NT$800,000. The payment date was not disclosed.
+The bureau's account begins in 2019, with another company's infringement and a civil damages suit. The judgment became final in 2023. Damages and interest exceeded NT$10 million. According to the bureau, the company should have included that income in its 2023 return but failed to do so. The bureau assessed more than NT$2 million in additional tax and a penalty of more than NT$800,000. Neither the release nor CNA says whether or when Company A received the money.
 
 Omitting income can also trigger a fine. For a taxpayer that files a required return but omits or understates taxable income, [Article 110, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=110) provides for a fine of up to twice the omitted tax. That is a ceiling. The rounded tax and penalty figures reported in this example do not establish a fixed penalty rate for other companies.
 
-Paragraph 3 covers a company whose losses or incentive-based tax exemptions leave no tax due even after the omitted income is added. The calculation applies the year's corporate income-tax rate to that income, then the relevant multiplier under paragraph 1 or 2. The fine ranges from NT$4,500 to NT$90,000.
+Paragraph 3 covers a company whose operating losses or incentive-based tax exemptions leave no tax due even after the omitted income is added. The calculation applies the year's corporate income-tax rate to that income, then the relevant multiplier under paragraph 1 or 2. The fine ranges from NT$4,500 to NT$90,000.
 
 ## An exception requires more than a later transfer
 

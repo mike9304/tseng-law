@@ -34,7 +34,7 @@ author: "legal-ai-assistant"
 
 [Điều 2 Luật An toàn, vệ sinh lao động](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=2) xác định người lao động là người được thuê làm việc để nhận lương. Định nghĩa này không đặt số buổi làm tối thiểu trong tuần. Vì thế, với sinh viên nhận lương từ một quan hệ thuê mướn thực sự, tên gọi “việc làm thêm” không làm mất tư cách người lao động.
 
-Luật áp dụng cho mọi ngành nghề theo [Điều 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=4), đồng thời cho phép cơ quan trung ương công bố việc chỉ áp dụng một phần tùy quy mô, tính chất và mức rủi ro. Một đơn vị có thuộc diện đó hay không phải đối chiếu với công bố của cơ quan trung ương.
+Luật áp dụng cho mọi ngành nghề theo [Điều 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=4), đồng thời cho phép cơ quan chủ quản trung ương công bố việc chỉ áp dụng một phần tùy quy mô, tính chất và mức rủi ro. Muốn biết một đơn vị có thuộc diện đó hay không, cần đối chiếu với công bố của cơ quan chủ quản trung ương.
 
 Sinh viên thực tập không có quan hệ thuê mướn cũng chưa hẳn nằm ngoài luật. Theo [khoản 2 Điều 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=51), họ được áp dụng luật như lao động của doanh nghiệp nếu làm việc tại nơi làm việc của doanh nghiệp, dưới sự chỉ huy hoặc giám sát của người phụ trách nơi đó. Ngoại lệ là quy định tại Điều 20 về khám sức khỏe đầu vào và khám sức khỏe cho người đang làm việc.
 
@@ -46,11 +46,11 @@ Theo [điểm 1 khoản 2 Điều 6](https://law.moj.gov.tw/LawClass/LawSingle.a
 
 [Điều 324-1 Quy định về thiết bị an toàn, vệ sinh lao động](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060009&flno=324-1) yêu cầu phân tích quy trình và động tác, nhận diện nguy cơ, chọn và thực hiện cách cải thiện rồi đánh giá hiệu quả. Chủ thuê phải ghi lại việc thực hiện. Hồ sơ phải lưu ba năm.
 
-Đơn vị sử dụng từ 100 lao động trở lên phải lập và thực hiện kế hoạch phòng ngừa theo đặc điểm, rủi ro của công việc, có tham khảo hướng dẫn của cơ quan trung ương. Đơn vị sử dụng dưới 100 lao động được dùng hồ sơ hoặc tài liệu thực hiện thay kế hoạch. Ngưỡng này chỉ đổi hình thức. Chủ thuê vẫn phải thực hiện các biện pháp phòng ngừa.
+Đơn vị sử dụng từ 100 lao động trở lên phải lập và thực hiện kế hoạch phòng ngừa theo đặc điểm, rủi ro của công việc, có tham khảo hướng dẫn của cơ quan chủ quản trung ương. Đơn vị sử dụng dưới 100 lao động được dùng hồ sơ hoặc tài liệu thực hiện thay kế hoạch. Ngưỡng này chỉ đổi hình thức. Chủ thuê vẫn phải thực hiện các biện pháp phòng ngừa.
 
 Với sinh viên làm thêm, điều cần trao đổi không chỉ là có đau sau ca làm hay không. Động tác nào phải lặp lại, có phải dùng lực quá mức, và cách làm đã được điều chỉnh ra sao là những câu hỏi gắn trực tiếp với việc nhận diện nguy cơ. Chỉ một lời nhắc “tự chú ý tư thế” chưa cho thấy công việc đã được đánh giá và cải thiện theo các yêu cầu trên.
 
-Lớp hướng dẫn ở Đài Nam giúp sinh viên nhận biết nguy cơ trong công việc thường ngày. Nếu sinh viên đi làm thêm, trách nhiệm của nơi thuê vẫn gắn với chính công việc được giao, kể cả khi ca làm chỉ chiếm vài buổi ngoài giờ học.
+Buổi hướng dẫn ở Đài Nam giúp sinh viên nhận biết nguy cơ trong công việc thường ngày. Nếu sinh viên đi làm thêm, trách nhiệm của nơi thuê vẫn gắn với chính công việc được giao, kể cả khi chỉ làm vài buổi ngoài giờ học.
 
 ## Nguồn
 

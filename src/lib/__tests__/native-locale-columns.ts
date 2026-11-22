@@ -751,6 +751,32 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
+/** Locale-specific expansion columns published 2026-11-23 (cols-1119: foreign default judgments, crypto account takeover, direct claims against liability insurers, migrant workers sent to other sites, transfer orders, child household registration, nominee brokerage accounts, spouse insider trading, leaving Taiwan after an injury crash, investment-scam introducers). */
+export const COLS_EXPANSION_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1381-taiwan-crypto-exchange-account-takeover-unauthorized-withdrawal-liability.md',
+    '1387-taiwan-insider-trading-spouse-tipped-before-earnings-announcement.md',
+    '1388-taiwan-injury-crash-stayed-at-scene-leaving-taiwan-flight.md',
+  ],
+  'fr': [
+    '1382-taiwan-traffic-accident-direct-claim-against-liability-insurer.md',
+  ],
+  'ja': [
+    '1384-taiwan-job-transfer-order-kaohsiung-refusal-resignation-severance.md',
+    '1389-taiwan-investment-scam-introducer-commission-liability-friends.md',
+  ],
+  'ko': [
+    '1385-taiwan-sole-custody-child-household-registration-move-other-parent.md',
+    '1386-taiwan-stocks-bought-in-friends-brokerage-account-return-claim.md',
+  ],
+  'vi': [
+    '1383-taiwan-migrant-worker-sent-to-another-factory-company-work-permit.md',
+  ],
+  'zh-hant': [
+    '1380-taiwan-foreign-default-judgment-enforcement-defendant-service-defense.md',
+  ],
+};
+
 /** Locale-specific expansion columns published 2026-11-18 (ent-1118: first zh-hant entertainment-law column; cols-1118: crypto wages, structured notes, short-swing profit, underground remittance, rooftop additions, nonresident rental tax, stepchild ARC, subsidiary embezzlement, emergency-room deposits, gym cancellation). */
 export const COLS_EXPANSION_FILES_20261118: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -2013,6 +2039,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
+    ...(COLS_EXPANSION_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261118[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261117[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261111[locale] ?? []),
@@ -2195,6 +2222,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
+  if (Object.values(COLS_EXPANSION_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261118).flat().map(slugOf).includes(slug)) return '2026-11-18';
   if (Object.values(COLS_EXPANSION_FILES_20261117).flat().map(slugOf).includes(slug)) return '2026-11-17';
   if ([...Object.values(COLS_EXPANSION_FILES_20261111), ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261111)].flat().map(slugOf).includes(slug)) return '2026-11-11';
@@ -2276,6 +2304,7 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(WORLD_COLUMN_FILES_20261106),
+    ...Object.values(COLS_EXPANSION_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261118),
     ...Object.values(COLS_EXPANSION_FILES_20261117),
     ...Object.values(COLS_EXPANSION_FILES_20261111),

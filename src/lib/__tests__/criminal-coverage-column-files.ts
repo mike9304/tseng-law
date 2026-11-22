@@ -158,6 +158,15 @@ const CRIMINAL_COLUMN_SLUGS_20261118 = {
   vi: [],
 } as const;
 
+/** Native-locale criminal columns published 2026-11-23 (cols-1119). */
+const CRIMINAL_COLUMN_SLUGS_20261123 = {
+  ko: [],
+  en: ['taiwan-injury-crash-stayed-at-scene-leaving-taiwan-flight', 'taiwan-insider-trading-spouse-tipped-before-earnings-announcement'],
+  ja: [],
+  'zh-hant': [],
+  vi: [],
+} as const;
+
 export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_FILES_20261008): string[] {
   return [
     ...(locale === 'en' || locale === 'zh-hant' ? ['taiwan-overseas-fraud-foreign-judgment-reprosecution'] : []),
@@ -171,6 +180,7 @@ export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_
     ...CRIMINAL_COLUMN_SLUGS_20261103[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261117[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261118[locale],
+    ...CRIMINAL_COLUMN_SLUGS_20261123[locale],
     ...CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3,4}-/, '').replace(/\.md$/, '')),
     ...RECLASSIFIED_CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3,4}-/, '').replace(/\.md$/, '')),
   ].sort();

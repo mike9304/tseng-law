@@ -99,7 +99,7 @@ export const MARKET_BOARD_SHARED_COLUMN_SLUGS: Record<MarketBoardLocale, readonl
   // Exporters and suppliers, engineers and other employees living in Taiwan; 672 (rental deposit) points to the lease column.
   hi: [...MARKET_ENTRY, ...WORK, 'taiwan-company-setup-pitch-location'],
   // Companies and founders (working holiday, takeovers), plus inheritance and closure-wage questions.
-  fr: [...MARKET_ENTRY, ...SMALL_FOUNDER, ...WORK, ...INHERITANCE],
+  fr: [...MARKET_ENTRY, ...SMALL_FOUNDER, ...WORK, ...INHERITANCE, 'taiwan-traffic-accident-procedure'],
   // Manufacturers and suppliers.
   de: [...MARKET_ENTRY],
   // Companies, plus inheritance; 688 (a business visitor's police summons) points to the traffic-accident column.

@@ -15,7 +15,7 @@ featured_image_caption: "교대근무와 휴무를 설명하기 위해 생성한
 social_image: "../images/ISSUE-20261123-02-taiwan-election-day-paid-leave-overnight-shift/featured-01.jpg"
 faq:
   - q: "투표일 대신 다음 월요일에 쉬게 해도 되나요?"
-    a: "노동부는 투표권을 당일에만 행사할 수 있으므로 투표일 휴무를 다른 근무일과 맞바꿀 수 없다고 설명합니다. 노동기준법 적용을 받으며 해당 투표권이 있고, 투표일이 원래 근무일인 직원이 대상입니다. 다만 직원이 투표일에 일한 뒤 임금 대신 보상휴가(補休)를 고르는 것은 노동부 2019년 서한상 가능하며, 회사가 보상휴가만 고르게 정할 수는 없습니다."
+    a: "노동부는 투표권을 당일에만 행사할 수 있으므로 투표일 휴무를 다른 근무일과 맞바꿀 수 없다고 설명합니다. 노동기준법 적용을 받으며 해당 투표권이 있고, 투표일이 원래 근무일인 직원이 대상입니다. 다만 직원이 투표일에 일한 뒤 가산임금 대신 보상휴가(補休)를 고르는 것은 노동부 2019년 서한상 가능하며, 회사가 일방적으로 보상휴가만 선택하게 정할 수는 없습니다."
   - q: "투표일인 토요일이 원래 쉬는 날이면 하루 더 쉬나요?"
     a: "노동부 안내에 따르면 원래 휴식일이나 정기휴일인 직원에게는 추가 휴무를 주지 않습니다. 휴식일에 실제 근무하면 임금은 노동기준법 제24조 제2항의 휴식일 근무 기준으로 계산합니다. 정기휴일은 다릅니다. 제84조의1에 따라 관할 기관이 승인한 정기휴일 약정이 없다면 제40조의 천재지변·사변·돌발 상황이 아닌 한 이날 일하게 할 수 없습니다."
   - q: "전날 밤 11시부터 투표일 아침 7시까지 일하면 어떻게 계산하나요?"
@@ -36,7 +36,7 @@ author: "legal-ai-assistant"
 
 그 하루는 자정부터 다음 자정까지 이어지는 24시간입니다. 투표권은 당일에만 행사할 수 있으므로 다른 근무일과 휴무를 맞바꿀 수 없습니다. 토요일에 출근시키고 월요일을 쉬게 하는 식으로 날짜를 미리 바꾸지 못합니다.
 
-다만 직원이 이날 일한 뒤 임금 대신 보상휴가(補休)를 고를 수는 있습니다. 노동부 [2019년 서한](https://w3fs.tainan.gov.tw/Download.ashx?n=MTA4MDMwNOWLnuWfuuazlSg4NC0xKeS5i%2BW3peS9nOiAheaWvOaKleelqOaXpeWPiuWFrOawkeaKleelqOaXpeWHuuWLpOS5i%2BW3peizh%2Be1puS7mOeWkee%2BqS5wZGY%3D&u=LzAwMS9VcGxvYWQvMjAvcmVsZmlsZS85NzQ5LzQxOTAzNDkvNzA0ZmNlNzQtMzg4NS00ODE1LWJjN2QtZTI0NTFiMzNiMTQyLnBkZg%3D%3D)은 직원 권리와 회사 인력 운영을 해치지 않는 범위에서 보상휴가의 기준·기한·미사용분 처리를 노사가 약정하도록 합니다. 회사가 보상휴가만 고르게 정하면 노동기준법에 맞지 않습니다.
+다만 직원이 이날 일한 뒤 가산임금 대신 보상휴가(補休)를 고를 수는 있습니다. 노동부 [2019년 서한](https://w3fs.tainan.gov.tw/Download.ashx?n=MTA4MDMwNOWLnuWfuuazlSg4NC0xKeS5i%2BW3peS9nOiAheaWvOaKleelqOaXpeWPiuWFrOawkeaKleelqOaXpeWHuuWLpOS5i%2BW3peizh%2Be1puS7mOeWkee%2BqS5wZGY%3D&u=LzAwMS9VcGxvYWQvMjAvcmVsZmlsZS85NzQ5LzQxOTAzNDkvNzA0ZmNlNzQtMzg4NS00ODE1LWJjN2QtZTI0NTFiMzNiMTQyLnBkZg%3D%3D)은 직원 권리와 회사 인력 운영을 해치지 않는 범위에서 보상휴가의 기준·기한·미사용분 처리를 노사가 약정하도록 합니다. 회사가 일방적으로 보상휴가만 선택하게 정하면 노동기준법에 맞지 않습니다.
 
 원래 쉬는 토요일이면 어떨까요? 노동부는 휴식일(休息日)이나 정기휴일(例假)이었던 직원에게는 하루를 더 주지 않는다고 안내합니다.
 
@@ -46,7 +46,7 @@ author: "legal-ai-assistant"
 
 자이현이 든 야간근무 예에서는 전날 밤 11시에 출근해 투표일 아침 7시에 퇴근합니다. 위 조건에 해당하는 직원이라면 자정 이후 7시간분의 임금을 기존 임금에 더합니다. 자정이 기준입니다.
 
-근무가 더 길면 계산이 나뉩니다. 노동부는 같은 서한에서 [제84조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=84-1) 적용 근로자를 예로 들었습니다. 관할 기관의 승인을 받은 하루 정상 근로시간이 10시간이고, 밤 8시부터 다음 날 아침 8시까지 일하는 경우입니다. 자정 전 정상 근로시간에는 가산이 없습니다. 투표일의 원래 정상 근로시간대는 두 배로 지급하고, 정상 근로시간을 넘는 구간은 [제24조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)의 연장근로 임금으로 계산합니다.
+근무가 더 길면 계산이 나뉩니다. 노동부는 2019년 서한에서 [제84조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=84-1) 적용 근로자를 예로 들었습니다. 관할 기관의 승인을 받은 하루 정상 근로시간이 10시간이고, 밤 8시부터 다음 날 아침 8시까지 일하는 경우입니다. 자정 전 정상 근로시간에는 가산이 없습니다. 투표일의 원래 정상 근로시간대는 두 배로 지급하고, 정상 근로시간을 넘는 구간은 [제24조 제1항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)의 연장근로 임금으로 계산합니다.
 
 원래 휴식일이었는데 출근했다면 [제24조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)의 휴식일 근무 가산 기준을 적용합니다. 정기휴일은 다릅니다. [제84조의1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=84-1)에 따라 관할 기관이 승인한 정기휴일 약정이 없다면 [제40조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=40)의 천재지변·사변·돌발 상황이 아닌 한 이날 일하게 할 수 없습니다. 가산임금은 근무표상의 휴일 구분과 자정 전후 근무시간 기록을 함께 놓고 계산합니다.
 

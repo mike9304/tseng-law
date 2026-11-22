@@ -27,7 +27,7 @@ author: "legal-ai-assistant"
 
 # Taiwan corporate damages awards: which year's tax return includes the income?
 
-An unnamed company omitted a civil damages award from its Taiwan tax return and was assessed additional tax and a penalty, [CNA reported on November 18](https://www.cna.com.tw/news/afe/202611180312.aspx). The National Taxation Bureau of Taipei said the income belonged in the year the judgment establishing the damages claim became final.
+In an example [CNA reported on November 18](https://www.cna.com.tw/news/afe/202611180312.aspx), a company identified only as Company A left a civil damages award off its Taiwan tax return. It was assessed additional tax and a penalty. The National Taxation Bureau of Taipei, which gave the example, said the income belonged in the year the judgment establishing the damages claim became final.
 
 During the annual close, the controller of a US-owned Taiwan subsidiary may receive a litigation update from local counsel while the payment record sits with treasury. A bank statement establishes a transfer date; the finality of the judgment helps determine the Taiwan reporting year under the bureau's explanation.
 
@@ -39,9 +39,9 @@ Year-end recognition is addressed by [Article 27 of the Regulations Governing As
 
 Applying these provisions, the bureau's [November 18 release](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=9461a282ac0345649b2cc722c0a383a1) says the income accrues when the judgment establishing the civil damages claim becomes final. Its warning covers damages sought for infringement of rights or breach of contract.
 
-## Income from a 2023 judgment, missing from the 2023 return
+## Income from a judgment final in 2023, missing from that year's return
 
-In the example, the company brought proceedings in 2019 and the judgment became final in 2023. Damages and interest exceeded NT$10 million. According to the bureau, the company should have included that income in its 2023 return but failed to do so. The bureau assessed more than NT$2 million in additional tax and a penalty of more than NT$800,000. The payment date was not disclosed.
+The bureau's account begins in 2019, with another company's infringement and a civil damages suit. The judgment became final in 2023. Damages and interest exceeded NT$10 million. According to the bureau, the company should have included that income in its 2023 return but failed to do so. The bureau assessed more than NT$2 million in additional tax and a penalty of more than NT$800,000. The payment date was not disclosed.
 
 Omitting income can also trigger a fine. For a taxpayer that files a required return but omits or understates taxable income, [Article 110, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=110) provides for a fine of up to twice the omitted tax. That is a ceiling. The rounded tax and penalty figures reported in this example do not establish a fixed penalty rate for other companies.
 
@@ -49,7 +49,7 @@ Paragraph 3 covers a company whose losses or incentive-based tax exemptions leav
 
 ## An exception requires more than a later transfer
 
-Article 27 allows income that cannot be ascertained at annual closing because of special circumstances to be treated as prior-period income in the year it becomes ascertainable.
+Article 27 allows income that cannot be ascertained at annual closing because of special circumstances to be treated as prior-period income in the year it is ascertained.
 
 Does a debtor's slow payment automatically satisfy that condition? The provision does not say so. Its test concerns inability to ascertain the income at closing. A company proposing later recognition would need to explain the relevant circumstances, rather than rely only on the date money reached its account.
 
@@ -62,4 +62,4 @@ A multinational finance team can tie the reporting year to one record showing wh
 - Income Tax Act: [Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4), [Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=22) and [Article 110](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=110)
 - Regulations Governing Assessment of Profit-Seeking Enterprise Income Tax (營利事業所得稅查核準則): [Article 27](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=27)
 
-Taiwan sources checked November 23, 2026. This explanation concerns corporate civil-litigation damages other than compensation under the State Compensation Law, which [Article 4 of the Income Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4) lists as exempt. It does not determine a particular company's return position.
+Taiwan sources checked November 23, 2026. This explanation concerns corporate civil-litigation damages other than damages for injury or death and compensation under the State Compensation Law, which [Article 4 of the Income Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4) lists as exempt. It does not determine a particular company's return position.

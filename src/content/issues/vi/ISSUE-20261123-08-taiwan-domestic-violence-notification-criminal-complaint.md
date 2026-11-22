@@ -1,7 +1,7 @@
 ---
 title: "Không yêu cầu xử lý hình sự, vì sao cảnh sát Đài Loan vẫn thông báo vụ việc?"
-seoTitle: "Đài Loan: thông báo phòng chống bạo lực và yêu cầu xử lý hình sự"
-summary: "CNA ngày 16 tháng 11 đưa tin cảnh sát vẫn hoàn tất thông báo phòng chống bạo lực gia đình sau vụ mâu thuẫn của một đôi nam nữ Việt Nam, dù người phụ nữ không muốn đưa ra yêu cầu xử lý hình sự. Khi thuộc Điều 50, thông báo dẫn đến việc cơ quan chủ quản địa phương đánh giá nhu cầu của người bị hại, không tự xác định ai có tội."
+seoTitle: "Đài Loan: thông báo bạo lực gia đình khi không yêu cầu xử lý hình sự"
+summary: "CNA ngày 16 tháng 11 đưa tin một phụ nữ Việt Nam không muốn đưa ra yêu cầu xử lý hình sự sau mâu thuẫn với người yêu, còn cảnh sát đã hoàn tất thông báo phòng chống bạo lực gia đình theo quy định. Khi thuộc Điều 50, thông báo dẫn đến việc cơ quan có thẩm quyền tại địa phương đánh giá nhu cầu của người bị hại, không tự xác định ai có tội."
 published: "2026-11-23"
 lastmod: "2026-11-23"
 date_display: "Ngày 23 tháng 11 năm 2026"
@@ -26,7 +26,7 @@ author: "legal-ai-assistant"
 
 # Không yêu cầu xử lý hình sự, vì sao cảnh sát Đài Loan vẫn thông báo vụ việc?
 
-Nếu không muốn yêu cầu xử lý hình sự sau mâu thuẫn với người yêu, vì sao cảnh sát vẫn thực hiện thông báo phòng chống bạo lực gia đình? [CNA ngày 16 tháng 11](https://www.cna.com.tw/news/asoc/202611160149.aspx) đưa tin về một đôi nam nữ Việt Nam cãi vã, giằng co tại Đào Viên. Bản tin dẫn lời cảnh sát rằng tại hiện trường không có việc đánh đập. Người phụ nữ không muốn đưa ra yêu cầu xử lý về gây thương tích hoặc hành vi liên quan. Cảnh sát vẫn hoàn tất thông báo phòng chống bạo lực gia đình và quan tâm đến sự an toàn của cô.
+[CNA ngày 16 tháng 11](https://www.cna.com.tw/news/asoc/202611160149.aspx) đưa tin về một đôi nam nữ Việt Nam cãi vã, giằng co tại Đào Viên. Bản tin dẫn lời cảnh sát rằng tại hiện trường không có việc đánh đập. Người phụ nữ không muốn đưa ra yêu cầu xử lý về gây thương tích hoặc hành vi liên quan. Cảnh sát đã hoàn tất thủ tục thông báo phòng chống bạo lực gia đình theo quy định và quan tâm đến sự an toàn của cô.
 
 Bản tin không cho biết hai người có sống chung hay không. Vì vậy, không thể chỉ từ cách gọi “người yêu” mà xác định đầy đủ căn cứ pháp lý của thông báo trong vụ này.
 
@@ -40,15 +40,15 @@ Ngưỡng của thủ tục này là nghi ngờ. Theo [Điều 2](https://law.mo
 
 [Điều 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=3) coi vợ chồng, người đã ly hôn và người đang hoặc từng có quan hệ chung sống (同居關係) là thành viên gia đình, bên cạnh các quan hệ thân thuộc khác được liệt kê. Giấy đăng ký kết hôn không phải căn cứ duy nhất. Khi giải thích tình huống với cơ quan tiếp nhận, quan hệ chung sống trước đây vẫn có ý nghĩa ngay cả sau khi chia tay.
 
-Người yêu chưa sống chung có cơ chế riêng tại [Điều 63-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=63-1). Quy định này dành cho người từ đủ 16 tuổi bị người có quan hệ thân mật hiện tại hoặc trước đây xâm hại trái pháp luật về thể chất hay tinh thần. Quan hệ thân mật phải hình thành từ sự gắn kết tình cảm hoặc quan hệ tình dục. Luật cho áp dụng một danh sách quy định bảo vệ, không phải toàn bộ đạo luật; Điều 50 không nằm trong danh sách ấy.
+Người yêu chưa sống chung có cơ chế riêng tại [Điều 63-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=63-1). Quy định này dành cho người từ đủ 16 tuổi bị người có quan hệ thân mật hiện tại hoặc trước đây xâm hại trái pháp luật về thể chất hay tinh thần. Luật định nghĩa đây là mối quan hệ giao tiếp xã hội thân mật mà hai bên phát triển trên nền tảng tình cảm hoặc quan hệ tình dục. Luật cho áp dụng một danh sách quy định bảo vệ, không phải toàn bộ đạo luật; Điều 50 không nằm trong danh sách ấy.
 
-## Sau thông báo là đánh giá nhu cầu bảo vệ
+## Sau thông báo là đánh giá nhu cầu của người bị hại
 
 Khoản 3 [Điều 50](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=50) yêu cầu cơ quan nhận tin xử lý ngay, đánh giá nhu cầu của người bị hại và xem có trẻ em, thiếu niên chứng kiến bạo lực gia đình hay không. Khi cần, cơ quan có thể thăm hỏi, điều tra và đưa ra biện pháp phù hợp. Thông báo chưa phải bản án.
 
 Việc kết tội vẫn cần chứng cứ. [Điều 154 Bộ luật Tố tụng hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=154) bảo đảm suy đoán vô tội cho đến khi có bản án kết tội có hiệu lực. Vì thế, một hồ sơ thông báo không tự chứng minh người bị phản ánh đã phạm tội.
 
-Trong vụ Đào Viên, điều CNA xác nhận qua lời cảnh sát là thủ tục thông báo đã được thực hiện. Người phụ nữ không đưa ra yêu cầu xử lý hình sự, còn thủ tục thông báo vẫn được thực hiện; nhu cầu an toàn và quan hệ thực tế giữa hai người là những thông tin cần được làm rõ khi tiếp nhận vụ việc.
+Trong vụ Đào Viên, bản tin không nêu cơ quan tiếp nhận hoặc các bước xử lý sau thông báo phòng chống bạo lực gia đình. Hai người có quan hệ chung sống (同居關係) hay không vẫn chưa rõ. Đây là điểm phân biệt Điều 3 với Điều 63-1.
 
 ## Nguồn
 

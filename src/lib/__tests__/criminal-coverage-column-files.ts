@@ -160,7 +160,7 @@ const CRIMINAL_COLUMN_SLUGS_20261118 = {
 
 /** Native-locale criminal columns published 2026-11-23 (cols-1119). */
 const CRIMINAL_COLUMN_SLUGS_20261123 = {
-  ko: [],
+  ko: ['taiwan-filming-people-privacy-sexual-image-criminal-boundary'],
   en: ['taiwan-injury-crash-stayed-at-scene-leaving-taiwan-flight', 'taiwan-insider-trading-spouse-tipped-before-earnings-announcement'],
   ja: [],
   'zh-hant': [],

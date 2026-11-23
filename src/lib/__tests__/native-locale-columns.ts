@@ -775,29 +775,35 @@ export const ASIA_MARKET_COLUMN_FILES_20261123: Readonly<Record<string, readonly
   ],
 };
 
-/** Locale-specific expansion columns published 2026-11-23 (cols-1119: foreign default judgments, crypto account takeover, direct claims against liability insurers, migrant workers sent to other sites, transfer orders, child household registration, nominee brokerage accounts, spouse insider trading, leaving Taiwan after an injury crash, investment-scam introducers). */
+/** Locale-specific expansion columns published 2026-11-23 (cols-1119: foreign default judgments, crypto account takeover, direct claims against liability insurers, migrant workers sent to other sites, transfer orders, child household registration, nominee brokerage accounts, spouse insider trading, leaving Taiwan after an injury crash, investment-scam introducers; cols-1123: settlement defaults, civil litigation costs, director removal, privacy, residence appeals, merger appraisal). */
 export const COLS_EXPANSION_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
   'en': [
     '1381-taiwan-crypto-exchange-account-takeover-unauthorized-withdrawal-liability.md',
     '1387-taiwan-insider-trading-spouse-tipped-before-earnings-announcement.md',
     '1388-taiwan-injury-crash-stayed-at-scene-leaving-taiwan-flight.md',
+    '1391-taiwan-civil-lawsuit-loser-pays-lawyer-fees-court-costs.md',
   ],
   'fr': [
     '1382-taiwan-traffic-accident-direct-claim-against-liability-insurer.md',
+    '1394-taiwan-spouse-arc-extension-refused-30-day-appeal-stay.md',
   ],
   'ja': [
     '1384-taiwan-job-transfer-order-kaohsiung-refusal-resignation-severance.md',
     '1389-taiwan-investment-scam-introducer-commission-liability-friends.md',
+    '1392-taiwan-subsidiary-director-refuses-resign-removal-damages.md',
   ],
   'ko': [
     '1385-taiwan-sole-custody-child-household-registration-move-other-parent.md',
     '1386-taiwan-stocks-bought-in-friends-brokerage-account-return-claim.md',
+    '1393-taiwan-filming-people-privacy-sexual-image-criminal-boundary.md',
+    '1395-taiwan-merger-dissenting-minority-shareholder-appraisal-rights.md',
   ],
   'vi': [
     '1383-taiwan-migrant-worker-sent-to-another-factory-company-work-permit.md',
   ],
   'zh-hant': [
     '1380-taiwan-foreign-default-judgment-enforcement-defendant-service-defense.md',
+    '1390-taiwan-stock-settlement-default-liquidated-damages-criminal-liability.md',
   ],
 };
 

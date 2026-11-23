@@ -751,6 +751,30 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
+/** Market columns for Hong Kong (zh-hant), Singapore (en), Malaysia (ms) and Vietnam (vi) readers published 2026-11-23 (cols-1123-asia: Hong Kong residents' settlement, Hong Kong companies and mainland-capital review, Hong Kong judgments and awards; the 2027 Taiwan-Singapore tax agreement, short contract-performance trips, assigned employees' salary tax; Malaysian graduates' points-based work permits, Malaysian-Taiwanese marriage registration, fraud cash-collector arrests; Vietnamese spouses' naturalization, absconded migrant workers' voluntary surrender, underground remittance). */
+export const ASIA_MARKET_COLUMN_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1399-singapore-taiwan-tax-agreement-2027-dividends-interest-royalties-service-pe.md',
+    '1400-singapore-engineers-short-term-contract-work-taiwan-work-permit-30-90-days.md',
+    '1401-singapore-employee-assigned-taiwan-salary-tax-183-days-new-agreement.md',
+  ],
+  'ms': [
+    '1402-malaysian-graduate-taiwan-work-permit-70-points-post-study-stay.md',
+    '1403-malaysian-taiwanese-marriage-registration-documents-residence.md',
+    '1404-malaysian-arrested-taiwan-fraud-cash-collector-detention-sentence.md',
+  ],
+  'vi': [
+    '1405-vietnamese-spouse-taiwan-naturalization-three-years-renounce-nationality.md',
+    '1406-taiwan-absconded-migrant-worker-voluntary-surrender-fine-reentry-ban.md',
+    '1407-taiwan-underground-remittance-vietnam-banking-act-licensed-channels.md',
+  ],
+  'zh-hant': [
+    '1396-taiwan-hong-kong-resident-settlement-household-registration-residence-period.md',
+    '1397-hong-kong-company-taiwan-investment-mainland-capital-thirty-percent-control.md',
+    '1398-hong-kong-court-judgment-arbitral-award-recognition-enforcement-taiwan.md',
+  ],
+};
+
 /** Locale-specific expansion columns published 2026-11-23 (cols-1119: foreign default judgments, crypto account takeover, direct claims against liability insurers, migrant workers sent to other sites, transfer orders, child household registration, nominee brokerage accounts, spouse insider trading, leaving Taiwan after an injury crash, investment-scam introducers). */
 export const COLS_EXPANSION_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -2039,6 +2063,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
+    ...(ASIA_MARKET_COLUMN_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261118[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261117[locale] ?? []),
@@ -2222,6 +2247,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
+  if (Object.values(ASIA_MARKET_COLUMN_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261118).flat().map(slugOf).includes(slug)) return '2026-11-18';
   if (Object.values(COLS_EXPANSION_FILES_20261117).flat().map(slugOf).includes(slug)) return '2026-11-17';
@@ -2304,6 +2330,7 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(WORLD_COLUMN_FILES_20261106),
+    ...Object.values(ASIA_MARKET_COLUMN_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261118),
     ...Object.values(COLS_EXPANSION_FILES_20261117),

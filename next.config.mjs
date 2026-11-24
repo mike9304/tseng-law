@@ -56,6 +56,10 @@ const sensitiveRouteSources = [
 const nextConfig = {
   distDir,
   reactStrictMode: true,
+  // Render metadata before the document head closes for every user agent. The static snapshot is
+  // crawled with a generic UA, so streamed metadata would otherwise be frozen into <body>, where
+  // Google ignores canonical and hreflang.
+  htmlLimitedBots: /.*/,
   // Column markdown is resolved through a locale→directory map (src/lib/column-locales.ts),
   // so Vercel's file tracing can no longer see the directories statically. Without this,
   // production lambdas lack src/content/columns-* and en/ja/zh-hant home + /columns 500

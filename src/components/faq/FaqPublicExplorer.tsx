@@ -233,7 +233,7 @@ export default function FaqPublicExplorer({
                 data-public-faq-item={item.faqId}
                 data-public-faq-category={item.categoryId}
               >
-                <h3 className={styles.heading}>
+                <h2 className={styles.heading}>
                   <button
                     id={buttonId}
                     type="button"
@@ -249,7 +249,7 @@ export default function FaqPublicExplorer({
                     {/* zh-hant: the monoline plus / minus, as on FAQAccordion; other locales keep the typed sign. */}
                     <span aria-hidden className={styles.arrow}>{locale === 'zh-hant' ? <ZhHantMonoIcon name={isOpen ? 'minus' : 'plus'} size={18} /> : isOpen ? '-' : '+'}</span>
                   </button>
-                </h3>
+                </h2>
                 <div
                   id={panelId}
                   className={styles.panel}

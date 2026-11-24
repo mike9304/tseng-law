@@ -86,7 +86,7 @@ describe('English lawyer profile screen copy', () => {
     expect(metadata.title).toBe('Wei Tseng Taiwan Attorney Profile');
     expect(metadata.description).toBe(profile.description);
     expect(person).toMatchObject({
-      name: 'Attorney Wei Tseng',
+      name: 'Wei Tseng',
       description: profile.description,
       jobTitle: EN_JOB_TITLE,
     });

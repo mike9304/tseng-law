@@ -59,7 +59,7 @@
 /* globals.css sets every guidance-locale heading in <main> to the body face at 700
    (`.site[data-guidance-locale] main :is(h1, h2, h3, …)`, family !important, specificity 0-3-1). vi answers in the
    same context one step more specific: titles in the display serif at 500, card titles at 600, labels in the sans. */
-:global(.site[data-guidance-locale] main) .site :is(h1, h2) {
+:global(.site[data-guidance-locale] main) .site :is(h1, h2):not(:global(.attorney-group-title)) {
   font-family: var(--vi-serif) !important;
   font-weight: 500;
   letter-spacing: -0.008em;

@@ -359,7 +359,10 @@
 .root[data-en-design][id] :global(.section-title)::after { display: none !important; }
 .root[data-en-design][id] h2,
 .root[data-en-design][id] h3 { font-family: var(--en-display) !important; text-wrap: balance; }
-.root[data-en-design][id] h3 { letter-spacing: -0.015em; }
+.root[data-en-design][id] h3,
+.root[data-en-design][id] :global(.attorney-group-title),
+.root[data-en-design][id] :global(.svc-sidebar-title),
+.root[data-en-design][id] :global([data-public-faq-explorer='true']) h2 { letter-spacing: -0.015em; }
 .root[data-en-design][id] p { text-wrap: pretty; }
 .root[data-en-design][id] :global(.button) { border-radius: 999px; box-shadow: none; }
 .root[data-en-design][id] :global(.link-underline) { color: var(--text-link); text-decoration: none; }

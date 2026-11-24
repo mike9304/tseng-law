@@ -8,6 +8,10 @@ export const zhAttorneyCredentials = [
   { label: '韓文', value: '韓國語能力測驗 TOPIK 6' },
   { label: '日文', value: '日本語能力測驗 N1' },
 ] as const;
+export const attorneyLanguageCredentials = [
+  { '@type': 'EducationalOccupationalCredential', name: 'TOPIK Level 6', description: 'Test of Proficiency in Korean', credentialCategory: 'Language proficiency test' },
+  { '@type': 'EducationalOccupationalCredential', name: 'JLPT N1', description: 'Japanese-Language Proficiency Test', credentialCategory: 'Language proficiency test' },
+] as const;
 export const zhAttorneyLanguageCredentials = [
   { '@type': 'EducationalOccupationalCredential', name: 'TOPIK 6', description: '韓國語能力測驗', credentialCategory: '語言能力測驗' },
   { '@type': 'EducationalOccupationalCredential', name: '日本語能力測驗 N1', description: '日本語能力測驗', credentialCategory: '語言能力測驗' },

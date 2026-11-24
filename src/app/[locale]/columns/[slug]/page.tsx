@@ -1,3 +1,4 @@
+import { withSeoPageCopy } from '@/lib/seo-page-copy';
 import type { ColumnDetailViewProps } from './ColumnDetailView';
 import PublicColumnView from './PublicColumnView';
 import type { Metadata } from 'next';
@@ -83,7 +84,7 @@ const copy: Record<SiteLocale | 'vi', {
   },
 };
 
-export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function buildPageMetadata(props: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const params = await props.params;
 
   if (isGuidanceLocale4(params.locale)) {
@@ -140,6 +141,11 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     alternateLocales: columnAlternateLocales(post.slug, locale),
     xDefaultWithinCluster: true,
   });
+}
+
+export async function generateMetadata(props: Parameters<typeof buildPageMetadata>[0]) {
+  const params = await props.params;
+  return withSeoPageCopy(await buildPageMetadata(props), `/${params.locale}/columns/${params.slug}`);
 }
 
 export default async function ColumnDetailPage(props: { params: Promise<{ locale: string; slug: string }> }) {
@@ -214,34 +220,19 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           { href: guidancePublicPath(guidanceLocale, 'services'), label: guidanceContent[guidanceLocale].nav.services },
           { href: guidancePublicPath(guidanceLocale, 'lawyers'), label: guidanceContent[guidanceLocale].nav.lawyers },
         ]
-      : locale === 'ja'
-      ? post.category === 'formation'
-        ? [
-            { href: '/ja/services#investment', label: '台湾投資・会社設立' },
-            { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
-          ]
-        : post.category === 'case'
-          ? [
-              { href: '/ja/services#civil', label: '台湾の民事紛争' },
-              { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
-            ]
-          : [
-              { href: '/ja/services', label: '取扱業務' },
-              { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
-            ]
       : post.category === 'formation'
         ? [
-            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
-            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
           ]
         : post.category === 'case'
           ? [
-              { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : 'Taiwan Litigation' },
-              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+              { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : locale === 'ja' ? '台湾訴訟' : 'Taiwan Litigation' },
+              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
             ]
           : [
-              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
-              { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
+              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
+              { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
             ];
 
   // "Recommended for you" at the end: static order = same topic (newest

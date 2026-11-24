@@ -18,6 +18,22 @@ function redirectMatchers(outDir) {
   });
 }
 
+function tagAttr(tag, name) {
+  const match = tag.match(new RegExp(`\\s${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`, 'i'));
+  return match ? (match[1] ?? match[2] ?? match[3]) : null;
+}
+
+/** Which crawl-critical tags appear in this markup, whatever the attribute quoting or spacing. */
+function headSeoFields(markup) {
+  const links = markup.match(/<link\b[^>]*>/gi) ?? [];
+  const metas = markup.match(/<meta\b[^>]*>/gi) ?? [];
+  return {
+    description: metas.some((tag) => tagAttr(tag, 'name')?.toLowerCase() === 'description'),
+    canonical: links.some((tag) => tagAttr(tag, 'rel')?.toLowerCase() === 'canonical'),
+    hreflang: links.some((tag) => tagAttr(tag, 'hreflang') !== null),
+  };
+}
+
 export function resolvesTo(outDir, pathname) {
   const decoded = decodeURIComponent(pathname);
   const direct = path.join(outDir, decoded);
@@ -41,6 +57,7 @@ export function verifySite({ outDir }) {
     serverOnlyRefs: {},
     apiStrings: {},
     flightErrors: {},
+    metaOutsideHead: [],
   };
 
   for (const file of files) {
@@ -49,11 +66,19 @@ export function verifySite({ outDir }) {
     if (size > MAX_FILE_BYTES) report.oversize.push({ file: path.relative(outDir, file), size });
   }
 
+  const sitemapPages = new Set();
+  const sitemapPagesWithHreflang = new Set();
   const sitemapFile = path.join(outDir, 'sitemap.xml');
   if (fs.existsSync(sitemapFile)) {
-    for (const m of fs.readFileSync(sitemapFile, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    const sitemapXml = fs.readFileSync(sitemapFile, 'utf8');
+    for (const block of sitemapXml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+      const loc = block[1].match(/<loc>([^<]+)<\/loc>/)?.[1];
+      if (loc && /hreflang=/i.test(block[1])) sitemapPagesWithHreflang.add(decodeURIComponent(new URL(loc.trim()).pathname));
+    }
+    for (const m of sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
       report.sitemapUrls += 1;
       const pathname = new URL(m[1].trim()).pathname;
+      sitemapPages.add(decodeURIComponent(pathname));
       if (!resolvesTo(outDir, pathname)) report.sitemapMissing.push(pathname);
     }
   } else {
@@ -64,6 +89,18 @@ export function verifySite({ outDir }) {
     report.htmlPages += 1;
     const rel = `/${path.relative(outDir, file).replace(/\.html$/, '')}`;
     const html = fs.readFileSync(file, 'utf8');
+    // Google ignores canonical and hreflang outside <head>, so a page that streams them into <body> fails the build.
+    const markup = html.replace(/<!--[\s\S]*?-->/g, '').replace(/<script\b[\s\S]*?<\/script>/gi, '');
+    const headEnd = Math.max(markup.search(/<\/head>/i), 0);
+    const head = headSeoFields(markup.slice(0, headEnd));
+    const body = headSeoFields(markup.slice(headEnd));
+    const missingFromHead = sitemapPages.has(rel) && (
+      !/<title[\s>]/i.test(markup.slice(0, headEnd))
+      || !head.description
+      || !head.canonical
+      || (sitemapPagesWithHreflang.has(rel) && !head.hreflang)
+    );
+    if (body.description || body.canonical || body.hreflang || missingFromHead) report.metaOutsideHead.push(rel);
     // A broken RSC text-row length makes the page fall over during hydration.
     const flightErrors = findFlightLengthErrors(html);
     if (flightErrors.length) report.flightErrors[rel] = flightErrors.slice(0, 3);

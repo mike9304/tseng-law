@@ -173,18 +173,15 @@ describe('Japanese column locale integrity', () => {
     );
 
     const expectedJapaneseGuides = [
-      "{ href: '/ja/services#investment', label: '台湾投資・会社設立' }",
-      "{ href: '/ja/services#civil', label: '台湾の民事紛争' }",
-      "{ href: '/ja/services', label: '取扱業務' }",
-      "{ href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' }",
+      "locale === 'ja' ? '台湾会社設立'",
+      "locale === 'ja' ? '台湾訴訟'",
+      "locale === 'ja' ? '台湾弁護士'",
     ];
 
     for (const guide of expectedJapaneseGuides) {
       expect(detailSource).toContain(guide);
     }
-    expect(detailSource.match(
-      /\{ href: '\/ja\/lawyers\/wei-tseng', label: '曾雋崴弁護士' \}/g,
-    )).toHaveLength(3);
+    expect(detailSource).not.toContain("href: '/ja/services#investment'");
   });
 
   it('keeps the authority-card copy inside its desktop grid track', () => {

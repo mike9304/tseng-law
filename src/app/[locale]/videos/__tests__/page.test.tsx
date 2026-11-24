@@ -258,7 +258,7 @@ describe('videos route builder parity', () => {
     };
     expect(person).toMatchObject({
       '@type': 'Person',
-      name: '曾雋崴弁護士',
+      name: '曾雋崴',
       jobTitle: attorneyProfiles.ja['wei-tseng'].role,
     });
     expect(new URL(person.url).pathname).toBe('/ja/lawyers/wei-tseng');

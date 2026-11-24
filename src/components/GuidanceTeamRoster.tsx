@@ -106,7 +106,7 @@ function GuidanceMemberCard({
         <p className="attorney-card-role">{role}</p>
         {member.email ? (
           <a href={member.email === CONSULTATION_EMAIL ? getLocalizedConsultationMailto(locale) : `mailto:${member.email}`} className="attorney-card-email">
-            {member.email}
+            <span data-nosnippet>{member.email}</span>
           </a>
         ) : null}
 
@@ -185,6 +185,7 @@ export default function GuidanceTeamRoster({
   const lead = members.find((m) => m.id === 'tseng-junwei');
   const staff = members.filter((m) => m.id !== 'tseng-junwei' && m.id !== 'huang-shengping');
   const accountant = members.find((m) => m.id === 'huang-shengping');
+  const GroupHeading: 'h2' | 'h3' = showIntro ? 'h3' : 'h2';
 
   if (members.length === 0) {
     return null;
@@ -220,16 +221,16 @@ export default function GuidanceTeamRoster({
 
         {lead ? (
           <div className="attorney-lead-wrap">
-            <h3 className="attorney-group-title">
+            <GroupHeading className="attorney-group-title">
               <span className="attorney-group-badge">{copy.representativeTitle}</span>
-            </h3>
+            </GroupHeading>
             <GuidanceMemberCard member={lead} memberId={lead.id} locale={locale} size="large" />
           </div>
         ) : null}
 
         {staff.length > 0 ? (
           <div className="attorney-staff-wrap">
-            <h3 className="attorney-group-title">{copy.teamTitle}</h3>
+            <GroupHeading className="attorney-group-title">{copy.teamTitle}</GroupHeading>
             <div className="attorney-staff-grid">
               {staff.map((member) => (
                 <GuidanceMemberCard
@@ -246,7 +247,7 @@ export default function GuidanceTeamRoster({
 
         {accountant ? (
           <div className="attorney-partner-wrap">
-            <h3 className="attorney-group-title">{copy.partnerTitle}</h3>
+            <GroupHeading className="attorney-group-title">{copy.partnerTitle}</GroupHeading>
             <GuidanceMemberCard
               member={accountant}
               memberId={accountant.id}

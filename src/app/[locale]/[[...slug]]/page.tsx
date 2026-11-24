@@ -1,3 +1,5 @@
+import { PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT } from '@/lib/public-guidance';
+import { withSeoPageCopy } from '@/lib/seo-page-copy';
 import type { ReactElement } from 'react';
 import { isSeaBusinessLocale } from '@/lib/sea-business-routes';
 import SeaBusinessLinks from '@/components/SeaBusinessLinks';
@@ -32,7 +34,7 @@ import {
   isGuidanceLocale4,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
-import { buildAbsoluteUrl, DEFAULT_SOCIAL_IMAGE_PATH, getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
+import { buildAbsoluteUrl, DEFAULT_SOCIAL_IMAGE_PATH, getOpenGraphLocale, getOrganizationName, getPageTitleBrand, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -83,9 +85,12 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
   // Same "<page> | <firm>" shape the four site locales publish. The guidance
   // titles carried the page name alone, so a search result showed no firm.
   const brandName = getOrganizationName('en');
+  // vi and ms are priority search markets: the short brand leaves room for the query in the title.
+  const titleBrand = locale === 'vi' || locale === 'ms' ? getPageTitleBrand('en') : brandName;
+  const pageTitle = `${page.title} | ${titleBrand}`;
   const canonicalUrl = guidanceCanonicalUrl(locale, classified.pageKey, siteUrl);
   return {
-    title: { absolute: `${page.title} | ${brandName}` },
+    title: { absolute: pageTitle },
     description: page.description,
     alternates: {
       canonical: canonicalUrl,
@@ -95,7 +100,7 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
     // published no Open Graph block at all. `og:locale:alternate` stays absent
     // because the four site locales emit none either.
     openGraph: {
-      title: `${page.title} | ${brandName}`,
+      title: pageTitle,
       description: page.description,
       url: canonicalUrl,
       siteName: brandName,
@@ -105,7 +110,7 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${page.title} | ${brandName}`,
+      title: pageTitle,
       description: page.description,
       images: [buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH)],
     },
@@ -113,7 +118,7 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
   };
 }
 
-export async function generateMetadata(
+async function buildPageMetadata(
   props: {
     params: Promise<{ locale: string; slug?: string[] }>;
   }
@@ -145,6 +150,13 @@ export async function generateMetadata(
   if (legacyMetadata) return legacyMetadata;
 
   return buildLocalizedNotFoundMetadata(locale);
+}
+
+export async function generateMetadata(props: Parameters<typeof buildPageMetadata>[0]) {
+  const params = await props.params;
+  // Guidance pages reach this route through an internal rewrite segment; the copy is keyed by public URL.
+  const publicSlug = (params.slug ?? []).filter((segment) => segment !== PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT);
+  return withSeoPageCopy(await buildPageMetadata(props), `/${params.locale}${publicSlug.length ? `/${publicSlug.join('/')}` : ''}`);
 }
 
 export default async function MainSiteCatchAllPage(

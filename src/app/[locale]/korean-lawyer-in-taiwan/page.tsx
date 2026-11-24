@@ -1,3 +1,4 @@
+import { withSeoPageCopy } from '@/lib/seo-page-copy';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
@@ -16,7 +17,7 @@ import styles from './landing.module.css';
 
 const SLUG_PATH = LANDING_SLUG;
 
-export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+async function buildPageMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const c = landingContent[locale];
@@ -29,6 +30,11 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
     keywords: c.keywords,
     alternateLocales: siteLocales,
   });
+}
+
+export async function generateMetadata(props: Parameters<typeof buildPageMetadata>[0]) {
+  const params = await props.params;
+  return withSeoPageCopy(await buildPageMetadata(props), `/${params.locale}/korean-lawyer-in-taiwan`);
 }
 
 export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<{ locale: SiteLocale }> }) {

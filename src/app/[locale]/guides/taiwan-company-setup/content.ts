@@ -413,7 +413,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: 'Dividend withholding (foreign)', values: ['21%', 'None', 'N/A'] },
       { form: 'Undistributed-earnings tax', values: ['5%', 'None', 'N/A'] },
       { form: 'Joint venture (others as shareholders)', values: ['Allowed', 'Not allowed (a branch has no shareholders)', 'Not allowed'] },
-      { form: 'Listing in Taiwan', values: ['Allowed (Co., Ltd.)', 'Not allowed', 'Not allowed'] },
+      { form: 'Listing in Taiwan', values: ['Allowed (company limited by shares)', 'Not allowed', 'Not allowed'] },
       { form: 'R&D tax credit', values: ['Up to 30%', 'None', 'None'] },
     ],
     costHeading: 'Figures already published in our columns',

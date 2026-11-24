@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildSeoMetadata({
     locale: archive.locale,
     title: `${COLUMN_TOPIC_LABELS[archive.locale][archive.topic]} · ${copy.title}`,
-    description: copy.description,
+    // Every topic shares the board description, so the topic name keeps each snippet distinct.
+    description: `${COLUMN_TOPIC_LABELS[archive.locale][archive.topic]}: ${copy.description}`,
     path: archive.path,
     alternateLocales: archive.alternateLocales,
     xDefaultWithinCluster: true,

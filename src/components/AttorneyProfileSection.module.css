@@ -415,14 +415,14 @@
   }
 }
 
-:global(:lang(ko)) .root :where(h3, p, li, a) {
+:global(:lang(ko)) .root :where(h2, h3, p, li, a) {
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
 
-:global(:lang(ja)) .root :where(h3, p, li, a),
-:global(:lang(zh-Hant)) .root :where(h3, p, li, a),
-:global(:lang(zh-hant)) .root :where(h3, p, li, a) {
+:global(:lang(ja)) .root :where(h2, h3, p, li, a),
+:global(:lang(zh-Hant)) .root :where(h2, h3, p, li, a),
+:global(:lang(zh-hant)) .root :where(h2, h3, p, li, a) {
   word-break: normal;
   line-break: strict;
   overflow-wrap: anywhere;

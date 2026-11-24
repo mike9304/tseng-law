@@ -2875,6 +2875,7 @@ function GlobalCanvasSection({
       }}
     >
       <div
+        data-nosnippet
         style={{
           position: 'relative',
           maxWidth: canvas.stageWidth,

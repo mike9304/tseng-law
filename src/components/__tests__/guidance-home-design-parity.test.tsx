@@ -245,7 +245,10 @@ describe('guidance home matches the English home composition', () => {
         .replace(/href="mailto:wei@hoveringlaw\.com\.tw\?[^"]+"/g, 'href="mailto:{consultation-draft}"')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"')
-        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-');
+        .replace(new RegExp(`\\b(id|aria-controls|aria-labelledby)="${locale}-`, 'g'), '$1="{locale}-')
+        // The attorney link target is the one deliberate difference: Malay stays on its own team page.
+        .replace(/class="link-underline" href="(?:\/en\/lawyers\/wei-tseng|\/\{locale\}\/lawyers)"/g, 'class="link-underline" href="{attorney-profile}"');
+    expect(renderGuidanceHome('ms')).toContain('class="link-underline" href="/ms/lawyers"');
     // Every guidance locale outside Folio keeps the whole template, decorations and hero film included.
     const classicLocales = sharedLocales.filter((locale) => !isIntlDesignLocale(locale));
     const classicShapes = classicLocales.map(languageNeutral);

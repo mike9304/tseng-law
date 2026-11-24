@@ -1,4 +1,5 @@
 // SEA business guidance: isolated from the 45-language core-page dictionary.
+import { seaBusinessMs } from '@/data/sea-business-guidance-ms';
 import type { SeaBusinessLocale } from '@/lib/sea-business-routes';
 export type SeaSourceKey = 'investment' | 'work' | 'civil' | 'payment';
 export interface SeaBusinessPage {
@@ -16,6 +17,7 @@ export const SEA_BUSINESS_SOURCES: Record<SeaSourceKey, { title: string; href: s
   payment: { title: '司法院 — 支付命令的效力', href: 'https://www.judicial.gov.tw/tw/cp-1303-2724-b486e-1.html' },
 };
 export const seaBusinessContent: Record<SeaBusinessLocale, SeaBusinessCopy> = {
+  ms: seaBusinessMs,
   "vi": {
     "heading": "Hướng dẫn cho doanh nghiệp",
     "relatedLabel": "Tài liệu cùng chủ đề",

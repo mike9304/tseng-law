@@ -44,22 +44,22 @@ const localeExpectations: Record<
 > = {
   ko: {
     organizationName: '법무법인 호정',
-    attorneyName: '증준외 변호사',
+    attorneyName: '증준외',
     language: 'ko',
   },
   'zh-hant': {
     organizationName: '昊鼎國際法律事務所',
-    attorneyName: '曾雋崴律師',
+    attorneyName: '曾雋崴',
     language: 'zh-Hant',
   },
   en: {
     organizationName: 'Hovering International Law Firm',
-    attorneyName: 'Attorney Wei Tseng',
+    attorneyName: 'Wei Tseng',
     language: 'en',
   },
   ja: {
     organizationName: '昊鼎国際法律事務所',
-    attorneyName: '曾雋崴弁護士',
+    attorneyName: '曾雋崴',
     language: 'ja',
   },
 };

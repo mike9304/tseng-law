@@ -291,7 +291,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   );
   const contactCard = (
     <div className={`svc-sidebar-card ${styles.contactCard}${zhHant ? ` ${zhStyles.contactPanel}` : ''}${en ? ` ${enStyles.contactPanel}` : ''}`}>
-      <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
+      <h2 className="svc-sidebar-title">{t.contactLabel}</h2>
       <p className="svc-sidebar-text">{t.contactDesc}</p>
       <a
         href={getConsultationPublicMailto(locale)}
@@ -508,7 +508,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               </div>
               {columns.length > 0 && (
                 <div className="svc-sidebar-card">
-                  <h3 className="svc-sidebar-title">{t.columnsLabel.split(' —')[0]}</h3>
+                  <h2 className="svc-sidebar-title">{t.columnsLabel.split(' —')[0]}</h2>
                   <ul className="svc-related-list">
                     {columns.map((col) => (
                       <li key={col.slug}>

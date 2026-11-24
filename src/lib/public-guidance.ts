@@ -2,6 +2,7 @@ import {
   columnTopicArchiveExistsIn,
   parseColumnTopicArchiveSlugPath,
 } from '@/lib/column-topics';
+import { isSiteLocale } from '@/lib/locales';
 import { isSeaBusinessLocale, isSeaBusinessPage } from '@/lib/sea-business-routes';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
@@ -680,8 +681,16 @@ export function resolvePublicLanguageSwitchTarget(
     return { status: 'available', href: visible || `/${targetLocale}`, fallback: 'exact' };
   }
 
-  // SEA business pages have only four real editions; never manufacture core-language paths.
+  // Company setup is one page per language under two route names.
+  if (slugPath === 'taiwan-company-setup-lawyer' && currentLocale && isSiteLocale(currentLocale) && isSeaBusinessLocale(targetLocale)) {
+    return { status: 'available', href: `/${targetLocale}/company-setup`, fallback: 'exact' };
+  }
+
+  // SEA business pages have only five real editions; never manufacture core-language paths.
   if (currentLocale && isSeaBusinessLocale(currentLocale) && isSeaBusinessPage(slugPath)) {
+    if (slugPath === 'company-setup' && isSiteLocale(targetLocale)) {
+      return { status: 'available', href: `/${targetLocale}/taiwan-company-setup-lawyer`, fallback: 'exact' };
+    }
     return isSeaBusinessLocale(targetLocale)
       ? { status: 'available', href: `/${targetLocale}/${slugPath}`, fallback: 'exact' }
       : { status: 'available', href: `/${targetLocale}`, fallback: 'home' };

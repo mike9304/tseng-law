@@ -1,3 +1,4 @@
+import { withSeoPageCopy } from '@/lib/seo-page-copy';
 import type { Metadata } from 'next';
 import IntentLandingPage from '@/components/IntentLandingPage';
 import { getIntentPage } from '@/data/intent-pages';
@@ -6,7 +7,7 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 const slug = 'taiwan-lawyer' as const;
 
-export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+async function buildPageMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const page = getIntentPage(locale, slug);
@@ -24,6 +25,11 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
     keywords: page.keywords,
     alternateLocales: siteLocales,
   });
+}
+
+export async function generateMetadata(props: Parameters<typeof buildPageMetadata>[0]) {
+  const params = await props.params;
+  return withSeoPageCopy(await buildPageMetadata(props), `/${params.locale}/taiwan-lawyer`);
 }
 
 export default async function TaiwanLawyerPage(props: { params: Promise<{ locale: SiteLocale }> }) {

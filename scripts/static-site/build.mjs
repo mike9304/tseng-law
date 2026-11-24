@@ -173,12 +173,12 @@ async function main() {
     console.log(`[static-site] out: ${verification.files} files, ${(verification.bytes / 1024 / 1024).toFixed(1)} MB, `
       + `${verification.htmlPages} html; sitemap ${verification.sitemapUrls - verification.sitemapMissing.length}/${verification.sitemapUrls}; `
       + `broken refs ${Object.keys(verification.brokenRefs).length}; oversize ${verification.oversize.length}; crawl missing ${crawl.missing.length}; `
-      + `flight errors ${Object.keys(verification.flightErrors).length}`);
+      + `flight errors ${Object.keys(verification.flightErrors).length}; meta outside head ${verification.metaOutsideHead.length}`);
     if (assembled.media.origin) {
       console.log(`[static-site] media: ${assembled.media.files} files (${(assembled.media.bytes / 1024 / 1024).toFixed(1)} MB) → ${assembled.media.origin}; `
         + `${assembled.media.referenced} referenced, missing locally: ${assembled.media.missingReferences.join(', ') || 'none'}`);
     }
-    if (verification.sitemapMissing.length || verification.oversize.length || Object.keys(verification.flightErrors).length) process.exitCode = 1;
+    if (verification.sitemapMissing.length || verification.oversize.length || Object.keys(verification.flightErrors).length || verification.metaOutsideHead.length) process.exitCode = 1;
     if (args.budgetBase) {
       const budget = checkHtmlBudget({ baseDir: args.budgetBase, candDir: outDir });
       report.htmlBudget = { base: args.budgetBase, ok: budget.ok, limit: budget.limit, counts: budget.counts, failures: budget.failures };

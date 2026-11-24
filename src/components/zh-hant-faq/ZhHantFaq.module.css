@@ -140,7 +140,7 @@
 }
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] article > span:last-child) { background: var(--ap-line); }
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] article:last-child > span:last-child) { display: none; }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button) {
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button) {
   gap: 24px;
   min-height: 84px;
   padding: 22px 0;
@@ -151,12 +151,12 @@
   line-height: 1.55;
   transition: color 0.25s ease;
 }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button:hover),
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button:focus-visible) { background: transparent; color: var(--ap-ink); }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3) { text-wrap: pretty; }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button > span:first-child) { text-wrap: pretty; }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button small) { margin-bottom: 6px; color: var(--ap-accent); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button > span:last-child) {
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button:hover),
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button:focus-visible) { background: transparent; color: var(--ap-ink); }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2) { text-wrap: pretty; }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button > span:first-child) { text-wrap: pretty; }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button small) { margin-bottom: 6px; color: var(--ap-accent); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button > span:last-child) {
   width: 36px;
   height: 36px;
   border: none;
@@ -166,13 +166,13 @@
   font-size: 18px;
   transition: background 0.25s ease, color 0.25s ease;
 }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button:hover > span:last-child),
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button[aria-expanded='true'] > span:last-child) { background: var(--ap-text); color: #fff; }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button:hover > span:last-child),
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button[aria-expanded='true'] > span:last-child) { background: var(--ap-text); color: #fff; }
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] [role='region']) { max-width: 46em; padding: 0 0 26px; }
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] [role='region'] p),
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] [role='region']) { color: var(--ap-muted); font-size: 17px; font-weight: 400; line-height: 1.85; }
 .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true']) :focus-visible { outline: 3px solid var(--ap-ink); outline-offset: 3px; }
-.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button:focus-visible) { outline-offset: -3px; border-radius: 12px; }
+.root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button:focus-visible) { outline-offset: -3px; border-radius: 12px; }
 
 /* ---------- Last call: the home's closing chapter ---------- */
 .band {
@@ -262,8 +262,8 @@
   .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true']) { margin-block: 40px 72px; width: 100%; padding-inline: 20px; }
   .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] > [role='group']) { margin-inline: -20px; padding-inline: 20px; scroll-padding-inline: 20px; }
   .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] > :last-child) { padding: 4px 20px; }
-  .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button) { gap: 16px; min-height: 72px; padding: 18px 0; font-size: 17px; }
-  .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h3 button > span:last-child) { width: 32px; height: 32px; }
+  .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button) { gap: 16px; min-height: 72px; padding: 18px 0; font-size: 17px; }
+  .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] h2 button > span:last-child) { width: 32px; height: 32px; }
   .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] [role='region']),
   .root:global(:is(#zh-hant-faq, #ko-faq)) :global([data-public-faq-explorer='true'] [role='region'] p) { font-size: 16px; }
   .band { padding: 96px 0 104px; }

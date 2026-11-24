@@ -93,8 +93,8 @@
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] article:has(button[aria-expanded='true'])) { background: var(--ja-tile); }
 @media (hover: hover) { .root:global(#ja-faq) :global([data-public-faq-explorer='true'] article:hover) { background: var(--ja-tile); } }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] article > span:last-child:empty) { display: none; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3) { margin: 0; font-size: inherit; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) {
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2) { margin: 0; font-size: inherit; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2 button) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 44px;
   gap: 20px;
@@ -111,11 +111,11 @@
   color: var(--ja-ink);
   text-align: left;
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button)::before { content: none; }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button small) {
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2 button)::before { content: none; }
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2 button small) {
   display: block; margin-bottom: 4px; font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: var(--ja-grey);
 }
-.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button > span:last-child) {
+.root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2 button > span:last-child) {
   display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
   border: 0; border-radius: 0; background: none; box-shadow: none;
   font-size: 28px; font-weight: 300; line-height: 1; color: var(--ja-ink);
@@ -131,7 +131,7 @@
   .root:global(#ja-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 5 / -1; grid-row: 1 / span 3; }
 }
 @media (max-width: 767px) {
-  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) { padding: 18px 12px 18px 20px; font-size: 18px; }
+  .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h2 button) { padding: 18px 12px 18px 20px; font-size: 18px; }
   .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { padding: 0 20px 24px; }
   .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { font-size: 17px; }
 }

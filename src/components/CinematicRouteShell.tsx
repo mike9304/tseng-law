@@ -94,7 +94,7 @@ export default function CinematicRouteShell({
       // server/client difference here is expected, never patched.
       suppressHydrationWarning
     >
-      <div data-legacy-chrome data-cinematic-chrome="header">
+      <div data-legacy-chrome data-cinematic-chrome="header" data-nosnippet>
         {header}
       </div>
       {showCinematicOpening ? (
@@ -134,13 +134,13 @@ export default function CinematicRouteShell({
         ) : null}
         {children}
       </main>
-      <div data-legacy-chrome>{footer}</div>
+      <div data-legacy-chrome data-nosnippet>{footer}</div>
       {quickContact ? (
-        <div data-legacy-chrome data-cinematic-chrome="quick-contact">
+        <div data-legacy-chrome data-cinematic-chrome="quick-contact" data-nosnippet>
           {quickContact}
         </div>
       ) : null}
-      <div data-legacy-chrome data-cinematic-chrome="scroll-top">
+      <div data-legacy-chrome data-cinematic-chrome="scroll-top" data-nosnippet>
         {scrollTop}
       </div>
       {!showCinematicOpening ? eventPopup : null}

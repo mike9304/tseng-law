@@ -76,20 +76,13 @@ function guideLinksFor(locale: IssueBoardLocale, post: ColumnPost): GuideLink[] 
       { href: `/${locale}/columns`, label: issueBoardCopy[locale].expertTab },
     ];
   }
-  if (locale === 'ja') {
-    const service = post.topic === 'company' || post.topic === 'tax'
-      ? { href: '/ja/services#investment', label: '台湾投資・会社設立' }
-      : post.topic === 'litigation'
-        ? { href: '/ja/services#civil', label: '台湾の民事紛争' }
-        : { href: '/ja/services', label: '取扱業務' };
-    return [service, { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' }, { href: '/ja/columns', label: '実務コラム' }];
-  }
-  const label = (ko: string, zh: string, en: string) => (locale === 'ko' ? ko : locale === 'zh-hant' ? zh : en);
-  const lawyer = { href: `/${locale}/taiwan-lawyer`, label: label('대만 변호사', '台灣律師', 'Taiwan Lawyer') };
+  const label = (ko: string, zh: string, en: string, ja: string) =>
+    locale === 'ko' ? ko : locale === 'zh-hant' ? zh : locale === 'ja' ? ja : en;
+  const lawyer = { href: `/${locale}/taiwan-lawyer`, label: label('대만 변호사', '台灣律師', 'Taiwan Lawyer', '台湾弁護士') };
   const service = post.topic === 'litigation'
-    ? { href: `/${locale}/taiwan-litigation-lawyer`, label: label('대만 소송', '台灣訴訟', 'Taiwan Litigation') }
+    ? { href: `/${locale}/taiwan-litigation-lawyer`, label: label('대만 소송', '台灣訴訟', 'Taiwan Litigation', '台湾訴訟') }
     : post.topic === 'company' || post.topic === 'tax'
-      ? { href: `/${locale}/taiwan-company-setup-lawyer`, label: label('대만 회사설립', '台灣公司設立', 'Taiwan Company Setup') }
+      ? { href: `/${locale}/taiwan-company-setup-lawyer`, label: label('대만 회사설립', '台灣公司設立', 'Taiwan Company Setup', '台湾会社設立') }
       : null;
   const expert = { href: `/${locale}/columns`, label: issueBoardCopy[locale].expertTab };
   return service ? [service, lawyer, expert] : [lawyer, expert];

@@ -385,6 +385,7 @@ export function GuidanceServices({
   const pack = guidanceContent[locale];
   const servicesPage = pack.pages.services;
   const cards = guidanceHomeServiceCards(locale);
+  const HeadingTag: 'h2' | 'h3' = showHeader ? 'h3' : 'h2';
 
   return (
     <section className="section section--light services-bento" id="practice" data-tone="light">
@@ -408,7 +409,7 @@ export function GuidanceServices({
                       <ServicePracticeIcon index={index} />
                     </span>
                   )}
-                  <h3 className="services-detail-title">{card.title}</h3>
+                  <HeadingTag className="services-detail-title">{card.title}</HeadingTag>
                 </div>
                 <div className="services-detail-body services-card-body">
                   <p className="services-detail-desc services-card-summary">{card.summary}</p>
@@ -525,7 +526,14 @@ export default function GuidanceHomeBody({
         }}
       />
       <Reveal>
-        <HomeAttorneySplit locale="en" presentation="editorial" override={guidanceHomeAttorney(locale)} />
+        <HomeAttorneySplit
+          locale="en"
+          presentation="editorial"
+          // Malay readers stay on the Malay team page instead of leaving for the English profile.
+          override={locale === 'ms'
+            ? { ...guidanceHomeAttorney(locale), href: '/ms/lawyers', cta: pack.nav.lawyers }
+            : guidanceHomeAttorney(locale)}
+        />
       </Reveal>
       <Reveal>
         <HomeCaseResultsSplit locale="en" override={guidanceHomeResults(locale)} />

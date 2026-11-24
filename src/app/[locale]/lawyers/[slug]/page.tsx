@@ -275,7 +275,7 @@ export default async function LawyerProfilePage(
               items={[
                 { term: 'Languages', value: profile.languages.join(', ') },
                 { term: 'Meet', value: getPricingContent('en').items.find((item) => item.icon === 'consultation')?.details[0] ?? '' },
-                { term: 'Email', value: <a href={getConsultationPublicMailto(locale)}>{profile.email}</a> },
+                { term: 'Email', value: <a href={getConsultationPublicMailto(locale)}><span data-nosnippet>{profile.email}</span></a> },
               ]}
               actions={<EnEmailButton label={labels.contact} />}
             />
@@ -319,7 +319,7 @@ export default async function LawyerProfilePage(
                   <div className="section-label">{labels.facts}</div>
                   <h2 className="section-title profile-hero-title">{profile.name}</h2>
                   <p className="profile-hero-role">{profile.role}</p>
-                  <a href={`mailto:${profile.email}`} className="attorney-card-email">{profile.email}</a>
+                  <a href={`mailto:${profile.email}`} className="attorney-card-email"><span data-nosnippet>{profile.email}</span></a>
                   <div className="profile-summary-list">
                     {profile.summary.map((line) => (
                       <p key={line} className="split-text">{line}</p>

@@ -1,5 +1,5 @@
-// Client-safe availability policy: these eight pages exist only in the SEA four.
-export const SEA_BUSINESS_LOCALES = ['vi', 'id', 'th', 'fil'] as const;
+// Client-safe availability policy: these ten pages exist only in the five Southeast Asian editions.
+export const SEA_BUSINESS_LOCALES = ['vi', 'id', 'th', 'fil', 'ms'] as const;
 export type SeaBusinessLocale = typeof SEA_BUSINESS_LOCALES[number];
 export const SEA_BUSINESS_PAGES = ['company-setup', 'debt-collection'] as const;
 export type SeaBusinessPageKey = typeof SEA_BUSINESS_PAGES[number];

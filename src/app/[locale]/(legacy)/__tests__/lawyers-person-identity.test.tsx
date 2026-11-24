@@ -6,8 +6,7 @@ import type { SiteLocale } from '@/lib/locales';
 import {
   ATTORNEY_PERSON_ID,
   buildLegalServiceJsonLd,
-  buildProfilePageJsonLd,
-} from '@/lib/seo';
+  buildProfilePageJsonLd, getPersonSchemaName } from '@/lib/seo';
 import { LawyersLegacyPageBody } from '../legacy-page-bodies';
 
 function renderTeamPerson(locale: SiteLocale) {
@@ -49,7 +48,8 @@ describe('Lawyers team structured-data identity', () => {
     expect(person['@id']).toBe('https://tseng-law.com/en/lawyers/wei-tseng#person');
     expect(person['@id']).toBe(employee['@id']);
     expect(person['@id']).toBe(profileGraph.mainEntity['@id']);
-    expect(person.name).toBe(profile.name);
+    expect(person.name).toBe(getPersonSchemaName(profile.name));
+    expect(person.alternateName).toContain(profile.name);
     expect(person.url).toBe(profileGraph.mainEntity.url);
     expect(person.url).toBe(employee.url);
     expect(html).not.toContain(ATTORNEY_PERSON_ID);
@@ -61,7 +61,8 @@ describe('Lawyers team structured-data identity', () => {
       const { person } = renderTeamPerson(locale);
       const profile = getAttorneyProfile(locale, primaryAttorneySlug)!;
       expect(person['@id']).toBe(ATTORNEY_PERSON_ID);
-      expect(person.name).toBe(profile.name);
+      expect(person.name).toBe(getPersonSchemaName(profile.name));
+    expect(person.alternateName).toContain(profile.name);
       expect(person.url).toBe(`https://tseng-law.com/${locale}/lawyers/${profile.slug}`);
     },
   );

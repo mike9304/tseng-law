@@ -73,7 +73,7 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Site
           </h3>
           <p className="attorney-card-role">{member.role}</p>
           {member.email ? (
-            <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
+            <a href={`mailto:${member.email}`} className="attorney-card-email"><span data-nosnippet>{member.email}</span></a>
           ) : null}
         </div>
   );
@@ -159,6 +159,7 @@ export default function AttorneyProfileSection({
   const lead = members.find((m) => m.id === 'tseng-junwei');
   const staff = members.filter((m) => m.id !== 'tseng-junwei' && m.id !== 'huang-shengping');
   const accountant = members.find((m) => m.id === 'huang-shengping');
+  const GroupHeading: 'h2' | 'h3' = showIntro ? 'h3' : 'h2';
 
   return (
     <section className={`section section--light attorney-team-section ${styles.root}`}>
@@ -180,9 +181,9 @@ export default function AttorneyProfileSection({
         {/* 파트너 변호사 */}
         {lead && (
           <div className="attorney-lead-wrap">
-            <h3 className="attorney-group-title">
+            <GroupHeading className="attorney-group-title">
               <span className="attorney-group-badge">{l.representative}</span>
-            </h3>
+            </GroupHeading>
             <MemberCard member={lead} locale={locale} size="large" />
           </div>
         )}
@@ -190,7 +191,7 @@ export default function AttorneyProfileSection({
         {/* 팀 구성원 */}
         {staff.length > 0 && (
           <div className="attorney-staff-wrap">
-            <h3 className="attorney-group-title">{l.teamTitle}</h3>
+            <GroupHeading className="attorney-group-title">{l.teamTitle}</GroupHeading>
             <div className="attorney-staff-grid">
               {staff.map((m) => (
                 <MemberCard key={m.id} member={m} locale={locale} size="small" />
@@ -202,7 +203,7 @@ export default function AttorneyProfileSection({
         {/* 협력 회계사 */}
         {accountant && (
           <div className="attorney-partner-wrap">
-            <h3 className="attorney-group-title">{l.partnerTitle}</h3>
+            <GroupHeading className="attorney-group-title">{l.partnerTitle}</GroupHeading>
             <MemberCard member={accountant} locale={locale} size="small" />
           </div>
         )}

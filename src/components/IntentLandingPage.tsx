@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import PageHeader from '@/components/PageHeader';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import CompanySetupComparison from '@/components/CompanySetupComparison';
 import CorporateAdvisorySection from '@/components/CorporateAdvisorySection';
 import { CORPORATE_ADVISORY_ANCHOR, getCorporateAdvisory } from '@/data/corporate-advisory';
 import { getIntentPage, getIntentTopFaqs, type IntentPageSlug } from '@/data/intent-pages';
@@ -628,6 +629,7 @@ export default function IntentLandingPage({
       </PageHeader>
 
       {slug === 'taiwan-lawyer' ? <ForeignMatterRouter locale={locale} /> : null}
+      {slug === 'taiwan-company-setup-lawyer' ? <CompanySetupComparison locale={locale} /> : null}
 
       <section className={`section section--light ${styles.root}`}>
         <div className={`container intent-layout ${styles.layout}`}>

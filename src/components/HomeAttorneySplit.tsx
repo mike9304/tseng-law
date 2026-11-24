@@ -131,9 +131,11 @@ export default function HomeAttorneySplit({
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{summary}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[5]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[5]}>
-            {contactLine}
-          </SurfaceText>
+          <span data-nosnippet>
+            <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[5]}>
+              {contactLine}
+            </SurfaceText>
+          </span>
         </p>
         <SmartLink
           className="link-underline"

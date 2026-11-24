@@ -81,7 +81,7 @@ describe('canonical attorney SEO identity', () => {
         },
       ],
       employee: {
-        name: '曾雋崴弁護士',
+        name: '曾雋崴',
         url: 'https://tseng-law.com/ja/lawyers/wei-tseng',
       },
       address: {
@@ -101,7 +101,7 @@ describe('canonical attorney SEO identity', () => {
       url: 'https://tseng-law.com/zh-hant',
       contactPoint: [{ url: 'https://tseng-law.com/zh-hant/contact' }],
       employee: {
-        name: '曾雋崴律師',
+        name: '曾雋崴',
         url: 'https://tseng-law.com/zh-hant/lawyers/wei-tseng',
       },
       address: {
@@ -116,7 +116,7 @@ describe('canonical attorney SEO identity', () => {
       url: 'https://tseng-law.com/ko',
       contactPoint: [{ url: 'https://tseng-law.com/ko/contact' }],
       employee: {
-        name: '증준외 변호사',
+        name: '증준외',
         url: 'https://tseng-law.com/ko/lawyers/wei-tseng',
       },
       address: {
@@ -128,7 +128,7 @@ describe('canonical attorney SEO identity', () => {
       url: 'https://tseng-law.com/en',
       contactPoint: [{ url: 'https://tseng-law.com/en/contact' }],
       employee: {
-        name: 'Attorney Wei Tseng',
+        name: 'Wei Tseng',
         url: 'https://tseng-law.com/en/lawyers/wei-tseng',
       },
       address: {

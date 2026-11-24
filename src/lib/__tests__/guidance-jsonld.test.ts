@@ -255,7 +255,8 @@ describe('guidance breadcrumb / person / collection JSON-LD', () => {
 
       const profile = getAttorneyProfile('en', primaryAttorneySlug)!;
       // No invented translation: the biography stays the canonical English one.
-      expect(person!.name).toBe(profile.name);
+      expect(person!.name).toBe('Wei Tseng');
+      expect(person!.alternateName).toContain(profile.name);
       expect(person!.description).toBe(profile.description);
       // The one language-dependent field the firm does publish per locale.
       expect(person!.jobTitle).toBe(guidanceTeamCopy[locale].roles['tseng-junwei']);

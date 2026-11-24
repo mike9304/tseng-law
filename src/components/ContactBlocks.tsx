@@ -52,7 +52,7 @@ function renderInquiryDetail(
           className="link-underline"
           href={email === CONSULTATION_EMAIL ? consultationEmailHref : `mailto:${email}`}
         >
-          {email}
+          <span data-nosnippet>{email}</span>
         </a>
         {detail.slice(at + email.length)}
       </>
@@ -62,7 +62,7 @@ function renderInquiryDetail(
   if (phoneMatch) {
     return (
       <a className="link-underline" href={consultationEmailHref}>
-        {consultationEmailLabels[locale]}: {CONSULTATION_EMAIL}
+        <span data-nosnippet>{consultationEmailLabels[locale]}: {CONSULTATION_EMAIL}</span>
       </a>
     );
   }
@@ -128,7 +128,7 @@ export default function ContactBlocks({
                     href={consultationMailto}
                     aria-label={consultationCtaLabel}
                   >
-                    {CONSULTATION_EMAIL}
+                    <span data-nosnippet>{CONSULTATION_EMAIL}</span>
                   </a>
                 </p>
                 <button

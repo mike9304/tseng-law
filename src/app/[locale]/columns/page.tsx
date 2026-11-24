@@ -1,3 +1,4 @@
+import { withSeoPageCopy } from '@/lib/seo-page-copy';
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
@@ -115,7 +116,7 @@ function guidanceColumnsMetadata(locale: GuidanceLocale4) {
   };
 }
 
-export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function buildPageMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   if (isGuidanceLocale4(params.locale)) {
     const posts = getAllColumnPosts(params.locale);
@@ -147,6 +148,11 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     keywords: columnKeywords[locale],
     alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
   });
+}
+
+export async function generateMetadata(props: Parameters<typeof buildPageMetadata>[0]) {
+  const params = await props.params;
+  return withSeoPageCopy(await buildPageMetadata(props), `/${params.locale}/columns`);
 }
 
 export default async function ColumnsPage(

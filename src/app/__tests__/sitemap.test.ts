@@ -201,18 +201,19 @@ describe('sitemap column lastModified', () => {
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
   });
 
-  it('adds only the eight SEA business pages with reciprocal four-language clusters', async () => {
+  it('adds only the ten SEA business pages with reciprocal language clusters', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = (await sitemap()).filter(entry => /\/(company-setup|debt-collection)$/.test(entry.url));
-    const expected = ['vi', 'id', 'th', 'fil'].flatMap(locale => ['company-setup', 'debt-collection'].map(key => `https://tseng-law.com/${locale}/${key}`));
+    const seaLocales = ['vi', 'id', 'th', 'fil', 'ms'];
+    const expected = seaLocales.flatMap(locale => ['company-setup', 'debt-collection'].map(key => `https://tseng-law.com/${locale}/${key}`));
     expect(entries.map(entry => entry.url).sort()).toEqual(expected.sort());
     for (const entry of entries) {
       const key = entry.url.split('/').at(-1);
-      expect(entry.alternates?.languages).toEqual({
-        vi: `https://tseng-law.com/vi/${key}`, id: `https://tseng-law.com/id/${key}`,
-        th: `https://tseng-law.com/th/${key}`, fil: `https://tseng-law.com/fil/${key}`,
-        'x-default': `https://tseng-law.com/vi/${key}`,
-      });
+      const sea = Object.fromEntries(seaLocales.map(locale => [locale, `https://tseng-law.com/${locale}/${key}`]));
+      const site = (locale: string) => `https://tseng-law.com/${locale}/taiwan-company-setup-lawyer`;
+      expect(entry.alternates?.languages).toEqual(key === 'company-setup'
+        ? { ...sea, ko: site('ko'), 'zh-Hant': site('zh-hant'), en: site('en'), ja: site('ja'), 'x-default': site('en') }
+        : { ...sea, 'x-default': `https://tseng-law.com/vi/${key}` });
     }
   });
 

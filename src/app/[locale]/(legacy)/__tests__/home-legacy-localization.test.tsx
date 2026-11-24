@@ -117,7 +117,7 @@ describe('legacy home four-locale localization', () => {
     const profile = getAttorneyProfile('ja', primaryAttorneySlug);
     expect(profile).toBeDefined();
     expect(jsonLdElement.props.data).toMatchObject({
-      name: '曾雋崴弁護士',
+      name: '曾雋崴',
       description: profile?.description,
       jobTitle: profile?.role,
       url: `${SITE_URL}/ja/lawyers/wei-tseng`,

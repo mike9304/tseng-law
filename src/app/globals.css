@@ -227,7 +227,7 @@ html[lang='zh-hant'] {
 }
 /* zh-hant titles in Noto Serif TC (思源宋體, 2026-10-07; text stays in the device face): page and section titles at 500
    from 'ZH Title Serif', a static cut about half the variable slices' weight; builder-placed nodes keep their own. */
-.site[data-locale='zh-hant'] #main :is(h1, h2):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-family: 'ZH Title Serif', var(--font-heading-zh) !important; font-weight: 500 !important; }
+.site[data-locale='zh-hant'] #main :is(h1, h2):not(.attorney-group-title, .svc-sidebar-title, [data-public-faq-explorer='true'] h2, .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-family: 'ZH Title Serif', var(--font-heading-zh) !important; font-weight: 500 !important; }
 
 /* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
    Thai for th). Without these bindings --font-body resolves through the
@@ -3417,7 +3417,7 @@ section.home-results-panel--editorial {
   border: 1px solid var(--gray-200); margin-bottom: 1.2rem;
 }
 .svc-sidebar-title {
-  font-size: 1rem; font-weight: 700; color: var(--text-heading);
+  font-size: 1rem; font-weight: 700; line-height: 1.35; color: var(--text-heading);
   margin-bottom: 0.8rem;
 }
 .svc-sidebar-text {
@@ -4832,7 +4832,7 @@ section.home-results-panel--editorial {
 }
 
 .attorney-group-title {
-  font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 0 0 1.25rem;
+  font-size: 1.15rem; font-weight: 700; line-height: 1.35; color: var(--primary); margin: 0 0 1.25rem;
   display: flex; align-items: center; gap: 0.75rem;
 }
 .attorney-group-badge {
@@ -27812,10 +27812,10 @@ html[lang='ko'] .site [data-ko-design='service-detail'] :is(.button, #ko-svc-boo
 html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) *:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']), .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.005em !important;
 }
-html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) :is(h1, h2, .page-header-title, .section-title, .split-title):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) :is(h1, h2, .page-header-title, .section-title, .split-title):not(.attorney-group-title, .svc-sidebar-title, [data-public-faq-explorer='true'] h2, .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.03em !important;
 }
-html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) h3:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
+html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article.svc-article[data-ko-design-scope]) :is(h3, .attorney-group-title, .svc-sidebar-title, [data-public-faq-explorer='true'] h2):not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) {
   letter-spacing: -0.02em !important;
 }
 
@@ -28061,7 +28061,7 @@ html[lang='ko'] .site :is([data-ko-design]:not([data-ko-design='home']), article
 /* Serif titles (2026-10-07, E1): page titles light, section titles regular, tracking for a serif; nodes an editor
    placed in a builder page keep their own. Other display lines keep their weight in the serif. */
 .site[data-locale='en'] #main h1:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 300 !important; letter-spacing: -0.012em !important; }
-.site[data-locale='en'] #main h2:not(.builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 400 !important; letter-spacing: -0.01em !important; }
+.site[data-locale='en'] #main h2:not(.attorney-group-title, .svc-sidebar-title, [data-public-faq-explorer='true'] h2, .builder-pub-node:not([data-node-id$='-page-root'], [data-node-id$='-composite']) *) { font-weight: 400 !important; letter-spacing: -0.01em !important; }
 
 /* ---------- Header: black bar, one hairline, blue email pill ---------- */
 .site[data-locale='en'] header.header[data-public-site-header],

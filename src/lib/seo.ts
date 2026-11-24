@@ -1,3 +1,5 @@
+import { attorneyLanguageCredentials } from '@/data/attorney-credentials';
+import { SEA_BUSINESS_LOCALES } from '@/lib/sea-business-routes';
 import type { Metadata } from 'next';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import type { Locale, SiteLocale } from '@/lib/locales';
@@ -345,11 +347,36 @@ type LanguageAlternatesOptions = {
   xDefaultWithinCluster?: boolean;
 };
 
+// One company-setup page per language, published under two route names.
+const COMPANY_SETUP_SITE_PATH = '/taiwan-company-setup-lawyer';
+const COMPANY_SETUP_SEA_PATH = '/company-setup';
+
+function getCompanySetupAlternates(): Record<string, string> {
+  const entries = [
+    ...siteLocales.map((locale) => [
+      getLocaleLanguageTag(locale),
+      buildAbsoluteUrl(getLocalizedPath(locale, COMPANY_SETUP_SITE_PATH)),
+    ]),
+    ...SEA_BUSINESS_LOCALES.map((locale) => [
+      getLocaleLanguageTag(locale),
+      buildAbsoluteUrl(getLocalizedPath(locale, COMPANY_SETUP_SEA_PATH)),
+    ]),
+  ];
+  return {
+    ...Object.fromEntries(entries),
+    'x-default': buildAbsoluteUrl(getLocalizedPath(HREFLANG_X_DEFAULT_LOCALE, COMPANY_SETUP_SITE_PATH)),
+  };
+}
+
 export function getLanguageAlternates(
   path = '',
   alternateLocales: readonly PublicSeoLocale[] = siteLocales,
   options: LanguageAlternatesOptions = {},
 ): Record<string, string> {
+  if (path === COMPANY_SETUP_SITE_PATH || path === COMPANY_SETUP_SEA_PATH) {
+    return getCompanySetupAlternates();
+  }
+
   const pageKey = guidancePageKeyFromSlugPath(seoPathToSlugPath(path));
   if (pageKey) {
     return buildGuidanceCoreLanguageAlternates(pageKey, getSiteUrl());
@@ -607,14 +634,7 @@ export function buildLegalServiceJsonLd(
     employee: {
       '@type': 'Person',
       '@id': `${buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng'))}#person`,
-      name:
-        locale === 'ko'
-          ? '증준외 변호사'
-          : locale === 'zh-hant'
-            ? '曾雋崴律師'
-            : locale === 'ja'
-              ? '曾雋崴弁護士'
-              : 'Attorney Wei Tseng',
+      name: locale === 'ko' ? '증준외' : locale === 'zh-hant' || locale === 'ja' ? '曾雋崴' : 'Wei Tseng',
       url: buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng')),
     },
     image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH),
@@ -662,6 +682,20 @@ export function buildArticleJsonLd({
   };
 }
 
+const PRIMARY_ATTORNEY_NAMES: ReadonlySet<string> = new Set(['증준외', '曾雋崴', 'Wei Tseng']);
+
+/** schema.org `name` is the person's name; the role belongs in jobTitle. */
+export function getPersonSchemaName(name: string): string {
+  return name.replace(/^Attorney\s+|\s*(?:변호사|律師|弁護士)$/g, '').trim();
+}
+
+/** Keeps the titled form people search for attached to the entity. */
+function getPersonAlternateNames(name: string, alternateName?: string[]): string[] | undefined {
+  return getPersonSchemaName(name) === name
+    ? alternateName
+    : Array.from(new Set([...(alternateName ?? []), name]));
+}
+
 export function buildPersonJsonLd({
   locale,
   path,
@@ -678,12 +712,13 @@ export function buildPersonJsonLd({
   alumniOf,
 }: PersonProfileJsonLdInput) {
   const pageUrl = buildAbsoluteUrl(path);
+  const personName = getPersonSchemaName(name);
 
   const personEntity = {
     '@type': 'Person',
     '@id': id ?? `${pageUrl}#person`,
-    name,
-    alternateName,
+    name: personName,
+    alternateName: getPersonAlternateNames(name, alternateName),
     description,
     url: pageUrl,
     image: buildAbsoluteUrl(image),
@@ -692,6 +727,7 @@ export function buildPersonJsonLd({
     sameAs,
     knowsLanguage,
     knowsAbout,
+    hasCredential: PRIMARY_ATTORNEY_NAMES.has(personName) ? attorneyLanguageCredentials : undefined,
     worksFor: {
       '@type': 'Organization',
       '@id': ORGANIZATION_ID,
@@ -736,8 +772,8 @@ export function buildProfilePageJsonLd({
     mainEntity: {
       '@type': 'Person',
       '@id': id ?? `${pageUrl}#person`,
-      name,
-      alternateName,
+      name: getPersonSchemaName(name),
+      alternateName: getPersonAlternateNames(name, alternateName),
       description,
       url: pageUrl,
       image: buildAbsoluteUrl(image),
@@ -746,6 +782,7 @@ export function buildProfilePageJsonLd({
       sameAs,
       knowsLanguage,
       knowsAbout,
+      hasCredential: PRIMARY_ATTORNEY_NAMES.has(getPersonSchemaName(name)) ? attorneyLanguageCredentials : undefined,
       worksFor: {
         '@type': 'Organization',
         '@id': ORGANIZATION_ID,
@@ -1001,6 +1038,7 @@ export function buildGuidanceLegalServiceJsonLd({
     url,
     inLanguage,
     email: CONSULTATION_EMAIL,
+    areaServed: LEGAL_SERVICE_AREA_SERVED,
     availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
     contactPoint: [
       {

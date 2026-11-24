@@ -98,7 +98,7 @@ export default function SemiconductorGuidePublic({ locale }: { locale: SiteLocal
 
           <aside className="svc-sidebar">
             <div className="svc-sidebar-card">
-              <h3 className="svc-sidebar-title">{copy.contactTitle}</h3>
+              <h2 className="svc-sidebar-title">{copy.contactTitle}</h2>
               <p className="svc-sidebar-text">{copy.contactText}</p>
               <ConsultCta locale={locale} className="button svc-sidebar-btn">
                 {filterCopy.consult}

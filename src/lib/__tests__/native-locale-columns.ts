@@ -800,6 +800,13 @@ export const NEON_BULK_COLUMN_FILES_20261125_B1_1125074127: Readonly<Record<stri
   ],
 };
 
+/** Native-locale columns from the Neon lane (m), batch 2, published 2026-11-25 (only fully reviewed locales). */
+export const NEON_M_COLUMN_FILES_20261125_B2_1125080630: Readonly<Record<string, readonly string[]>> = {
+  'ja': [
+    '1438-taiwan-former-director-name-still-registered-liability.md',
+  ],
+};
+
 /** Market columns for Hong Kong (zh-hant), Singapore (en), Malaysia (ms) and Vietnam (vi) readers published 2026-11-23 (cols-1123-asia: Hong Kong residents' settlement, Hong Kong companies and mainland-capital review, Hong Kong judgments and awards; the 2027 Taiwan-Singapore tax agreement, short contract-performance trips, assigned employees' salary tax; Malaysian graduates' points-based work permits, Malaysian-Taiwanese marriage registration, fraud cash-collector arrests; Vietnamese spouses' naturalization, absconded migrant workers' voluntary surrender, underground remittance). */
 export const ASIA_MARKET_COLUMN_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -2123,6 +2130,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH[locale] ?? []),
     ...(NEON_M_COLUMN_FILES_20261124_B1_1125035617[locale] ?? []),
     ...(NEON_BULK_COLUMN_FILES_20261125_B1_1125074127[locale] ?? []),
+    ...(NEON_M_COLUMN_FILES_20261125_B2_1125080630[locale] ?? []),
     ...(ASIA_MARKET_COLUMN_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261118[locale] ?? []),
@@ -2312,6 +2320,7 @@ export function archiveLeadPublicationDate(slug: string, locale: string): string
   if (Object.values(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(NEON_M_COLUMN_FILES_20261124_B1_1125035617).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(NEON_BULK_COLUMN_FILES_20261125_B1_1125074127).flat().map(slugOf).includes(slug)) return '2026-11-25';
+  if (Object.values(NEON_M_COLUMN_FILES_20261125_B2_1125080630).flat().map(slugOf).includes(slug)) return '2026-11-25';
   if (Object.values(ASIA_MARKET_COLUMN_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261118).flat().map(slugOf).includes(slug)) return '2026-11-18';
@@ -2400,6 +2409,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH),
     ...Object.values(NEON_M_COLUMN_FILES_20261124_B1_1125035617),
     ...Object.values(NEON_BULK_COLUMN_FILES_20261125_B1_1125074127),
+    ...Object.values(NEON_M_COLUMN_FILES_20261125_B2_1125080630),
     ...Object.values(ASIA_MARKET_COLUMN_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261118),

@@ -751,6 +751,20 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
+/** Fully reviewed locales published 2026-11-24: 1432 (vi, foreigners buying an existing Taiwan company) and Neon lane column 1441 (ja, en, vi, short-term rentals). */
+export const COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1: Readonly<Record<string, readonly string[]>> = {
+  'en': [
+    '1441-taiwan-short-term-rental-daily-rent-apartment-illegal-hotel-fines.md',
+  ],
+  'ja': [
+    '1441-taiwan-short-term-rental-daily-rent-apartment-illegal-hotel-fines.md',
+  ],
+  'vi': [
+    '1432-taiwan-company-share-transfer-foreign-buyer-approval-bank-account-risks.md',
+    '1441-taiwan-short-term-rental-daily-rent-apartment-illegal-hotel-fines.md',
+  ],
+};
+
 /** Market columns for Hong Kong (zh-hant), Singapore (en), Malaysia (ms) and Vietnam (vi) readers published 2026-11-23 (cols-1123-asia: Hong Kong residents' settlement, Hong Kong companies and mainland-capital review, Hong Kong judgments and awards; the 2027 Taiwan-Singapore tax agreement, short contract-performance trips, assigned employees' salary tax; Malaysian graduates' points-based work permits, Malaysian-Taiwanese marriage registration, fraud cash-collector arrests; Vietnamese spouses' naturalization, absconded migrant workers' voluntary surrender, underground remittance). */
 export const ASIA_MARKET_COLUMN_FILES_20261123: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -2069,6 +2083,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
+    ...(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1[locale] ?? []),
     ...(ASIA_MARKET_COLUMN_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261123[locale] ?? []),
     ...(COLS_EXPANSION_FILES_20261118[locale] ?? []),
@@ -2253,6 +2268,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
+  if (Object.values(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(ASIA_MARKET_COLUMN_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261123).flat().map(slugOf).includes(slug)) return '2026-11-23';
   if (Object.values(COLS_EXPANSION_FILES_20261118).flat().map(slugOf).includes(slug)) return '2026-11-18';
@@ -2336,6 +2352,7 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(WORLD_COLUMN_FILES_20261106),
+    ...Object.values(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1),
     ...Object.values(ASIA_MARKET_COLUMN_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261123),
     ...Object.values(COLS_EXPANSION_FILES_20261118),

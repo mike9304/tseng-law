@@ -29,21 +29,21 @@ author: "legal-ai-assistant"
 
 December 2024 was the sale month; January 2025 was when the goods came back. In an example in its [November 20 reminder](https://www.ntbt.gov.tw/singlehtml/41ae3594197f4f69b47753ce08188516?cntId=a5e09a22d770413d8a3d1c136edaf2fd), the National Taxation Bureau of Taipei described a customer returning goods after discovering damage that made them unusable. The sales return belonged in 2025. It could not be moved back to the 2024 sale year.
 
-For a US-owned Taiwan subsidiary, the original sale, the customer's complaint and the physical return can each fall on a different date, and only the return fixes the year of the sales-return entry. Matching the returned goods to the earlier invoice is part of that year-end work.
+For a US-owned Taiwan subsidiary, the original sale, the customer's complaint and the actual return can each fall on a different date, and only the actual return fixes the year of the sales-return entry. Matching the returned goods to the earlier invoice is part of that year-end work.
 
 ## The return year follows the actual event
 
 The bureau's notice concerns merchandise returned for defects, a mismatch with specifications or other reasons. When sale and return fall in different accounting years, the sales return belongs to the year of the actual return. The bureau bases this on a Ministry of Finance ruling of July 3, 1978 (台財稅第34268號), which bars reporting the return back in the sale year. The Ministry of Finance's [Tax Portal explanation](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/operating-income-calculation/DrV2Gm2) also states that a return occurring in the following year is handled as that following year's sales return.
 
-That timing question is narrower than deciding whether a customer has a contractual right to return goods. A complaint may explain the reason for a return, while records of the returned goods help establish that it occurred. The November notice illustrates the timing rule.
+That timing question is narrower than deciding whether a customer has a contractual right to return goods. A complaint may explain why goods were returned. Return records help establish that it happened.
 
 ## Recognition also depends on proof
 
 [Article 19 of the Regulations Governing Assessment of Profit-Seeking Enterprise Income Tax](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340051&flno=19) addresses recognition of sales returns. It accepts a return that has been reversed in the books and backed by supporting documents obtained under Article 20 of the Regulations Governing the Use of Uniform Invoices, or one shown by other reliable evidence to have actually occurred.
 
-If the business fails to obtain the relevant documents or evidence, Article 19 disallows the sales return: the amount stays in sales revenue, and the income on it is computed under the profit standard for the same trade.
+If the business fails to obtain the relevant documents or evidence, Article 19 disallows the sales return: the amount stays in sales revenue, and the income on it is computed under the industry profit standard (同業利潤標準).
 
-Export returns receive express treatment in paragraph 2. Customs return records and related supporting documents can establish the return, subject to the tax authority's verification. For a Taiwan subsidiary handling goods coming back from overseas, those records can connect the physical shipment with the original sale. The provision does not guarantee that an internal adjustment alone will suffice.
+Export returns receive express treatment in paragraph 2. Customs return records and related supporting documents can establish the return, subject to the tax authority's verification. For a Taiwan subsidiary handling goods coming back from overseas, those records can connect the physical shipment with the original sale.
 
 ## Invoice records depend on how the sale was invoiced
 

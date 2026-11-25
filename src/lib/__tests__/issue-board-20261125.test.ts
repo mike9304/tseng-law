@@ -15,11 +15,25 @@ import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Local content contract for ISSUE-20261125; the lane separately reviews shipping. */
-const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
-  ko: [1, 2],
-  ja: [3, 4],
-  en: [5, 6],
-  vi: [7, 8],
+const EXPECTED: Partial<Record<IssueBoardLocale, string[]>> = {
+  ko: [
+    'ISSUE-20261125-01-taiwan-toucheng-protected-coast-hand-harvesting.md',
+    'ISSUE-20261125-02-taiwan-airbnb-checkout-chores-late-house-rules.md',
+  ],
+  ja: [
+    'ISSUE-20261125-03-taiwan-estate-tax-financial-assets-penalty-reduction.md',
+    'ISSUE-20261125-04-taiwan-character-cake-mold-copyright-permission.md',
+  ],
+  en: [
+    // The separately added PRC-control piece shares EN-05 with the lane batch.
+    'ISSUE-20261125-05-taiwan-branch-prc-control-third-country-investor.md',
+    'ISSUE-20261125-05-taiwan-parent-subsidiary-merger-cfc-income-return.md',
+    'ISSUE-20261125-06-taiwan-successive-inheritance-home-sale-tax-shares.md',
+  ],
+  vi: [
+    'ISSUE-20261125-07-taiwan-pregnant-migrant-employer-transfer-suspension.md',
+    'ISSUE-20261125-08-taiwan-worker-request-no-occupational-insurance.md',
+  ],
 };
 
 function issueFiles(locale: IssueBoardLocale): string[] {
@@ -42,13 +56,12 @@ describe('issue board 2026-11-25', () => {
     }
   }, 30_000);
 
-  it('contains exactly two pieces per requested market with unique batch IDs', () => {
+  it('contains the eight lane pieces and the separate English piece with unique slugs', () => {
     for (const locale of ISSUE_BOARD_LOCALES) {
-      const numbers = issueFiles(locale).map((file) => Number(file.match(/^ISSUE-\d{8}-(\d{2})-/)?.[1]));
-      expect(numbers, locale).toEqual(EXPECTED[locale] ?? []);
+      expect(issueFiles(locale), locale).toEqual(EXPECTED[locale] ?? []);
     }
-    expect(cases).toHaveLength(8);
-    expect(new Set(cases.map(({ file }) => issueIdFromFilename(file))).size).toBe(8);
+    expect(cases).toHaveLength(9);
+    expect(new Set(cases.map(({ slug }) => slug)).size).toBe(cases.length);
   });
 
   it.each(cases)('$locale/$file has clean slug, frontmatter, media and no bold', ({ locale, file, slug }) => {
@@ -66,12 +79,11 @@ describe('issue board 2026-11-25', () => {
       expect(typeof data[field] === 'string' && data[field].trim().length > 0, field).toBe(true);
     }
     expect(Array.isArray(data.categories) && data.categories.length > 0).toBe(true);
-    const imageBase = `../images/${file.replace(/\.md$/, '')}/featured-01`;
-    expect(data.featured_image).toBe(`${imageBase}.webp`);
-    expect(data.social_image).toBe(`${imageBase}.jpg`);
-    for (const field of ['featured_image', 'social_image']) {
-      const imagePath = String(data[field]).replace(/^\.\.\/images\//, 'public/images/blog/');
-      expect(fs.existsSync(path.join(process.cwd(), imagePath)), imagePath).toBe(true);
+    const imageBase = `/images/blog/${file.replace(/\.md$/, '')}/featured-01`;
+    for (const [field, extension] of Object.entries({ featured_image: 'webp', social_image: 'jpg' })) {
+      const imagePath = String(data[field]).replace(/^\.\.\/images\//, '/images/blog/');
+      expect(imagePath, field).toBe(`${imageBase}.${extension}`);
+      expect(fs.existsSync(path.join(process.cwd(), 'public', imagePath)), imagePath).toBe(true);
     }
   });
 

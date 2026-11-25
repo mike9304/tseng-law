@@ -44,11 +44,11 @@ Thời gian tạm hoãn được duyệt tối đa đến 60 ngày kể từ ng�
 
 ## Hết tạm hoãn vẫn cần đơn xin tiếp tục
 
-Theo mục III(2) của công văn, người muốn tiếp tục chuyển chủ phải nộp đơn trong 10 ngày kể từ ngày hết thời gian tạm hoãn. Khi được Bộ Lao động chấp thuận, thời hạn chuyển chủ có thể kéo dài thêm 60 ngày, một lần. Hướng dẫn không chấp thuận đơn nộp muộn và yêu cầu xuất cảnh theo quy định.
+Theo mục III(2) của công văn, người muốn tiếp tục chuyển chủ phải nộp đơn trong 10 ngày kể từ ngày hết thời gian tạm hoãn. Khi được Bộ Lao động chấp thuận, thời hạn chuyển chủ có thể kéo dài thêm 60 ngày, một lần. Theo hướng dẫn, đơn nộp muộn không được chấp thuận và người lao động phải xuất cảnh theo quy định.
 
 Khoảng thời gian này phục vụ việc tiếp tục chuyển chủ. Còn thời hạn xử lý chuyển chủ thông thường tại [Điều 11 quy tắc chuyển chủ](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090023&flno=11) là 60 ngày tính từ ngày tiếp theo sau khi cơ quan trung ương đăng ký thông tin cần thiết; đây không phải mốc tính từ ngày phát hiện mang thai.
 
-Vì vậy, hồ sơ của từng người cần phân biệt ngày chấp thuận chuyển chủ, ngày hết tạm hoãn và ngày nộp đơn xin tiếp tục. Kế hoạch giảm thời gian xử lý mà UDN đưa tin chưa thay thế các mốc đang áp dụng trong hồ sơ đó.
+Vì vậy, khi xem hồ sơ của từng người, cần phân biệt ngày chấp thuận chuyển chủ, ngày hết tạm hoãn và ngày nộp đơn xin tiếp tục. Kế hoạch giảm thời gian xử lý mà UDN đưa tin chưa thay thế các mốc đang áp dụng trong hồ sơ đó.
 
 ## Nguồn
 

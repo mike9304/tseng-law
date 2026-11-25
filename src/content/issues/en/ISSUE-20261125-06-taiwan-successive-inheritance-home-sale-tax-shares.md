@@ -27,11 +27,11 @@ author: "legal-ai-assistant"
 
 # One inherited Taiwan home, two tax histories
 
-More than NT$400,000 in additional tax and a fine followed an omitted filing after an inherited Taiwan home was sold, according to a [November 24 notice](https://www.ntbca.gov.tw/singlehtml/3c844e426e9c4b5ebcaaa18694d7e230?cntId=6f7e96bbfefa4cec995d5d2c861dc1a9) from the National Taxation Bureau of the Central Area. The heir had treated the entire sale as outside the newer house-and-land income-tax regime.
+An heir who failed to file the required return after selling an inherited Taiwan home was assessed more than NT$400,000 in additional tax and fined, according to a [November 24 notice](https://www.ntbca.gov.tw/singlehtml/3c844e426e9c4b5ebcaaa18694d7e230?cntId=6f7e96bbfefa4cec995d5d2c861dc1a9) from the National Taxation Bureau of the Central Area. The heir had treated the entire sale as outside the newer house-and-land income-tax regime.
 
-After the father, who had acquired the property in 2001, died in 2019, his spouse and child each inherited half. The mother died in 2023. Her half then passed to the child, who sold the home in 2025. Each half had its own acquisition history.
+After the father, who had acquired the property in 2001, died in 2019, his spouse and child each inherited half. The mother died in 2023. Her half then passed to the child, who sold the home in 2025.
 
-## The newer regime is assessed share by share
+## Each inherited share has its own tax treatment
 
 [Income Tax Act Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4) sets the acquisition-date scope of the newer house-and-land transaction income tax, while a [Ministry of Finance interpretation](https://law-out.mof.gov.tw/LawContent.aspx?id=GL009971&media=print) addresses property inherited from a person who acquired it by the end of 2015. In the stated circumstances, the sale follows the older treatment, even though the heir inherited after that cutoff.
 

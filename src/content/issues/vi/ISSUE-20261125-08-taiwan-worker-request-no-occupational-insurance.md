@@ -40,11 +40,11 @@ Ai chịu phí bảo hiểm? [Điều 19](https://law.moj.gov.tw/LawClass/LawSin
 
 ## Thiếu đăng ký vẫn có thể có hiệu lực bảo hiểm
 
-Với nhóm lao động nêu trên, [Điều 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=13) cho hiệu lực bảo hiểm bắt đầu từ ngày vào làm. Chủ sử dụng đã báo tên hay chưa là vấn đề về thực hiện nghĩa vụ; ngày luật xác định có hiệu lực được xét riêng.
+Với nhóm lao động nêu trên, [Điều 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=13) quy định bảo hiểm có hiệu lực từ ngày vào làm. Thời điểm này không phụ thuộc vào việc chủ sử dụng đã làm thủ tục đăng ký hay chưa.
 
 Phạm vi này có giới hạn. Nếu người lao động vào làm trước khi chủ sử dụng có đăng ký, đăng ký thuế hoặc giấy phép hành nghề theo điều luật, mốc bắt đầu bảo hiểm được xác định theo điều kiện riêng tại Điều 13. Không thể áp dụng cùng một ngày cho mọi trường hợp đi làm.
 
-## Khoản truy thu được yêu cầu từ chủ sử dụng
+## Thu hồi tiền trợ cấp từ chủ sử dụng lao động
 
 [Điều 36](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=36) quy định việc thu hồi sau khi cơ quan bảo hiểm đã chi trả trợ cấp cho lao động thuộc Điều 6 mà đơn vị không thực hiện đúng thủ tục tại Điều 12. Cơ quan xác định số tiền trong phạm vi trợ cấp đã trả và ra quyết định bằng văn bản, yêu cầu đơn vị nộp trong thời hạn.
 

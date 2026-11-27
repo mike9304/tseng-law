@@ -751,6 +751,48 @@ export const WORLD_COLUMN_FILES_20261106: Readonly<Record<string, readonly strin
   ur: ['1150-taiwan-organ-removal-disability-insurance-diagnosis-timing.md'], // world-columns-20261106
 };
 
+/** Taiwan business columns across eight reader regions, published 2026-11-24. */
+export const GLOBAL_BIZ_COLUMN_FILES_20261124: Readonly<Record<string, readonly string[]>> = {
+  'ar': [
+    '1429-middle-east-investor-taiwan-company-setup-investment-approval-capital-documents.md',
+    '1430-saudi-taiwan-tax-agreement-gulf-investors-withholding-tax-dividends-royalties.md',
+    '1431-middle-east-brand-taiwan-trademark-registration-first-to-file-customs-protection.md',
+  ],
+  'en': [
+    '1414-us-brand-taiwan-first-to-file-trademark-chinese-name-customs-enforcement.md',
+    '1415-us-company-taiwan-close-company-venture-equity-veto-rights.md',
+    '1416-us-company-taiwan-personal-data-cross-border-transfer-saas-compliance.md',
+    '1420-singapore-holding-company-taiwan-investment-screening-mainland-capital-rules.md',
+    '1421-singapore-brand-franchising-taiwan-fair-trade-disclosure-ten-day-rule.md',
+    '1422-singapore-company-taiwan-employment-non-compete-severance-trade-secrets.md',
+  ],
+  'ja': [
+    '1408-taiwan-work-rules-labor-management-conference-30-employees-japanese-subsidiary.md',
+    '1409-taiwan-business-entity-sole-proprietorship-limited-company-japanese-founders.md',
+    '1410-taiwan-commercial-lease-notarization-five-year-rule-japanese-shops.md',
+  ],
+  'ko': [
+    '1411-taiwan-close-company-korean-startup-joint-venture-equity-control.md',
+    '1412-korean-food-supplements-taiwan-import-labeling-health-food-rules.md',
+    '1413-taiwan-commercial-lease-five-year-notarization-rent-withholding-korean-business.md',
+  ],
+  'ms': [
+    '1417-malaysia-taiwan-tax-agreement-dividends-royalties-withholding-business.md',
+    '1418-malaysian-food-beverage-import-taiwan-registration-labeling-rules.md',
+    '1419-malaysian-founder-taiwan-company-investment-manager-work-permit-renewal.md',
+  ],
+  'vi': [
+    '1426-vietnam-taiwan-tax-agreement-dividends-royalties-service-withholding-business.md',
+    '1427-vietnamese-food-agricultural-products-import-taiwan-registration-labeling-inspection.md',
+    '1428-vietnamese-investor-company-setup-taiwan-investment-approval-manager-work-permit.md',
+  ],
+  'zh-hant': [
+    '1423-hong-kong-entrepreneur-taiwan-investment-residence-six-million-business-operations.md',
+    '1424-hong-kong-founder-taiwan-sole-proprietorship-vs-limited-company-tax-invoice.md',
+    '1425-hong-kong-company-taiwan-no-tax-treaty-withholding-service-article-25.md',
+  ],
+};
+
 /** Fully reviewed locales published 2026-11-24: 1432 (vi, foreigners buying an existing Taiwan company) and Neon lane column 1441 (ja, en, vi, short-term rentals). */
 export const COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1: Readonly<Record<string, readonly string[]>> = {
   'en': [
@@ -2125,6 +2167,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(WORLD_COLUMN_FILES_20261106[locale] ?? []),
+    ...(GLOBAL_BIZ_COLUMN_FILES_20261124[locale] ?? []),
     ...(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1[locale] ?? []),
     ...(COLUMN_FILES_20261124_NEON_PARTIAL2[locale] ?? []),
     ...(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH[locale] ?? []),
@@ -2315,6 +2358,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (Object.values(WORLD_COLUMN_FILES_20261106).flat().map(slugOf).includes(slug)) return '2026-11-06';
+  if (Object.values(GLOBAL_BIZ_COLUMN_FILES_20261124).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(COLUMN_FILES_20261124_NEON_PARTIAL2).flat().map(slugOf).includes(slug)) return '2026-11-24';
   if (Object.values(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH).flat().map(slugOf).includes(slug)) return '2026-11-24';
@@ -2404,6 +2448,7 @@ export function allNativeFiles(locale: string): string[] {
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
   [
     ...Object.values(WORLD_COLUMN_FILES_20261106),
+    ...Object.values(GLOBAL_BIZ_COLUMN_FILES_20261124),
     ...Object.values(COLUMN_FILES_20261124_NEON_SHELF_PARTIAL1),
     ...Object.values(COLUMN_FILES_20261124_NEON_PARTIAL2),
     ...Object.values(NEON_S_COLUMN_FILES_20261124_B1_1124224106_1443ZH),
